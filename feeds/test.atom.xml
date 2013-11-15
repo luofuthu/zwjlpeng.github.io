@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+<<<<<<< HEAD
 <feed xmlns="http://www.w3.org/2005/Atom"><title>烟雨林</title><link href="http://zwjlpeng.github.io/" rel="alternate"></link><link href="http://zwjlpeng.github.io/feeds/test.atom.xml" rel="self"></link><id>http://zwjlpeng.github.io/</id><updated>2013-09-05T00:00:00+08:00</updated><entry><title>百阿感言</title><link href="http://zwjlpeng.github.io/pages/2013/09/05/bai_nian_ali12.html" rel="alternate"></link><updated>2013-09-05T00:00:00+08:00</updated><author><name>zwjlpeng</name></author><id>tag:zwjlpeng.github.io,2013-09-05:pages/2013/09/05/bai_nian_ali12.html</id><summary type="html">&lt;h2&gt;背景&lt;/h2&gt;
+=======
+<feed xmlns="http://www.w3.org/2005/Atom"><title>烟雨林</title><link href="http://localhost:8000/" rel="alternate"></link><link href="http://localhost:8000/feeds/test.atom.xml" rel="self"></link><id>http://localhost:8000/</id><updated>2013-09-05T00:00:00+08:00</updated><entry><title>百阿感言</title><link href="http://localhost:8000/pages/2013/09/05/bai_nian_ali12.html" rel="alternate"></link><updated>2013-09-05T00:00:00+08:00</updated><author><name>zwjlpeng</name></author><id>tag:localhost:8000,2013-09-05:pages/2013/09/05/bai_nian_ali12.html</id><summary type="html">&lt;h2&gt;背景&lt;/h2&gt;
+>>>>>>> 6bcc3857bf7ab71408b638361508048fde1614ae
 &lt;hr /&gt;
 &lt;p&gt;来阿里之前，阿里“很黄很暴力”的开放风骚型文化就已经在江湖上声名远扬了。&lt;/p&gt;
 &lt;p&gt;记得参加13届校招那会儿，阿里的面试风格就让人印象深刻。与其它互联网公司面试官一脸严肃的风格不同，阿里的面试官不仅极其健谈，而且不停地和候选人互开玩笑，让我惊讶了很久很久。&lt;/p&gt;
@@ -66,7 +70,11 @@
 &lt;p&gt;百阿结束了，它既是一次阿里文化学习之旅，也是一次鸡血的励志之旅。&lt;/p&gt;
 &lt;p&gt;百阿让我对阿里的文化有了更进一步的理解，产生了气味相投的感觉。&lt;/p&gt;
 &lt;p&gt;但是这远远不够，仍然需要在今后的工作中不断地去训练、强化与总结。&lt;/p&gt;
+<<<<<<< HEAD
 &lt;p&gt;感谢百阿，阿里之旅才刚刚开始。&lt;/p&gt;</summary><category term="百阿"></category><category term="阿里"></category></entry><entry><title>百阿感言</title><link href="http://zwjlpeng.github.io/pages/2013/09/05/bai_nian_ali18.html" rel="alternate"></link><updated>2013-09-05T00:00:00+08:00</updated><author><name>zwjlpeng</name></author><id>tag:zwjlpeng.github.io,2013-09-05:pages/2013/09/05/bai_nian_ali18.html</id><summary type="html">&lt;h2&gt;背景&lt;/h2&gt;
+=======
+&lt;p&gt;感谢百阿，阿里之旅才刚刚开始。&lt;/p&gt;</summary><category term="百阿"></category><category term="阿里"></category></entry><entry><title>百阿感言</title><link href="http://localhost:8000/pages/2013/09/05/bai_nian_ali18.html" rel="alternate"></link><updated>2013-09-05T00:00:00+08:00</updated><author><name>zwjlpeng</name></author><id>tag:localhost:8000,2013-09-05:pages/2013/09/05/bai_nian_ali18.html</id><summary type="html">&lt;h2&gt;背景&lt;/h2&gt;
+>>>>>>> 6bcc3857bf7ab71408b638361508048fde1614ae
 &lt;hr /&gt;
 &lt;p&gt;来阿里之前，阿里“很黄很暴力”的开放风骚型文化就已经在江湖上声名远扬了。&lt;/p&gt;
 &lt;p&gt;记得参加13届校招那会儿，阿里的面试风格就让人印象深刻。与其它互联网公司面试官一脸严肃的风格不同，阿里的面试官不仅极其健谈，而且不停地和候选人互开玩笑，让我惊讶了很久很久。&lt;/p&gt;
