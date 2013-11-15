@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<<<<<<< HEAD
 <feed xmlns="http://www.w3.org/2005/Atom"><title>烟雨林</title><link href="http://localhost:8000/" rel="alternate"></link><link href="http://localhost:8000/feeds/all.atom.xml" rel="self"></link><id>http://localhost:8000/</id><updated>2013-09-05T00:00:00+08:00</updated><entry><title>百阿感言</title><link href="http://localhost:8000/pages/2013/09/05/bai_nian_ali.html" rel="alternate"></link><updated>2013-09-05T00:00:00+08:00</updated><author><name>zwjlpeng</name></author><id>tag:localhost:8000,2013-09-05:pages/2013/09/05/bai_nian_ali.html</id><summary type="html">&lt;h2&gt;背景&lt;/h2&gt;
 &lt;hr /&gt;
 &lt;p&gt;来阿里之前，阿里“很黄很暴力”的开放风骚型文化就已经在江湖上声名远扬了。&lt;/p&gt;
@@ -737,3 +738,6 @@
 &lt;p&gt;百阿让我对阿里的文化有了更进一步的理解，产生了气味相投的感觉。&lt;/p&gt;
 &lt;p&gt;但是这远远不够，仍然需要在今后的工作中不断地去训练、强化与总结。&lt;/p&gt;
 &lt;p&gt;感谢百阿，阿里之旅才刚刚开始。&lt;/p&gt;</summary><category term="百阿"></category><category term="阿里"></category></entry></feed>
+=======
+<feed xmlns="http://www.w3.org/2005/Atom"><title>彭鹏的博客</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2013-08-01T00:00:00+02:00</updated><entry><title>test</title><link href="/test.html" rel="alternate"></link><updated>2013-08-01T00:00:00+02:00</updated><author><name>彭鹏</name></author><id>tag:,2013-08-01:test.html</id><summary type="html">&lt;p&gt;testetwtw&lt;/p&gt;</summary></entry></feed>
+>>>>>>> db4a6d933ab028f7150ea1f5c93405c9514830af
