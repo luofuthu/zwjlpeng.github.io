@@ -1890,6 +1890,7 @@ ol.tentblogger-top-posts-list li {
 }
 #top {
 	background:#a40000;
+	margin-top:52px;
 }
 .posttag,.sticky-post,.w-left #map {
 	display:none;
