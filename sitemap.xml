@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://www.yanyulin.info/index.html</loc>
-<lastmod>2013-11-18T19:18:24-00:00</lastmod>
+<lastmod>2013-11-18T20:16:45-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://www.yanyulin.info/archives.html</loc>
-<lastmod>2013-11-18T19:18:24-00:00</lastmod>
+<lastmod>2013-11-18T20:16:45-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://www.yanyulin.info/tags.html</loc>
-<lastmod>2013-11-18T19:18:24-00:00</lastmod>
+<lastmod>2013-11-18T20:16:45-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://www.yanyulin.info/categories.html</loc>
-<lastmod>2013-11-18T19:18:24-00:00</lastmod>
+<lastmod>2013-11-18T20:16:45-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -102,14 +102,14 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://www.yanyulin.info/tag/linux.html</loc>
-<lastmod>2013-07-31T00:00:00-00:00</lastmod>
+<loc>http://www.yanyulin.info/tag/c.html</loc>
+<lastmod>2013-11-18T00:00:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.yanyulin.info/tag/java.html</loc>
+<loc>http://www.yanyulin.info/tag/linux.html</loc>
 <lastmod>2013-07-31T00:00:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
@@ -123,14 +123,14 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://www.yanyulin.info/tag/hua-wei.html</loc>
-<lastmod>2013-11-18T00:00:00-00:00</lastmod>
+<loc>http://www.yanyulin.info/tag/java.html</loc>
+<lastmod>2013-07-31T00:00:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.yanyulin.info/tag/c.html</loc>
+<loc>http://www.yanyulin.info/tag/hua-wei.html</loc>
 <lastmod>2013-11-18T00:00:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
