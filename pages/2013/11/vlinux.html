@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<title>Linux入门版视频教程(基础)</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
+<meta name="author" content="烟雨林">
+<meta name="description" content="烟雨林，是一个专注于互联网、搜索引擎、社会化网络、IT技术、程序员找工作、软件应用、公务员等领域的原创IT科技博客">
+<meta name="keywords" content="烟雨|烟雨林|编程语言|互联网|程序员找工作|视频教程|公务员|Linux|数据挖掘|自然语言处理|移动互联">
+<link href="http://www.yanyulin.info/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="烟雨林 Full Atom Feed" />
+<link href="http://www.yanyulin.info/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="烟雨林 RSS Feed" />
+<link href="http://www.yanyulin.info/feeds/shi-pin-jiao-cheng.atom.xml" type="application/atom+xml" rel="alternate" title="烟雨林 Categories Atom Feed" />
+<link rel="stylesheet" type="text/css" href="http://www.yanyulin.info/theme/index.css" />
+<link rel="shortcut icon" href="http://www.yanyulin.info/theme/images/favicon.ico">
+</head>
+<body >
+   <div id="hed">
+			<div class="top_part">
+				<a href="http://www.yanyulin.info"><img src="http://www.yanyulin.info/theme/images/logo.png"/ alt="烟雨林" title="烟雨林" width="127px" height="29px"></a>
+				<div class="tencent">
+				<table>
+				<tbody>
+				<tr>
+				<td>
+				<a target="_blank" href="http://wp.qq.com/wpa/qunwpa?idkey=8f63f3ff5843f36f1e45e6cd3f29de422b71c64ed348530136938e4f541852c8">
+				<img border="0" src="http://www.yanyulin.info/theme/images/linux.png " width="90px" height="20px" alt="Linux技术交流群" title="Linux技术交流群"></a>
+				</td>
+				<td>
+				<a target="_blank" href="http://wp.qq.com/wpa/qunwpa?idkey=7eed94f19aaff51954e232243db5825e487d9863657730e7a2ba6cc7b866b33f">
+				<img border="0" src="http://www.yanyulin.info/theme/images/c_c++.png" width="90px" height="20px" alt="C/C++技术交流群" title="C/C++技术交流群"></a>
+				</td>
+				<td>
+				<a target="_blank" href="http://wp.qq.com/wpa/qunwpa?idkey=56c000c331d62411f9b36367401f46e15099059500371f081448c4dda186b922">
+				<img border="0" src="http://www.yanyulin.info/theme/images/java.png" width="90px" height="20px" alt="Java技术交流群" title="Java技术交流群"></a>
+				</td>
+				<td>
+				<a target="_blank" href="http://wp.qq.com/wpa/qunwpa?idkey=d3e1d02de0ed28dead4765d39f88026d283c29d99def3ae9529e3f386b5df2bc">
+				<img border="0" src="http://www.yanyulin.info/theme/images/python.png" width="90px" height="20px" alt="Python技术交流群" title="Python技术交流群"></a>
+				</td>
+				<td>
+				<a target="_blank" href="http://wp.qq.com/wpa/qunwpa?idkey=8251aaa2d5ace7f3ad81e51a26af462516a24d51f5a74d8640795a9b0cba32db">
+				<img border="0" src="http://www.yanyulin.info/theme/images/it.png" width="90px" height="20px" alt="IT求职&内推" title="IT求职&内推"></a>
+				</td>
+				</tr>
+				</tbody>
+				</table>
+				</div>
+				</div>
+	 </div>
+	 <div id="wrapper">
+			<div id="top">
+				<div id='topnav'>
+					<div class="left_top ">
+							<div class="home"><a href="http://www.yanyulin.info" title="首  页" class="home"></a>
+							</div>
+					   	<div class="menu-%e5%af%bc%e8%88%aa%e8%8f%9c%e5%8d%95-container">
+						  		<ul  class="menu">		  					
+						   				<li  class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-823"><a href="http://www.yanyulin.info">烟雨首页</a></li>
+						  					<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1209"><a href="http://www.yanyulin.info/category/bian-cheng-yu-yan.html">编程语言</a></li>
+						  					<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1209"><a href="http://www.yanyulin.info/category/jing-pin-shu-ji.html">精品书籍</a></li>
+						  					<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1209"><a href="http://www.yanyulin.info/category/shi-pin-jiao-cheng.html">视频教程</a></li>
+						  		</ul>
+					   	</div> 
+				  </div>
+			  </div>
+			</div>
+<script type="text/javascript">
+    function doZoom(size) {
+        var zoom = document.all ? document.all['entry'] : document.getElementById('entry');
+        zoom.style.fontSize = size + 'px';
+    }
+</script>
+<div class="test_right">
+		<div id="content">							 
+					<div id="map">
+						<div class="browse">现在的位置: <a title="返回首页" href="http://www.yanyulin.info">烟雨首页</a> ＞
+						<a href="http://www.yanyulin.info/category/shi-pin-jiao-cheng.html" title="查看视频教程中的全部文章" rel="category tag">视频教程</a>＞正文</div>
+						<div class="font"><a href="javascript:doZoom(12)">小</a> <a href="javascript:doZoom(13)">中</a> <a href="javascript:doZoom(18)">大</a></div>
+					</div>
+					<div class="entry_box_s">
+						<div class="entry_title_box">
+							<div class="ico"></div>
+							<div class="entry_title">Linux入门版视频教程(基础)</div>
+							<div class="archive_info">
+								<span class="date">2013-11-18</span>
+								<span class="category"> ⁄ <a href="http://www.yanyulin.info/category/shi-pin-jiao-cheng.html" title="查看视频教程中的全部文章" rel="category tag">视频教程</a></span>
+							</div>
+						</div>
+						<div class="entry">
+							<div id="entry" style="font-size: 13px; ">
+							<hr />
+<p>视频教程下载地址:<a href="http://yunpan.cn/QUKdFfemwQhzP" target="_blank" title="Linux入门版视频教程(基础)">点这里</a></p>
+<p>Linux基本知识以及启动</p>
+<blockquote>
+<p>Linux基本知识</p>
+<blockquote>
+<p>Linux介绍</p>
+<p>Linux安装</p>
+</blockquote>
+<p>Linux安装</p>
+<blockquote>
+<p>图形模式安装</p>
+<p>文本模式安装</p>
+</blockquote>
+<p>Linux下的命令行(Shell命令)</p>
+<p>LILO介绍</p>
+<p>GNOME桌面环境介绍</p>
+</blockquote>
+<p>VI+RPM+DNS使用</p>
+<blockquote>
+<p>VI使用介绍</p>
+<p>RPM使用介绍</p>
+<p>DNS相关介绍</p>
+</blockquote>
+<p>Samba+Apache</p>
+<blockquote>
+<p>Linux下Samba的配置以及使用</p>
+<p>Apache的使用</p>
+<p>Linux下的网络工具</p>
+<blockquote>
+<p>FTP</p>
+<p>Mail</p>
+<p>X Free86</p>
+<p>Telnet</p>
+<p>等</p>
+</blockquote>
+</blockquote>
+							转载时请注明文章来源<br/>
+							本文地址: <a href="http://www.yanyulin.info/pages/2013/11/vlinux.html" target="_self">http://www.yanyulin.info/pages/2013/11/vlinux.html</a>
+						  <div class="clear"></div>
+							</div>
+							<div class="clear"></div>
+						</div>			
+						<!-- Baidu Button BEGIN -->
+						<div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+						<a class="bds_qzone"></a>
+						<a class="bds_tsina"></a>
+						<a class="bds_tqq"></a>
+						<a class="bds_renren"></a>
+						<a class="bds_t163"></a>
+						<span class="bds_more"></span>
+						</div>
+						<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=6864225" ></script>
+						<script type="text/javascript" id="bdshell_js"></script>
+						<script type="text/javascript">			
+   		      document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+            </script>
+            <!-- Baidu Button END -->
+						<div class="clear"></div>
+						<!-- end: entry -->
+						<i class="lt"></i>
+						<i class="rt"></i>
+					</div>
+					<!-- entrymeta -->	
+					<div class="entry_sb">
+						<i class="lb"></i>
+						<i class="rb"></i>
+					</div>
+					<!-- end: entrymeta -->
+				<div class="context_b">
+					 上一篇: 
+  				 <a href="http://www.yanyulin.info/pages/2013/07/string.html" title="String StringBuffer StringBuilder的区别分析" target="_self">String StringBuffer StringBuilder的区别分析</a>
+  				 &nbsp;&nbsp
+  				 下一篇:
+  				 <a href="http://www.yanyulin.info/pages/2013/11/sizeof.html" title="被人误解的SIZEOF" target="_self">被人误解的SIZEOF</a>
+					 
+					 <i class="lt"></i>
+					 <i class="rt"></i>
+					 <i class="lb"></i>
+					 <i class="rb"></i>
+				</div>
+				<div class="context_b">
+					 相关文章推荐
+  				 <a href="http://www.yanyulin.info/pages/2013/11/vlinux.html" title="Linux入门版视频教程(基础)" target="_blank">Linux入门版视频教程(基础)</a>
+  
+					 <i class="lt"></i>
+					 <i class="rt"></i>
+					 <i class="lb"></i>
+					 <i class="rb"></i>
+				</div>
+				<div class="context_b">
+			 <div class="ds-thread"></div>
+			 <script type="text/javascript">
+			 	var duoshuoQuery={short_name:"yanyulin"};
+			 	var ds=document.createElement("script");
+			 	ds.type="text/javascript";
+			 	ds.async=true;
+			 	ds.src="http://static.duoshuo.com/embed.js";
+			 	ds.charset="UTF-8";document.getElementsByTagName("head")[0].appendChild(ds);
+			 </script>
+					 <i class="lt"></i>
+					 <i class="rt"></i>
+					 <i class="lb"></i>
+					 <i class="rb"></i>
+				</div>
+		</div>
+</div>
+<div id="sidebar">					
+	<div class="widget">
+				<h3>相关标签</h3>
+				<div class="box">			
+						<div class="textwidget">
+							<a href="http://www.yanyulin.info/tag/linuxshi-pin.html" title="查看Linux视频下的所有文章" target="_blank">Linux视频</a>
+						</div>
+				</div>
+    		<div class="box-bottom">
+						<i class="lb"></i>
+						<i class="rb"></i>
+				</div>
+				<h3>本站直达</h3>
+				<div class="box">
+				<div class="textwidget">
+					<table width="200" border="0">
+  					<tbody>
+  						<tr>
+ 
+    							<td><a href="http://www.yanyulin.info/category/bian-cheng-yu-yan.html" title="查看编程语言下的所有文章"><font size='2px'>编程语言</font></a></td>
+			
+ 
+    							<td><a href="http://www.yanyulin.info/category/cheng-xu-yuan-zhao-gong-zuo.html" title="查看程序员找工作下的所有文章"><font size='2px'>程序员找工作</font></a></td>
+			
+ 
+    							<td><a href="http://www.yanyulin.info/category/jing-pin-shu-ji.html" title="查看精品书籍下的所有文章"><font size='2px'>精品书籍</font></a></td>
+			
+  						</tr>	
+  						<tr>
+ 
+    							<td><a href="http://www.yanyulin.info/category/shi-pin-jiao-cheng.html" title="查看视频教程下的所有文章"><font size='2px'>视频教程</font></a></td>
+			
+  						<td><a href="#"><font size='2px'></font></a></td>
+  						<td><a href="#"><font size='2px'></font></a></td>
+						</tbody>
+					</table>
+				</div>
+				</div>
+    		<div class="box-bottom">
+				<i class="lb"></i>
+				<i class="rb"></i>
+				</div>
+				<h3>邮箱订阅</h3>
+				<div class="box">			
+				<div class="textwidget">
+				<!--QQ邮件列表订阅嵌入代码-->
+				<table width="200" border="0">
+  			<tbody>
+  			<tr>
+  			<td>
+				<!--以下是QQ邮件列表订阅嵌入代码-->
+        <div style="width: 110px; height: 35px; overflow: hidden; " class="WB_widget WB_follow_ex">
+        <div class="follow_btn_line" node-type="inner">
+        <a class="follow_btn status_followed" node-type="followBtn" target="_blank" title="烟雨林博客" href="http://list.qq.com/cgi-bin/qf_invite?id=8949c93bdc7fcbda12adc078acb2809d6f6eba09998d35e6">
+				<img border="0" width="107px" height="22px" alt="邮箱订阅" src="http://www.yanyulin.info/pics/picMode_light_s.png" />
+        </a></div></div>
+			  </td>
+				</tr>
+			  </tbody>
+			  </table>
+				</div>
+				</div>
+    		<div class="box-bottom">
+				<i class="lb"></i>
+				<i class="rb"></i>
+				</div>
+				<div class="random_r">
+				<h3>随便看看</h3>
+				<div class="box_r">
+				<ul>
+				<ul class="random-post-link">
+				<li class="random-post-link">
+				<a href="http://www.yanyulin.info/pages/2013/11/assert.html" title="Assert(断言)实现机制剖析">Assert(断言)实现机制剖析</a>
+				</li>
+				<li class="random-post-link">
+				<a href="http://www.yanyulin.info/pages/2013/06/google_2013_1.html" title="2013年谷歌校招笔试(一)">2013年谷歌校招笔试(一)</a>
+				</li>
+				<li class="random-post-link">
+				<a href="http://www.yanyulin.info/pages/2013/11/objectModel.html" title="深度探索C++对象模型">深度探索C++对象模型</a>
+				</li>
+				<li class="random-post-link">
+				<a href="http://www.yanyulin.info/pages/2013/11/vlinux.html" title="Linux入门版视频教程(基础)">Linux入门版视频教程(基础)</a>
+				</li>
+				</ul>
+				</ul>
+				<div class="clear"></div>
+				</div>
+				<div class="box-bottom">
+				<i class="lb"></i>
+				<i class="rb"></i>
+				</div>
+				</div>
+				<div class="hotarticles">
+				<h3>年度排行</h3>
+				<div class="box_r">
+				<ul>
+				<li>
+				<a href="http://www.yanyulin.info/pages/2013/11/linux0.html" rel="bookmark" title="Linux中0号进程的创建分析">Linux中0号进程的创建分析</a>
+				</li>
+				<li>
+				<a href="http://www.yanyulin.info/pages/2013/06/google_2013_1.html" rel="bookmark" title="2013年谷歌校招笔试(一)">2013年谷歌校招笔试(一)</a>
+				</li>
+				<li>
+				<a href="http://www.yanyulin.info/pages/2013/11/objectModel.html" rel="bookmark" title="深度探索C++对象模型">深度探索C++对象模型</a>
+				</li>
+				<li>
+				<a href="http://www.yanyulin.info/pages/2013/11/vlinux.html" rel="bookmark" title="Linux入门版视频教程(基础)">Linux入门版视频教程(基础)</a>
+				</li>
+				<div class="clear"></div>
+				</div>
+				<div class="box-bottom">
+				<i class="lb"></i>
+				<i class="rb"></i>
+				</div>
+				</div>
+				</div>
+	      <div class="widget">
+			  </div>
+				<div class="widget">
+				</div>
+				<div class="widget">
+				</div>
+				<div class="widget">
+				</div>
+				<div class="clear">
+				</div>
+	</div>
+</div>	 </div>		
+	 <div id="my_footer_wrapper">
+	 <div class="link">
+	 <a href="https://github.com/zwjlpeng" target="_blank">Github</a>
+	 <a href="http://weibo.com/lamazi" target="_blank">微博</a>
+	 <div class="clear"></div>
+   </div>
+   </div>
+	 <div id="my_footer_wrapper">
+	 <div id="my_footer">		
+	 <span>【</span><a href="http://www.yanyulin.info/sitemap.xml" target="_blank">本站地图</a><span>】
+	 </span> 		
+	 <span>【</span><a href="http://www.yanyulin.info/feeds/all.rss.xml" target="_blank">RSS订阅</a><span>】
+	 </span>  		
+	 <span>【</span><a href="http://www.yanyulin.info/sitemap.xml" target="_blank">谷歌地图</a><span>】
+	 </span> 		
+	 <span>【</span><a href="http://www.yanyulin.info" target="_blank">电脑版</a><span>】</span>    
+	 </div>
+  </div>  
+  <div id="my_copyright_wrapper">
+		<div id="my_copyright">
+		博主邮箱: zwjlpeng@gmail.com Copyright@2010-2020 <a href="http://www.yanyulin.info">烟雨林个人博客</a>
+		</div>
+  </div>
+</body>
+</html>

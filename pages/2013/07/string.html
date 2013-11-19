@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<title>String StringBuffer StringBuilder的区别分析</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
+<meta name="author" content="烟雨林">
+<meta name="description" content="烟雨林，是一个专注于互联网、搜索引擎、社会化网络、IT技术、程序员找工作、软件应用、公务员等领域的原创IT科技博客">
+<meta name="keywords" content="烟雨|烟雨林|编程语言|互联网|程序员找工作|视频教程|公务员|Linux|数据挖掘|自然语言处理|移动互联">
+<link href="http://www.yanyulin.info/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="烟雨林 Full Atom Feed" />
+<link href="http://www.yanyulin.info/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="烟雨林 RSS Feed" />
+<link href="http://www.yanyulin.info/feeds/bian-cheng-yu-yan.atom.xml" type="application/atom+xml" rel="alternate" title="烟雨林 Categories Atom Feed" />
+<link rel="stylesheet" type="text/css" href="http://www.yanyulin.info/theme/index.css" />
+<link rel="shortcut icon" href="http://www.yanyulin.info/theme/images/favicon.ico">
+</head>
+<body >
+   <div id="hed">
+			<div class="top_part">
+				<a href="http://www.yanyulin.info"><img src="http://www.yanyulin.info/theme/images/logo.png"/ alt="烟雨林" title="烟雨林" width="127px" height="29px"></a>
+				<div class="tencent">
+				<table>
+				<tbody>
+				<tr>
+				<td>
+				<a target="_blank" href="http://wp.qq.com/wpa/qunwpa?idkey=8f63f3ff5843f36f1e45e6cd3f29de422b71c64ed348530136938e4f541852c8">
+				<img border="0" src="http://www.yanyulin.info/theme/images/linux.png " width="90px" height="20px" alt="Linux技术交流群" title="Linux技术交流群"></a>
+				</td>
+				<td>
+				<a target="_blank" href="http://wp.qq.com/wpa/qunwpa?idkey=7eed94f19aaff51954e232243db5825e487d9863657730e7a2ba6cc7b866b33f">
+				<img border="0" src="http://www.yanyulin.info/theme/images/c_c++.png" width="90px" height="20px" alt="C/C++技术交流群" title="C/C++技术交流群"></a>
+				</td>
+				<td>
+				<a target="_blank" href="http://wp.qq.com/wpa/qunwpa?idkey=56c000c331d62411f9b36367401f46e15099059500371f081448c4dda186b922">
+				<img border="0" src="http://www.yanyulin.info/theme/images/java.png" width="90px" height="20px" alt="Java技术交流群" title="Java技术交流群"></a>
+				</td>
+				<td>
+				<a target="_blank" href="http://wp.qq.com/wpa/qunwpa?idkey=d3e1d02de0ed28dead4765d39f88026d283c29d99def3ae9529e3f386b5df2bc">
+				<img border="0" src="http://www.yanyulin.info/theme/images/python.png" width="90px" height="20px" alt="Python技术交流群" title="Python技术交流群"></a>
+				</td>
+				<td>
+				<a target="_blank" href="http://wp.qq.com/wpa/qunwpa?idkey=8251aaa2d5ace7f3ad81e51a26af462516a24d51f5a74d8640795a9b0cba32db">
+				<img border="0" src="http://www.yanyulin.info/theme/images/it.png" width="90px" height="20px" alt="IT求职&内推" title="IT求职&内推"></a>
+				</td>
+				</tr>
+				</tbody>
+				</table>
+				</div>
+				</div>
+	 </div>
+	 <div id="wrapper">
+			<div id="top">
+				<div id='topnav'>
+					<div class="left_top ">
+							<div class="home"><a href="http://www.yanyulin.info" title="首  页" class="home"></a>
+							</div>
+					   	<div class="menu-%e5%af%bc%e8%88%aa%e8%8f%9c%e5%8d%95-container">
+						  		<ul  class="menu">		  					
+						   				<li  class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-823"><a href="http://www.yanyulin.info">烟雨首页</a></li>
+						  					<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1209"><a href="http://www.yanyulin.info/category/bian-cheng-yu-yan.html">编程语言</a></li>
+						  					<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1209"><a href="http://www.yanyulin.info/category/jing-pin-shu-ji.html">精品书籍</a></li>
+						  					<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1209"><a href="http://www.yanyulin.info/category/shi-pin-jiao-cheng.html">视频教程</a></li>
+						  		</ul>
+					   	</div> 
+				  </div>
+			  </div>
+			</div>
+<script type="text/javascript">
+    function doZoom(size) {
+        var zoom = document.all ? document.all['entry'] : document.getElementById('entry');
+        zoom.style.fontSize = size + 'px';
+    }
+</script>
+<div class="test_right">
+		<div id="content">							 
+					<div id="map">
+						<div class="browse">现在的位置: <a title="返回首页" href="http://www.yanyulin.info">烟雨首页</a> ＞
+						<a href="http://www.yanyulin.info/category/bian-cheng-yu-yan.html" title="查看编程语言中的全部文章" rel="category tag">编程语言</a>＞正文</div>
+						<div class="font"><a href="javascript:doZoom(12)">小</a> <a href="javascript:doZoom(13)">中</a> <a href="javascript:doZoom(18)">大</a></div>
+					</div>
+					<div class="entry_box_s">
+						<div class="entry_title_box">
+							<div class="ico"></div>
+							<div class="entry_title">String StringBuffer StringBuilder的区别分析</div>
+							<div class="archive_info">
+								<span class="date">2013-07-31</span>
+								<span class="category"> ⁄ <a href="http://www.yanyulin.info/category/bian-cheng-yu-yan.html" title="查看编程语言中的全部文章" rel="category tag">编程语言</a></span>
+							</div>
+						</div>
+						<div class="entry">
+							<div id="entry" style="font-size: 13px; ">
+							<hr />
+<p>这是一道很常见的面试题目，至少我遇到过String/StringBuffer/StringBuilder的区别：String是不可变的对象(final)类型，每一次对String对象的更改均是生成一个新的String对象，原有的对象不会改变，相比之下StringBuffer与StringBuilder均是可更改的对象，效率要大于String,两者之间的区别在于StringBuffer适用于多线程，是线程安全的，而StringBuiler是JDK5.0后出来的，专门针对单线程，效率上要高于StringBuffer。</p>
+<p>String测试的源代码：</p>
+<div class="highlight"><pre><span class="c1">//生成一个字符串对象</span>
+<span class="n">String</span> <span class="n">str</span><span class="o">=</span><span class="s">&quot;abc&quot;</span><span class="p">;</span>
+<span class="c1">//让两个tmp指向同一个字符串</span>
+<span class="n">String</span> <span class="n">tmp</span><span class="o">=</span><span class="n">str</span><span class="p">;</span>
+<span class="c1">//对字符串进行重新赋值，如果str是可以更改的，那么最终的结果就是tmp与str的值还是一样的</span>
+<span class="n">str</span><span class="o">=</span><span class="s">&quot;abc&quot;</span><span class="o">+</span><span class="n">str</span><span class="p">;</span>
+<span class="c1">//将结果打印出来</span>
+<span class="n">System</span><span class="p">.</span><span class="n">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">str</span><span class="p">);</span><span class="c1">//test</span>
+<span class="n">System</span><span class="p">.</span><span class="n">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">tmp</span><span class="p">);</span><span class="c1">//abc</span>
+<span class="c1">//时间测试，待会与后面结果对比</span>
+<span class="n">long</span> <span class="n">start</span><span class="o">=</span><span class="n">System</span><span class="p">.</span><span class="n">currentTimeMillis</span><span class="p">();</span>
+<span class="k">for</span><span class="p">(</span><span class="k">int</span> <span class="n">i</span><span class="o">=</span><span class="mh">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="mh">1000000</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="n">str</span><span class="o">=</span><span class="s">&quot;a&quot;</span><span class="o">+</span><span class="n">str</span><span class="p">;</span>
+<span class="c1">//平均时间会运行好久好久的，真的，你可以试试，有几分钟</span>
+<span class="n">System</span><span class="p">.</span><span class="n">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="n">currentTimeMillis</span><span class="p">()</span><span class="o">-</span><span class="n">start</span><span class="p">);</span>
+</pre></div>
+
+
+<p>上面的代码很显然了吧，如果String是可变对象的话，那么str与tmp的结果应该是一样的，因为指向了同一片空间，但最后结果不一样，是因为String指向的空间是一个final类型，不可更改的，执行str=”test”,实际上是又重新申请了空间存放test，然后str指向了”test”这片空间，而tmp不变，最后的时间测试中，由于每次都是由str+”a”构造出一个新的对象，然后将str指向这个新的对象，期间str原来指向的空间会由GC回收，因此会很费时的。</p>
+<p>看看String类实现的部份源码</p>
+<div class="highlight"><pre><span class="k">public</span> <span class="nf">final</span> <span class="nb">class</span> <span class="kt">String</span>
+<span class="nx">implements</span> <span class="nx">java.io.Serializable</span><span class="p">,</span> <span class="nx">Comparable</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span><span class="p">,</span> <span class="nx">CharSequence</span>
+<span class="p">{</span>
+<span class="cm">/** 存放字符串的空间，看看前面的final,应该就明白了吧，修饰的内容是不可更改的*/</span>
+<span class="k">private</span> <span class="nf">final</span> <span class="nx">char</span> <span class="nb">value</span><span class="err">[</span><span class="cp">]</span>;
+
+/**偏移位置，第一个字符*/
+private final int offset;
+
+/**字符个数*/
+private final int count;
+</pre></div>
+
+
+<p>你也会发现，里面用来存储字符串的是一个char型的数组value,看看char的前面的那个final,应该明白了吧：）</p>
+<p>StringBuffer的测试源代码：</p>
+<div class="highlight"><pre><span class="c1">//生成一个StringBuffer对象,并在里面存放abc</span>
+<span class="n">StringBuffer</span> <span class="n">str</span><span class="o">=</span><span class="k">new</span> <span class="n">StringBuffer</span><span class="p">(</span><span class="s">&quot;abc&quot;</span><span class="p">);</span>
+<span class="c1">//tmp也指向这个StringBuffer对象</span>
+<span class="n">StringBuffer</span> <span class="n">tmp</span><span class="o">=</span><span class="n">str</span><span class="p">;</span>
+<span class="c1">//对字符串进行重新赋值，如果str是可以更改的，那么最终的结果就是tmp与str的值还是一样的</span>
+<span class="n">str</span><span class="o">=</span><span class="n">str</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="s">&quot;abc&quot;</span><span class="p">);</span>
+<span class="c1">//将结果打印出来</span>
+<span class="n">System</span><span class="p">.</span><span class="n">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">str</span><span class="p">);</span><span class="c1">//abcabc</span>
+<span class="n">System</span><span class="p">.</span><span class="n">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">tmp</span><span class="p">);</span><span class="c1">//abcabc</span>
+<span class="c1">//时间测试，待会与后面结果对比</span>
+<span class="n">long</span> <span class="n">start</span><span class="o">=</span><span class="n">System</span><span class="p">.</span><span class="n">currentTimeMillis</span><span class="p">();</span>
+<span class="k">for</span><span class="p">(</span><span class="k">int</span> <span class="n">i</span><span class="o">=</span><span class="mh">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="mh">1000000</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="n">str</span><span class="o">=</span><span class="n">str</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="s">&quot;a&quot;</span><span class="p">);</span>
+<span class="c1">//平均时间在63ms左右</span>
+<span class="n">System</span><span class="p">.</span><span class="n">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="n">currentTimeMillis</span><span class="p">()</span><span class="o">-</span><span class="n">start</span><span class="p">);</span>
+</pre></div>
+
+
+<p>上面的代码也是很显然的吗，由于操作的始终是同一个对象，同一片内存空间，因此tmp与str的值是一样的，在测试时间时，由于避免了内存的释放与回收(不是绝对的避免，当内存不足以存放数据时，又重新分配一片大点的空间，总的来说就是减少的内存的释放与回收)，因此时间大大减少，效率提高了。</p>
+<div class="highlight"><pre> <span class="n">public</span> <span class="n">final</span> <span class="n">class</span> <span class="n">StringBuffer</span> <span class="n">extends</span> <span class="n">AbstractStringBuilder</span>
+ <span class="n">implements</span> <span class="n">java</span><span class="p">.</span><span class="n">io</span><span class="p">.</span><span class="n">Serializable</span><span class="p">,</span> <span class="n">CharSequence</span>
+ <span class="p">{</span>
+<span class="k">static</span> <span class="n">final</span> <span class="kt">long</span> <span class="n">serialVersionUID</span> <span class="o">=</span> <span class="mi">3388685877147921107L</span><span class="p">;</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * 可以看出会有16B的默认空间 </span>
+<span class="cm"> */</span>
+  <span class="n">public</span> <span class="nf">StringBuffer</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">super</span><span class="p">(</span><span class="mi">16</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>从这里可以看出，如果什么都不存放的话，StringBuffer会有16字节的默认空间</p>
+<p>看看StringBuffer的父类，更清楚:)</p>
+<div class="highlight"><pre><span class="n">abstract</span> <span class="n">class</span> <span class="n">AbstractStringBuilder</span> <span class="n">implements</span> <span class="n">Appendable</span><span class="p">,</span> <span class="n">CharSequence</span> <span class="p">{</span>
+<span class="cm">/**</span>
+<span class="cm"> *这个value就是用来存放字符串的，默认情况下就是16B的空间，没有final吧:)</span>
+<span class="cm"> */</span>
+<span class="kt">char</span> <span class="n">value</span><span class="p">[];</span>
+</pre></div>
+
+
+<p>看了这些，你也应该知道String与StringBuffer的区别，还有一点就是StringBuffer是线程安全的，体现在哪呢，看看源代码吧:)</p>
+<div class="highlight"><pre><span class="n">public</span> <span class="n">synchronized</span> <span class="kt">int</span> <span class="nf">length</span><span class="p">()</span> <span class="p">{</span>
+<span class="k">return</span> <span class="n">count</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">public</span> <span class="n">synchronized</span> <span class="kt">int</span> <span class="nf">capacity</span><span class="p">()</span> <span class="p">{</span>
+<span class="k">return</span> <span class="n">value</span><span class="p">.</span><span class="n">length</span><span class="p">;</span>
+<span class="p">}</span>
+
+
+<span class="n">public</span> <span class="n">synchronized</span> <span class="kt">void</span> <span class="nf">ensureCapacity</span><span class="p">(</span><span class="kt">int</span> <span class="n">minimumCapacity</span><span class="p">)</span> <span class="p">{</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">minimumCapacity</span> <span class="o">&gt;</span> <span class="n">value</span><span class="p">.</span><span class="n">length</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">expandCapacity</span><span class="p">(</span><span class="n">minimumCapacity</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>上面只是部份方法，你可以看到的是大部份的方法都含有一个synchronized关键字，这个关键字的作用就是用来进行线程同步的，因此是多线程安全的。
+StringBuilder的测试源代码：</p>
+<div class="highlight"><pre><span class="c1">//生成一个StringBuilder对象,并在里面存放abc</span>
+<span class="n">StringBuilder</span> <span class="n">str</span><span class="o">=</span><span class="k">new</span> <span class="n">StringBuilder</span><span class="p">(</span><span class="s">&quot;abc&quot;</span><span class="p">);</span>
+<span class="c1">//tmp也指向这个StringBuffer对象</span>
+<span class="n">StringBuilder</span> <span class="n">tmp</span><span class="o">=</span><span class="n">str</span><span class="p">;</span>
+<span class="c1">//对字符串进行重新赋值，如果str是可以更改的，那么最终的结果就是tmp与str的值还是一样的</span>
+<span class="n">str</span><span class="o">=</span><span class="n">str</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="s">&quot;abc&quot;</span><span class="p">);</span>
+<span class="c1">//将结果打印出来</span>
+<span class="n">System</span><span class="p">.</span><span class="n">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">str</span><span class="p">);</span><span class="c1">//abcabc</span>
+<span class="n">System</span><span class="p">.</span><span class="n">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">tmp</span><span class="p">);</span><span class="c1">//abcabc</span>
+<span class="c1">//时间测试，待会与后面结果对比</span>
+<span class="n">long</span> <span class="n">start</span><span class="o">=</span><span class="n">System</span><span class="p">.</span><span class="n">currentTimeMillis</span><span class="p">();</span>
+<span class="k">for</span><span class="p">(</span><span class="k">int</span> <span class="n">i</span><span class="o">=</span><span class="mh">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="mh">1000000</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="n">str</span><span class="o">=</span><span class="n">str</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="s">&quot;a&quot;</span><span class="p">);</span>
+<span class="c1">//平均时间在36左右</span>
+<span class="n">System</span><span class="p">.</span><span class="n">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="n">currentTimeMillis</span><span class="p">()</span><span class="o">-</span><span class="n">start</span><span class="p">);</span>
+</pre></div>
+
+
+<p>上面的代码也是类似的，说明了StringBuilder与StringBuffer类似，但比StringBuffer的效率更改，这是为什么呢，看看源代码就知道了:)
+源代码中StringBuffer与StringBuilder继承自同一个父类，代码极奇相似，只是StringBuilder各个函数少了synchonized关键字，这也就说明了StringBuilder不是线程安全的，即然有了synchronized关键字，那么代码每次运行的时候均需要锁住该对象，以避免其他对象调用该方法，不管是单线程还是多线程，因此这需要一定的开销，因此StringBuiler的效率要高于StringBuffer:)</p>
+							转载时请注明文章来源<br/>
+							本文地址: <a href="http://www.yanyulin.info/pages/2013/07/string.html" target="_self">http://www.yanyulin.info/pages/2013/07/string.html</a>
+						  <div class="clear"></div>
+							</div>
+							<div class="clear"></div>
+						</div>			
+						<!-- Baidu Button BEGIN -->
+						<div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+						<a class="bds_qzone"></a>
+						<a class="bds_tsina"></a>
+						<a class="bds_tqq"></a>
+						<a class="bds_renren"></a>
+						<a class="bds_t163"></a>
+						<span class="bds_more"></span>
+						</div>
+						<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=6864225" ></script>
+						<script type="text/javascript" id="bdshell_js"></script>
+						<script type="text/javascript">			
+   		      document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+            </script>
+            <!-- Baidu Button END -->
+						<div class="clear"></div>
+						<!-- end: entry -->
+						<i class="lt"></i>
+						<i class="rt"></i>
+					</div>
+					<!-- entrymeta -->	
+					<div class="entry_sb">
+						<i class="lb"></i>
+						<i class="rb"></i>
+					</div>
+					<!-- end: entrymeta -->
+				<div class="context_b">
+					 上一篇: 
+  				 <a href="http://www.yanyulin.info/pages/2013/06/google_2013_1.html" title="2013年谷歌校招笔试(一)" target="_self">2013年谷歌校招笔试(一)</a>
+  				 &nbsp;&nbsp
+  				 下一篇:
+  				 <a href="http://www.yanyulin.info/pages/2013/11/vlinux.html" title="Linux入门版视频教程(基础)" target="_self">Linux入门版视频教程(基础)</a>
+					 
+					 <i class="lt"></i>
+					 <i class="rt"></i>
+					 <i class="lb"></i>
+					 <i class="rb"></i>
+				</div>
+				<div class="context_b">
+					 相关文章推荐
+  				 <a href="http://www.yanyulin.info/pages/2013/07/string.html" title="String StringBuffer StringBuilder的区别分析" target="_blank">String StringBuffer StringBuilder的区别分析</a>
+  
+					 <i class="lt"></i>
+					 <i class="rt"></i>
+					 <i class="lb"></i>
+					 <i class="rb"></i>
+				</div>
+				<div class="context_b">
+			 <div class="ds-thread"></div>
+			 <script type="text/javascript">
+			 	var duoshuoQuery={short_name:"yanyulin"};
+			 	var ds=document.createElement("script");
+			 	ds.type="text/javascript";
+			 	ds.async=true;
+			 	ds.src="http://static.duoshuo.com/embed.js";
+			 	ds.charset="UTF-8";document.getElementsByTagName("head")[0].appendChild(ds);
+			 </script>
+					 <i class="lt"></i>
+					 <i class="rt"></i>
+					 <i class="lb"></i>
+					 <i class="rb"></i>
+				</div>
+		</div>
+</div>
+<div id="sidebar">					
+	<div class="widget">
+				<h3>相关标签</h3>
+				<div class="box">			
+						<div class="textwidget">
+							<a href="http://www.yanyulin.info/tag/linux.html" title="查看Linux下的所有文章" target="_blank">Linux</a>
+							<a href="http://www.yanyulin.info/tag/c.html" title="查看C++下的所有文章" target="_blank">C++</a>
+							<a href="http://www.yanyulin.info/tag/java.html" title="查看Java下的所有文章" target="_blank">Java</a>
+						</div>
+				</div>
+    		<div class="box-bottom">
+						<i class="lb"></i>
+						<i class="rb"></i>
+				</div>
+				<h3>本站直达</h3>
+				<div class="box">
+				<div class="textwidget">
+					<table width="200" border="0">
+  					<tbody>
+  						<tr>
+ 
+    							<td><a href="http://www.yanyulin.info/category/bian-cheng-yu-yan.html" title="查看编程语言下的所有文章"><font size='2px'>编程语言</font></a></td>
+			
+ 
+    							<td><a href="http://www.yanyulin.info/category/cheng-xu-yuan-zhao-gong-zuo.html" title="查看程序员找工作下的所有文章"><font size='2px'>程序员找工作</font></a></td>
+			
+ 
+    							<td><a href="http://www.yanyulin.info/category/jing-pin-shu-ji.html" title="查看精品书籍下的所有文章"><font size='2px'>精品书籍</font></a></td>
+			
+  						</tr>	
+  						<tr>
+ 
+    							<td><a href="http://www.yanyulin.info/category/shi-pin-jiao-cheng.html" title="查看视频教程下的所有文章"><font size='2px'>视频教程</font></a></td>
+			
+  						<td><a href="#"><font size='2px'></font></a></td>
+  						<td><a href="#"><font size='2px'></font></a></td>
+						</tbody>
+					</table>
+				</div>
+				</div>
+    		<div class="box-bottom">
+				<i class="lb"></i>
+				<i class="rb"></i>
+				</div>
+				<h3>邮箱订阅</h3>
+				<div class="box">			
+				<div class="textwidget">
+				<!--QQ邮件列表订阅嵌入代码-->
+				<table width="200" border="0">
+  			<tbody>
+  			<tr>
+  			<td>
+				<!--以下是QQ邮件列表订阅嵌入代码-->
+        <div style="width: 110px; height: 35px; overflow: hidden; " class="WB_widget WB_follow_ex">
+        <div class="follow_btn_line" node-type="inner">
+        <a class="follow_btn status_followed" node-type="followBtn" target="_blank" title="烟雨林博客" href="http://list.qq.com/cgi-bin/qf_invite?id=8949c93bdc7fcbda12adc078acb2809d6f6eba09998d35e6">
+				<img border="0" width="107px" height="22px" alt="邮箱订阅" src="http://www.yanyulin.info/pics/picMode_light_s.png" />
+        </a></div></div>
+			  </td>
+				</tr>
+			  </tbody>
+			  </table>
+				</div>
+				</div>
+    		<div class="box-bottom">
+				<i class="lb"></i>
+				<i class="rb"></i>
+				</div>
+				<div class="random_r">
+				<h3>随便看看</h3>
+				<div class="box_r">
+				<ul>
+				<ul class="random-post-link">
+				<li class="random-post-link">
+				<a href="http://www.yanyulin.info/pages/2013/11/assert.html" title="Assert(断言)实现机制剖析">Assert(断言)实现机制剖析</a>
+				</li>
+				<li class="random-post-link">
+				<a href="http://www.yanyulin.info/pages/2013/11/huawei_2014_1.html" title="2014年华为校招机试(一)">2014年华为校招机试(一)</a>
+				</li>
+				<li class="random-post-link">
+				<a href="http://www.yanyulin.info/pages/2013/11/objectModel.html" title="深度探索C++对象模型">深度探索C++对象模型</a>
+				</li>
+				<li class="random-post-link">
+				<a href="http://www.yanyulin.info/pages/2013/11/vlinux.html" title="Linux入门版视频教程(基础)">Linux入门版视频教程(基础)</a>
+				</li>
+				</ul>
+				</ul>
+				<div class="clear"></div>
+				</div>
+				<div class="box-bottom">
+				<i class="lb"></i>
+				<i class="rb"></i>
+				</div>
+				</div>
+				<div class="hotarticles">
+				<h3>年度排行</h3>
+				<div class="box_r">
+				<ul>
+				<li>
+				<a href="http://www.yanyulin.info/pages/2013/07/string.html" rel="bookmark" title="String StringBuffer StringBuilder的区别分析">String StringBuffer StringBuilder的区别分析</a>
+				</li>
+				<li>
+				<a href="http://www.yanyulin.info/pages/2013/06/huawei_2013_1.html" rel="bookmark" title="2013年华为校招机试(一)">2013年华为校招机试(一)</a>
+				</li>
+				<li>
+				<a href="http://www.yanyulin.info/pages/2013/11/objectModel.html" rel="bookmark" title="深度探索C++对象模型">深度探索C++对象模型</a>
+				</li>
+				<li>
+				<a href="http://www.yanyulin.info/pages/2013/11/vlinux.html" rel="bookmark" title="Linux入门版视频教程(基础)">Linux入门版视频教程(基础)</a>
+				</li>
+				<div class="clear"></div>
+				</div>
+				<div class="box-bottom">
+				<i class="lb"></i>
+				<i class="rb"></i>
+				</div>
+				</div>
+				</div>
+	      <div class="widget">
+			  </div>
+				<div class="widget">
+				</div>
+				<div class="widget">
+				</div>
+				<div class="widget">
+				</div>
+				<div class="clear">
+				</div>
+	</div>
+</div>	 </div>		
+	 <div id="my_footer_wrapper">
+	 <div class="link">
+	 <a href="https://github.com/zwjlpeng" target="_blank">Github</a>
+	 <a href="http://weibo.com/lamazi" target="_blank">微博</a>
+	 <div class="clear"></div>
+   </div>
+   </div>
+	 <div id="my_footer_wrapper">
+	 <div id="my_footer">		
+	 <span>【</span><a href="http://www.yanyulin.info/sitemap.xml" target="_blank">本站地图</a><span>】
+	 </span> 		
+	 <span>【</span><a href="http://www.yanyulin.info/feeds/all.rss.xml" target="_blank">RSS订阅</a><span>】
+	 </span>  		
+	 <span>【</span><a href="http://www.yanyulin.info/sitemap.xml" target="_blank">谷歌地图</a><span>】
+	 </span> 		
+	 <span>【</span><a href="http://www.yanyulin.info" target="_blank">电脑版</a><span>】</span>    
+	 </div>
+  </div>  
+  <div id="my_copyright_wrapper">
+		<div id="my_copyright">
+		博主邮箱: zwjlpeng@gmail.com Copyright@2010-2020 <a href="http://www.yanyulin.info">烟雨林个人博客</a>
+		</div>
+  </div>
+</body>
+</html>

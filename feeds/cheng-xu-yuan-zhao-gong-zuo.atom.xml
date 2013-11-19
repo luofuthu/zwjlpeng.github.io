@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>烟雨林</title><link href="http://www.yanyulin.info/" rel="alternate"></link><link href="http://www.yanyulin.info/feeds/cheng-xu-yuan-zhao-gong-zuo.atom.xml" rel="self"></link><id>http://www.yanyulin.info/</id><updated>2013-11-18T00:00:00+08:00</updated><entry><title>2014年华为校招机试(一)</title><link href="http://www.yanyulin.info/pages/2013/11/huawei_2014_1.html" rel="alternate"></link><updated>2013-11-18T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-11-18:pages/2013/11/huawei_2014_1.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;通过键盘输入一串小写字母(a~z)组成的字符串。请编写一个字符串过滤程序，若字符串中出现多个相同的字符，将非首次出现的字符过滤掉。
+比如字符串“abacacde”过滤结果为“abcde”。
+要求实现函数：&lt;code&gt;void stringFilter(const char *pInputStr, long lInputLen, char *pOutputStr)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;输入&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;pInputStr&lt;/code&gt;：输入字符串&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;lInputLen&lt;/code&gt;：  输入字符串长度       &lt;/p&gt;
+&lt;p&gt;输出  &lt;/p&gt;
+&lt;p&gt;&lt;code&gt;pOutputStr&lt;/code&gt;： 输出字符串，空间已经开辟好，与输入字符串等长；&lt;/p&gt;
+&lt;p&gt;注意 只需要完成该函数功能算法，中间不需要有任何IO的输入输出&lt;/p&gt;
+&lt;p&gt;示例&lt;/p&gt;
+&lt;p&gt;输入：“deefd”        输出：“def”&lt;/p&gt;
+&lt;p&gt;输入：“afafafaf”     输出：“af”&lt;/p&gt;
+&lt;p&gt;输入：“pppppppp”     输出：“p”&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="vi"&gt;#include&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;algorithm&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="vi"&gt;#include&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;iostream&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="nx"&gt;using&lt;/span&gt; &lt;span class="nx"&gt;namespace&lt;/span&gt; &lt;span class="nx"&gt;std&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="bp"&gt;void&lt;/span&gt; &lt;span class="nx"&gt;stringFilter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;char&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="nx"&gt;pInputStr&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;long&lt;/span&gt; &lt;span class="nx"&gt;lInputLen&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;char&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="nx"&gt;pOutputStr&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="nb"&gt;for&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;int&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;lInputLen&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;find&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;pInputStr&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="nx"&gt;pInputStr&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="nx"&gt;pInputStr&lt;/span&gt;&lt;span class="err"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;)==pInputStr+i)
+            *pOutputStr++=pInputStr&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;;
+}
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;通过键盘输入一串小写字母(a~z)组成的字符串。请编写一个字符串压缩程序，将字符串中连续出席的重复字母进行压缩，并输出压缩后的字符串。&lt;/p&gt;
+&lt;p&gt;压缩规则：仅压缩连续重复出现的字符。比如字符串"abcbc"由于无连续重复字符，压缩后的字符串还是"abcbc"。&lt;/p&gt;
+&lt;p&gt;压缩字段的格式为"字符重复的次数+字符"。例如：字符串"xxxyyyyyyz"压缩后就成为"3x6yz"。&lt;/p&gt;
+&lt;p&gt;要求实现函数：&lt;code&gt;void stringZip(const char *pInputStr, long lInputLen, char *pOutputStr);&lt;/code&gt;
+&lt;code&gt;pInputStr&lt;/code&gt;：输入字符串&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;lInputLen&lt;/code&gt;：输入字符串长度&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;pOutputStr&lt;/code&gt;： 输出字符串，空间已经开辟好，与输入字符串等长；&lt;/p&gt;
+&lt;p&gt;注意只需要完成该函数功能算法，中间不需要有任何IO的输入输出&lt;/p&gt;
+&lt;p&gt;示例 &lt;/p&gt;
+&lt;p&gt;输入：“cccddecc”   输出：“3c2de2c”&lt;/p&gt;
+&lt;p&gt;输入：“adef”     输出：“adef”&lt;/p&gt;
+&lt;p&gt;输入：“pppppppp” 输出：“8p”&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;stringZip&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;const&lt;/span&gt; &lt;span class="kt"&gt;char&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;pInputStr&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kt"&gt;long&lt;/span&gt; &lt;span class="n"&gt;lInputLen&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kt"&gt;char&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;pOutputStr&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;lInputLen&lt;/span&gt;&lt;span class="p"&gt;;)&lt;/span&gt;
+    &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;j&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;count&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;j&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;lInputLen&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pInputStr&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;j&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="n"&gt;pInputStr&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;]);&lt;/span&gt;&lt;span class="n"&gt;j&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="n"&gt;count&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+        &lt;span class="n"&gt;count&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;?&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;pOutputStr&lt;/span&gt;&lt;span class="o"&gt;++=&lt;/span&gt;&lt;span class="n"&gt;count&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;48&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;pOutputStr&lt;/span&gt;&lt;span class="o"&gt;++=&lt;/span&gt;&lt;span class="n"&gt;pInputStr&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;+=&lt;/span&gt;&lt;span class="n"&gt;count&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;pOutputStr&lt;/span&gt;&lt;span class="o"&gt;++=&lt;/span&gt;&lt;span class="n"&gt;pInputStr&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;+=&lt;/span&gt;&lt;span class="n"&gt;count&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="华为"></category></entry><entry><title>2013年谷歌校招笔试(一)</title><link href="http://www.yanyulin.info/pages/2013/06/google_2013_1.html" rel="alternate"></link><updated>2013-06-11T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-06-11:pages/2013/06/google_2013_1.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;一：单选题&lt;/p&gt;
+&lt;p&gt;1：使用C语言将一个1G字节的数组从头到尾全部设置为’A’,在一台典型的当代PC上，需要花费的CPU时间的数量级最接近：(&lt;code&gt;B&lt;/code&gt;)&lt;/p&gt;
+&lt;p&gt;A 0.001秒 B 1秒 C 100秒 D 2小时&lt;/p&gt;
+&lt;p&gt;2：在某些极端要求性能的场合，我们需要对程序进行优化，关天优化，以下说法正确的是(&lt;code&gt;D&lt;/code&gt;)&lt;/p&gt;
+&lt;p&gt;A 将程序整个用汇编语言改写会大大提高程序性能&lt;/p&gt;
+&lt;p&gt;B 在优化前，可以先确定哪部分代码最费时，然后对这部份代码用汇编改写，使用汇编的语句越少，程序运行的越快。&lt;/p&gt;
+&lt;p&gt;C:使用汇编语句虽然可以提高程序的性能，但会降低程序的可移植性，所以应该绝对避免&lt;/p&gt;
+&lt;p&gt;D:适当调整汇编指令的顺序，可以缩短程序的运行时间 &lt;/p&gt;
+&lt;p&gt;3:对如下C语言程序在普通的X86PC上运行输出正确的是(&lt;code&gt;B&lt;/code&gt;)&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;Char&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="nf"&gt;f&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="n"&gt;Char&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;512&lt;/span&gt;&lt;span class="p"&gt;];&lt;/span&gt;
+&lt;span class="n"&gt;Sprintf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;”&lt;/span&gt;&lt;span class="n"&gt;hello&lt;/span&gt; &lt;span class="n"&gt;world&lt;/span&gt;&lt;span class="err"&gt;”&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="n"&gt;Return&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="n"&gt;Main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="n"&gt;Printf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="err"&gt;“&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="err"&gt;”&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;());&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;A 程序可能崩溃，也可能输出&lt;code&gt;hello world&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;B 程序可能崩溃，也可能输出 &lt;code&gt;world&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;C 程序可能崩溃，也可能输出&lt;code&gt;hello&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;D 程序一定崩溃&lt;/p&gt;
+&lt;p&gt;4:方程&lt;code&gt;X1+X2+X3+X4=30&lt;/code&gt;,有多少满足&lt;code&gt;X1&amp;gt;=2,X2&amp;gt;=0,X3&amp;gt;=-5,X4&amp;gt;=8&lt;/code&gt;的整数解（&lt;code&gt;A&lt;/code&gt;）&lt;/p&gt;
+&lt;p&gt;A 3276  B:3654 C:2925 D:17550&lt;/p&gt;
+&lt;p&gt;5:一个袋子里装了100个苹果，100个香蕉，100个桔子，100个梨，如果每分钟从里面随机抽取一种水果，那么最多过多少分钟肯定至少能拿到一打相同种类的水果(1打=12)（&lt;code&gt;D&lt;/code&gt;）&lt;/p&gt;
+&lt;p&gt;A:40 B:12 C:24 D:45&lt;/p&gt;
+&lt;p&gt;6:双败淘汰赛与淘汰赛相仿，也是负者出局，但负一场并未淘汰，只是跌入负者组，在负者组再负者（即总共已负两场）才被淘汰，现在有10个人来参加又败淘汰赛，假设我们取消最后胜利组冠军的比赛，那么一共需要多少场比赛？（&lt;code&gt;B&lt;/code&gt;）&lt;/p&gt;
+&lt;p&gt;A:16 B:17 C:18 D:19 E:20&lt;/p&gt;
+&lt;p&gt;7:n个结点的二叉树，最多可以有多少层(&lt;code&gt;D&lt;/code&gt;)&lt;/p&gt;
+&lt;p&gt;A: n/2 B:log(n) C:n-1 D:n&lt;/p&gt;
+&lt;p&gt;8:下面哪一个序列不是上图的一个拓扑排序？（&lt;code&gt;C&lt;/code&gt;）&lt;/p&gt;
+&lt;p&gt;A:ebfgadch B:aebdfch C:adchebfg D:aedbfgch&lt;/p&gt;
+&lt;p&gt;9：假如某主机安装了2GB内存，在其上运行的某支持MMU的32位Linux发行版中，一共运行了X,Y,Z三个进程，下面关于三个进程使用的内存方式，哪个是可行的(&lt;code&gt;D&lt;/code&gt;)&lt;/p&gt;
+&lt;p&gt;A.X,Y,Z的虚拟地址空间都映射到0-4G的虚拟地址上&lt;/p&gt;
+&lt;p&gt;B.X在堆上分配总大小为1GB的空间，Y在堆上分配200MB,Z在堆上分配500MB，并且内存映射访问一个1GB的文件。&lt;/p&gt;
+&lt;p&gt;C.X在堆上分配1GB,Y在堆上分配800MB,Z在堆上分配400MB&lt;/p&gt;
+&lt;p&gt;D.以上访问方式都是可行的&lt;/p&gt;
+&lt;p&gt;10：当使用TCP协议编程时，下列问题哪个是由程序员考虑和处理的(&lt;code&gt;D&lt;/code&gt;)&lt;/p&gt;
+&lt;p&gt;A:乱序数据包的传递 &lt;/p&gt;
+&lt;p&gt;B数据传输过程中的纠错 &lt;/p&gt;
+&lt;p&gt;C:网络拥塞处理 &lt;/p&gt;
+&lt;p&gt;D:发送数据的格式与应用层的协议&lt;/p&gt;
+&lt;p&gt;二：程序设计与算法&lt;/p&gt;
+&lt;p&gt;1：给定三个整数a,b,c实现函数int median(int a,int b,int c),返回三个数的中位数，不可以使用sort,要求整数操作（比较,位运行，加减乘除)次数尽量少，并分析说明程序最坏和平均情况下使用的操作次数&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;median&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;abMax&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;abs&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;acMax&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;abs&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;abMax&lt;/span&gt;&lt;span class="o"&gt;!=&lt;/span&gt;&lt;span class="n"&gt;acMax&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;abMax&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;acMax&lt;/span&gt;&lt;span class="o"&gt;?&lt;/span&gt;&lt;span class="n"&gt;abMax&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;acMax&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="k"&gt;else&lt;/span&gt;
+&lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;abs&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;2：给定一个key(只含有ASCII编码的小写英文字母),例如kof，然后对input的string(只含有ASCII编码的小写英文字母)利用这个key进行排序，顺序是:先按照key中的字符顺序，然后对key中不包含key的字符，按a-z排序&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="vi"&gt;#include&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;iostream&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="vi"&gt;#include&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;algorithm&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="vi"&gt;#include&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="kt"&gt;string&lt;/span&gt;&lt;span class="bp"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;h&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="nx"&gt;using&lt;/span&gt; &lt;span class="nx"&gt;namespace&lt;/span&gt; &lt;span class="nx"&gt;std&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="nx"&gt;int&lt;/span&gt; &lt;span class="nx"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="nx"&gt;char&lt;/span&gt; &lt;span class="nb"&gt;key&lt;/span&gt;&lt;span class="err"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;=&amp;quot;kof&amp;quot;;
+char str&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;50&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;=&amp;quot;wqtewqtewkwetiowoweff&amp;quot;;
+sort(str,str+strlen(str));
+int flag=0;
+for(int i=0;i&lt;span class="nt"&gt;&amp;lt;strlen&lt;/span&gt;&lt;span class="err"&gt;(&lt;/span&gt;&lt;span class="na"&gt;key&lt;/span&gt;&lt;span class="err"&gt;);&lt;/span&gt;&lt;span class="na"&gt;i&lt;/span&gt;&lt;span class="err"&gt;++)&lt;/span&gt;
+&lt;span class="err"&gt;{&lt;/span&gt;
+&lt;span class="na"&gt;for&lt;/span&gt;&lt;span class="err"&gt;(&lt;/span&gt;&lt;span class="na"&gt;int&lt;/span&gt; &lt;span class="na"&gt;j=&lt;/span&gt;&lt;span class="s"&gt;0;j&amp;lt;strlen(str);j++)&lt;/span&gt;
+&lt;span class="err"&gt;{&lt;/span&gt;
+&lt;span class="na"&gt;if&lt;/span&gt;&lt;span class="err"&gt;(&lt;/span&gt;&lt;span class="na"&gt;key&lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="na"&gt;=&lt;/span&gt;&lt;span class="s"&gt;=str&lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;j&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="s"&gt;)&lt;/span&gt;
+&lt;span class="err"&gt;{&lt;/span&gt;
+&lt;span class="na"&gt;for&lt;/span&gt;&lt;span class="err"&gt;(&lt;/span&gt;&lt;span class="na"&gt;int&lt;/span&gt; &lt;span class="na"&gt;k=&lt;/span&gt;&lt;span class="s"&gt;j;k&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;flag;k--)
+{
+str&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;k&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;=str&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;k&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;;
+}
+str&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;flag&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;=key&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;;
+++flag;
+}
+}
+}
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="谷歌"></category></entry><entry><title>2013年华为校招机试(一)</title><link href="http://www.yanyulin.info/pages/2013/06/huawei_2013_1.html" rel="alternate"></link><updated>2013-06-11T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-06-11:pages/2013/06/huawei_2013_1.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;通过键盘输入任意一个字符串序列，字符串可能包含多个子串，子串以空格分隔，请编写一个程序，自动分离出各个子串，并使用’,’将其分隔，并且在最后也补充一个’,’，并将子串存储。&lt;/p&gt;
+&lt;p&gt;如果输入&lt;code&gt;”abc def ghi d”&lt;/code&gt;,结果将是&lt;code&gt;abc,def,gh,i,d&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;要求实现函数&lt;code&gt;Void DivideString(const char *pInputStr,long IinputLen,char *pOutputStr);&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;输入：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;pInputStr&lt;/code&gt;:输入字符串&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;IinputLen&lt;/code&gt;:输入字符串的长度&lt;/p&gt;
+&lt;p&gt;输出：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;pOutputStr&lt;/code&gt;:输出字符串，字符串已开辟好，与输入字符串等长&lt;/p&gt;
+&lt;p&gt;注意：只需要完成该函数功能算法，中间不需要有任何IO的输入输出&lt;/p&gt;
+&lt;p&gt;解，首先去掉字符串前面开始的空格，然后遍历字符串，遇到空格时，将标志设为真，先不处理，等下次时循环时，若标志为真，则在字符前加一,号即可&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;DivideString&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;const&lt;/span&gt; &lt;span class="kt"&gt;char&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;pInputStr&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="kt"&gt;long&lt;/span&gt; &lt;span class="n"&gt;IinputLen&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kt"&gt;char&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;OutputStr&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;cnt&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="c1"&gt;//计数&lt;/span&gt;
+&lt;span class="kt"&gt;bool&lt;/span&gt; &lt;span class="n"&gt;flag&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;false&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="k"&gt;while&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pInputStr&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="sc"&gt;&amp;#39; &amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="c1"&gt;//去掉前面的空格&lt;/span&gt;
+&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="p"&gt;(;&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;IinputLen&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pInputStr&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="sc"&gt;&amp;#39; &amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="n"&gt;flag&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;true&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="k"&gt;continue&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;flag&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="c1"&gt;//如果flag为true,说明有空格，则将空格变成了, &lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="n"&gt;flag&lt;/span&gt;&lt;span class="o"&gt;=!&lt;/span&gt;&lt;span class="n"&gt;flag&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="n"&gt;OutputStr&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;cnt&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="sc"&gt;&amp;#39;,&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="n"&gt;OutputStr&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;cnt&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;pInputStr&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;];&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="n"&gt;OutputStr&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;cnt&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="sc"&gt;&amp;#39;\0&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;二:将一个字符串中出现次数最少的字符删掉，并保证删除后的字符顺序不变，如果出现次数最少的字符有多种，则这几种字符都要删除，该字符串长度不会超过20个字符。 例如：源字符串为&lt;code&gt;“abcdd”&lt;/code&gt;，删除后为&lt;code&gt;“dd”&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;解：此题主要是内存移位操作&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kt"&gt;char&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="nf"&gt;deleteMin&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;char&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;InputSrc&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;ILen&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;sz&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;26&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;};&lt;/span&gt;
+&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;min&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="c1"&gt;//最小出现次数&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;ILen&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="n"&gt;sz&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;InputSrc&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="sc"&gt;&amp;#39;a&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;];&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="mi"&gt;26&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;sz&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;min&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;sz&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;!=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;min&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;sz&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;];&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;InputSrc&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;sz&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;InputSrc&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="sc"&gt;&amp;#39;a&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="n"&gt;min&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="n"&gt;memcpy&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;InputSrc&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;InputSrc&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;ILen&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="c1"&gt;//因为跳过了一位&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;InputSrc&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="华为"></category></entry></feed>
