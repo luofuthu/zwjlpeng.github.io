@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-<title>烟雨林 - 华为</title>
+<title>STL源码剖析</title>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
 <meta name="author" content="烟雨林">
@@ -9,6 +9,7 @@
 <meta name="keywords" content="烟雨|烟雨林|编程语言|互联网|程序员找工作|视频教程|公务员|Linux|数据挖掘|自然语言处理|移动互联">
 <link href="http://www.yanyulin.info/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="烟雨林 Full Atom Feed" />
 <link href="http://www.yanyulin.info/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="烟雨林 RSS Feed" />
+<link href="http://www.yanyulin.info/feeds/jing-pin-shu-ji.atom.xml" type="application/atom+xml" rel="alternate" title="烟雨林 Categories Atom Feed" />
 <link rel="stylesheet" type="text/css" href="http://www.yanyulin.info/theme/index.css" />
 <link rel="shortcut icon" href="http://www.yanyulin.info/theme/images/favicon.ico">
 </head>
@@ -63,76 +64,125 @@
 				  </div>
 			  </div>
 			</div>
-		
-<div id="post">
-		<div id="map">
-				<div class="browse"> 现在的位置: 
-				<a title="返回首页" href="http://www.yanyulin.info">烟雨首页</a>
-			  </div>
-		</div>
-		<div class="clear"></div>
-		<div class="post-2693 post type-post status-publish format-standard sticky hentry category-wordpress category-computer-technology tag-37">
-			<div class="entry_box">
-				<div class="box_entry">
-					<div class="box_entry_title">
-						<h4><a href="http://www.yanyulin.info/pages/2013/11/huawei_2014_1.html" target="_blank" rel="bookmark" title="2014年华为校招机试(一)">2014年华为校招机试(一)</a></h4>
-						<div class="info">
-							<span class="date">2013-11-18</span>
-							<span class="category"> 
-						  <a href="http://www.yanyulin.info/tag/hua-wei.html" title="查看同类文章" rel="category tag">华为</a>&nbsp;
-						 </span>&nbsp;
+<script type="text/javascript">
+    function doZoom(size) {
+        var zoom = document.all ? document.all['entry'] : document.getElementById('entry');
+        zoom.style.fontSize = size + 'px';
+    }
+</script>
+<div class="test_right">
+		<div id="content">							 
+					<div id="map">
+						<div class="browse">现在的位置: <a title="返回首页" href="http://www.yanyulin.info">烟雨首页</a> ＞
+						<a href="http://www.yanyulin.info/category/jing-pin-shu-ji.html" title="查看精品书籍中的全部文章" rel="category tag">精品书籍</a>＞正文</div>
+						<div class="font"><a href="javascript:doZoom(12)">小</a> <a href="javascript:doZoom(13)">中</a> <a href="javascript:doZoom(18)">大</a></div>
+					</div>
+					<div class="entry_box_s">
+						<div class="entry_title_box">
+							<div class="ico"></div>
+							<div class="entry_title">STL源码剖析</div>
+							<div class="archive_info">
+								<span class="date">2013-11-21</span>
+								<span class="category"> ⁄ <a href="http://www.yanyulin.info/category/jing-pin-shu-ji.html" title="查看精品书籍中的全部文章" rel="category tag">精品书籍</a></span>
+							</div>
 						</div>
-					</div>				
-					<div class="thumbnail_box">
-          <!-- 截图 -->
-					<a href="http://www.yanyulin.info/pages/2013/11/huawei_2014_1.html" rel="bookmark" title="2014年华为校招机试(一)">
-					<img class="home-thumb" src="http://www.yanyulin.info/pics/huawei.jpg" style="width:200px;height:100px" alt="2014年华为校招机试(一)">
-					</a>
-					</div>
-					<div class="post_entry" style="height:102px;padding-right:0px">
-					<p>通过键盘输入一串小写字母(a~z)组成的字符串,请编写一个字符串过滤程序，若字符串中出现多个相同的字符，将非首次出现的字符过滤掉;通过键盘输入一串小写字母(a~z)组成的字符串,请编写一个字符串压缩程序，将字符串中连续出席的重复字母进行压缩，并输出压缩后的字符串,压缩规则：仅压缩连续重复出现的字符。</p>				
-					</div>
-				</div>				
-			</div>	
-		</div>
-		<div class="post-2693 post type-post status-publish format-standard sticky hentry category-wordpress category-computer-technology tag-37">
-			<div class="entry_box">
-				<div class="box_entry">
-					<div class="box_entry_title">
-						<h4><a href="http://www.yanyulin.info/pages/2013/06/huawei_2013_1.html" target="_blank" rel="bookmark" title="2013年华为校招机试(一)">2013年华为校招机试(一)</a></h4>
-						<div class="info">
-							<span class="date">2013-06-11</span>
-							<span class="category"> 
-						  <a href="http://www.yanyulin.info/tag/hua-wei.html" title="查看同类文章" rel="category tag">华为</a>&nbsp;
-						 </span>&nbsp;
+						<div class="entry">
+							<div id="entry" style="font-size: 13px; ">
+							<hr />
+<p>STL源码剖析 PDF格式下载:<a href="http://yunpan.cn/QUK3HwIaW6tu2" target="_blank" title="《STL源码剖析》">点这里</a></p>
+<p>STL源码剖析此书是一本不可多得的好书，大师的精典之作，大多数程序员只知道集合类非常好用，只需要向集合类中填加元素，不用担心空间的开设，以及空间的回收，也不用考虑集合类的效率，更重要的是集合类还给我们提供了各种各样的函数，但是知其所以然而不知其因为然，这样的程序员是不合格的，《STL源码剖析》很好的给我们讲解了集合类的底层实现，以及泛型算法。</p>
+<p>STL源码剖析</p>
+<blockquote>
+<p>前言</p>
+<p>第1章STL概论与版本简介</p>
+<p>第2章 空间配置器（allocator）</p>
+<p>第3章迭代器（iterators）概念与traits编程技法</p>
+<p>第4章 序列式容器（sequence containers）</p>
+<p>第5章 关联式容器（associattive containers）</p>
+<p>第6章 算法（algorithms）</p>
+<p>第7章 仿函数（functors，另名 函数对象function objects）</p>
+<p>第8章 配接器（adapters）</p>
+<p>附录A 参考书籍与推荐读物</p>
+<p>附录B 候捷网站（本书支持站点简介）</p>
+<p>附录C STLPort 的移植经验（by孟岩</p>
+</blockquote>
+							转载时请注明文章来源<br/>
+							本文地址: <a href="http://www.yanyulin.info/pages/2013/11/stlOrigin.html" target="_self">http://www.yanyulin.info/pages/2013/11/stlOrigin.html</a>
+						  <div class="clear"></div>
+							</div>
+							<div class="clear"></div>
+						</div>			
+						<!-- Baidu Button BEGIN -->
+						<div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+						<a class="bds_qzone"></a>
+						<a class="bds_tsina"></a>
+						<a class="bds_tqq"></a>
+						<a class="bds_renren"></a>
+						<a class="bds_t163"></a>
+						<span class="bds_more"></span>
 						</div>
-					</div>				
-					<div class="thumbnail_box">
-          <!-- 截图 -->
-					<a href="http://www.yanyulin.info/pages/2013/06/huawei_2013_1.html" rel="bookmark" title="2013年华为校招机试(一)">
-					<img class="home-thumb" src="http://www.yanyulin.info/pics/huawei.jpg" style="width:200px;height:100px" alt="2013年华为校招机试(一)">
-					</a>
+						<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=6864225" ></script>
+						<script type="text/javascript" id="bdshell_js"></script>
+						<script type="text/javascript">			
+   		      document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+            </script>
+            <!-- Baidu Button END -->
+						<div class="clear"></div>
+						<!-- end: entry -->
+						<i class="lt"></i>
+						<i class="rt"></i>
 					</div>
-					<div class="post_entry" style="height:102px;padding-right:0px">
-					<p>通过键盘输入任意一个字符串序列，字符串可能包含多个子串，子串以空格分隔，请编写一个程序，自动分离出各个子串，并使用’,’将其分隔，并且在最后也补充一个’,’，并将子串存储;将一个字符串中出现次数最少的字符删掉，并保证删除后的字符顺序不变，如果出现次数最少的字符有多种，则这几种字符都要删除，该字符串长度不会超过20个字符。</p>				
+					<!-- entrymeta -->	
+					<div class="entry_sb">
+						<i class="lb"></i>
+						<i class="rb"></i>
 					</div>
-				</div>				
-			</div>	
+					<!-- end: entrymeta -->
+				<div class="context_b">
+					 上一篇: 
+  				 <a href="http://www.yanyulin.info/pages/2013/11/github.html" title="Github简明教程(入门篇)" target="_self">Github简明教程(入门篇)</a>
+  				 &nbsp;&nbsp
+  				 下一篇:
+  				 <a href="http://www.yanyulin.info/pages/2013/11/stlOrigin.html" title="STL源码剖析" target="_self">STL源码剖析</a>
+					 
+					 <i class="lt"></i>
+					 <i class="rt"></i>
+					 <i class="lb"></i>
+					 <i class="rb"></i>
+				</div>
+				<div class="context_b">
+					 相关文章推荐
+  				 <a href="http://www.yanyulin.info/pages/2013/11/objectModel.html" title="深度探索C++对象模型" target="_blank">深度探索C++对象模型</a>
+  				 <a href="http://www.yanyulin.info/pages/2013/11/stlOrigin.html" title="STL源码剖析" target="_blank">STL源码剖析</a>
+  
+					 <i class="lt"></i>
+					 <i class="rt"></i>
+					 <i class="lb"></i>
+					 <i class="rb"></i>
+				</div>
+				<div class="context_b">
+			 <div class="ds-thread"></div>
+			 <script type="text/javascript">
+			 	var duoshuoQuery={short_name:"yanyulin"};
+			 	var ds=document.createElement("script");
+			 	ds.type="text/javascript";
+			 	ds.async=true;
+			 	ds.src="http://static.duoshuo.com/embed.js";
+			 	ds.charset="UTF-8";document.getElementsByTagName("head")[0].appendChild(ds);
+			 </script>
+					 <i class="lt"></i>
+					 <i class="rt"></i>
+					 <i class="lb"></i>
+					 <i class="rb"></i>
+				</div>
 		</div>
-			
-		<div class="navigation_b">
-			<div class="pagination">		
-				<a href="http://www.yanyulin.info/tag/hua-wei.html" class="inactive">1</a>
-				<a href="http://www.yanyulin.info/tag/hua-wei.html">第一篇</a>
-				<a href="http://www.yanyulin.info/tag/hua-wei.html">尾页</a></div>
-    </div>
-	  <div class="clear"></div>
 </div>
 <div id="sidebar">					
 	<div class="widget">
-				<h3>热门标签</h3>
+				<h3>相关标签</h3>
 				<div class="box">			
 						<div class="textwidget">
+							<a href="http://www.yanyulin.info/tag/cshu-ku.html" title="查看C++书库下的所有文章" target="_blank">C++书库</a>
 						</div>
 				</div>
     		<div class="box-bottom">
@@ -199,13 +249,13 @@
 				<ul>
 				<ul class="random-post-link">
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2013/11/github.html" title="Github简明教程(入门篇)">Github简明教程(入门篇)</a>
+				<a href="http://www.yanyulin.info/pages/2013/11/sizeof.html" title="被人误解的SIZEOF">被人误解的SIZEOF</a>
 				</li>
 				<li class="random-post-link">
 				<a href="http://www.yanyulin.info/pages/2013/11/huawei_2014_1.html" title="2014年华为校招机试(一)">2014年华为校招机试(一)</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2013/11/objectModel.html" title="深度探索C++对象模型">深度探索C++对象模型</a>
+				<a href="http://www.yanyulin.info/pages/2013/11/stlOrigin.html" title="STL源码剖析">STL源码剖析</a>
 				</li>
 				<li class="random-post-link">
 				<a href="http://www.yanyulin.info/pages/2013/11/vlinux1.html" title="Linux入门版视频教程(基础)">Linux入门版视频教程(基础)</a>
@@ -224,13 +274,13 @@
 				<div class="box_r">
 				<ul>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2013/07/string.html" rel="bookmark" title="String StringBuffer StringBuilder的区别分析">String StringBuffer StringBuilder的区别分析</a>
+				<a href="http://www.yanyulin.info/pages/2013/11/github.html" rel="bookmark" title="Github简明教程(入门篇)">Github简明教程(入门篇)</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2013/06/google_2013_1.html" rel="bookmark" title="2013年谷歌校招笔试(一)">2013年谷歌校招笔试(一)</a>
+				<a href="http://www.yanyulin.info/pages/2013/06/huawei_2013_1.html" rel="bookmark" title="2013年华为校招机试(一)">2013年华为校招机试(一)</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2013/11/objectModel.html" rel="bookmark" title="深度探索C++对象模型">深度探索C++对象模型</a>
+				<a href="http://www.yanyulin.info/pages/2013/11/stlOrigin.html" rel="bookmark" title="STL源码剖析">STL源码剖析</a>
 				</li>
 				<li>
 				<a href="http://www.yanyulin.info/pages/2013/11/vlinux1.html" rel="bookmark" title="Linux入门版视频教程(基础)">Linux入门版视频教程(基础)</a>
@@ -242,25 +292,6 @@
 				<i class="rb"></i>
 				</div>
 				</div>
-				<!--
-				<h3>近期评论</h3>
-				<div class="box">
-				<ul id="recentcomments">
-				<li class="recentcomments">
-				<a href="http://www.liyumei.net.cn/" rel="external nofollow" class="url">职场博客</a>
-				发表在《<a href="http://www.maplemark.cn/cache/2012-11-6-155852.html#comment-118">传苹果可能阻止iOS版Google地图进入应用商店</a>》</li>
-				<li class="recentcomments">Yusky发表在《<a href="http://www.maplemark.cn/cache/2013-7-25-71725.html#comment-117">Web技术-JavaScript学习笔记(二)</a>》</li>
-				<li class="recentcomments"><a href="http://www.sodone.com" rel="external nofollow" class="url">SoDone酥蛋</a>发表在《<a href="http://www.maplemark.cn/cache/2013-7-25-71725.html#comment-116">Web技术-JavaScript学习笔记(二)</a>》</li>
-				<li class="recentcomments"><a href="http://www.sodone.com" rel="external nofollow" class="url">SoDone酥蛋</a>发表在《<a href="http://www.maplemark.cn/cache/2012-10-27-230638chuangye.html#comment-115">摘抄…</a>》</li>
-				<li class="recentcomments">秋枫荭叶发表在《<a href="http://www.maplemark.cn/cache/2013-3-23-142033.html#comment-127">转载:卖羊肉&amp;卖文体也那么暴利</a>》</li>
-				<li class="recentcomments"><a href="http://weibo.com/zksr0705" rel="external nofollow" class="url">秋枫荭叶</a>发表在《<a href="http://www.maplemark.cn/cache/2013-3-23-142033.html#comment-114">转载:卖羊肉&amp;卖文体也那么暴利</a>》</li>
-				</ul>
-				</div>
-    		<div class="box-bottom">
-				<i class="lb"></i>
-				<i class="rb"></i>
-				</div>			
-				-->
 				</div>
 	      <div class="widget">
 			  </div>

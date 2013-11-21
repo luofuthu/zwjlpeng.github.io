@@ -1,5 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>烟雨林</title><link href="http://www.yanyulin.info/" rel="alternate"></link><link href="http://www.yanyulin.info/feeds/all.atom.xml" rel="self"></link><id>http://www.yanyulin.info/</id><updated>2013-11-20T00:00:00+08:00</updated><entry><title>Github简明教程(入门篇)</title><link href="http://www.yanyulin.info/pages/2013/11/github.html" rel="alternate"></link><updated>2013-11-20T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-11-20:pages/2013/11/github.html</id><summary type="html">&lt;hr /&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>烟雨林</title><link href="http://www.yanyulin.info/" rel="alternate"></link><link href="http://www.yanyulin.info/feeds/all.atom.xml" rel="self"></link><id>http://www.yanyulin.info/</id><updated>2013-11-21T00:00:00+08:00</updated><entry><title>STL源码剖析</title><link href="http://www.yanyulin.info/pages/2013/11/stlOrigin.html" rel="alternate"></link><updated>2013-11-21T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-11-21:pages/2013/11/stlOrigin.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;STL源码剖析 PDF格式下载:&lt;a href="http://yunpan.cn/QUK3HwIaW6tu2" target="_blank" title="《STL源码剖析》"&gt;点这里&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;STL源码剖析此书是一本不可多得的好书，大师的精典之作，大多数程序员只知道集合类非常好用，只需要向集合类中填加元素，不用担心空间的开设，以及空间的回收，也不用考虑集合类的效率，更重要的是集合类还给我们提供了各种各样的函数，但是知其所以然而不知其因为然，这样的程序员是不合格的，《STL源码剖析》很好的给我们讲解了集合类的底层实现，以及泛型算法。&lt;/p&gt;
+&lt;p&gt;STL源码剖析&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;前言&lt;/p&gt;
+&lt;p&gt;第1章STL概论与版本简介&lt;/p&gt;
+&lt;p&gt;第2章 空间配置器（allocator）&lt;/p&gt;
+&lt;p&gt;第3章迭代器（iterators）概念与traits编程技法&lt;/p&gt;
+&lt;p&gt;第4章 序列式容器（sequence containers）&lt;/p&gt;
+&lt;p&gt;第5章 关联式容器（associattive containers）&lt;/p&gt;
+&lt;p&gt;第6章 算法（algorithms）&lt;/p&gt;
+&lt;p&gt;第7章 仿函数（functors，另名 函数对象function objects）&lt;/p&gt;
+&lt;p&gt;第8章 配接器（adapters）&lt;/p&gt;
+&lt;p&gt;附录A 参考书籍与推荐读物&lt;/p&gt;
+&lt;p&gt;附录B 候捷网站（本书支持站点简介）&lt;/p&gt;
+&lt;p&gt;附录C STLPort 的移植经验（by孟岩&lt;/p&gt;
+&lt;/blockquote&gt;</summary><category term="C++书库"></category></entry><entry><title>Github简明教程(入门篇)</title><link href="http://www.yanyulin.info/pages/2013/11/github.html" rel="alternate"></link><updated>2013-11-20T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-11-20:pages/2013/11/github.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;Github作为一项目托管仓库，里面有着各种各样的高质量代码，本篇博客针对Git入门或者初学者，各位大神可以绕过，关于GitHub的强大之处可以自已百度谷歌去，在继续阅读本篇博客之前，如果还没有帐号的同学，先到github官网上申请一个帐号http://www.github.com&lt;/p&gt;
 &lt;p&gt;1、首先登录自已的帐号，创建属于自已的代码库
 &lt;a href="http://www.yanyulin.info" target="_blank"&gt;
