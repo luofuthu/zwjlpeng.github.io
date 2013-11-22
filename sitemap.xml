@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://www.yanyulin.info/index.html</loc>
-<lastmod>2013-11-22T11:20:47-00:00</lastmod>
+<lastmod>2013-11-22T12:13:29-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://www.yanyulin.info/archives.html</loc>
-<lastmod>2013-11-22T11:20:47-00:00</lastmod>
+<lastmod>2013-11-22T12:13:29-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://www.yanyulin.info/tags.html</loc>
-<lastmod>2013-11-22T11:20:47-00:00</lastmod>
+<lastmod>2013-11-22T12:13:29-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://www.yanyulin.info/categories.html</loc>
-<lastmod>2013-11-22T11:20:47-00:00</lastmod>
+<lastmod>2013-11-22T12:13:29-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -144,6 +144,27 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>http://www.yanyulin.info/tag/c.html</loc>
+<lastmod>2013-11-18T00:00:00-00:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://www.yanyulin.info/tag/hua-wei.html</loc>
+<lastmod>2013-11-18T00:00:00-00:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://www.yanyulin.info/tag/gong-ju-shi-yong.html</loc>
+<lastmod>2013-11-22T00:00:00-00:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>http://www.yanyulin.info/tag/java.html</loc>
 <lastmod>2013-07-31T00:00:00-00:00</lastmod>
 <changefreq>daily</changefreq>
@@ -165,21 +186,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://www.yanyulin.info/tag/hua-wei.html</loc>
-<lastmod>2013-11-18T00:00:00-00:00</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
 <loc>http://www.yanyulin.info/tag/linuxshi-pin.html</loc>
-<lastmod>2013-11-18T00:00:00-00:00</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>http://www.yanyulin.info/tag/c.html</loc>
 <lastmod>2013-11-18T00:00:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
@@ -188,13 +195,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://www.yanyulin.info/tag/cshu-ku.html</loc>
 <lastmod>2013-11-21T00:00:00-00:00</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>http://www.yanyulin.info/tag/gong-ju-shi-yong.html</loc>
-<lastmod>2013-11-22T00:00:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
