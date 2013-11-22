@@ -74,7 +74,7 @@
 &lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;下一篇将介绍如何利用Github搭建属于自已的博客&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://www.yanyulin.info" title="烟雨林个人博客"&gt;烟雨林个人博客&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Fri, 22 Nov 2013 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2013-11-22:pages/2013/11/githubM.html</guid><category>工具使用</category></item><item><title>STL源码剖析(候捷译)</title><link>http://www.yanyulin.info/pages/2013/11/stlOrigin.html</link><description>&lt;hr /&gt;
-&lt;p&gt;STL源码剖析 PDF格式下载:&lt;a href="http://yunpan.cn/QUK3HwIaW6tu2" target="_blank" title="《STL源码剖析》"&gt;点这里&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;STL源码剖析 PDF格式下载:&lt;a href="http://yunpan.cn/QUj5p6EIPZH9y" target="_blank" title="《STL源码剖析》"&gt;点这里&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;STL源码剖析此书是一本不可多得的好书，大师的精典之作，大多数程序员只知道集合类非常好用，只需要向集合类中填加元素，不用担心空间的开设，以及空间的回收，也不用考虑集合类的效率，更重要的是集合类还给我们提供了各种各样的函数，但是知其所以然而不知其因为然，这样的程序员是不合格的，《STL源码剖析》很好的给我们讲解了集合类的底层实现，以及泛型算法。&lt;/p&gt;
 &lt;p&gt;STL源码剖析&lt;/p&gt;
 &lt;blockquote&gt;
