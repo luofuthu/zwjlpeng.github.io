@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-<title>2013年谷歌校招笔试(一) - 烟雨林</title>
+<title>C语言深度解剖(含金量高) - 烟雨林</title>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
 <meta name="author" content="烟雨林">
 <link href="http://www.yanyulin.info/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="烟雨林 Full Atom Feed" />
 <link href="http://www.yanyulin.info/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="烟雨林 RSS Feed" />
-<link href="http://www.yanyulin.info/feeds/cheng-xu-yuan-zhao-gong-zuo.atom.xml" type="application/atom+xml" rel="alternate" title="烟雨林 Categories Atom Feed" />
+<link href="http://www.yanyulin.info/feeds/jing-pin-shu-ji.atom.xml" type="application/atom+xml" rel="alternate" title="烟雨林 Categories Atom Feed" />
 <link rel="stylesheet" type="text/css" href="http://www.yanyulin.info/theme/index.css" />
 <link rel="shortcut icon" href="http://www.yanyulin.info/theme/images/favicon.ico">
 </head>
@@ -72,110 +72,96 @@
 		<div id="content">							 
 					<div id="map">
 						<div class="browse">现在的位置: <a title="返回首页" href="http://www.yanyulin.info">烟雨首页</a> ＞
-						<a href="http://www.yanyulin.info/category/cheng-xu-yuan-zhao-gong-zuo.html" title="查看程序员找工作中的全部文章" rel="category tag">程序员找工作</a>＞正文</div>
+						<a href="http://www.yanyulin.info/category/jing-pin-shu-ji.html" title="查看精品书籍中的全部文章" rel="category tag">精品书籍</a>＞正文</div>
 						<div class="font"><a href="javascript:doZoom(12)">小</a> <a href="javascript:doZoom(13)">中</a> <a href="javascript:doZoom(18)">大</a></div>
 					</div>
 					<div class="entry_box_s">
 						<div class="entry_title_box">
 							<div class="ico"></div>
-							<div class="entry_title">2013年谷歌校招笔试(一)</div>
+							<div class="entry_title">C语言深度解剖(含金量高)</div>
 							<div class="archive_info">
-								<span class="date">2013-06-11</span>
-								<span class="category"> ⁄ <a href="http://www.yanyulin.info/category/cheng-xu-yuan-zhao-gong-zuo.html" title="查看程序员找工作中的全部文章" rel="category tag">程序员找工作</a></span>
+								<span class="date">2013-11-23</span>
+								<span class="category"> ⁄ <a href="http://www.yanyulin.info/category/jing-pin-shu-ji.html" title="查看精品书籍中的全部文章" rel="category tag">精品书籍</a></span>
 							</div>
 						</div>
 						<div class="entry">
 							<div id="entry" style="font-size: 13px; ">
 							<hr />
-<p>一：单选题</p>
-<p>1：使用C语言将一个1G字节的数组从头到尾全部设置为’A’,在一台典型的当代PC上，需要花费的CPU时间的数量级最接近：(<code>B</code>)</p>
-<p>A 0.001秒 B 1秒 C 100秒 D 2小时</p>
-<p>2：在某些极端要求性能的场合，我们需要对程序进行优化，关天优化，以下说法正确的是(<code>D</code>)</p>
-<p>A 将程序整个用汇编语言改写会大大提高程序性能</p>
-<p>B 在优化前，可以先确定哪部分代码最费时，然后对这部份代码用汇编改写，使用汇编的语句越少，程序运行的越快。</p>
-<p>C:使用汇编语句虽然可以提高程序的性能，但会降低程序的可移植性，所以应该绝对避免</p>
-<p>D:适当调整汇编指令的顺序，可以缩短程序的运行时间 </p>
-<p>3:对如下C语言程序在普通的X86PC上运行输出正确的是(<code>B</code>)</p>
-<div class="highlight"><pre><span class="n">Char</span> <span class="o">*</span> <span class="nf">f</span><span class="p">()</span>
-<span class="p">{</span>
-<span class="n">Char</span> <span class="n">x</span><span class="p">[</span><span class="mi">512</span><span class="p">];</span>
-<span class="n">Sprintf</span><span class="p">(</span><span class="n">x</span> <span class="p">,</span><span class="err">”</span><span class="n">hello</span> <span class="n">world</span><span class="err">”</span><span class="p">);</span>
-<span class="n">Return</span> <span class="n">x</span><span class="o">+</span><span class="mi">6</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="n">Main</span><span class="p">()</span>
-<span class="p">{</span>
-<span class="n">Printf</span><span class="p">(</span><span class="err">“</span><span class="o">%</span><span class="n">s</span><span class="err">”</span><span class="p">,</span><span class="n">f</span><span class="p">());</span>
-<span class="p">}</span>
-</pre></div>
-
-
-<p>A 程序可能崩溃，也可能输出<code>hello world</code></p>
-<p>B 程序可能崩溃，也可能输出 <code>world</code></p>
-<p>C 程序可能崩溃，也可能输出<code>hello</code></p>
-<p>D 程序一定崩溃</p>
-<p>4:方程<code>X1+X2+X3+X4=30</code>,有多少满足<code>X1&gt;=2,X2&gt;=0,X3&gt;=-5,X4&gt;=8</code>的整数解（<code>A</code>）</p>
-<p>A 3276  B:3654 C:2925 D:17550</p>
-<p>5:一个袋子里装了100个苹果，100个香蕉，100个桔子，100个梨，如果每分钟从里面随机抽取一种水果，那么最多过多少分钟肯定至少能拿到一打相同种类的水果(1打=12)（<code>D</code>）</p>
-<p>A:40 B:12 C:24 D:45</p>
-<p>6:双败淘汰赛与淘汰赛相仿，也是负者出局，但负一场并未淘汰，只是跌入负者组，在负者组再负者（即总共已负两场）才被淘汰，现在有10个人来参加又败淘汰赛，假设我们取消最后胜利组冠军的比赛，那么一共需要多少场比赛？（<code>B</code>）</p>
-<p>A:16 B:17 C:18 D:19 E:20</p>
-<p>7:n个结点的二叉树，最多可以有多少层(<code>D</code>)</p>
-<p>A: n/2 B:log(n) C:n-1 D:n</p>
-<p>8:下面哪一个序列不是上图的一个拓扑排序？（<code>C</code>）</p>
-<p>A:ebfgadch B:aebdfch C:adchebfg D:aedbfgch</p>
-<p>9：假如某主机安装了2GB内存，在其上运行的某支持MMU的32位Linux发行版中，一共运行了X,Y,Z三个进程，下面关于三个进程使用的内存方式，哪个是可行的(<code>D</code>)</p>
-<p>A.X,Y,Z的虚拟地址空间都映射到0-4G的虚拟地址上</p>
-<p>B.X在堆上分配总大小为1GB的空间，Y在堆上分配200MB,Z在堆上分配500MB，并且内存映射访问一个1GB的文件。</p>
-<p>C.X在堆上分配1GB,Y在堆上分配800MB,Z在堆上分配400MB</p>
-<p>D.以上访问方式都是可行的</p>
-<p>10：当使用TCP协议编程时，下列问题哪个是由程序员考虑和处理的(<code>D</code>)</p>
-<p>A:乱序数据包的传递 </p>
-<p>B数据传输过程中的纠错 </p>
-<p>C:网络拥塞处理 </p>
-<p>D:发送数据的格式与应用层的协议</p>
-<p>二：程序设计与算法</p>
-<p>1：给定三个整数a,b,c实现函数int median(int a,int b,int c),返回三个数的中位数，不可以使用sort,要求整数操作（比较,位运行，加减乘除)次数尽量少，并分析说明程序最坏和平均情况下使用的操作次数</p>
-<div class="highlight"><pre><span class="kt">int</span> <span class="nf">median</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span><span class="kt">int</span> <span class="n">b</span><span class="p">,</span><span class="kt">int</span> <span class="n">c</span><span class="p">)</span>
-<span class="p">{</span>
-<span class="kt">int</span> <span class="n">abMax</span><span class="o">=</span><span class="p">((</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">)</span><span class="o">+</span><span class="n">abs</span><span class="p">(</span><span class="n">a</span><span class="o">-</span><span class="n">b</span><span class="p">))</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span>
-<span class="kt">int</span> <span class="n">acMax</span><span class="o">=</span><span class="p">((</span><span class="n">a</span><span class="o">+</span><span class="n">c</span><span class="p">)</span><span class="o">+</span><span class="n">abs</span><span class="p">(</span><span class="n">a</span><span class="o">-</span><span class="n">c</span><span class="p">))</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span>
-<span class="k">if</span><span class="p">(</span><span class="n">abMax</span><span class="o">!=</span><span class="n">acMax</span><span class="p">)</span>
-<span class="k">return</span> <span class="n">abMax</span><span class="o">&lt;</span><span class="n">acMax</span><span class="o">?</span><span class="n">abMax</span><span class="o">:</span><span class="n">acMax</span><span class="p">;</span>
-<span class="k">else</span>
-<span class="k">return</span> <span class="p">((</span><span class="n">b</span><span class="o">+</span><span class="n">c</span><span class="p">)</span><span class="o">+</span><span class="n">abs</span><span class="p">(</span><span class="n">b</span><span class="o">-</span><span class="n">c</span><span class="p">))</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
-
-
-<p>2：给定一个key(只含有ASCII编码的小写英文字母),例如kof，然后对input的string(只含有ASCII编码的小写英文字母)利用这个key进行排序，顺序是:先按照key中的字符顺序，然后对key中不包含key的字符，按a-z排序</p>
-<div class="highlight"><pre><span class="vi">#include</span><span class="o">&lt;</span><span class="nx">iostream</span><span class="o">&gt;</span>
-<span class="vi">#include</span><span class="o">&lt;</span><span class="nx">algorithm</span><span class="o">&gt;</span>
-<span class="vi">#include</span><span class="o">&lt;</span><span class="kt">string</span><span class="bp">.</span><span class="nx">h</span><span class="o">&gt;</span>
-<span class="nx">using</span> <span class="nx">namespace</span> <span class="nx">std</span><span class="p">;</span>
-<span class="nx">int</span> <span class="nx">main</span><span class="p">()</span>
-<span class="p">{</span>
-<span class="nx">char</span> <span class="nb">key</span><span class="err">[</span><span class="mi">4</span><span class="cp">]</span>=&quot;kof&quot;;
-char str<span class="cp">[</span><span class="mi">50</span><span class="cp">]</span>=&quot;wqtewqtewkwetiowoweff&quot;;
-sort(str,str+strlen(str));
-int flag=0;
-for(int i=0;i<span class="nt">&lt;strlen</span><span class="err">(</span><span class="na">key</span><span class="err">);</span><span class="na">i</span><span class="err">++)</span>
-<span class="err">{</span>
-<span class="na">for</span><span class="err">(</span><span class="na">int</span> <span class="na">j=</span><span class="s">0;j&lt;strlen(str);j++)</span>
-<span class="err">{</span>
-<span class="na">if</span><span class="err">(</span><span class="na">key</span><span class="cp">[</span><span class="nx">i</span><span class="cp">]</span><span class="na">=</span><span class="s">=str</span><span class="cp">[</span><span class="nx">j</span><span class="cp">]</span><span class="s">)</span>
-<span class="err">{</span>
-<span class="na">for</span><span class="err">(</span><span class="na">int</span> <span class="na">k=</span><span class="s">j;k</span><span class="nt">&gt;</span>flag;k--)
-{
-str<span class="cp">[</span><span class="nx">k</span><span class="cp">]</span>=str<span class="cp">[</span><span class="nx">k</span><span class="o">-</span><span class="mi">1</span><span class="cp">]</span>;
-}
-str<span class="cp">[</span><span class="nx">flag</span><span class="cp">]</span>=key<span class="cp">[</span><span class="nx">i</span><span class="cp">]</span>;
-++flag;
-}
-}
-}
-</pre></div>
+<p><code>C语言深度解剖(编程的50个细节)</code>这本书不太适合C语言刚入门的初学者，书中讲解了每一个关键字背后的秘密，<code>"十鸟在林，不如一鸟在手"</code>真正把C语言整明白了再学其他语言也很简单，如果C语言都没学明白，别的语言学的再好，也不过是花架子，因为你并不理解底层是怎么个回事，本书我个人强烈推荐。</p>
+<p>电子书PDF格式下载:<a href="http://yunpan.cn/QUmRc4AqnmIBE" target="_blank" title="《Effective C++》">点这里</a></p>
+<p>第一章 关键字</p>
+<blockquote>
+<p>1.1 最宽恒大量的关键字auto</p>
+<p>1.2 最快的关键字register</p>
+<p>1.3 最不实名的关键字static</p>
+<p>1.4 基本数据类型</p>
+<p>1.5 最冤枉的关键字sizeof</p>
+<p>1.6 if/else组合</p>
+<p>1.7 switch/case组合</p>
+<p>1.8 do/while/for关键字</p>
+<p>1.9 goto关键字</p>
+<p>1.10 void关键字</p>
+<p>1.11 const关键字也被该被替换为readonly</p>
+<p>1.12 最易变的关键字volatile</p>
+<p>1.13 最会带帽子的关键字extern</p>
+<p>1.14 struct关键字</p>
+<p>1.15 union关键字</p>
+<p>1.16 enum关键字</p>
+<p>1.17 typedef关键字</p>
+</blockquote>
+<p>第二章 符号</p>
+<blockquote>
+<p>2.1 注释符号</p>
+<p>2.2 连接符与转义符</p>
+<p>2.3 单引号、双引号</p>
+<p>2.4 逻辑运算符</p>
+<p>2.5 位运算符</p>
+<p>2.6 花括号</p>
+<p>2.7 ++/--操作符</p>
+<p>2.8 2/(-2)的值是多少?</p>
+<p>2.9 运算符的优化级</p>
+</blockquote>
+<p>第三章 预处理</p>
+<blockquote>
+<p>3.1 宏定义</p>
+<p>3.2 条件编译</p>
+<p>3.3 文件包含</p>
+<p>3.4 #error的处理</p>
+<p>3.5 #line预处理</p>
+<p>3.6 #pragma预处理</p>
+<p>3.7 #运算符</p>
+<p>3.8 ##预算符</p>
+</blockquote>
+<p>第四章 指针与数组</p>
+<blockquote>
+<p>4.1 指针</p>
+<p>4.2 数组</p>
+<p>4.3 指针与数组之间的恩恩怨怨</p>
+<p>4.4 指针数组与数组指针</p>
+<p>4.5 多维数组与多级指针</p>
+<p>4.6 数组参数与指针参数</p>
+<p>4.7 函数指针</p>
+</blockquote>
+<p>第五章 内存管理</p>
+<blockquote>
+<p>5.1 什么是野指针</p>
+<p>5.2 栈堆静态区</p>
+<p>5.3 常见内存错误与对策</p>
+</blockquote>
+<p>第六章 函数</p>
+<blockquote>
+<p>6.1 函数的由来与好处</p>
+<p>6.2 编码风格</p>
+<p>6.3 函数设计的一般原则与技巧</p>
+<p>6.4 函数递归</p>
+</blockquote>
+<p>第七章 文件结构</p>
+<blockquote>
+<p>7.1 文件内部的一般规则</p>
+<p>7.2 文件命名的规则</p>
+</blockquote>
 							转载时请注明文章来源<br/>
-							本文地址: <a href="http://www.yanyulin.info/pages/2013/06/google_2013_1.html" target="_self">http://www.yanyulin.info/pages/2013/06/google_2013_1.html</a>
+							本文地址: <a href="http://www.yanyulin.info/pages/2013/11/deepc.html" target="_self">http://www.yanyulin.info/pages/2013/11/deepc.html</a>
 						  <div class="clear"></div>
 							</div>
 							<div class="clear"></div>
@@ -208,10 +194,10 @@ str<span class="cp">[</span><span class="nx">flag</span><span class="cp">]</span
 					<!-- end: entrymeta -->
 				<div class="context_b">
 					 上一篇: 
-  				 <a href="http://www.yanyulin.info/pages/2013/06/huawei_2013_1.html" title="2013年华为校招机试(一)" target="_self">2013年华为校招机试(一)</a>
+  				 <a href="http://www.yanyulin.info/pages/2013/11/effective.html" title="Effective C++(编程的50个细节)" target="_self">Effective C++(编程的50个细节)</a>
   				 &nbsp;&nbsp
   				 下一篇:
-  				 <a href="http://www.yanyulin.info/pages/2013/07/string.html" title="String StringBuffer StringBuilder的区别分析" target="_self">String StringBuffer StringBuilder的区别分析</a>
+  				 <a href="http://www.yanyulin.info/pages/2013/11/deepc.html" title="C语言深度解剖(含金量高)" target="_self">C语言深度解剖(含金量高)</a>
 					 
 					 <i class="lt"></i>
 					 <i class="rt"></i>
@@ -220,7 +206,7 @@ str<span class="cp">[</span><span class="nx">flag</span><span class="cp">]</span
 				</div>
 				<div class="context_b">
 					 相关文章推荐
-  				 <a href="http://www.yanyulin.info/pages/2013/06/google_2013_1.html" title="2013年谷歌校招笔试(一)" target="_blank">2013年谷歌校招笔试(一)</a>
+  				 <a href="http://www.yanyulin.info/pages/2013/11/deepc.html" title="C语言深度解剖(含金量高)" target="_blank">C语言深度解剖(含金量高)</a>
   
 					 <i class="lt"></i>
 					 <i class="rt"></i>
@@ -249,8 +235,8 @@ str<span class="cp">[</span><span class="nx">flag</span><span class="cp">]</span
 				<h3>相关标签</h3>
 				<div class="box">			
 						<div class="textwidget">
-							<a href="http://www.yanyulin.info/tag/hua-wei.html" title="查看华为下的所有文章" target="_blank">华为</a>
-							<a href="http://www.yanyulin.info/tag/gu-ge.html" title="查看谷歌下的所有文章" target="_blank">谷歌</a>
+							<a href="http://www.yanyulin.info/tag/cmi-ji.html" title="查看C秘籍下的所有文章" target="_blank">C秘籍</a>
+							<a href="http://www.yanyulin.info/tag/cshu-ku.html" title="查看C++书库下的所有文章" target="_blank">C++书库</a>
 						</div>
 				</div>
     		<div class="box-bottom">
@@ -317,13 +303,13 @@ str<span class="cp">[</span><span class="nx">flag</span><span class="cp">]</span
 				<ul>
 				<ul class="random-post-link">
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2013/11/linux0.html" title="Linux中0号进程的创建分析">Linux中0号进程的创建分析</a>
+				<a href="http://www.yanyulin.info/pages/2013/11/githubM.html" title="Github上如何给别人贡献代码">Github上如何给别人贡献代码</a>
 				</li>
 				<li class="random-post-link">
 				<a href="http://www.yanyulin.info/pages/2013/11/huawei_2014_1.html" title="2014年华为校招机试(一)">2014年华为校招机试(一)</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2013/11/objectModel.html" title="深度探索C++对象模型">深度探索C++对象模型</a>
+				<a href="http://www.yanyulin.info/pages/2013/11/stlOrigin.html" title="STL源码剖析(候捷译)">STL源码剖析(候捷译)</a>
 				</li>
 				<li class="random-post-link">
 				<a href="http://www.yanyulin.info/pages/2013/11/vlinux1.html" title="Linux入门版视频教程(基础)">Linux入门版视频教程(基础)</a>
@@ -342,13 +328,13 @@ str<span class="cp">[</span><span class="nx">flag</span><span class="cp">]</span
 				<div class="box_r">
 				<ul>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2013/11/sizeof.html" rel="bookmark" title="被人误解的SIZEOF">被人误解的SIZEOF</a>
+				<a href="http://www.yanyulin.info/pages/2013/11/assert.html" rel="bookmark" title="Assert(断言)实现机制剖析">Assert(断言)实现机制剖析</a>
 				</li>
 				<li>
 				<a href="http://www.yanyulin.info/pages/2013/11/huawei_2014_1.html" rel="bookmark" title="2014年华为校招机试(一)">2014年华为校招机试(一)</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2013/11/objectModel.html" rel="bookmark" title="深度探索C++对象模型">深度探索C++对象模型</a>
+				<a href="http://www.yanyulin.info/pages/2013/11/effective.html" rel="bookmark" title="Effective C++(编程的50个细节)">Effective C++(编程的50个细节)</a>
 				</li>
 				<li>
 				<a href="http://www.yanyulin.info/pages/2013/11/vlinux1.html" rel="bookmark" title="Linux入门版视频教程(基础)">Linux入门版视频教程(基础)</a>
