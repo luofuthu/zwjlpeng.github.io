@@ -3,11 +3,6 @@
 &lt;p&gt;一直都想搭建一个属于自已的博客，无耐总是抽不出时间，9月份完工作，10月份却又有搞不完的事，一拖再拖，前不久才将自已的博客搭建完成&lt;/p&gt;
 &lt;p&gt;搭建博客工具的选择：&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;WordPress&lt;/code&gt;、&lt;code&gt;Zblog&lt;/code&gt;、各种&lt;code&gt;cms&lt;/code&gt;,功能都很强大，各种插件，各种牛X，各种方便，但在我看来，也正是因为功能的太过强大，显得太笨重，修改起来太过麻烦，更可耻的是还需要数据库的支持，我这样的叼丝学生估计还负担不起，而国外提供免费数据库的空间绝大多数都不太稳定，国内空间别提了，各种泪&lt;/p&gt;
-&lt;p&gt;博客预览图如下，&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://www.yanyulin.info"&gt;演示地址&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://www.yanyulin.info"&gt;
-&lt;img src="http://www.yanyulin.info/pics/yanyulin.jpg" width="100%"/&gt;
-&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;静态博客生成器:&lt;code&gt;Jeklly&lt;/code&gt;非常棒，基于&lt;code&gt;octopress&lt;/code&gt;也相当的不错，可惜都是基于ruby语言的，对ruby语言压根就不了解，最终选择了基于&lt;code&gt;python&lt;/code&gt;的&lt;code&gt;pelican&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;pelican&lt;/code&gt;搭建博客需要了解的名词&lt;/p&gt;
 &lt;ul&gt;
