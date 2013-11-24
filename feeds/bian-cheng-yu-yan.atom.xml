@@ -1,5 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>烟雨林</title><link href="http://www.yanyulin.info/" rel="alternate"></link><link href="http://www.yanyulin.info/feeds/bian-cheng-yu-yan.atom.xml" rel="self"></link><id>http://www.yanyulin.info/</id><updated>2013-11-22T00:00:00+08:00</updated><entry><title>Github上如何给别人贡献代码</title><link href="http://www.yanyulin.info/pages/2013/11/githubM.html" rel="alternate"></link><updated>2013-11-22T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-11-22:pages/2013/11/githubM.html</id><summary type="html">&lt;hr /&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>烟雨林</title><link href="http://www.yanyulin.info/" rel="alternate"></link><link href="http://www.yanyulin.info/feeds/bian-cheng-yu-yan.atom.xml" rel="self"></link><id>http://www.yanyulin.info/</id><updated>2013-11-24T00:00:00+08:00</updated><entry><title>pelican搭建属于自已的博客</title><link href="http://www.yanyulin.info/pages/2013/11/pelican.html" rel="alternate"></link><updated>2013-11-24T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-11-24:pages/2013/11/pelican.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;一直都想搭建一个属于自已的博客，无耐总是抽不出时间，9月份完工作，10月份却又有搞不完的事，一拖再拖，前不久才将自已的博客搭建完成&lt;/p&gt;
+&lt;p&gt;搭建博客工具的选择：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;WordPress&lt;/code&gt;、&lt;code&gt;Zblog&lt;/code&gt;、各种&lt;code&gt;cms&lt;/code&gt;,功能都很强大，各种插件，各种牛X，各种方便，但在我看来，也正是因为功能的太过强大，显得太笨重，修改起来太过麻烦，更可耻的是还需要数据库的支持，我这样的叼丝学生估计还负担不起，而国外提供免费数据库的空间绝大多数都不太稳定，国内空间别提了，各种泪&lt;/p&gt;
+&lt;p&gt;静态博客生成器:&lt;code&gt;Jeklly&lt;/code&gt;非常棒，基于&lt;code&gt;octopress&lt;/code&gt;也相当的不错，可惜都是基于ruby语言的，对ruby语言压根就不了解，最终选择了基于&lt;code&gt;python&lt;/code&gt;的&lt;code&gt;pelican&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;pelican&lt;/code&gt;搭建博客需要了解的名词&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Github&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;python&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pelican&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Jinja2&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;markdown&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;sitemap&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pip&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;最初是在Linux下搭建博客，正在捉急的进行到一半途中，linux系统让我弄的崩溃了，最后是在Windows下搭建完成，不过linux下是类似的，因为搭建过程是在Git Bash中完成，Git Bash中的命令就是仿unix的&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;前提了解github的使用，可以看看我写的Github相关文章&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;1、&lt;a href="http://www.yanyulin.info/pages/2013/11/github.html"&gt;Github简明教程(入门篇)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;2、&lt;a href="http://www.yanyulin.info/pages/2013/11/githubM.html"&gt;Github上如何给别人贡献代码&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;步骤一：下载相关的软件，&lt;code&gt;pelican&lt;/code&gt;是基于&lt;code&gt;python&lt;/code&gt;的，因此&lt;code&gt;python&lt;/code&gt;是不可少的，与&lt;code&gt;github&lt;/code&gt;进行连接
+&lt;code&gt;git&lt;/code&gt;工具也是不可少的，另外还得下载的三个工具是&lt;code&gt;python&lt;/code&gt;的&lt;code&gt;pip&lt;/code&gt;工具以及&lt;code&gt;markdownpad&lt;/code&gt;编辑器还有&lt;code&gt;Windows&lt;/code&gt;下的&lt;code&gt;make&lt;/code&gt;工具，如果是在linux下，此处工作相当简单，相关软件的下载链接，请查看我个人博客的原始博文&lt;/p&gt;
+&lt;p&gt;1、&lt;a href="http://yunpan.cn/QUF66GnJ7WU7W" target="_blank"&gt;python3下载&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;2、&lt;a href="http://yunpan.cn/QUF6BFpTcgeLc" target="_blank"&gt;git下载&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;3、&lt;a href="http://yunpan.cn/QUF66RuY8ziq5" target="_blank"&gt;pip下载&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;4、&lt;a href="http://yunpan.cn/QUF6BpkxgdpLb" target="_blank"&gt;windows下make下载&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;5、&lt;a href="http://yunpan.cn/QUF66w7tQLcQd" target="_blank"&gt;markdown下载&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;pip&lt;/code&gt;工具的安装&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;python3&lt;/code&gt;下安装pip&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c1"&gt;//已安装python3&lt;/span&gt;
+&lt;span class="c1"&gt;//下载easy_install的tar.gz的源码&lt;/span&gt;
+&lt;span class="c1"&gt;//然后解压&lt;/span&gt;
+&lt;span class="nl"&gt;C:&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;python32&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="n"&gt;setup&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt;
+&lt;span class="nl"&gt;C:&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;python32&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;Scripts&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;easy_install&lt;/span&gt; &lt;span class="n"&gt;pip&lt;/span&gt;
+&lt;span class="c1"&gt;//把C:\python32\Scripts这个路径也加到PATH里&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;window&lt;/code&gt;下make工具的安装&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c1"&gt;//将下载的`make.exe`文件添加到path路径中&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;基他软件直接点击exe安装即可&lt;/p&gt;
+&lt;p&gt;步骤二:安装&lt;code&gt;pelican&lt;/code&gt;,安装了&lt;code&gt;Git&lt;/code&gt;后，打开&lt;code&gt;Git Bash&lt;/code&gt;输入以下命令&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;pip&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;pelican&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;步骤三:创建博客，在Git Bash命令行窗口中输入如下命令&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;mkdir&lt;/span&gt; &lt;span class="n"&gt;blog&lt;/span&gt;
+&lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="n"&gt;blog&lt;/span&gt;
+&lt;span class="n"&gt;pelican&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;quickstart&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;第三条命令执行后会提示你输入博客的配置项，除了&lt;code&gt;SITENAME&lt;/code&gt;配置项外，其他均可选择默认，在后绪的开发过程中，可以在&lt;code&gt;pelicanconf.py&lt;/code&gt;中进行修改，执行完上述命令后，即可生成一个基本的博客架构，如下图所示&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;blog&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;
+&lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;content&lt;/span&gt;  &lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="err"&gt;存放你要写的博客&lt;/span&gt;
+&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;└──&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pages&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="err"&gt;#单纯的页面&lt;/span&gt;
+&lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;output&lt;/span&gt;   &lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="err"&gt;生成的输出文件&lt;/span&gt;
+&lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;develop_server&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sh&lt;/span&gt;&lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="err"&gt;方便开启测试服务器&lt;/span&gt;
+&lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;Makefile&lt;/span&gt; &lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="err"&gt;方便管理博客的&lt;/span&gt;&lt;span class="n"&gt;Makefile&lt;/span&gt;
+&lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;pelicanconf&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;   &lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="err"&gt;主配置文件&lt;/span&gt;
+&lt;span class="err"&gt;└──&lt;/span&gt; &lt;span class="n"&gt;publishconf&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;   &lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="err"&gt;主发布文件，可删除&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;用&lt;code&gt;markdown&lt;/code&gt;写博文，要记住的是博文必须放在&lt;code&gt;content&lt;/code&gt;目录下，&lt;code&gt;pelican&lt;/code&gt;会将&lt;code&gt;content&lt;/code&gt;目录下的所有文章输出到&lt;code&gt;output&lt;/code&gt;目录下，然后放到服务器上，&lt;code&gt;markdown&lt;/code&gt;写博文的预览图如下：&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2013/11/pelican.html"&gt;
+&lt;img src="http://www.yanyulin.info/pics/markdown.jpg" width="100%"/&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;写完后执行如下命令，即可在本机上预览博客,预览地址为&lt;code&gt;http://localhost:8000/&lt;/code&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;make&lt;/span&gt; &lt;span class="n"&gt;publish&lt;/span&gt;
+&lt;span class="n"&gt;make&lt;/span&gt; &lt;span class="n"&gt;serve&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;步骤四:将博客部署到&lt;code&gt;github&lt;/code&gt;上，博客最终是要放到互联网上供人看的，此处就是将博客上传上去，在上传之前，要确保&lt;code&gt;github&lt;/code&gt;上有一个仓库命令规是&lt;code&gt;username.github.io&lt;/code&gt;,其中&lt;code&gt;username&lt;/code&gt;为你的&lt;code&gt;github&lt;/code&gt;帐号&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c1"&gt;//切换到输出目录&lt;/span&gt;
+&lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="k"&gt;output&lt;/span&gt;
+&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;init&lt;/span&gt;
+&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;add&lt;/span&gt; &lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;remote&lt;/span&gt; &lt;span class="n"&gt;add&lt;/span&gt; &lt;span class="n"&gt;origin&lt;/span&gt; &lt;span class="nl"&gt;https:&lt;/span&gt;&lt;span class="c1"&gt;//github.com/username.github.io.git&lt;/span&gt;
+&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;pull&lt;/span&gt; &lt;span class="n"&gt;origin&lt;/span&gt; &lt;span class="n"&gt;master&lt;/span&gt;
+&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;commit&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;am&lt;/span&gt; &lt;span class="p"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;commit&lt;/span&gt;&lt;span class="p"&gt;&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;push&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;u&lt;/span&gt; &lt;span class="n"&gt;origin&lt;/span&gt; &lt;span class="n"&gt;master&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;执行完上面命令后即将博客上传至&lt;code&gt;github&lt;/code&gt;服务器上，打开浏览器输入&lt;code&gt;http://username.github.io&lt;/code&gt;即可访问，如果你觉的上面的命令过于复杂，你也直接可以将其添加到Makefile中&lt;/p&gt;
+&lt;p&gt;步骤五:给博客挑选主题，博客的初始主题当然是不好看，你可以自已下载&lt;code&gt;pelican&lt;/code&gt;相关的主题，然后安装，当然你也可以像我一样更改主题模板，创建属于自已的&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;clone&lt;/span&gt; &lt;span class="n"&gt;https&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//github.com/getpelican/pelican-themes.git&lt;/span&gt;
+&lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="n"&gt;pelican&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;themes&lt;/span&gt;
+&lt;span class="n"&gt;pelican&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;themes&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="n"&gt;bootstrap2&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;在&lt;code&gt;pelicanconf.py&lt;/code&gt;中添加&lt;code&gt;THEME = 'bootstrap2'&lt;/code&gt;即可，然后重新&lt;code&gt;make publish&lt;/code&gt;即可&lt;/p&gt;
+&lt;p&gt;步骤六：给博客加上评论系统，在Disqus上申请一个站点，记牢Shortname。 在pelicanconf.py添加如下命令，当然你也可以选择国内的多说或者其他的&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;DISQUS_SITENAME&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Shortname&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;步骤七：给自已的博客加上谷歌分析，可选，去去Google Analytics申请账号，记下跟踪ID。 在pelicanconf.py添加&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;GOOGLE_ANALYTICS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="err"&gt;跟踪&lt;/span&gt;&lt;span class="n"&gt;ID&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;步骤入：独立域名与DNS解析&lt;/p&gt;
+&lt;p&gt;在Godaddy上用支付宝花购买为期一年的顶级域名，并去修改Nameservers为这两个地址：&lt;code&gt;f1g1ns1.dnspod.net&lt;/code&gt;、&lt;code&gt;f1g1ns2.dnspod.net&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;在Dnspod上添加新域名，并申请一条A记录指向Github Pages的ip:&lt;code&gt;207.97.227.245&lt;/code&gt;；&lt;/p&gt;
+&lt;p&gt;在Pelican主目录新建CNAME文件，添上刚刚申请的域名，如我的&lt;code&gt;www.yanyulin.info&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Pelican官方文档: http://docs.getpelican.com/en/3.2&lt;/p&gt;</summary><category term="工具使用"></category></entry><entry><title>Github上如何给别人贡献代码</title><link href="http://www.yanyulin.info/pages/2013/11/githubM.html" rel="alternate"></link><updated>2013-11-22T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-11-22:pages/2013/11/githubM.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;本篇博文仅随前篇博文&lt;a href="http://www.yanyulin.info/pages/2013/11/github.html" title="Github简明教程(入门篇)"&gt;&lt;code&gt;Github&lt;/code&gt;简明教程(入门篇)&lt;/a&gt;，当然我的独立博客也是采用Github搭建，我所介绍的Github正是我搭建博客过程中一点一点学习的过程，如有错误，还请指出，同样大神们可以绕过。&lt;/p&gt;
 &lt;p&gt;本篇重点介绍&lt;code&gt;Github&lt;/code&gt;上如何给别人贡献代码，通过这个过程，也可以知道如果一个项目托管到Github上，团队成员之间合作的流程，给别人贡献代码，特别是一些开源组织，是件光荣的事&lt;/p&gt;
 &lt;p&gt;1、搜索你要贡献的代码仓库，在这里我创建了两个帐号，一个主帐号，里面有一个代码仓库mfjc，一个是将要贡献代码的帐号howard5888,搜索代码仓库如下图：
