@@ -23,7 +23,6 @@
 &lt;p&gt;&lt;code&gt;HtmlUnit&lt;/code&gt;的使用:
 简介:&lt;code&gt;HtmlUnit&lt;/code&gt;说白了就是一个浏览器，这个浏览器是用Java写的无界面的浏览器，正因为其没有界面,因此执行的速度还是可以滴，&lt;code&gt;HtmlUnit&lt;/code&gt;提供了一系列的API,这些API可以干的功能比较多，如表单的填充，表单的提交，模仿点击链接，由于内置了&lt;code&gt;Rhinojs&lt;/code&gt;引擎，因此可以执行&lt;code&gt;Javascript&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;作用:web的自动化测试(最初的目的),浏览器，网络爬虫&lt;/p&gt;
-&lt;p&gt;相关jar包下载链接:&lt;a href=""/&gt;点这里&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;重要API的使用
 在介绍API的使用之前要先明白的一个问题是，WebClient,WebWindow,Page三者之间的关系，所有的页面最终都是在一个WebWindow对象里面，WebClient在创建时会自动的创建一个WebWindow对象，当调用getPage时会将新页面加载到WebWindow里，你可以理解成WebClient就是IE内核，WebWindow就是呈现页面的浏览器窗口，三者之间的关系图如下图所示：&lt;/p&gt;
 &lt;p&gt;1、模拟特定浏览器，也可以指定浏览器的相应版本(HtmlUnit最新版2.13现在可以模拟的浏览器有&lt;code&gt;Chrome&lt;/code&gt;/&lt;code&gt;FireFox&lt;/code&gt;/&lt;code&gt;IE&lt;/code&gt;)&lt;/p&gt;
@@ -82,7 +81,9 @@
 &lt;img src="http://www.yanyulin.info/pics/art/xiaomi.jpg" width=100%/&gt;
 &lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;本博文源代码下载:&lt;/p&gt;
+&lt;blockquote&gt;
 &lt;p&gt;&lt;a href="https://github.com/zwjlpeng/Crawler_Self_Analysis" target="_blank"&gt;源码下载&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://yunpan.cn/QURZedFfjFWfQ" target="_blank"&gt;Java皮肤库下载&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://yunpan.cn/QURZ5UXwjnk6W" target="_blank"&gt;HtmlUnit源码包下载&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://yunpan.cn/QURZ5uZLwFmM9" target="_blank"&gt;HtmlUnit的Jar包下载&lt;/a&gt;&lt;/p&gt;</summary><category term="搜索引擎"></category></entry></feed>
+&lt;p&gt;&lt;a href="http://yunpan.cn/QURZ5uZLwFmM9" target="_blank"&gt;HtmlUnit的Jar包下载&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</summary><category term="搜索引擎"></category></entry></feed>
