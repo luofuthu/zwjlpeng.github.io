@@ -1,5 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>烟雨林</title><link href="http://www.yanyulin.info/" rel="alternate"></link><link href="http://www.yanyulin.info/feeds/all.atom.xml" rel="self"></link><id>http://www.yanyulin.info/</id><updated>2013-11-28T00:00:00+08:00</updated><entry><title>爬虫的自我解剖(抓取网页HtmlUnit)</title><link href="http://www.yanyulin.info/pages/2013/11/fetchPage.html" rel="alternate"></link><updated>2013-11-28T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-11-28:pages/2013/11/fetchPage.html</id><summary type="html">&lt;p&gt;网络爬虫第一个要面临的问题，就是如何抓取网页，抓取其实很容易，没你想的那么复杂，一个开源&lt;code&gt;HtmlUnit&lt;/code&gt;包，4行代码就OK啦，例子如下：&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>烟雨林</title><link href="http://www.yanyulin.info/" rel="alternate"></link><link href="http://www.yanyulin.info/feeds/all.atom.xml" rel="self"></link><id>http://www.yanyulin.info/</id><updated>2013-11-29T00:00:00+08:00</updated><entry><title>界面编程模仿篇(模仿腾讯QQ登录界面)</title><link href="http://www.yanyulin.info/pages/2013/11/qqLogin.html" rel="alternate"></link><updated>2013-11-29T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-11-29:pages/2013/11/qqLogin.html</id><summary type="html">&lt;p&gt;写了几天的爬虫，过几天再继续写，今天偷会懒，写了个仿QQ登录界面，截图如下，怎么样，还凑和吧，如果是大神的，请不要见笑，截图如下，明天争取完成，完成后，将附上文档与代码上传到本人的github上，进行开源,如果大家愿意，后绪一块更改，注意，我强调的只是&lt;strong&gt;界面&lt;/strong&gt;,QQ?你想吧内部的各种通信协议，分布式数据库，大数据的处理，各种缓存...&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2013/11/qqLogin.html"&gt;
+&lt;img  src="http://www.yanyulin.info/pics/tech/qq_1.jpg"/&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;上面程序运行界面中的所有图片都来自QQ2013，本篇文章就介绍如何从&lt;code&gt;QQ2013&lt;/code&gt;中获取图片，了解了这个过程后，你也可以自已Diy图片，然后将图片替换，设计自已的&lt;code&gt;非主流QQ&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;1、与本程序相关的图片保存在两个地方，&lt;code&gt;%appdata%\Tencent\QQ\Temp&lt;/code&gt;以及QQ安装目录下的Resource文件夹下&lt;code&gt;D:\Program Files\Tencent\QQ\Resource.1.97.8200&lt;/code&gt;,从这些文件夹下选取你自已需要的图片，&lt;code&gt;备注Resource.1.97.8200文件夹Resource后面的数字可能会不同&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2013/11/qqLogin.html"&gt;
+&lt;img src="http://www.yanyulin.info/pics/tech/qq_2.jpg"/&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;2、QQ的部份图片保存在rdb文件里，而且图片的格式是gft,下载两款软件，对rdb进行解压，以及对gft格式的文件进行格式转换，转换时最好转成png格式的，软件下载地址：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href="http://yunpan.cn/QUMdYmtPW3tsP" target="_blank"&gt;rdb文件解压缩&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://yunpan.cn/QUMdBFZeLrSRa" target="_blank"&gt;gft格式转换器&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;3、对于QQ登录界面，部份图片保存的位置如下图中红色方框如示，在LoginPanel以及LoginUI里&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2013/11/qqLogin.html"&gt;
+&lt;img  width="100%" src="http://www.yanyulin.info/pics/tech/qq_3.jpg"/&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;4、gft格式图片的转换，如下图所示，先导出当前项，然后将导出的文件拖到&lt;code&gt;GFT转换.exe&lt;/code&gt;里，即可完成转换&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2013/11/qqLogin.html"&gt;
+&lt;img  src="http://www.yanyulin.info/pics/tech/qq_4.jpg"/&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;5、从上面的过程中，可以看出QQ图片保存在哪了吧，你完全可以用自已的图片替换掉rdb文件里的图片，这样QQ运行的时候，就变成了你的图片了，在替换之前，最好先备份下&lt;/p&gt;</summary><category term="界面编程"></category></entry><entry><title>爬虫的自我解剖(抓取网页HtmlUnit)</title><link href="http://www.yanyulin.info/pages/2013/11/fetchPage.html" rel="alternate"></link><updated>2013-11-28T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-11-28:pages/2013/11/fetchPage.html</id><summary type="html">&lt;p&gt;网络爬虫第一个要面临的问题，就是如何抓取网页，抓取其实很容易，没你想的那么复杂，一个开源&lt;code&gt;HtmlUnit&lt;/code&gt;包，4行代码就OK啦，例子如下：&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;final&lt;/span&gt; &lt;span class="n"&gt;WebClient&lt;/span&gt; &lt;span class="n"&gt;webClient&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;new&lt;/span&gt; &lt;span class="n"&gt;WebClient&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
 &lt;span class="n"&gt;final&lt;/span&gt; &lt;span class="n"&gt;HtmlPage&lt;/span&gt; &lt;span class="n"&gt;page&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;webClient&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;getPage&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;http://www.yanyulin.info&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;out&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;println&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;page&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;asText&lt;/span&gt;&lt;span class="p"&gt;());&lt;/span&gt;
