@@ -42,7 +42,7 @@
 &lt;/blockquote&gt;
 &lt;p&gt;3、题如下图所示&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2013/12/baidu_2014_A.html"&gt;
-&lt;img src="http://www.yanyulin.info/pics/job/baidu2014_1.jpg"/&gt;
+&lt;img src="http://www.yanyulin.info/pics/job/baidu2014_1.jpg" width="100%"/&gt;
 &lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;三、系统设计题&lt;/p&gt;
 &lt;p&gt;在企业中，对生产数据进行分析具有很重要的意义，但是生产数据通常不能直接用于数据分析，通常需要进行抽取、转换和加载，也就是通常说的ETL。&lt;/p&gt;
