@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-<title>STL源码剖析(候捷译) - 烟雨林</title>
+<title>编程之美—微软技术面试心得 - 烟雨林</title>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
 <meta name="author" content="烟雨林">
@@ -51,34 +51,94 @@
 					<div class="entry_box_s">
 						<div class="entry_title_box">
 							<div class="ico"></div>
-							<div class="entry_title">STL源码剖析(候捷译)</div>
+							<div class="entry_title">编程之美—微软技术面试心得</div>
 							<div class="archive_info">
-								<span class="date">2013-11-21</span>
+								<span class="date">2013-12-05</span>
 								<span class="category"> ⁄ <a href="http://www.yanyulin.info/category/jing-pin-shu-ji.html" title="查看精品书籍中的全部文章" rel="category tag">精品书籍</a></span>
 							</div>
 						</div>
 						<div class="entry">
 							<div id="entry" style="font-size: 13px; ">
 							<hr />
-<p>STL源码剖析 PDF格式下载:<a href="http://yunpan.cn/QUj5p6EIPZH9y" target="_blank" title="《STL源码剖析》">点这里</a></p>
-<p>STL源码剖析此书是一本不可多得的好书，大师的精典之作，大多数程序员只知道集合类非常好用，只需要向集合类中填加元素，不用担心空间的开设，以及空间的回收，也不用考虑集合类的效率，更重要的是集合类还给我们提供了各种各样的函数，但是知其所以然而不知其因为然，这样的程序员是不合格的，《STL源码剖析》很好的给我们讲解了集合类的底层实现，以及泛型算法。</p>
-<p>STL源码剖析</p>
+<p><code>编程之美</code>收集了约<code>60</code>道算法和程序设计题目，这些题目大部分在近年的笔试，面试中出现过，或者是被微软员工热烈讨论过。作者试图从书中各种有趣的问题出发，引导读者发现问题，<code>分析问题</code>，解决问题，寻找更优的解法</p>
+<p>电子书下载地址:<a href="http://yunpan.cn/QU98W2IsqzW8m" target="_blank">点这里</a></p>
+<p><strong>觉的好的，请多多分享</strong></p>
+<p><strong>编程之美</strong></p>
+<p>第1章游戏之乐——游戏中碰到的题目 1</p>
 <blockquote>
-<p>前言</p>
-<p>第1章STL概论与版本简介</p>
-<p>第2章 空间配置器（allocator）</p>
-<p>第3章迭代器（iterators）概念与traits编程技法</p>
-<p>第4章 序列式容器（sequence containers）</p>
-<p>第5章 关联式容器（associattive containers）</p>
-<p>第6章 算法（algorithms）</p>
-<p>第7章 仿函数（functors，另名 函数对象function objects）</p>
-<p>第8章 配接器（adapters）</p>
-<p>附录A 参考书籍与推荐读物</p>
-<p>附录B 候捷网站（本书支持站点简介）</p>
-<p>附录C STLPort 的移植经验（by孟岩</p>
+<p>1.1让CPU占用率曲线听你指挥 3</p>
+<p>1.2中国象棋将帅问题 13</p>
+<p>1.3一摞烙饼的排序 20</p>
+<p>1.4买书问题 30</p>
+<p>1.5快速找出故障机器 35</p>
+<p>1.6饮料供货 40</p>
+<p>1.7光影切割问题 45</p>
+<p>1.8小飞的电梯调度算法50</p>
+<p>1.9高效率地安排见面会 54</p>
+<p>1.10双线程高效下载 59</p>
+<p>1.11NIM（1）一排石头的游戏 64</p>
+<p>1.12NIM（2）“拈”游戏分析 67</p>
+<p>1.13NIM（3）两堆石头的游戏 72</p>
+<p>1.14连连看游戏设计 86</p>
+<p>1.15构造数独 91</p>
+<p>1.1624点游戏 99</p>
+<p>1.17俄罗斯方块游戏 108</p>
+<p>1.18挖雷游戏 116</p>
+</blockquote>
+<p>第2章数字之魅——数字中的技巧 117</p>
+<blockquote>
+<p>2.1求二进制数中1的个数 119</p>
+<p>2.2不要被阶乘吓倒 125</p>
+<p>2.3寻找发帖“水王” 129</p>
+<p>2.41的数目 132</p>
+<p>2.5寻找最大的K个数 139</p>
+<p>2.6精确表达浮点数 147</p>
+<p>2.7最大公约数问题 150</p>
+<p>2.8找符合条件的整数 155</p>
+<p>2.9斐波那契（Fibonacci）数列 160</p>
+<p>2.10寻找数组中的最大值和最小值 166</p>
+<p>2.11寻找最近de点对 171</p>
+<p>2.12快速寻找满足条件的两个数 178</p>
+<p>2.13子数组的最大乘积 182</p>
+<p>2.14求数组的子数组之和的最大值 185</p>
+<p>2.15子数组之和的最大值（二维） 192</p>
+<p>2.16求数组中最长递增子序列 198</p>
+<p>2.17数组循环移位 204</p>
+<p>2.18数组分割 207</p>
+<p>2.19区间重合判断 211</p>
+<p>2.20程序理解和时间分析 215</p>
+<p>2.21只考加法的面试题 217</p>
+</blockquote>
+<p>第3章结构之法——字符串及链表的探索 219</p>
+<blockquote>
+<p>3.1字符串移位包含的问题 221</p>
+<p>3.2电话号码对应英语单词 224</p>
+<p>3.3计算字符串的相似度 230</p>
+<p>3.4从无头单链表中删除节点 234</p>
+<p>3.5最短摘要的生成 237</p>
+<p>3.6编程判断两个链表是否相交 241</p>
+<p>3.7队列中取最大值操作问题 244</p>
+<p>3.8求二叉树中节点的最大距离 250</p>
+<p>3.9重建二叉树 256</p>
+<p>3.10分层遍历二叉树 262</p>
+<p>3.11程序改错 268</p>
+</blockquote>
+<p>第4章数学之趣——数学游戏的乐趣 273</p>
+<blockquote>
+<p>4.1金刚坐飞机问题 275</p>
+<p>4.2瓷砖覆盖地板 279</p>
+<p>4.3买票找零 282</p>
+<p>4.4点是否在三角形内 286</p>
+<p>4.5磁带文件存放优化 291</p>
+<p>4.6桶中取黑白球 294</p>
+<p>4.7蚂蚁爬杆 299</p>
+<p>4.8三角形测试用例303</p>
+<p>4.9数独知多少 307</p>
+<p>4.10数字哑谜和回文 315</p>
+<p>4.11挖雷游戏的概率 322</p>
 </blockquote>
 							转载时请注明文章来源<br/>
-							本文地址: <a href="http://www.yanyulin.info/pages/2013/11/stlOrigin.html" target="_self">http://www.yanyulin.info/pages/2013/11/stlOrigin.html</a>
+							本文地址: <a href="http://www.yanyulin.info/pages/2013/12/prgbeautiful.html" target="_self">http://www.yanyulin.info/pages/2013/12/prgbeautiful.html</a>
 						  <div class="clear"></div>
 							</div>
 							<div class="clear"></div>
@@ -111,10 +171,10 @@
 					<!-- end: entrymeta -->
 				<div class="context_b">
 					 上一篇: 
-  				 <a href="http://www.yanyulin.info/pages/2013/11/github.html" title="Github简明教程(入门篇)" target="_self">Github简明教程(入门篇)</a>
+  				 <a href="http://www.yanyulin.info/pages/2013/12/psbase2.html" title="Photoshop CS视频教程(下)" target="_self">Photoshop CS视频教程(下)</a>
   				 &nbsp;&nbsp
   				 下一篇:
-  				 <a href="http://www.yanyulin.info/pages/2013/11/githubM.html" title="Github上如何给别人贡献代码" target="_self">Github上如何给别人贡献代码</a>
+  				 <a href="http://www.yanyulin.info/pages/2013/12/prgbeautiful.html" title="编程之美—微软技术面试心得" target="_self">编程之美—微软技术面试心得</a>
 					 
 					 <i class="lt"></i>
 					 <i class="rt"></i>
@@ -123,9 +183,7 @@
 				</div>
 				<div class="context_b">
 					 相关文章推荐
-  				 <a href="http://www.yanyulin.info/pages/2013/11/effective.html" title="Effective C++(编程的50个细节)" target="_blank">Effective C++(编程的50个细节)</a>
-  				 <a href="http://www.yanyulin.info/pages/2013/11/objectModel.html" title="深度探索C++对象模型" target="_blank">深度探索C++对象模型</a>
-  				 <a href="http://www.yanyulin.info/pages/2013/11/stlOrigin.html" title="STL源码剖析(候捷译)" target="_blank">STL源码剖析(候捷译)</a>
+  				 <a href="http://www.yanyulin.info/pages/2013/12/prgbeautiful.html" title="编程之美—微软技术面试心得" target="_blank">编程之美—微软技术面试心得</a>
   
 					 <i class="lt"></i>
 					 <i class="rt"></i>
@@ -225,16 +283,16 @@
 				<ul>
 				<ul class="random-post-link">
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2013/11/pelican.html" title="pelican搭建属于自已的博客">pelican搭建属于自已的博客</a>
+				<a href="http://www.yanyulin.info/pages/2013/11/assert.html" title="Assert(断言)实现机制剖析">Assert(断言)实现机制剖析</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2013/11/huawei_2014_1.html" title="2014年华为校招机试(一)">2014年华为校招机试(一)</a>
+				<a href="http://www.yanyulin.info/pages/2013/06/google_2013_1.html" title="2013年谷歌校招笔试(一)">2013年谷歌校招笔试(一)</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2013/11/stlOrigin.html" title="STL源码剖析(候捷译)">STL源码剖析(候捷译)</a>
+				<a href="http://www.yanyulin.info/pages/2013/11/effective.html" title="Effective C++(编程的50个细节)">Effective C++(编程的50个细节)</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2013/11/vlinux1.html" title="Linux入门版视频教程(基础)">Linux入门版视频教程(基础)</a>
+				<a href="http://www.yanyulin.info/pages/2013/12/psbase2.html" title="Photoshop CS视频教程(下)">Photoshop CS视频教程(下)</a>
 				</li>
 				<li class="random-post-link">
 				<a href="http://www.yanyulin.info/pages/2013/12/qqLogin_1.html" title="界面编程模仿篇(QQ登录界面逼真篇)">界面编程模仿篇(QQ登录界面逼真篇)</a>
@@ -253,16 +311,16 @@
 				<div class="box_r">
 				<ul>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2013/11/linux0.html" rel="bookmark" title="Linux中0号进程的创建分析">Linux中0号进程的创建分析</a>
+				<a href="http://www.yanyulin.info/pages/2013/11/github.html" rel="bookmark" title="Github简明教程(入门篇)">Github简明教程(入门篇)</a>
 				</li>
 				<li>
 				<a href="http://www.yanyulin.info/pages/2013/06/google_2013_1.html" rel="bookmark" title="2013年谷歌校招笔试(一)">2013年谷歌校招笔试(一)</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2013/12/prgbeautiful.html" rel="bookmark" title="编程之美—微软技术面试心得">编程之美—微软技术面试心得</a>
+				<a href="http://www.yanyulin.info/pages/2013/11/stlOrigin.html" rel="bookmark" title="STL源码剖析(候捷译)">STL源码剖析(候捷译)</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2013/12/psbase2.html" rel="bookmark" title="Photoshop CS视频教程(下)">Photoshop CS视频教程(下)</a>
+				<a href="http://www.yanyulin.info/pages/2013/11/vlinux2.html" rel="bookmark" title="Linux基础教程视频版(很详细)">Linux基础教程视频版(很详细)</a>
 				</li>
 				<li>
 				<a href="http://www.yanyulin.info/pages/2013/11/fetchPage.html" rel="bookmark" title="爬虫的自我解剖(抓取网页HtmlUnit)">爬虫的自我解剖(抓取网页HtmlUnit)</a>
