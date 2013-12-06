@@ -1,5 +1,177 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>烟雨林</title><link href="http://www.yanyulin.info/" rel="alternate"></link><link href="http://www.yanyulin.info/feeds/cheng-xu-yuan-zhao-gong-zuo.atom.xml" rel="self"></link><id>http://www.yanyulin.info/</id><updated>2013-12-06T00:00:00+08:00</updated><entry><title>创新工场2014年校招笔试题</title><link href="http://www.yanyulin.info/pages/2013/12/cxgc_2014_A.html" rel="alternate"></link><updated>2013-12-06T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-12-06:pages/2013/12/cxgc_2014_A.html</id><summary type="html">&lt;hr /&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>烟雨林</title><link href="http://www.yanyulin.info/" rel="alternate"></link><link href="http://www.yanyulin.info/feeds/cheng-xu-yuan-zhao-gong-zuo.atom.xml" rel="self"></link><id>http://www.yanyulin.info/</id><updated>2013-12-06T00:00:00+08:00</updated><entry><title>阿里巴巴2014年校招笔试题(研发)</title><link href="http://www.yanyulin.info/pages/2013/12/alibaba_2014_A.html" rel="alternate"></link><updated>2013-12-06T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-12-06:pages/2013/12/alibaba_2014_A.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;如有错误，或更加精简的方法，请留言，我会更正，以方便更多的人&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;第一部分 单选题&lt;/strong&gt; &lt;/p&gt;
+&lt;p&gt;1 一次内存访、SSD硬盘访问和SATA硬盘随机访问的时间分别约是（）。&lt;/p&gt;
+&lt;p&gt;A、几微秒，几毫秒，几十毫秒        B、几微秒，几十微秒，几十毫秒 &lt;/p&gt;
+&lt;p&gt;C、几十纳秒，几十微秒，几十毫秒  D、几十纳秒，几十微秒，十几毫秒    &lt;/p&gt;
+&lt;p&gt;2 8进制数256，转换成7进制数是（）&lt;/p&gt;
+&lt;p&gt;A、356     B、346   C、338    D、336    &lt;/p&gt;
+&lt;p&gt;3 某网络的IP地址空间为&lt;code&gt;192.168.5.0/24&lt;/code&gt;。采用定长子网划分，子网掩码为&lt;code&gt;255.255.255.248&lt;/code&gt;，则该网络的最大子网个数、每个子网内的最大可分配地址个数各为()&lt;/p&gt;
+&lt;p&gt;A、32，6    B、32，8  C、8，32  D、8，30    &lt;/p&gt;
+&lt;p&gt;4 以下关于链式存储结构说法错误的是()&lt;/p&gt;
+&lt;p&gt;A、比顺序存储结构的存储密度小     B、每个节点是由数据域和指针域组成 &lt;/p&gt;
+&lt;p&gt;C、查找节点时链式存储比顺序存储块  D、逻辑上不相邻的节点物理上可能相邻   &lt;/p&gt;
+&lt;p&gt;5 假定一个二维数组的定义语句为&lt;code&gt;int a[3][4]={{3,4},{2,8,6}}&lt;/code&gt;;，则元 素&lt;code&gt;a[1][2]&lt;/code&gt;的值为()&lt;/p&gt;
+&lt;p&gt;A、2   B、4     C、6     D、8    &lt;/p&gt;
+&lt;p&gt;6 下面函数的功能是()&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;func&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;char&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; 
+ &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="n"&gt;Char&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;p&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; 
+    &lt;span class="n"&gt;While&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; 
+ &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;A、求字符串的长度     B、复制一个字符串   C、计算字符串的位(bit)数   D、求字符串存放的位置    &lt;/p&gt;
+&lt;p&gt;7 判断有向图是否存在回路，利用()方法最佳&lt;/p&gt;
+&lt;p&gt;A、求关键路径   B、求最短路径     C、拓扑排序  D、广度优先遍历    &lt;/p&gt;
+&lt;p&gt;8 依次读入数据元素序列&lt;code&gt;{a,b,c,d,e,f,g}&lt;/code&gt;进栈，元素进栈或出栈顺序是未知的，下列序列中，不可能成为栈空时弹出的元素构成序列的有()&lt;/p&gt;
+&lt;p&gt;A 、{d,e,c,f,b,g,a}    B、{f,e,g,d,a,c,b}   C、{e,f,d,g,c,b,a}   D、{c,d,b,e,f,a,g}   &lt;/p&gt;
+&lt;p&gt;9 下列有关图的遍历说法中，不正确的是()
+ 
+  A、图的遍历必须用递归实现     B、基本遍历算法有两种：深度遍历和广度遍历 &lt;/p&gt;
+&lt;p&gt;C、有向图和无向图都可以进行遍历操作  D、图的遍历算法可以执行在有回路的图上  &lt;/p&gt;
+&lt;p&gt;10 在16位机器上跑下列foo函数的结果是()&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;foo&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt; 
+&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;65536&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="n"&gt;cout&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;I&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="err"&gt;“&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;”&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; 
+&lt;span class="n"&gt;I&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;65535&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;cout&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;I&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; 
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;A、-1，65535  B、0，65535  C、-1，-1     D、0，-1&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;以下每题3分&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;11 有一段年代久远的C++代码，内部逻辑复杂。现在需要利用其实现一个新的需求，假定有以下可行的方案，应当优先选择()&lt;/p&gt;
+&lt;p&gt;A、修改老代码接口，满足新的需求   &lt;/p&gt;
+&lt;p&gt;B、在这段代码之外写一段代码，调用该代码的一些模块，完成新功能需求      &lt;/p&gt;
+&lt;p&gt;C、修改老代码的内部逻辑，满足新的需求    &lt;/p&gt;
+&lt;p&gt;D、将老代码抛弃，自己重新实现类似的逻辑  &lt;/p&gt;
+&lt;p&gt;12 在5个页框上使用LRU页面替换算法。当页框初始为空时，引用序列为0、1、7、8、6、2、3、7、2、9、8、1、0、2，系统将发生()次缺页。 &lt;/p&gt;
+&lt;p&gt;A、11 B、12 C、13 D、8 &lt;/p&gt;
+&lt;p&gt;13 阿里巴巴有相距1500km的两机房A和B。现在有100GB数据需要通过一条FTP连接在100s的时间内从A传输到B。已知FTP连接建立在TCP协议之上，而TCP协议通过ACK来确认每个数据包是否正确传送。网络信号传输速度为
+2*108m/s，假设机房间带宽足够高，那么A节点的发送缓冲区可以设置为最小()&lt;/p&gt;
+&lt;p&gt;A、6MB  B、12 MB  C、18 MB  D、24 MB  &lt;/p&gt;
+&lt;p&gt;14 有3个节点的二叉树可能有()种 &lt;/p&gt;
+&lt;p&gt;A、12 B、13 C、5  D、15 &lt;/p&gt;
+&lt;p&gt;15 设某文件经内排序后得到100个初始归并段（初始顺串），若使用多路归并排序算法，且要求三趟归并完成排序，问归并路数最少为()&lt;/p&gt;
+&lt;p&gt;A、5 B、6 C、7 D、8&lt;/p&gt;
+&lt;p&gt;16 一个优化的程序可以生成一n个元素集合的所有子集，那么该程序的时间复
+杂度是() &lt;/p&gt;
+&lt;p&gt;A、O(n!) B、O(nlogn) C、O(n2) D、O(2n) &lt;/p&gt;
+&lt;p&gt;17 快速排序在已经有序的情况下效率最差，复杂度为()
+ 
+A、O(nlogn) B、O(n2logn) C、O(n1.5) D、O(n2)&lt;/p&gt;
+&lt;p&gt;18 从一副牌（52张，不含大小怪）里抽出两张牌，其中一红一黑的概率是()
+ 
+A、25/51 B、26/51 C、1/2 D、1/3 &lt;/p&gt;
+&lt;p&gt;19 有一堆石子共100枚，甲乙轮流从该堆中取石子，每次可取2、4或6枚，取得最后的石子的玩家为赢家，若甲先取，则()&lt;/p&gt;
+&lt;p&gt;A、甲必胜 B、乙必胜 C、谁都无法必胜 D、不确定 &lt;/p&gt;
+&lt;p&gt;20. 现有一完全的P2P共享协议。每次两个节点通讯后都能获取对方已经获取的
+全部信息。现在使得系统中每个节点都知道所有节点的文件信息，共17个节点，假设只能通过多次两个对等节点之间通讯的方式，则最少需要()次通讯 &lt;/p&gt;
+&lt;p&gt;A、29    B、30    C、31    D、32&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;第二部分  不定项选择&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;21 2-3树是一种特殊的树，它满足两个条件：(1). 每个内部结点有两个或三个子结点；(2). 所有的叶结点到根的长度相同； 如果一棵2-3树有9个叶结点，下列数量个非叶结点的2-3树可能存在的有()&lt;/p&gt;
+&lt;p&gt;A、4     B、5     C、6     D、7     E、8 &lt;/p&gt;
+&lt;p&gt;22 下列有关进程的说法中，()是错误的&lt;/p&gt;
+&lt;p&gt;A、进程是静态的 B、进程是动态的过程  C、进程与程序是一一对应的  D、进程与作业是一一对应的 &lt;/p&gt;
+&lt;p&gt;23 下列函数定义中，有语法错误的是() &lt;/p&gt;
+&lt;p&gt;A、&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;fun&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; 
+&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;*=&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;B、&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="n"&gt;fun&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt; 
+&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;*=&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;C、&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;fun&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; 
+&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;D、&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;fun&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; 
+&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;24 有朋自远方来。他乘火车，轮船，汽车，飞机来的概率分别是0.3，0.2，0.1，0.4。坐各交通工具迟到的概率分别是1/4，1/3，1/12，0。下列语句中正确的是()&lt;/p&gt;
+&lt;p&gt;A、如果他迟到，坐火车来的概率是0.5&lt;/p&gt;
+&lt;p&gt;B、如果他准点，坐轮船或汽车的概率等于坐火车的概率&lt;/p&gt;
+&lt;p&gt;C、如果他准点，那么乘飞机的概率大于等于0.5&lt;/p&gt;
+&lt;p&gt;D、坐陆路（火车、汽车）交通工具准点机会比坐水路（轮船）要低&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;第三部分  填空与问答&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;25 文件分配表FAT是管理磁盘空间的一种数据结构，用在以连接方式存储文件的系统中记录磁盘分配和跟踪空白磁盘块。整个磁盘仅设一张FAT表，其结构如下图所示。如果文件块号为2，查找FAT序号为2的内容得知物理块2的后继物理块是5；再查FAT序号为5的内容得知物理块5的后继物理块是7；接着继续查FAT序号为7的内容为”^”，即该文件结束标志，所以该文件由物理块2、5、7组成&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.yanyulin.info"&gt;
+&lt;img src="http://www.yanyulin.info/pics/daan/alibaba_0.png"/&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;假设磁盘物理块大小为1KB，并且FAT序号以4bits为单位向上扩充空间。 请计算下列两块磁盘的FAT最少需要占用多大的存储空间？ 1) 一块540MB的硬盘 2) 一块1.2GB的硬盘&lt;/p&gt;
+&lt;p&gt;26 已知如下代码，并在两个线程中同时执行f1和f2，待两个函数都返回后，a的所有可能值是哪些？ &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; 
+&lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;f1&lt;/span&gt; &lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+ &lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+ &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; 
+&lt;span class="p"&gt;}&lt;/span&gt; 
+&lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;f2&lt;/span&gt; &lt;span class="p"&gt;()&lt;/span&gt; 
+&lt;span class="p"&gt;{&lt;/span&gt; 
+&lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;11&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+ &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;27 设计一个最优算法来查找一n个元素数组中的最大值和最小值。已知一种需要比较2n次的方法，请给一个更优的算法。请特别注意优化时间复杂度的常数。 给出该算法最坏情况下的比较次数和该算法的步骤描述。 （不用写代码，不给出比较次数的不得分）  &lt;/p&gt;
+&lt;p&gt;28 已知三个升序整数数组 a[l]、b[m]和c[n]。请在三个数组中各找一个元素，使得组成的三元组距离最小。三元组的距离定义是：假设a[i]、b[j]和c[k]是一个三元组，那么距离为:distance = max (|a[i]- b[j]|, | a[i] -c[k]|, | b[j] -c[k]|)&lt;/p&gt;
+&lt;p&gt;请设计一求最小三元组距离的最优算法，并分析时间复杂度（不用写代码，不分析时间复杂度的不得分）&lt;/p&gt;
+&lt;p&gt;29在黑板上写下50个数字：1至50。在接下来的49轮操作中，每次做如下动作：选取两个黑板上的数字a和b，擦去，在黑板上写|b-a|。请问最有一次动作之后剩下数字可能是什么？为什么？ （不用写代码，不写原因不得分）&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;第四部分  JAVA选做题&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;1请给出下面代码的输出 &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="n"&gt;class&lt;/span&gt; &lt;span class="n"&gt;Test1&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt; 
+&lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="k"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;k&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; 
+&lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="k"&gt;static&lt;/span&gt; &lt;span class="n"&gt;Test1&lt;/span&gt; &lt;span class="n"&gt;t1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;new&lt;/span&gt; &lt;span class="n"&gt;Test1&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="err"&gt;“&lt;/span&gt;&lt;span class="n"&gt;t1&lt;/span&gt;&lt;span class="err"&gt;”&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt; 
+&lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="k"&gt;static&lt;/span&gt; &lt;span class="n"&gt;Test1&lt;/span&gt; &lt;span class="n"&gt;t2&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;new&lt;/span&gt; &lt;span class="n"&gt;Test1&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="err"&gt;“&lt;/span&gt;&lt;span class="n"&gt;t2&lt;/span&gt;&lt;span class="err"&gt;”&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt; 
+&lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="k"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="err"&gt;”&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="err"&gt;”&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt; 
+&lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="k"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;99&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;j&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="err"&gt;“&lt;/span&gt;&lt;span class="n"&gt;j&lt;/span&gt;&lt;span class="err"&gt;”&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; 
+    &lt;span class="n"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="err"&gt;“构造快”&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;  
+    &lt;span class="k"&gt;static&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt; 
+        &lt;span class="n"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="err"&gt;“静态块”&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;  
+&lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="n"&gt;Test1&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;str&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt; 
+    &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;out&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;println&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="n"&gt;k&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="err"&gt;“&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="err"&gt;”&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;str&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="err"&gt;“&lt;/span&gt;   &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="err"&gt;”&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="err"&gt;“&lt;/span&gt;   &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="err"&gt;”&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt; 
+    &lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; 
+&lt;span class="p"&gt;}&lt;/span&gt;  
+&lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="k"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;str&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt; 
+    &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;out&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;println&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="n"&gt;k&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="err"&gt;“&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="err"&gt;”&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;str&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="err"&gt;“&lt;/span&gt;   &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="err"&gt;”&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="err"&gt;“&lt;/span&gt;   &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="err"&gt;”&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;     &lt;span class="err"&gt;】&lt;/span&gt;
+    &lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; 
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; 
+&lt;span class="p"&gt;}&lt;/span&gt;  
+&lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="k"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="err"&gt;…&lt;/span&gt;&lt;span class="n"&gt;strings&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;     
+&lt;span class="n"&gt;Test1&lt;/span&gt; &lt;span class="n"&gt;t&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;new&lt;/span&gt; &lt;span class="n"&gt;Test1&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="err"&gt;“&lt;/span&gt;&lt;span class="n"&gt;init&lt;/span&gt;&lt;span class="err"&gt;”&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt; 
+&lt;span class="p"&gt;}&lt;/span&gt; 
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;2 已知：为了保持请求的并行度，一台web应用服务器目前需要10个到一台&lt;code&gt;oracle&lt;/code&gt;的数据库连接，目前oracle数据库能够稳定承载的连接数是7000个。目前已经拥有的web应用服务器数是400台，并且web服务器以每年以300的规模在增长。 &lt;/p&gt;
+&lt;p&gt;问题：目前能够才去的策略有哪些？请从原理上对这些策略为什么能够起作用进行一下分析。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;各位如果有更好的答案，请留言评价，方便更多的人&lt;/strong&gt;&lt;/p&gt;</summary><category term="阿里巴巴"></category></entry><entry><title>创新工场2014年校招笔试题(研发)</title><link href="http://www.yanyulin.info/pages/2013/12/cxgc_2014_A.html" rel="alternate"></link><updated>2013-12-06T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-12-06:pages/2013/12/cxgc_2014_A.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;如有错误，或更加精简的方法，请留言，我会更正，以方便更多的人&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;选择题&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;1 若进栈序列为&lt;code&gt;a、b、c、d&lt;/code&gt;，进栈过程中可以出栈，那么（）不可能是一个出栈序列。&lt;/p&gt;
