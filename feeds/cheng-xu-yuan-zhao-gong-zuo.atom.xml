@@ -118,7 +118,7 @@ A、25/51 B、26/51 C、1/2 D、1/3 &lt;/p&gt;
 &lt;p&gt;D、坐陆路（火车、汽车）交通工具准点机会比坐水路（轮船）要低&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;第三部分  填空与问答&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;25 文件分配表FAT是管理磁盘空间的一种数据结构，用在以连接方式存储文件的系统中记录磁盘分配和跟踪空白磁盘块。整个磁盘仅设一张FAT表，其结构如下图所示。如果文件块号为2，查找FAT序号为2的内容得知物理块2的后继物理块是5；再查FAT序号为5的内容得知物理块5的后继物理块是7；接着继续查FAT序号为7的内容为”^”，即该文件结束标志，所以该文件由物理块2、5、7组成&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://www.yanyulin.info"&gt;
+&lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2013/12/alibaba_2014_A.html"&gt;
 &lt;img src="http://www.yanyulin.info/pics/daan/alibaba_0.png"/&gt;
 &lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;假设磁盘物理块大小为1KB，并且FAT序号以4bits为单位向上扩充空间。 请计算下列两块磁盘的FAT最少需要占用多大的存储空间？ 1) 一块540MB的硬盘 2) 一块1.2GB的硬盘&lt;/p&gt;
