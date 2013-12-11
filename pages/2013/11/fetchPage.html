@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<title>爬虫的自我解剖(抓取网页HtmlUnit) - 烟雨林</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
+<meta name="author" content="烟雨林">
+<link href="http://www.yanyulin.info/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="烟雨林 Full Atom Feed" />
+<link href="http://www.yanyulin.info/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="烟雨林 RSS Feed" />
+<link href="http://www.yanyulin.info/feeds/wan-zhuan-ji-zhu.atom.xml" type="application/atom+xml" rel="alternate" title="烟雨林 Categories Atom Feed" />
+<link rel="stylesheet" type="text/css" href="http://www.yanyulin.info/theme/index.css" />
+<link rel="shortcut icon" href="http://www.yanyulin.info/theme/images/favicon.ico">
+</head>
+<body >
+   <div id="hed">
+			<div class="top_part">
+				<a href="http://www.yanyulin.info"><img src="http://www.yanyulin.info/theme/images/logo.png"/ alt="烟雨林" title="烟雨林" width="127px" height="29px"></a>
+			</div>
+	 </div>
+	 <div id="wrapper">
+			<div id="top">
+				<div id='topnav'>
+					<div class="left_top ">
+							<div class="home"><a href="http://www.yanyulin.info" title="首  页" class="home"></a>
+							</div>
+					   	<div class="menu-%e5%af%bc%e8%88%aa%e8%8f%9c%e5%8d%95-container">
+						  		<ul  class="menu">		  					
+						   				<li  class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-823"><a href="http://www.yanyulin.info">烟雨首页</a></li>
+						  					<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1209"><a href="http://www.yanyulin.info/category/bian-cheng-yu-yan.html">编程语言</a></li>
+						  					<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1209"><a href="http://www.yanyulin.info/category/jing-pin-shu-ji.html">精品书籍</a></li>
+						  					<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1209"><a href="http://www.yanyulin.info/category/shi-pin-jiao-cheng.html">视频教程</a></li>
+						  					<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1209"><a href="http://www.yanyulin.info/category/wan-zhuan-ji-zhu.html">玩转技术</a></li>
+						  		</ul>
+					   	</div> 
+				  </div>
+			  </div>
+			</div>
+<script type="text/javascript">
+    function doZoom(size) {
+        var zoom = document.all ? document.all['entry'] : document.getElementById('entry');
+        zoom.style.fontSize = size + 'px';
+    }
+</script>
+<div class="test_right">
+		<div id="content">							 
+					<div id="map">
+						<div class="browse">现在的位置: <a title="返回首页" href="http://www.yanyulin.info">烟雨首页</a> ＞
+						<a href="http://www.yanyulin.info/category/wan-zhuan-ji-zhu.html" title="查看玩转技术中的全部文章" rel="category tag">玩转技术</a>＞正文</div>
+						<div class="font"><a href="javascript:doZoom(12)">小</a> <a href="javascript:doZoom(13)">中</a> <a href="javascript:doZoom(18)">大</a></div>
+					</div>
+					<div class="entry_box_s">
+						<div class="entry_title_box">
+							<div class="ico"></div>
+							<div class="entry_title">爬虫的自我解剖(抓取网页HtmlUnit)</div>
+							<div class="archive_info">
+								<span class="date">2013-11-28</span>
+								<span class="category"> ⁄ <a href="http://www.yanyulin.info/category/wan-zhuan-ji-zhu.html" title="查看玩转技术中的全部文章" rel="category tag">玩转技术</a></span>
+							</div>
+						</div>
+						<div class="entry">
+							<div id="entry" style="font-size: 13px; ">
+							<p>网络爬虫第一个要面临的问题，就是如何抓取网页，抓取其实很容易，没你想的那么复杂，一个开源<code>HtmlUnit</code>包，4行代码就OK啦，例子如下：</p>
+<div class="highlight"><pre><span class="n">final</span> <span class="n">WebClient</span> <span class="n">webClient</span><span class="o">=</span><span class="n">new</span> <span class="n">WebClient</span><span class="p">();</span>
+<span class="n">final</span> <span class="n">HtmlPage</span> <span class="n">page</span><span class="o">=</span><span class="n">webClient</span><span class="p">.</span><span class="n">getPage</span><span class="p">(</span><span class="s">&quot;http://www.yanyulin.info&quot;</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="n">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">page</span><span class="p">.</span><span class="n">asText</span><span class="p">());</span>
+<span class="n">webClient</span><span class="p">.</span><span class="n">closeAllWindows</span><span class="p">();</span>
+</pre></div>
+
+
+<p>在程序中写上上面的4行代码，运行，就可以得到<a href="http://www.yanyulin.info" title="烟雨林">烟雨林博客</a>首页的全部内容，上面代码在运行的过程中会出现很多警告，出现这些警告的主要原因是由于以下两点:</p>
+<p>1、<code>HtmlUnit</code>对<code>Javascript</code>的支持不是很好</p>
+<p>2、<code>HtmlUnit</code>对<code>CSS</code>的支持不是很好</p>
+<p>明白了上面的两点后，将代码重新改写一下，该禁用的就禁用，同时禁用一些不必要的功能，也有利于提高程序的运行效率,再者说网络爬虫也不需要CSS的支持滴</p>
+<div class="highlight"><pre><span class="n">final</span> <span class="n">WebClient</span> <span class="n">webClient</span><span class="o">=</span><span class="n">new</span> <span class="n">WebClient</span><span class="p">();</span>
+<span class="n">webClient</span><span class="p">.</span><span class="n">getOptions</span><span class="p">().</span><span class="n">setCssEnabled</span><span class="p">(</span><span class="nb">false</span><span class="p">);</span>
+<span class="n">webClient</span><span class="p">.</span><span class="n">getOptions</span><span class="p">().</span><span class="n">setJavaScriptEnabled</span><span class="p">(</span><span class="nb">false</span><span class="p">);</span>
+<span class="n">final</span> <span class="n">HtmlPage</span> <span class="n">page</span><span class="o">=</span><span class="n">webClient</span><span class="p">.</span><span class="n">getPage</span><span class="p">(</span><span class="s">&quot;http://www.yanyulin.info&quot;</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="n">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">page</span><span class="p">.</span><span class="n">asText</span><span class="p">());</span>
+<span class="n">webClient</span><span class="p">.</span><span class="n">closeAllWindows</span><span class="p">();</span>
+</pre></div>
+
+
+<p><code>HtmlUnit</code>的使用:
+简介:<code>HtmlUnit</code>说白了就是一个浏览器，这个浏览器是用Java写的无界面的浏览器，正因为其没有界面,因此执行的速度还是可以滴，<code>HtmlUnit</code>提供了一系列的API,这些API可以干的功能比较多，如表单的填充，表单的提交，模仿点击链接，由于内置了<code>Rhinojs</code>引擎，因此可以执行<code>Javascript</code></p>
+<p>作用:web的自动化测试(最初的目的),浏览器，网络爬虫</p>
+<p>重要API的使用
+在介绍API的使用之前要先明白的一个问题是，WebClient,WebWindow,Page三者之间的关系，所有的页面最终都是在一个WebWindow对象里面，WebClient在创建时会自动的创建一个WebWindow对象，当调用getPage时会将新页面加载到WebWindow里，你可以理解成WebClient就是IE内核，WebWindow就是呈现页面的浏览器窗口，三者之间的关系图如下图所示：</p>
+<p>1、模拟特定浏览器，也可以指定浏览器的相应版本(HtmlUnit最新版2.13现在可以模拟的浏览器有<code>Chrome</code>/<code>FireFox</code>/<code>IE</code>)</p>
+<div class="highlight"><pre><span class="c1">//模拟chorme浏览器，其他浏览器请修改BrowserVersion.后面</span>
+<span class="n">WebClient</span>  <span class="n">webClient</span><span class="o">=</span><span class="k">new</span> <span class="n">WebClient</span><span class="p">(</span><span class="n">BrowserVersion</span><span class="p">.</span><span class="no">CHROME</span><span class="p">);</span>
+</pre></div>
+
+
+<p>2、查找特定元素，通过get或者XPath可以从HtmlPage中获得特定的Html元素，如下例子</p>
+<p>方法一，通过get方法获取</p>
+<div class="highlight"><pre><span class="n">HtmlPage</span> <span class="n">page</span><span class="o">=</span><span class="n">webClient</span><span class="p">.</span><span class="n">getPage</span><span class="p">(</span><span class="s">&quot;http://www.yanyulin.info&quot;</span><span class="p">);</span>
+<span class="c1">//从[烟雨林博客]上获取标签hed的内容</span>
+<span class="n">HtmlDivision</span> <span class="n">div</span><span class="o">=</span><span class="p">(</span><span class="n">HtmlDivision</span><span class="p">)</span><span class="n">page</span><span class="p">.</span><span class="n">getElementById</span><span class="p">(</span><span class="s">&quot;hed&quot;</span><span class="p">);</span>
+</pre></div>
+
+
+<p>方法二，通过XPath获取，XPath通常用于无法通过Id搜索，或者需要更为复杂的搜索时，XPath的相关教程</p>
+<p><a href="http://www.w3school.com.cn/xpath/xpath_syntax.asp" title="xpath相关教程">XPATH相关教程</a></p>
+<div class="highlight"><pre><span class="c1">//同样可以打印出hed的内容,//div中//表示搜索整个文档中的div,并将这些div</span>
+<span class="c1">//放入list中，然后获取第一个div</span>
+<span class="k">final</span> <span class="n">HtmlDivision</span> <span class="n">div</span> <span class="o">=</span> <span class="p">(</span><span class="n">HtmlDivision</span><span class="p">)</span> <span class="n">page</span><span class="p">.</span><span class="n">getByXPath</span><span class="p">(</span><span class="s">&quot;//div&quot;</span><span class="p">).</span><span class="n">get</span><span class="p">(</span><span class="mh">0</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="n">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">div</span><span class="p">.</span><span class="n">asXml</span><span class="p">());</span>
+</pre></div>
+
+
+<p>3、代理服务器的配置，代理的配置很简单，只需要配置好地址，端口，用户名与密码即可</p>
+<div class="highlight"><pre><span class="n">final</span> <span class="n">WebClient</span> <span class="n">webClient</span> <span class="o">=</span> <span class="n">new</span> <span class="n">WebClient</span><span class="p">(</span><span class="n">BrowserVersion</span><span class="p">.</span><span class="n">CHROME</span><span class="p">,</span> <span class="s">&quot;http://127.0.0.1&quot;</span><span class="p">,</span> <span class="mi">8087</span><span class="p">);</span>
+<span class="n">final</span> <span class="n">DefaultCredentialsProvider</span> <span class="n">credentialsProvider</span> <span class="o">=</span> <span class="p">(</span><span class="n">DefaultCredentialsProvider</span><span class="p">)</span> <span class="n">webClient</span><span class="p">.</span><span class="n">getCredentialsProvider</span><span class="p">();</span>
+<span class="n">credentialsProvider</span><span class="p">.</span><span class="n">addCredentials</span><span class="p">(</span><span class="s">&quot;username&quot;</span><span class="p">,</span> <span class="s">&quot;password&quot;</span><span class="p">);</span>
+</pre></div>
+
+
+<p>4、模拟表单的提交</p>
+<div class="highlight"><pre><span class="c1">//获取表单  </span>
+<span class="k">final</span> <span class="n">HtmlForm</span> <span class="n">form</span> <span class="o">=</span> <span class="n">page</span><span class="p">.</span><span class="n">getFormByName</span><span class="p">(</span><span class="s">&quot;form&quot;</span><span class="p">);</span>
+<span class="c1">//获取提交按扭</span>
+<span class="k">final</span> <span class="n">HtmlSubmitInput</span> <span class="n">button</span> <span class="o">=</span> <span class="n">form</span><span class="p">.</span><span class="n">getInputByName</span><span class="p">(</span><span class="s">&quot;submit&quot;</span><span class="p">);</span>
+<span class="c1">//一会得输入的</span>
+<span class="k">final</span> <span class="n">HtmlTextInput</span> <span class="n">textField</span> <span class="o">=</span> <span class="n">form</span><span class="p">.</span><span class="n">getInputByName</span><span class="p">(</span><span class="s">&quot;userid&quot;</span><span class="p">);</span>
+<span class="n">textField</span><span class="p">.</span><span class="n">setValueAttribute</span><span class="p">(</span><span class="s">&quot;test&quot;</span><span class="p">);</span>
+<span class="c1">//点击提交表单</span>
+<span class="k">final</span> <span class="n">HtmlPage</span> <span class="n">page</span> <span class="o">=</span> <span class="n">button</span><span class="p">.</span><span class="n">click</span><span class="p">();</span>
+</pre></div>
+
+
+<p>API的使用就介绍到这，网络爬虫中主要目的就是获取页中所有的链接，代码如下：</p>
+<div class="highlight"><pre><span class="nx">java.util.List</span><span class="o">&lt;</span><span class="nx">HtmlAnchor</span><span class="o">&gt;</span> <span class="n">achList</span><span class="o">=</span><span class="nx">page.getAnchors</span><span class="p">();</span>
+<span class="nb">for</span><span class="p">(</span><span class="nx">HtmlAnchor</span> <span class="nx">ach</span><span class="p">:</span><span class="nx">achList</span><span class="p">){</span>
+<span class="nx">System.out.println</span><span class="p">(</span><span class="nx">ach.getHrefAttribute</span><span class="p">());</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>最后来个例子，HtmlUnit模拟浏览器登录<code>小米网站帐户</code>，程运运行的截图如下，<code>红色方框</code>表示登录成功跳转到下一个页面出现的帐号：</p>
+<p><a href="http://www.yanyulin.info/pages/2013/11/fetchPage.html">
+<img src="http://www.yanyulin.info/pics/art/xiaomi.jpg" width=100%/>
+</a></p>
+<p>本博文源代码下载:</p>
+<blockquote>
+<p><a href="https://github.com/zwjlpeng/Crawler_Self_Analysis" target="_blank">源码下载</a></p>
+<p><a href="http://yunpan.cn/QURZedFfjFWfQ" target="_blank">Java皮肤库下载</a></p>
+<p><a href="http://yunpan.cn/QURZ5UXwjnk6W" target="_blank">HtmlUnit源码包下载</a></p>
+<p><a href="http://yunpan.cn/QURZ5uZLwFmM9" target="_blank">HtmlUnit的Jar包下载</a></p>
+</blockquote>
+						  <div class="clear"></div>
+							</div>
+							<b>本文地址:</b> <a href="http://www.yanyulin.info/pages/2013/11/fetchPage.html" target="_self">http://www.yanyulin.info/pages/2013/11/fetchPage.html</a>
+							<div><font color="blue"><b>转载时请保留本文出处,谢谢您的合作</b></font></div>
+							<div class="clear"></div>
+						</div>			
+						<!-- Baidu Button BEGIN -->
+						<div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+						<a class="bds_qzone"></a>
+						<a class="bds_tsina"></a>
+						<a class="bds_tqq"></a>
+						<a class="bds_renren"></a>
+						<a class="bds_t163"></a>
+						<span class="bds_more"></span>
+						</div>
+						<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=6864225" ></script>
+						<script type="text/javascript" id="bdshell_js"></script>
+						<script type="text/javascript">			
+   		      document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+            </script>
+            <!-- Baidu Button END -->
+						<div class="clear"></div>
+						<!-- end: entry -->
+						<i class="lt"></i>
+						<i class="rt"></i>
+					</div>
+					<!-- entrymeta -->	
+					<div class="entry_sb">
+						<i class="lb"></i>
+						<i class="rb"></i>
+					</div>
+					<!-- end: entrymeta -->
+				<div class="context_b">
+					 上一篇: 
+  				 <a href="http://www.yanyulin.info/pages/2013/11/vlinux2.html" title="Linux基础教程视频版(很详细)" target="_self">Linux基础教程视频版(很详细)</a>
+  				 &nbsp;&nbsp
+  				 下一篇:
+  				 <a href="http://www.yanyulin.info/pages/2013/11/qqLogin.html" title="界面编程模仿篇(模仿腾讯QQ登录界面)" target="_self">界面编程模仿篇(模仿腾讯QQ登录界面)</a>
+					 
+					 <i class="lt"></i>
+					 <i class="rt"></i>
+					 <i class="lb"></i>
+					 <i class="rb"></i>
+				</div>
+				<div class="context_b">
+ 
+			<table border="0px" width="100%">
+			
+	 
+  				 <tr>
+ 
+  				 <td width="50%">
+  				 <a href="http://www.yanyulin.info/pages/2013/11/fetchPage.html" title="爬虫的自我解剖(抓取网页HtmlUnit)" target="_blank">爬虫的自我解剖(抓取网页HtmlUnit)</a>
+  				 </td>
+	
+ 
+  				 <td><a href="#"></a></td>
+			</table>
+					 <i class="lt"></i>
+					 <i class="rt"></i>
+					 <i class="lb"></i>
+					 <i class="rb"></i>
+				</div>
+				<div class="context_b">
+			 <div class="ds-thread"></div>
+			 <script type="text/javascript">
+			 	var duoshuoQuery={short_name:"yanyulin"};
+			 	var ds=document.createElement("script");
+			 	ds.type="text/javascript";
+			 	ds.async=true;
+			 	ds.src="http://static.duoshuo.com/embed.js";
+			 	ds.charset="UTF-8";document.getElementsByTagName("head")[0].appendChild(ds);
+			 </script>
+					 <i class="lt"></i>
+					 <i class="rt"></i>
+					 <i class="lb"></i>
+					 <i class="rb"></i>
+				</div>
+		</div>
+</div>
+<div id="sidebar">					
+	<div class="widget">
+				<h3>相关标签</h3>
+				<div class="box">			
+						<div class="textwidget">
+							<a href="http://www.yanyulin.info/tag/jie-mian-bian-cheng.html" title="查看界面编程下的所有文章" target="_blank">界面编程</a>
+							<a href="http://www.yanyulin.info/tag/sou-suo-yin-qing.html" title="查看搜索引擎下的所有文章" target="_blank">搜索引擎</a>
+						</div>
+				</div>
+    		<div class="box-bottom">
+						<i class="lb"></i>
+						<i class="rb"></i>
+				</div>
+				<h3>本站直达</h3>
+				<div class="box">
+				<div class="textwidget">
+					<table width="200" border="0">
+  					<tbody>
+  						<tr>
+ 
+    							<td><a href="http://www.yanyulin.info/category/bian-cheng-yu-yan.html" title="查看编程语言下的所有文章"><font size='2px'>编程语言</font></a></td>
+			
+ 
+    							<td><a href="http://www.yanyulin.info/category/cheng-xu-yuan-zhao-gong-zuo.html" title="查看程序员找工作下的所有文章"><font size='2px'>程序员找工作</font></a></td>
+			
+ 
+    							<td><a href="http://www.yanyulin.info/category/jing-pin-shu-ji.html" title="查看精品书籍下的所有文章"><font size='2px'>精品书籍</font></a></td>
+			
+  						</tr>	
+  						<tr>
+ 
+    							<td><a href="http://www.yanyulin.info/category/shi-pin-jiao-cheng.html" title="查看视频教程下的所有文章"><font size='2px'>视频教程</font></a></td>
+			
+ 
+    							<td><a href="http://www.yanyulin.info/category/cheng-xu-yuan-de-mian-jing.html" title="查看程序员的面经下的所有文章"><font size='2px'>程序员的面经</font></a></td>
+			
+ 
+    							<td><a href="http://www.yanyulin.info/category/wan-zhuan-ji-zhu.html" title="查看玩转技术下的所有文章"><font size='2px'>玩转技术</font></a></td>
+			
+  						</tr>	
+  						<td><a href="#"></a></td>
+  						<td><a href="#"></a></td>
+  						<td><a href="#"></a></td>
+						</tbody>
+					</table>
+				</div>
+				</div>
+    		<div class="box-bottom">
+				<i class="lb"></i>
+				<i class="rb"></i>
+				</div>
+				<h3>邮箱订阅</h3>
+				<div class="box">			
+				<div class="textwidget">
+				<!--QQ邮件列表订阅嵌入代码-->
+				<table width="200" border="0">
+  			<tbody>
+  			<tr>
+  			<td>
+				<!--以下是QQ邮件列表订阅嵌入代码-->
+        <div style="width: 110px; height: 35px; overflow: hidden; " class="WB_widget WB_follow_ex">
+        <div class="follow_btn_line" node-type="inner">
+        <a class="follow_btn status_followed" node-type="followBtn" target="_blank" title="烟雨林博客" href="http://list.qq.com/cgi-bin/qf_invite?id=8949c93bdc7fcbda12adc078acb2809d6f6eba09998d35e6">
+				<img border="0" width="107px" height="22px" alt="邮箱订阅" src="http://www.yanyulin.info/pics/picMode_light_s.png" />
+        </a></div></div>
+			  </td>
+				</tr>
+			  </tbody>
+			  </table>
+				</div>
+				</div>
+    		<div class="box-bottom">
+				<i class="lb"></i>
+				<i class="rb"></i>
+				</div>
+				<div class="random_r">
+				<h3>随便看看</h3>
+				<div class="box_r">
+				<ul>
+				<ul class="random-post-link">
+				<li class="random-post-link">
+				<a href="http://www.yanyulin.info/pages/2013/11/githubM.html" title="Github上如何给别人贡献代码">Github上如何给别人贡献代码</a>
+				</li>
+				<li class="random-post-link">
+				<a href="http://www.yanyulin.info/pages/2013/12/neteasyM_1.html" title="网易校招2014年电商面经">网易校招2014年电商面经</a>
+				</li>
+				<li class="random-post-link">
+				<a href="http://www.yanyulin.info/pages/2013/12/amzon_2014_A.html" title="亚马逊2014年校招笔试题(研发)">亚马逊2014年校招笔试题(研发)</a>
+				</li>
+				<li class="random-post-link">
+				<a href="http://www.yanyulin.info/pages/2013/11/deepc.html" title="C语言深度解剖(含金量高)">C语言深度解剖(含金量高)</a>
+				</li>
+				<li class="random-post-link">
+				<a href="http://www.yanyulin.info/pages/2013/11/vlinux1.html" title="Linux入门版视频教程(基础)">Linux入门版视频教程(基础)</a>
+				</li>
+				<li class="random-post-link">
+				<a href="http://www.yanyulin.info/pages/2013/12/qqLogin_1.html" title="界面编程模仿篇(QQ登录界面逼真篇)">界面编程模仿篇(QQ登录界面逼真篇)</a>
+				</li>
+				</ul>
+				</ul>
+				<div class="clear"></div>
+				</div>
+				<div class="box-bottom">
+				<i class="lb"></i>
+				<i class="rb"></i>
+				</div>
+				</div>
+				<div class="hotarticles">
+				<h3>年度排行</h3>
+				<div class="box_r">
+				<ul>
+				<li>
+				<a href="http://www.yanyulin.info/pages/2013/07/string.html" rel="bookmark" title="String StringBuffer StringBuilder的区别分析">String StringBuffer StringBuilder的区别分析</a>
+				</li>
+				<li>
+				<a href="http://www.yanyulin.info/pages/2013/12/neteasyM_1.html" rel="bookmark" title="网易校招2014年电商面经">网易校招2014年电商面经</a>
+				</li>
+				<li>
+				<a href="http://www.yanyulin.info/pages/2013/06/google_2013_1.html" rel="bookmark" title="2013年谷歌校招笔试(一)">2013年谷歌校招笔试(一)</a>
+				</li>
+				<li>
+				<a href="http://www.yanyulin.info/pages/2013/12/prgbeautiful.html" rel="bookmark" title="编程之美—微软技术面试心得">编程之美—微软技术面试心得</a>
+				</li>
+				<li>
+				<a href="http://www.yanyulin.info/pages/2013/11/vlinux1.html" rel="bookmark" title="Linux入门版视频教程(基础)">Linux入门版视频教程(基础)</a>
+				</li>
+				<li>
+				<a href="http://www.yanyulin.info/pages/2013/12/qqLogin_1.html" rel="bookmark" title="界面编程模仿篇(QQ登录界面逼真篇)">界面编程模仿篇(QQ登录界面逼真篇)</a>
+				</li>
+				<div class="clear"></div>
+				</div>
+				<div class="box-bottom">
+				<i class="lb"></i>
+				<i class="rb"></i>
+				</div>
+				</div>
+				</div>
+	      <div class="widget">
+			  </div>
+				<div class="widget">
+				</div>
+				<div class="widget">
+				</div>
+				<div class="widget">
+				</div>
+				<div class="clear">
+				</div>
+	</div>
+</div>	 </div>		
+	 <div id="my_footer_wrapper">
+	 <div class="link">
+	 <a href="https://github.com/zwjlpeng" target="_blank">Github</a>
+	 <a href="http://weibo.com/lamazi" target="_blank">微博</a>
+	 <div class="clear"></div>
+   </div>
+   </div>
+	 <div id="my_footer_wrapper">
+	 <div id="my_footer">		
+	 <span>【</span><a href="http://www.yanyulin.info/sitemap.xml" target="_blank">本站地图</a><span>】
+	 </span> 		
+	 <span>【</span><a href="http://www.yanyulin.info/feeds/all.rss.xml" target="_blank">RSS订阅</a><span>】
+	 </span>  		
+	 <span>【</span><a href="http://www.yanyulin.info/sitemap.xml" target="_blank">谷歌地图</a><span>】
+	 </span> 		
+	 <span>【</span><a href="http://www.yanyulin.info" target="_blank">电脑版</a><span>】</span>    
+	 </div>
+  </div>  
+  <div id="my_copyright_wrapper">
+		<div id="my_copyright">
+		博主邮箱: zwjlpeng@gmail.com Copyright@2010-2020 <a href="http://www.yanyulin.info">烟雨林个人博客</a>
+		</div>
+  </div>
+    <script>
+     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+     ga('create', 'UA-45829467-1', '');
+     ga('send', 'pageview');
+   </script>
+</body>
+</html>
