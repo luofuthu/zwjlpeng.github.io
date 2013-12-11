@@ -1,2 +1,0 @@
-User-agnet: *
-Sitemap: http://www.yanyulin.info/sitemap.xml
