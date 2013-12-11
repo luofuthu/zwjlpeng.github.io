@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<title>Linux中0号进程的创建分析 - 烟雨林</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
+<meta name="author" content="烟雨林">
+<link href="http://www.yanyulin.info/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="烟雨林 Full Atom Feed" />
+<link href="http://www.yanyulin.info/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="烟雨林 RSS Feed" />
+<link href="http://www.yanyulin.info/feeds/bian-cheng-yu-yan.atom.xml" type="application/atom+xml" rel="alternate" title="烟雨林 Categories Atom Feed" />
+<link rel="stylesheet" type="text/css" href="http://www.yanyulin.info/theme/index.css" />
+<link rel="shortcut icon" href="http://www.yanyulin.info/theme/images/favicon.ico">
+</head>
+<body >
+   <div id="hed">
+			<div class="top_part">
+				<a href="http://www.yanyulin.info"><img src="http://www.yanyulin.info/theme/images/logo.png"/ alt="烟雨林" title="烟雨林" width="127px" height="29px"></a>
+			</div>
+	 </div>
+	 <div id="wrapper">
+			<div id="top">
+				<div id='topnav'>
+					<div class="left_top ">
+							<div class="home"><a href="http://www.yanyulin.info" title="首  页" class="home"></a>
+							</div>
+					   	<div class="menu-%e5%af%bc%e8%88%aa%e8%8f%9c%e5%8d%95-container">
+						  		<ul  class="menu">		  					
+						   				<li  class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-823"><a href="http://www.yanyulin.info">烟雨首页</a></li>
+						  					<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1209"><a href="http://www.yanyulin.info/category/bian-cheng-yu-yan.html">编程语言</a></li>
+						  					<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1209"><a href="http://www.yanyulin.info/category/jing-pin-shu-ji.html">精品书籍</a></li>
+						  					<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1209"><a href="http://www.yanyulin.info/category/shi-pin-jiao-cheng.html">视频教程</a></li>
+						  					<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1209"><a href="http://www.yanyulin.info/category/wan-zhuan-ji-zhu.html">玩转技术</a></li>
+						  		</ul>
+					   	</div> 
+				  </div>
+			  </div>
+			</div>
+<script type="text/javascript">
+    function doZoom(size) {
+        var zoom = document.all ? document.all['entry'] : document.getElementById('entry');
+        zoom.style.fontSize = size + 'px';
+    }
+</script>
+<div class="test_right">
+		<div id="content">							 
+					<div id="map">
+						<div class="browse">现在的位置: <a title="返回首页" href="http://www.yanyulin.info">烟雨首页</a> ＞
+						<a href="http://www.yanyulin.info/category/bian-cheng-yu-yan.html" title="查看编程语言中的全部文章" rel="category tag">编程语言</a>＞正文</div>
+						<div class="font"><a href="javascript:doZoom(12)">小</a> <a href="javascript:doZoom(13)">中</a> <a href="javascript:doZoom(18)">大</a></div>
+					</div>
+					<div class="entry_box_s">
+						<div class="entry_title_box">
+							<div class="ico"></div>
+							<div class="entry_title">Linux中0号进程的创建分析</div>
+							<div class="archive_info">
+								<span class="date">2013-11-19</span>
+								<span class="category"> ⁄ <a href="http://www.yanyulin.info/category/bian-cheng-yu-yan.html" title="查看编程语言中的全部文章" rel="category tag">编程语言</a></span>
+							</div>
+						</div>
+						<div class="entry">
+							<div id="entry" style="font-size: 13px; ">
+							<hr />
+<p><code>Linux</code>中1号进程是由0号进程来创建的，因此必须要知道的是如何创建0号进程，由于在创建进程时，程序一直运行在内核态，而进程运行在用户态，因此创建0号进程涉及到特权级的变化，即从特权级0变到特权级3，<code>Linux</code>是通过模拟中断返回来实现特权级的变化以及创建0号进程，通过将0号进程的代码段选择子以及程序计数器<code>EIP</code>直接压入内核态堆栈，然后利用iret汇编指令中断返回跳转到0号进程运行。</p>
+<p>代码如下</p>
+<div class="highlight"><pre><span class="n">move_to_user_mode</span><span class="p">();</span><span class="c1">//创建0号进程，开始进入0号进程，切换到特权级3运行</span>
+<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">fork</span><span class="p">())</span> <span class="p">{</span><span class="n">init</span><span class="p">();</span><span class="err">｝</span><span class="c1">//创建1号进程</span>
+</pre></div>
+
+
+<p>跟踪代码：</p>
+<div class="highlight"><pre><span class="cp">#define move_to_user_mode() \</span>
+<span class="cp">__asm__ (&quot;movl %%esp,%%eax\n\t&quot; \</span><span class="c1">//将esp寄存器的内容存入eax中</span>
+    <span class="s">&quot;pushl $0x17</span><span class="se">\n\t</span><span class="s">&quot;</span> <span class="err">\</span><span class="c1">//压入0号任务的数据段选择符</span>
+    <span class="s">&quot;pushl %%eax</span><span class="se">\n\t</span><span class="s">&quot;</span> <span class="err">\</span><span class="c1">//压入堆栈指针</span>
+    <span class="s">&quot;pushfl</span><span class="se">\n\t</span><span class="s">&quot;</span> <span class="err">\</span><span class="c1">//压入标志寄存器</span>
+    <span class="s">&quot;pushl $0x0f</span><span class="se">\n\t</span><span class="s">&quot;</span> <span class="err">\</span><span class="c1">//压入0号任务的代码段选择符</span>
+    <span class="s">&quot;pushl $1f</span><span class="se">\n\t</span><span class="s">&quot;</span> <span class="err">\</span><span class="c1">//压入EIP，即切换到0号任务后CPU运行的位置</span>
+    <span class="s">&quot;iret</span><span class="se">\n</span><span class="s">&quot;</span> <span class="err">\</span><span class="c1">//中断返回指令</span>
+    <span class="s">&quot;1:</span><span class="se">\t</span><span class="s">movl $0x17,%%eax</span><span class="se">\n\t</span><span class="s">&quot;</span> <span class="err">\</span><span class="c1">//由于发生了切换，需要更改各段寄存器</span>
+    <span class="s">&quot;movw %%ax,%%ds</span><span class="se">\n\t</span><span class="s">&quot;</span> <span class="err">\</span><span class="c1">//更改段寄存器ds</span>
+    <span class="s">&quot;movw %%ax,%%es</span><span class="se">\n\t</span><span class="s">&quot;</span> <span class="err">\</span><span class="c1">//更改段寄存器es</span>
+    <span class="s">&quot;movw %%ax,%%fs</span><span class="se">\n\t</span><span class="s">&quot;</span> <span class="err">\</span><span class="c1">//更改段寄存器fs</span>
+    <span class="s">&quot;movw %%ax,%%gs&quot;</span> <span class="err">\</span><span class="c1">//更改段寄存器gs</span>
+    <span class="o">:::</span><span class="s">&quot;ax&quot;</span><span class="p">)</span>
+</pre></div>
+
+
+<p>分析如下,注释已经很清楚：</p>
+<p>代码为嵌入汇编语句的C程序，<code>::”ax”</code>表示的是输出为空，输入为空，在这个宏定义的执行过程中可以发生改变的是<code>ax</code>寄存器，这属于GNU的gas语法，不作解释</p>
+<p><code>0x17</code>与<code>0x0f</code>的真实意义，跟踪查看前先写成二进制形式<code>0x17=0000 0000 0001 0111</code>,<code>0x0f=0000 0000 0000 1111</code>;<code>0x17</code>与<code>0x0f</code>的后三们均是111，段选择子的后三位分别表示RPL以及TI,因此后三位即表示请示特权级为3，描述符在LDT中，故0x17与0x0f分别表示LDT中的第二项与第一项，即然是LDT表，在使用之前肯定要进行初始化，帮初始化代码肯定在move_to_user_mode之前，跟踪分析可以发现在<code>sched_init</code>中，源码如下：</p>
+<div class="highlight"><pre><span class="kt">void</span> <span class="nf">sched_init</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
+<span class="c1">//desc_struct表示是描述符表类型typedef struct desc_struct{a,b}desc_table[256];</span>
+    <span class="k">struct</span> <span class="n">desc_struct</span> <span class="o">*</span> <span class="n">p</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span> <span class="n">sigaction</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">16</span><span class="p">)</span>
+        <span class="n">panic</span><span class="p">(</span><span class="s">&quot;Struct sigaction MUST be 16 bytes&quot;</span><span class="p">);</span>
+<span class="c1">//这里开始是关键部分，gdt是全局描述符表的基地址</span>
+<span class="c1">//FIRST_TSS_ENTRY与FIRST_LDT_ENTRY分别是4，5即全局描述符表中的第4项</span>
+<span class="c1">//与第五项代表的是第一个任务，对其进行设置</span>
+<span class="c1">//查看static union task_union init_task = {INIT_TASK,};可以看到INIT_TASK可以看到//INIT_TASK是个宏定义，即下面的注释</span>
+    <span class="n">set_tss_desc</span><span class="p">(</span><span class="n">gdt</span><span class="o">+</span><span class="n">FIRST_TSS_ENTRY</span><span class="p">,</span><span class="o">&amp;</span><span class="p">(</span><span class="n">init_task</span><span class="p">.</span><span class="n">task</span><span class="p">.</span><span class="n">tss</span><span class="p">));</span>
+    <span class="n">set_ldt_desc</span><span class="p">(</span><span class="n">gdt</span><span class="o">+</span><span class="n">FIRST_LDT_ENTRY</span><span class="p">,</span><span class="o">&amp;</span><span class="p">(</span><span class="n">init_task</span><span class="p">.</span><span class="n">task</span><span class="p">.</span><span class="n">ldt</span><span class="p">));</span>
+<span class="c1">//p指向GDT表中0号任务的下一个位置，即GDT表中第6项</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="n">gdt</span><span class="o">+</span><span class="mi">2</span><span class="o">+</span><span class="n">FIRST_TSS_ENTRY</span><span class="p">;</span>
+<span class="c1">//NR_TASKS是Linux 0.11中最多支持的进程数64个</span>
+    <span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">NR_TASKS</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">task</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+<span class="c1">//重复两次是因为每个进程对应一个LDT与一个TSS</span>
+        <span class="n">p</span><span class="o">-&gt;</span><span class="n">a</span><span class="o">=</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">b</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+        <span class="n">p</span><span class="o">++</span><span class="p">;</span>
+        <span class="n">p</span><span class="o">-&gt;</span><span class="n">a</span><span class="o">=</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">b</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+        <span class="n">p</span><span class="o">++</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="c1">//将标志寄存器的NT位禁止</span>
+    <span class="n">__asm__</span><span class="p">(</span><span class="s">&quot;pushfl ; andl $0xffffbfff,(%esp) ; popfl&quot;</span><span class="p">);</span>
+<span class="c1">//#define ltr(n) __asm__(&quot;ltr %%ax&quot;::&quot;a&quot; (_TSS(n)))这是宏定义，很显然吧</span>
+<span class="c1">//加载当前的任务寄存器与ldtr寄存器</span>
+    <span class="n">ltr</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="c1">//#define lldt(n) __asm__(&quot;lldt %%ax&quot;::&quot;a&quot; (_LDT(n)))</span>
+    <span class="n">lldt</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="c1">//定时器8253的初始化</span>
+    <span class="n">outb_p</span><span class="p">(</span><span class="mh">0x36</span><span class="p">,</span><span class="mh">0x43</span><span class="p">);</span>      <span class="cm">/* binary, mode 3, LSB/MSB, ch 0 */</span>
+<span class="c1">//#define LATCH (1193180/HZ)，用此设置后时钟中断为每10ms一次</span>
+    <span class="n">outb_p</span><span class="p">(</span><span class="n">LATCH</span> <span class="o">&amp;</span> <span class="mh">0xff</span> <span class="p">,</span> <span class="mh">0x40</span><span class="p">);</span>    <span class="cm">/* LSB */</span>
+    <span class="n">outb</span><span class="p">(</span><span class="n">LATCH</span> <span class="o">&gt;&gt;</span> <span class="mi">8</span> <span class="p">,</span> <span class="mh">0x40</span><span class="p">);</span>    <span class="cm">/* MSB */</span>
+<span class="c1">//后面是设置定时器的中断以及打开定时器</span>
+    <span class="n">set_intr_gate</span><span class="p">(</span><span class="mh">0x20</span><span class="p">,</span><span class="o">&amp;</span><span class="n">timer_interrupt</span><span class="p">);</span>
+    <span class="n">outb</span><span class="p">(</span><span class="n">inb_p</span><span class="p">(</span><span class="mh">0x21</span><span class="p">)</span><span class="o">&amp;~</span><span class="mh">0x01</span><span class="p">,</span><span class="mh">0x21</span><span class="p">);</span>
+    <span class="n">set_system_gate</span><span class="p">(</span><span class="mh">0x80</span><span class="p">,</span><span class="o">&amp;</span><span class="n">system_call</span><span class="p">);</span>
+<span class="c1">//备注：</span>
+<span class="c1">//定时器有三个锁存器，他们各有其则，锁存器0用于维护系统时钟，地址为0x40</span>
+<span class="c1">//锁存器1用于周期性的向DMA发送数据信号，供存储器刷新用，地址为0x41</span>
+<span class="c1">//锁存器2用于扬声器发出声音，地址为0x42,因此这里向0x40设定值</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p><code>INIT_TASK</code>宏定义，其实就是0号任务，看起来比较混乱，其实就是初始化task_struct结构体</p>
+<div class="highlight"><pre><span class="cp">#define INIT_TASK \</span>
+<span class="c1">//0表示可运行的，15表示运行时间片，15表示运行优化级</span>
+<span class="cm">/* state etc */</span> <span class="p">{</span> <span class="mi">0</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span> \
+<span class="c1">//0表示没有信号，{{}}信号处理句柄设为0，0表示不屏蔽信号</span>
+<span class="cm">/* signals */</span>   <span class="mi">0</span><span class="p">,{{},},</span><span class="mi">0</span><span class="p">,</span> <span class="err">\</span><span class="c1">//初始化信号设置</span>
+<span class="c1">//将exit_code以及start_code,end_code,end_data,brk,start_stack均设为0</span>
+<span class="cm">/* ec,brk... */</span> <span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span> \
+<span class="c1">//0表示进程号，-1表示父进程，后面三个0表示,pgrp,session,leader</span>
+<span class="cm">/* pid etc.. */</span> <span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span> \
+<span class="c1">//设置进程的这6个成员unsigned short uid,euid,suid; unsigned short gid,egid,sgid;</span>
+<span class="cm">/* uid etc */</span>   <span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span> \
+<span class="c1">//设置进程的报警定时器以及5个时间函数</span>
+<span class="cm">/* alarm */</span> <span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span> \
+<span class="c1">//表明该进程未使用协处理器</span>
+<span class="cm">/* math */</span>  <span class="mi">0</span><span class="p">,</span> \
+<span class="cm">/* fs info */</span>   <span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mo">0022</span><span class="p">,</span><span class="nb">NULL</span><span class="p">,</span><span class="nb">NULL</span><span class="p">,</span><span class="nb">NULL</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span> \
+<span class="cm">/* filp */</span>  <span class="p">{</span><span class="nb">NULL</span><span class="p">,},</span> \
+<span class="c1">//这里就是很关键的一部份，表始初始化一个局部LDT表，即第一个任务的</span>
+    <span class="p">{</span> \
+        <span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">},</span> \
+<span class="cm">/* ldt */</span>   <span class="p">{</span><span class="mh">0x9f</span><span class="p">,</span><span class="mh">0xc0fa00</span><span class="p">},</span> \
+        <span class="p">{</span><span class="mh">0x9f</span><span class="p">,</span><span class="mh">0xc0f200</span><span class="p">},</span> \
+    <span class="p">},</span> \
+<span class="c1">//第一个任务的任务状态表，跟踪struct tss_struct可以知道其详细意义</span>
+<span class="cm">/*tss*/</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="n">PAGE_SIZE</span><span class="o">+</span><span class="p">(</span><span class="kt">long</span><span class="p">)</span><span class="o">&amp;</span><span class="n">init_task</span><span class="p">,</span><span class="mh">0x10</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,(</span><span class="kt">long</span><span class="p">)</span><span class="o">&amp;</span><span class="n">pg_dir</span><span class="p">,</span>\
+     <span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span> \
+     <span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mh">0x17</span><span class="p">,</span><span class="mh">0x17</span><span class="p">,</span><span class="mh">0x17</span><span class="p">,</span><span class="mh">0x17</span><span class="p">,</span><span class="mh">0x17</span><span class="p">,</span><span class="mh">0x17</span><span class="p">,</span> \
+     <span class="n">_LDT</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span><span class="mh">0x80000000</span><span class="p">,</span> \
+        <span class="p">{}</span> \
+    <span class="p">},</span> \
+<span class="p">}</span>
+</pre></div>
+
+
+<p>到这了，也差不多了，额外的部份再看看第一个任务的LDT表与TSS表，由上面可知0号任务的LDT的代码段与数据段分别为{0x9f,0xc0fa00}与{0x9f,0xc0f200},根据保护模式下的定义，可以代码段的段基址为0，段限长为640KB,段属性为存在于内存中、特权级为3，代码段，同理分析得数据段的段基址为0，段限长为640KB,段属性为存在于内存中，特权级为3，数据段</p>
+<p>第一个任务的状态表，提一下吧</p>
+<div class="highlight"><pre><span class="k">struct</span> <span class="n">tss_struct</span> <span class="p">{</span>
+    <span class="kt">long</span>    <span class="n">back_link</span><span class="p">;</span>  <span class="cm">/* 16 high bits zero */</span>
+    <span class="kt">long</span>    <span class="n">esp0</span><span class="p">;</span>
+    <span class="kt">long</span>    <span class="n">ss0</span><span class="p">;</span>        <span class="cm">/* 16 high bits zero */</span>
+    <span class="kt">long</span>    <span class="n">esp1</span><span class="p">;</span>
+    <span class="kt">long</span>    <span class="n">ss1</span><span class="p">;</span>        <span class="cm">/* 16 high bits zero */</span>
+    <span class="kt">long</span>    <span class="n">esp2</span><span class="p">;</span>
+    <span class="kt">long</span>    <span class="n">ss2</span><span class="p">;</span>        <span class="cm">/* 16 high bits zero */</span>
+    <span class="kt">long</span>    <span class="n">cr3</span><span class="p">;</span>
+    <span class="kt">long</span>    <span class="n">eip</span><span class="p">;</span>
+    <span class="kt">long</span>    <span class="n">eflags</span><span class="p">;</span>
+    <span class="kt">long</span>    <span class="n">eax</span><span class="p">,</span><span class="n">ecx</span><span class="p">,</span><span class="n">edx</span><span class="p">,</span><span class="n">ebx</span><span class="p">;</span>
+    <span class="kt">long</span>    <span class="n">esp</span><span class="p">;</span>
+    <span class="kt">long</span>    <span class="n">ebp</span><span class="p">;</span>
+    <span class="kt">long</span>    <span class="n">esi</span><span class="p">;</span>
+    <span class="kt">long</span>    <span class="n">edi</span><span class="p">;</span>
+    <span class="kt">long</span>    <span class="n">es</span><span class="p">;</span>     <span class="cm">/* 16 high bits zero */</span>
+    <span class="kt">long</span>    <span class="n">cs</span><span class="p">;</span>     <span class="cm">/* 16 high bits zero */</span>
+    <span class="kt">long</span>    <span class="n">ss</span><span class="p">;</span>     <span class="cm">/* 16 high bits zero */</span>
+    <span class="kt">long</span>    <span class="n">ds</span><span class="p">;</span>     <span class="cm">/* 16 high bits zero */</span>
+    <span class="kt">long</span>    <span class="n">fs</span><span class="p">;</span>     <span class="cm">/* 16 high bits zero */</span>
+    <span class="kt">long</span>    <span class="n">gs</span><span class="p">;</span>     <span class="cm">/* 16 high bits zero */</span>
+    <span class="kt">long</span>    <span class="n">ldt</span><span class="p">;</span>        <span class="cm">/* 16 high bits zero */</span>
+    <span class="kt">long</span>    <span class="n">trace_bitmap</span><span class="p">;</span>   <span class="cm">/* bits: trace 0, bitmap 16-31 */</span>
+    <span class="k">struct</span> <span class="n">i387_struct</span> <span class="n">i387</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+
+
+<p>根据这个表可以看到的是任务0的内核态堆栈指针esp0=PAGE_SIZE+(long)&amp;init_task,即第一个PCB块(task_struct)的顶部空间，PAGE_SIZE=4k,ss0=0x10,0x10查一下head.s你就会发现是gdt的第一个描述符，即内核代码段，后面还有几个是对数据段寄存器的定义以及ldt的定义</p>
+							转载时请注明文章来源<br/>
+							本文地址: <a href="http://www.yanyulin.info/pages/2013/11/linux0.html" target="_self">http://www.yanyulin.info/pages/2013/11/linux0.html</a>
+						  <div class="clear"></div>
+							</div>
+							<div class="clear"></div>
+						</div>			
+						<!-- Baidu Button BEGIN -->
+						<div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+						<a class="bds_qzone"></a>
+						<a class="bds_tsina"></a>
+						<a class="bds_tqq"></a>
+						<a class="bds_renren"></a>
+						<a class="bds_t163"></a>
+						<span class="bds_more"></span>
+						</div>
+						<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=6864225" ></script>
+						<script type="text/javascript" id="bdshell_js"></script>
+						<script type="text/javascript">			
+   		      document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+            </script>
+            <!-- Baidu Button END -->
+						<div class="clear"></div>
+						<!-- end: entry -->
+						<i class="lt"></i>
+						<i class="rt"></i>
+					</div>
+					<!-- entrymeta -->	
+					<div class="entry_sb">
+						<i class="lb"></i>
+						<i class="rb"></i>
+					</div>
+					<!-- end: entrymeta -->
+				<div class="context_b">
+					 上一篇: 
+  				 <a href="http://www.yanyulin.info/pages/2013/11/assert.html" title="Assert(断言)实现机制剖析" target="_self">Assert(断言)实现机制剖析</a>
+  				 &nbsp;&nbsp
+  				 下一篇:
+  				 <a href="http://www.yanyulin.info/pages/2013/11/github.html" title="Github简明教程(入门篇)" target="_self">Github简明教程(入门篇)</a>
+					 
+					 <i class="lt"></i>
+					 <i class="rt"></i>
+					 <i class="lb"></i>
+					 <i class="rb"></i>
+				</div>
+				<div class="context_b">
+					 相关文章推荐
+  				 <a href="http://www.yanyulin.info/pages/2013/11/linux0.html" title="Linux中0号进程的创建分析" target="_blank">Linux中0号进程的创建分析</a>
+  
+					 <i class="lt"></i>
+					 <i class="rt"></i>
+					 <i class="lb"></i>
+					 <i class="rb"></i>
+				</div>
+				<div class="context_b">
+			 <div class="ds-thread"></div>
+			 <script type="text/javascript">
+			 	var duoshuoQuery={short_name:"yanyulin"};
+			 	var ds=document.createElement("script");
+			 	ds.type="text/javascript";
+			 	ds.async=true;
+			 	ds.src="http://static.duoshuo.com/embed.js";
+			 	ds.charset="UTF-8";document.getElementsByTagName("head")[0].appendChild(ds);
+			 </script>
+					 <i class="lt"></i>
+					 <i class="rt"></i>
+					 <i class="lb"></i>
+					 <i class="rb"></i>
+				</div>
+		</div>
+</div>
+<div id="sidebar">					
+	<div class="widget">
+				<h3>相关标签</h3>
+				<div class="box">			
+						<div class="textwidget">
+							<a href="http://www.yanyulin.info/tag/gong-ju-shi-yong.html" title="查看工具使用下的所有文章" target="_blank">工具使用</a>
+							<a href="http://www.yanyulin.info/tag/linux.html" title="查看Linux下的所有文章" target="_blank">Linux</a>
+							<a href="http://www.yanyulin.info/tag/c.html" title="查看C++下的所有文章" target="_blank">C++</a>
+							<a href="http://www.yanyulin.info/tag/java.html" title="查看Java下的所有文章" target="_blank">Java</a>
+						</div>
+				</div>
+    		<div class="box-bottom">
+						<i class="lb"></i>
+						<i class="rb"></i>
+				</div>
+				<h3>本站直达</h3>
+				<div class="box">
+				<div class="textwidget">
+					<table width="200" border="0">
+  					<tbody>
+  						<tr>
+ 
+    							<td><a href="http://www.yanyulin.info/category/bian-cheng-yu-yan.html" title="查看编程语言下的所有文章"><font size='2px'>编程语言</font></a></td>
+			
+ 
+    							<td><a href="http://www.yanyulin.info/category/cheng-xu-yuan-zhao-gong-zuo.html" title="查看程序员找工作下的所有文章"><font size='2px'>程序员找工作</font></a></td>
+			
+ 
+    							<td><a href="http://www.yanyulin.info/category/jing-pin-shu-ji.html" title="查看精品书籍下的所有文章"><font size='2px'>精品书籍</font></a></td>
+			
+  						</tr>	
+  						<tr>
+ 
+    							<td><a href="http://www.yanyulin.info/category/shi-pin-jiao-cheng.html" title="查看视频教程下的所有文章"><font size='2px'>视频教程</font></a></td>
+			
+ 
+    							<td><a href="http://www.yanyulin.info/category/wan-zhuan-ji-zhu.html" title="查看玩转技术下的所有文章"><font size='2px'>玩转技术</font></a></td>
+			
+  						<td><a href="#"><font size='2px'></font></a></td>
+						</tbody>
+					</table>
+				</div>
+				</div>
+    		<div class="box-bottom">
+				<i class="lb"></i>
+				<i class="rb"></i>
+				</div>
+				<h3>邮箱订阅</h3>
+				<div class="box">			
+				<div class="textwidget">
+				<!--QQ邮件列表订阅嵌入代码-->
+				<table width="200" border="0">
+  			<tbody>
+  			<tr>
+  			<td>
+				<!--以下是QQ邮件列表订阅嵌入代码-->
+        <div style="width: 110px; height: 35px; overflow: hidden; " class="WB_widget WB_follow_ex">
+        <div class="follow_btn_line" node-type="inner">
+        <a class="follow_btn status_followed" node-type="followBtn" target="_blank" title="烟雨林博客" href="http://list.qq.com/cgi-bin/qf_invite?id=8949c93bdc7fcbda12adc078acb2809d6f6eba09998d35e6">
+				<img border="0" width="107px" height="22px" alt="邮箱订阅" src="http://www.yanyulin.info/pics/picMode_light_s.png" />
+        </a></div></div>
+			  </td>
+				</tr>
+			  </tbody>
+			  </table>
+				</div>
+				</div>
+    		<div class="box-bottom">
+				<i class="lb"></i>
+				<i class="rb"></i>
+				</div>
+				<div class="random_r">
+				<h3>随便看看</h3>
+				<div class="box_r">
+				<ul>
+				<ul class="random-post-link">
+				<li class="random-post-link">
+				<a href="http://www.yanyulin.info/pages/2013/11/pelican.html" title="pelican搭建属于自已的博客">pelican搭建属于自已的博客</a>
+				</li>
+				<li class="random-post-link">
+				<a href="http://www.yanyulin.info/pages/2013/12/microsoft_2014_A.html" title="微软2014年校招笔试题">微软2014年校招笔试题</a>
+				</li>
+				<li class="random-post-link">
+				<a href="http://www.yanyulin.info/pages/2013/11/stlOrigin.html" title="STL源码剖析(候捷译)">STL源码剖析(候捷译)</a>
+				</li>
+				<li class="random-post-link">
+				<a href="http://www.yanyulin.info/pages/2013/12/psbase_1.html" title="PhotoShop CS入门版视频教程(基础上)">PhotoShop CS入门版视频教程(基础上)</a>
+				</li>
+				<li class="random-post-link">
+				<a href="http://www.yanyulin.info/pages/2013/11/qqLogin.html" title="界面编程模仿篇(模仿腾讯QQ登录界面)">界面编程模仿篇(模仿腾讯QQ登录界面)</a>
+				</li>
+				</ul>
+				</ul>
+				<div class="clear"></div>
+				</div>
+				<div class="box-bottom">
+				<i class="lb"></i>
+				<i class="rb"></i>
+				</div>
+				</div>
+				<div class="hotarticles">
+				<h3>年度排行</h3>
+				<div class="box_r">
+				<ul>
+				<li>
+				<a href="http://www.yanyulin.info/pages/2013/11/pelican.html" rel="bookmark" title="pelican搭建属于自已的博客">pelican搭建属于自已的博客</a>
+				</li>
+				<li>
+				<a href="http://www.yanyulin.info/pages/2013/06/huawei_2013_1.html" rel="bookmark" title="2013年华为校招机试(一)">2013年华为校招机试(一)</a>
+				</li>
+				<li>
+				<a href="http://www.yanyulin.info/pages/2013/11/deepc.html" rel="bookmark" title="C语言深度解剖(含金量高)">C语言深度解剖(含金量高)</a>
+				</li>
+				<li>
+				<a href="http://www.yanyulin.info/pages/2013/12/psbase2.html" rel="bookmark" title="Photoshop CS视频教程(下)">Photoshop CS视频教程(下)</a>
+				</li>
+				<li>
+				<a href="http://www.yanyulin.info/pages/2013/12/qqLogin_1.html" rel="bookmark" title="界面编程模仿篇(QQ登录界面逼真篇)">界面编程模仿篇(QQ登录界面逼真篇)</a>
+				</li>
+				<div class="clear"></div>
+				</div>
+				<div class="box-bottom">
+				<i class="lb"></i>
+				<i class="rb"></i>
+				</div>
+				</div>
+				</div>
+	      <div class="widget">
+			  </div>
+				<div class="widget">
+				</div>
+				<div class="widget">
+				</div>
+				<div class="widget">
+				</div>
+				<div class="clear">
+				</div>
+	</div>
+</div>	 </div>		
+	 <div id="my_footer_wrapper">
+	 <div class="link">
+	 <a href="https://github.com/zwjlpeng" target="_blank">Github</a>
+	 <a href="http://weibo.com/lamazi" target="_blank">微博</a>
+	 <div class="clear"></div>
+   </div>
+   </div>
+	 <div id="my_footer_wrapper">
+	 <div id="my_footer">		
+	 <span>【</span><a href="http://www.yanyulin.info/sitemap.xml" target="_blank">本站地图</a><span>】
+	 </span> 		
+	 <span>【</span><a href="http://www.yanyulin.info/feeds/all.rss.xml" target="_blank">RSS订阅</a><span>】
+	 </span>  		
+	 <span>【</span><a href="http://www.yanyulin.info/sitemap.xml" target="_blank">谷歌地图</a><span>】
+	 </span> 		
+	 <span>【</span><a href="http://www.yanyulin.info" target="_blank">电脑版</a><span>】</span>    
+	 </div>
+  </div>  
+  <div id="my_copyright_wrapper">
+		<div id="my_copyright">
+		博主邮箱: zwjlpeng@gmail.com Copyright@2010-2020 <a href="http://www.yanyulin.info">烟雨林个人博客</a>
+		</div>
+  </div>
+    <script>
+     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+     ga('create', 'UA-45829467-1', '');
+     ga('send', 'pageview');
+   </script>
+</body>
+</html>
