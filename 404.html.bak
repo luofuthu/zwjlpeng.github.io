@@ -9,6 +9,7 @@
     	window.location = "http://www.yanyulin.info"
     </script>
   </head>
-  <body>
+
+  <body onLoad="setTimeout('delayer()', 5000)">
   </body>
 </html>
