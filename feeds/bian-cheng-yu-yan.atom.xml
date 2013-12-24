@@ -57,7 +57,7 @@
 &lt;blockquote&gt;
 &lt;p&gt;重定向的相关例子&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;Redirect /loc/file/dir/file.html http://www.othersite.com/sample.html&lt;/code&gt; 将网址上访问特定的url重定向到其他网址&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;Redirect /oldDir http://www.newsite.com/newDir&lt;/code&gt;目录重定向，任何指向站点/oldDir目录的请求都将被重新指向新的站点,例如当用户访问&lt;code&gt;http://www.youroldsite.com/oldDir/index.html&lt;/code&gt;将会被重定向到&lt;code&gt;http://www.newsite.com/newDir/index.html&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Redirect /oldDir http://www.newsite.com/newDir&lt;/code&gt;目录重定向，任何指向站点/oldDir目录的请求都将被重新指向新的站点,例如当用户访问&lt;code&gt;http://www.youroldsite.com/oldDir/index.html&lt;/code&gt;将会被重定向到&lt;code&gt;http://www.newsite.com/newDir/index.html&lt;/code&gt;（这里的www.youroldsite.com就是网站的域名，如&lt;a href="http://www.yanyulin.info"&gt;www.yanyulin.info&lt;/a&gt;）&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;密码保护&lt;/p&gt;
 &lt;blockquote&gt;
