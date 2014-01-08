@@ -1,5 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>烟雨林</title><link href="http://www.yanyulin.info/" rel="alternate"></link><link href="http://www.yanyulin.info/feeds/bian-cheng-yu-yan.atom.xml" rel="self"></link><id>http://www.yanyulin.info/</id><updated>2013-12-23T00:00:00+08:00</updated><entry><title>.htaccess简明教程(SEO优化)</title><link href="http://www.yanyulin.info/pages/2013/12/htaccess.html" rel="alternate"></link><updated>2013-12-23T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-12-23:pages/2013/12/htaccess.html</id><summary type="html">&lt;hr /&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>烟雨林</title><link href="http://www.yanyulin.info/" rel="alternate"></link><link href="http://www.yanyulin.info/feeds/bian-cheng-yu-yan.atom.xml" rel="self"></link><id>http://www.yanyulin.info/</id><updated>2014-01-08T00:00:00+08:00</updated><entry><title>pelican创建博客常见问题汇总</title><link href="http://www.yanyulin.info/pages/2014/01/pelican_question.html" rel="alternate"></link><updated>2014-01-08T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-01-08:pages/2014/01/pelican_question.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;1、No valid files found in content errors&lt;/p&gt;
+&lt;p&gt;当用&lt;code&gt;pelican&lt;/code&gt;创建博客时出现此问题的原因是因为&lt;code&gt;pelican&lt;/code&gt;创建博客时读取到&lt;code&gt;contents&lt;/code&gt;目录下的md文件，而md文件需要&lt;code&gt;markdown&lt;/code&gt;的相库库解析，&lt;code&gt;pelican&lt;/code&gt;此时缺少该库，因此可以通过以下命令安装&lt;code&gt;markdown&lt;/code&gt;的相应库&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;pip&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;markdown&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;如果你还没有安装&lt;code&gt;pip&lt;/code&gt;工具，可以参考下面一篇文章安装&lt;code&gt;pip&lt;/code&gt;工具&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2013/11/pelican.html" title="pelican搭建属于自已的博客"&gt;pelican搭建属于自已的博客&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;安装完问题大概即可解决&lt;/p&gt;
+&lt;p&gt;2、markdown即md文件中可不可以包含其他元数据?pelican要求md文件必须包含&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;title&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;XXX&lt;/span&gt;
+&lt;span class="n"&gt;date&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;XXX&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;用户也可以创建自定义的元数据，例如给每一篇文章增加一个修改日期&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;Modified&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;2012&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;08&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;08&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;在后绪的模板页中可以直接访问该元数据，例如在&lt;code&gt;article.html&lt;/code&gt;中可以使用以下代码&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nv"&gt;article.modified&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
+&lt;span class="x"&gt;Last modified: &lt;/span&gt;&lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;article.modified&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
+&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;endif&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;如果需要在&lt;code&gt;article.html&lt;/code&gt;以外的地方使用该元数据，需要在使用的地方加上如下语句&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;article&lt;/span&gt; &lt;span class="n"&gt;and&lt;/span&gt; &lt;span class="n"&gt;article&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;modified&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;3、如何禁用feed&lt;/p&gt;
+&lt;p&gt;pelican中禁用feed的产生是非常容易的，只需要在配置文件&lt;code&gt;pelicanconf.py&lt;/code&gt;中加入如下几条语句即可完成&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;FEED_ALL_ATOM&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;None&lt;/span&gt;
+&lt;span class="n"&gt;CATEGORY_FEED_ATOM&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;None&lt;/span&gt;
+&lt;span class="n"&gt;TRANSLATION_FEED_ATOM&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;None&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;4、warning about feeds generated without SITEURL being set properly&lt;/p&gt;
+&lt;p&gt;RSS and Atom feeds要求URL必须是绝对链接，而不是相对链接，因此为了产生正确的链接，pelican要求在配置文件中必须设置SITEURL选项，否则产生的RSS与Feeds可能不正确&lt;/p&gt;
+&lt;p&gt;5、如何给一篇文章指定URL&lt;/p&gt;
+&lt;p&gt;在需要指定URL的文章或者页面中包括两个元数据&lt;code&gt;url&lt;/code&gt;与&lt;code&gt;save_as&lt;/code&gt;,例如以下代码&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="kd"&gt;override&lt;/span&gt;&lt;span class="sr"&gt;/url/&lt;/span&gt;
+&lt;span class="n"&gt;save_as&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="kd"&gt;override&lt;/span&gt;&lt;span class="sr"&gt;/url/i&lt;/span&gt;&lt;span class="n"&gt;ndex&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;html&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;这个代码指定了本篇文章的url为override/url/index.html&lt;/p&gt;
+&lt;p&gt;6、如何将一篇文章设置为主页&lt;/p&gt;
+&lt;p&gt;根据上面的第5条很容易将一篇文章设置为网站的主页，如下代码即可实现将 content/pages/home.md设为主页&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nl"&gt;Title:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;www&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;yanyulin&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;info&lt;/span&gt;&lt;span class="p"&gt;](&lt;/span&gt;&lt;span class="n"&gt;http&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//www.yanyulin.info)&lt;/span&gt;
+&lt;span class="nl"&gt;Date:&lt;/span&gt; &lt;span class="mi"&gt;2014&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mo"&gt;01&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;08&lt;/span&gt;
+&lt;span class="nl"&gt;URL:&lt;/span&gt;
+&lt;span class="nl"&gt;save_as:&lt;/span&gt; &lt;span class="n"&gt;index&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;html&lt;/span&gt;
+&lt;span class="err"&gt;文章正文内容&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;7、如何给一篇文章指定一个特定模板&lt;/p&gt;
+&lt;p&gt;给一篇文章指定一个特定的模板也很简单，只需要在文章中添加如下元数据，并且确保该模板文件在模板中存在即可&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;Template&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;template_name&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;8、如果还不知道怎么使用pelican创建博客，看如下教程&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2013/11/pelican.html" title="pelican搭建属于自已的博客"&gt;pelican搭建属于自已的博客&lt;/a&gt;&lt;/p&gt;</summary><category term="工具使用"></category></entry><entry><title>.htaccess简明教程(SEO优化)</title><link href="http://www.yanyulin.info/pages/2013/12/htaccess.html" rel="alternate"></link><updated>2013-12-23T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-12-23:pages/2013/12/htaccess.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;.htaccess文件可以用来优化网站，尽管.htaccess只是一个文件，但它可以更改服务器的设置，允许你做许多不同的事情，最流行的功能是可以创建自定义的“404 error”页面，.htaccess并不难，你可以给它想像成就是一个文本文件再加几条服务器的配置命令&lt;/p&gt;
 &lt;p&gt;确定服务器是否支持.htaccess&lt;/p&gt;
 &lt;p&gt;如果主机是&lt;code&gt;unix&lt;/code&gt;或&lt;code&gt;Linux&lt;/code&gt;系统，或任何版本的&lt;code&gt;Apache&lt;/code&gt;网络服务器，理论上都是支持&lt;code&gt;.htaccess&lt;/code&gt;的,除非你的服务器提供商禁用了&lt;code&gt;.htacess&lt;/code&gt;文件&lt;/p&gt;

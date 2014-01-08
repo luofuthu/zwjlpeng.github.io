@@ -1,5 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>烟雨林</title><link>http://www.yanyulin.info/</link><description></description><atom:link href="http://www.yanyulin.info/feeds/all.rss.xml" rel="self"></atom:link><lastBuildDate>Tue, 07 Jan 2014 00:00:00 +0800</lastBuildDate><item><title>为什么大家都转向了Ripple</title><link>http://www.yanyulin.info/pages/2014/01/whyRipple.html</link><description>&lt;hr /&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>烟雨林</title><link>http://www.yanyulin.info/</link><description></description><atom:link href="http://www.yanyulin.info/feeds/all.rss.xml" rel="self"></atom:link><lastBuildDate>Wed, 08 Jan 2014 00:00:00 +0800</lastBuildDate><item><title>pelican创建博客常见问题汇总</title><link>http://www.yanyulin.info/pages/2014/01/pelican_question.html</link><description>&lt;hr /&gt;
+&lt;p&gt;1、No valid files found in content errors&lt;/p&gt;
+&lt;p&gt;当用&lt;code&gt;pelican&lt;/code&gt;创建博客时出现此问题的原因是因为&lt;code&gt;pelican&lt;/code&gt;创建博客时读取到&lt;code&gt;contents&lt;/code&gt;目录下的md文件，而md文件需要&lt;code&gt;markdown&lt;/code&gt;的相库库解析，&lt;code&gt;pelican&lt;/code&gt;此时缺少该库，因此可以通过以下命令安装&lt;code&gt;markdown&lt;/code&gt;的相应库&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;pip&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;markdown&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;如果你还没有安装&lt;code&gt;pip&lt;/code&gt;工具，可以参考下面一篇文章安装&lt;code&gt;pip&lt;/code&gt;工具&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2013/11/pelican.html" title="pelican搭建属于自已的博客"&gt;pelican搭建属于自已的博客&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;安装完问题大概即可解决&lt;/p&gt;
+&lt;p&gt;2、markdown即md文件中可不可以包含其他元数据?pelican要求md文件必须包含&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;title&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;XXX&lt;/span&gt;
+&lt;span class="n"&gt;date&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;XXX&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;用户也可以创建自定义的元数据，例如给每一篇文章增加一个修改日期&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;Modified&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;2012&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;08&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;08&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;在后绪的模板页中可以直接访问该元数据，例如在&lt;code&gt;article.html&lt;/code&gt;中可以使用以下代码&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nv"&gt;article.modified&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
+&lt;span class="x"&gt;Last modified: &lt;/span&gt;&lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;article.modified&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
+&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;endif&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;如果需要在&lt;code&gt;article.html&lt;/code&gt;以外的地方使用该元数据，需要在使用的地方加上如下语句&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;article&lt;/span&gt; &lt;span class="n"&gt;and&lt;/span&gt; &lt;span class="n"&gt;article&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;modified&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;3、如何禁用feed&lt;/p&gt;
+&lt;p&gt;pelican中禁用feed的产生是非常容易的，只需要在配置文件&lt;code&gt;pelicanconf.py&lt;/code&gt;中加入如下几条语句即可完成&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;FEED_ALL_ATOM&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;None&lt;/span&gt;
+&lt;span class="n"&gt;CATEGORY_FEED_ATOM&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;None&lt;/span&gt;
+&lt;span class="n"&gt;TRANSLATION_FEED_ATOM&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;None&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;4、warning about feeds generated without SITEURL being set properly&lt;/p&gt;
+&lt;p&gt;RSS and Atom feeds要求URL必须是绝对链接，而不是相对链接，因此为了产生正确的链接，pelican要求在配置文件中必须设置SITEURL选项，否则产生的RSS与Feeds可能不正确&lt;/p&gt;
+&lt;p&gt;5、如何给一篇文章指定URL&lt;/p&gt;
+&lt;p&gt;在需要指定URL的文章或者页面中包括两个元数据&lt;code&gt;url&lt;/code&gt;与&lt;code&gt;save_as&lt;/code&gt;,例如以下代码&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="kd"&gt;override&lt;/span&gt;&lt;span class="sr"&gt;/url/&lt;/span&gt;
+&lt;span class="n"&gt;save_as&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="kd"&gt;override&lt;/span&gt;&lt;span class="sr"&gt;/url/i&lt;/span&gt;&lt;span class="n"&gt;ndex&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;html&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;这个代码指定了本篇文章的url为override/url/index.html&lt;/p&gt;
+&lt;p&gt;6、如何将一篇文章设置为主页&lt;/p&gt;
+&lt;p&gt;根据上面的第5条很容易将一篇文章设置为网站的主页，如下代码即可实现将 content/pages/home.md设为主页&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nl"&gt;Title:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;www&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;yanyulin&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;info&lt;/span&gt;&lt;span class="p"&gt;](&lt;/span&gt;&lt;span class="n"&gt;http&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//www.yanyulin.info)&lt;/span&gt;
+&lt;span class="nl"&gt;Date:&lt;/span&gt; &lt;span class="mi"&gt;2014&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mo"&gt;01&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;08&lt;/span&gt;
+&lt;span class="nl"&gt;URL:&lt;/span&gt;
+&lt;span class="nl"&gt;save_as:&lt;/span&gt; &lt;span class="n"&gt;index&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;html&lt;/span&gt;
+&lt;span class="err"&gt;文章正文内容&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;7、如何给一篇文章指定一个特定模板&lt;/p&gt;
+&lt;p&gt;给一篇文章指定一个特定的模板也很简单，只需要在文章中添加如下元数据，并且确保该模板文件在模板中存在即可&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;Template&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;template_name&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;8、如果还不知道怎么使用pelican创建博客，看如下教程&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2013/11/pelican.html" title="pelican搭建属于自已的博客"&gt;pelican搭建属于自已的博客&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Wed, 08 Jan 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-01-08:pages/2014/01/pelican_question.html</guid><category>工具使用</category></item><item><title>为什么大家都转向了Ripple</title><link>http://www.yanyulin.info/pages/2014/01/whyRipple.html</link><description>&lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;简介&lt;/strong&gt;
 &lt;code&gt;Ripple&lt;/code&gt;是世界上第一个开放的支付网络，通过这个支付网络可以转账任意一种货币，包括美元、欧元、人民币、日元或者比特币，简便易行快捷，交易确认在几秒以内完成，交易费用几乎是零，没有所谓的跨行异地以及跨国支付费用,&lt;code&gt;Ripple&lt;/code&gt;是开放源码的点到点支付网络，它可以使你轻松、廉价并安全的把你的金钱转账到互联网上的任何一个人，无论他在世界的哪个地方。因为Ripple是p2p软件，没有任何个人、公司，或政府操控，任何人可以创建一个ripple账户。&lt;/p&gt;
 &lt;p&gt;突然间发现周围很多人都玩起了&lt;code&gt;Ripple&lt;/code&gt;币，为什么玩&lt;code&gt;Ripple&lt;/code&gt;币，我想了想原因大概有以下几点：&lt;/p&gt;

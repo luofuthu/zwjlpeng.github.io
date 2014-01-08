@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-<title>PhotoShop CS入门版视频教程(基础上) - 烟雨林</title>
+<title>pelican创建博客常见问题汇总 - 烟雨林</title>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
 <meta name="author" content="烟雨林">
 <link href="http://www.yanyulin.info/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="烟雨林 Full Atom Feed" />
 <link href="http://www.yanyulin.info/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="烟雨林 RSS Feed" />
-<link href="http://www.yanyulin.info/feeds/shi-pin-jiao-cheng.atom.xml" type="application/atom+xml" rel="alternate" title="烟雨林 Categories Atom Feed" />
+<link href="http://www.yanyulin.info/feeds/bian-cheng-yu-yan.atom.xml" type="application/atom+xml" rel="alternate" title="烟雨林 Categories Atom Feed" />
 <link rel="stylesheet" type="text/css" href="http://www.yanyulin.info/theme/index.css" />
 <link rel="shortcut icon" href="http://www.yanyulin.info/theme/images/favicon.ico">
 </head>
@@ -46,16 +46,16 @@
 		<div id="content">							 
 					<div id="map">
 						<div class="browse">现在的位置: <a title="返回首页" href="http://www.yanyulin.info">烟雨首页</a> ＞
-						<a href="http://www.yanyulin.info/category/shi-pin-jiao-cheng.html" title="查看视频教程中的全部文章" rel="category tag">视频教程</a>＞正文</div>
+						<a href="http://www.yanyulin.info/category/bian-cheng-yu-yan.html" title="查看编程语言中的全部文章" rel="category tag">编程语言</a>＞正文</div>
 						<div class="font"><a href="javascript:doZoom(12)">小</a> <a href="javascript:doZoom(13)">中</a> <a href="javascript:doZoom(18)">大</a></div>
 					</div>
 					<div class="entry_box_s">
 						<div class="entry_title_box">
 							<div class="ico"></div>
-							<div class="entry_title">PhotoShop CS入门版视频教程(基础上)</div>
+							<div class="entry_title">pelican创建博客常见问题汇总</div>
 							<div class="archive_info">
-								<span class="date">2013-12-04</span>
-								<span class="category"> ⁄ <a href="http://www.yanyulin.info/category/shi-pin-jiao-cheng.html" title="查看视频教程中的全部文章" rel="category tag">视频教程</a></span>
+								<span class="date">2014-01-08</span>
+								<span class="category"> ⁄ <a href="http://www.yanyulin.info/category/bian-cheng-yu-yan.html" title="查看编程语言中的全部文章" rel="category tag">编程语言</a></span>
 							</div>
 						</div>
 						<div class="entry">
@@ -84,43 +84,78 @@
 </div>
 <div>
 							<hr />
-<p>视频教程下载地址:<a href="http://yunpan.cn/QUGwKCTFL3cLC" target="_blank">点这里</a></p>
-<p><strong>觉的好的，请多多分享</strong></p>
-<p><strong>PhotoShop CS入门版视频教程(基础上)</strong></p>
-<blockquote>
-<p>界面简介</p>
-<p>怎样打开图像文件</p>
-<p>怎样新建一个文件</p>
-<p>图像的表达点阵图</p>
-<p>规则选择工具组</p>
-<p>不规则选择工具组</p>
-<p>魔棒工具</p>
-<p>选择工具的其他设置</p>
-<p>移动工具及图层对齐</p>
-<p>裁切工具</p>
-<p>切片工具1</p>
-<p>切片工具2</p>
-<p>修复画笔工具1</p>
-<p>修复画笔工具2</p>
-<p>颜色替换工具</p>
-<p>画笔工具与铅笔工具</p>
-<p>仿制图章工具</p>
-<p>图案图章工具</p>
-<p>历史记录画笔工具</p>
-<p>历史记录艺术画笔工具</p>
-<p>普通、背景与魔术橡皮擦</p>
-<p>渐变工具1</p>
-<p>渐变工具2</p>
-<p>渐变工具3</p>
-<p>渐变工具4</p>
-<p>渐变工具5</p>
-<p>油漆桶工具</p>
-<p>模糊、锐化与涂抹工具</p>
-</blockquote>
+<p>1、No valid files found in content errors</p>
+<p>当用<code>pelican</code>创建博客时出现此问题的原因是因为<code>pelican</code>创建博客时读取到<code>contents</code>目录下的md文件，而md文件需要<code>markdown</code>的相库库解析，<code>pelican</code>此时缺少该库，因此可以通过以下命令安装<code>markdown</code>的相应库</p>
+<div class="highlight"><pre><span class="n">pip</span> <span class="n">install</span> <span class="n">markdown</span>
+</pre></div>
+
+
+<p>如果你还没有安装<code>pip</code>工具，可以参考下面一篇文章安装<code>pip</code>工具</p>
+<p><a href="http://www.yanyulin.info/pages/2013/11/pelican.html" title="pelican搭建属于自已的博客">pelican搭建属于自已的博客</a></p>
+<p>安装完问题大概即可解决</p>
+<p>2、markdown即md文件中可不可以包含其他元数据?pelican要求md文件必须包含</p>
+<div class="highlight"><pre><span class="n">title</span><span class="o">:</span><span class="n">XXX</span>
+<span class="n">date</span><span class="o">:</span> <span class="n">XXX</span>
+</pre></div>
+
+
+<p>用户也可以创建自定义的元数据，例如给每一篇文章增加一个修改日期</p>
+<div class="highlight"><pre><span class="n">Modified</span><span class="o">:</span> <span class="mi">2012</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">08</span>
+</pre></div>
+
+
+<p>在后绪的模板页中可以直接访问该元数据，例如在<code>article.html</code>中可以使用以下代码</p>
+<div class="highlight"><pre><span class="cp">{%</span> <span class="k">if</span> <span class="nv">article.modified</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">Last modified: </span><span class="cp">{{</span> <span class="nv">article.modified</span> <span class="cp">}}</span><span class="x"></span>
+<span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x"></span>
+</pre></div>
+
+
+<p>如果需要在<code>article.html</code>以外的地方使用该元数据，需要在使用的地方加上如下语句</p>
+<div class="highlight"><pre><span class="p">{</span><span class="o">%</span> <span class="k">if</span> <span class="n">article</span> <span class="n">and</span> <span class="n">article</span><span class="p">.</span><span class="n">modified</span> <span class="o">%</span><span class="p">}</span>
+</pre></div>
+
+
+<p>3、如何禁用feed</p>
+<p>pelican中禁用feed的产生是非常容易的，只需要在配置文件<code>pelicanconf.py</code>中加入如下几条语句即可完成</p>
+<div class="highlight"><pre><span class="n">FEED_ALL_ATOM</span> <span class="o">=</span> <span class="n">None</span>
+<span class="n">CATEGORY_FEED_ATOM</span> <span class="o">=</span> <span class="n">None</span>
+<span class="n">TRANSLATION_FEED_ATOM</span> <span class="o">=</span> <span class="n">None</span>
+</pre></div>
+
+
+<p>4、warning about feeds generated without SITEURL being set properly</p>
+<p>RSS and Atom feeds要求URL必须是绝对链接，而不是相对链接，因此为了产生正确的链接，pelican要求在配置文件中必须设置SITEURL选项，否则产生的RSS与Feeds可能不正确</p>
+<p>5、如何给一篇文章指定URL</p>
+<p>在需要指定URL的文章或者页面中包括两个元数据<code>url</code>与<code>save_as</code>,例如以下代码</p>
+<div class="highlight"><pre><span class="n">url</span><span class="o">:</span> <span class="kd">override</span><span class="sr">/url/</span>
+<span class="n">save_as</span><span class="o">:</span> <span class="kd">override</span><span class="sr">/url/i</span><span class="n">ndex</span><span class="o">.</span><span class="na">html</span>
+</pre></div>
+
+
+<p>这个代码指定了本篇文章的url为override/url/index.html</p>
+<p>6、如何将一篇文章设置为主页</p>
+<p>根据上面的第5条很容易将一篇文章设置为网站的主页，如下代码即可实现将 content/pages/home.md设为主页</p>
+<div class="highlight"><pre><span class="nl">Title:</span> <span class="p">[</span><span class="n">www</span><span class="p">.</span><span class="n">yanyulin</span><span class="p">.</span><span class="n">info</span><span class="p">](</span><span class="n">http</span><span class="o">:</span><span class="c1">//www.yanyulin.info)</span>
+<span class="nl">Date:</span> <span class="mi">2014</span><span class="o">-</span><span class="mo">01</span><span class="o">-</span><span class="mi">08</span>
+<span class="nl">URL:</span>
+<span class="nl">save_as:</span> <span class="n">index</span><span class="p">.</span><span class="n">html</span>
+<span class="err">文章正文内容</span><span class="o">!</span>
+</pre></div>
+
+
+<p>7、如何给一篇文章指定一个特定模板</p>
+<p>给一篇文章指定一个特定的模板也很简单，只需要在文章中添加如下元数据，并且确保该模板文件在模板中存在即可</p>
+<div class="highlight"><pre><span class="n">Template</span><span class="o">:</span> <span class="n">template_name</span>
+</pre></div>
+
+
+<p>8、如果还不知道怎么使用pelican创建博客，看如下教程</p>
+<p><a href="http://www.yanyulin.info/pages/2013/11/pelican.html" title="pelican搭建属于自已的博客">pelican搭建属于自已的博客</a></p>
 </div>
 						  <div class="clear"></div>
 							</div>
-							<b>本文地址:</b> <a href="http://www.yanyulin.info/pages/2013/12/psbase_1.html" target="_self">http://www.yanyulin.info/pages/2013/12/psbase_1.html</a>
+							<b>本文地址:</b> <a href="http://www.yanyulin.info/pages/2014/01/pelican_question.html" target="_self">http://www.yanyulin.info/pages/2014/01/pelican_question.html</a>
 							<div><font color="blue"><b>转载时请保留本文出处,谢谢您的合作</b></font></div>
 							<hr/>
 							<div class="clear">
@@ -164,10 +199,10 @@
 					<!-- end: entrymeta -->
 				<div class="context_b">
 					 上一篇: 
-  				 <a href="http://www.yanyulin.info/pages/2013/12/baidu_2014_A.html" title="2014年百度校招笔试试卷A" target="_self">2014年百度校招笔试试卷A</a>
+  				 <a href="http://www.yanyulin.info/pages/2014/01/whyRipple.html" title="为什么大家都转向了Ripple" target="_self">为什么大家都转向了Ripple</a>
   				 &nbsp;&nbsp
   				 下一篇:
-  				 <a href="http://www.yanyulin.info/pages/2013/12/vc_1.html" title="VC视频教程(主要讲述`MFC`)" target="_self">VC视频教程(主要讲述`MFC`)</a>
+  				 <a href="http://www.yanyulin.info/pages/2014/01/pelican_question.html" title="pelican创建博客常见问题汇总" target="_self">pelican创建博客常见问题汇总</a>
 					 
 					 <i class="lt"></i>
 					 <i class="rt"></i>
@@ -182,18 +217,38 @@
   				 <tr>
  
   				 <td width="50%">
-  				 <a href="http://www.yanyulin.info/pages/2013/12/psbase2.html" title="Photoshop CS视频教程(下)" target="_blank">Photoshop CS视频教程(下)</a>
+  				 <a href="http://www.yanyulin.info/pages/2013/11/github.html" title="Github简明教程(入门篇)" target="_blank">Github简明教程(入门篇)</a>
   				 </td>
 	
 	 
  
   				 <td width="50%">
-  				 <a href="http://www.yanyulin.info/pages/2013/12/psbase_1.html" title="PhotoShop CS入门版视频教程(基础上)" target="_blank">PhotoShop CS入门版视频教程(基础上)</a>
+  				 <a href="http://www.yanyulin.info/pages/2013/11/githubM.html" title="Github上如何给别人贡献代码" target="_blank">Github上如何给别人贡献代码</a>
   				 </td>
 	
   				 </tr>
+	 
+  				 <tr>
  
-  				 <td><a href="#"></a></td>
+  				 <td width="50%">
+  				 <a href="http://www.yanyulin.info/pages/2013/12/htaccess.html" title=".htaccess简明教程(SEO优化)" target="_blank">.htaccess简明教程(SEO优化)</a>
+  				 </td>
+	
+	 
+ 
+  				 <td width="50%">
+  				 <a href="http://www.yanyulin.info/pages/2013/11/pelican.html" title="pelican搭建属于自已的博客" target="_blank">pelican搭建属于自已的博客</a>
+  				 </td>
+	
+  				 </tr>
+	 
+  				 <tr>
+ 
+  				 <td width="50%">
+  				 <a href="http://www.yanyulin.info/pages/2014/01/pelican_question.html" title="pelican创建博客常见问题汇总" target="_blank">pelican创建博客常见问题汇总</a>
+  				 </td>
+	
+ 
   				 <td><a href="#"></a></td>
 			</table>
 					 <i class="lt"></i>
@@ -223,9 +278,10 @@
 				<h3>相关标签</h3>
 				<div class="box">			
 						<div class="textwidget">
-							<a href="http://www.yanyulin.info/tag/photoshopshi-pin.html" title="查看PhotoShop视频下的所有文章" target="_blank">PhotoShop视频</a>
-							<a href="http://www.yanyulin.info/tag/vcshi-pin.html" title="查看VC视频下的所有文章" target="_blank">VC视频</a>
-							<a href="http://www.yanyulin.info/tag/linuxshi-pin.html" title="查看Linux视频下的所有文章" target="_blank">Linux视频</a>
+							<a href="http://www.yanyulin.info/tag/gong-ju-shi-yong.html" title="查看工具使用下的所有文章" target="_blank">工具使用</a>
+							<a href="http://www.yanyulin.info/tag/linux.html" title="查看Linux下的所有文章" target="_blank">Linux</a>
+							<a href="http://www.yanyulin.info/tag/c.html" title="查看C++下的所有文章" target="_blank">C++</a>
+							<a href="http://www.yanyulin.info/tag/java.html" title="查看Java下的所有文章" target="_blank">Java</a>
 						</div>
 				</div>
     		<div class="box-bottom">
@@ -303,13 +359,13 @@
 				<ul>
 				<ul class="random-post-link">
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2013/11/githubM.html" title="Github上如何给别人贡献代码">Github上如何给别人贡献代码</a>
+				<a href="http://www.yanyulin.info/pages/2013/11/github.html" title="Github简明教程(入门篇)">Github简明教程(入门篇)</a>
 				</li>
 				<li class="random-post-link">
 				<a href="http://www.yanyulin.info/pages/2013/12/renren_1.html" title="人人网校招2014年研发面经">人人网校招2014年研发面经</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2013/12/microsoft_2014_A.html" title="微软2014年校招笔试题">微软2014年校招笔试题</a>
+				<a href="http://www.yanyulin.info/pages/2013/12/alibaba_2014_A.html" title="阿里巴巴2014年校招笔试题(研发)">阿里巴巴2014年校招笔试题(研发)</a>
 				</li>
 				<li class="random-post-link">
 				<a href="http://www.yanyulin.info/pages/2013/11/deepc.html" title="C语言深度解剖(含金量高)">C语言深度解剖(含金量高)</a>
@@ -318,7 +374,7 @@
 				<a href="http://www.yanyulin.info/pages/2013/11/vlinux2.html" title="Linux基础教程视频版(很详细)">Linux基础教程视频版(很详细)</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2013/11/qqLogin.html" title="界面编程模仿篇(模仿腾讯QQ登录界面)">界面编程模仿篇(模仿腾讯QQ登录界面)</a>
+				<a href="http://www.yanyulin.info/pages/2013/12/qqLogin_1.html" title="界面编程模仿篇(QQ登录界面逼真篇)">界面编程模仿篇(QQ登录界面逼真篇)</a>
 				</li>
 				<li class="random-post-link">
 				<a href="http://www.yanyulin.info/pages/2014/01/whyRipple.html" title="为什么大家都转向了Ripple">为什么大家都转向了Ripple</a>
@@ -337,7 +393,7 @@
 				<div class="box_r">
 				<ul>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2013/11/linux0.html" rel="bookmark" title="Linux中0号进程的创建分析">Linux中0号进程的创建分析</a>
+				<a href="http://www.yanyulin.info/pages/2013/11/githubM.html" rel="bookmark" title="Github上如何给别人贡献代码">Github上如何给别人贡献代码</a>
 				</li>
 				<li>
 				<a href="http://www.yanyulin.info/pages/2013/12/neteasyM_1.html" rel="bookmark" title="网易校招2014年电商面经">网易校招2014年电商面经</a>
@@ -346,10 +402,10 @@
 				<a href="http://www.yanyulin.info/pages/2013/06/huawei_2013_1.html" rel="bookmark" title="2013年华为校招机试(一)">2013年华为校招机试(一)</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2013/11/deepc.html" rel="bookmark" title="C语言深度解剖(含金量高)">C语言深度解剖(含金量高)</a>
+				<a href="http://www.yanyulin.info/pages/2013/12/prgbeautiful.html" rel="bookmark" title="编程之美—微软技术面试心得">编程之美—微软技术面试心得</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2013/11/vlinux2.html" rel="bookmark" title="Linux基础教程视频版(很详细)">Linux基础教程视频版(很详细)</a>
+				<a href="http://www.yanyulin.info/pages/2013/11/vlinux1.html" rel="bookmark" title="Linux入门版视频教程(基础)">Linux入门版视频教程(基础)</a>
 				</li>
 				<li>
 				<a href="http://www.yanyulin.info/pages/2013/12/qqLogin_1.html" rel="bookmark" title="界面编程模仿篇(QQ登录界面逼真篇)">界面编程模仿篇(QQ登录界面逼真篇)</a>
