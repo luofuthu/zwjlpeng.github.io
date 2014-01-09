@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>烟雨林</title><link>http://www.yanyulin.info/</link><description></description><atom:link href="http://www.yanyulin.info/feeds/all.rss.xml" rel="self"></atom:link><lastBuildDate>Wed, 08 Jan 2014 00:00:00 +0800</lastBuildDate><item><title>pelican创建博客常见问题汇总</title><link>http://www.yanyulin.info/pages/2014/01/pelican_question.html</link><description>&lt;hr /&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>烟雨林</title><link>http://www.yanyulin.info/</link><description></description><atom:link href="http://www.yanyulin.info/feeds/all.rss.xml" rel="self"></atom:link><lastBuildDate>Thu, 09 Jan 2014 00:00:00 +0800</lastBuildDate><item><title>免费获取ripple币的方法汇总</title><link>http://www.yanyulin.info/pages/2014/01/freexrp.html</link><description>&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;说明&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;How to get free ripples?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.yanyulin.info" title="烟雨林"&gt;本文&lt;/a&gt;旨在汇集获取免费&lt;code&gt;Ripple&lt;/code&gt;币的方法途径，与ripple币的爱好者共享，如果觉的不错的，可以点击此处，将此条微博转发出去，让更多的人知道ripple,让ripple涨的更猛烈些&lt;/p&gt;
+&lt;p&gt;1、以下是一个网站，每天可以领取一次，一次领取量是0-1个ripple币，操作方法如下：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;1.点击&lt;a href="http://www.ripplegiveaway.com/index.php" target="_blank"&gt;网站链接&lt;/a&gt;进入网站首页&lt;/p&gt;
+&lt;p&gt;2.在下图所示的图片输入框中输入你的ripple钱包地址，点击Drip即可获取ripple啦&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://www.yanyulin.info/pics/zatan/freexrp_1.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;3.以上方法获取ripple币要求钱包必须处于激活状态&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;就总结到此吧，过几天再更新，觉的不错的欢迎订阅本站，&lt;strong&gt;订阅借口看右侧&lt;/strong&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Thu, 09 Jan 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-01-09:pages/2014/01/freexrp.html</guid><category>虚拟币</category></item><item><title>pelican创建博客常见问题汇总</title><link>http://www.yanyulin.info/pages/2014/01/pelican_question.html</link><description>&lt;hr /&gt;
 &lt;p&gt;1、No valid files found in content errors&lt;/p&gt;
 &lt;p&gt;当用&lt;code&gt;pelican&lt;/code&gt;创建博客时出现此问题的原因是因为&lt;code&gt;pelican&lt;/code&gt;创建博客时读取到&lt;code&gt;contents&lt;/code&gt;目录下的md文件，而md文件需要&lt;code&gt;markdown&lt;/code&gt;的相库库解析，&lt;code&gt;pelican&lt;/code&gt;此时缺少该库，因此可以通过以下命令安装&lt;code&gt;markdown&lt;/code&gt;的相应库&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;pip&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;markdown&lt;/span&gt;
