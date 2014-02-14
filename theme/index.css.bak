@@ -36,7 +36,6 @@ line-height: 18px;
 color: #333;
 text-align: center;
 text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
-background-color: #FAFAFA;
 background-repeat: no-repeat;
 border: 1px solid #CCC;
 border-bottom-color: #BBB;
@@ -683,7 +682,7 @@ i {
 	line-height:185%;
 }
 .entry {
-	width:700px;
+	width:712px;
 	margin:5px 0 5px 0;
 	overflow:hidden;
 }
@@ -1515,7 +1514,7 @@ body {
 	width:100%;
 }
 .context_b {
-	width:701px;
+	width:711px;
 }
 .entrymeta {
 	background:transparent;
