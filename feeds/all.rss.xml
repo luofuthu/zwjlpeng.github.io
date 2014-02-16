@@ -1,5 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>烟雨林</title><link>http://www.yanyulin.info/</link><description></description><atom:link href="http://www.yanyulin.info/feeds/all.rss.xml" rel="self"></atom:link><lastBuildDate>Mon, 20 Jan 2014 00:00:00 +0800</lastBuildDate><item><title>去哪儿网校招2014年面经</title><link>http://www.yanyulin.info/pages/2014/01/qunar_1.html</link><description>&lt;p&gt;面试地点:&lt;strong&gt;沈阳&lt;/strong&gt;&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>烟雨林</title><link>http://www.yanyulin.info/</link><description></description><atom:link href="http://www.yanyulin.info/feeds/all.rss.xml" rel="self"></atom:link><lastBuildDate>Sat, 15 Feb 2014 00:00:00 +0800</lastBuildDate><item><title>程序员面试宝典--欧立奇</title><link>http://www.yanyulin.info/pages/2014/02/pbaodian.html</link><description>&lt;hr /&gt;
+&lt;p&gt;STL源码剖析 PDF格式下载:&lt;a href="http://yunpan.cn/QUj5p6EIPZH9y" target="_blank" title="《STL源码剖析》"&gt;点这里&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;STL源码剖析此书是一本不可多得的好书，大师的精典之作，大多数程序员只知道集合类非常好用，只需要向集合类中填加元素，不用担心空间的开设，以及空间的回收，也不用考虑集合类的效率，更重要的是集合类还给我们提供了各种各样的函数，但是知其所以然而不知其因为然，这样的程序员是不合格的，《STL源码剖析》很好的给我们讲解了集合类的底层实现，以及泛型算法。&lt;/p&gt;
+&lt;p&gt;程序员面试宝典--欧立奇&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;前言&lt;/p&gt;
+&lt;p&gt;第1章STL概论与版本简介&lt;/p&gt;
+&lt;p&gt;第2章 空间配置器（allocator）&lt;/p&gt;
+&lt;p&gt;第3章迭代器（iterators）概念与traits编程技法&lt;/p&gt;
+&lt;p&gt;第4章 序列式容器（sequence containers）&lt;/p&gt;
+&lt;p&gt;第5章 关联式容器（associattive containers）&lt;/p&gt;
+&lt;p&gt;第6章 算法（algorithms）&lt;/p&gt;
+&lt;p&gt;第7章 仿函数（functors，另名 函数对象function objects）&lt;/p&gt;
+&lt;p&gt;第8章 配接器（adapters）&lt;/p&gt;
+&lt;p&gt;附录A 参考书籍与推荐读物&lt;/p&gt;
+&lt;p&gt;附录B 候捷网站（本书支持站点简介）&lt;/p&gt;
+&lt;p&gt;附录C STLPort 的移植经验（by孟岩&lt;/p&gt;
+&lt;/blockquote&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Sat, 15 Feb 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-02-15:pages/2014/02/pbaodian.html</guid><category>面试书</category></item><item><title>去哪儿网校招2014年面经</title><link>http://www.yanyulin.info/pages/2014/01/qunar_1.html</link><description>&lt;p&gt;面试地点:&lt;strong&gt;沈阳&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;面试职位:&lt;strong&gt;软件研发工程师(北京)&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;面试结果:&lt;code&gt;失败&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;去哪儿&lt;/strong&gt;目前来说还是一个比较不错的公司，待遇还行，技术上不是很了解，今年校招待遇一般是&lt;code&gt;11-16k/m&lt;/code&gt;,每年发&lt;code&gt;13&lt;/code&gt;个月的基本工资，三个月的奖金，其中奖金的比例是7：2：1，即&lt;code&gt;10%&lt;/code&gt;的人可能拿不到那三个月的奖金，也就是说其他的人不但能拿到这三个月的奖金而且还可高会高于三个月&lt;/p&gt;
