@@ -78,8 +78,8 @@
 &lt;p&gt;下面是相应的汇编代码：可以发现和上面的过程分析是一样的，有兴趣可以自已研究下
 程序二在底层被转化成了&lt;/p&gt;
 &lt;p&gt;&lt;center&gt;
-&lt;a href=""&gt;
-&lt;img src="http://www.yanyulin.info/pics/classlist.png"/&gt;
+&lt;a href="http://www.yanyulin.info/pages/2014/02/classinitiallist.html"&gt;
+&lt;img src="http://www.yanyulin.info/pics/tech/classlist.png"/&gt;
 &lt;/a&gt;
 &lt;/center&gt;&lt;/p&gt;
 &lt;p&gt;可以发现通过初始化列表在申请了对象a的空间后直接调用初始化列表中指定的构造函数来构造成员对象，因此少了很多中间步骤，因此提高了程序的效率:)&lt;/p&gt;
