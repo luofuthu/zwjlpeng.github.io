@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-<title>pelican搭建属于自已的博客 - 烟雨林</title>
+<title>Linux里的输入输出（Linux快速入门） - 烟雨林</title>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
 <meta name="author" content="烟雨林">
@@ -52,9 +52,9 @@
 					<div class="entry_box_s">
 						<div class="entry_title_box">
 							<div class="ico"></div>
-							<div class="entry_title">pelican搭建属于自已的博客</div>
+							<div class="entry_title">Linux里的输入输出（Linux快速入门）</div>
 							<div class="archive_info">
-								<span class="date">2013-11-24</span>
+								<span class="date">2014-02-22</span>
 								<span class="category"> ⁄ <a href="http://www.yanyulin.info/category/bian-cheng-yu-yan.html" title="查看编程语言中的全部文章" rel="category tag">编程语言</a></span>
 							</div>
 						</div>
@@ -81,123 +81,69 @@
 </script>
 </div>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>	
-							<hr />
-<p>一直都想搭建一个属于自已的博客，无耐总是抽不出时间，9月份完工作，10月份却又有搞不完的事，一拖再拖，前不久才将自已的博客搭建完成</p>
-<p>搭建博客工具的选择：</p>
-<p><code>WordPress</code>、<code>Zblog</code>、各种<code>cms</code>,功能都很强大，各种插件，各种牛X，各种方便，但在我看来，也正是因为功能的太过强大，显得太笨重，修改起来太过麻烦，更可耻的是还需要数据库的支持，我这样的叼丝学生估计还负担不起，而国外提供免费数据库的空间绝大多数都不太稳定，国内空间别提了，各种泪</p>
-<p>静态博客生成器:<code>Jeklly</code>非常棒，基于<code>octopress</code>也相当的不错，可惜都是基于ruby语言的，对ruby语言压根就不了解，最终选择了基于<code>python</code>的<code>pelican</code></p>
-<p><code>pelican</code>搭建博客需要了解的名词</p>
-<ul>
-<li><code>Github</code></li>
-<li><code>python</code></li>
-<li><code>pelican</code></li>
-<li><code>Jinja2</code></li>
-<li><code>markdown</code></li>
-<li><code>git</code></li>
-<li><code>sitemap</code></li>
-<li><code>pip</code></li>
-</ul>
-<p>最初是在Linux下搭建博客，正在捉急的进行到一半途中，linux系统让我弄的崩溃了，最后是在Windows下搭建完成，不过linux下是类似的，因为搭建过程是在Git Bash中完成，Git Bash中的命令就是仿unix的</p>
-<p><strong>前提了解github的使用，可以看看我写的Github相关文章</strong></p>
-<p>1、<a href="http://www.yanyulin.info/pages/2013/11/github.html">Github简明教程(入门篇)</a></p>
-<p>2、<a href="http://www.yanyulin.info/pages/2013/11/githubM.html">Github上如何给别人贡献代码</a></p>
-<p>步骤一：下载相关的软件，<code>pelican</code>是基于<code>python</code>的，因此<code>python</code>是不可少的，与<code>github</code>进行连接
-<code>git</code>工具也是不可少的，另外还得下载的三个工具是<code>python</code>的<code>pip</code>工具以及<code>markdownpad</code>编辑器还有<code>Windows</code>下的<code>make</code>工具，如果是在linux下，此处工作相当简单，相关软件的下载链接，请查看我个人博客的原始博文</p>
-<p>1、<a href="http://yunpan.cn/QUF66GnJ7WU7W" target="_blank">python3下载</a></p>
-<p>2、<a href="http://yunpan.cn/QUF6BFpTcgeLc" target="_blank">git下载</a></p>
-<p>3、<a href="http://yunpan.cn/QUF66RuY8ziq5" target="_blank">pip下载</a></p>
-<p>4、<a href="http://yunpan.cn/QUF6BpkxgdpLb" target="_blank">windows下make下载</a></p>
-<p>5、<a href="http://yunpan.cn/QUF66w7tQLcQd" target="_blank">markdown下载</a></p>
-<p><strong><code>pip</code>工具的安装</strong></p>
-<p><code>python3</code>下安装pip</p>
-<div class="highlight"><pre><span class="c1">//已安装python3</span>
-<span class="c1">//下载easy_install的tar.gz的源码</span>
-<span class="c1">//然后解压</span>
-<span class="nl">C:</span><span class="err">\</span><span class="n">python32</span><span class="err">\</span><span class="n">python</span> <span class="n">setup</span><span class="p">.</span><span class="n">py</span> <span class="n">install</span>
-<span class="nl">C:</span><span class="err">\</span><span class="n">python32</span><span class="err">\</span><span class="n">Scripts</span><span class="err">\</span><span class="n">easy_install</span> <span class="n">pip</span>
-<span class="c1">//把C:\python32\Scripts这个路径也加到PATH里</span>
+							<p>Linux系统中每个文件均有一个文件描述符（文件描述符是一个整数），当内核打开一个文件或者创建一个文件时，返回一个文件描述符，读写文件就可以使用它</p>
+<p>在shell中运行的每个新程序都对应三个文件描述符，标准输入，村准输出，标准出错输出，简单命令<code>ls</code>三个文件描述符都指向终端（<strong>linux中将设备都当作文件来操作</strong>），<code>Shell</code>中也提供了重定向文件输出，将输出重定向到某个文件如：</p>
+<div class="highlight"><pre><span class="n">ls</span> <span class="o">&gt;</span> <span class="n">file</span><span class="p">.</span><span class="n">txt</span>
 </pre></div>
 
 
-<p><strong><code>window</code>下make工具的安装</strong></p>
-<div class="highlight"><pre><span class="c1">//将下载的`make.exe`文件添加到path路径中</span>
+<p>将<code>ls</code>的输出重定向到<code>file.txt</code>（<strong>此时可以发现控制台上没有输出</strong>）</p>
+<p>输入输了关的函数</p>
+<p>不带缓冲的I/O函数有<code>open,read,write,lseek,close</code>（<code>即中间没有一个缓存区作为过渡</code>）</p>
+<p><center>
+<a href="http://www.yanyulin.info/pages/2014/02/linux2.html">
+<img src="http://www.yanyulin.info/pics/tech/linuxio1.jpg"/>
+</a>
+</center></p>
+<p>注解:</p>
+<blockquote>
+<p>Linux系统中规定标准输入的文件描述符为0,标准输出为1,标准错误输出为2,<code>STDIN_FILENO</code>与<code>STDOUT_FILENO</code>分别指定了输入输出的来源</p>
+<p>Read函数返回读的字节数，当到达文件未尾时返回0，如果发生读错误返回-1</p>
+<p>标准I/O，标准I/O函数提供一种带缓冲的I/O函数，并简化了对输入出输出的处理，如fgets(标准函数)函数能读一个完整的行。而read（不带缓存）只能以字节读取。</p>
+</blockquote>
+<p>程序与进程</p>
+<p>程序的执行实例被称为进程，<code>Unix</code>系统确保每个进程都有一个唯一的数字标识符，称为进程ID.</p>
+<p>进程控制的三个主要函数：<code>fork exec waitpid</code></p>
+<p>示例程序：</p>
+<p><center>
+<a href="http://www.yanyulin.info/pages/2014/02/linux2.html">
+<img src="http://www.yanyulin.info/pics/tech/linuxio1.png"/>
+</a>
+</center></p>
+<p>程序解释如下：</p>
+<blockquote>
+<p>标准I/O函数fgets从标准输入中一次读取一行，fgets读取的字符串以换行符做做为结束，面execlp要求其参数是以null结束，故要进行转换。</p>
+<p><code>Fork</code>创建新进程，新进程是调用进程的复制品，fork向父进程返回新创建进程的ID,对子进程而言，返回的是0,(<strong>fork调用一次，返回两次</strong>)</p>
+<p>父进程希望等待子进程终止，则需要调用函数waitpid函数，其参数为要等待进程的ID</p>
+</blockquote>
+<p>线程与线程ID</p>
+<blockquote>
+<p>线程的提出是为了利用多处理器的并行性，以及程序任务的划分。进程中的所有线程共享地址空间，文件描述符，堆栈，以及进程相关属性。正因为这些特性，才产生了线程的同步问题。</p>
+<p>线程也有ID,但ID只在它所属的进程内起作用，离开了其所属的进程，谈线程没意义。</p>
+</blockquote>
+<p>出错处理：</p>
+<blockquote>
+<p>文件<errno.h>中定义了符号errno(函数返回的错误代码)可被赋予的各种常量，这些常量均以字符E开头，如EMSGSIZE表示消息过长。    要使用errno需要包函<errno.h>这个头文件，同时在<string.h>中也提供了</p>
+<p>将错误代码转换成有意义的字符串操作函数如：</p>
+</blockquote>
+<div class="highlight"><pre><span class="kt">char</span> <span class="o">*</span><span class="nf">strerror</span><span class="p">(</span><span class="kt">int</span> <span class="n">errno</span><span class="p">);</span>
 </pre></div>
 
 
-<p>基他软件直接点击exe安装即可</p>
-<p>步骤二:安装<code>pelican</code>,安装了<code>Git</code>后，打开<code>Git Bash</code>输入以下命令</p>
-<div class="highlight"><pre><span class="n">pip</span> <span class="n">install</span> <span class="n">pelican</span>
+<p>在<code>&lt;stdio.h&gt;</code>中也提供了基于<code>errno</code>在标准出错上产生一条出错消息的函数</p>
+<div class="highlight"><pre><span class="kt">void</span> <span class="n">perror</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">msg</span><span class="p">)</span><span class="c1">//输出msg指向的字符串，后一冒号，一空格，接着是errno值对应的出错信息，最后是一个换行符。</span>
 </pre></div>
 
 
-<p>步骤三:创建博客，在Git Bash命令行窗口中输入如下命令</p>
-<div class="highlight"><pre><span class="n">mkdir</span> <span class="n">blog</span>
-<span class="n">cd</span> <span class="n">blog</span>
-<span class="n">pelican</span><span class="o">-</span><span class="n">quickstart</span>
-</pre></div>
-
-
-<p>第三条命令执行后会提示你输入博客的配置项，除了<code>SITENAME</code>配置项外，其他均可选择默认，在后绪的开发过程中，可以在<code>pelicanconf.py</code>中进行修改，执行完上述命令后，即可生成一个基本的博客架构，如下图所示</p>
-<div class="highlight"><pre><span class="n">blog</span><span class="o">/</span>
-<span class="err">├──</span> <span class="n">content</span>  <span class="err">#</span> <span class="err">存放你要写的博客</span>
-<span class="err">│</span>   <span class="err">└──</span> <span class="p">(</span><span class="n">pages</span><span class="p">)</span>  <span class="err">#单纯的页面</span>
-<span class="err">├──</span> <span class="n">output</span>   <span class="err">#</span> <span class="err">生成的输出文件</span>
-<span class="err">├──</span> <span class="n">develop_server</span><span class="p">.</span><span class="n">sh</span><span class="err">#</span> <span class="err">方便开启测试服务器</span>
-<span class="err">├──</span> <span class="n">Makefile</span> <span class="err">#</span> <span class="err">方便管理博客的</span><span class="n">Makefile</span>
-<span class="err">├──</span> <span class="n">pelicanconf</span><span class="p">.</span><span class="n">py</span>   <span class="err">#</span> <span class="err">主配置文件</span>
-<span class="err">└──</span> <span class="n">publishconf</span><span class="p">.</span><span class="n">py</span>   <span class="err">#</span> <span class="err">主发布文件，可删除</span>
-</pre></div>
-
-
-<p>用<code>markdown</code>写博文，要记住的是博文必须放在<code>content</code>目录下，<code>pelican</code>会将<code>content</code>目录下的所有文章输出到<code>output</code>目录下，然后放到服务器上，<code>markdown</code>写博文的预览图如下：</p>
-<p><a href="http://www.yanyulin.info/pages/2013/11/pelican.html">
-<img src="http://www.yanyulin.info/pics/markdown.jpg" width="100%"/>
-</a></p>
-<p>写完后执行如下命令，即可在本机上预览博客,预览地址为<code>http://localhost:8000/</code></p>
-<div class="highlight"><pre><span class="n">make</span> <span class="n">publish</span>
-<span class="n">make</span> <span class="n">serve</span>
-</pre></div>
-
-
-<p>步骤四:将博客部署到<code>github</code>上，博客最终是要放到互联网上供人看的，此处就是将博客上传上去，在上传之前，要确保<code>github</code>上有一个仓库命令规是<code>username.github.io</code>,其中<code>username</code>为你的<code>github</code>帐号</p>
-<div class="highlight"><pre><span class="c1">//切换到输出目录</span>
-<span class="n">cd</span> <span class="k">output</span>
-<span class="n">git</span> <span class="n">init</span>
-<span class="n">git</span> <span class="n">add</span> <span class="p">.</span>
-<span class="n">git</span> <span class="n">remote</span> <span class="n">add</span> <span class="n">origin</span> <span class="nl">https:</span><span class="c1">//github.com/username.github.io.git</span>
-<span class="n">git</span> <span class="n">pull</span> <span class="n">origin</span> <span class="n">master</span>
-<span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">am</span> <span class="p">&#39;</span><span class="n">commit</span><span class="p">&#39;</span>
-<span class="n">git</span> <span class="n">push</span> <span class="o">-</span><span class="n">u</span> <span class="n">origin</span> <span class="n">master</span>
-</pre></div>
-
-
-<p>执行完上面命令后即将博客上传至<code>github</code>服务器上，打开浏览器输入<code>http://username.github.io</code>即可访问，如果你觉的上面的命令过于复杂，你也直接可以将其添加到Makefile中</p>
-<p>步骤五:给博客挑选主题，博客的初始主题当然是不好看，你可以自已下载<code>pelican</code>相关的主题，然后安装，当然你也可以像我一样更改主题模板，创建属于自已的</p>
-<div class="highlight"><pre><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="o">:</span><span class="c1">//github.com/getpelican/pelican-themes.git</span>
-<span class="n">cd</span> <span class="n">pelican</span><span class="o">-</span><span class="n">themes</span>
-<span class="n">pelican</span><span class="o">-</span><span class="n">themes</span> <span class="o">-</span><span class="n">i</span> <span class="n">bootstrap2</span>
-</pre></div>
-
-
-<p>在<code>pelicanconf.py</code>中添加<code>THEME = 'bootstrap2'</code>即可，然后重新<code>make publish</code>即可</p>
-<p>步骤六：给博客加上评论系统，在Disqus上申请一个站点，记牢Shortname。 在pelicanconf.py添加如下命令，当然你也可以选择国内的多说或者其他的</p>
-<div class="highlight"><pre><span class="n">DISQUS_SITENAME</span> <span class="o">=</span> <span class="n">Shortname</span>
-</pre></div>
-
-
-<p>步骤七：给自已的博客加上谷歌分析，可选，去去Google Analytics申请账号，记下跟踪ID。 在pelicanconf.py添加</p>
-<div class="highlight"><pre><span class="n">GOOGLE_ANALYTICS</span> <span class="o">=</span> <span class="err">跟踪</span><span class="n">ID</span>
-</pre></div>
-
-
-<p>步骤入：独立域名与DNS解析</p>
-<p>在Godaddy上用支付宝花购买为期一年的顶级域名，并去修改Nameservers为这两个地址：<code>f1g1ns1.dnspod.net</code>、<code>f1g1ns2.dnspod.net</code>。</p>
-<p>在Dnspod上添加新域名，并申请一条A记录指向Github Pages的ip:<code>207.97.227.245</code>；</p>
-<p>在Pelican主目录新建CNAME文件，添上刚刚申请的域名，如我的<code>www.yanyulin.info</code></p>
-<p>Pelican官方文档: http://docs.getpelican.com/en/3.2</p>
+<p>示例程序如下：</p>
+<p><center>
+<a href="http://www.yanyulin.info/pages/2014/02/linux2.html">
+<img src="http://www.yanyulin.info/pics/tech/linuxio2.png"/>
+</a>
+</center></p>
 						  <div class="clear"></div>
 							</div>
-							<b>本文地址:</b> <a href="http://www.yanyulin.info/pages/2013/11/pelican.html" target="_self">http://www.yanyulin.info/pages/2013/11/pelican.html</a>
+							<b>本文地址:</b> <a href="http://www.yanyulin.info/pages/2014/02/linux2.html" target="_self">http://www.yanyulin.info/pages/2014/02/linux2.html</a>
 							<div><font color="blue"><b>转载时请保留本文出处,谢谢您的合作</b></font></div>
 							<hr/>
 							<div class="clear" align="left">
@@ -241,10 +187,10 @@
 					<!-- end: entrymeta -->
 				<div class="context_b">
 					 上一篇: 
-  				 <a href="http://www.yanyulin.info/pages/2013/11/baofeng_2014_A.html" title="2014年暴风笔试试卷A" target="_self">2014年暴风笔试试卷A</a>
+  				 <a href="http://www.yanyulin.info/pages/2014/02/jed.html" title="JED币免费获取30 ripple币" target="_self">JED币免费获取30 ripple币</a>
   				 &nbsp;&nbsp
   				 下一篇:
-  				 <a href="http://www.yanyulin.info/pages/2013/11/vlinux2.html" title="Linux基础教程视频版(很详细)" target="_self">Linux基础教程视频版(很详细)</a>
+  				 <a href="http://www.yanyulin.info/pages/2014/02/linux1.html" title="快速介绍Linux（Linux入门教程）" target="_self">快速介绍Linux（Linux入门教程）</a>
 					 
 					 <i class="lt"></i>
 					 <i class="rt"></i>
@@ -259,27 +205,13 @@
   				 <tr>
  
   				 <td width="50%">
-  				 <a href="http://www.yanyulin.info/pages/2013/11/github.html" title="Github简明教程(入门篇)" target="_blank">Github简明教程(入门篇)</a>
+  				 <a href="http://www.yanyulin.info/pages/2013/11/linux0.html" title="Linux中0号进程的创建分析" target="_blank">Linux中0号进程的创建分析</a>
   				 </td>
 	
 	 
  
   				 <td width="50%">
-  				 <a href="http://www.yanyulin.info/pages/2013/11/githubM.html" title="Github上如何给别人贡献代码" target="_blank">Github上如何给别人贡献代码</a>
-  				 </td>
-	
-  				 </tr>
-	 
-  				 <tr>
- 
-  				 <td width="50%">
-  				 <a href="http://www.yanyulin.info/pages/2013/12/htaccess.html" title=".htaccess简明教程(SEO优化)" target="_blank">.htaccess简明教程(SEO优化)</a>
-  				 </td>
-	
-	 
- 
-  				 <td width="50%">
-  				 <a href="http://www.yanyulin.info/pages/2013/11/pelican.html" title="pelican搭建属于自已的博客" target="_blank">pelican搭建属于自已的博客</a>
+  				 <a href="http://www.yanyulin.info/pages/2014/02/linux1.html" title="快速介绍Linux（Linux入门教程）" target="_blank">快速介绍Linux（Linux入门教程）</a>
   				 </td>
 	
   				 </tr>
@@ -287,7 +219,7 @@
   				 <tr>
  
   				 <td width="50%">
-  				 <a href="http://www.yanyulin.info/pages/2014/01/pelican_question.html" title="pelican创建博客常见问题汇总" target="_blank">pelican创建博客常见问题汇总</a>
+  				 <a href="http://www.yanyulin.info/pages/2014/02/linux2.html" title="Linux里的输入输出（Linux快速入门）" target="_blank">Linux里的输入输出（Linux快速入门）</a>
   				 </td>
 	
  
@@ -435,25 +367,25 @@ border: 1px solid #CCC;
 				<ul>
 				<ul class="random-post-link">
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2013/11/linux0.html" title="Linux中0号进程的创建分析">Linux中0号进程的创建分析</a>
+				<a href="http://www.yanyulin.info/pages/2013/11/github.html" title="Github简明教程(入门篇)">Github简明教程(入门篇)</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2013/01/renmingyinhang_1.html" title="中国人民银行2013校招技术类面经">中国人民银行2013校招技术类面经</a>
+				<a href="http://www.yanyulin.info/pages/2014/01/ali_1.html" title="阿里巴巴校招2014年软研面经">阿里巴巴校招2014年软研面经</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2013/06/huawei_2013_1.html" title="2013年华为校招机试(一)">2013年华为校招机试(一)</a>
+				<a href="http://www.yanyulin.info/pages/2013/12/zte_2014_A.html" title="中兴2014年校招笔试题">中兴2014年校招笔试题</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2013/11/effective.html" title="Effective C++(编程的50个细节)">Effective C++(编程的50个细节)</a>
+				<a href="http://www.yanyulin.info/pages/2013/11/deepc.html" title="C语言深度解剖(含金量高)">C语言深度解剖(含金量高)</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2013/11/vlinux1.html" title="Linux入门版视频教程(基础)">Linux入门版视频教程(基础)</a>
+				<a href="http://www.yanyulin.info/pages/2013/12/vc_1.html" title="VC视频教程(主要讲述`MFC`)">VC视频教程(主要讲述`MFC`)</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2014/02/jed.html" title="JED币免费获取30 ripple币">JED币免费获取30 ripple币</a>
+				<a href="http://www.yanyulin.info/pages/2014/02/xrptalk.html" title="XRP Talk论坛注册教程">XRP Talk论坛注册教程</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2013/11/fetchPage.html" title="爬虫的自我解剖(抓取网页HtmlUnit)">爬虫的自我解剖(抓取网页HtmlUnit)</a>
+				<a href="http://www.yanyulin.info/pages/2013/12/qqLogin_1.html" title="界面编程模仿篇(QQ登录界面逼真篇)">界面编程模仿篇(QQ登录界面逼真篇)</a>
 				</li>
 				</ul>
 				</ul>
@@ -469,25 +401,25 @@ border: 1px solid #CCC;
 				<div class="box_r">
 				<ul>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2013/11/githubM.html" rel="bookmark" title="Github上如何给别人贡献代码">Github上如何给别人贡献代码</a>
+				<a href="http://www.yanyulin.info/pages/2013/11/pelican.html" rel="bookmark" title="pelican搭建属于自已的博客">pelican搭建属于自已的博客</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2010/11/ali_2.html" rel="bookmark" title="阿里巴巴校招2010年软研面经">阿里巴巴校招2010年软研面经</a>
+				<a href="http://www.yanyulin.info/pages/2013/01/renmingyinhang_1.html" rel="bookmark" title="中国人民银行2013校招技术类面经">中国人民银行2013校招技术类面经</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2013/11/baofeng_2014_A.html" rel="bookmark" title="2014年暴风笔试试卷A">2014年暴风笔试试卷A</a>
+				<a href="http://www.yanyulin.info/pages/2013/12/microsoft_2014_A.html" rel="bookmark" title="微软2014年校招笔试题">微软2014年校招笔试题</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2013/11/objectModel.html" rel="bookmark" title="深度探索C++对象模型">深度探索C++对象模型</a>
+				<a href="http://www.yanyulin.info/pages/2013/11/stlOrigin.html" rel="bookmark" title="STL源码剖析(候捷译)">STL源码剖析(候捷译)</a>
 				</li>
 				<li>
 				<a href="http://www.yanyulin.info/pages/2013/12/psbase_1.html" rel="bookmark" title="PhotoShop CS入门版视频教程(基础上)">PhotoShop CS入门版视频教程(基础上)</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2014/01/whyRipple.html" rel="bookmark" title="为什么大家都转向了Ripple">为什么大家都转向了Ripple</a>
+				<a href="http://www.yanyulin.info/pages/2014/01/freexrp.html" rel="bookmark" title="免费获取ripple币的方法汇总">免费获取ripple币的方法汇总</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2013/11/fetchPage.html" rel="bookmark" title="爬虫的自我解剖(抓取网页HtmlUnit)">爬虫的自我解剖(抓取网页HtmlUnit)</a>
+				<a href="http://www.yanyulin.info/pages/2013/11/qqLogin.html" rel="bookmark" title="界面编程模仿篇(模仿腾讯QQ登录界面)">界面编程模仿篇(模仿腾讯QQ登录界面)</a>
 				</li>
 				<div class="clear"></div>
 				</div>
