@@ -180,7 +180,11 @@
 &lt;p&gt;注意：本程序的输出的文件未进行排序，而ls的输出一般是按照字母的顺序进行输出&lt;/p&gt;
 &lt;p&gt;Main函数使用了ISO C标准使用的风格,argc代表传给程序的参数个数，即&lt;code&gt;argv&lt;/code&gt;中的个数&lt;/p&gt;
 &lt;p&gt;按惯例当程序返回0时表示正常结束，返回其他值表求出错&lt;/p&gt;
-&lt;p&gt;每个进程都有一个工作目录，有时称其为当前工作目录，所有的相对路径都是从工作目录开始解释，进程可以用&lt;code&gt;chrdir&lt;/code&gt;更改其工作目录。&lt;/p&gt;</summary><category term="Linux学习"></category></entry><entry><title>Linux里的输入输出（Linux快速入门）</title><link href="http://www.yanyulin.info/pages/2014/02/linux2.html" rel="alternate"></link><updated>2014-02-22T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-02-22:pages/2014/02/linux2.html</id><summary type="html">&lt;p&gt;Linux系统中每个文件均有一个文件描述符（文件描述符是一个整数），当内核打开一个文件或者创建一个文件时，返回一个文件描述符，读写文件就可以使用它&lt;/p&gt;
+&lt;p&gt;每个进程都有一个工作目录，有时称其为当前工作目录，所有的相对路径都是从工作目录开始解释，进程可以用&lt;code&gt;chrdir&lt;/code&gt;更改其工作目录。&lt;/p&gt;</summary><category term="Linux学习"></category></entry><entry><title>Linux里的输入输出（Linux快速入门）</title><link href="http://www.yanyulin.info/pages/2014/02/linux2.html" rel="alternate"></link><updated>2014-02-22T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-02-22:pages/2014/02/linux2.html</id><summary type="html">&lt;p&gt;阅读本博文之前可以参考以下文章&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2014/02/linux1.html" target="_blank"&gt;
+快速介绍Linux（Linux入门教程）
+&lt;/a&gt;
+Linux系统中每个文件均有一个文件描述符（文件描述符是一个整数），当内核打开一个文件或者创建一个文件时，返回一个文件描述符，读写文件就可以使用它&lt;/p&gt;
 &lt;p&gt;在shell中运行的每个新程序都对应三个文件描述符，标准输入，村准输出，标准出错输出，简单命令&lt;code&gt;ls&lt;/code&gt;三个文件描述符都指向终端（&lt;strong&gt;linux中将设备都当作文件来操作&lt;/strong&gt;），&lt;code&gt;Shell&lt;/code&gt;中也提供了重定向文件输出，将输出重定向到某个文件如：&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;ls&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;file&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;txt&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
@@ -191,7 +195,7 @@
 &lt;p&gt;不带缓冲的I/O函数有&lt;code&gt;open,read,write,lseek,close&lt;/code&gt;（&lt;code&gt;即中间没有一个缓存区作为过渡&lt;/code&gt;）&lt;/p&gt;
 &lt;p&gt;&lt;center&gt;
 &lt;a href="http://www.yanyulin.info/pages/2014/02/linux2.html"&gt;
-&lt;img src="http://www.yanyulin.info/pics/tech/linuxio1.jpg"/&gt;
+&lt;img src="http://www.yanyulin.info/pics/tech/linuxio.jpg"/&gt;
 &lt;/a&gt;
 &lt;/center&gt;&lt;/p&gt;
 &lt;p&gt;注解:&lt;/p&gt;
