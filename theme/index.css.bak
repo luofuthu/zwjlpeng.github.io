@@ -603,7 +603,7 @@ i {
 
 #content {
 	float:left;
-	width:732px;
+	width:750px;
 	overflow:hidden;
 }
 #content h3 {
@@ -633,7 +633,7 @@ i {
 
 .font {
 	float:right;
-	width:100px;
+	width:80px;
 }
 .font a {
 	line-height:27px;
@@ -666,8 +666,6 @@ i {
 }
 .entry_box_s {
 	position:relative;
-	background:#fff;
-	width:700px;
 	margin:0px 0 0 0;
 }
 .entry_sb {
@@ -682,7 +680,7 @@ i {
 	line-height:185%;
 }
 .entry {
-	width:712px;
+	width:730px;
 	margin:5px 0 5px 0;
 	overflow:hidden;
 }
@@ -1520,7 +1518,7 @@ body {
 	background:transparent;
 }
 .entry_box_s {
-	padding:0px 10px 0;
+	padding:0px 10px 0 10px;
 	background:transparent;
 }
 #sidebar .box-bottom {
@@ -2348,7 +2346,7 @@ big {
 }
 #my_footer {
 	width:1080px;
-	padding:10px 15px;
+	padding:10px 0px 10px 0px;
 	margin:0 auto;
 	color:#A40000;
 	text-align:center;
@@ -2404,7 +2402,7 @@ big {
 	border:1px solid #CCCCCC;
 }
 .test_right {
-	width:735px;
+	width:750px;
 	height:auto;
 	float:left;
 	background-color:#fff;
