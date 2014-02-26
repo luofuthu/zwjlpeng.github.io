@@ -487,7 +487,7 @@ i {
 
 #post {
 	float:left;
-	width:732px;
+	width:750px;
 }
 .comment_a a {
 	position:absolute;
@@ -800,7 +800,7 @@ i {
 
 #sidebar {
 	float:right;
-	width:236px;
+	width:320px;
 }
 #sidebar h3 {
 	padding:0 0 0 15px;
@@ -1496,9 +1496,9 @@ body {
 	margin-top: 65px;
 }
 #post,#content {
-	width:724px;
+	width:750px;
 	/*overflow:hidden;
-	*/padding:0 5px;
+	*/padding:0px;
 	border-right:1px solid #d2d2d2;
 	overflow:visible;
 	_overflow:hidden;
@@ -2078,10 +2078,10 @@ ol.tentblogger-top-posts-list li {
 	margin-right:0;
 }
 #top #topnav,.headtop .inner,#featured,#wrapper {
-	width:980px;
+	width:1080px;
 }
 #sidebar {
-	width:231px;
+	width:320px;
 }
 #top #topnav #searchbar {
 	border-right:none;
@@ -2340,7 +2340,7 @@ big {
 }
 #my_footer_wrapper {
 	clear:both;
-	width:978px;
+	width:1080px;
 	margin-left:auto;
 	margin-right:auto;
 	background:#ECECEC;
@@ -2363,7 +2363,7 @@ big {
 	font-weight:bold;
 }
 #my_copyright_wrapper {
-	width:978px;
+	width:1080px;
 	margin-left:auto;
 	margin-right:auto;
 	background:#ECECEC;
@@ -2372,7 +2372,7 @@ big {
 	border-right:1px solid #CCCCCC;
 }
 #my_copyright {
-	width:960px;
+	width:1080px;
 	margin:0 auto;
 	padding:10px 15px;
 	text-align:center;
