@@ -913,15 +913,15 @@ i {
 
 .box_r {
 	background:#fff;
-	padding:5px 10px 0 12px;
+	padding:5px 10px 0 10px;
 	border-left:1px solid #ccc;
 	border-right:1px solid #ccc;
 }
 .box_r ul li a {
 	float:left;
-	width:210px;
+	width:300px;
 	line-height:26px;
-	border-bottom:1px dashed  #ccc;
+	border-bottom:1px dashed  #3D3D72;
 	margin-bottom:-1px;
 }
 /** 侧边评论 **/ 
