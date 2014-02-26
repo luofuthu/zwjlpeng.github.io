@@ -1879,7 +1879,7 @@ ol.tentblogger-top-posts-list li {
 	display:none;
 }
 #sidebar {
-	border:1px solid #ccc;
+	border:1px solid #999;
 }
 .main-top {
 	width:710px;
@@ -2348,7 +2348,7 @@ big {
 }
 #my_footer {
 	width:1080px;
-	padding:10px 15px;
+	padding:10px 0px 10px 0px;
 	margin:0 auto;
 	color:#A40000;
 	text-align:center;
@@ -2374,7 +2374,7 @@ big {
 #my_copyright {
 	width:1080px;
 	margin:0 auto;
-	padding:10px 15px;
+	padding:10px 0px 10px 0px;
 	text-align:center;
 	color:#A40000;
 	font-weight:bold;
