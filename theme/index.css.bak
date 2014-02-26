@@ -1512,7 +1512,7 @@ body {
 	width:100%;
 }
 .context_b {
-	width:702px;
+	width:710px;
 }
 .entrymeta {
 	background:transparent;
