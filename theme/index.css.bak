@@ -427,7 +427,7 @@ a:active {
 .entry_box {
 	position:relative;
 	background:#fff;
-	width:710px;
+	width:730px;
 	padding:12px 10px 0px 10px;
 }
 .entry_box_b {
@@ -508,7 +508,7 @@ i {
 	font-weight:bold;
 }
 .box_entry {
-	width:710px;
+	width:730px;
 }
 .post_entry {
 	font-size:13px;
@@ -1509,7 +1509,7 @@ body {
 	border-bottom:1px solid #d2d2d2;
 }
 .entry_box_b,.entry_sb,.respond_b {
-	width:100%;
+	width:730px;
 }
 .context_b {
 	width:710px;

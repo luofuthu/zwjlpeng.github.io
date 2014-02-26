@@ -427,7 +427,7 @@ a:active {
 .entry_box {
 	position:relative;
 	background:#fff;
-	width:710px;
+	width:730px;
 	padding:12px 10px 0px 10px;
 }
 .entry_box_b {
@@ -500,7 +500,7 @@ i {
 }
 .box_entry_title {
 	float:left;
-	width:650px;
+	width:7300px;
 	margin:0 0 5px 0;
 }
 #post h3 {
@@ -508,7 +508,7 @@ i {
 	font-weight:bold;
 }
 .box_entry {
-	width:710px;
+	width:730px;
 }
 .post_entry {
 	font-size:13px;
