@@ -264,7 +264,7 @@ a:active {
 	background:url(images/topnav_bg.png) repeat-x;
 	z-index:999;
 	width:100%;
-	height:50px;
+	height:65px;
 	top:0;
 	border-bottom:3px solid #FF5141;
 	position:fixed;
@@ -1493,7 +1493,7 @@ body {
 	display:none;
 }
 #wrapper {
-	margin-top: 36px;
+	margin-top: 65px;
 }
 #post,#content {
 	width:724px;
@@ -2036,7 +2036,7 @@ ol.tentblogger-top-posts-list li {
 }
 #top {
 	background:#a40000;
-	margin-top:50px;
+	margin-top:65px;
 }
 .posttag,.sticky-post,.w-left #map {
 	display:none;
