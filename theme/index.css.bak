@@ -500,7 +500,7 @@ i {
 }
 .box_entry_title {
 	float:left;
-	width:650px;
+	width:7300px;
 	margin:0 0 5px 0;
 }
 #post h3 {
