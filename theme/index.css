@@ -272,7 +272,7 @@ a:active {
 	right:0px;
 }
 #hed .top_part {
-	width:950px;
+	width:1080px;
 	margin:0 auto;
 	position:relative;
 }
@@ -1418,7 +1418,7 @@ body {
 	display:none;
 }
 #top #topnav,#featured {
-	width:980px;
+	width:1080px;
 	margin:0 auto;
 	height:80px
 }
@@ -2078,7 +2078,7 @@ ol.tentblogger-top-posts-list li {
 	margin-right:0;
 }
 #top #topnav,.headtop .inner,#featured,#wrapper {
-	width:980px;
+	width:1080px;
 }
 #sidebar {
 	width:231px;
