@@ -264,7 +264,7 @@ a:active {
 	background:url(images/topnav_bg.png) repeat-x;
 	z-index:999;
 	width:100%;
-	height:65px;
+	height:50px;
 	top:0;
 	border-bottom:3px solid #FF5141;
 	position:fixed;
@@ -272,7 +272,7 @@ a:active {
 	right:0px;
 }
 #hed .top_part {
-	width:1080px;
+	width:950px;
 	margin:0 auto;
 	position:relative;
 }
@@ -427,7 +427,7 @@ a:active {
 .entry_box {
 	position:relative;
 	background:#fff;
-	width:730px;
+	width:710px;
 	padding:12px 10px 0px 10px;
 }
 .entry_box_b {
@@ -487,7 +487,7 @@ i {
 
 #post {
 	float:left;
-	width:750px;
+	width:732px;
 }
 .comment_a a {
 	position:absolute;
@@ -500,7 +500,7 @@ i {
 }
 .box_entry_title {
 	float:left;
-	width:7300px;
+	width:650px;
 	margin:0 0 5px 0;
 }
 #post h3 {
@@ -508,7 +508,7 @@ i {
 	font-weight:bold;
 }
 .box_entry {
-	width:730px;
+	width:710px;
 }
 .post_entry {
 	font-size:13px;
@@ -603,7 +603,7 @@ i {
 
 #content {
 	float:left;
-	width:750px;
+	width:732px;
 	overflow:hidden;
 }
 #content h3 {
@@ -633,7 +633,7 @@ i {
 
 .font {
 	float:right;
-	width:80px;
+	width:100px;
 }
 .font a {
 	line-height:27px;
@@ -666,6 +666,8 @@ i {
 }
 .entry_box_s {
 	position:relative;
+	background:#fff;
+	width:700px;
 	margin:0px 0 0 0;
 }
 .entry_sb {
@@ -680,7 +682,7 @@ i {
 	line-height:185%;
 }
 .entry {
-	width:730px;
+	width:700px;
 	margin:5px 0 5px 0;
 	overflow:hidden;
 }
@@ -798,7 +800,7 @@ i {
 
 #sidebar {
 	float:right;
-	width:320px;
+	width:236px;
 }
 #sidebar h3 {
 	padding:0 0 0 15px;
@@ -911,15 +913,15 @@ i {
 
 .box_r {
 	background:#fff;
-	padding:5px 10px 0 10px;
+	padding:5px 10px 0 12px;
 	border-left:1px solid #ccc;
 	border-right:1px solid #ccc;
 }
 .box_r ul li a {
 	float:left;
-	width:300px;
+	width:210px;
 	line-height:26px;
-	border-bottom:1px dashed  #3D3D72;
+	border-bottom:1px dashed  #ccc;
 	margin-bottom:-1px;
 }
 /** 侧边评论 **/ 
@@ -1416,7 +1418,7 @@ body {
 	display:none;
 }
 #top #topnav,#featured {
-	width:1080px;
+	width:980px;
 	margin:0 auto;
 	height:80px
 }
@@ -1491,12 +1493,12 @@ body {
 	display:none;
 }
 #wrapper {
-	margin-top: 65px;
+	margin-top: 36px;
 }
 #post,#content {
-	width:750px;
+	width:724px;
 	/*overflow:hidden;
-	*/padding:0px;
+	*/padding:0 5px;
 	border-right:1px solid #d2d2d2;
 	overflow:visible;
 	_overflow:hidden;
@@ -1509,16 +1511,16 @@ body {
 	border-bottom:1px solid #d2d2d2;
 }
 .entry_box_b,.entry_sb,.respond_b {
-	width:730px;
+	width:100%;
 }
 .context_b {
-	width:710px;
+	width:701px;
 }
 .entrymeta {
 	background:transparent;
 }
 .entry_box_s {
-	padding:0px 10px 0 10px;
+	padding:0px 10px 0;
 	background:transparent;
 }
 #sidebar .box-bottom {
@@ -1593,7 +1595,7 @@ body {
 }
 .entry_box {
 	background:transparent;
-	_width:730px;
+	_width:700px;
 }
 .top_box {
 	background:none;
@@ -1866,6 +1868,7 @@ ol.tentblogger-top-posts-list li {
 }
 #post {
 	border:1px solid #999;
+	padding-top:10px;
 }
 .post_entry {
 	color:#999;
@@ -1877,7 +1880,7 @@ ol.tentblogger-top-posts-list li {
 	display:none;
 }
 #sidebar {
-	border:1px solid #999;
+	border:1px solid #ccc;
 }
 .main-top {
 	width:710px;
@@ -2034,7 +2037,7 @@ ol.tentblogger-top-posts-list li {
 }
 #top {
 	background:#a40000;
-	margin-top:65px;
+	margin-top:50px;
 }
 .posttag,.sticky-post,.w-left #map {
 	display:none;
@@ -2076,10 +2079,10 @@ ol.tentblogger-top-posts-list li {
 	margin-right:0;
 }
 #top #topnav,.headtop .inner,#featured,#wrapper {
-	width:1080px;
+	width:980px;
 }
 #sidebar {
-	width:320px;
+	width:231px;
 }
 #top #topnav #searchbar {
 	border-right:none;
@@ -2338,15 +2341,15 @@ big {
 }
 #my_footer_wrapper {
 	clear:both;
-	width:1080px;
+	width:978px;
 	margin-left:auto;
 	margin-right:auto;
 	background:#ECECEC;
 	border:1px solid #CCCCCC;
 }
 #my_footer {
-	width:1080px;
-	padding:10px 0px 10px 0px;
+	width:930px;
+	padding:10px 15px;
 	margin:0 auto;
 	color:#A40000;
 	text-align:center;
@@ -2361,7 +2364,7 @@ big {
 	font-weight:bold;
 }
 #my_copyright_wrapper {
-	width:1080px;
+	width:978px;
 	margin-left:auto;
 	margin-right:auto;
 	background:#ECECEC;
@@ -2370,9 +2373,9 @@ big {
 	border-right:1px solid #CCCCCC;
 }
 #my_copyright {
-	width:1080px;
+	width:960px;
 	margin:0 auto;
-	padding:10px 0px 10px 0px;
+	padding:10px 15px;
 	text-align:center;
 	color:#A40000;
 	font-weight:bold;
@@ -2402,7 +2405,7 @@ big {
 	border:1px solid #CCCCCC;
 }
 .test_right {
-	width:750px;
+	width:735px;
 	height:auto;
 	float:left;
 	background-color:#fff;
