@@ -428,7 +428,7 @@ a:active {
 	position:relative;
 	background:#fff;
 	width:730px;
-	padding:12px 10px 0px 10px;
+	padding:0px 10px 0px 10px;
 }
 .entry_box_b {
 	position:relative;
@@ -1593,7 +1593,7 @@ body {
 }
 .entry_box {
 	background:transparent;
-	_width:700px;
+	_width:730px;
 }
 .top_box {
 	background:none;
