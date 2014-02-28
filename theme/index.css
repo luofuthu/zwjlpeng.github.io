@@ -220,45 +220,7 @@ a:hover {
 	text-decoration:none;
 }
 a:active {
-	}/** 导航搜索 **/
-
-#searchbar {
-	width:159px;
-	height:28px;
-	float:right;
-	margin:3px 5px 0 0;
-}
-#searchbar #s {
-	height:16px;
-	float:right;
-	margin:5px 0 0 0;
-	border:0 !important;
-	width:130px;
-	background:none;
-	color:#393939;
-	font-size:12px;
-}
-#searchbar #go {
-	position:absolute;
-	float:left;
-	margin:8px 0 0 8px;
-	width:13px;
-	height:13px;
-}
-/** GG搜索 **/
-
-#searchbar #q {
-	float:right;
-	height:16px;
-	margin:6px 5px 0 0;
-	padding:0px !important;
-	border:none !important;
-	width:122px;
-	background:transparent !important;
-	color:#393939;
-	font-size:12px;
-}
-/** 页眉 **/
+	}
 
 #hed {
 	background:url(images/topnav_bg.png) repeat-x;
@@ -267,7 +229,6 @@ a:active {
 	height:65px;
 	top:0;
 	border-bottom:3px solid #FF5141;
-	position:fixed;
 	bottom:0px;
 	right:0px;
 }
@@ -454,14 +415,6 @@ a:active {
 	padding:10px;
 	height:32px;
 	margin:0 0 30px 0;
-}
-i {
-	position:absolute;
-	width:5px;
-	height:5px;
-	font-size:0;
-	background:url(images/yuan.gif);
-	background-repeat:no-repeat;
 }
 .lt {
 	left:-1px;
@@ -999,64 +952,6 @@ i {
 	width:100px;
 	height:66px;
 }
-/****** 评论 ******/
-
-#comments {
-	background:#fff;
-	font-size:13px;
-	margin:10px 0 5px 0;
-	padding:10px;
-	font-weight:bold;
-	border:1px solid #ccc;
-	-moz-border-radius:5px;
-	-webkit-border-radius:5px;
-	border-radius:4px;
-}
-.commentlist {
-	}.commentlist .comment {
-	margin:10px 0 0 0;
-	padding:10px;
-	list-style:none;
-	background:#fafafa;
-	border:1px solid #ccc;
-	-moz-border-radius:3px;
-	-webkit-border-radius:3px;
-	border-radius:4px;
-}
-.commentlist li {
-	position:relative;
-}
-.commentlist .alt {
-	background:#fff;
-}
-.commentlist p {
-	margin:0 0 0 58px;
-}
-/** 回复 **/
-
-.reply {
-	position:absolute;
-	float:right;
-	right:20px;
-	top:-1px;
-}
-.reply_t a:hover {
-	color:#0196e3;
-}
-.comment-reply-link {
-	font-size:12px;
-	color:#fff;
-	text-align:center;
-	padding:2px 15px 2px 15px;
-	text-shadow:0px 1px 0px #000;
-}
-.comment-reply-link:hover {
-	color:#d6d6d6;
-}
-.cancel-comment-reply a {
-	font-size:12px;
-	color:#0196e3;
-}
 .floor {
 	position:absolute;
 	float:right;
@@ -1065,113 +960,6 @@ i {
 	right:100px;
 	top:0px;
 }
-/** 日期 **/
-
-.comment-author {
-	line-height:23px;
-}
-.datetime,.datetime a {
-	padding:0 0 5px 0;
-	color:#B2B2B2;
-	text-shadow:0px 1px 0px #fff;
-}
-/** 表单 **/
-
-#respond h3 {
-	margin:0 0 0 10px;
-}
-.respond_b {
-	position:relative;
-	background:#fff;
-	width:730px;
-	height:10px;
-}
-#respond_box {
-	position:relative;
-	background:#fff;
-	width:710px;
-	margin:10px 0 0 0;
-	padding:10px;
-}
-#commentform {
-	float:left;
-	margin:0 0 0 10px;
-	width:70%;
-}
-#commentform p {
-	margin:5px 0;
-	color:#000;
-}
-#commentform label {
-	color:#868686;
-}
-#commentform {
-	color:#868686;
-	margin-top:10px;
-}
-#commentform input {
-	margin:5px 5px 1px 0;
-	padding:5px;
-}
-#commentform input:focus {
-	border:1px solid #ccc;
-}
-#commentform #author {
-	background:#fff  url() no-repeat 0 -37px;
-	width:210px;
-	padding:4px 3px 4px 25px;
-	border:1px solid #ccc
-}
-#commentform #email {
-	background:#fff url() no-repeat 0 -18px;
-	width:210px;
-	padding:4px 3px 4px 25px;
-	border:1px solid #ccc
-}
-#commentform #url {
-	background:#fff url( ) no-repeat 0 2px;
-	width:210px;
-	padding:4px 3px 4px 25px;
-	border:1px solid #ccc
-}
-#commentform textarea {
-	width:98%;
-	height:120px;
-	font-size:12px;
-	padding:4px;
-	margin:15px 0 0 0;
-	border:1px solid #ccc;
-}
-#commentform textarea:focus {
-	border:1px solid #ccc;
-}
-#commentform input.submit {
-	cursor:pointer;
-	width:86px;
-	height:25px;
-	color:#fff;
-	text-align:center;
-	text-shadow:0px 1px 0px #393939;
-	border:0px;
-}
-#commentform .submit:hover {
-	cursor:pointer;
-	font-weight:bold;
-}
-#commentform input#reset {
-	cursor:pointer;
-	width:86px;
-	height:25px;
-	color:#393939;
-	text-align:center;
-	text-shadow:0px 1px 0px #fff;
-	border:0px;
-}
-#commentform #reset:hover {
-	cursor:pointer;
-	font-weight:bold;
-}
-/** 表单结束 **/
 
 .submitted {
 	float:left;
@@ -1197,52 +985,6 @@ i {
 .current {
 	color:#fff;
 	background:#0196E3;
-}
-/** 头像 **/
-
-#avatar {
-	float:left;
-	width:48px;
-	height:48px;
-	margin:0 10px 0 0;
-}
-#avatar img {
-	}.author {
-	line-height:38px;
-}
-input#comment_mail_notify {
-	width:12px;
-	border:none;
-}
-.user_avatar img,.author_avatar img {
-	float:left;
-	margin:0 10px 0  0;
-	padding:2px;
-	border:1px solid #ccc;
-}
-.set_avatar {
-	float:right;
-	display:none;
-	width:96px;
-	height:96px;
-	overflow:hidden;
-}
-.set_avatar a {
-	float:right;
-	text-align:center;
-	width:96px;
-	height:96px;
-	padding:70px 0 0 0;
-}
-/** ajax **/
-
-#edita {
-	padding:0 0 0 64px;
-}
-.comment-reply-link_a,#cancel-comment-reply-link {
-	margin:0 0 0 10px;
-	padding:0 5px 0 5px;
-	border:1px solid #0196e3;
 }
 /** 翻页 **/
 
@@ -1327,59 +1069,8 @@ ul.xoxo li a {
 	color:#000;
 	text-decoration:underline;
 }
-.comment-author .reply {
-	background:none;
-}
 #featured .item .boxCaption {
 	top:0;
-}
-.comment-reply-link {
-	color:#d6d6d6;
-	text-shadow:0 0 0 #000000;
-}
-.comment-reply-link:hover {
-	color:#333;
-}
-#respond_box,.respond_b {
-	padding:0;
-	background:none;
-	border:none;
-}
-#respond_box .lt,#respond_box .rt,#respond_b .lt,#respond_b .rt {
-	display:none;
-}
-.commentlist .comment {
-	border:1px dashed #fff;
-	background:#fafafa;
-	border-radius:0;
-}
-.commentlist .comment:hover {
-	border:1px dashed #b8b8b8
-}
-#top {
-	position:relative;
-	height:20px;
-}
-#top #topnav {
-	/*position:absolute;
-	top:72px;
-	width:100%;
-	z-index:999;
-	*/
-}
-#featured .item .boxCaption0 {
-	background:url("images/bg-box.png") repeat scroll left top transparent;
-	color:#FFFFFF;
-	margin:115px 0 0 3px;
-	padding:10px;
-	position:absolute;
-	text-shadow:0 1px 0 #000000;
-	top:0;
-	width:211px;
-	z-index:4;
-}
-.respond_b {
-	margin-bottom:10px
 }
 #top .home {
 	width:77px;
@@ -1489,9 +1180,6 @@ body {
 }
 .postdate {
 	display:none;
-}
-#wrapper {
-	margin-top: 65px;
 }
 #post,#content {
 	width:750px;
@@ -1856,13 +1544,8 @@ ol.tentblogger-top-posts-list li {
 .box_entry_title {
 	float:none;
 }
-.box_entry_title h4 a {
-	/*font-size:18px;
-	*/
-}
 #wrapper {
 	border:none;
-	width:985px;
 }
 #post {
 	border:1px solid #999;
@@ -2034,7 +1717,6 @@ ol.tentblogger-top-posts-list li {
 }
 #top {
 	background:#a40000;
-	margin-top:65px;
 }
 .posttag,.sticky-post,.w-left #map {
 	display:none;
