@@ -365,16 +365,6 @@ a:hover {
 
 /** 缩略图 **/
 
-.postdate {
-	float:left;
-	position:relative;
-	width:140px;
-	margin:110px 0 0 0;
-	color:#737373;
-	text-align:center;
-	z-index:4;
-	border:1px solid #ccc;
-}
 .thumbnail_box {
 	margin:5px 10px 5px 0;
 }
@@ -526,13 +516,6 @@ a:hover {
 	padding:2px;
 	border:1px solid #ccc;
 }
-.author_pic {
-	width:48px;
-	margin:0px auto 0;
-}
-.author_pic img {
-	border:0;
-}
 .context_b {
 	position:relative;
 	font-size:13px;
@@ -560,28 +543,7 @@ a:hover {
 	width:700px;
 	padding:10px 10px 0 10px;
 }
-.relatedposts {
-	float:left;
-	width:250px;
-	padding:10px;
-}
-.relatedposts ol li {
-	line-height:24px;
-	margin:0 0 0 10px;
-	color:#8C8C8C;
-}
-.related_img {
-	float:right;
-	width:250px;
-	margin:3px 0 0 0;
-}
-.related_img_box {
-	float:left;
-	width:250px;
-	height:300px;
-	margin:0 2px 2px 0px;
-	padding:5px;
-}
+
 /** 侧边栏 **/
 
 #sidebar {
@@ -627,36 +589,6 @@ a:hover {
 }
 .box ul li {
 	line-height:23px;
-}
-/** tabs **/
-
-#tabs {
-	position:relative;
-	width:236px;
-	margin:28px 0 0 0;
-}
-.htotabs {
-	position:absolute;
-	left:0px;
-	top:-29px;
-}
-.htotabs li {
-	float:left;
-	display:inline;
-	cursor:pointer;
-}
-.htotabs li a {
-	color:#fff;
-	margin:0 5px 0 0;
-	padding:5px 10px 5px 10px;
-	line-height:35px;
-	text-shadow:0px 1px 0px #393939;
-}
-#tabs ul.htotabs li a.selected,#tabs ul.htotabs li a:hover {
-	background:#717171 url(   ) no-repeat;
-	color:#fff;
-	margin:0 5px 0 0;
-	padding:5px 10px 5px 10px;
 }
 .widget1 a {
 	background:#7ab951 url(   ) no-repeat -136px 0;
