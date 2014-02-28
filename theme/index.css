@@ -336,15 +336,7 @@ a:hover {
 	float:left;
 	width:750px;
 }
-.comment_a a {
-	position:absolute;
-	right:45px;
-	top:13px;
-	color:#B2B2B2;
-	font-size:14px;
-	font-weight:bold;
-	padding:0 3px 0 3px;
-}
+
 .box_entry_title {
 	float:left;
 	width:730px;
@@ -370,70 +362,9 @@ a:hover {
 .new {
 	float:right;
 }
-.sticky-post {
-	float:right;
-	width:36px;
-	height:29px;
-}
-.cat_ico {
-	float:left;
-	width:40px;
-	height:40px;
-	margin:0 5px 2px 0px;
-	white-space:nowrap;
-	overflow:hidden;
-}
-.posttag {
-	background:url() no-repeat 0 -100px;
-}
-.edit {
-	background:url() no-repeat 0 -82px;
-}
-.archive_more {
-	float:right;
-}
-.archive_more a,.archive_more a:visited {
-	float:left;
-	width:87px;
-	height:25px;
-	color:#fff;
-	line-height:25px;
-	text-align:center;
-	text-shadow:0px 1px 0px #393939;
-}
-.archive_more a:hover,.archive_more a:active {
-	width:87px;
-	height:25px;
-	color:#393939;
-	text-shadow:0px 1px 0px #f1f1f1;
-}
-.posttag {
-	float:left;
-	font-size:12px;
-	line-height:20px;
-	width:600px;
-	margin:5px 0 0 0;
-	color:#b2b2b2;
-	word-break:keep-all;
-	white-space:nowrap;
-	overflow:hidden;
-	z-index:4;
-}
-.posttag a,.posttag a:visited {
-	color:#737373;
-}
+
 /** 缩略图 **/
 
-.postdate {
-	float:left;
-	position:relative;
-	width:140px;
-	margin:110px 0 0 0;
-	color:#737373;
-	text-align:center;
-	z-index:4;
-	border:1px solid #ccc;
-}
 .thumbnail_box {
 	margin:5px 10px 5px 0;
 }
