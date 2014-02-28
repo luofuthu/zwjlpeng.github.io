@@ -699,7 +699,6 @@ ol.tentblogger-top-posts-list {
 	background:#fff
 }
 ol.tentblogger-top-posts-list li {
-	background:url("images/point2.gif") no-repeat scroll 0.5em 12px;
 	height:24px;
 	line-height:24px;
 	padding-left:15px;
@@ -1047,11 +1046,14 @@ ol.tentblogger-top-posts-list li {
 #content {
 	border:1px solid #999;
 }
-/***********=====复写现有菜单=====***********/
 
 #top #topnav li li {
 	background:none;
 }
+#top #topnav li a:hover,#top #topnav li a:active {
+	background:url("images/w_menubg.gif") repeat-x;
+}
+
 #top #topnav li li {
 	height:auto;
 	border:none

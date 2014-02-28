@@ -1044,14 +1044,9 @@ ol.tentblogger-top-posts-list li {
 	overflow:hidden;
 	margin-bottom:5px;
 }
-#sidebar .cat-post-item a {
-	padding-left:14px;
-	background:url(http://www.8844.com/images/n_i.gif) no-repeat 0 7px;
-}
 #content {
 	border:1px solid #999;
 }
-/***********=====复写现有菜单=====***********/
 
 #top #topnav li li {
 	background:none;
@@ -1059,10 +1054,7 @@ ol.tentblogger-top-posts-list li {
 #top #topnav li a:hover,#top #topnav li a:active {
 	background:url("images/w_menubg.gif") repeat-x;
 }
-#top #topnav li ul {
-	width:440px;
-	background:url("images/w_t.gif") no-repeat 39px 2px;
-}
+
 #top #topnav li li {
 	height:auto;
 	border:none
