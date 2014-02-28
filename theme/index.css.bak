@@ -892,45 +892,8 @@ ul.blogroll li {
 	width:960px;
 	margin:0 auto;
 }
-.dlogo {
-	float:left;
-	margin-right:25px;
-}
-.foot p {
-	float:left;
-	margin:0;
-	padding:0;
-	line-height:25px;
-	width:725px;
-}
-.foot .dmenu {
-	margin-top:37px;
-	margin-left:-7px;
-}
-.dmenu a {
-	padding:0 7px;
-	text-decoration:none;
-	border-right:1px solid #777;
-	line-height:12px;
-}
-.dmenu a:hover {
-	text-decoration:underline;
-}
-.red {
-	color:#ad0e16;
-}
-.dmenu a.last {
-	border:none;
-}
-.footer_bottom,.footer_bottom_a {
-	display:none;
-}
-#commentform {
-	width:71%;
-}
-.login_t {
-	display:none
-}
+
+
 .wumii-hook div {
 	display:none;
 }
