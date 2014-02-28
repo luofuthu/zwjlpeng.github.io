@@ -1270,70 +1270,6 @@ a:hover {
 	font-weight:bold;
 }
 
-/**右侧part**/
-
-#right_adlayout {
-	width:230px;
-	height:100px;
-	background-color:#EEF4D3;
-}
-#right_content {
-	width:230px;
-	height:180px;
-	background-color:#1F76BC;
-}
-.menu_title {
-	font-size:16px;
-	color:#003300;
-	background-color:#ECECEC;
-	width:230px;
-	margin-left:-20px;
-	padding:10px 0 10px 0;
-	text-align:center;
-}
-.menu_list {
-	width:230px;
-	margin-left:-20px;
-}
-.menu_head {
-	padding:5px 10px;
-	cursor:pointer;
-	position:relative;
-	margin:1px;
-	font-weight:bold;
-	background:#eef4d3 url(images/left.png) center right no-repeat;
-}
-.menu_body {
-	display:none;
-}
-.menu_body a {
-	display:block;
-	color:#006699;
-	background-color:#EFEFEF;
-	padding-left:10px;
-	font-weight:bold;
-	text-decoration:none;
-}
-.menu_body a:hover {
-	color:#000000;
-	text-decoration:underline;
-}
-#right_flash {
-	width:230px;
-	height:180px;
-}
-#email_feed {
-	width:230px;
-	margin-top:30px;
-	color:#003300;
-	background-color:#ECECEC;
-	font-size:18px;
-	font-weight:bold;
-	padding:15px 0 15px 0;
-	text-align:center;
-}
-
-
 /** 顶部导航 **/
 #topnav {
 	font-size: 13px;
@@ -1452,27 +1388,11 @@ a:hover {
 #map {
 	background: #fff url() 0 -196px;
 	}
-#feed a  {
-	background:url() no-repeat -87px -146px;
-	}
-/** 首页 **/
-.sticky-post {
-	background:url() -294px -111px;
-	}
-.archive_more a,.archive_more a:visited {
-	background: url() 0 -170px;
-	}
-.archive_more a:hover,.archive_more a:active {
-	background: url() 0 -146px;
-	}
 /** 侧边栏 **/
 #sidebar h3 {
 	background:#fff url() no-repeat 0 -223px;
 	}
-/** 页脚 **/
-.blogtitle {
-	background: #f2f2f2 url( ) no-repeat -236px -74px;
-	}
+
  /** 友情链接页面 **/
 #map_l {
 	background: #fff url( ) 0 -196px;
@@ -1483,16 +1403,4 @@ a:hover {
  /** 自用 **/
 .bd p input{
 	background: url( ) 0 -170px;
-	}
- /** 归档 **/
-#expand_collapse{
-	background: url( ) 0 -170px;
-	}
-/** 分类列表 **/
-.cat_post_box {
-	background: url( ) no-repeat;
-	background-position:-960px -46px;
-	}
-.news {
-	background:url( ) no-repeat -232px -113px;
 	}
