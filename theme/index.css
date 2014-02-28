@@ -1135,9 +1135,7 @@ ol.tentblogger-top-posts-list li {
 	overflow:hidden;
 	position:relative;
 }
-.w-tab ul li {
-	line-height:15px;
-}
+
 .box_entry_title {
 	margin:0;
 	padding:0;
@@ -1148,12 +1146,6 @@ ol.tentblogger-top-posts-list li {
 .post_entry p {
 	text-align:justify;
 	text-justify:inter-ideograph;
-}
-.cat-post-item p {
-	text-align:justify;
-	text-justify:inter-ideograph;
-	padding-right:25px;
-	font-size:14px;
 }
 .pagination .current {
 	background:#d25e63
@@ -1177,10 +1169,6 @@ a:hover {
 #content h3 {
 	font-size:14px;
 }
-.archive p {
-	padding-right:20px;
-	color:#333;
-}
 #wrapper .w-search .entry_box {
 	height:143px;
 }
@@ -1189,30 +1177,6 @@ a:hover {
 }
 #content {
 	position:relative;
-}
-#ckepopw {
-	border:1px solid #ccc;
-	padding:2px;
-	background:#fff;
-	z-index:999;
-	height:16px;
-}
-.s-s {
-	position:absolute;
-	top:70px;
-	left:20px;
-}
-.s-top {
-	position:fixed;
-	top:0;
-}
-.footer_top {
-	position:relative;
-	background:#f2f2f2;
-	height:33px;
-	margin:15px 0 0 0;
-	line-height:33px;
-	border:1px solid #ccc;
 }
 #menu {
 	float:right;
@@ -1229,13 +1193,7 @@ a:hover {
 #menu li a:hover {
 	color:#000;
 }
-.footer_top h2 a {
-	padding:0 0 0 40px;
-	margin:0 0 0 10px;
-}
-.blogtitle {
-	width:110px;
-}
+
 .link {
 	background:#ECECEC;
 	height:40px;
@@ -1265,10 +1223,7 @@ a:hover {
 	width:978px;
 	margin:0 0 5px 0;
 }
-.footer_bottom {
-	text-align:center;
-	padding:10px;
-}
+
 #my_footer_wrapper {
 	clear:both;
 	width:1080px;
@@ -1314,32 +1269,7 @@ a:hover {
 	color:#A40000;
 	font-weight:bold;
 }
-/**滚动设计**/
 
-.test_left {
-	width:230px;
-	height:950px;
-	float:left;
-	margin-left:12px;
-}
-.test_left1 {
-	width:230px;
-	height:400px;
-	background-color:#fff;
-	border:1px solid #CCCCCC;
-}
-.test_left2 {
-	width:230px;
-	height:550px;
-	background-color:#fff;
-	border:1px solid #CCCCCC;
-}
-.test_right {
-	width:750px;
-	height:auto;
-	float:left;
-	background-color:#fff;
-}
 /**右侧part**/
 
 #right_adlayout {
