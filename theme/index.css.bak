@@ -875,23 +875,7 @@ a:active {
 	border-bottom:1px dashed  #3D3D72;
 	margin-bottom:-1px;
 }
-/** 侧边评论 **/ 
 
-.r_comments {
-	background:#fff;
-	border-left:1px solid #ccc;
-	border-right:1px solid #ccc;
-}
-.r_comments ul li {
-	padding:5px 10px 5px 10px;
-	line-height:20px;
-}
-.r_comments li img {
-	height:32px;
-	float:left;
-	padding:1px;
-	margin:4px 4px 0 0;
-}
 /** 侧边读者墙 **/
 
 .box_comment ul li {
@@ -902,9 +886,6 @@ a:active {
 .mostactive {
 	margin:6px 0 0 6px;
 	_margin-left:5px;
-}
-.box_comment a img {
-	border:1px solid #ccc;
 }
 /** 侧边分类 **/
 
@@ -923,44 +904,6 @@ a:active {
 	line-height:26px;
 	padding:5px 10px 0 10px;
 }
-/** 网站统计 **/ 
-
-.statistics ul {
-	float:left;
-	width:50%;
-}
-.statistics_c ul {
-	float:left;
-	width:50%;
-}
-/** 相册 **/ 
-
-.mimg {
-	background:#fff;
-	height:150px;
-	padding:5px 0 0 11px;
-	border-left:1px solid #ccc;
-	border-right:1px solid #ccc;
-}
-.mimg_c {
-	float:left;
-	width:100px;
-	height:66px;
-	padding:3px;
-}
-.mimg_c img,.mimg_c a {
-	width:100px;
-	height:66px;
-}
-.floor {
-	position:absolute;
-	float:right;
-	font-size:14px;
-	font-weight:bold;
-	right:100px;
-	top:0px;
-}
-
 .submitted {
 	float:left;
 }
@@ -1071,20 +1014,6 @@ ul.xoxo li a {
 }
 #featured .item .boxCaption {
 	top:0;
-}
-#featured .item .boxCaption0 {
-	background:url("images/bg-box.png") repeat scroll left top transparent;
-	color:#FFFFFF;
-	margin:115px 0 0 3px;
-	padding:10px;
-	position:absolute;
-	text-shadow:0 1px 0 #000000;
-	top:0;
-	width:211px;
-	z-index:4;
-}
-.respond_b {
-	margin-bottom:10px
 }
 #top .home {
 	width:77px;
@@ -1422,28 +1351,7 @@ ul.blogroll li {
 .tmore #tmorei a {
 	z-index:999;
 }
-.recent-comment .comment-meta {
-	display:block;
-	height:36px;
-	overflow:hidden;
-	float:left;
-	width:145px;
-}
-.recent-comment .comment-author-gravatar {
-	display:block;
-}
-.recent-comment .comment-author-gravatar {
-	margin-bottom:35px;
-	_margin-bottom:0;
-}
-ul.recent-comments-list li.recent-comment {
-	height:70px;
-	overflow:hidden;
-	border-bottom:1px dashed #CCCCCC;
-}
-.recent-comments-list .recent-comment a.comment-link {
-	border-bottom:none;
-}
+
 #commentform .picture,#commentform p a img {
 	display:none;
 }
@@ -1576,151 +1484,16 @@ ol.tentblogger-top-posts-list li {
 #sidebar {
 	border:1px solid #999;
 }
-.main-top {
-	width:710px;
-	border:1px solid #999;
-	margin-bottom:20px;
-	padding:10px;
-}
-.main-top img {
-	display:block;
-}
-.box-bottom {
-	display:none;
-}
+
 .box {
 	border:none;
 }
-.wtitle {
-	height:40px;
-	padding-bottom:7px;
-	border-bottom:2px solid #ccc;
-	line-height:40px;
-}
-.wtitle h2 {
-	float:left;
-	font-size:16px;
-	padding:0 10px 0 68px;
-	font-size:14px;
-}
-.main-top h2 {
-	background:url(images/w_icon1.gif) no-repeat left bottom;
-	height:40px;
-	width:100px;
-}
+
 #post h2 {
 	background:url(images/w_icon2.gif) no-repeat left bottom;
 	height:40px;
 	width:100px;
 }
-.wtitle .ct {
-	float:right;
-	margin-top:12px;
-	width:450px;
-}
-.wtitle .ct a {
-	padding:0 10px;
-	border-right:1px solid #ccc;
-	display:block;
-	float:left;
-	height:15px;
-	line-height:15px;
-}
-.wtitle .ct a.last {
-	border:none;
-}
-.wtitle .ct .more {
-	color:#d25e63;
-	padding-left:50px;
-	border:none;
-	padding-right:0;
-	float:right;
-	line-height:30px;
-}
-.wtitle .ct .w-wid {
-	float:right;
-}
-.main-top h3 {
-	display:none;
-}
-.main-top #wbox-id0 .post-title {
-	font-size:24px;
-	font-weight:bold;
-	display:block;
-	height:45px;
-	line-height:45px;
-}
-.main-top #wbox-id0 img {
-	float:left;
-	padding-right:20px;
-	width:220px;
-	height:145px;
-}
-.main-top #wbox-id0 ul li {
-	height:200px;
-}
-.main-top #wbox-id0 ul li {
-	display:none;
-}
-.main-top #wbox-id0 ul li.on2 {
-	display:block;
-}
-.main-top #wbox-id1 ul li {
-	float:left;
-	width:50%;
-}
-.main-top #wbox-id1 ul li a {
-	padding-left:14px;
-	background:url(http://www.8844.com/images/n_i.gif) no-repeat 0 7px;
-}
-.w-tab {
-	position:relative;
-}
-.w-tab ul li {
-	background:#000;
-	color:#fff;
-	float:left;
-	margin-right:3px;
-	padding:0px 5px;
-	cursor:pointer;
-	border:1px solid #ccc;
-	font-weight:bold
-}
-.w-tab ul li.on2 {
-	background:#fff;
-	color:#626262;
-}
-.w-tab ul {
-	position:absolute;
-	top:173px;
-	left:117px;
-}
-.w-left {
-	float:left;
-}
-.wp-tag-cloud {
-	font-weight:bold;
-}
-#wbox-id5,#wbox-id3 {
-	height:30px;
-}
-#wbox-id4,#wbox-id2 {
-	padding-top:40px;
-	height:90px;
-}
-#wbox-id5 .wp-tag-cloud,#wbox-id3 .wp-tag-cloud {
-	margin-top:-120px;
-}
-#wbox-id5 ul li,#wbox-id3 ul li {
-	float:left;
-	padding:0 7px;
-}
-#wjbox-id13,#wjbox-id15 {
-	display:none;
-}
-/***********=====复写现有=====***********/
-
-
 
 #top #topnav #searchbar {
 	margin-top:2px;
@@ -1741,33 +1514,7 @@ ol.tentblogger-top-posts-list li {
 #sidebar {
 	float:right;
 }
-.w_rss {
-	float:right;
-	width:253px;
-	margin-top:51px;
-}
-.w_rss a {
-	float:left;
-	margin-right:20px;
-}
-.w_rss a.w_sina {
-	display:block;
-	width:60px;
-	height:72px;
-	background:url("images/sina.gif") no-repeat;
-}
-.w_rss a.w_rss2 {
-	display:block;
-	width:60px;
-	height:72px;
-	background:url("images/rss.gif") no-repeat;
-}
-.w_rss a.w_gadd {
-	display:block;
-	width:73px;
-	height:72px;
-	background:url("images/g_add.gif") no-repeat;
-}
+
 #top #topnav #searchbar {
 	margin-right:0;
 }
@@ -1782,10 +1529,6 @@ ol.tentblogger-top-posts-list li {
 }
 .wp-tag-cloud li {
 	float:left
-}
-.main-top #wbox-id0 .post-title,.box_entry_title h4 a,.archive_title h4 a {
-	/*font-family:"宋体";
-	*/
 }
 #sidebar .cat-post-item {
 	height:20px;
@@ -1959,15 +1702,6 @@ a:hover {
 .s-top {
 	position:fixed;
 	top:0;
-}
-/**footer设计**/
-big {
-	position:absolute;
-	width:5px;
-	height:5px;
-	font-size:0;
-	background:url(images/yuan_b.gif);
-	background-repeat:no-repeat;
 }
 .footer_top {
 	position:relative;
@@ -2281,10 +2015,6 @@ big {
 #topnav  li li li li:hover ul, #topnav  li li li li.sfhover ul {
 	left: auto;
 	}
-/** 导航搜索 **/
-#searchbar {
-	background: url() no-repeat -124px -42px;
-	}
 /** 现在位置 **/
 #map {
 	background: #fff url() 0 -196px;
@@ -2305,21 +2035,6 @@ big {
 /** 侧边栏 **/
 #sidebar h3 {
 	background:#fff url() no-repeat 0 -223px;
-	}
-/** 回复 **/
-.reply {
-	background:url() -88px -172px;
-	}
-/** 表单 **/
-#commentform input.submit {
-	background: url( ) 0 -170px;
-	}
-#commentform input#reset {
-	background: url( ) 0 -146px;
-	}
-/** 头像 **/
-.set_avatar {
-	background:url( ) -369px -73px;
 	}
 /** 页脚 **/
 .blogtitle {
