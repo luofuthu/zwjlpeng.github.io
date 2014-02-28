@@ -1194,35 +1194,6 @@ a:hover {
 	color:#000;
 }
 
-.link {
-	background:#ECECEC;
-	height:40px;
-	line-height:25px;
-	padding:10px;
-	list-style:none;
-}
-.link li h2 {
-	float:left;
-	width:940px;
-	line-height:20px;
-	font-weight:normal;
-	color:#0196e3;
-}
-.link li ul li {
-	float:left;
-	margin:0 10px 0 0;
-}
-.link li a {
-	float:left;
-	display:inline;
-	white-space:nowrap;
-	padding:0 10px 0 0;
-}
-.link_b {
-	position:relative;
-	width:978px;
-	margin:0 0 5px 0;
-}
 
 #my_footer_wrapper {
 	clear:both;
@@ -1293,9 +1264,6 @@ a:hover {
 	}
 #topnav .current-menu-item  li a,#topnav .sub-menu a ,#topnav .current_page_item li a {
 	color: #393939;
-	}
-.sub-menu a:hover {
-	color: #0196e3 !important;
 	}
 #topnav li {
 	height:36px;
@@ -1392,18 +1360,7 @@ a:hover {
 #sidebar h3 {
 	background:#fff url() no-repeat 0 -223px;
 	}
-
- /** 友情链接页面 **/
-#map_l {
-	background: #fff url( ) 0 -196px;
-	}
-#map_r {
-	background: #fff url( ) -453px -196px;
-	}
  /** 自用 **/
 .bd p input{
 	background: url( ) 0 -170px;
-	}
-.news {
-	background:url( ) no-repeat -232px -113px;
 	}

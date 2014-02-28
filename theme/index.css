@@ -1044,10 +1044,6 @@ ol.tentblogger-top-posts-list li {
 	overflow:hidden;
 	margin-bottom:5px;
 }
-#sidebar .cat-post-item a {
-	padding-left:14px;
-	background:url(http://www.8844.com/images/n_i.gif) no-repeat 0 7px;
-}
 #content {
 	border:1px solid #999;
 }
@@ -1055,13 +1051,6 @@ ol.tentblogger-top-posts-list li {
 
 #top #topnav li li {
 	background:none;
-}
-#top #topnav li a:hover,#top #topnav li a:active {
-	background:url("images/w_menubg.gif") repeat-x;
-}
-#top #topnav li ul {
-	width:440px;
-	background:url("images/w_t.gif") no-repeat 39px 2px;
 }
 #top #topnav li li {
 	height:auto;
@@ -1194,35 +1183,6 @@ a:hover {
 	color:#000;
 }
 
-.link {
-	background:#ECECEC;
-	height:40px;
-	line-height:25px;
-	padding:10px;
-	list-style:none;
-}
-.link li h2 {
-	float:left;
-	width:940px;
-	line-height:20px;
-	font-weight:normal;
-	color:#0196e3;
-}
-.link li ul li {
-	float:left;
-	margin:0 10px 0 0;
-}
-.link li a {
-	float:left;
-	display:inline;
-	white-space:nowrap;
-	padding:0 10px 0 0;
-}
-.link_b {
-	position:relative;
-	width:978px;
-	margin:0 0 5px 0;
-}
 
 #my_footer_wrapper {
 	clear:both;
@@ -1293,9 +1253,6 @@ a:hover {
 	}
 #topnav .current-menu-item  li a,#topnav .sub-menu a ,#topnav .current_page_item li a {
 	color: #393939;
-	}
-.sub-menu a:hover {
-	color: #0196e3 !important;
 	}
 #topnav li {
 	height:36px;
@@ -1391,14 +1348,6 @@ a:hover {
 /** 侧边栏 **/
 #sidebar h3 {
 	background:#fff url() no-repeat 0 -223px;
-	}
-
- /** 友情链接页面 **/
-#map_l {
-	background: #fff url( ) 0 -196px;
-	}
-#map_r {
-	background: #fff url( ) -453px -196px;
 	}
  /** 自用 **/
 .bd p input{
