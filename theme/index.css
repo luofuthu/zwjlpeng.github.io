@@ -359,11 +359,6 @@ a:hover {
 .info a:hover {
 	color:#0196e3;
 }
-.new {
-	float:right;
-}
-
-/** 缩略图 **/
 
 .thumbnail_box {
 	margin:5px 10px 5px 0;
@@ -377,7 +372,6 @@ a:hover {
 	width:140px;
 	height:100px;
 }
-/** 内页 **/
 
 #content {
 	float:left;
@@ -388,25 +382,7 @@ a:hover {
 	font-weight:bold;
 	color:#000;
 }
-/** 档案页面 **/
 
-.archive_box {
-	width:710px;
-}
-.archive {
-	font-size:13px;
-	line-height:24px;
-}
-.archive_title_box {
-	width:710px;
-	margin:0 0 5px 0;
-}
-.archive_info,.archive_info a,.archive_info a:visited {
-	color:#737373;
-}
-.archive_info a:hover {
-	color:#0196e3;
-}
 /** 正文 **/
 
 .font {

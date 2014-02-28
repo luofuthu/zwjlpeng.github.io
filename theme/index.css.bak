@@ -359,11 +359,6 @@ a:hover {
 .info a:hover {
 	color:#0196e3;
 }
-.new {
-	float:right;
-}
-
-/** 缩略图 **/
 
 .thumbnail_box {
 	margin:5px 10px 5px 0;
@@ -377,7 +372,6 @@ a:hover {
 	width:140px;
 	height:100px;
 }
-/** 内页 **/
 
 #content {
 	float:left;
@@ -652,10 +646,6 @@ ul.xoxo li {
 }
 ul.xoxo li img {
 	float:left;
-	/*width:50px;
-	height:50px;
-	*/
-
 	padding-right:7px;
 }
 ul.xoxo li a {
