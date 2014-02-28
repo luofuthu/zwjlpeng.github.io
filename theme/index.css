@@ -893,38 +893,9 @@ ul.blogroll li {
 	margin:0 auto;
 }
 
-.tmore {
-	position:relative;
-}
-.tmore #tmorei {
-	position:absolute;
-	left:0;
-	top:20px;
-	z-index:999;
-	display:none;
-}
-.tmore #tmorei a {
-	border-bottom:1px solid #24292D;
-	border-top:1px solid #3C4246;
-	display:block;
-	height:24px;
-	padding-left:3px;
-	background:#30373b;
-	width:57px;
-}
-.on #tmorei {
-	display:block;
-}
 .headtop {
 	z-index:999;
 	position:relative;
-}
-.tmore #tmorei a {
-	z-index:999;
-}
-
-#commentform .picture,#commentform p a img {
-	display:none;
 }
 .headtop {
 	background:none;
@@ -957,13 +928,7 @@ ul.blogroll li {
 #top,#top #topnav,#top #topnav ul {
 	z-index:998;
 }
-.tmore {
-	background:#E11F00;
-	padding:2px 10px;
-}
-.tmore #tmorei a {
-	width:77px
-}
+
 #wrapper #scroll a.scroll_b {
 	display:none;
 }
@@ -982,10 +947,7 @@ ol.tentblogger-top-posts-list li {
 #scroll a.scroll_c {
 	display:none
 }
-.kfd {
-	float:right;
-	width:205px;
-}
+
 .menu {
 	float:left;
 }
@@ -993,37 +955,18 @@ ol.tentblogger-top-posts-list li {
 	height:25px;
 	background:#464646;
 }
-.tmore {
-	background:none;
-}
-.kfd img {
-	float:left;
-}
+
+
 .headtop .inner .kfd a {
 	color:#E0624F;
 	line-height:28px;
 	padding-left:7px;
 }
-#linkcat-792 {
-	display:none
-}
+
 .browse {
 	width:560px;
 }
-.whed-top-bottom {
-	height:30px;
-	line-height:30px;
-}
-.whed-top-bottom .cot {
-	width:985px;
-	margin:0 auto;
-}
-.w-date {
-	float:left;
-}
-.w-link {
-	float:right;
-}
+
 .thumbnail_box {
 	float:left;
 }
@@ -1045,9 +988,6 @@ ol.tentblogger-top-posts-list li {
 }
 .post_entry {
 	color:#999;
-}
-.archive_more,.comment_a,.new {
-	display:none;
 }
 .entry_box_b {
 	display:none;
@@ -1098,9 +1038,7 @@ ol.tentblogger-top-posts-list li {
 #top #topnav #searchbar {
 	border-right:none;
 }
-.wp-tag-cloud li {
-	float:left
-}
+
 #sidebar .cat-post-item {
 	height:20px;
 	overflow:hidden;
@@ -1184,13 +1122,7 @@ ol.tentblogger-top-posts-list li {
 	position:relative;
 	padding-top:40px;
 }
-.w-date {
-	color:#999;
-}
-.w-link a {
-	color:#a40000;
-	font-weight:bold;
-}
+
 .thumbnail_box {
 	float:left;
 	position:relative;
