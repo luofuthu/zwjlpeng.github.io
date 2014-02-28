@@ -163,25 +163,17 @@ table th[class*="span"],
   float: none;
   margin-left: 0;
 }
-#banner strong {display:block;}
-#banner h1 { font-size:3.25rem }
 .no-touch .navbar ul li.active > a {
   
   background: #868d92;
 
 }
 #post-list { margin-left:0; }
-#post-list > li {list-style:none;  border-bottom: 2px solid #ccc;  margin-bottom: 20px;  padding-bottom: 15px;}
-.tag-row {margin-top:20px;}
-address { font-size:14px; margin-bottom:10px;}
+#post-list  li {list-style:none;  border-bottom: 2px solid #ccc;  margin-bottom: 20px;  padding-bottom: 15px;}
 .btn a:hover, 
 .btn a:focus {color:#eee; }
 .label:hover,
 .label:focus {color:#eee; }
-.bg { background:#eee; margin-top:35px; padding-top:25px; border-top:5px solid #3498DB; }
-@media only screen and (max-width: 600px) {
-  #banner h1 a {font-size:22px!important; line-height:24px;}
-}
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,img,ol,ul,p {
 	margin:0;
 	padding:0;
@@ -219,9 +211,6 @@ a:hover {
 	color:#0196e3;
 	text-decoration:none;
 }
-a:active {
-	}
-
 #hed {
 	background:url(images/topnav_bg.png) repeat-x;
 	z-index:999;
@@ -241,59 +230,7 @@ a:active {
 	padding:18px 0 0 0px;
 	float:left;
 }
-#hed .message {
-	position:absolute;
-	right:250px;
-	padding:15px 10px;
-	width:90px;
-	background:url() no-repeat 50% center;
-	text-align:right;
-}
-#hed .tencent {
-	position:absolute;
-	right:0px;
-}
-#hed .navi {
-	position:absolute;
-	right:70px;
-	width:50px;
-	height:50px;
-	padding:15px 10px;
-	color:#fff;
-}
-#hed .navi ul {
-	position:absolute;
-	top:53px;
-	left:-30px;
-	width:120px;
-	height:200px;
-	background:#fff;
-	border:1px solid #999;
-	border-top:none;
-	padding:10px 0 0 0;
-	display:none;
-}
-#hed .navi ul li {
-	height:25px;
-	line-height:25px;
-	text-indent:40px;
-	letter-spacing:1px;
-}
-#hed .navi ul li a {
-	display:block;
-	text-decoration:none;
-	color:#333;
-	background:url() no-repeat 15px 45%;
-}
-#hed .navi ul li a:hover {
-	background:#fc0 url() no-repeat 15px 45%;
-}
-#hed .screen_more {
-	position:absolute;
-	right:0px;
-	padding:15px 10px;
-	color:#fff;
-}
+
 /** 热点文章 **/
 
 #featured {
