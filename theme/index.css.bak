@@ -888,15 +888,6 @@ ul.blogroll li {
 	width:960px;
 	margin:0 auto;
 }
-
-.footer_bottom,.footer_bottom_a {
-	display:none;
-}
-
-
-.wumii-hook div#wumiiBtnDiv,.wumii-hook div.wumii-related-items-div,.wumii-hook div.wumii-internal,.wumii-hook div.wumii-internal div {
-	display:block;
-}
 .tmore {
 	position:relative;
 }
