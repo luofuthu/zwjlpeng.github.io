@@ -231,39 +231,7 @@ a:hover {
 	float:left;
 }
 
-#hed .screen_more {
-	position:absolute;
-	right:0px;
-	padding:15px 10px;
-	color:#fff;
-}
-/** 热点文章 **/
 
-#featured {
-	margin:0 0 10px 0;
-}
-#featured .item {
-	position:relative;
-	overflow:hidden;
-	width:236px;
-	height:155px;
-	float:left;
-	padding:0 0 0 7px;
-}
-#featured .item img {
-	position:absolute;
-}
-#featured .item .boxCaption {
-	width:211px;
-	padding:10px;
-	margin:115px 0 0 3px;
-	position:absolute;
-	top:160px;
-	z-index:4;
-	background:url(images/bg-box.png) repeat top left;
-	color:#fff;
-	text-shadow:0px 1px 0px #000;
-}
 .top_box {
 	background:url(images/boxtop.png) no-repeat;
 	position:absolute;
@@ -289,16 +257,7 @@ a:hover {
 	height:155px;
 	z-index:3;
 }
-#featured .item h2 {
-	font-weight:normal;
-	text-align:center;
-}
-#featured .item a {
-	color:#f2f2f2;
-}
-#featured .item a:hover {
-	color:#d9d9d9;
-}
+
 /** 现在位置 **/
 
 #map {
