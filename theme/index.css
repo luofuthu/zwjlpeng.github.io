@@ -652,10 +652,6 @@ ul.xoxo li {
 }
 ul.xoxo li img {
 	float:left;
-	/*width:50px;
-	height:50px;
-	*/
-
 	padding-right:7px;
 }
 ul.xoxo li a {
@@ -932,7 +928,6 @@ ul.blogroll li {
 	display:none;
 }
 #wrapper #scroll a.scroll_t {
-	background:url(images/wtop.png);
 	width:38px;
 	height:65px;
 	margin-right:-60px;
@@ -1000,7 +995,6 @@ ol.tentblogger-top-posts-list li {
 }
 
 #post h2 {
-	background:url(images/w_icon2.gif) no-repeat left bottom;
 	height:40px;
 	width:100px;
 }
@@ -1046,6 +1040,7 @@ ol.tentblogger-top-posts-list li {
 #content {
 	border:1px solid #999;
 }
+/***********=====复写现有菜单=====***********/
 
 #top #topnav li li {
 	background:none;
@@ -1053,7 +1048,6 @@ ol.tentblogger-top-posts-list li {
 #top #topnav li a:hover,#top #topnav li a:active {
 	background:url("images/w_menubg.gif") repeat-x;
 }
-
 #top #topnav li li {
 	height:auto;
 	border:none
@@ -1185,6 +1179,35 @@ a:hover {
 	color:#000;
 }
 
+.link {
+	background:#ECECEC;
+	height:40px;
+	line-height:25px;
+	padding:10px;
+	list-style:none;
+}
+.link li h2 {
+	float:left;
+	width:940px;
+	line-height:20px;
+	font-weight:normal;
+	color:#0196e3;
+}
+.link li ul li {
+	float:left;
+	margin:0 10px 0 0;
+}
+.link li a {
+	float:left;
+	display:inline;
+	white-space:nowrap;
+	padding:0 10px 0 0;
+}
+.link_b {
+	position:relative;
+	width:978px;
+	margin:0 0 5px 0;
+}
 
 #my_footer_wrapper {
 	clear:both;
