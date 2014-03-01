@@ -643,16 +643,11 @@ body {
 	display:none;
 }
 #top #topnav{
-	width:1080px;
 	margin:0 auto;
-	height:80px
 }
 #top {
 	background:#8b1e23;
 	height:38px;
-}
-#top #topnav {
-	background:none;
 }
 #top #topnav li ul li a {
 	background:#155199;
@@ -666,11 +661,6 @@ body {
 }
 #top #topnav li {
 	border-right:none;
-	position:relative;
-	z-index:999
-}
-#top,#top #topnav,#top #topnav ul {
-	z-index:999;
 }
 #top #topnav {
 	height:38px;
@@ -772,29 +762,7 @@ body {
 	_width:730px;
 }
 
-.headtop .inner {
-	width:980px;
-	margin:0 auto;
-}
-.headtop .inner a {
-	color:#ccc;
-	padding-right:3px;
-	text-decoration:none;
-}
-.headtop .inner a:hover {
-	color:#fff;
-}
 
-.foot .inner {
-	width:960px;
-	margin:0 auto;
-}
-
-.headtop .inner {
-	background:#30373B;
-	padding:2px 5px;
-	width:970px;
-}
 #top {
 	background:none;
 }
@@ -815,9 +783,7 @@ body {
 	float:left;
 	width:238px;
 }
-#top,#top #topnav,#top #topnav ul {
-	z-index:998;
-}
+
 
 #wrapper #scroll a.scroll_b {
 	display:none;
@@ -833,24 +799,15 @@ ol.tentblogger-top-posts-list li {
 #wrapper #scroll a.scroll_t:hover {
 	background-position:0px -65px;
 }
-#scroll a.scroll_c {
-	display:none
-}
+
 
 .menu {
 	float:left;
 }
-.headtop .inner {
-	height:25px;
-	background:#464646;
-}
 
 
-.headtop .inner .kfd a {
-	color:#E0624F;
-	line-height:28px;
-	padding-left:7px;
-}
+
+
 
 .browse {
 	width:560px;
@@ -878,10 +835,6 @@ ol.tentblogger-top-posts-list li {
 	border:1px solid #999;
 }
 
-.box {
-	border:none;
-}
-
 #post h2 {
 	height:40px;
 	width:100px;
@@ -889,10 +842,6 @@ ol.tentblogger-top-posts-list li {
 
 #top #topnav #searchbar {
 	margin-top:2px;
-}
-.headtop {
-	background:#464646;
-	height:30px;
 }
 #top {
 	background:#a40000;
@@ -991,11 +940,6 @@ ol.tentblogger-top-posts-list li {
 #wrapper .act table td a img {
 	_padding-right:30px;
 }
-.main-top {
-	position:relative;
-	padding-top:40px;
-}
-
 .thumbnail_box {
 	float:left;
 	margin-top:4px;
@@ -1032,9 +976,7 @@ a:hover {
 #menu li a,#menu li a:hover,.link li h2 {
 	color:#d25e63;
 }
-.w-search #sidebar {
-	display:none;
-}
+
 #content h2 {
 	font-size:15px;
 }
@@ -1156,9 +1098,6 @@ a:hover {
 	height:36px;
 	background: url() 0 -38px;
 	}
-#topnav.current_page_item , #topnav .current-menu-item {
-	background: url() repeat-x 0 -110px;
-	}
 #topnav .current-menu-item a,#topnav .current_page_item a {
 	color: #fff !important;
 	text-shadow: 0px 1px 0px #000 !important;
@@ -1168,7 +1107,6 @@ a:hover {
 	}
 #topnav li {
 	height:36px;
-	border-right:1px solid #4b83c2;
 	float: left;
 	font-weight:bold;
 	}
@@ -1176,11 +1114,8 @@ a:hover {
 	display: block;
 	padding: 0 25px 0 25px;
 	line-height:36px; 
-	color: #f2f2f2;
-	text-shadow: 0px 1px 0px #000;
 	}
 #topnav li a:hover, #topnav li a:active {
-	background: url() repeat-x 0 -74px;
 	color: #fff;
 	display: block;
 	text-decoration: none;
@@ -1222,9 +1157,7 @@ a:hover {
 #topnav li ul li a:hover {
 	text-shadow: 0px 1px 0px #fff !important;
 	}
-#topnav .sf-sub-indicator {
-	display: none;
-	}
+
 #topnav  li ul li a.sf-with-ul {
 	padding: 7px 12px;
 	}
@@ -1237,8 +1170,6 @@ a:hover {
 #topnav  li ul ul {
 	margin: -31px 0px 0px 150px;
 	}
-#topnav  li ul ul li a {}
-#topnav  li ul li ul li a {}
 #topnav  li:hover,#topnav  li.hover {
 	position: static;
 	}
