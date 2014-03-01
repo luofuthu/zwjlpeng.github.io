@@ -363,7 +363,7 @@ a:hover {
 	color:#393939;
 }
 #sidebar h3 {
-	padding:0 0 0 15px;
+	padding:0 0 0 10px;
 	color:#393939;
 }
 #sidebar a:hover {
@@ -443,8 +443,7 @@ body {
 	margin:0 auto;
 }
 #top {
-	background:#8b1e23;
-	height:38px;
+	height:37px;
 }
 #top #topnav li ul li a {
 	background:#155199;
@@ -460,7 +459,7 @@ body {
 	border-right:none;
 }
 #top #topnav {
-	height:38px;
+	height:37px;
 }
 #top #topnav li a:hover,#top #topnav li a:active {
 	background:none;
@@ -525,9 +524,7 @@ body {
 	background:transparent;
 	_width:730px;
 }
-#top {
-	background:none;
-}
+
 #top #topnav {
 	background:#F1F1F1;
 }
@@ -559,9 +556,6 @@ body {
 	height:40px;
 	width:100px;
 }
-#top {
-	background:#a40000;
-}
 #wrapper {
 	padding:0;
 }
@@ -581,7 +575,7 @@ body {
 	background:none;
 }
 #top #topnav li a:hover,#top #topnav li a:active {
-	background:url("images/w_menubg.gif") repeat-x;
+	background:url("images/w_menubg.gif");
 }
 #top #topnav li li {
 	height:auto;
