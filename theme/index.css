@@ -181,21 +181,13 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,img,ol,ul,p {
 ul {
 	list-style:none;
 }
-a {
-	text-decoration:none;
-}
 .clear {
 	clear:both;
 }
-:focus {
-	outline:0
-}
 body {
-	background:#f2f2f2;
 	font:12px 'Microsoft YaHei',微软雅黑,Arial,Lucida Grande,Tahoma,sans-serif;
 	font-family:微软雅黑,宋体,Arial,Helvetica,sans-serif;
 	color:#000;
-	text-shadow:0px 1px 0px #d1d1d1;
 }
 #wrapper {
 	margin:0px auto;
@@ -229,7 +221,6 @@ a:hover {
 #map {
 	height:27px;
 }
-
 .browse {
 	text-shadow:0px 1px 0px #d1d1d1;
 	width:450px;
@@ -371,19 +362,6 @@ a:hover {
 .entry a:active {
 	color:#0196e3;
 }
-.entrymeta {
-	position:relative;
-	background:#fff;
-	width:710px;
-	padding:15px 10px 4px 10px;
-}
-.entrymeta {
-	color:#8C8C8C;
-	font-size:12px;
-}
-.entrymeta a:visited {
-	color:#0196e3;
-}
 .context_b {
 	position:relative;
 	font-size:13px;
@@ -398,10 +376,6 @@ a:hover {
 }
 .context_b a:hover {
 	color:#393939;
-}
-.page p {
-	font-size:13px;
-	line-height:185%;
 }
 #sidebar h3 {
 	padding:0 0 0 15px;
@@ -643,14 +617,8 @@ ol.tentblogger-top-posts-list li {
 	height:40px;
 	width:100px;
 }
-#top #topnav #searchbar {
-	margin-top:2px;
-}
 #top {
 	background:#a40000;
-}
-.posttag,.sticky-post,.w-left #map {
-	display:none;
 }
 #wrapper {
 	padding:0;
@@ -658,19 +626,12 @@ ol.tentblogger-top-posts-list li {
 #sidebar {
 	float:right;
 }
-#top #topnav #searchbar {
-	margin-right:0;
-}
-#top #topnav,.headtop .inner,#featured,#wrapper {
+#top #topnav,#wrapper {
 	width:1080px;
 }
 #sidebar {
 	width:320px;
 }
-#top #topnav #searchbar {
-	border-right:none;
-}
-
 #sidebar .cat-post-item {
 	height:20px;
 	overflow:hidden;
@@ -727,19 +688,6 @@ ol.tentblogger-top-posts-list li {
 	height:auto;
 	border:none;
 }
-#wrapper .act,#wrapper .act .entry_box_s,#wrapper .act .entry {
-	width:960px;
-	border:none;
-}
-#wrapper .act table {
-	width:100%
-}
-*+html #wrapper .act table td a img {
-	padding-right:30px;
-}
-#wrapper .act table td a img {
-	_padding-right:30px;
-}
 .thumbnail_box {
 	float:left;
 	margin-top:4px;
@@ -777,9 +725,6 @@ a:hover {
 }
 #content h3 {
 	font-size:14px;
-}
-#wrapper .w-search .entry_box {
-	height:143px;
 }
 .entry_title_box {
 	padding-bottom:0px;
