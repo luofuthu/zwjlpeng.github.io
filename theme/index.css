@@ -280,7 +280,12 @@ a:hover {
 	float:left;
 	width:750px;
 }
-
+.archive_info,.archive_info a,.archive_info a:visited {
+	color:#737373;
+}
+.archive_info a:hover {
+	color:#0196e3;
+}
 .box_entry_title {
 	float:left;
 	width:730px;
@@ -684,19 +689,13 @@ body {
 	background:#155197;
 }
 
-.thumbnail_box {
-	width:auto;
-	height:auto;
-	float:none;
-}
 .thumbnail_box .thumbnail {
 	text-align:center;
 }
 
 #post,#content {
 	width:750px;
-	/*overflow:hidden;
-	*/padding:0px;
+	padding:0px;
 	border-right:1px solid #d2d2d2;
 	overflow:visible;
 	_overflow:hidden;
@@ -724,9 +723,7 @@ body {
 #sidebar .box-bottom {
 	border:none;
 }
-.lt,.rt,.lb,.rb {
-	display:none;
-}
+
 #wrapper .ad_h {
 	border:none;
 }
@@ -770,26 +767,11 @@ body {
 	width:26px;
 	height:28px;
 }
-#gg,body #title2note,#wrapper #scroll {
-	display:none
-}
 .entry_box {
 	background:transparent;
 	_width:730px;
 }
-.top_box {
-	background:none;
-}
-ul.blogroll li {
-	height:auto;
-	_height:52px;
-}
-.headtop {
-	background:#30373B;
-	color:#D6D7D8;
-	height:24px;
-	line-height:24px;
-}
+
 .headtop .inner {
 	width:980px;
 	margin:0 auto;
@@ -808,13 +790,6 @@ ul.blogroll li {
 	margin:0 auto;
 }
 
-.headtop {
-	z-index:999;
-	position:relative;
-}
-.headtop {
-	background:none;
-}
 .headtop .inner {
 	background:#30373B;
 	padding:2px 5px;
@@ -881,15 +856,8 @@ ol.tentblogger-top-posts-list li {
 	width:560px;
 }
 
-.thumbnail_box {
-	float:left;
-}
 .thumbnail_box .thumbnail img {
 	border:1px solid #ccc;
-}
-.thumbnail_box,.thumbnail_box .thumbnail,.thumbnail_box .thumbnail img {
-	width:200px;
-	height:100px;
 }
 .box_entry_title {
 	float:none;
@@ -1030,7 +998,6 @@ ol.tentblogger-top-posts-list li {
 
 .thumbnail_box {
 	float:left;
-	position:relative;
 	margin-top:4px;
 }
 .box_entry_title,.post_entry,.archive_title_box,.archive {
