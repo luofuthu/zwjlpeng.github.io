@@ -238,12 +238,12 @@ a:hover {
 	height:10px;
 	margin:0 0 10px 0;
 }
-.entry_box,.entry_box_s,.entrymeta,.entry_b,#respond_box {
+.entry_box,.entry_box_s,.entrymeta,.entry_b{
 	border-top:1px solid #ccc;
 	border-left:1px solid #ccc;
 	border-right:1px solid #ccc;
 }
-.entry_box_b,.entry_sb,.box-bottom,.respond_b,.link_b,.footer_bottom_a {
+.entry_box_b,.entry_sb{
 	border-left:1px solid #ccc;
 	border-right:1px solid #ccc;
 	border-bottom:1px solid #ccc;

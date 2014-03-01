@@ -238,7 +238,7 @@ a:hover {
 	height:10px;
 	margin:0 0 10px 0;
 }
-.entry_box,.entry_box_s,.entrymeta,.entry_b,#respond_box {
+.entry_box,.entry_box_s,.entrymeta,.entry_b{
 	border-top:1px solid #ccc;
 	border-left:1px solid #ccc;
 	border-right:1px solid #ccc;
@@ -599,7 +599,7 @@ body {
 	color:#808080\9\0;
 }
 #top #topnav.current_page_item,#top #topnav .current-menu-item {
-	background:url("images/w_menubg.gif") repeat-x;
+	background:url("images/w_menubg.gif") ;
 }
 #top #topnav ul li .current-menu-item {
 	background:none;
