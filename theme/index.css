@@ -212,8 +212,7 @@ a:hover {
 	text-decoration:none;
 }
 #hed {
-	background:url(images/topnav_bg.png) repeat-x;
-	z-index:999;
+	background:url(images/topnav_bg.png)  top fixed repeat-x;
 	width:100%;
 	height:65px;
 	top:0;
@@ -224,39 +223,12 @@ a:hover {
 #hed .top_part {
 	width:1080px;
 	margin:0 auto;
-	position:relative;
 }
 #hed .top_part img {
 	padding:18px 0 0 0px;
 	float:left;
 }
 
-
-.top_box {
-	background:url(images/boxtop.png) no-repeat;
-	position:absolute;
-	z-index:5;
-	width:236px;
-	height:155px;
-}
-.top_box a {
-	position:absolute;
-	padding:152px 0 0 185px;
-}
-.top_t {
-	position:absolute;
-	width:236px;
-	z-index:3;
-}
-.top_t img {
-	width:236px;
-}
-.thumbnail_hot img {
-	position:absolute;
-	width:236px;
-	height:155px;
-	z-index:3;
-}
 
 /** 现在位置 **/
 
@@ -301,34 +273,6 @@ a:hover {
 	border-left:1px solid #ccc;
 	border-right:1px solid #ccc;
 	border-bottom:1px solid #ccc;
-}
-.footer_bottom_a {
-	position:relative;
-	background:#f2f2f2;
-	text-align:center;
-	padding:10px;
-	height:32px;
-	margin:0 0 30px 0;
-}
-.lt {
-	left:-1px;
-	top:-1px;
-	background-position:left top;
-}
-.rt {
-	right:-1px;
-	top:-1px;
-	background-position:right top;
-}
-.lb {
-	left:-1px;
-	bottom:-1px;
-	background-position:left bottom;
-}
-.rb {
-	right:-1px;
-	bottom:-1px;
-	background-position:bottom right;
 }
 /** 首页 **/
 
