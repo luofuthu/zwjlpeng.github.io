@@ -228,10 +228,6 @@ a:hover {
 	padding:18px 0 0 0px;
 	float:left;
 }
-
-
-/** 现在位置 **/
-
 #map {
 	height:27px;
 }
@@ -249,8 +245,6 @@ a:hover {
 .browse a:hover {
 	color:#0196e3;
 }
-/** 圆角 **/
-
 .entry_box {
 	position:relative;
 	background:#fff;
@@ -274,11 +268,8 @@ a:hover {
 	border-right:1px solid #ccc;
 	border-bottom:1px solid #ccc;
 }
-/** 首页 **/
-
 #post {
 	float:left;
-	width:750px;
 }
 .archive_info,.archive_info a,.archive_info a:visited {
 	color:#737373;
@@ -308,20 +299,9 @@ a:hover {
 .info a:hover {
 	color:#0196e3;
 }
-
 .thumbnail_box {
 	margin:5px 10px 5px 0;
 }
-.thumbnail img {
-	position:absolute;
-	z-index:3;
-}
-.thumbnail_t img,.thumbnail img {
-	position:absolute;
-	width:140px;
-	height:100px;
-}
-
 #content {
 	float:left;
 	width:750px;
@@ -331,9 +311,6 @@ a:hover {
 	font-weight:bold;
 	color:#000;
 }
-
-/** 正文 **/
-
 .font {
 	float:right;
 	width:80px;
@@ -342,29 +319,6 @@ a:hover {
 	line-height:27px;
 	padding:0 3px 0 3px;
 	_padding-top:1px;
-	border:1px solid #ccc;
-}
-.context {
-	position:absolute;
-	right:10px;
-	top:10px;
-	width:72px;
-}
-.context_t {
-	display:none
-}
-.context_t a {
-	background:#fff;
-	font-size:13px;
-	line-height:25px;
-	padding:0 3px 0 3px;
-	_padding-top:1px;
-	border:1px solid #ccc;
-}
-.back_b {
-	float:right;
-	width:25px;
-	padding:0 5px 0 5px;
 	border:1px solid #ccc;
 }
 .entry_box_s {
@@ -432,15 +386,6 @@ a:hover {
 .entrymeta a:visited {
 	color:#0196e3;
 }
-.authorbio {
-	float:left;
-	width:100px;
-	height:80px;
-	text-align:center;
-	margin:0 10px 0 0;
-	padding:2px;
-	border:1px solid #ccc;
-}
 .context_b {
 	position:relative;
 	font-size:13px;
@@ -460,20 +405,11 @@ a:hover {
 	font-size:13px;
 	line-height:185%;
 }
-/**  相关日志 **/
-
 .entry_b {
 	position:relative;
 	background:#fff;
 	width:700px;
 	padding:10px 10px 0 10px;
-}
-
-/** 侧边栏 **/
-
-#sidebar {
-	float:right;
-	width:320px;
 }
 #sidebar h3 {
 	padding:0 0 0 15px;
@@ -486,23 +422,9 @@ a:hover {
 #sidebar a:hover {
 	color:#0196e3;
 }
-.box-bottom {
-	position:relative;
-	background:#fff;
-	width:234px;
-	height:6px;
-	margin:0 0 10px 0;
-}
 .box {
 	background:#fff;
 	padding:5px 10px 5px 10px;
-	border-left:1px solid #ccc;
-	border-right:1px solid #ccc;
-}
-.box_c {
-	background:#fff;
-	width:224px;
-	padding:5px 0 5px 10px;
 	border-left:1px solid #ccc;
 	border-right:1px solid #ccc;
 }
@@ -515,9 +437,6 @@ a:hover {
 .box ul li {
 	line-height:23px;
 }
-
-/** 最新文章 **/ 
-
 .box_r {
 	background:#fff;
 	padding:5px 10px 0 10px;
@@ -531,13 +450,10 @@ a:hover {
 	border-bottom:1px dashed  #3D3D72;
 	margin-bottom:-1px;
 }
-
 .current {
 	color:#fff;
 	background:#0196E3;
 }
-/** 翻页 **/
-
 .navigation_b {
 	float:right;
 	width:750px;
@@ -583,12 +499,6 @@ ul.xoxo li a {
 	display:block;
 	font-weight:bold;
 }
-#linkcat-42 {
-	display:none;
-}
-.footer_top .link_s {
-	display:none;
-}
 .post_entry .archive_more a,.post_entry .archive_more a:visited {
 	background:none;
 	color:#000;
@@ -612,32 +522,9 @@ ul.xoxo li a {
 #top .home {
 	width:77px;
 }
-ol.tentblogger-top-posts-list {
-	list-style:none;
-	border-left:1px solid #ccc;
-	border-right:1px solid #ccc;
-	padding:5px 10px;
-	background:#fff
-}
-ol.tentblogger-top-posts-list li {
-	height:24px;
-	line-height:24px;
-	padding-left:15px;
-	overflow:hidden;
-}
-#sidebar .recent-comment .comment-text {
-	font-style:normal;
-	font-size:12px;
-	font-family:"微软雅黑","宋体"
-}
 body {
 	background:#fff;
 	text-shadow:none
-}
-.logo {
-	width:489px;
-	height:68px;
-	background-position:0 17px;
 }
 #top .home {
 	display:none;
@@ -665,11 +552,6 @@ body {
 #top #topnav {
 	height:38px;
 }
-.time,login_t,.login_t a {
-	line-height:38px;
-	color:#fff;
-}
-
 #top #topnav li a:hover,#top #topnav li a:active {
 	background:none;
 	background:#155197;
@@ -761,8 +643,6 @@ body {
 	background:transparent;
 	_width:730px;
 }
-
-
 #top {
 	background:none;
 }
@@ -783,8 +663,6 @@ body {
 	float:left;
 	width:238px;
 }
-
-
 #wrapper #scroll a.scroll_b {
 	display:none;
 }
@@ -799,20 +677,12 @@ ol.tentblogger-top-posts-list li {
 #wrapper #scroll a.scroll_t:hover {
 	background-position:0px -65px;
 }
-
-
 .menu {
 	float:left;
 }
-
-
-
-
-
 .browse {
 	width:560px;
 }
-
 .thumbnail_box .thumbnail img {
 	border:1px solid #ccc;
 }
@@ -834,12 +704,10 @@ ol.tentblogger-top-posts-list li {
 #sidebar {
 	border:1px solid #999;
 }
-
 #post h2 {
 	height:40px;
 	width:100px;
 }
-
 #top #topnav #searchbar {
 	margin-top:2px;
 }
@@ -877,8 +745,6 @@ ol.tentblogger-top-posts-list li {
 #content {
 	border:1px solid #999;
 }
-/***********=====复写现有菜单=====***********/
-
 #top #topnav li li {
 	background:none;
 }
@@ -951,7 +817,6 @@ ol.tentblogger-top-posts-list li {
 	overflow:hidden;
 	position:relative;
 }
-
 .box_entry_title {
 	margin:0;
 	padding:0;
@@ -976,7 +841,6 @@ a:hover {
 #menu li a,#menu li a:hover,.link li h2 {
 	color:#d25e63;
 }
-
 #content h2 {
 	font-size:15px;
 }
@@ -1007,7 +871,6 @@ a:hover {
 #menu li a:hover {
 	color:#000;
 }
-
 .link {
 	background:#ECECEC;
 	height:40px;
@@ -1083,8 +946,6 @@ a:hover {
 	color:#A40000;
 	font-weight:bold;
 }
-
-/** 顶部导航 **/
 #topnav {
 	font-size: 13px;
 	}
@@ -1096,7 +957,6 @@ a:hover {
 .home a:hover {
 	width:117px;
 	height:36px;
-	background: url() 0 -38px;
 	}
 #topnav .current-menu-item a,#topnav .current_page_item a {
 	color: #fff !important;
@@ -1184,15 +1044,9 @@ a:hover {
 #topnav  li li li li:hover ul, #topnav  li li li li.sfhover ul {
 	left: auto;
 	}
-/** 现在位置 **/
 #map {
 	background: #fff url() 0 -196px;
 	}
-/** 侧边栏 **/
 #sidebar h3 {
 	background:#fff url() no-repeat 0 -223px;
-	}
- /** 自用 **/
-.bd p input{
-	background: url( ) 0 -170px;
 	}
