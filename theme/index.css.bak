@@ -176,7 +176,6 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,img,ol,ul,p {
 	margin:0;
 	padding:0;
 	border:0;
-	font-size:100%;
 }
 ul {
 	list-style:none;
@@ -222,8 +221,6 @@ a:hover {
 	height:27px;
 }
 .browse {
-	text-shadow:0px 1px 0px #d1d1d1;
-	width:450px;
 	float:left;
 	line-height:27px;
 	padding:0 0 0 10px;
@@ -311,13 +308,9 @@ a:hover {
 	border:1px solid #ccc;
 }
 .entry_box_s {
-	position:relative;
 	margin:0px 0 0 0;
 }
 .entry_sb {
-	position:relative;
-	background:#fff;
-	width:730px;
 	height:10px;
 	margin:0 0 10px 0;
 }
@@ -343,7 +336,6 @@ a:hover {
 	color:#0196e3;
 }
 .entry_title {
-	font-size:15px;
 	font-weight:bold;
 }
 .entry strong {
@@ -379,11 +371,7 @@ a:hover {
 }
 #sidebar h3 {
 	padding:0 0 0 15px;
-	height:27px;
-	line-height:27px;
 	color:#393939;
-	font-size:12px;
-	font-weight:normal;
 }
 #sidebar a:hover {
 	color:#0196e3;
@@ -530,7 +518,6 @@ body {
 }
 
 #wrapper #sidebar h3 {
-	background:none;
 	background:#e1e1e1;
 	height:35px;
 	line-height:35px;
@@ -726,9 +713,6 @@ a:hover {
 #content h3 {
 	font-size:14px;
 }
-#wrapper .w-search .entry_box {
-	height:143px;
-}
 .entry_title_box {
 	padding-bottom:0px;
 }
@@ -898,10 +882,4 @@ a:hover {
 #topnav  li li li:hover ul, #topnav  li li li.sfhover ul,
 #topnav  li li li li:hover ul, #topnav  li li li li.sfhover ul {
 	left: auto;
-	}
-#map {
-	background: #fff url() 0 -196px;
-	}
-#sidebar h3 {
-	background:#fff url() no-repeat 0 -223px;
 	}
