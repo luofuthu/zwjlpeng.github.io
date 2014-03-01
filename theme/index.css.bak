@@ -168,8 +168,6 @@ table th[class*="span"],
   background: #868d92;
 
 }
-#post-list { margin-left:0; }
-#post-list  li {list-style:none;  border-bottom: 2px solid #ccc;  margin-bottom: 20px;  padding-bottom: 15px;}
 .btn a:hover, 
 .btn a:focus {color:#eee; }
 .label:hover,
@@ -481,48 +479,18 @@ a:hover {
 	padding:2px 5px 2px 5px;
 	border:1px solid #ccc;
 }
-ul.xoxo li {
-	height:52px;
-	overflow:hidden;
-}
-ul.xoxo li img {
-	float:left;
-	padding-right:7px;
-}
-ul.xoxo li a {
-	display:block;
-	font-weight:bold;
-}
+
 .post_entry .archive_more a,.post_entry .archive_more a:visited {
 	background:none;
 	color:#000;
 	text-shadow:none;
 }
-.post_entry .archive_more a:hover,.post_entry .archive_more a:active {
-	background:none;
-	color:#000;
-	text-decoration:underline;
-}
-.archive_box .archive_more a,.post_entry .archive_more a:visited {
-	background:none;
-	color:#000;
-	text-shadow:none;
-}
-.archive_box .archive_more a:hover,.post_entry .archive_more a:active {
-	background:none;
-	color:#000;
-	text-decoration:underline;
-}
-#top .home {
-	width:77px;
-}
+
 body {
 	background:#fff;
 	text-shadow:none
 }
-#top .home {
-	display:none;
-}
+
 #top #topnav{
 	margin:0 auto;
 }
@@ -647,9 +615,6 @@ ol.tentblogger-top-posts-list li {
 #wrapper #scroll a.scroll_t:hover {
 	background-position:0px -65px;
 }
-.menu {
-	float:left;
-}
 .browse {
 	width:560px;
 }
@@ -693,7 +658,6 @@ ol.tentblogger-top-posts-list li {
 #sidebar {
 	float:right;
 }
-
 #top #topnav #searchbar {
 	margin-right:0;
 }
@@ -808,9 +772,6 @@ a:hover {
 	background:#d25e63;
 	color:#fff;
 }
-#menu li a,#menu li a:hover,.link li h2 {
-	color:#d25e63;
-}
 #content h2 {
 	font-size:15px;
 }
@@ -825,21 +786,6 @@ a:hover {
 }
 #content {
 	position:relative;
-}
-#menu {
-	float:right;
-	width:860px;
-}
-#menu li {
-	float:right;
-	margin:0 10px 0 0;
-	padding:0 10px 0 10px;
-}
-#menu li a {
-	color:#0196e3;
-}
-#menu li a:hover {
-	color:#000;
 }
 .link {
 	background:#ECECEC;
