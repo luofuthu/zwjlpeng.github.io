@@ -1,5 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>烟雨林</title><link href="http://www.yanyulin.info/" rel="alternate"></link><link href="http://www.yanyulin.info/feeds/all.atom.xml" rel="self"></link><id>http://www.yanyulin.info/</id><updated>2014-03-02T00:00:00+08:00</updated><entry><title>【赠送】ripple币免费获取&amp;免费领取</title><link href="http://www.yanyulin.info/pages/2014/03/getxrp.html" rel="alternate"></link><updated>2014-03-02T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-02:pages/2014/03/getxrp.html</id><summary type="html">&lt;hr /&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>烟雨林</title><link href="http://www.yanyulin.info/" rel="alternate"></link><link href="http://www.yanyulin.info/feeds/all.atom.xml" rel="self"></link><id>http://www.yanyulin.info/</id><updated>2014-03-02T00:00:00+08:00</updated><entry><title>博客添加第三方评论系统多说评论框</title><link href="http://www.yanyulin.info/pages/2014/03/comment.html" rel="alternate"></link><updated>2014-03-02T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-02:pages/2014/03/comment.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;&lt;code&gt;博客&lt;/code&gt;已经基本搭建完成，前前后后历时将近两周，采用的是开源工具&lt;code&gt;Pelican&lt;/code&gt;搭建，服务器采用的是强大的分布式代码托管库&lt;code&gt;Github&lt;/code&gt;,两者的教程可以参考下面的链接，本博客总共破费了&lt;code&gt;我3美元&lt;/code&gt;：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2013/11/pelican.html" target="_blank"&gt;
+pelican搭建属于自已的博客&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2013/11/github.html" target="_blank"&gt;
+Github简明教程(入门篇)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2013/11/githubM.html" target="_blank"&gt;
+Github上如何给别人贡献代码&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2014/01/pelican_question.html" target="_blank"&gt;
+pelican创建博客常见问题汇总
+&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;今天&lt;code&gt;分享&lt;/code&gt;一下，博客如何添加&lt;strong&gt;第三方评论系统&lt;/strong&gt;，国外的第三方评论系统已经做的相当强大，如&lt;code&gt;disqus&lt;/code&gt;,但国外终究是国外，与国内行情不同，如&lt;code&gt;disqus&lt;/code&gt;不支持&lt;strong&gt;微博、QQ、人人、百度贴吧&lt;/strong&gt;登录以及分享等，国内的第三方评论系统起步较国外晚，但做的也相当不错，如&lt;strong&gt;多说、友言、评论啦&lt;/strong&gt;等，比较符合国内的行情，本博客最初搭建时采用的第三方评论系统为&lt;code&gt;disqus&lt;/code&gt;,最后发现&lt;code&gt;disqus&lt;/code&gt;除了上述的缺点之外，还有一个非常严重的问题，就是在&lt;code&gt;IE7/IE6&lt;/code&gt;下，&lt;code&gt;disqus&lt;/code&gt;会出现问题，即不能很好的跨浏览器，使用了将近两周，于是弃之，改用了国内的多说&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;为什么采用第三方评论系统&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;1.数据库以及空间贵，我等屌丝还支付不起&lt;/p&gt;
+&lt;p&gt;2.第三方评论系统具有强大的反垃圾机制，可以有效的过滤垃圾流言&lt;/p&gt;
+&lt;p&gt;3.添加容易，界面操作方便，省去了我们自已写代码&lt;/p&gt;
+&lt;p&gt;4.功能比较强大，都带有自已的&lt;code&gt;分享按钮&lt;/code&gt;以及&lt;strong&gt;微博、QQ、人人、百度贴吧&lt;/strong&gt;登录&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;多说评论框&lt;/strong&gt;*&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;1.支持国内目前主流的SNS,如&lt;strong&gt;微博、QQ、人人、百度贴吧&lt;/strong&gt;,国外嘛，也没必要，你懂的~&lt;/p&gt;
+&lt;p&gt;2.团队技术实力还是比较强大&lt;/p&gt;
+&lt;p&gt;3.&lt;code&gt;多说&lt;/code&gt;支持&lt;code&gt;SEO优化&lt;/code&gt;,这是其最为突出的地方，也最吸引人的...&lt;/p&gt;
+&lt;p&gt;4.评论系统反馈比较及时，界面美观，提供自定义....&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;重点&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;1.向博客中添加评论系统，首先要在多说网上注册自已的帐号，注册帐号后要验证自已的域名，邮箱等，如下图所示：&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;
+&lt;a href="http://www.yanyulin.info/pages/2014/03/comment.html"&gt;
+&lt;img src="http://www.yanyulin.info/pics/tools/duoshuo1.jpg"/&gt;
+&lt;/a&gt;
+&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;2.点击管理员左侧的工具，获取通用代码，或者直接复制下面的代码，将该代码粘贴到博客中需要添加评论的地方，即可&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;&amp;lt;!-- Duoshuo Comment BEGIN --&amp;gt;&lt;/span&gt;
+    &lt;span class="nt"&gt;&amp;lt;div&lt;/span&gt; &lt;span class="na"&gt;class=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;ds-thread&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;script&lt;/span&gt; &lt;span class="na"&gt;type=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;text/javascript&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+var duoshuoQuery = {short_name:&amp;quot;yanyulin&amp;quot;};
+    (function() {
+        var ds = document.createElement(&amp;#39;script&amp;#39;);
+        ds.type = &amp;#39;text/javascript&amp;#39;;ds.async = true;
+        ds.src = &amp;#39;http://static.duoshuo.com/embed.js&amp;#39;;
+        ds.charset = &amp;#39;UTF-8&amp;#39;;
+        (document.getElementsByTagName(&amp;#39;head&amp;#39;)&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; 
+        || document.getElementsByTagName(&amp;#39;body&amp;#39;)&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;).appendChild(ds);
+    })();
+    &lt;span class="nt"&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+&lt;span class="c"&gt;&amp;lt;!-- Duoshuo Comment END --&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;strong&gt;备注&lt;/strong&gt;代码中的的&lt;code&gt;short_name&lt;/code&gt;要改写成添加站点时&lt;code&gt;http://www.XXXX.duoshuo.com&lt;/code&gt;中的&lt;code&gt;XXXX&lt;/code&gt;部分，添加成功后，运行图我如下图如博文下面的评论框所示&lt;/p&gt;
+&lt;p&gt;3.给博文添加最新评论，效果如我的博客右侧栏如示，代码如下：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nt"&gt;&amp;lt;ul&lt;/span&gt; &lt;span class="na"&gt;class=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;ds-recent-comments&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;data-num-items=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;7&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;data-show-title=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;0&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;data-show-avatars=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;1&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;data-show-time=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;1&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;data-show-admin=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;0&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;data-excerpt-length=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;40&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&amp;lt;/ul&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;div&lt;/span&gt; &lt;span class="na"&gt;class=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;clear&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;span class="c"&gt;&amp;lt;!--多说js加载开始，一个页面只需要加载一次 --&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;script&lt;/span&gt; &lt;span class="na"&gt;type=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;text/javascript&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+var duoshuoQuery = {short_name:&amp;quot;yanyulin&amp;quot;};
+(function() {
+    var ds = document.createElement(&amp;#39;script&amp;#39;);
+    ds.type = &amp;#39;text/javascript&amp;#39;;ds.async = true;
+    ds.src = &amp;#39;http://static.duoshuo.com/embed.js&amp;#39;;
+    ds.charset = &amp;#39;UTF-8&amp;#39;;
+    (document.getElementsByTagName(&amp;#39;head&amp;#39;)&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; || document.getElementsByTagName(&amp;#39;body&amp;#39;)&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;).appendChild(ds);
+})();
+&lt;span class="nt"&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+&lt;span class="c"&gt;&amp;lt;!--多说js加载结束，一个页面只需要加载一次 --&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;strong&gt;备注&lt;/strong&gt;代码中的的&lt;code&gt;short_name&lt;/code&gt;要改写成添加站点时&lt;code&gt;http://www.XXXX.duoshuo.com&lt;/code&gt;中的&lt;code&gt;XXXX&lt;/code&gt;部分&lt;/p&gt;
+&lt;p&gt;最终的结果如下图所示&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;
+&lt;a href="http://www.yanyulin.info/pages/2014/03/comment.html"&gt;
+&lt;img src="http://www.yanyulin.info/pics/tools/duoshuo2.jpg"/&gt;
+&lt;/a&gt;
+&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;如有问题，可以联系我，联系方式，看博客下方邮箱&lt;/p&gt;</summary><category term="工具使用"></category></entry><entry><title>【赠送】ripple币免费获取&amp;免费领取</title><link href="http://www.yanyulin.info/pages/2014/03/getxrp.html" rel="alternate"></link><updated>2014-03-02T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-02:pages/2014/03/getxrp.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;转载时请注明出处&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;赠送前说明&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;最近&lt;code&gt;ripple&lt;/code&gt;的表现实在是太差劲极了，不，是整个虚拟币的表现是&lt;strong&gt;实在糟糕透顶了&lt;/strong&gt;，估计这种情况还会持续下去，虚拟币究竟&lt;strong&gt;有没有价值&lt;/strong&gt;还是一个值得人深思的问题，虚拟币&lt;strong&gt;该不该去中心化&lt;/strong&gt;，随着&lt;strong&gt;门头沟&lt;/strong&gt;事件的爆发，&lt;strong&gt;Mt.Gox&lt;/strong&gt;因黑客盗取的破产，&lt;code&gt;744000比特币&lt;/code&gt;丢失，这么多资金已经足够&lt;strong&gt;摧毁&lt;/strong&gt;这家公司，日本和美国监管机构正在介入，后绪还不知道有什么新闻会曝光，也许&lt;strong&gt;一次致命性的新闻&lt;/strong&gt;会足以使虚拟币走向灭亡，当然ripple的价格也随着比特币的价格浮沉，下面是ripple价格图：&lt;/p&gt;
