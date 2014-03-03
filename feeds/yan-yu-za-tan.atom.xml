@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>烟雨林</title><link href="http://www.yanyulin.info/" rel="alternate"></link><link href="http://www.yanyulin.info/feeds/yan-yu-za-tan.atom.xml" rel="self"></link><id>http://www.yanyulin.info/</id><updated>2014-03-03T00:00:00+08:00</updated><entry><title>多说评论框如何|怎么样|实际测试</title><link href="http://www.yanyulin.info/pages/2014/03/duoshuo.html" rel="alternate"></link><updated>2014-03-03T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-03:pages/2014/03/duoshuo.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;本文非&lt;code&gt;多说水客&lt;/code&gt;，博主也坚决抵制&lt;code&gt;水客&lt;/code&gt;，水客只有误导人的份，本博文以博主自已的博客实际使用心得来&lt;strong&gt;评价第三方评价系统多说&lt;/strong&gt;，目前国内比较出名的第三方社会化评论系统有友言、评论啦、多说，其中友言界面比较简洁，当然也非常优秀，起步较&lt;strong&gt;多说&lt;/strong&gt;要早，评论啦未使用过，不做评价，国外disqus不适合国内的国情，如不支持QQ、百度贴吧、新浪微博分享等&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;如何使用多说可以参考下文&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2014/03/comment.html" target="_blank"&gt;
+博客添加第三方评论系统多说评论框&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;为什么采用第三方评论系统&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;1.数据库以及空间贵，我等屌丝还支付不起&lt;/p&gt;
+&lt;p&gt;2.第三方评论系统具有强大的反垃圾机制，可以有效的过滤垃圾流言&lt;/p&gt;
+&lt;p&gt;3.添加容易，界面操作方便，省去了我们自已写代码&lt;/p&gt;
+&lt;p&gt;4.功能比较强大，都带有自已的&lt;code&gt;分享按钮&lt;/code&gt;以及&lt;strong&gt;微博、QQ、人人、百度贴吧&lt;/strong&gt;登录&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;多说评论框优点&lt;/strong&gt;*&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;1.支持国内目前主流的SNS,如&lt;strong&gt;微博、QQ、人人、百度贴吧&lt;/strong&gt;,国外嘛，也没必要，你懂的~&lt;/p&gt;
+&lt;p&gt;2.团队技术实力还是比较强大，多说创建团队是来自于清华的牛人，用了两个月的时间成功上线多说&lt;/p&gt;
+&lt;p&gt;3.&lt;code&gt;多说&lt;/code&gt;支持&lt;code&gt;SEO优化&lt;/code&gt;,这是其最为突出的地方，也最吸引人的...&lt;/p&gt;
+&lt;p&gt;4.评论系统反馈比较及时，界面美观，提供CSS自定义&lt;/p&gt;
+&lt;p&gt;5.提供了从其他第三方评论系统导入评论的功能&lt;/p&gt;
+&lt;p&gt;6.提供了各种API以及自定义组件&lt;/p&gt;
+&lt;p&gt;7.完全免费，目说使用多说评论框的公司比较多，其中不泛名企，如小米....&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;多说评论框缺点&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;免费当然也有免费的缺点，其中最大的缺点就是服务器有时会出现问题，如崩溃，而且恢复起来需要大概四五个小时，以下是博主实际遇到的一次情况，当然多说技术人员服务还是挺好的，其他缺点暂时没有发现，大家可以试试&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;以下截图发生在2014.2.27号&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;
+&lt;a href="http://www.yanyulin.info/pages/2014/03/duoshuo.html"&gt;
+&lt;img src="http://www.yanyulin.info/pics/zatan/duoshuo1.jpg"/&gt;
+&lt;/a&gt;
+&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;
+&lt;a href="http://www.yanyulin.info/pages/2014/03/duoshuo.html"&gt;
+&lt;img src="http://www.yanyulin.info/pics/zatan/duoshuo2.jpg"/&gt;
+&lt;/a&gt;
+&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;
+&lt;a href="http://www.yanyulin.info/pages/2014/03/duoshuo.html"&gt;
+&lt;img src="http://www.yanyulin.info/pics/zatan/duoshuo.jpg"/&gt;
+&lt;/a&gt;
+&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;多说欧阳 9:42:30 &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;是有一台服务器小故障，已经开始修复，估计一小时以后可以恢复、&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;center&gt;
+&lt;a href="http://www.yanyulin.info/pages/2014/03/duoshuo.html"&gt;
+&lt;img src="http://www.yanyulin.info/pics/zatan/duoshuo3.jpg"/&gt;
+&lt;/a&gt;
+&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;多说欧阳 15:54:09 &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;服务器正在修复，还没完全好&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;多说欧阳 16:54:10 &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;我们的技术人员已经完成了修复工作的操作，现在正等待数据库数据传输；成功保证了所有数据完整，&lt;/span&gt;
+&lt;span class="err"&gt;大家耐心等待一下，由于数据量比较大，所以没有马上全部恢复，请大家不要着急，没有任何数据丢失&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;center&gt;
+&lt;a href="http://www.yanyulin.info/pages/2014/03/duoshuo.html"&gt;
+&lt;img src="http://www.yanyulin.info/pics/zatan/duoshuo4.jpg"/&gt;
+&lt;/a&gt;
+&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;多说欧阳 17:00:26 &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;感谢支持&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;多说欧阳 19:11:35 &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;多说服务已经全部正常，关闭插件的用户现在可以重新打开使用了，对给大家造成的麻烦深表歉意，感谢大家支持&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;从上面的聊天记录可以看出，多说评论技术人员服务还是挺到位的~~~&lt;/p&gt;</summary><category term="烟雨分享"></category></entry></feed>
