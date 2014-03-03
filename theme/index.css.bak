@@ -195,7 +195,7 @@ a:hover {
 	text-decoration:none;
 }
 #hed {
-	background:#007EB8;
+	background-color:#007EB8;
 	width:100%;
 	height:65px;
 	top:0;
@@ -599,7 +599,7 @@ body {
 	color:#808080\9\0;
 }
 #top #topnav.current_page_item,#top #topnav .current-menu-item {
-	background:url("images/w_menubg.gif") ;
+	background-color:#007EB8 ;
 }
 #top #topnav ul li .current-menu-item {
 	background:none;

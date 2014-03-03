@@ -575,7 +575,7 @@ body {
 	background:none;
 }
 #top #topnav li a:hover,#top #topnav li a:active {
-	background:url("images/w_menubg.gif");
+	background-color:#007EB8;
 }
 #top #topnav li li {
 	height:auto;
@@ -599,7 +599,7 @@ body {
 	color:#808080\9\0;
 }
 #top #topnav.current_page_item,#top #topnav .current-menu-item {
-	background:url("images/w_menubg.gif") ;
+	background-color:#007EB8 ;
 }
 #top #topnav ul li .current-menu-item {
 	background:none;

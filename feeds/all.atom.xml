@@ -1,5 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>烟雨林</title><link href="http://www.yanyulin.info/" rel="alternate"></link><link href="http://www.yanyulin.info/feeds/all.atom.xml" rel="self"></link><id>http://www.yanyulin.info/</id><updated>2014-03-02T00:00:00+08:00</updated><entry><title>博客添加第三方评论系统多说评论框</title><link href="http://www.yanyulin.info/pages/2014/03/comment.html" rel="alternate"></link><updated>2014-03-02T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-02:pages/2014/03/comment.html</id><summary type="html">&lt;hr /&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>烟雨林</title><link href="http://www.yanyulin.info/" rel="alternate"></link><link href="http://www.yanyulin.info/feeds/all.atom.xml" rel="self"></link><id>http://www.yanyulin.info/</id><updated>2014-03-03T00:00:00+08:00</updated><entry><title>pelican创建博客如何设置导航条</title><link href="http://www.yanyulin.info/pages/2014/03/navigator.html" rel="alternate"></link><updated>2014-03-03T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-03:pages/2014/03/navigator.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;Pelican搭建博客中，如果比较懒，可以直接使用官方提供的主题，官方提供的主题均比较简单，做一些简单的博客还是可以的，但要想做到美观、大方似乎还得努力，今天分享一下，&lt;strong&gt;本博客&lt;/strong&gt;(当然也是采用pelican搭建的)在搭建过程中，如何使用pelican创建自定义的菜单，菜单的样式如下图所示：&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;
+&lt;a href="http://www.yanyulin.info/pages/2014/03/navigator.html"&gt;
+&lt;img src="http://www.yanyulin.info/pics/tools/nav1.jpg"/&gt;
+&lt;/a&gt;
+&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;本博客的搭建过程：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2013/11/pelican.html" target="_blank"&gt;
+pelican搭建属于自已的博客&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2013/11/github.html" target="_blank"&gt;
+Github简明教程(入门篇)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2013/11/githubM.html" target="_blank"&gt;
+Github上如何给别人贡献代码&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2014/01/pelican_question.html" target="_blank"&gt;
+pelican创建博客常见问题汇总
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2014/03/comment.html" target="_blank"&gt;
+博客添加第三方评论系统多说评论框
+&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Pelican是基于Jinja2模板的，因此在设置菜单时有必要了解一些JinJa2的语法以及相关函数&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;菜单设置步骤&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;1、配置文件&lt;code&gt;pelicanconf.py&lt;/code&gt;的设置&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;DISPLAY_PAGES_ON_MENU&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;False&lt;/span&gt;
+&lt;span class="n"&gt;DISPLAY_CATEGORIES_ON_MENU&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;True&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;strong&gt;备注&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;DISPLAY_PAGES_ON_MENU = False&lt;/code&gt;表示的是单独页即&lt;code&gt;page&lt;/code&gt;文件夹里的标题不显示在导航菜单中&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;DISPLAY_CATEGORIES_ON_MENU = False&lt;/code&gt;表示的是目录,即文章分类要显示在导航菜单中&lt;/p&gt;
+&lt;p&gt;2、在目录中，有些目录不想显示在导航条中，如本博文中的&lt;a href="http://www.yanyulin.info/category/cheng-xu-yuan-zhao-gong-zuo.html" target="_blank"&gt;程序员找工作&lt;/a&gt;以及&lt;a href="http://www.yanyulin.info/category/cheng-xu-yuan-de-mian-jing.html" target="_blank"&gt;程序员的面经&lt;/a&gt;可以在配置文件中写上如下语句，表示不想显示的目录：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;LINKS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt;  &lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="n"&gt;u&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;程序员找工作&lt;/span&gt;&lt;span class="sc"&gt;&amp;#39;,&amp;#39;&lt;/span&gt;&lt;span class="err"&gt;#&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+          &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;u&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;程序员的面经&lt;/span&gt;&lt;span class="sc"&gt;&amp;#39;,&amp;#39;&lt;/span&gt;&lt;span class="err"&gt;#&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;),)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;3、设置好上述的配置文件后，打开你自已的主题，例如本博文的主题是&lt;code&gt;pelican-themes/gum&lt;/code&gt;,找到templates文件夹下的base.html，写下如下代码：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;&amp;lt;!--表示的是如果是首页时，对样式进行的设置，效果如本博文稿www.yanyulin.info主页导航栏--&amp;gt;&lt;/span&gt;
+&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nv"&gt;page_name&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;index&amp;quot;&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;                       
+&lt;span class="nt"&gt;&amp;lt;li&lt;/span&gt;  &lt;span class="na"&gt;class=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;current-menu-item current_page_item &amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&amp;lt;a&lt;/span&gt; &lt;span class="na"&gt;href=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&lt;/span&gt;&lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;SITEURL&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;烟雨首页&lt;span class="nt"&gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;li&amp;gt;&amp;lt;a&lt;/span&gt; &lt;span class="na"&gt;href=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&lt;/span&gt;&lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;SITEURL&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;烟雨首页&lt;span class="nt"&gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;endif&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
+&lt;span class="c"&gt;&amp;lt;!--看看菜单栏里是否有菜单--&amp;gt;&lt;/span&gt;
+&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="nv"&gt;title&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nv"&gt;link&lt;/span&gt; &lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="nv"&gt;MENUITEMS&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;li&lt;/span&gt; &lt;span class="nt"&gt;&amp;gt;&amp;lt;a&lt;/span&gt; &lt;span class="na"&gt;href=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&lt;/span&gt;&lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;link&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;title&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;endfor&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
+&lt;span class="c"&gt;&amp;lt;!--看看page目录下的页标题是否显示--&amp;gt;&lt;/span&gt;
+&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nv"&gt;DISPLAY_PAGES_ON_MENU&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
+&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="nv"&gt;p&lt;/span&gt; &lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="nv"&gt;PAGES&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;li&amp;gt;&amp;lt;a&lt;/span&gt; &lt;span class="na"&gt;href=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&lt;/span&gt;&lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;SITEURL&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="s"&gt;/&lt;/span&gt;&lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;p.url&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;p.title&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;endfor&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
+&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
+&lt;span class="c"&gt;&amp;lt;!--关键部件，即显示目录名字到导航条上--&amp;gt;&lt;/span&gt;
+&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nv"&gt;DISPLAY_CATEGORIES_ON_MENU&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
+&lt;span class="c"&gt;&amp;lt;!--过滤掉不想显示的目录--&amp;gt;&lt;/span&gt;
+&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;dit&lt;/span&gt;&lt;span class="o"&gt;=[]&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
+&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="nv"&gt;txm&lt;/span&gt; &lt;span class="o"&gt;,&lt;/span&gt;&lt;span class="nv"&gt;null&lt;/span&gt; &lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="nv"&gt;LINKS&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
+&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nv"&gt;dit.append&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;txm&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
+&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;endif&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
+&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;endfor&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
+&lt;span class="c"&gt;&amp;lt;!--开如显示--&amp;gt;&lt;/span&gt;
+&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="nv"&gt;cat&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nv"&gt;null&lt;/span&gt; &lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="nv"&gt;categories&lt;/span&gt;  &lt;span class="cp"&gt;%}&lt;/span&gt;
+&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nv"&gt;cat&lt;/span&gt; &lt;span class="k"&gt;not&lt;/span&gt; &lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="nv"&gt;dit&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
+&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nv"&gt;category&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="nv"&gt;cat&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;                                                
+&lt;span class="nt"&gt;&amp;lt;li&lt;/span&gt; &lt;span class="na"&gt;class=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;current-menu-item current_page_item &amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&amp;lt;a&lt;/span&gt; &lt;span class="na"&gt;href=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&lt;/span&gt;&lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;SITEURL&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="s"&gt;/&lt;/span&gt;&lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;cat.url&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;cat&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;li&amp;gt;&amp;lt;a&lt;/span&gt; &lt;span class="na"&gt;href=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&lt;/span&gt;&lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;SITEURL&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="s"&gt;/&lt;/span&gt;&lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;cat.url&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;cat&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;endif&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
+&lt;span class="cp"&gt;{%&lt;/span&gt;&lt;span class="k"&gt;endif&lt;/span&gt;&lt;span class="cp"&gt;%}&lt;/span&gt;
+&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;endfor&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
+&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;endif&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
+&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;endif&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;strong&gt;备注&lt;/strong&gt;多看上面注释，代码不难理解&lt;/p&gt;
+&lt;p&gt;4、更改了上述主题后，将原有主题卸载，重新安装，如下是以本博文主题&lt;code&gt;gum&lt;/code&gt;为例子，代码如下：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;pelican&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;themes&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;r&lt;/span&gt; &lt;span class="n"&gt;gum&lt;/span&gt;
+
+&lt;span class="n"&gt;pelican&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;themes&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="n"&gt;pelican&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;themes&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;gum&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;如有问题，可以联系我，联系方式，看博客下方邮箱&lt;/p&gt;</summary><category term="工具使用"></category></entry><entry><title>博客添加第三方评论系统多说评论框</title><link href="http://www.yanyulin.info/pages/2014/03/comment.html" rel="alternate"></link><updated>2014-03-02T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-02:pages/2014/03/comment.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;&lt;code&gt;博客&lt;/code&gt;已经基本搭建完成，前前后后历时将近两周，采用的是开源工具&lt;code&gt;Pelican&lt;/code&gt;搭建，服务器采用的是强大的分布式代码托管库&lt;code&gt;Github&lt;/code&gt;,两者的教程可以参考下面的链接，本博客总共破费了&lt;code&gt;我3美元&lt;/code&gt;：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2013/11/pelican.html" target="_blank"&gt;
@@ -119,86 +206,7 @@ JED币免费获取30 ripple币
 &lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2014/01/freexrp.html" target="_blank"&gt;
 免费获取ripple币的方法汇总
-&lt;/a&gt;&lt;/p&gt;</summary><category term="瑞波币"></category></entry><entry><title>Pelican创建博客如何设置导航条</title><link href="http://www.yanyulin.info/pages/2014/03/navigator.html" rel="alternate"></link><updated>2014-03-02T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-02:pages/2014/03/navigator.html</id><summary type="html">&lt;hr /&gt;
-&lt;p&gt;&lt;code&gt;博客&lt;/code&gt;已经基本搭建完成，前前后后历时将近两周，采用的是开源工具&lt;code&gt;Pelican&lt;/code&gt;搭建，服务器采用的是强大的分布式代码托管库&lt;code&gt;Github&lt;/code&gt;,两者的教程可以参考下面的链接，本博客总共破费了&lt;code&gt;我3美元&lt;/code&gt;：&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2013/11/pelican.html" target="_blank"&gt;
-pelican搭建属于自已的博客&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2013/11/github.html" target="_blank"&gt;
-Github简明教程(入门篇)&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2013/11/githubM.html" target="_blank"&gt;
-Github上如何给别人贡献代码&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2014/01/pelican_question.html" target="_blank"&gt;
-pelican创建博客常见问题汇总
-&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;今天&lt;code&gt;分享&lt;/code&gt;一下，博客如何添加&lt;strong&gt;第三方评论系统&lt;/strong&gt;，国外的第三方评论系统已经做的相当强大，如&lt;code&gt;disqus&lt;/code&gt;,但国外终究是国外，与国内行情不同，如&lt;code&gt;disqus&lt;/code&gt;不支持&lt;strong&gt;微博、QQ、人人、百度贴吧&lt;/strong&gt;登录以及分享等，国内的第三方评论系统起步较国外晚，但做的也相当不错，如&lt;strong&gt;多说、友言、评论啦&lt;/strong&gt;等，比较符合国内的行情，本博客最初搭建时采用的第三方评论系统为&lt;code&gt;disqus&lt;/code&gt;,最后发现&lt;code&gt;disqus&lt;/code&gt;除了上述的缺点之外，还有一个非常严重的问题，就是在&lt;code&gt;IE7/IE6&lt;/code&gt;下，&lt;code&gt;disqus&lt;/code&gt;会出现问题，即不能很好的跨浏览器，使用了将近两周，于是弃之，改用了国内的多说&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;为什么采用第三方评论系统&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;1.数据库以及空间贵，我等屌丝还支付不起&lt;/p&gt;
-&lt;p&gt;2.第三方评论系统具有强大的反垃圾机制，可以有效的过滤垃圾流言&lt;/p&gt;
-&lt;p&gt;3.添加容易，界面操作方便，省去了我们自已写代码&lt;/p&gt;
-&lt;p&gt;4.功能比较强大，都带有自已的&lt;code&gt;分享按钮&lt;/code&gt;以及&lt;strong&gt;微博、QQ、人人、百度贴吧&lt;/strong&gt;登录&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;多说评论框&lt;/strong&gt;*&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;1.支持国内目前主流的SNS,如&lt;strong&gt;微博、QQ、人人、百度贴吧&lt;/strong&gt;,国外嘛，也没必要，你懂的~&lt;/p&gt;
-&lt;p&gt;2.团队技术实力还是比较强大&lt;/p&gt;
-&lt;p&gt;3.&lt;code&gt;多说&lt;/code&gt;支持&lt;code&gt;SEO优化&lt;/code&gt;,这是其最为突出的地方，也最吸引人的...&lt;/p&gt;
-&lt;p&gt;4.评论系统反馈比较及时，界面美观，提供自定义....&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;重点&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;1.向博客中添加评论系统，首先要在多说网上注册自已的帐号，注册帐号后要验证自已的域名，邮箱等，如下图所示：&lt;/p&gt;
-&lt;p&gt;&lt;center&gt;
-&lt;a href="http://www.yanyulin.info/pages/2014/03/comment.html"&gt;
-&lt;img src="http://www.yanyulin.info/pics/tools/duoshuo1.jpg"/&gt;
-&lt;/a&gt;
-&lt;/center&gt;&lt;/p&gt;
-&lt;p&gt;2.点击管理员左侧的工具，获取通用代码，或者直接复制下面的代码，将该代码粘贴到博客中需要添加评论的地方，即可&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;&amp;lt;!-- Duoshuo Comment BEGIN --&amp;gt;&lt;/span&gt;
-    &lt;span class="nt"&gt;&amp;lt;div&lt;/span&gt; &lt;span class="na"&gt;class=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;ds-thread&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-&lt;span class="nt"&gt;&amp;lt;script&lt;/span&gt; &lt;span class="na"&gt;type=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;text/javascript&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
-var duoshuoQuery = {short_name:&amp;quot;yanyulin&amp;quot;};
-    (function() {
-        var ds = document.createElement(&amp;#39;script&amp;#39;);
-        ds.type = &amp;#39;text/javascript&amp;#39;;ds.async = true;
-        ds.src = &amp;#39;http://static.duoshuo.com/embed.js&amp;#39;;
-        ds.charset = &amp;#39;UTF-8&amp;#39;;
-        (document.getElementsByTagName(&amp;#39;head&amp;#39;)&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; 
-        || document.getElementsByTagName(&amp;#39;body&amp;#39;)&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;).appendChild(ds);
-    })();
-    &lt;span class="nt"&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
-&lt;span class="c"&gt;&amp;lt;!-- Duoshuo Comment END --&amp;gt;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;&lt;strong&gt;备注&lt;/strong&gt;代码中的的&lt;code&gt;short_name&lt;/code&gt;要改写成添加站点时&lt;code&gt;http://www.XXXX.duoshuo.com&lt;/code&gt;中的&lt;code&gt;XXXX&lt;/code&gt;部分，添加成功后，运行图我如下图如博文下面的评论框所示&lt;/p&gt;
-&lt;p&gt;3.给博文添加最新评论，效果如我的博客右侧栏如示，代码如下：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nt"&gt;&amp;lt;ul&lt;/span&gt; &lt;span class="na"&gt;class=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;ds-recent-comments&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;data-num-items=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;7&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;data-show-title=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;0&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;data-show-avatars=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;1&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;data-show-time=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;1&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;data-show-admin=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;0&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;data-excerpt-length=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;40&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&amp;lt;/ul&amp;gt;&lt;/span&gt;
-&lt;span class="nt"&gt;&amp;lt;div&lt;/span&gt; &lt;span class="na"&gt;class=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;clear&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-&lt;span class="c"&gt;&amp;lt;!--多说js加载开始，一个页面只需要加载一次 --&amp;gt;&lt;/span&gt;
-&lt;span class="nt"&gt;&amp;lt;script&lt;/span&gt; &lt;span class="na"&gt;type=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;text/javascript&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
-var duoshuoQuery = {short_name:&amp;quot;yanyulin&amp;quot;};
-(function() {
-    var ds = document.createElement(&amp;#39;script&amp;#39;);
-    ds.type = &amp;#39;text/javascript&amp;#39;;ds.async = true;
-    ds.src = &amp;#39;http://static.duoshuo.com/embed.js&amp;#39;;
-    ds.charset = &amp;#39;UTF-8&amp;#39;;
-    (document.getElementsByTagName(&amp;#39;head&amp;#39;)&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; || document.getElementsByTagName(&amp;#39;body&amp;#39;)&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;).appendChild(ds);
-})();
-&lt;span class="nt"&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
-&lt;span class="c"&gt;&amp;lt;!--多说js加载结束，一个页面只需要加载一次 --&amp;gt;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;&lt;strong&gt;备注&lt;/strong&gt;代码中的的&lt;code&gt;short_name&lt;/code&gt;要改写成添加站点时&lt;code&gt;http://www.XXXX.duoshuo.com&lt;/code&gt;中的&lt;code&gt;XXXX&lt;/code&gt;部分&lt;/p&gt;
-&lt;p&gt;最终的结果如下图所示&lt;/p&gt;
-&lt;p&gt;&lt;center&gt;
-&lt;a href="http://www.yanyulin.info/pages/2014/03/comment.html"&gt;
-&lt;img src="http://www.yanyulin.info/pics/tools/duoshuo2.jpg"/&gt;
-&lt;/a&gt;
-&lt;/center&gt;&lt;/p&gt;
-&lt;p&gt;如有问题，可以联系我，联系方式，看博客下方邮箱&lt;/p&gt;</summary><category term="工具使用"></category></entry><entry><title>ripple钱包注册/更改/免费激活</title><link href="http://www.yanyulin.info/pages/2014/02/ripplereginster.html" rel="alternate"></link><updated>2014-02-24T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-02-24:pages/2014/02/ripplereginster.html</id><summary type="html">&lt;hr /&gt;
+&lt;/a&gt;&lt;/p&gt;</summary><category term="瑞波币"></category></entry><entry><title>ripple钱包注册/更改/免费激活</title><link href="http://www.yanyulin.info/pages/2014/02/ripplereginster.html" rel="alternate"></link><updated>2014-02-24T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-02-24:pages/2014/02/ripplereginster.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;简介&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;Ripple&lt;/code&gt;是世界上第一个开放的支付网络，通过这个支付网络可以转账任意一种货币，包括美元、欧元、人民币、日元或者比特币，简便易行快捷，交易确认在几秒以内完成，交易费用几乎是零，没有所谓的跨行异地以及跨国支付费用&lt;/p&gt;
 &lt;p&gt;本博文向大家介绍&lt;/p&gt;
