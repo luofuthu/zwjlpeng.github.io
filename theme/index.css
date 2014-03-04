@@ -196,12 +196,8 @@ a:hover {
 }
 #hed {
 	background-color:#007EB8;
-	width:100%;
 	height:65px;
-	top:0;
 	border-bottom:3px solid #FF5141;
-	bottom:0px;
-	right:0px;
 }
 #hed .top_part {
 	width:1080px;
@@ -226,9 +222,6 @@ a:hover {
 	color:#0196e3;
 }
 .entry_box {
-	position:relative;
-	background:#fff;
-	width:730px;
 	padding:12px 10px 0px 10px;
 }
 .entry_box_b {
@@ -604,9 +597,6 @@ body {
 #top #topnav ul li .current-menu-item {
 	background:none;
 }
-.post_entry {
-	padding-right:0px;
-}
 .thumbnail_box {
 	width:200px;
 	height:100px;
@@ -621,7 +611,6 @@ body {
 }
 .thumbnail_box {
 	float:left;
-	margin-top:4px;
 }
 .box_entry_title,.post_entry,.archive_title_box,.archive {
 	display:inline;
