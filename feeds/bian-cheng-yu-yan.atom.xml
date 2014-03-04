@@ -25,86 +25,85 @@
 &lt;p&gt;DEFAULT_PAGINATION = 11表示分页时一页显示11条&lt;/p&gt;
 &lt;p&gt;PAGINATION_PATTERNS里面配置的是分页时各分布保存的位置，上述代码的含义就是第1分页保存在网站根目录下，从第二分页开始，保存在page目录下&lt;/p&gt;
 &lt;p&gt;2、Pelican采用的是&lt;code&gt;JinJa2&lt;/code&gt;模板，最好先了解一下&lt;code&gt;JinJa2&lt;/code&gt;,本博客中分页长度是11个长度，也就是上图中的分页小方块最多有11个，当分页数&lt;code&gt;&amp;gt;11&lt;/code&gt;时，假设为12时，当用户点击第10页时，则会显示&lt;code&gt;2-12&lt;/code&gt;页，当用户点击第1页时，则又会显示&lt;code&gt;1-11&lt;/code&gt;页，实现代码如下(代码更改在模板中的pagination.html中)：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nv"&gt;DEFAULT_PAGINATION&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
-    &lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;pageCut&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;11&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
-    &lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;cut&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;5&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
-    &lt;span class="nt"&gt;&amp;lt;div&lt;/span&gt; &lt;span class="na"&gt;class=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;navigation_b&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
-        &lt;span class="nt"&gt;&amp;lt;div&lt;/span&gt; &lt;span class="na"&gt;class=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;pagination&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;        
-            &lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;currentpage&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nv"&gt;articles_page.number&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
-            &lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nv"&gt;currentpage-cut&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt; &lt;span class="k"&gt;and&lt;/span&gt; &lt;span class="nv"&gt;articles_paginator.num_pages&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nv"&gt;currentpage&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;=&lt;/span&gt; &lt;span class="nv"&gt;cut&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
-                &lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="nv"&gt;j&lt;/span&gt; &lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="nv"&gt;range&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;currentpage-cut&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt;&lt;span class="nv"&gt;currentpage&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt; 
-                    &lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nv"&gt;j&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="nv"&gt;currentpage&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
-                       &lt;span class="nt"&gt;&amp;lt;span&lt;/span&gt; &lt;span class="na"&gt;class=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;current&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;{{&lt;/span&gt;&lt;span class="nv"&gt;articles_page.number&lt;/span&gt;&lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
-                    &lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;elif&lt;/span&gt; &lt;span class="nv"&gt;j&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
-                       &lt;span class="nt"&gt;&amp;lt;a&lt;/span&gt; &lt;span class="na"&gt;href=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&lt;/span&gt;&lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;SITEURL&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="s"&gt;/&lt;/span&gt;&lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;page_name&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="s"&gt;.html&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;class=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;inactive&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;j&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;        
-                    &lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
-                       &lt;span class="nt"&gt;&amp;lt;a&lt;/span&gt; &lt;span class="na"&gt;href=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&lt;/span&gt;&lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;SITEURL&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="s"&gt;/page/&lt;/span&gt;&lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;page_name&lt;/span&gt; &lt;span class="cp"&gt;}}{{&lt;/span&gt; &lt;span class="nv"&gt;j&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="s"&gt;.html&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;class=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;inactive&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
-                        &lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;j&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;
-                       &lt;span class="nt"&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
-                       &lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;endif&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
-                   &lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;endfor&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
-                   &lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="nv"&gt;j&lt;/span&gt; &lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="nv"&gt;range&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;currentpage&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt;&lt;span class="nv"&gt;currentpage&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="nv"&gt;cut&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt; 
-                       &lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nv"&gt;j&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="nv"&gt;currentpage&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
-                         &lt;span class="nt"&gt;&amp;lt;span&lt;/span&gt; &lt;span class="na"&gt;class=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;current&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;{{&lt;/span&gt;&lt;span class="nv"&gt;articles_page.number&lt;/span&gt;&lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
-                       &lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
-                          &lt;span class="nt"&gt;&amp;lt;a&lt;/span&gt; &lt;span class="na"&gt;href=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&lt;/span&gt;&lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;SITEURL&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="s"&gt;/page/&lt;/span&gt;&lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;page_name&lt;/span&gt; &lt;span class="cp"&gt;}}{{&lt;/span&gt; &lt;span class="nv"&gt;j&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="s"&gt;.html&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;class=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;inactive&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
-                          &lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;j&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;
-                          &lt;span class="nt"&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
-                       &lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;endif&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
-                    &lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;endfor&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
-             &lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;elif&lt;/span&gt; &lt;span class="nv"&gt;articles_paginator.num_pages&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nv"&gt;pageCut&lt;/span&gt; &lt;span class="k"&gt;and&lt;/span&gt; &lt;span class="nv"&gt;articles_paginator.num_pages&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nv"&gt;currentpage&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nv"&gt;pageCut&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
-                   &lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="nv"&gt;j&lt;/span&gt; &lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="nv"&gt;range&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;pageCut-1&lt;/span&gt;&lt;span class="o"&gt;,-&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="o"&gt;,-&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt; 
-                        &lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nv"&gt;articles_paginator.num_pages&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nv"&gt;j&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="nv"&gt;currentpage&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
-                          &lt;span class="nt"&gt;&amp;lt;span&lt;/span&gt; &lt;span class="na"&gt;class=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;current&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;{{&lt;/span&gt;&lt;span class="nv"&gt;articles_page.number&lt;/span&gt;&lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
-                        &lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;elif&lt;/span&gt; &lt;span class="nv"&gt;articles_paginator.num_pages&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nv"&gt;j&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;           
-                            &lt;span class="nt"&gt;&amp;lt;a&lt;/span&gt; &lt;span class="na"&gt;href=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&lt;/span&gt;&lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;SITEURL&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="s"&gt;/page/&lt;/span&gt;&lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;page_name&lt;/span&gt; &lt;span class="o"&gt;}{{&lt;/span&gt; &lt;span class="nv"&gt;j&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="s"&gt;.html&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;class=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;inactive&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
-                            &lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;j&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;
-                            &lt;span class="nt"&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
-                        &lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
-                            &lt;span class="nt"&gt;&amp;lt;a&lt;/span&gt; &lt;span class="na"&gt;href=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&lt;/span&gt;&lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;SITEURL&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="s"&gt;/page/&lt;/span&gt;&lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;page_name&lt;/span&gt; &lt;span class="cp"&gt;}}{{&lt;/span&gt; &lt;span class="nv"&gt;articles_paginator.num_pages&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nv"&gt;j&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="s"&gt;.html&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;class=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;inactive&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
-                                &lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;articles_paginator.num_pages&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nv"&gt;j&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;
-                            &lt;span class="nt"&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
-                        &lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;endif&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
-                    &lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;endfor&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;    
-              &lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
-                        &lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nv"&gt;articles_paginator.num_pages&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="nv"&gt;pageCut&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
-                            &lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;realPage&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nv"&gt;articles_paginator.num_pages&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
-                        &lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
-                            &lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;realPage&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nv"&gt;pageCut&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
-                        &lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;endif&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
-                        &lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="nv"&gt;j&lt;/span&gt; &lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="nv"&gt;range&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt;&lt;span class="nv"&gt;realPage&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt; 
-                            &lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nv"&gt;j&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="nv"&gt;currentpage&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
-                          &lt;span class="nt"&gt;&amp;lt;span&lt;/span&gt; &lt;span class="na"&gt;class=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;current&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;{{&lt;/span&gt;&lt;span class="nv"&gt;articles_page.number&lt;/span&gt;&lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
-                            &lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;elif&lt;/span&gt; &lt;span class="nv"&gt;j&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
-                            &lt;span class="nt"&gt;&amp;lt;a&lt;/span&gt; &lt;span class="na"&gt;href=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&lt;/span&gt;&lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;SITEURL&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="s"&gt;/&lt;/span&gt;&lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;page_name&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="s"&gt;.html&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;class=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;inactive&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
-                                &lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;j&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;
-                            &lt;span class="nt"&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
-                            &lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
-                              &lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nv"&gt;j&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="nv"&gt;currentpage&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
-                               &lt;span class="nt"&gt;&amp;lt;span&lt;/span&gt; &lt;span class="na"&gt;class=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;current&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;{{&lt;/span&gt;&lt;span class="nv"&gt;articles_page.number&lt;/span&gt;&lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
-                              &lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
-                                &lt;span class="nt"&gt;&amp;lt;a&lt;/span&gt; &lt;span class="na"&gt;href=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&lt;/span&gt;&lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;SITEURL&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="s"&gt;/page/&lt;/span&gt;&lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;page_name&lt;/span&gt; &lt;span class="cp"&gt;}}{{&lt;/span&gt; &lt;span class="nv"&gt;j&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="s"&gt;.html&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;class=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;inactive&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
-                                    &lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;j&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;
-                                &lt;span class="nt"&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
-                              &lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;endif&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
-                            &lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;endif&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
-                        &lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;endfor&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;                                    
-                    &lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;endif&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
-        &lt;span class="nt"&gt;&amp;lt;a&lt;/span&gt; &lt;span class="na"&gt;href=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&lt;/span&gt;&lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;SITEURL&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="s"&gt;/&lt;/span&gt;&lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;page_name&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="s"&gt;.html&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;首页&lt;span class="nt"&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
-        &lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nv"&gt;articles_paginator.num_pages&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
-                &lt;span class="nt"&gt;&amp;lt;a&lt;/span&gt; &lt;span class="na"&gt;href=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&lt;/span&gt;&lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;SITEURL&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="s"&gt;/&lt;/span&gt;&lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;page_name&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="s"&gt;.html&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
-                    尾页
-                &lt;span class="nt"&gt;&amp;lt;/a&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-        &lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
-                &lt;span class="nt"&gt;&amp;lt;a&lt;/span&gt; &lt;span class="na"&gt;href=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&lt;/span&gt;&lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;SITEURL&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="s"&gt;/page/&lt;/span&gt;&lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;page_name&lt;/span&gt; &lt;span class="cp"&gt;}}{{&lt;/span&gt;&lt;span class="nv"&gt;articles_paginator.num_pages&lt;/span&gt;&lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="s"&gt;.html&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
-                    尾页
-                &lt;span class="nt"&gt;&amp;lt;/a&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-        &lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;endif&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
-&lt;span class="nt"&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;endif&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
+&lt;p&gt;&lt;textarea width="100%"&gt;
+    {% if DEFAULT_PAGINATION %}
+        {% set pageCut=11 %}
+        {% set cut=5 %}
+        &lt;div class="navigation_b"&gt;
+            &lt;div class="pagination"&gt;      &lt;br /&gt;
+                {% set currentpage=articles_page.number %}
+                {% if currentpage-cut &amp;gt;0 and articles_paginator.num_pages-currentpage &amp;gt;= cut %}
+                    {% for j in range(currentpage-cut,currentpage) %} 
+                        {% if j ==currentpage %}
+                           &lt;span class="current"&gt;{{articles_page.number}}&lt;/span&gt;
+                        {% elif j ==1 %}
+                           &lt;a href="{{ SITEURL }}/{{ page_name }}.html" class="inactive"&gt;{{ j }}&lt;/a&gt;      &lt;br /&gt;
+                        {% else %}
+                           &lt;a href="{{ SITEURL }}/page/{{ page_name }}{{ j }}.html" class="inactive"&gt;
+                            {{ j }}
+                           &lt;/a&gt;
+                           {% endif %}
+                       {% endfor %}
+                       {% for j in range(currentpage,currentpage+cut+1) %} 
+                           {% if j ==currentpage %}
+                             &lt;span class="current"&gt;{{articles_page.number}}&lt;/span&gt;
+                           {% else %}
+                              &lt;a href="{{ SITEURL }}/page/{{ page_name }}{{ j }}.html" class="inactive"&gt;
+                              {{ j }}
+                              &lt;/a&gt;
+                           {% endif %}
+                        {% endfor %}
+                 {% elif articles_paginator.num_pages &amp;gt; pageCut and articles_paginator.num_pages-currentpage&lt;pageCut %}
+                       {% for j in range(pageCut-1,-1,-1) %} 
+                            {% if articles_paginator.num_pages-j==currentpage %}
+                              &lt;span class="current"&gt;{{articles_page.number}}&lt;/span&gt;
+                            {% elif articles_paginator.num_pages-j ==1 %}         &lt;br /&gt;
+                                &lt;a href="{{ SITEURL }}/page/{{ page_name }{{ j }}.html" class="inactive"&gt;
+                                {{ j }}
+                                &lt;/a&gt;
+                            {% else %}
+                                &lt;a href="{{ SITEURL }}/page/{{ page_name }}{{ articles_paginator.num_pages-j }}.html" class="inactive"&gt;
+                                    {{ articles_paginator.num_pages-j }}
+                                &lt;/a&gt;
+                            {% endif %}
+                        {% endfor %}  &lt;br /&gt;
+                  {% else %}
+                            {% if articles_paginator.num_pages &amp;lt; pageCut %}
+                                {% set realPage=articles_paginator.num_pages %}
+                            {% else %}
+                                {% set realPage=pageCut %}
+                            {% endif %}
+                            {% for j in range(1,realPage+1) %} 
+                                {% if j ==currentpage %}
+                              &lt;span class="current"&gt;{{articles_page.number}}&lt;/span&gt;
+                                {% elif j ==1 %}
+                                &lt;a href="{{ SITEURL }}/{{ page_name }}.html" class="inactive"&gt;
+                                    {{ j }}
+                                &lt;/a&gt;
+                                {% else %}
+                                  {% if j ==currentpage %}
+                                   &lt;span class="current"&gt;{{articles_page.number}}&lt;/span&gt;
+                                  {% else %}
+                                    &lt;a href="{{ SITEURL }}/page/{{ page_name }}{{ j }}.html" class="inactive"&gt;
+                                        {{ j }}
+                                    &lt;/a&gt;
+                                  {% endif %}
+                                {% endif %}
+                            {% endfor %}                                  &lt;br /&gt;
+                        {% endif %}
+            &lt;a href="{{ SITEURL }}/{{ page_name }}.html"&gt;首页&lt;/a&gt;
+            {% if articles_paginator.num_pages == 1 %}
+                    &lt;a href="{{ SITEURL }}/{{ page_name }}.html"&gt;
+                        尾页
+                    &lt;/a&gt;&lt;/div&gt;
+            {% else %}
+                    &lt;a href="{{ SITEURL }}/page/{{ page_name }}{{articles_paginator.num_pages}}.html"&gt;
+                        尾页
+                    &lt;/a&gt;&lt;/div&gt;
+            {% endif %}
+    &lt;/div&gt;
+    {% endif %}
+&lt;/textarea&gt;&lt;/p&gt;
 &lt;p&gt;上述的代码看起来比较长，去掉CSS样式后可以直接使用&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;备注，程序注解&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;1、&lt;code&gt;{% if DEFAULT_PAGINATION %}&lt;/code&gt;表示的是如果设置了分布时，则执行后绪代码&lt;/p&gt;

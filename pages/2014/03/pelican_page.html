@@ -102,86 +102,85 @@
 <p>DEFAULT_PAGINATION = 11表示分页时一页显示11条</p>
 <p>PAGINATION_PATTERNS里面配置的是分页时各分布保存的位置，上述代码的含义就是第1分页保存在网站根目录下，从第二分页开始，保存在page目录下</p>
 <p>2、Pelican采用的是<code>JinJa2</code>模板，最好先了解一下<code>JinJa2</code>,本博客中分页长度是11个长度，也就是上图中的分页小方块最多有11个，当分页数<code>&gt;11</code>时，假设为12时，当用户点击第10页时，则会显示<code>2-12</code>页，当用户点击第1页时，则又会显示<code>1-11</code>页，实现代码如下(代码更改在模板中的pagination.html中)：</p>
-<div class="highlight"><pre><span class="cp">{%</span> <span class="k">if</span> <span class="nv">DEFAULT_PAGINATION</span> <span class="cp">%}</span>
-    <span class="cp">{%</span> <span class="k">set</span> <span class="nv">pageCut</span><span class="o">=</span><span class="m">11</span> <span class="cp">%}</span>
-    <span class="cp">{%</span> <span class="k">set</span> <span class="nv">cut</span><span class="o">=</span><span class="m">5</span> <span class="cp">%}</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;navigation_b&quot;</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;pagination&quot;</span><span class="nt">&gt;</span>        
-            <span class="cp">{%</span> <span class="k">set</span> <span class="nv">currentpage</span><span class="o">=</span><span class="nv">articles_page.number</span> <span class="cp">%}</span>
-            <span class="cp">{%</span> <span class="k">if</span> <span class="nv">currentpage-cut</span> <span class="o">&gt;</span><span class="m">0</span> <span class="k">and</span> <span class="nv">articles_paginator.num_pages</span><span class="o">-</span><span class="nv">currentpage</span> <span class="o">&gt;=</span> <span class="nv">cut</span> <span class="cp">%}</span>
-                <span class="cp">{%</span> <span class="k">for</span> <span class="nv">j</span> <span class="k">in</span> <span class="nv">range</span><span class="o">(</span><span class="nv">currentpage-cut</span><span class="o">,</span><span class="nv">currentpage</span><span class="o">)</span> <span class="cp">%}</span> 
-                    <span class="cp">{%</span> <span class="k">if</span> <span class="nv">j</span> <span class="o">==</span><span class="nv">currentpage</span> <span class="cp">%}</span>
-                       <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;current&quot;</span><span class="nt">&gt;</span><span class="cp">{{</span><span class="nv">articles_page.number</span><span class="cp">}}</span><span class="nt">&lt;/span&gt;</span>
-                    <span class="cp">{%</span> <span class="k">elif</span> <span class="nv">j</span> <span class="o">==</span><span class="m">1</span> <span class="cp">%}</span>
-                       <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;</span><span class="cp">{{</span> <span class="nv">SITEURL</span> <span class="cp">}}</span><span class="s">/</span><span class="cp">{{</span> <span class="nv">page_name</span> <span class="cp">}}</span><span class="s">.html&quot;</span> <span class="na">class=</span><span class="s">&quot;inactive&quot;</span><span class="nt">&gt;</span><span class="cp">{{</span> <span class="nv">j</span> <span class="cp">}}</span><span class="nt">&lt;/a&gt;</span>        
-                    <span class="cp">{%</span> <span class="k">else</span> <span class="cp">%}</span>
-                       <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;</span><span class="cp">{{</span> <span class="nv">SITEURL</span> <span class="cp">}}</span><span class="s">/page/</span><span class="cp">{{</span> <span class="nv">page_name</span> <span class="cp">}}{{</span> <span class="nv">j</span> <span class="cp">}}</span><span class="s">.html&quot;</span> <span class="na">class=</span><span class="s">&quot;inactive&quot;</span><span class="nt">&gt;</span>
-                        <span class="cp">{{</span> <span class="nv">j</span> <span class="cp">}}</span>
-                       <span class="nt">&lt;/a&gt;</span>
-                       <span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
-                   <span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span>
-                   <span class="cp">{%</span> <span class="k">for</span> <span class="nv">j</span> <span class="k">in</span> <span class="nv">range</span><span class="o">(</span><span class="nv">currentpage</span><span class="o">,</span><span class="nv">currentpage</span><span class="o">+</span><span class="nv">cut</span><span class="o">+</span><span class="m">1</span><span class="o">)</span> <span class="cp">%}</span> 
-                       <span class="cp">{%</span> <span class="k">if</span> <span class="nv">j</span> <span class="o">==</span><span class="nv">currentpage</span> <span class="cp">%}</span>
-                         <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;current&quot;</span><span class="nt">&gt;</span><span class="cp">{{</span><span class="nv">articles_page.number</span><span class="cp">}}</span><span class="nt">&lt;/span&gt;</span>
-                       <span class="cp">{%</span> <span class="k">else</span> <span class="cp">%}</span>
-                          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;</span><span class="cp">{{</span> <span class="nv">SITEURL</span> <span class="cp">}}</span><span class="s">/page/</span><span class="cp">{{</span> <span class="nv">page_name</span> <span class="cp">}}{{</span> <span class="nv">j</span> <span class="cp">}}</span><span class="s">.html&quot;</span> <span class="na">class=</span><span class="s">&quot;inactive&quot;</span><span class="nt">&gt;</span>
-                          <span class="cp">{{</span> <span class="nv">j</span> <span class="cp">}}</span>
-                          <span class="nt">&lt;/a&gt;</span>
-                       <span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
-                    <span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span>
-             <span class="cp">{%</span> <span class="k">elif</span> <span class="nv">articles_paginator.num_pages</span> <span class="o">&gt;</span> <span class="nv">pageCut</span> <span class="k">and</span> <span class="nv">articles_paginator.num_pages</span><span class="o">-</span><span class="nv">currentpage</span><span class="o">&lt;</span><span class="nv">pageCut</span> <span class="cp">%}</span>
-                   <span class="cp">{%</span> <span class="k">for</span> <span class="nv">j</span> <span class="k">in</span> <span class="nv">range</span><span class="o">(</span><span class="nv">pageCut-1</span><span class="o">,-</span><span class="m">1</span><span class="o">,-</span><span class="m">1</span><span class="o">)</span> <span class="cp">%}</span> 
-                        <span class="cp">{%</span> <span class="k">if</span> <span class="nv">articles_paginator.num_pages</span><span class="o">-</span><span class="nv">j</span><span class="o">==</span><span class="nv">currentpage</span> <span class="cp">%}</span>
-                          <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;current&quot;</span><span class="nt">&gt;</span><span class="cp">{{</span><span class="nv">articles_page.number</span><span class="cp">}}</span><span class="nt">&lt;/span&gt;</span>
-                        <span class="cp">{%</span> <span class="k">elif</span> <span class="nv">articles_paginator.num_pages</span><span class="o">-</span><span class="nv">j</span> <span class="o">==</span><span class="m">1</span> <span class="cp">%}</span>           
-                            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;</span><span class="cp">{{</span> <span class="nv">SITEURL</span> <span class="cp">}}</span><span class="s">/page/</span><span class="cp">{{</span> <span class="nv">page_name</span> <span class="o">}{{</span> <span class="nv">j</span> <span class="cp">}}</span><span class="s">.html&quot;</span> <span class="na">class=</span><span class="s">&quot;inactive&quot;</span><span class="nt">&gt;</span>
-                            <span class="cp">{{</span> <span class="nv">j</span> <span class="cp">}}</span>
-                            <span class="nt">&lt;/a&gt;</span>
-                        <span class="cp">{%</span> <span class="k">else</span> <span class="cp">%}</span>
-                            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;</span><span class="cp">{{</span> <span class="nv">SITEURL</span> <span class="cp">}}</span><span class="s">/page/</span><span class="cp">{{</span> <span class="nv">page_name</span> <span class="cp">}}{{</span> <span class="nv">articles_paginator.num_pages</span><span class="o">-</span><span class="nv">j</span> <span class="cp">}}</span><span class="s">.html&quot;</span> <span class="na">class=</span><span class="s">&quot;inactive&quot;</span><span class="nt">&gt;</span>
-                                <span class="cp">{{</span> <span class="nv">articles_paginator.num_pages</span><span class="o">-</span><span class="nv">j</span> <span class="cp">}}</span>
-                            <span class="nt">&lt;/a&gt;</span>
-                        <span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
-                    <span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span>    
-              <span class="cp">{%</span> <span class="k">else</span> <span class="cp">%}</span>
-                        <span class="cp">{%</span> <span class="k">if</span> <span class="nv">articles_paginator.num_pages</span> <span class="o">&lt;</span> <span class="nv">pageCut</span> <span class="cp">%}</span>
-                            <span class="cp">{%</span> <span class="k">set</span> <span class="nv">realPage</span><span class="o">=</span><span class="nv">articles_paginator.num_pages</span> <span class="cp">%}</span>
-                        <span class="cp">{%</span> <span class="k">else</span> <span class="cp">%}</span>
-                            <span class="cp">{%</span> <span class="k">set</span> <span class="nv">realPage</span><span class="o">=</span><span class="nv">pageCut</span> <span class="cp">%}</span>
-                        <span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
-                        <span class="cp">{%</span> <span class="k">for</span> <span class="nv">j</span> <span class="k">in</span> <span class="nv">range</span><span class="o">(</span><span class="m">1</span><span class="o">,</span><span class="nv">realPage</span><span class="o">+</span><span class="m">1</span><span class="o">)</span> <span class="cp">%}</span> 
-                            <span class="cp">{%</span> <span class="k">if</span> <span class="nv">j</span> <span class="o">==</span><span class="nv">currentpage</span> <span class="cp">%}</span>
-                          <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;current&quot;</span><span class="nt">&gt;</span><span class="cp">{{</span><span class="nv">articles_page.number</span><span class="cp">}}</span><span class="nt">&lt;/span&gt;</span>
-                            <span class="cp">{%</span> <span class="k">elif</span> <span class="nv">j</span> <span class="o">==</span><span class="m">1</span> <span class="cp">%}</span>
-                            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;</span><span class="cp">{{</span> <span class="nv">SITEURL</span> <span class="cp">}}</span><span class="s">/</span><span class="cp">{{</span> <span class="nv">page_name</span> <span class="cp">}}</span><span class="s">.html&quot;</span> <span class="na">class=</span><span class="s">&quot;inactive&quot;</span><span class="nt">&gt;</span>
-                                <span class="cp">{{</span> <span class="nv">j</span> <span class="cp">}}</span>
-                            <span class="nt">&lt;/a&gt;</span>
-                            <span class="cp">{%</span> <span class="k">else</span> <span class="cp">%}</span>
-                              <span class="cp">{%</span> <span class="k">if</span> <span class="nv">j</span> <span class="o">==</span><span class="nv">currentpage</span> <span class="cp">%}</span>
-                               <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;current&quot;</span><span class="nt">&gt;</span><span class="cp">{{</span><span class="nv">articles_page.number</span><span class="cp">}}</span><span class="nt">&lt;/span&gt;</span>
-                              <span class="cp">{%</span> <span class="k">else</span> <span class="cp">%}</span>
-                                <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;</span><span class="cp">{{</span> <span class="nv">SITEURL</span> <span class="cp">}}</span><span class="s">/page/</span><span class="cp">{{</span> <span class="nv">page_name</span> <span class="cp">}}{{</span> <span class="nv">j</span> <span class="cp">}}</span><span class="s">.html&quot;</span> <span class="na">class=</span><span class="s">&quot;inactive&quot;</span><span class="nt">&gt;</span>
-                                    <span class="cp">{{</span> <span class="nv">j</span> <span class="cp">}}</span>
-                                <span class="nt">&lt;/a&gt;</span>
-                              <span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
-                            <span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
-                        <span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span>                                    
-                    <span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
-        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;</span><span class="cp">{{</span> <span class="nv">SITEURL</span> <span class="cp">}}</span><span class="s">/</span><span class="cp">{{</span> <span class="nv">page_name</span> <span class="cp">}}</span><span class="s">.html&quot;</span><span class="nt">&gt;</span>首页<span class="nt">&lt;/a&gt;</span>
-        <span class="cp">{%</span> <span class="k">if</span> <span class="nv">articles_paginator.num_pages</span> <span class="o">==</span> <span class="m">1</span> <span class="cp">%}</span>
-                <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;</span><span class="cp">{{</span> <span class="nv">SITEURL</span> <span class="cp">}}</span><span class="s">/</span><span class="cp">{{</span> <span class="nv">page_name</span> <span class="cp">}}</span><span class="s">.html&quot;</span><span class="nt">&gt;</span>
-                    尾页
-                <span class="nt">&lt;/a&gt;&lt;/div&gt;</span>
-        <span class="cp">{%</span> <span class="k">else</span> <span class="cp">%}</span>
-                <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;</span><span class="cp">{{</span> <span class="nv">SITEURL</span> <span class="cp">}}</span><span class="s">/page/</span><span class="cp">{{</span> <span class="nv">page_name</span> <span class="cp">}}{{</span><span class="nv">articles_paginator.num_pages</span><span class="cp">}}</span><span class="s">.html&quot;</span><span class="nt">&gt;</span>
-                    尾页
-                <span class="nt">&lt;/a&gt;&lt;/div&gt;</span>
-        <span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
-<span class="nt">&lt;/div&gt;</span>
-<span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
-</pre></div>
-
-
+<p><textarea width="100%">
+    {% if DEFAULT_PAGINATION %}
+        {% set pageCut=11 %}
+        {% set cut=5 %}
+        <div class="navigation_b">
+            <div class="pagination">      <br />
+                {% set currentpage=articles_page.number %}
+                {% if currentpage-cut &gt;0 and articles_paginator.num_pages-currentpage &gt;= cut %}
+                    {% for j in range(currentpage-cut,currentpage) %} 
+                        {% if j ==currentpage %}
+                           <span class="current">{{articles_page.number}}</span>
+                        {% elif j ==1 %}
+                           <a href="{{ SITEURL }}/{{ page_name }}.html" class="inactive">{{ j }}</a>      <br />
+                        {% else %}
+                           <a href="{{ SITEURL }}/page/{{ page_name }}{{ j }}.html" class="inactive">
+                            {{ j }}
+                           </a>
+                           {% endif %}
+                       {% endfor %}
+                       {% for j in range(currentpage,currentpage+cut+1) %} 
+                           {% if j ==currentpage %}
+                             <span class="current">{{articles_page.number}}</span>
+                           {% else %}
+                              <a href="{{ SITEURL }}/page/{{ page_name }}{{ j }}.html" class="inactive">
+                              {{ j }}
+                              </a>
+                           {% endif %}
+                        {% endfor %}
+                 {% elif articles_paginator.num_pages &gt; pageCut and articles_paginator.num_pages-currentpage<pageCut %}
+                       {% for j in range(pageCut-1,-1,-1) %} 
+                            {% if articles_paginator.num_pages-j==currentpage %}
+                              <span class="current">{{articles_page.number}}</span>
+                            {% elif articles_paginator.num_pages-j ==1 %}         <br />
+                                <a href="{{ SITEURL }}/page/{{ page_name }{{ j }}.html" class="inactive">
+                                {{ j }}
+                                </a>
+                            {% else %}
+                                <a href="{{ SITEURL }}/page/{{ page_name }}{{ articles_paginator.num_pages-j }}.html" class="inactive">
+                                    {{ articles_paginator.num_pages-j }}
+                                </a>
+                            {% endif %}
+                        {% endfor %}  <br />
+                  {% else %}
+                            {% if articles_paginator.num_pages &lt; pageCut %}
+                                {% set realPage=articles_paginator.num_pages %}
+                            {% else %}
+                                {% set realPage=pageCut %}
+                            {% endif %}
+                            {% for j in range(1,realPage+1) %} 
+                                {% if j ==currentpage %}
+                              <span class="current">{{articles_page.number}}</span>
+                                {% elif j ==1 %}
+                                <a href="{{ SITEURL }}/{{ page_name }}.html" class="inactive">
+                                    {{ j }}
+                                </a>
+                                {% else %}
+                                  {% if j ==currentpage %}
+                                   <span class="current">{{articles_page.number}}</span>
+                                  {% else %}
+                                    <a href="{{ SITEURL }}/page/{{ page_name }}{{ j }}.html" class="inactive">
+                                        {{ j }}
+                                    </a>
+                                  {% endif %}
+                                {% endif %}
+                            {% endfor %}                                  <br />
+                        {% endif %}
+            <a href="{{ SITEURL }}/{{ page_name }}.html">首页</a>
+            {% if articles_paginator.num_pages == 1 %}
+                    <a href="{{ SITEURL }}/{{ page_name }}.html">
+                        尾页
+                    </a></div>
+            {% else %}
+                    <a href="{{ SITEURL }}/page/{{ page_name }}{{articles_paginator.num_pages}}.html">
+                        尾页
+                    </a></div>
+            {% endif %}
+    </div>
+    {% endif %}
+</textarea></p>
 <p>上述的代码看起来比较长，去掉CSS样式后可以直接使用</p>
 <p><strong>备注，程序注解</strong></p>
 <p>1、<code>{% if DEFAULT_PAGINATION %}</code>表示的是如果设置了分布时，则执行后绪代码</p>
@@ -416,25 +415,25 @@ border: 1px solid #CCC;
 				<ul>
 				<ul class="random-post-link">
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2013/11/pelican.html" title="pelican搭建属于自已的博客">pelican搭建属于自已的博客</a>
+				<a href="http://www.yanyulin.info/pages/2014/03/pelican_page.html" title="pelican博客搭建设置分页和分页保存位置">pelican博客搭建设置分页和分页保存位置</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2013/12/neteasyM_1.html" title="网易校招2014年电商面经">网易校招2014年电商面经</a>
+				<a href="http://www.yanyulin.info/pages/2013/01/renmingyinhang_1.html" title="中国人民银行2013校招技术类面经">中国人民银行2013校招技术类面经</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2013/09/huawei_2013_2.html" title="2013届华为校园招聘成都上机题目">2013届华为校园招聘成都上机题目</a>
+				<a href="http://www.yanyulin.info/pages/2013/11/huawei_2014_1.html" title="2014年华为校招机试(一)">2014年华为校招机试(一)</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2013/11/effective.html" title="Effective C++(编程的50个细节)">Effective C++(编程的50个细节)</a>
+				<a href="http://www.yanyulin.info/pages/2014/02/pbaodian.html" title="程序员面试宝典--欧立奇">程序员面试宝典--欧立奇</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2013/12/vc_1.html" title="VC视频教程(主要讲述`MFC`)">VC视频教程(主要讲述`MFC`)</a>
+				<a href="http://www.yanyulin.info/pages/2013/11/vlinux2.html" title="Linux基础教程视频版(很详细)">Linux基础教程视频版(很详细)</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2014/02/wtc.html" title="[赠送]WTC(万特币)获取30ripple和100WTC">[赠送]WTC(万特币)获取30ripple和100WTC</a>
+				<a href="http://www.yanyulin.info/pages/2014/02/ripplereginster.html" title="ripple钱包注册/更改/免费激活">ripple钱包注册/更改/免费激活</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2013/11/qqLogin.html" title="界面编程模仿篇(模仿腾讯QQ登录界面)">界面编程模仿篇(模仿腾讯QQ登录界面)</a>
+				<a href="http://www.yanyulin.info/pages/2013/12/qqLogin_1.html" title="界面编程模仿篇(QQ登录界面逼真篇)">界面编程模仿篇(QQ登录界面逼真篇)</a>
 				</li>
 				<li class="random-post-link">
 				<a href="http://www.yanyulin.info/pages/2014/03/duoshuo.html" title="多说评论框如何|怎么样|实际测试">多说评论框如何|怎么样|实际测试</a>
@@ -486,22 +485,22 @@ var duoshuoQuery = {short_name:"yanyulin"};
 				<div class="box_r">
 				<ul>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2014/03/comment.html" rel="bookmark" title="博客添加第三方评论系统多说评论框">博客添加第三方评论系统多说评论框</a>
+				<a href="http://www.yanyulin.info/pages/2013/11/linux0.html" rel="bookmark" title="Linux中0号进程的创建分析">Linux中0号进程的创建分析</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2014/01/qunar_1.html" rel="bookmark" title="去哪儿网校招2014年面经">去哪儿网校招2014年面经</a>
+				<a href="http://www.yanyulin.info/pages/2013/12/renren_1.html" rel="bookmark" title="人人网校招2014年研发面经">人人网校招2014年研发面经</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2013/12/microsoft_2014_A.html" rel="bookmark" title="微软2014年校招笔试题">微软2014年校招笔试题</a>
+				<a href="http://www.yanyulin.info/pages/2012/11/huawei_2012_1.html" rel="bookmark" title="2012年华为成都校招机试">2012年华为成都校招机试</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2013/11/deepc.html" rel="bookmark" title="C语言深度解剖(含金量高)">C语言深度解剖(含金量高)</a>
+				<a href="http://www.yanyulin.info/pages/2013/12/prgbeautiful.html" rel="bookmark" title="编程之美—微软技术面试心得">编程之美—微软技术面试心得</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2013/12/vc_1.html" rel="bookmark" title="VC视频教程(主要讲述`MFC`)">VC视频教程(主要讲述`MFC`)</a>
+				<a href="http://www.yanyulin.info/pages/2013/12/psbase_1.html" rel="bookmark" title="PhotoShop CS入门版视频教程(基础上)">PhotoShop CS入门版视频教程(基础上)</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2014/01/freexrp.html" rel="bookmark" title="免费获取ripple币的方法汇总">免费获取ripple币的方法汇总</a>
+				<a href="http://www.yanyulin.info/pages/2014/01/whyRipple.html" rel="bookmark" title="为什么大家都转向了Ripple">为什么大家都转向了Ripple</a>
 				</li>
 				<li>
 				<a href="http://www.yanyulin.info/pages/2013/12/qqLogin_1.html" rel="bookmark" title="界面编程模仿篇(QQ登录界面逼真篇)">界面编程模仿篇(QQ登录界面逼真篇)</a>
