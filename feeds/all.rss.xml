@@ -25,7 +25,7 @@
 &lt;p&gt;DEFAULT_PAGINATION = 11表示分页时一页显示11条&lt;/p&gt;
 &lt;p&gt;PAGINATION_PATTERNS里面配置的是分页时各分布保存的位置，上述代码的含义就是第1分页保存在网站根目录下，从第二分页开始，保存在page目录下&lt;/p&gt;
 &lt;p&gt;2、Pelican采用的是&lt;code&gt;JinJa2&lt;/code&gt;模板，最好先了解一下&lt;code&gt;JinJa2&lt;/code&gt;,本博客中分页长度是11个长度，也就是上图中的分页小方块最多有11个，当分页数&lt;code&gt;&amp;gt;11&lt;/code&gt;时，假设为12时，当用户点击第10页时，则会显示&lt;code&gt;2-12&lt;/code&gt;页，当用户点击第1页时，则又会显示&lt;code&gt;1-11&lt;/code&gt;页，实现代码如下(代码更改在模板中的pagination.html中)：&lt;/p&gt;
-&lt;p&gt;&lt;textarea width="100%"&gt;
+&lt;p&gt;&lt;textarea style="width:100%;height:450px" &gt;
     {% if DEFAULT_PAGINATION %}
         {% set pageCut=11 %}
         {% set cut=5 %}

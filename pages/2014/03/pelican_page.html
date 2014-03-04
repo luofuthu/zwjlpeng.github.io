@@ -102,7 +102,7 @@
 <p>DEFAULT_PAGINATION = 11表示分页时一页显示11条</p>
 <p>PAGINATION_PATTERNS里面配置的是分页时各分布保存的位置，上述代码的含义就是第1分页保存在网站根目录下，从第二分页开始，保存在page目录下</p>
 <p>2、Pelican采用的是<code>JinJa2</code>模板，最好先了解一下<code>JinJa2</code>,本博客中分页长度是11个长度，也就是上图中的分页小方块最多有11个，当分页数<code>&gt;11</code>时，假设为12时，当用户点击第10页时，则会显示<code>2-12</code>页，当用户点击第1页时，则又会显示<code>1-11</code>页，实现代码如下(代码更改在模板中的pagination.html中)：</p>
-<p><textarea width="100%">
+<p><textarea style="width:100%;height:450px" >
     {% if DEFAULT_PAGINATION %}
         {% set pageCut=11 %}
         {% set cut=5 %}
@@ -415,22 +415,22 @@ border: 1px solid #CCC;
 				<ul>
 				<ul class="random-post-link">
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2014/03/pelican_page.html" title="pelican博客搭建设置分页和分页保存位置">pelican博客搭建设置分页和分页保存位置</a>
+				<a href="http://www.yanyulin.info/pages/2013/12/htaccess.html" title=".htaccess简明教程(SEO优化)">.htaccess简明教程(SEO优化)</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2013/01/renmingyinhang_1.html" title="中国人民银行2013校招技术类面经">中国人民银行2013校招技术类面经</a>
+				<a href="http://www.yanyulin.info/pages/2013/12/renren_1.html" title="人人网校招2014年研发面经">人人网校招2014年研发面经</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2013/11/huawei_2014_1.html" title="2014年华为校招机试(一)">2014年华为校招机试(一)</a>
+				<a href="http://www.yanyulin.info/pages/2013/06/google_2013_1.html" title="2013年谷歌校招笔试(一)">2013年谷歌校招笔试(一)</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2014/02/pbaodian.html" title="程序员面试宝典--欧立奇">程序员面试宝典--欧立奇</a>
+				<a href="http://www.yanyulin.info/pages/2013/11/objectModel.html" title="深度探索C++对象模型">深度探索C++对象模型</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2013/11/vlinux2.html" title="Linux基础教程视频版(很详细)">Linux基础教程视频版(很详细)</a>
+				<a href="http://www.yanyulin.info/pages/2013/12/psbase_1.html" title="PhotoShop CS入门版视频教程(基础上)">PhotoShop CS入门版视频教程(基础上)</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2014/02/ripplereginster.html" title="ripple钱包注册/更改/免费激活">ripple钱包注册/更改/免费激活</a>
+				<a href="http://www.yanyulin.info/pages/2014/02/wtc.html" title="[赠送]WTC(万特币)获取30ripple和100WTC">[赠送]WTC(万特币)获取30ripple和100WTC</a>
 				</li>
 				<li class="random-post-link">
 				<a href="http://www.yanyulin.info/pages/2013/12/qqLogin_1.html" title="界面编程模仿篇(QQ登录界面逼真篇)">界面编程模仿篇(QQ登录界面逼真篇)</a>
@@ -485,25 +485,25 @@ var duoshuoQuery = {short_name:"yanyulin"};
 				<div class="box_r">
 				<ul>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2013/11/linux0.html" rel="bookmark" title="Linux中0号进程的创建分析">Linux中0号进程的创建分析</a>
+				<a href="http://www.yanyulin.info/pages/2014/02/linux1.html" rel="bookmark" title="快速介绍Linux（Linux入门教程）">快速介绍Linux（Linux入门教程）</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2013/12/renren_1.html" rel="bookmark" title="人人网校招2014年研发面经">人人网校招2014年研发面经</a>
+				<a href="http://www.yanyulin.info/pages/2010/11/ali_2.html" rel="bookmark" title="阿里巴巴校招2010年软研面经">阿里巴巴校招2010年软研面经</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2012/11/huawei_2012_1.html" rel="bookmark" title="2012年华为成都校招机试">2012年华为成都校招机试</a>
+				<a href="http://www.yanyulin.info/pages/2013/06/google_2013_1.html" rel="bookmark" title="2013年谷歌校招笔试(一)">2013年谷歌校招笔试(一)</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2013/12/prgbeautiful.html" rel="bookmark" title="编程之美—微软技术面试心得">编程之美—微软技术面试心得</a>
+				<a href="http://www.yanyulin.info/pages/2014/02/pbaodian.html" rel="bookmark" title="程序员面试宝典--欧立奇">程序员面试宝典--欧立奇</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2013/12/psbase_1.html" rel="bookmark" title="PhotoShop CS入门版视频教程(基础上)">PhotoShop CS入门版视频教程(基础上)</a>
+				<a href="http://www.yanyulin.info/pages/2013/12/vc_1.html" rel="bookmark" title="VC视频教程(主要讲述`MFC`)">VC视频教程(主要讲述`MFC`)</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2014/01/whyRipple.html" rel="bookmark" title="为什么大家都转向了Ripple">为什么大家都转向了Ripple</a>
+				<a href="http://www.yanyulin.info/pages/2014/02/xrptalk.html" rel="bookmark" title="XRP Talk论坛注册教程">XRP Talk论坛注册教程</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2013/12/qqLogin_1.html" rel="bookmark" title="界面编程模仿篇(QQ登录界面逼真篇)">界面编程模仿篇(QQ登录界面逼真篇)</a>
+				<a href="http://www.yanyulin.info/pages/2013/11/fetchPage.html" rel="bookmark" title="爬虫的自我解剖(抓取网页HtmlUnit)">爬虫的自我解剖(抓取网页HtmlUnit)</a>
 				</li>
 				<li>
 				<a href="http://www.yanyulin.info/pages/2014/03/duoshuo.html" rel="bookmark" title="多说评论框如何|怎么样|实际测试">多说评论框如何|怎么样|实际测试</a>
