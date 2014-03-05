@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>烟雨林</title><link href="http://zwjlpeng.github.io/" rel="alternate"></link><link href="http://zwjlpeng.github.io/feeds/cheng-xu-yuan-zhao-gong-zuo.atom.xml" rel="self"></link><id>http://zwjlpeng.github.io/</id><updated>2013-12-07T00:00:00+08:00</updated><entry><title>亚马逊2014年校招笔试题(研发)</title><link href="http://zwjlpeng.github.io/pages/2013/12/amzon_2014_A.html" rel="alternate"></link><updated>2013-12-07T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:zwjlpeng.github.io,2013-12-07:pages/2013/12/amzon_2014_A.html</id><summary type="html">&lt;hr /&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>烟雨林</title><link href="http://www.yanyulin.info/" rel="alternate"></link><link href="http://www.yanyulin.info/feeds/cheng-xu-yuan-zhao-gong-zuo.atom.xml" rel="self"></link><id>http://www.yanyulin.info/</id><updated>2013-12-07T00:00:00+08:00</updated><entry><title>亚马逊2014年校招笔试题(研发)</title><link href="http://www.yanyulin.info/pages/2013/12/amzon_2014_A.html" rel="alternate"></link><updated>2013-12-07T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-12-07:pages/2013/12/amzon_2014_A.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;如有错误，或更加精简的方法，请留言，我会更正，以方便更多的人&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;1、Given a set of open intervals, check whether there exists an interval which is completely inside another interval. If exists, print “1”, otherwise print “0”. You just need to consider the case that all the end points are integers and there are no exactly the same open intervals.&lt;/p&gt;
 &lt;blockquote&gt;
@@ -46,7 +46,7 @@ The sum of the number of M cards equals to N-1.&lt;/p&gt;
 &lt;p&gt;6&lt;/p&gt;
 &lt;p&gt;Given three cards (one can move 2 steps, two can move 1 steps), we have three choices: path one is 1 -&amp;gt; 2 -&amp;gt; 1 -&amp;gt; 1, path two is 1 -&amp;gt; 2 -&amp;gt; 2 -&amp;gt; 1, path three is 1 -&amp;gt; 1 -&amp;gt; 2 -&amp;gt; 1. The maximum score is 6, which is the output.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;各位如果有更好的答案，请留言评价，方便更多的人&lt;/strong&gt;&lt;/p&gt;</summary><category term="亚马逊笔试题"></category></entry><entry><title>微软2014年校招笔试题</title><link href="http://zwjlpeng.github.io/pages/2013/12/microsoft_2014_A.html" rel="alternate"></link><updated>2013-12-07T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:zwjlpeng.github.io,2013-12-07:pages/2013/12/microsoft_2014_A.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;各位如果有更好的答案，请留言评价，方便更多的人&lt;/strong&gt;&lt;/p&gt;</summary><category term="亚马逊笔试题"></category></entry><entry><title>微软2014年校招笔试题</title><link href="http://www.yanyulin.info/pages/2013/12/microsoft_2014_A.html" rel="alternate"></link><updated>2013-12-07T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-12-07:pages/2013/12/microsoft_2014_A.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;如有错误，或更加精简的方法，请留言，我会更正，以方便更多的人&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;1、Which statement(s) is(are) correct about thread and process？Select all that apply.(5 Points)&lt;/p&gt;
 &lt;p&gt;A、Threads share the same address space of the parent process;Processes share the same address space of the parent process.&lt;/p&gt;
@@ -204,7 +204,7 @@ D、5,4,3,2,1&lt;/p&gt;
 &lt;p&gt;Notes:&lt;/p&gt;
 &lt;p&gt;1、Space Complexity should be O(1) &lt;/p&gt;
 &lt;p&gt;2、Only the ".next" field of a node is modifiable.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;各位如果有更好的答案，请留言评价，方便更多的人&lt;/strong&gt;&lt;/p&gt;</summary><category term="微软笔试题"></category></entry><entry><title>雅虎2014年校招笔试题</title><link href="http://zwjlpeng.github.io/pages/2013/12/yahoo_2014_A.html" rel="alternate"></link><updated>2013-12-07T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:zwjlpeng.github.io,2013-12-07:pages/2013/12/yahoo_2014_A.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;各位如果有更好的答案，请留言评价，方便更多的人&lt;/strong&gt;&lt;/p&gt;</summary><category term="微软笔试题"></category></entry><entry><title>雅虎2014年校招笔试题</title><link href="http://www.yanyulin.info/pages/2013/12/yahoo_2014_A.html" rel="alternate"></link><updated>2013-12-07T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-12-07:pages/2013/12/yahoo_2014_A.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;如有错误，或更加精简的方法，请留言，我会更正，以方便更多的人&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;1、Which protocol is used to query the destination MAC address with the destination IP address?()&lt;/p&gt;
 &lt;p&gt;A UDP   B ARP C RARP  D ICMP&lt;/p&gt;
@@ -329,7 +329,7 @@ D、5,4,3,2,1&lt;/p&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;&lt;strong&gt;各位如果有更好的答案，请留言评价，方便更多的人&lt;/strong&gt;&lt;/p&gt;</summary><category term="雅虎笔试题"></category></entry><entry><title>中兴2014年校招笔试题</title><link href="http://zwjlpeng.github.io/pages/2013/12/zte_2014_A.html" rel="alternate"></link><updated>2013-12-07T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:zwjlpeng.github.io,2013-12-07:pages/2013/12/zte_2014_A.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;各位如果有更好的答案，请留言评价，方便更多的人&lt;/strong&gt;&lt;/p&gt;</summary><category term="雅虎笔试题"></category></entry><entry><title>中兴2014年校招笔试题</title><link href="http://www.yanyulin.info/pages/2013/12/zte_2014_A.html" rel="alternate"></link><updated>2013-12-07T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-12-07:pages/2013/12/zte_2014_A.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;如有错误，或更加精简的方法，请留言，我会更正，以方便更多的人&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;一：单选题&lt;/p&gt;
 &lt;p&gt;1、下列的设备数据传输方式中,哪种方式的效率最差()&lt;/p&gt;
@@ -499,7 +499,7 @@ A 数值边界  B 字符串边界   C 指标边界   D 内存边界&lt;/p&gt;
 &lt;p&gt;五、应用题&lt;/p&gt;
 &lt;p&gt;1、编写一个单例模式(Singleton）的实例&lt;/p&gt;
 &lt;p&gt;2、编写一个队列操作用链表实现&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;各位如果有更好的答案，请留言评价，方便更多的人&lt;/strong&gt;&lt;/p&gt;</summary><category term="中兴笔试题"></category></entry><entry><title>阿里巴巴2014年校招笔试题(研发)</title><link href="http://zwjlpeng.github.io/pages/2013/12/alibaba_2014_A.html" rel="alternate"></link><updated>2013-12-06T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:zwjlpeng.github.io,2013-12-06:pages/2013/12/alibaba_2014_A.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;各位如果有更好的答案，请留言评价，方便更多的人&lt;/strong&gt;&lt;/p&gt;</summary><category term="中兴笔试题"></category></entry><entry><title>阿里巴巴2014年校招笔试题(研发)</title><link href="http://www.yanyulin.info/pages/2013/12/alibaba_2014_A.html" rel="alternate"></link><updated>2013-12-06T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-12-06:pages/2013/12/alibaba_2014_A.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;如有错误，或更加精简的方法，请留言，我会更正，以方便更多的人&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;第一部分 单选题&lt;/strong&gt; &lt;/p&gt;
 &lt;p&gt;1 一次内存访、SSD硬盘访问和SATA硬盘随机访问的时间分别约是（）。&lt;/p&gt;
@@ -671,7 +671,7 @@ A、25/51 B、26/51 C、1/2 D、1/3 &lt;/p&gt;
 
 &lt;p&gt;2 已知：为了保持请求的并行度，一台web应用服务器目前需要10个到一台&lt;code&gt;oracle&lt;/code&gt;的数据库连接，目前oracle数据库能够稳定承载的连接数是7000个。目前已经拥有的web应用服务器数是400台，并且web服务器以每年以300的规模在增长。 &lt;/p&gt;
 &lt;p&gt;问题：目前能够才去的策略有哪些？请从原理上对这些策略为什么能够起作用进行一下分析。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;各位如果有更好的答案，请留言评价，方便更多的人&lt;/strong&gt;&lt;/p&gt;</summary><category term="阿里巴巴笔试题"></category></entry><entry><title>创新工场2014年校招笔试题(研发)</title><link href="http://zwjlpeng.github.io/pages/2013/12/cxgc_2014_A.html" rel="alternate"></link><updated>2013-12-06T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:zwjlpeng.github.io,2013-12-06:pages/2013/12/cxgc_2014_A.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;各位如果有更好的答案，请留言评价，方便更多的人&lt;/strong&gt;&lt;/p&gt;</summary><category term="阿里巴巴笔试题"></category></entry><entry><title>创新工场2014年校招笔试题(研发)</title><link href="http://www.yanyulin.info/pages/2013/12/cxgc_2014_A.html" rel="alternate"></link><updated>2013-12-06T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-12-06:pages/2013/12/cxgc_2014_A.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;如有错误，或更加精简的方法，请留言，我会更正，以方便更多的人&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;选择题&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;1 若进栈序列为&lt;code&gt;a、b、c、d&lt;/code&gt;，进栈过程中可以出栈，那么（）不可能是一个出栈序列。&lt;/p&gt;
@@ -711,7 +711,7 @@ Which is not a typical programming technique for IPC:&lt;/p&gt;
 &lt;p&gt;1 输入一个整数无序数组，用堆排序的方法使数组有序&lt;/p&gt;
 &lt;p&gt;2 求一个正整数N的开方，要求不能用库函数&lt;code&gt;sqrt()&lt;/code&gt;，结果的精度在&lt;code&gt;0.001&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;3 给定一个矩阵&lt;code&gt;int maxtrixA[m][n]&lt;/code&gt;,每行和每列都是增序的，实现一个算法去找矩阵中的某个元素&lt;code&gt;element&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;各位如果有更好的答案，请留言评价，方便更多的人&lt;/strong&gt;&lt;/p&gt;</summary><category term="创新工场笔试题"></category></entry><entry><title>美团网2014年校招笔试题(研发)</title><link href="http://zwjlpeng.github.io/pages/2013/12/meituan_2014_A.html" rel="alternate"></link><updated>2013-12-06T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:zwjlpeng.github.io,2013-12-06:pages/2013/12/meituan_2014_A.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;各位如果有更好的答案，请留言评价，方便更多的人&lt;/strong&gt;&lt;/p&gt;</summary><category term="创新工场笔试题"></category></entry><entry><title>美团网2014年校招笔试题(研发)</title><link href="http://www.yanyulin.info/pages/2013/12/meituan_2014_A.html" rel="alternate"></link><updated>2013-12-06T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-12-06:pages/2013/12/meituan_2014_A.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;如有错误，或更加精简的方法，请留言，我会更正，以方便更多的人&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;1、某二叉树中序序列为A,B,C,D,E,F,G。后序序列为B,D,C,A,F,G,E,则该二叉树节点的前序序列是?请写出分析&lt;code&gt;过程及结果&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;2、定义一个二进制数字串的“长度”为从最右侧开始算起连续1的个数（说明，如果最右侧为0，则长度为0，如果最右侧为1，则开始数连续的1的个数作为长度）。例如&lt;code&gt;length(100011)=2,length(100000)=0,&lt;/code&gt;请分析一个随机的N位字串的“长度”的期望值是多少，注意这个长度是从最右侧算起的，比如&lt;code&gt;length(111011)=2&lt;/code&gt;,即使，字符串左边出现更长的长度&lt;/p&gt;
@@ -733,7 +733,7 @@ Which is not a typical programming technique for IPC:&lt;/p&gt;
 &lt;p&gt;例如序列：-2.5 4 0 3 0.5 8 -1 &lt;/p&gt;
 &lt;p&gt;则取出的连续序列为3 0.5 8&lt;/p&gt;
 &lt;p&gt;最大乘积为3&lt;em&gt;0.5&lt;/em&gt;8&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;各位如果有更好的答案，请留言评价，方便更多的人&lt;/strong&gt;&lt;/p&gt;</summary><category term="美团网笔试题"></category></entry><entry><title>2014年百度校招笔试试卷A</title><link href="http://zwjlpeng.github.io/pages/2013/12/baidu_2014_A.html" rel="alternate"></link><updated>2013-12-03T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:zwjlpeng.github.io,2013-12-03:pages/2013/12/baidu_2014_A.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;各位如果有更好的答案，请留言评价，方便更多的人&lt;/strong&gt;&lt;/p&gt;</summary><category term="美团网笔试题"></category></entry><entry><title>2014年百度校招笔试试卷A</title><link href="http://www.yanyulin.info/pages/2013/12/baidu_2014_A.html" rel="alternate"></link><updated>2013-12-03T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-12-03:pages/2013/12/baidu_2014_A.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;如有错误，或更加精简的方法，请留言，我会更正，以方便更多的人&lt;/p&gt;
 &lt;p&gt;一、简答题&lt;/p&gt;
 &lt;p&gt;1、当前计算机系统一般会采用层次结构存储数据，请介绍下典型计算机存储系统一般分为哪几个层次，为什么采用分层存储数据能有效提高程序的执行效率?&lt;/p&gt;
@@ -811,7 +811,7 @@ Which is not a typical programming technique for IPC:&lt;/p&gt;
 &lt;p&gt;输入2：&lt;code&gt;task-relations&lt;/code&gt;，二元组数组，每个二元组表示一组关系&lt;/p&gt;
 &lt;p&gt;输入3：&lt;code&gt;task-id&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;输出：最晚完成时间&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;本篇答案不全，希望有时间的同学补全&lt;/strong&gt;&lt;/p&gt;</summary><category term="百度笔试题"></category></entry><entry><title>2014年暴风笔试试卷A</title><link href="http://zwjlpeng.github.io/pages/2013/11/baofeng_2014_A.html" rel="alternate"></link><updated>2013-11-23T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:zwjlpeng.github.io,2013-11-23:pages/2013/11/baofeng_2014_A.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;本篇答案不全，希望有时间的同学补全&lt;/strong&gt;&lt;/p&gt;</summary><category term="百度笔试题"></category></entry><entry><title>2014年暴风笔试试卷A</title><link href="http://www.yanyulin.info/pages/2013/11/baofeng_2014_A.html" rel="alternate"></link><updated>2013-11-23T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-11-23:pages/2013/11/baofeng_2014_A.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;如有错误，或更加精简的方法，请留言，我会更正，以方便更多的人
 暴风影音2014年A郑，据说可以解决&lt;code&gt;户口&lt;/code&gt;
 注:以下如无特殊说明，均假设计算机编程环境为&lt;code&gt;intel x86&lt;/code&gt;的&lt;code&gt;32位CPU&lt;/code&gt;,编译器为VS,编程语言首选C语言，也可以使用自已熟悉的编程语言。&lt;/p&gt;
@@ -988,7 +988,7 @@ D
 &lt;p&gt;&lt;code&gt;Windows 7&lt;/code&gt;：多用户多任务&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;Linux、Unix&lt;/code&gt;：多用户多任务&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;Windows 2003(Windows Server 2003)&lt;/code&gt;：多用户多任务&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;Windows XP&lt;/code&gt;及以前&lt;code&gt;Windows&lt;/code&gt;版本：单用户多任务&lt;/p&gt;</summary><category term="暴风笔试题"></category></entry><entry><title>2014年华为校招机试(一)</title><link href="http://zwjlpeng.github.io/pages/2013/11/huawei_2014_1.html" rel="alternate"></link><updated>2013-11-18T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:zwjlpeng.github.io,2013-11-18:pages/2013/11/huawei_2014_1.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;&lt;code&gt;Windows XP&lt;/code&gt;及以前&lt;code&gt;Windows&lt;/code&gt;版本：单用户多任务&lt;/p&gt;</summary><category term="暴风笔试题"></category></entry><entry><title>2014年华为校招机试(一)</title><link href="http://www.yanyulin.info/pages/2013/11/huawei_2014_1.html" rel="alternate"></link><updated>2013-11-18T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-11-18:pages/2013/11/huawei_2014_1.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;通过键盘输入一串小写字母(a~z)组成的字符串。请编写一个字符串过滤程序，若字符串中出现多个相同的字符，将非首次出现的字符过滤掉。
 比如字符串“abacacde”过滤结果为“abcde”。
 要求实现函数：&lt;code&gt;void stringFilter(const char *pInputStr, long lInputLen, char *pOutputStr)&lt;/code&gt;&lt;/p&gt;
@@ -1034,7 +1034,7 @@ D
         &lt;span class="n"&gt;count&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;?&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;pOutputStr&lt;/span&gt;&lt;span class="o"&gt;++=&lt;/span&gt;&lt;span class="n"&gt;count&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;48&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;pOutputStr&lt;/span&gt;&lt;span class="o"&gt;++=&lt;/span&gt;&lt;span class="n"&gt;pInputStr&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;+=&lt;/span&gt;&lt;span class="n"&gt;count&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;pOutputStr&lt;/span&gt;&lt;span class="o"&gt;++=&lt;/span&gt;&lt;span class="n"&gt;pInputStr&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;+=&lt;/span&gt;&lt;span class="n"&gt;count&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
     &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</summary><category term="华为笔试题"></category></entry><entry><title>2013届华为校园招聘成都上机题目</title><link href="http://zwjlpeng.github.io/pages/2013/09/huawei_2013_2.html" rel="alternate"></link><updated>2013-09-11T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:zwjlpeng.github.io,2013-09-11:pages/2013/09/huawei_2013_2.html</id><summary type="html">&lt;p&gt;1.手机号码合法性判断（20分）&lt;/p&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="华为笔试题"></category></entry><entry><title>2013届华为校园招聘成都上机题目</title><link href="http://www.yanyulin.info/pages/2013/09/huawei_2013_2.html" rel="alternate"></link><updated>2013-09-11T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-09-11:pages/2013/09/huawei_2013_2.html</id><summary type="html">&lt;p&gt;1.手机号码合法性判断（20分）&lt;/p&gt;
 &lt;p&gt;问题描述：&lt;/p&gt;
 &lt;p&gt;我国大陆运营商的手机号码标准格式为：国家码+手机号码，例如：8613912345678。特点如下：&lt;/p&gt;
 &lt;p&gt;1、 长度13位；&lt;/p&gt;
@@ -1184,7 +1184,7 @@ D
     &lt;span class="p"&gt;}&lt;/span&gt;
     &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mh"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="err"&gt;｝&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</summary><category term="华为笔试题"></category></entry><entry><title>2013年谷歌校招笔试(一)</title><link href="http://zwjlpeng.github.io/pages/2013/06/google_2013_1.html" rel="alternate"></link><updated>2013-06-11T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:zwjlpeng.github.io,2013-06-11:pages/2013/06/google_2013_1.html</id><summary type="html">&lt;hr /&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="华为笔试题"></category></entry><entry><title>2013年谷歌校招笔试(一)</title><link href="http://www.yanyulin.info/pages/2013/06/google_2013_1.html" rel="alternate"></link><updated>2013-06-11T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-06-11:pages/2013/06/google_2013_1.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;一：单选题&lt;/p&gt;
 &lt;p&gt;1：使用C语言将一个1G字节的数组从头到尾全部设置为’A’,在一台典型的当代PC上，需要花费的CPU时间的数量级最接近：(&lt;code&gt;B&lt;/code&gt;)&lt;/p&gt;
 &lt;p&gt;A 0.001秒 B 1秒 C 100秒 D 2小时&lt;/p&gt;
@@ -1271,7 +1271,7 @@ str&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;flag&lt;/span&gt;
 }
 }
 }
-&lt;/pre&gt;&lt;/div&gt;</summary><category term="谷歌笔试题"></category></entry><entry><title>2013年华为校招机试(一)</title><link href="http://zwjlpeng.github.io/pages/2013/06/huawei_2013_1.html" rel="alternate"></link><updated>2013-06-11T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:zwjlpeng.github.io,2013-06-11:pages/2013/06/huawei_2013_1.html</id><summary type="html">&lt;hr /&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="谷歌笔试题"></category></entry><entry><title>2013年华为校招机试(一)</title><link href="http://www.yanyulin.info/pages/2013/06/huawei_2013_1.html" rel="alternate"></link><updated>2013-06-11T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-06-11:pages/2013/06/huawei_2013_1.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;通过键盘输入任意一个字符串序列，字符串可能包含多个子串，子串以空格分隔，请编写一个程序，自动分离出各个子串，并使用’,’将其分隔，并且在最后也补充一个’,’，并将子串存储。&lt;/p&gt;
 &lt;p&gt;如果输入&lt;code&gt;”abc def ghi d”&lt;/code&gt;,结果将是&lt;code&gt;abc,def,gh,i,d&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;要求实现函数&lt;code&gt;Void DivideString(const char *pInputStr,long IinputLen,char *pOutputStr);&lt;/code&gt;&lt;/p&gt;
@@ -1326,7 +1326,7 @@ str&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;flag&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;InputSrc&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</summary><category term="华为笔试题"></category></entry><entry><title>2012年华为校招南京机试</title><link href="http://zwjlpeng.github.io/pages/2012/11/huawei_2012_3.html" rel="alternate"></link><updated>2012-11-12T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:zwjlpeng.github.io,2012-11-12:pages/2012/11/huawei_2012_3.html</id><summary type="html">&lt;p&gt;一：给定一个字符串，寻找它的一个最大子字符串，该子字符串是回文。例如给定一个用例的字符串&lt;code&gt;”gabcdcbaef”&lt;/code&gt;,那么最大回文 字串是”abcdcba”&lt;/p&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="华为笔试题"></category></entry><entry><title>2012年华为校招南京机试</title><link href="http://www.yanyulin.info/pages/2012/11/huawei_2012_3.html" rel="alternate"></link><updated>2012-11-12T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2012-11-12:pages/2012/11/huawei_2012_3.html</id><summary type="html">&lt;p&gt;一：给定一个字符串，寻找它的一个最大子字符串，该子字符串是回文。例如给定一个用例的字符串&lt;code&gt;”gabcdcbaef”&lt;/code&gt;,那么最大回文 字串是”abcdcba”&lt;/p&gt;
 &lt;p&gt;函数声明为&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="n"&gt;huiwen&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;char&lt;/span&gt; &lt;span class="n"&gt;input&lt;/span&gt;&lt;span class="p"&gt;[],&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;len&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kt"&gt;char&lt;/span&gt; &lt;span class="n"&gt;output&lt;/span&gt;&lt;span class="p"&gt;[])&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
@@ -1541,7 +1541,7 @@ str&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;flag&lt;/span&gt;
         &lt;span class="n"&gt;result&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;strlen&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;result&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;l&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mh"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;tmp&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
     &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</summary><category term="华为笔试题"></category></entry><entry><title>2012年华为成都校招机试</title><link href="http://zwjlpeng.github.io/pages/2012/11/huawei_2012_1.html" rel="alternate"></link><updated>2012-11-11T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:zwjlpeng.github.io,2012-11-11:pages/2012/11/huawei_2012_1.html</id><summary type="html">&lt;p&gt;1：去掉一个数组里的最大值与最小值，求数组元素的平均值。&lt;/p&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="华为笔试题"></category></entry><entry><title>2012年华为成都校招机试</title><link href="http://www.yanyulin.info/pages/2012/11/huawei_2012_1.html" rel="alternate"></link><updated>2012-11-11T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2012-11-11:pages/2012/11/huawei_2012_1.html</id><summary type="html">&lt;p&gt;1：去掉一个数组里的最大值与最小值，求数组元素的平均值。&lt;/p&gt;
 &lt;p&gt;函数接口为：&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kt"&gt;float&lt;/span&gt; &lt;span class="n"&gt;avescore&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;float&lt;/span&gt; &lt;span class="n"&gt;score&lt;/span&gt;&lt;span class="p"&gt;[]&lt;/span&gt; &lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
