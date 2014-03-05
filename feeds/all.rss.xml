@@ -1,5 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>烟雨林</title><link>http://www.yanyulin.info/</link><description></description><atom:link href="http://www.yanyulin.info/feeds/all.rss.xml" rel="self"></atom:link><lastBuildDate>Tue, 04 Mar 2014 00:00:00 +0800</lastBuildDate><item><title>git保存用户名与密码(避免用户名密码输入)</title><link>http://www.yanyulin.info/pages/2014/03/git.html</link><description>&lt;hr /&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>烟雨林</title><link>http://www.yanyulin.info/</link><description></description><atom:link href="http://www.yanyulin.info/feeds/all.rss.xml" rel="self"></atom:link><lastBuildDate>Wed, 05 Mar 2014 00:00:00 +0800</lastBuildDate><item><title>github搭建网站优化(修复过多的302重定向请求)</title><link>http://www.yanyulin.info/pages/2014/03/github_site.html</link><description>&lt;hr /&gt;
+&lt;p&gt;本博客采用&lt;strong&gt;pelican&lt;/strong&gt;搭建，服务器采用的是免费的&lt;strong&gt;github&lt;/strong&gt;,博客搭建完成后，需要在博客根目录下写上一个配置文件&lt;code&gt;CNAME&lt;/code&gt;,其中&lt;code&gt;CNAME&lt;/code&gt;写上自已的域名，然后在DNS域名解析器里写上三条A记录，等上24个小时，即可在全球任何地点访问自已的网站，本网站的DNS采用的是免费的&lt;a href="https://www.dnspod.cn" target="_blank"&gt;DNSpod&lt;/a&gt;进行解析，在DNSPod里的配置如下所示：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;主机记录&lt;/span&gt;       &lt;span class="err"&gt;记录类型&lt;/span&gt;    &lt;span class="err"&gt;线路类型&lt;/span&gt;    &lt;span class="err"&gt;记录值&lt;/span&gt;        &lt;span class="n"&gt;MX&lt;/span&gt;&lt;span class="err"&gt;优先级&lt;/span&gt;    &lt;span class="n"&gt;TTL&lt;/span&gt;      
+  &lt;span class="n"&gt;www&lt;/span&gt;         &lt;span class="n"&gt;A&lt;/span&gt;          &lt;span class="err"&gt;默认&lt;/span&gt;  &lt;span class="mf"&gt;207.97.227.245&lt;/span&gt;     &lt;span class="o"&gt;-&lt;/span&gt;         &lt;span class="mi"&gt;600&lt;/span&gt;
+    &lt;span class="err"&gt;@&lt;/span&gt;         &lt;span class="n"&gt;A&lt;/span&gt;          &lt;span class="err"&gt;默认&lt;/span&gt;  &lt;span class="mf"&gt;207.97.227.245&lt;/span&gt;     &lt;span class="o"&gt;-&lt;/span&gt;         &lt;span class="mi"&gt;600&lt;/span&gt;
+    &lt;span class="o"&gt;*&lt;/span&gt;         &lt;span class="n"&gt;A&lt;/span&gt;          &lt;span class="err"&gt;默认&lt;/span&gt;  &lt;span class="mf"&gt;207.97.227.245&lt;/span&gt;     &lt;span class="o"&gt;-&lt;/span&gt;         &lt;span class="mi"&gt;600&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;经过了上述的设置之后，的确可以正常访问网站，但是如果你用百度或者谷歌对网站的速度进行诊断，会发现有非常多的302重定向请求&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;什么是302重定向请求&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;假设浏览器要访问服务器的a.html页面，服务器上没有a.html页面，在服务器上将所有对a.html页面的访问全部转向了访问 b.html,那么当用户访问a.html页面时，服务器就会产生一个应答，应答的类型就是302类型，同时应答消息里还会含有b.html的位置，浏览器在接收到302类型的消息后，会取出应答消息中的url重新发送一次请求，请求b.html&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;从上述过程的分析中，可以看出一次重定向，会发生两次请求，因些耗费了非常多的时间，当网站中有太多的重定向请求时，势必会影响网站的响应速度&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;github上搭建的博客，如何按照上述的DNS设置之后，网站由于产生了过多的重定向，会大大影响网站的响应速度，以下是采用上述设置之后，百度诊断网速的结果示意图，是不是很不理想，这样的响应速度不仅影响了用户体验，而且还会影响各大搜索引擎的收录&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;
+&lt;a href="http://www.yanyulin.info/pages/2014/03/github_site.html"&gt;
+&lt;img src="http://www.yanyulin.info/pics/tools/github_site0.jpg"/&gt;
+&lt;/a&gt;
+&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;解决方案&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;修改DNS域名解析器，此处即为DNSPod,在DNSPod里停用A记录，采用别名，即CNAME,将CNAME指向主机的域名即可，即指向&lt;code&gt;username.github.io&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;代码如下：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;主机记录&lt;/span&gt;       &lt;span class="err"&gt;记录类型&lt;/span&gt;    &lt;span class="err"&gt;线路类型&lt;/span&gt;      &lt;span class="err"&gt;记录值&lt;/span&gt;        &lt;span class="n"&gt;MX&lt;/span&gt;&lt;span class="err"&gt;优先级&lt;/span&gt;       &lt;span class="n"&gt;TTL&lt;/span&gt;     
+  &lt;span class="n"&gt;www&lt;/span&gt;       &lt;span class="n"&gt;CNAME&lt;/span&gt;        &lt;span class="err"&gt;默认&lt;/span&gt;   &lt;span class="n"&gt;username&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;io&lt;/span&gt;     &lt;span class="o"&gt;-&lt;/span&gt;         &lt;span class="mi"&gt;600&lt;/span&gt;
+    &lt;span class="err"&gt;@&lt;/span&gt;       &lt;span class="n"&gt;CNAME&lt;/span&gt;        &lt;span class="err"&gt;默认&lt;/span&gt;   &lt;span class="n"&gt;username&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;io&lt;/span&gt;     &lt;span class="o"&gt;-&lt;/span&gt;         &lt;span class="mi"&gt;600&lt;/span&gt;
+    &lt;span class="o"&gt;*&lt;/span&gt;       &lt;span class="n"&gt;CNAME&lt;/span&gt;        &lt;span class="err"&gt;默认&lt;/span&gt;   &lt;span class="n"&gt;username&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;io&lt;/span&gt;     &lt;span class="o"&gt;-&lt;/span&gt;         &lt;span class="mi"&gt;600&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;blockquote&gt;
+&lt;p&gt;等一会，短点的话大概几分钟左右，长点估计行24小时，因为DNS也要将更改的域名广播出去~~~&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;测试，采用百度网速度诊断测试，测试后的结果如下图所示，网站的速度还行吧~~~&lt;/p&gt;
+&lt;p&gt;网站评分结果：&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;
+&lt;a href="http://www.yanyulin.info/pages/2014/03/github_site.html"&gt;
+&lt;img src="http://www.yanyulin.info/pics/tools/github_site1.jpg"/&gt;
+&lt;/a&gt;
+&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;网站重定向结果：&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;
+&lt;a href="http://www.yanyulin.info/pages/2014/03/github_site.html"&gt;
+&lt;img src="http://www.yanyulin.info/pics/tools/github_site2.jpg"/&gt;
+&lt;/a&gt;
+&lt;/center&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Wed, 05 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-03-05:pages/2014/03/github_site.html</guid><category>工具使用</category></item><item><title>git保存用户名与密码(避免用户名密码输入)</title><link>http://www.yanyulin.info/pages/2014/03/git.html</link><description>&lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;写在前面的话&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;由于本博客是托管于github之上，因此每次&lt;code&gt;git push -u origin master&lt;/code&gt;时都得输入用户名与密码，是非常烦人的，经过一番尝试，原来可以写一个配置文件避免输入用户名与密码，这样通过git上传文件到github上就非常方便了~~~&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;git&lt;/code&gt;工具是由linux之父开发的一款分布式代码管理工具，代码开源，功能强大，&lt;code&gt;git&lt;/code&gt;开发的一般流程是首先从服务器上&lt;code&gt;clone&lt;/code&gt;一份主干代码，相当于创建了分支，然后修改分支代码，最后将修改后的代码提交到服务器上，为了安全，每一提交都需要输入用户名与密码，肯定是很繁琐的，因此得想办法，避免每次提交时都需要输入&lt;strong&gt;用户名与密码&lt;/strong&gt;&lt;/p&gt;
