@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>烟雨林</title><link href="http://www.yanyulin.info/" rel="alternate"></link><link href="http://www.yanyulin.info/feeds/bian-cheng-yu-yan.atom.xml" rel="self"></link><id>http://www.yanyulin.info/</id><updated>2014-03-04T00:00:00+08:00</updated><entry><title>git保存用户名与密码(避免用户名密码输入)</title><link href="http://www.yanyulin.info/pages/2014/03/git.html" rel="alternate"></link><updated>2014-03-04T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-04:pages/2014/03/git.html</id><summary type="html">&lt;hr /&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>烟雨林</title><link href="http://zwjlpeng.github.io/" rel="alternate"></link><link href="http://zwjlpeng.github.io/feeds/bian-cheng-yu-yan.atom.xml" rel="self"></link><id>http://zwjlpeng.github.io/</id><updated>2014-03-04T00:00:00+08:00</updated><entry><title>git保存用户名与密码(避免用户名密码输入)</title><link href="http://zwjlpeng.github.io/pages/2014/03/git.html" rel="alternate"></link><updated>2014-03-04T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:zwjlpeng.github.io,2014-03-04:pages/2014/03/git.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;写在前面的话&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;由于本博客是托管于github之上，因此每次&lt;code&gt;git push -u origin master&lt;/code&gt;时都得输入用户名与密码，是非常烦人的，经过一番尝试，原来可以写一个配置文件避免输入用户名与密码，这样通过git上传文件到github上就非常方便了~~~&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;git&lt;/code&gt;工具是由linux之父开发的一款分布式代码管理工具，代码开源，功能强大，&lt;code&gt;git&lt;/code&gt;开发的一般流程是首先从服务器上&lt;code&gt;clone&lt;/code&gt;一份主干代码，相当于创建了分支，然后修改分支代码，最后将修改后的代码提交到服务器上，为了安全，每一提交都需要输入用户名与密码，肯定是很繁琐的，因此得想办法，避免每次提交时都需要输入&lt;strong&gt;用户名与密码&lt;/strong&gt;&lt;/p&gt;
@@ -44,7 +44,7 @@
 &lt;p&gt;machine：表示要上传的服务器，上述代码中表示要上专到github.com中&lt;/p&gt;
 &lt;p&gt;login：填入登录用户名，例子中应该填入github帐户名&lt;/p&gt;
 &lt;p&gt;password：填入登录密码，例子中应该填入github帐户密码&lt;/p&gt;
-&lt;p&gt;如有问题，可以联系我，联系方式，看博客下方邮箱&lt;/p&gt;</summary><category term="工具使用"></category></entry><entry><title>pelican博客搭建设置分页和分页保存位置</title><link href="http://www.yanyulin.info/pages/2014/03/pelican_page.html" rel="alternate"></link><updated>2014-03-04T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-04:pages/2014/03/pelican_page.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;如有问题，可以联系我，联系方式，看博客下方邮箱&lt;/p&gt;</summary><category term="工具使用"></category></entry><entry><title>pelican博客搭建设置分页和分页保存位置</title><link href="http://zwjlpeng.github.io/pages/2014/03/pelican_page.html" rel="alternate"></link><updated>2014-03-04T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:zwjlpeng.github.io,2014-03-04:pages/2014/03/pelican_page.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;本篇&lt;strong&gt;博客&lt;/strong&gt;紧随前几篇博客而来&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2013/11/pelican.html" target="_blank" &gt;pelican搭建属于自已的博客&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2014/01/pelican_question.html" target="_blank" &gt;pelican创建博客常见问题汇总&lt;/a&gt;&lt;/p&gt;
@@ -158,7 +158,7 @@
 &lt;p&gt;5、&lt;code&gt;articles_paginator.num_pages&lt;/code&gt;代表的是总共的分页数目&lt;/p&gt;
 &lt;p&gt;6、&lt;code&gt;{{ SITEURL }}&lt;/code&gt;代表的是网站域名，在配置文件中可以查到，此处就是&lt;a href="www.yanyulin.info"  target="_blank"&gt;http://www.yanyulin.info&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;7、&lt;code&gt;{{ page_name }}&lt;/code&gt;代表的是分页名，其中分页名还含有分页所在的目录，即假如分页pelican.html在page目录下的category目录中，则分页名实际上为&lt;strong&gt;category/pelican&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;如有问题，可以联系我，联系方式，看博客下方邮箱&lt;/strong&gt;&lt;/p&gt;</summary><category term="工具使用"></category></entry><entry><title>pelican创建博客如何设置导航条</title><link href="http://www.yanyulin.info/pages/2014/03/navigator.html" rel="alternate"></link><updated>2014-03-03T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-03:pages/2014/03/navigator.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;如有问题，可以联系我，联系方式，看博客下方邮箱&lt;/strong&gt;&lt;/p&gt;</summary><category term="工具使用"></category></entry><entry><title>pelican创建博客如何设置导航条</title><link href="http://zwjlpeng.github.io/pages/2014/03/navigator.html" rel="alternate"></link><updated>2014-03-03T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:zwjlpeng.github.io,2014-03-03:pages/2014/03/navigator.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;Pelican搭建博客中，如果比较懒，可以直接使用官方提供的主题，官方提供的主题均比较简单，做一些简单的博客还是可以的，但要想做到美观、大方似乎还得努力，今天分享一下，&lt;strong&gt;本博客&lt;/strong&gt;(当然也是采用pelican搭建的)在搭建过程中，如何使用pelican创建自定义的菜单，菜单的样式如下图所示：&lt;/p&gt;
 &lt;p&gt;&lt;center&gt;
 &lt;a href="http://www.yanyulin.info/pages/2014/03/navigator.html"&gt;
@@ -245,7 +245,7 @@ pelican创建博客常见问题汇总
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;如有问题，可以联系我，联系方式，看博客下方邮箱&lt;/p&gt;</summary><category term="工具使用"></category></entry><entry><title>博客添加第三方评论系统多说评论框</title><link href="http://www.yanyulin.info/pages/2014/03/comment.html" rel="alternate"></link><updated>2014-03-02T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-02:pages/2014/03/comment.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;如有问题，可以联系我，联系方式，看博客下方邮箱&lt;/p&gt;</summary><category term="工具使用"></category></entry><entry><title>博客添加第三方评论系统多说评论框</title><link href="http://zwjlpeng.github.io/pages/2014/03/comment.html" rel="alternate"></link><updated>2014-03-02T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:zwjlpeng.github.io,2014-03-02:pages/2014/03/comment.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;&lt;code&gt;博客&lt;/code&gt;已经基本搭建完成，前前后后历时将近两周，采用的是开源工具&lt;code&gt;Pelican&lt;/code&gt;搭建，服务器采用的是强大的分布式代码托管库&lt;code&gt;Github&lt;/code&gt;,两者的教程可以参考下面的链接，本博客总共破费了&lt;code&gt;我3美元&lt;/code&gt;：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2013/11/pelican.html" target="_blank"&gt;
@@ -324,7 +324,7 @@ var duoshuoQuery = {short_name:&amp;quot;yanyulin&amp;quot;};
 &lt;img src="http://www.yanyulin.info/pics/tools/duoshuo2.jpg"/&gt;
 &lt;/a&gt;
 &lt;/center&gt;&lt;/p&gt;
-&lt;p&gt;如有问题，可以联系我，联系方式，看博客下方邮箱&lt;/p&gt;</summary><category term="工具使用"></category></entry><entry><title>C++中类初始化列表的妙用</title><link href="http://www.yanyulin.info/pages/2014/02/classinitiallist.html" rel="alternate"></link><updated>2014-02-22T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-02-22:pages/2014/02/classinitiallist.html</id><summary type="html">&lt;p&gt;C++中类初始化列表的妙用&lt;/p&gt;
+&lt;p&gt;如有问题，可以联系我，联系方式，看博客下方邮箱&lt;/p&gt;</summary><category term="工具使用"></category></entry><entry><title>C++中类初始化列表的妙用</title><link href="http://zwjlpeng.github.io/pages/2014/02/classinitiallist.html" rel="alternate"></link><updated>2014-02-22T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:zwjlpeng.github.io,2014-02-22:pages/2014/02/classinitiallist.html</id><summary type="html">&lt;p&gt;C++中类初始化列表的妙用&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;1：类的初始化列表是怎么提高效率的？&lt;/p&gt;
 &lt;p&gt;2：类的初始化列表是按照列表中出现的顺序来初始化的吗？&lt;/p&gt;
@@ -430,7 +430,7 @@ var duoshuoQuery = {short_name:&amp;quot;yanyulin&amp;quot;};
 &lt;p&gt;2:当初始化一个const成员对象时(1、2两种情况可以想想为什么？原理是一样的，注意强调的是对象)&lt;/p&gt;
 &lt;p&gt;3:当调用一个基类的构造函数，而它拥有一组带参数的构造函数时&lt;/p&gt;
 &lt;p&gt;4:当类里面的成员对象有自已的构造函数时，且有参数时(3、4归为一类，为什么必须使用，原理也是一样的)&lt;/p&gt;
-&lt;/blockquote&gt;</summary><category term="C++学习"></category></entry><entry><title>快速介绍Linux（Linux入门教程）</title><link href="http://www.yanyulin.info/pages/2014/02/linux1.html" rel="alternate"></link><updated>2014-02-22T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-02-22:pages/2014/02/linux1.html</id><summary type="html">&lt;p&gt;1：严格意义上，可将操作系统定义为一种软件，它控制计算机硬件资源，提供程序运行环境，我们称此种软件为内核，它相对较小，位于环境中心&lt;/p&gt;
+&lt;/blockquote&gt;</summary><category term="C++学习"></category></entry><entry><title>快速介绍Linux（Linux入门教程）</title><link href="http://zwjlpeng.github.io/pages/2014/02/linux1.html" rel="alternate"></link><updated>2014-02-22T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:zwjlpeng.github.io,2014-02-22:pages/2014/02/linux1.html</id><summary type="html">&lt;p&gt;1：严格意义上，可将操作系统定义为一种软件，它控制计算机硬件资源，提供程序运行环境，我们称此种软件为内核，它相对较小，位于环境中心&lt;/p&gt;
 &lt;p&gt;&lt;center&gt;
 &lt;a href="http://www.yanyulin.info/pages/2014/02/linux1.html"&gt;
 &lt;img src="http://www.yanyulin.info/pics/tech/linuxmen1.png"/&gt;
@@ -505,7 +505,7 @@ var duoshuoQuery = {short_name:&amp;quot;yanyulin&amp;quot;};
 &lt;p&gt;注意：本程序的输出的文件未进行排序，而ls的输出一般是按照字母的顺序进行输出&lt;/p&gt;
 &lt;p&gt;Main函数使用了ISO C标准使用的风格,argc代表传给程序的参数个数，即&lt;code&gt;argv&lt;/code&gt;中的个数&lt;/p&gt;
 &lt;p&gt;按惯例当程序返回0时表示正常结束，返回其他值表求出错&lt;/p&gt;
-&lt;p&gt;每个进程都有一个工作目录，有时称其为当前工作目录，所有的相对路径都是从工作目录开始解释，进程可以用&lt;code&gt;chrdir&lt;/code&gt;更改其工作目录。&lt;/p&gt;</summary><category term="Linux学习"></category></entry><entry><title>Linux里的输入输出（Linux快速入门）</title><link href="http://www.yanyulin.info/pages/2014/02/linux2.html" rel="alternate"></link><updated>2014-02-22T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-02-22:pages/2014/02/linux2.html</id><summary type="html">&lt;p&gt;阅读本博文之前可以参考以下文章&lt;/p&gt;
+&lt;p&gt;每个进程都有一个工作目录，有时称其为当前工作目录，所有的相对路径都是从工作目录开始解释，进程可以用&lt;code&gt;chrdir&lt;/code&gt;更改其工作目录。&lt;/p&gt;</summary><category term="Linux学习"></category></entry><entry><title>Linux里的输入输出（Linux快速入门）</title><link href="http://zwjlpeng.github.io/pages/2014/02/linux2.html" rel="alternate"></link><updated>2014-02-22T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:zwjlpeng.github.io,2014-02-22:pages/2014/02/linux2.html</id><summary type="html">&lt;p&gt;阅读本博文之前可以参考以下文章&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2014/02/linux1.html" target="_blank"&gt;
 快速介绍Linux（Linux入门教程）
 &lt;/a&gt;&lt;/p&gt;
@@ -568,7 +568,7 @@ var duoshuoQuery = {short_name:&amp;quot;yanyulin&amp;quot;};
 &lt;a href="http://www.yanyulin.info/pages/2014/02/linux2.html"&gt;
 &lt;img src="http://www.yanyulin.info/pics/tech/linuxio2.png"/&gt;
 &lt;/a&gt;
-&lt;/center&gt;&lt;/p&gt;</summary><category term="Linux学习"></category></entry><entry><title>pelican创建博客常见问题汇总</title><link href="http://www.yanyulin.info/pages/2014/01/pelican_question.html" rel="alternate"></link><updated>2014-01-08T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-01-08:pages/2014/01/pelican_question.html</id><summary type="html">&lt;hr /&gt;
+&lt;/center&gt;&lt;/p&gt;</summary><category term="Linux学习"></category></entry><entry><title>pelican创建博客常见问题汇总</title><link href="http://zwjlpeng.github.io/pages/2014/01/pelican_question.html" rel="alternate"></link><updated>2014-01-08T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:zwjlpeng.github.io,2014-01-08:pages/2014/01/pelican_question.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;1、No valid files found in content errors&lt;/p&gt;
 &lt;p&gt;当用&lt;code&gt;pelican&lt;/code&gt;创建博客时出现此问题的原因是因为&lt;code&gt;pelican&lt;/code&gt;创建博客时读取到&lt;code&gt;contents&lt;/code&gt;目录下的md文件，而md文件需要&lt;code&gt;markdown&lt;/code&gt;的相库库解析，&lt;code&gt;pelican&lt;/code&gt;此时缺少该库，因此可以通过以下命令安装&lt;code&gt;markdown&lt;/code&gt;的相应库&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;pip&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;markdown&lt;/span&gt;
@@ -636,7 +636,7 @@ var duoshuoQuery = {short_name:&amp;quot;yanyulin&amp;quot;};
 
 
 &lt;p&gt;8、如果还不知道怎么使用pelican创建博客，看如下教程&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2013/11/pelican.html" title="pelican搭建属于自已的博客"&gt;pelican搭建属于自已的博客&lt;/a&gt;&lt;/p&gt;</summary><category term="工具使用"></category></entry><entry><title>.htaccess简明教程(SEO优化)</title><link href="http://www.yanyulin.info/pages/2013/12/htaccess.html" rel="alternate"></link><updated>2013-12-23T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-12-23:pages/2013/12/htaccess.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2013/11/pelican.html" title="pelican搭建属于自已的博客"&gt;pelican搭建属于自已的博客&lt;/a&gt;&lt;/p&gt;</summary><category term="工具使用"></category></entry><entry><title>.htaccess简明教程(SEO优化)</title><link href="http://zwjlpeng.github.io/pages/2013/12/htaccess.html" rel="alternate"></link><updated>2013-12-23T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:zwjlpeng.github.io,2013-12-23:pages/2013/12/htaccess.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;.htaccess文件可以用来优化网站，尽管.htaccess只是一个文件，但它可以更改服务器的设置，允许你做许多不同的事情，最流行的功能是可以创建自定义的“404 error”页面，.htaccess并不难，你可以给它想像成就是一个文本文件再加几条服务器的配置命令&lt;/p&gt;
 &lt;p&gt;确定服务器是否支持.htaccess&lt;/p&gt;
 &lt;p&gt;如果主机是&lt;code&gt;unix&lt;/code&gt;或&lt;code&gt;Linux&lt;/code&gt;系统，或任何版本的&lt;code&gt;Apache&lt;/code&gt;网络服务器，理论上都是支持&lt;code&gt;.htaccess&lt;/code&gt;的,除非你的服务器提供商禁用了&lt;code&gt;.htacess&lt;/code&gt;文件&lt;/p&gt;
@@ -713,7 +713,7 @@ var duoshuoQuery = {short_name:&amp;quot;yanyulin&amp;quot;};
 &lt;blockquote&gt;
 &lt;p&gt;&lt;code&gt;/full/parth/to/.htpasswd&lt;/code&gt;则应该替换为指向&lt;code&gt;.htpasswd&lt;/code&gt;文件,.htpasswd也是一个没有文件名文档，可以放置在你网站里的任何地方（此时&lt;code&gt;密码应加密&lt;/code&gt;），但建议你将其保存在网站Web根目录外，这样通过网络就无法访问到它了,文件里的内容是username:password(用户名:密码)&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;/blockquote&gt;</summary><category term="工具使用"></category></entry><entry><title>pelican搭建属于自已的博客</title><link href="http://www.yanyulin.info/pages/2013/11/pelican.html" rel="alternate"></link><updated>2013-11-24T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-11-24:pages/2013/11/pelican.html</id><summary type="html">&lt;hr /&gt;
+&lt;/blockquote&gt;</summary><category term="工具使用"></category></entry><entry><title>pelican搭建属于自已的博客</title><link href="http://zwjlpeng.github.io/pages/2013/11/pelican.html" rel="alternate"></link><updated>2013-11-24T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:zwjlpeng.github.io,2013-11-24:pages/2013/11/pelican.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;一直都想搭建一个属于自已的博客，无耐总是抽不出时间，9月份完工作，10月份却又有搞不完的事，一拖再拖，前不久才将自已的博客搭建完成&lt;/p&gt;
 &lt;p&gt;搭建博客工具的选择：&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;WordPress&lt;/code&gt;、&lt;code&gt;Zblog&lt;/code&gt;、各种&lt;code&gt;cms&lt;/code&gt;,功能都很强大，各种插件，各种牛X，各种方便，但在我看来，也正是因为功能的太过强大，显得太笨重，修改起来太过麻烦，更可耻的是还需要数据库的支持，我这样的叼丝学生估计还负担不起，而国外提供免费数据库的空间绝大多数都不太稳定，国内空间别提了，各种泪&lt;/p&gt;
@@ -826,7 +826,7 @@ var duoshuoQuery = {short_name:&amp;quot;yanyulin&amp;quot;};
 &lt;p&gt;在Godaddy上用支付宝花购买为期一年的顶级域名，并去修改Nameservers为这两个地址：&lt;code&gt;f1g1ns1.dnspod.net&lt;/code&gt;、&lt;code&gt;f1g1ns2.dnspod.net&lt;/code&gt;。&lt;/p&gt;
 &lt;p&gt;在Dnspod上添加新域名，并申请一条A记录指向Github Pages的ip:&lt;code&gt;207.97.227.245&lt;/code&gt;；&lt;/p&gt;
 &lt;p&gt;在Pelican主目录新建CNAME文件，添上刚刚申请的域名，如我的&lt;code&gt;www.yanyulin.info&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Pelican官方文档: http://docs.getpelican.com/en/3.2&lt;/p&gt;</summary><category term="工具使用"></category></entry><entry><title>Github上如何给别人贡献代码</title><link href="http://www.yanyulin.info/pages/2013/11/githubM.html" rel="alternate"></link><updated>2013-11-22T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-11-22:pages/2013/11/githubM.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;Pelican官方文档: http://docs.getpelican.com/en/3.2&lt;/p&gt;</summary><category term="工具使用"></category></entry><entry><title>Github上如何给别人贡献代码</title><link href="http://zwjlpeng.github.io/pages/2013/11/githubM.html" rel="alternate"></link><updated>2013-11-22T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:zwjlpeng.github.io,2013-11-22:pages/2013/11/githubM.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;本篇博文仅随前篇博文&lt;a href="http://www.yanyulin.info/pages/2013/11/github.html" title="Github简明教程(入门篇)"&gt;&lt;code&gt;Github&lt;/code&gt;简明教程(入门篇)&lt;/a&gt;，当然我的独立博客也是采用Github搭建，我所介绍的Github正是我搭建博客过程中一点一点学习的过程，如有错误，还请指出，同样大神们可以绕过。&lt;/p&gt;
 &lt;p&gt;本篇重点介绍&lt;code&gt;Github&lt;/code&gt;上如何给别人贡献代码，通过这个过程，也可以知道如果一个项目托管到Github上，团队成员之间合作的流程，给别人贡献代码，特别是一些开源组织，是件光荣的事&lt;/p&gt;
 &lt;p&gt;1、搜索你要贡献的代码仓库，在这里我创建了两个帐号，一个主帐号，里面有一个代码仓库mfjc，一个是将要贡献代码的帐号howard5888,搜索代码仓库如下图：
@@ -900,7 +900,7 @@ var duoshuoQuery = {short_name:&amp;quot;yanyulin&amp;quot;};
 &lt;img src="http://www.yanyulin.info/pics/tools/2github12.jpg" width="100%"/&gt;
 &lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;下一篇将介绍如何利用Github搭建属于自已的博客&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://www.yanyulin.info" title="烟雨林个人博客"&gt;烟雨林个人博客&lt;/a&gt;&lt;/p&gt;</summary><category term="工具使用"></category></entry><entry><title>Github简明教程(入门篇)</title><link href="http://www.yanyulin.info/pages/2013/11/github.html" rel="alternate"></link><updated>2013-11-20T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-11-20:pages/2013/11/github.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;&lt;a href="http://www.yanyulin.info" title="烟雨林个人博客"&gt;烟雨林个人博客&lt;/a&gt;&lt;/p&gt;</summary><category term="工具使用"></category></entry><entry><title>Github简明教程(入门篇)</title><link href="http://zwjlpeng.github.io/pages/2013/11/github.html" rel="alternate"></link><updated>2013-11-20T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:zwjlpeng.github.io,2013-11-20:pages/2013/11/github.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;Github作为一项目托管仓库，里面有着各种各样的高质量代码，本篇博客针对Git入门或者初学者，各位大神可以绕过，关于GitHub的强大之处可以自已百度谷歌去，在继续阅读本篇博客之前，如果还没有帐号的同学，先到github官网上申请一个帐号http://www.github.com&lt;/p&gt;
 &lt;p&gt;1、首先登录自已的帐号，创建属于自已的代码库
 &lt;a href="http://www.yanyulin.info" target="_blank"&gt;
@@ -950,7 +950,7 @@ var duoshuoQuery = {short_name:&amp;quot;yanyulin&amp;quot;};
 跳转进入下一个页面，在页面最下方，就有如下图所示的删除铵钮
 &lt;a href="http://www.yanyulin.info" target="_blank"&gt;
 &lt;img src="http://www.yanyulin.info/pics/tools/github6.jpg" width="100%"/&gt;
-&lt;/a&gt;&lt;/p&gt;</summary><category term="工具使用"></category></entry><entry><title>Linux中0号进程的创建分析</title><link href="http://www.yanyulin.info/pages/2013/11/linux0.html" rel="alternate"></link><updated>2013-11-19T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-11-19:pages/2013/11/linux0.html</id><summary type="html">&lt;hr /&gt;
+&lt;/a&gt;&lt;/p&gt;</summary><category term="工具使用"></category></entry><entry><title>Linux中0号进程的创建分析</title><link href="http://zwjlpeng.github.io/pages/2013/11/linux0.html" rel="alternate"></link><updated>2013-11-19T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:zwjlpeng.github.io,2013-11-19:pages/2013/11/linux0.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;&lt;code&gt;Linux&lt;/code&gt;中1号进程是由0号进程来创建的，因此必须要知道的是如何创建0号进程，由于在创建进程时，程序一直运行在内核态，而进程运行在用户态，因此创建0号进程涉及到特权级的变化，即从特权级0变到特权级3，&lt;code&gt;Linux&lt;/code&gt;是通过模拟中断返回来实现特权级的变化以及创建0号进程，通过将0号进程的代码段选择子以及程序计数器&lt;code&gt;EIP&lt;/code&gt;直接压入内核态堆栈，然后利用iret汇编指令中断返回跳转到0号进程运行。&lt;/p&gt;
 &lt;p&gt;代码如下&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;move_to_user_mode&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;&lt;span class="c1"&gt;//创建0号进程，开始进入0号进程，切换到特权级3运行&lt;/span&gt;
@@ -1093,7 +1093,7 @@ var duoshuoQuery = {short_name:&amp;quot;yanyulin&amp;quot;};
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;根据这个表可以看到的是任务0的内核态堆栈指针esp0=PAGE_SIZE+(long)&amp;amp;init_task,即第一个PCB块(task_struct)的顶部空间，PAGE_SIZE=4k,ss0=0x10,0x10查一下head.s你就会发现是gdt的第一个描述符，即内核代码段，后面还有几个是对数据段寄存器的定义以及ldt的定义&lt;/p&gt;</summary><category term="Linux学习"></category></entry><entry><title>Assert(断言)实现机制剖析</title><link href="http://www.yanyulin.info/pages/2013/11/assert.html" rel="alternate"></link><updated>2013-11-18T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-11-18:pages/2013/11/assert.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;根据这个表可以看到的是任务0的内核态堆栈指针esp0=PAGE_SIZE+(long)&amp;amp;init_task,即第一个PCB块(task_struct)的顶部空间，PAGE_SIZE=4k,ss0=0x10,0x10查一下head.s你就会发现是gdt的第一个描述符，即内核代码段，后面还有几个是对数据段寄存器的定义以及ldt的定义&lt;/p&gt;</summary><category term="Linux学习"></category></entry><entry><title>Assert(断言)实现机制剖析</title><link href="http://zwjlpeng.github.io/pages/2013/11/assert.html" rel="alternate"></link><updated>2013-11-18T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:zwjlpeng.github.io,2013-11-18:pages/2013/11/assert.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;断言(assert)的作用是用来判断程序运行的正确性，确保程序运行的行为与我们理解的一致。其调用形式为assert(logic expression),如果逻辑表达式为假，则调用abort()终止程序的运行。&lt;/p&gt;
 &lt;p&gt;查看MSDN帮助文档，可以得到assert的解释信息如下：&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;The&lt;/span&gt; &lt;span class="n"&gt;ANSI&lt;/span&gt; &lt;span class="n"&gt;assert&lt;/span&gt; &lt;span class="n"&gt;macro&lt;/span&gt; &lt;span class="n"&gt;is&lt;/span&gt; &lt;span class="n"&gt;typically&lt;/span&gt; &lt;span class="n"&gt;used&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;identify&lt;/span&gt; &lt;span class="n"&gt;logic&lt;/span&gt; &lt;span class="n"&gt;errors&lt;/span&gt; &lt;span class="n"&gt;during&lt;/span&gt; &lt;span class="n"&gt;program&lt;/span&gt; &lt;span class="n"&gt;development&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; 
@@ -1184,7 +1184,7 @@ Assert断言在程序的作用&lt;/p&gt;
 &lt;li&gt;断言只是用来检查程序的逻辑正确性，不能代替条件替换&lt;/li&gt;
 &lt;li&gt;断言比printf语句这种形式的打印好使&lt;/li&gt;
 &lt;li&gt;断言参数可以是函数调用,但是函数返回值要是真假,如assert(sort()),解释看上面源码分析&lt;/li&gt;
-&lt;/ol&gt;</summary><category term="C++学习"></category></entry><entry><title>被人误解的SIZEOF</title><link href="http://www.yanyulin.info/pages/2013/11/sizeof.html" rel="alternate"></link><updated>2013-11-18T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-11-18:pages/2013/11/sizeof.html</id><summary type="html">&lt;hr /&gt;
+&lt;/ol&gt;</summary><category term="C++学习"></category></entry><entry><title>被人误解的SIZEOF</title><link href="http://zwjlpeng.github.io/pages/2013/11/sizeof.html" rel="alternate"></link><updated>2013-11-18T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:zwjlpeng.github.io,2013-11-18:pages/2013/11/sizeof.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;sizeof是一个函数吗?&lt;/p&gt;
 &lt;p&gt;sizeof与strlen的区别?&lt;/p&gt;
 &lt;p&gt;sizeof(int)(*p)的值是多少?&lt;/p&gt;
@@ -1230,7 +1230,7 @@ Assert断言在程序的作用&lt;/p&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;因为a是一个指向整形的指针，结果为4也是很显然的&lt;/p&gt;</summary><category term="C++学习"></category></entry><entry><title>String StringBuffer StringBuilder的区别分析</title><link href="http://www.yanyulin.info/pages/2013/07/string.html" rel="alternate"></link><updated>2013-07-31T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-07-31:pages/2013/07/string.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;因为a是一个指向整形的指针，结果为4也是很显然的&lt;/p&gt;</summary><category term="C++学习"></category></entry><entry><title>String StringBuffer StringBuilder的区别分析</title><link href="http://zwjlpeng.github.io/pages/2013/07/string.html" rel="alternate"></link><updated>2013-07-31T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:zwjlpeng.github.io,2013-07-31:pages/2013/07/string.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;这是一道很常见的面试题目，至少我遇到过String/StringBuffer/StringBuilder的区别：String是不可变的对象(final)类型，每一次对String对象的更改均是生成一个新的String对象，原有的对象不会改变，相比之下StringBuffer与StringBuilder均是可更改的对象，效率要大于String,两者之间的区别在于StringBuffer适用于多线程，是线程安全的，而StringBuiler是JDK5.0后出来的，专门针对单线程，效率上要高于StringBuffer。&lt;/p&gt;
 &lt;p&gt;String测试的源代码：&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c1"&gt;//生成一个字符串对象&lt;/span&gt;
