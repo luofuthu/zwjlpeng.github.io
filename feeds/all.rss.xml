@@ -45,7 +45,10 @@
 &lt;a href="http://www.yanyulin.info/pages/2014/03/github_site.html"&gt;
 &lt;img src="http://www.yanyulin.info/pics/tools/github_site2.jpg"/&gt;
 &lt;/a&gt;
-&lt;/center&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Wed, 05 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-03-05:pages/2014/03/github_site.html</guid><category>工具使用</category></item><item><title>git保存用户名与密码(避免用户名密码输入)</title><link>http://www.yanyulin.info/pages/2014/03/git.html</link><description>&lt;hr /&gt;
+&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;pelican搭建博客教程如下&lt;/strong&gt;：&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2013/11/pelican.html" target="_blank"&gt;
+http://www.yanyulin.info/pages/2013/11/pelican.html&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Wed, 05 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-03-05:pages/2014/03/github_site.html</guid><category>工具使用</category></item><item><title>git保存用户名与密码(避免用户名密码输入)</title><link>http://www.yanyulin.info/pages/2014/03/git.html</link><description>&lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;写在前面的话&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;由于本博客是托管于github之上，因此每次&lt;code&gt;git push -u origin master&lt;/code&gt;时都得输入用户名与密码，是非常烦人的，经过一番尝试，原来可以写一个配置文件避免输入用户名与密码，这样通过git上传文件到github上就非常方便了~~~&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;git&lt;/code&gt;工具是由linux之父开发的一款分布式代码管理工具，代码开源，功能强大，&lt;code&gt;git&lt;/code&gt;开发的一般流程是首先从服务器上&lt;code&gt;clone&lt;/code&gt;一份主干代码，相当于创建了分支，然后修改分支代码，最后将修改后的代码提交到服务器上，为了安全，每一提交都需要输入用户名与密码，肯定是很繁琐的，因此得想办法，避免每次提交时都需要输入&lt;strong&gt;用户名与密码&lt;/strong&gt;&lt;/p&gt;
