@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>烟雨林</title><link href="http://www.yanyulin.info/" rel="alternate"></link><link href="http://www.yanyulin.info/feeds/wan-zhuan-ji-zhu.atom.xml" rel="self"></link><id>http://www.yanyulin.info/</id><updated>2013-12-01T00:00:00+08:00</updated><entry><title>界面编程模仿篇(QQ登录界面逼真篇)</title><link href="http://www.yanyulin.info/pages/2013/12/qqLogin_1.html" rel="alternate"></link><updated>2013-12-01T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-12-01:pages/2013/12/qqLogin_1.html</id><summary type="html">&lt;p&gt;写了好多天的爬虫，偷空前前后后用了两天的时间(排除吃饭睡觉)写完了这个QQ登录界面，看起来还凑和着吧，如果是的大神的，莫见笑，纯属业余作品，废话先不多说，截图如下,其中第二幅图片中的红色方框部份有待完善，明天开始继续搞爬虫，等有时间时再完善，先凑和着吧：&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2013/12/qqLogin_1.html"&gt;
-&lt;img src="http://www.yanyulin.info/pics/tech/qq_5.jpg"/&gt;
+&lt;img alt="烟雨林博客" src="http://www.yanyulin.info/pics/tech/qq_5.jpg"/&gt;
 &lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2013/12/qqLogin_1.html"&gt;
-&lt;img src="http://www.yanyulin.info/pics/tech/qq_6.jpg"/&gt;
+&lt;img alt="烟雨林博客" src="http://www.yanyulin.info/pics/tech/qq_6.jpg"/&gt;
 &lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;本篇博文就分析一下这个界面设计中的几个关键点，在阅读本博文之前请先阅读我&lt;a href="http://www.yanyulin.info"&gt;个人博客&lt;/a&gt;上关于模仿QQ界面先行篇&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2013/11/qqLogin.html" target="_blank"&gt;&lt;strong&gt;界面编程模仿篇(模仿腾讯QQ登录界面先行篇)&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
@@ -96,12 +96,12 @@
 &lt;p&gt;备注：本程序开发过程中需要用到的软件请参考
 &lt;a href="http://www.yanyulin.info/pages/2013/11/qqLogin.html" target="_blank"&gt;&lt;strong&gt;界面编程模仿篇(模仿腾讯QQ登录界面先行篇)&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;</summary><category term="界面编程"></category></entry><entry><title>界面编程模仿篇(模仿腾讯QQ登录界面)</title><link href="http://www.yanyulin.info/pages/2013/11/qqLogin.html" rel="alternate"></link><updated>2013-11-29T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-11-29:pages/2013/11/qqLogin.html</id><summary type="html">&lt;p&gt;写了几天的爬虫，过几天再继续写，今天偷会懒，写了个仿QQ登录界面，截图如下，怎么样，还凑和吧，如果是大神的，请不要见笑，截图如下，明天争取完成，完成后，将附上文档与代码上传到本人的github上，进行开源,如果大家愿意，后绪一块更改，注意，我强调的只是&lt;strong&gt;界面&lt;/strong&gt;,QQ?你想吧内部的各种通信协议，分布式数据库，大数据的处理，各种缓存...&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2013/11/qqLogin.html"&gt;
-&lt;img  src="http://www.yanyulin.info/pics/tech/qq_1.jpg"/&gt;
+&lt;img alt="烟雨林博客"  src="http://www.yanyulin.info/pics/tech/qq_1.jpg"/&gt;
 &lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;上面程序运行界面中的所有图片都来自QQ2013，本篇文章就介绍如何从&lt;code&gt;QQ2013&lt;/code&gt;中获取图片，了解了这个过程后，你也可以自已Diy图片，然后将图片替换，设计自已的&lt;code&gt;非主流QQ&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;1、与本程序相关的图片保存在两个地方，&lt;code&gt;%appdata%\Tencent\QQ\Temp&lt;/code&gt;以及QQ安装目录下的Resource文件夹下&lt;code&gt;D:\Program Files\Tencent\QQ\Resource.1.97.8200&lt;/code&gt;,从这些文件夹下选取你自已需要的图片，&lt;code&gt;备注Resource.1.97.8200文件夹Resource后面的数字可能会不同&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2013/11/qqLogin.html"&gt;
-&lt;img src="http://www.yanyulin.info/pics/tech/qq_2.jpg"/&gt;
+&lt;img alt="烟雨林博客" src="http://www.yanyulin.info/pics/tech/qq_2.jpg"/&gt;
 &lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;2、QQ的部份图片保存在rdb文件里，而且图片的格式是gft,下载两款软件，对rdb进行解压，以及对gft格式的文件进行格式转换，转换时最好转成png格式的，软件下载地址：&lt;/p&gt;
 &lt;blockquote&gt;
@@ -110,11 +110,11 @@
 &lt;/blockquote&gt;
 &lt;p&gt;3、对于QQ登录界面，部份图片保存的位置如下图中红色方框如示，在LoginPanel以及LoginUI里&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2013/11/qqLogin.html"&gt;
-&lt;img  width="100%" src="http://www.yanyulin.info/pics/tech/qq_3.jpg"/&gt;
+&lt;img alt="烟雨林博客"  width="100%" src="http://www.yanyulin.info/pics/tech/qq_3.jpg"/&gt;
 &lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;4、gft格式图片的转换，如下图所示，先导出当前项，然后将导出的文件拖到&lt;code&gt;GFT转换.exe&lt;/code&gt;里，即可完成转换&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2013/11/qqLogin.html"&gt;
-&lt;img  src="http://www.yanyulin.info/pics/tech/qq_4.jpg"/&gt;
+&lt;img alt="烟雨林博客"  src="http://www.yanyulin.info/pics/tech/qq_4.jpg"/&gt;
 &lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;5、从上面的过程中，可以看出QQ图片保存在哪了吧，你完全可以用自已的图片替换掉rdb文件里的图片，这样QQ运行的时候，就变成了你的图片了，在替换之前，最好先备份下&lt;/p&gt;</summary><category term="界面编程"></category></entry><entry><title>爬虫的自我解剖(抓取网页HtmlUnit)</title><link href="http://www.yanyulin.info/pages/2013/11/fetchPage.html" rel="alternate"></link><updated>2013-11-28T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-11-28:pages/2013/11/fetchPage.html</id><summary type="html">&lt;p&gt;网络爬虫第一个要面临的问题，就是如何抓取网页，抓取其实很容易，没你想的那么复杂，一个开源&lt;code&gt;HtmlUnit&lt;/code&gt;包，4行代码就OK啦，例子如下：&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;final&lt;/span&gt; &lt;span class="n"&gt;WebClient&lt;/span&gt; &lt;span class="n"&gt;webClient&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;new&lt;/span&gt; &lt;span class="n"&gt;WebClient&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
@@ -195,7 +195,7 @@
 
 &lt;p&gt;最后来个例子，HtmlUnit模拟浏览器登录&lt;code&gt;小米网站帐户&lt;/code&gt;，程运运行的截图如下，&lt;code&gt;红色方框&lt;/code&gt;表示登录成功跳转到下一个页面出现的帐号：&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2013/11/fetchPage.html"&gt;
-&lt;img src="http://www.yanyulin.info/pics/art/xiaomi.jpg" width=100%/&gt;
+&lt;img alt="烟雨林博客"  src="http://www.yanyulin.info/pics/art/xiaomi.jpg" width=100%/&gt;
 &lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;本博文源代码下载:&lt;/p&gt;
 &lt;blockquote&gt;
