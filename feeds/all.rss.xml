@@ -34,8 +34,7 @@
 &lt;p&gt;到此为止，这就是整个软件设计过程中需要考虑的问题，&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2014/03/zhihu_2.html" target="_blank"&gt;
 下一篇将会介绍软件的实现
-&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Thu, 06 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-03-06:pages/2014/03/zhihu_1.html</guid><category>实用工具</category></item><item><title>一款自动发链接软件的实现细节分析</title><link>http://www.yanyulin.info/pages/2014/03/zhihu_2.html</link><description>&lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2013/11/fetchPage.html" target="_blank"&gt;爬虫的自我解剖(抓取网页HtmlUnit)&lt;/a&gt;,由于HtmlUnit本身对JavaScript的支持不是好好，而且也没有必要去加载网页的CSS...&lt;/p&gt;
-&lt;hr /&gt;
+&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Thu, 06 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-03-06:pages/2014/03/zhihu_1.html</guid><category>实用工具</category></item><item><title>一款自动发链接软件的实现细节分析</title><link>http://www.yanyulin.info/pages/2014/03/zhihu_2.html</link><description>&lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;源码下载&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://pan.baidu.com/s/1mgG38yk" target="_blank"&gt;
 自动发链接软件下载
