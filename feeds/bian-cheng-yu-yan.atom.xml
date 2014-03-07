@@ -892,7 +892,7 @@ var duoshuoQuery = {short_name:&amp;quot;yanyulin&amp;quot;};
 &lt;/a&gt;
 4、fork之后的图如下图所示，从下图可以看出mfjc已经处于自已的github帐号库中，同时也可以发现github还标明了该库的来源，因为只有标明了来源，后面你修改了文件才有提交的路径
 &lt;a href="http://www.yanyulin.info/pages/2013/11/githubM.html" target="_blank"&gt;
-&lt;img src="http://www.yanyulin.info/pics/tools/2github3.jpg" width="100%"/&gt;
+&lt;img src="http://www.yanyulin.info/pics/tools/2github3.jpg" alt="烟雨林博客" width="100%"/&gt;
 &lt;/a&gt;
 5、修改或者增加仓库里的文件，可以选择在线修改，在线修改一般适合修改量较少，这里介绍的是采用Git工具，将代码仓库下载到本地，在本地修改之后再上传上去，相关命令如下：&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;mkdir&lt;/span&gt; &lt;span class="n"&gt;tmp&lt;/span&gt; &lt;span class="err"&gt;#创建&lt;/span&gt;&lt;span class="n"&gt;tmp&lt;/span&gt;&lt;span class="err"&gt;目录&lt;/span&gt;

@@ -715,7 +715,7 @@ var duoshuoQuery = {short_name:&amp;quot;yanyulin&amp;quot;};
 &lt;p&gt;最近&lt;code&gt;ripple&lt;/code&gt;的表现实在是太差劲极了，不，是整个虚拟币的表现是&lt;strong&gt;实在糟糕透顶了&lt;/strong&gt;，估计这种情况还会持续下去，虚拟币究竟&lt;strong&gt;有没有价值&lt;/strong&gt;还是一个值得人深思的问题，虚拟币&lt;strong&gt;该不该去中心化&lt;/strong&gt;，随着&lt;strong&gt;门头沟&lt;/strong&gt;事件的爆发，&lt;strong&gt;Mt.Gox&lt;/strong&gt;因黑客盗取的破产，&lt;code&gt;744000比特币&lt;/code&gt;丢失，这么多资金已经足够&lt;strong&gt;摧毁&lt;/strong&gt;这家公司，日本和美国监管机构正在介入，后绪还不知道有什么新闻会曝光，也许&lt;strong&gt;一次致命性的新闻&lt;/strong&gt;会足以使虚拟币走向灭亡，当然ripple的价格也随着比特币的价格浮沉，下面是ripple价格图：&lt;/p&gt;
 &lt;p&gt;&lt;center&gt;
 &lt;a href="http://www.yanyulin.info/pages/2014/03/getxrp.html"&gt;
-&lt;img src="http://www.yanyulin.info/pics/invest/bts.jpg"/&gt;
+&lt;img src="http://www.yanyulin.info/pics/invest/bts.jpg" alt="烟雨林博客" /&gt;
 &lt;/a&gt;
 &lt;/center&gt;&lt;/p&gt;
 &lt;p&gt;虚拟币的负面新闻：&lt;/p&gt;
@@ -3534,7 +3534,7 @@ D
 &lt;/a&gt;
 4、fork之后的图如下图所示，从下图可以看出mfjc已经处于自已的github帐号库中，同时也可以发现github还标明了该库的来源，因为只有标明了来源，后面你修改了文件才有提交的路径
 &lt;a href="http://www.yanyulin.info/pages/2013/11/githubM.html" target="_blank"&gt;
-&lt;img src="http://www.yanyulin.info/pics/tools/2github3.jpg" width="100%"/&gt;
+&lt;img src="http://www.yanyulin.info/pics/tools/2github3.jpg" alt="烟雨林博客" width="100%"/&gt;
 &lt;/a&gt;
 5、修改或者增加仓库里的文件，可以选择在线修改，在线修改一般适合修改量较少，这里介绍的是采用Git工具，将代码仓库下载到本地，在本地修改之后再上传上去，相关命令如下：&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;mkdir&lt;/span&gt; &lt;span class="n"&gt;tmp&lt;/span&gt; &lt;span class="err"&gt;#创建&lt;/span&gt;&lt;span class="n"&gt;tmp&lt;/span&gt;&lt;span class="err"&gt;目录&lt;/span&gt;
