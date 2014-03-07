@@ -167,8 +167,8 @@
 &lt;p&gt;&lt;strong&gt;第三部分编程题&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;1、设计一个算法，编程实现去掉一个字符串里的重复字符，要求不能额外开辟内存空间&lt;/p&gt;
 &lt;p&gt;2、设X[1:n]是由不同实数组成的数组，如果i&lt;j且X[i]&gt;X[j],则称实数对(X[i],X[j])是该数组的一个反序，如，若X=[3,5,2,4],则该数组存在3个反序，（3，2）、（5，2）和(5,4),反序的个数可以用来衡量一个数组的无序程序，请设计一个算法并用代码实现，计算给定数组的反序个数，并分析算法的时间复杂度。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;各位如果有更好的答案，请留言评价，方便更多的人&lt;/strong&gt;&lt;/p&gt;</summary><category term="创新工场笔试题"></category></entry><entry><title>剑指Offer书箱PDF下载及简介</title><link href="http://www.yanyulin.info/pages/2014/03/offer.html" rel="alternate"></link><updated>2014-03-07T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-07:pages/2014/03/offer.html</id><summary type="html">&lt;hr /&gt;
-&lt;p&gt;剑指offer PDF格式下载:&lt;a href="链接:http://pan.baidu.com/s/1hq0wGy4" target="_blank" title="《剑指offer》"&gt;点这里&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;各位如果有更好的答案，请留言评价，方便更多的人&lt;/strong&gt;&lt;/p&gt;</summary><category term="创新工场笔试题"></category></entry><entry><title>剑指Offer书籍PDF下载及简介</title><link href="http://www.yanyulin.info/pages/2014/03/offer.html" rel="alternate"></link><updated>2014-03-07T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-07:pages/2014/03/offer.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;剑指offer PDF格式下载:&lt;a href="http://pan.baidu.com/s/1hq0wGy4" target="_blank" title="《剑指offer》"&gt;点这里&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;下载密码为&lt;code&gt;t3ku&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;书评&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;剑指&lt;code&gt;offer&lt;/code&gt;一书，写的还可以，与编程之美相比，程序看起来更像是作者本人所写，编程之美上的程序代码实现个人觉的实在不怎么的，感觉就像是实习生写的，但是撇开代码的实现，光去分研其算法的思想，编程之美也算是一本好书，剑指offer一书，开篇介绍的是面试前的准备，涉及了简历、电话面试、以及现场面试，在第一章中作者给出的面试经验还是非常值的学习以及分析，特别是面试者经常犯的一些比较2的问题，如面完一面后就问工资如何，我能被录用嘛，等等，书中的后面几章均是一些算法的实现，这些算法也是面试官经常问的一些算法，对于面试者特别是应届毕业生来说，最好都要能熟练胡写出来。&lt;/p&gt;
