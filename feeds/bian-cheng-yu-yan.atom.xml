@@ -1,5 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>烟雨林</title><link href="http://www.yanyulin.info/" rel="alternate"></link><link href="http://www.yanyulin.info/feeds/bian-cheng-yu-yan.atom.xml" rel="self"></link><id>http://www.yanyulin.info/</id><updated>2014-03-05T00:00:00+08:00</updated><entry><title>github搭建网站优化(修复过多的302重定向请求)</title><link href="http://www.yanyulin.info/pages/2014/03/github_site.html" rel="alternate"></link><updated>2014-03-05T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-05:pages/2014/03/github_site.html</id><summary type="html">&lt;hr /&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>烟雨林</title><link href="http://www.yanyulin.info/" rel="alternate"></link><link href="http://www.yanyulin.info/feeds/bian-cheng-yu-yan.atom.xml" rel="self"></link><id>http://www.yanyulin.info/</id><updated>2014-03-07T00:00:00+08:00</updated><entry><title>Linux系统中并发与竞争机制分析</title><link href="http://www.yanyulin.info/pages/2014/03/concurrent.html" rel="alternate"></link><updated>2014-03-07T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-07:pages/2014/03/concurrent.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;现代&lt;code&gt;Linux&lt;/code&gt;系统中有相非常多的并发源，导致的问题就是并发与竞争，多个并发源竞争同一个共享数据
+竞争的情况来自对资源的共享存取结果，当多个线程操作同一数据结构时，混乱就可能存在，在驱动编程中尽量避免共享资源，采用的方法通常是加锁机制。&lt;/p&gt;
+&lt;p&gt;共享资源的互斥&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;PV&lt;/code&gt;操作：PV操作实际上是对一个整形值进行操作，一个想进入临界区获取共享资源的进程调用P操作，如果整形值大于0,将整形值减1，获取共享资源，否则等待，使用完后调用V操作，将整形值增1，唤醒等待的进程&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Linux&lt;/code&gt;下PV实现：&lt;/p&gt;
+&lt;p&gt;要使用PV操作，必须包含&lt;code&gt;&amp;lt;linux/semaphore.h&amp;gt;,&lt;/code&gt;相关的数据类型是&lt;code&gt;struct semaphore&lt;/code&gt;,PV操作要进行创建然后初始化&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;static&lt;/span&gt; &lt;span class="kr"&gt;inline&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="n"&gt;sema_init&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;struct&lt;/span&gt; &lt;span class="n"&gt;semaphore&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;sem&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;val&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="c1"&gt;//val是pv操作的初始整形值&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;PV操作一般用于互斥，因此内核提供了如下的宏定义进行申明&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;#define DECLARE_MUTEX(name)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;如果PV操作必须在运行时初始化，内核提供了如下操作&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;#define init_MUTEX(sem)     sema_init(sem, 1)&lt;/span&gt;
+&lt;span class="c"&gt;#define init_MUTEX_LOCKED(sem)  sema_init(sem, 0)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Linux中P操作对应如下三个函数&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;extern&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;down&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;struct&lt;/span&gt; &lt;span class="n"&gt;semaphore&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;sem&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;span class="c1"&gt;//P操作递减整形值，如果没有，等待&lt;/span&gt;
+&lt;span class="k"&gt;extern&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;__must_check&lt;/span&gt; &lt;span class="nf"&gt;down_interruptible&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;struct&lt;/span&gt; &lt;span class="n"&gt;semaphore&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;sem&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;span class="c1"&gt;//P操作递减整形值，允许&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;用户可中断&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;extern&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;__must_check&lt;/span&gt; &lt;span class="nf"&gt;down_trylock&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;struct&lt;/span&gt; &lt;span class="n"&gt;semaphore&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;sem&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;span class="c1"&gt;//P操作不成功，立刻返回，不等待&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;V操作：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;extern&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;up&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;struct&lt;/span&gt; &lt;span class="n"&gt;semaphore&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;sem&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;span class="c1"&gt;//信号使用完毕之后必须要返还给系统&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;读者写者的PV操作&lt;/p&gt;
+&lt;p&gt;Linux内核为这种情况提供了一个特殊的类型rwsem(在linux/rwsem.h中)，rwsem必须在运行时显示的初始化&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;Void&lt;/span&gt; &lt;span class="n"&gt;init_rwsem&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;struct&lt;/span&gt; &lt;span class="n"&gt;rw_semaphore&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;sem&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Completion机制&lt;/p&gt;
+&lt;p&gt;Completion是任务使用的一个轻量级机制，允许一个线程告诉另一个线程工作已完成，为使用completion你的代码必须包括&lt;code&gt;&amp;lt;linux/completion.h&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;DECLARE_COMPLETION(name)创建completion&lt;/p&gt;
+&lt;p&gt;自旋锁简介&lt;linux/spinlock.h&gt;类型为spinlock_t,同任何其他类型一样，自旋锁必须要初始化，注意所有的自旋锁都是不可中断的，一旦你调用 spin_lock你将自旋直到锁变为可用。&lt;/p&gt;
+&lt;p&gt;对自旋锁进行操作的相关函数&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;#define spin_lock_irq(lock)     _spin_lock_irq(lock)&lt;/span&gt;
+&lt;span class="c"&gt;#define spin_lock_bh(lock)      _spin_lock_bh(lock)//获得锁之前禁止软件中断&lt;/span&gt;
+&lt;span class="c"&gt;#define spin_lock_irqsave(lock, flags)  //获得锁之间禁止中断，之前的中断保存在flag里   &lt;/span&gt;
+&lt;span class="c"&gt;#define spin_trylock(lock)  &lt;/span&gt;
+&lt;span class="c"&gt;#define spin_lock(lock)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;有四个方法来释放自旋锁&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;# define spin_unlock(lock)      _spin_unlock(lock)&lt;/span&gt;
+&lt;span class="c"&gt;# define read_unlock(lock)      _read_unlock(lock)&lt;/span&gt;
+&lt;span class="c"&gt;# define write_unlock(lock)     _write_unlock(lock)&lt;/span&gt;
+&lt;span class="c"&gt;# define spin_unlock_irq(lock)      _spin_unlock_irq(lock)&lt;/span&gt;
+&lt;span class="c"&gt;# define read_unlock_irq(lock)      _read_unlock_irq(lock)&lt;/span&gt;
+&lt;span class="c"&gt;# define write_unlock_irq(lock)     _write_unlock_irq(lock)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;非阻塞的自旋锁操作&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;Int&lt;/span&gt; &lt;span class="n"&gt;spin_trylock&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;spinlock_t&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;lock&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;Int&lt;/span&gt; &lt;span class="n"&gt;spin_trylock_bh&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;spinlock_t&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;lock&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;这些函数成功时返回非零，否则0，没有try版本来禁止中断&lt;/p&gt;
+&lt;p&gt;一个完整的加锁体制对于一个简单的整数值有点过分，对于这样的情况，内核提供了一个原子整数类型称为atomic_t定义在,&lt;code&gt;&amp;lt;asm/atomic.h&amp;gt;&lt;/code&gt;中&lt;/p&gt;</summary><category term="Linux汇总"></category></entry><entry><title>github搭建网站优化(修复过多的302重定向请求)</title><link href="http://www.yanyulin.info/pages/2014/03/github_site.html" rel="alternate"></link><updated>2014-03-05T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-05:pages/2014/03/github_site.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;本博客采用&lt;strong&gt;pelican&lt;/strong&gt;搭建，服务器采用的是免费的&lt;strong&gt;github&lt;/strong&gt;,博客搭建完成后，需要在博客根目录下写上一个配置文件&lt;code&gt;CNAME&lt;/code&gt;,其中&lt;code&gt;CNAME&lt;/code&gt;写上自已的域名，然后在DNS域名解析器里写上三条A记录，等上24个小时，即可在全球任何地点访问自已的网站，本网站的DNS采用的是免费的&lt;a href="https://www.dnspod.cn" target="_blank"&gt;DNSpod&lt;/a&gt;进行解析，在DNSPod里的配置如下所示：&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;主机记录&lt;/span&gt;       &lt;span class="err"&gt;记录类型&lt;/span&gt;    &lt;span class="err"&gt;线路类型&lt;/span&gt;    &lt;span class="err"&gt;记录值&lt;/span&gt;        &lt;span class="n"&gt;MX&lt;/span&gt;&lt;span class="err"&gt;优先级&lt;/span&gt;    &lt;span class="n"&gt;TTL&lt;/span&gt;      
   &lt;span class="n"&gt;www&lt;/span&gt;         &lt;span class="n"&gt;A&lt;/span&gt;          &lt;span class="err"&gt;默认&lt;/span&gt;  &lt;span class="mf"&gt;207.97.227.245&lt;/span&gt;     &lt;span class="o"&gt;-&lt;/span&gt;         &lt;span class="mi"&gt;600&lt;/span&gt;
@@ -482,7 +556,7 @@ var duoshuoQuery = {short_name:&amp;quot;yanyulin&amp;quot;};
 &lt;/blockquote&gt;</summary><category term="C++学习"></category></entry><entry><title>快速介绍Linux（Linux入门教程）</title><link href="http://www.yanyulin.info/pages/2014/02/linux1.html" rel="alternate"></link><updated>2014-02-22T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-02-22:pages/2014/02/linux1.html</id><summary type="html">&lt;p&gt;1：严格意义上，可将操作系统定义为一种软件，它控制计算机硬件资源，提供程序运行环境，我们称此种软件为内核，它相对较小，位于环境中心&lt;/p&gt;
 &lt;p&gt;&lt;center&gt;
 &lt;a href="http://www.yanyulin.info/pages/2014/02/linux1.html"&gt;
-&lt;img src="http://www.yanyulin.info/pics/tech/linuxmen1.png"/&gt;
+&lt;img src="http://www.yanyulin.info/pics/tech/linuxmen1.png" alt="烟雨林博客"/&gt;
 &lt;/a&gt;
 &lt;/center&gt;&lt;/p&gt;
 &lt;p&gt;图一介绍：&lt;/p&gt;
@@ -496,13 +570,13 @@ var duoshuoQuery = {short_name:&amp;quot;yanyulin&amp;quot;};
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;center&gt;
 &lt;a href="http://www.yanyulin.info/pages/2014/02/linux1.html"&gt;
-&lt;img src="http://www.yanyulin.info/pics/tech/linuxmen2.png"/&gt;
+&lt;img src="http://www.yanyulin.info/pics/tech/linuxmen2.png" alt="烟雨林博客"/&gt;
 &lt;/a&gt;
 &lt;/center&gt;&lt;/p&gt;
 &lt;p&gt;输入用户名与密码即可登录成功结果如下&lt;/p&gt;
 &lt;p&gt;&lt;center&gt;
 &lt;a href="http://www.yanyulin.info/pages/2014/02/linux1.html"&gt;
-&lt;img src="http://www.yanyulin.info/pics/tech/linuxmen3.png"/&gt;
+&lt;img src="http://www.yanyulin.info/pics/tech/linuxmen3.png" alt="烟雨林博客"/&gt;
 &lt;/a&gt;
 &lt;/center&gt;&lt;/p&gt;
 &lt;p&gt;图中用户名是pengpeng,登录成功后进入用户的家目录&lt;strong&gt;(所谓家目录即/home/pengpeng这个目录，Linux为系统的每个用户都在/home目录下创建了以用户名为名称的目录，作为用户登录成功后的当前目录)&lt;/strong&gt;&lt;/p&gt;
@@ -515,7 +589,7 @@ var duoshuoQuery = {short_name:&amp;quot;yanyulin&amp;quot;};
 &lt;p&gt;在终端上输入&lt;code&gt;vim /etc/passwd&lt;/code&gt;【vim/vi是linux中的一种文本编辑器，默认只安了vi,安装vim输入以下命令sudo su apt-get install vim】&lt;/p&gt;
 &lt;p&gt;&lt;center&gt;
 &lt;a href="http://www.yanyulin.info/pages/2014/02/linux1.html"&gt;
-&lt;img src="http://www.yanyulin.info/pics/tech/linuxmen4.png"/&gt;
+&lt;img src="http://www.yanyulin.info/pics/tech/linuxmen4.png" alt="烟雨林博客"/&gt;
 &lt;/a&gt;
 &lt;/center&gt;&lt;/p&gt;
 &lt;p&gt;口令文件组成的意思如：&lt;/p&gt;
@@ -534,7 +608,7 @@ var duoshuoQuery = {short_name:&amp;quot;yanyulin&amp;quot;};
 &lt;p&gt;实例分析：ls的简要现&lt;/p&gt;
 &lt;p&gt;&lt;center&gt;
 &lt;a href="http://www.yanyulin.info/pages/2014/02/linux1.html"&gt;
-&lt;img src="http://www.yanyulin.info/pics/tech/linuxmen5.png"/&gt;
+&lt;img src="http://www.yanyulin.info/pics/tech/linuxmen5.png" alt="烟雨林博客"/&gt;
 &lt;/a&gt;
 &lt;/center&gt;&lt;/p&gt;
 &lt;p&gt;在终端上输入&lt;code&gt;vim lsM.c&lt;/code&gt;创建如上文件&lt;/p&gt;
@@ -545,7 +619,7 @@ var duoshuoQuery = {short_name:&amp;quot;yanyulin&amp;quot;};
 &lt;p&gt;编译&lt;code&gt;lsM.c&lt;/code&gt;生成可执行文件，并执行&lt;/p&gt;
 &lt;p&gt;&lt;center&gt;
 &lt;a href="http://www.yanyulin.info/pages/2014/02/linux1.html"&gt;
-&lt;img src="http://www.yanyulin.info/pics/tech/linuxmen6.png"/&gt;
+&lt;img src="http://www.yanyulin.info/pics/tech/linuxmen6.png" alt="烟雨林博客"/&gt;
 &lt;/a&gt;
 &lt;/center&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;Gcc&lt;/code&gt;是C语言编译器, -o选项表示后面是输入的目标文件的文件名 lsM.c表示编译的源程序&lt;/p&gt;
@@ -569,7 +643,7 @@ var duoshuoQuery = {short_name:&amp;quot;yanyulin&amp;quot;};
 &lt;p&gt;不带缓冲的I/O函数有&lt;code&gt;open,read,write,lseek,close&lt;/code&gt;（&lt;code&gt;即中间没有一个缓存区作为过渡&lt;/code&gt;）&lt;/p&gt;
 &lt;p&gt;&lt;center&gt;
 &lt;a href="http://www.yanyulin.info/pages/2014/02/linux2.html"&gt;
-&lt;img src="http://www.yanyulin.info/pics/tech/linuxio.jpg"/&gt;
+&lt;img src="http://www.yanyulin.info/pics/tech/linuxio.jpg" alt="烟雨林博客"/&gt;
 &lt;/a&gt;
 &lt;/center&gt;&lt;/p&gt;
 &lt;p&gt;注解:&lt;/p&gt;
@@ -584,7 +658,7 @@ var duoshuoQuery = {short_name:&amp;quot;yanyulin&amp;quot;};
 &lt;p&gt;示例程序：&lt;/p&gt;
 &lt;p&gt;&lt;center&gt;
 &lt;a href="http://www.yanyulin.info/pages/2014/02/linux2.html"&gt;
-&lt;img src="http://www.yanyulin.info/pics/tech/linuxio1.png"/&gt;
+&lt;img src="http://www.yanyulin.info/pics/tech/linuxio1.png" alt="烟雨林博客"/&gt;
 &lt;/a&gt;
 &lt;/center&gt;&lt;/p&gt;
 &lt;p&gt;程序解释如下：&lt;/p&gt;
@@ -615,9 +689,9 @@ var duoshuoQuery = {short_name:&amp;quot;yanyulin&amp;quot;};
 &lt;p&gt;示例程序如下：&lt;/p&gt;
 &lt;p&gt;&lt;center&gt;
 &lt;a href="http://www.yanyulin.info/pages/2014/02/linux2.html"&gt;
-&lt;img src="http://www.yanyulin.info/pics/tech/linuxio2.png"/&gt;
+&lt;img src="http://www.yanyulin.info/pics/tech/linuxio2.png" alt="烟雨林博客"/&gt;
 &lt;/a&gt;
-&lt;/center&gt;&lt;/p&gt;</summary><category term="Linux学习"></category></entry><entry><title>pelican创建博客常见问题汇总</title><link href="http://www.yanyulin.info/pages/2014/01/pelican_question.html" rel="alternate"></link><updated>2014-01-08T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-01-08:pages/2014/01/pelican_question.html</id><summary type="html">&lt;hr /&gt;
+&lt;/center&gt;&lt;/p&gt;</summary><category term="Linux汇总"></category></entry><entry><title>pelican创建博客常见问题汇总</title><link href="http://www.yanyulin.info/pages/2014/01/pelican_question.html" rel="alternate"></link><updated>2014-01-08T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-01-08:pages/2014/01/pelican_question.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;1、No valid files found in content errors&lt;/p&gt;
 &lt;p&gt;当用&lt;code&gt;pelican&lt;/code&gt;创建博客时出现此问题的原因是因为&lt;code&gt;pelican&lt;/code&gt;创建博客时读取到&lt;code&gt;contents&lt;/code&gt;目录下的md文件，而md文件需要&lt;code&gt;markdown&lt;/code&gt;的相库库解析，&lt;code&gt;pelican&lt;/code&gt;此时缺少该库，因此可以通过以下命令安装&lt;code&gt;markdown&lt;/code&gt;的相应库&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;pip&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;markdown&lt;/span&gt;
@@ -1142,7 +1216,7 @@ var duoshuoQuery = {short_name:&amp;quot;yanyulin&amp;quot;};
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;根据这个表可以看到的是任务0的内核态堆栈指针esp0=PAGE_SIZE+(long)&amp;amp;init_task,即第一个PCB块(task_struct)的顶部空间，PAGE_SIZE=4k,ss0=0x10,0x10查一下head.s你就会发现是gdt的第一个描述符，即内核代码段，后面还有几个是对数据段寄存器的定义以及ldt的定义&lt;/p&gt;</summary><category term="Linux学习"></category></entry><entry><title>Assert(断言)实现机制剖析</title><link href="http://www.yanyulin.info/pages/2013/11/assert.html" rel="alternate"></link><updated>2013-11-18T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-11-18:pages/2013/11/assert.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;根据这个表可以看到的是任务0的内核态堆栈指针esp0=PAGE_SIZE+(long)&amp;amp;init_task,即第一个PCB块(task_struct)的顶部空间，PAGE_SIZE=4k,ss0=0x10,0x10查一下head.s你就会发现是gdt的第一个描述符，即内核代码段，后面还有几个是对数据段寄存器的定义以及ldt的定义&lt;/p&gt;</summary><category term="Linux汇总"></category></entry><entry><title>Assert(断言)实现机制剖析</title><link href="http://www.yanyulin.info/pages/2013/11/assert.html" rel="alternate"></link><updated>2013-11-18T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-11-18:pages/2013/11/assert.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;断言(assert)的作用是用来判断程序运行的正确性，确保程序运行的行为与我们理解的一致。其调用形式为assert(logic expression),如果逻辑表达式为假，则调用abort()终止程序的运行。&lt;/p&gt;
 &lt;p&gt;查看MSDN帮助文档，可以得到assert的解释信息如下：&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;The&lt;/span&gt; &lt;span class="n"&gt;ANSI&lt;/span&gt; &lt;span class="n"&gt;assert&lt;/span&gt; &lt;span class="n"&gt;macro&lt;/span&gt; &lt;span class="n"&gt;is&lt;/span&gt; &lt;span class="n"&gt;typically&lt;/span&gt; &lt;span class="n"&gt;used&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;identify&lt;/span&gt; &lt;span class="n"&gt;logic&lt;/span&gt; &lt;span class="n"&gt;errors&lt;/span&gt; &lt;span class="n"&gt;during&lt;/span&gt; &lt;span class="n"&gt;program&lt;/span&gt; &lt;span class="n"&gt;development&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; 

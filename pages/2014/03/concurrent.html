@@ -2,7 +2,7 @@
 <html lang="zh">
 <head>
 <title>
-深度探索C++对象模型 - 烟雨林</title>
+Linux系统中并发与竞争机制分析 - 烟雨林</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
 <meta name="author" content="烟雨林">
@@ -24,8 +24,8 @@
 					   	<div >
 						  		<ul>	
 						   						<li><a href="http://www.yanyulin.info">烟雨首页</a></li>
-						  				  											<li><a href="http://www.yanyulin.info/category/bian-cheng-yu-yan.html">编程语言</a></li>
-						  																<li class="current-menu-item current_page_item "><a href="http://www.yanyulin.info/category/jing-pin-shu-ji.html">精品书籍</a></li>
+						  																<li class="current-menu-item current_page_item "><a href="http://www.yanyulin.info/category/bian-cheng-yu-yan.html">编程语言</a></li>
+						  				  											<li><a href="http://www.yanyulin.info/category/jing-pin-shu-ji.html">精品书籍</a></li>
 						  				  											<li><a href="http://www.yanyulin.info/category/shi-pin-jiao-cheng.html">视频教程</a></li>
 						  				  											<li><a href="http://www.yanyulin.info/category/tou-zi-li-cai.html">投资理财</a></li>
 						  				  											<li><a href="http://www.yanyulin.info/category/wan-zhuan-ji-zhu.html">玩转技术</a></li>
@@ -45,15 +45,15 @@
 		<div id="content">							 
 					<div id="map">
 						<div class="browse">现在的位置: <a title="返回首页" href="http://www.yanyulin.info">烟雨首页</a> ＞
-						<a href="http://www.yanyulin.info/category/jing-pin-shu-ji.html" title="查看精品书籍中的全部文章" rel="category tag">精品书籍</a>＞正文</div>
+						<a href="http://www.yanyulin.info/category/bian-cheng-yu-yan.html" title="查看编程语言中的全部文章" rel="category tag">编程语言</a>＞正文</div>
 						<div class="font"><a href="javascript:doZoom(12)">小</a> <a href="javascript:doZoom(13)">中</a> <a href="javascript:doZoom(18)">大</a></div>
 					</div>
 					<div class="entry_box_s">
 						<div class="entry_title_box">
-							<div class="entry_title">深度探索C++对象模型</div>
+							<div class="entry_title">Linux系统中并发与竞争机制分析</div>
 							<div class="archive_info">
-								<span class="date">2013-11-18</span>
-								<span class="category"> ⁄ <a href="http://www.yanyulin.info/category/jing-pin-shu-ji.html" title="查看精品书籍中的全部文章" rel="category tag">精品书籍</a></span>
+								<span class="date">2014-03-07</span>
+								<span class="category"> ⁄ <a href="http://www.yanyulin.info/category/bian-cheng-yu-yan.html" title="查看编程语言中的全部文章" rel="category tag">编程语言</a></span>
 							</div>
 						</div>
 						<div class="entry">
@@ -80,62 +80,83 @@
 </script>
 </div>
 							<hr />
-<p>电子书PDF格式下载:<a href="http://yunpan.cn/QUK3HwIaW6tu2" target="_blank" title="《深度探索C++对象模型》">点这里</a></p>
-<p>第0章 导读（译者的话）</p>
-<p>第1章 关于对象（Object Lessons）</p>
-<blockquote>
-<p>1.1 C++对象模型（The C++ Object Model）</p>
-<p>1.2 关键词所带来的差异（A Keyword Distinction）</p>
-<p>1.3 对象的差异（An Object Distinction）</p>
-</blockquote>
-<p>第2章 构造函数语意学（The Semantics of constructors）</p>
-<blockquote>
-<p>2.1 Default Constructor的建构操作</p>
-<p>2.2 Copy Constructor的建构操作</p>
-<p>2.3 程序转换语意学（Program Transformation Semantics）</p>
-<p>2.4 成员们的初始化队伍（Member Initialization List）</p>
-</blockquote>
-<p>第3章 Data语意学（The Semantics of Data）</p>
-<blockquote>
-<p>3.1 Data Member的绑定（The Binding of a Data Member）</p>
-<p>3.2 Data Member的布局（Data Member Layout）</p>
-<p>3.3 Data Member的存取</p>
-<p>3.4 “继承”与Data Member</p>
-<p>3.5 对象成员的效率（Object Member Efficiency）</p>
-<p>3.6 指向Data Members的指针（Pointer to Data Members）</p>
-</blockquote>
-<p>第4章 Function语意学（The Semantics of Function）</p>
-<blockquote>
-<p>4.1 Member的各种调用方式</p>
-<p>4.2 Virtual Member Functions（虚拟成员函数）</p>
-<p>4.3 函数的效能</p>
-<p>4.4 指向Member Functions的指针（Pointer-to-Member Functions）</p>
-<p>4.5 Inline Functions</p>
-</blockquote>
-<p>第5章 构造、解构、拷贝 语意学（Semantics of Construction，Destruction，and Copy）</p>
-<blockquote>
-<p>5.1 无继承情况下的对象构造</p>
-<p>5.2 继承体系下的对象构造</p>
-<p>5.3 对象复制语意学（Object Copy Semantics）</p>
-<p>5.4 对象的功能（Object Efficiency）</p>
-<p>5.5 解构语意学（Semantics of Destruction）</p>
-</blockquote>
-<p>第6章 执行期语意学（Runting Semantics）</p>
-<blockquote>
-<p>6.1 对象的构造和解构（Object Construction and Destruction）</p>
-<p>6.2 new和delete运算符</p>
-<p>6.3 临时性对象（Temporary Objects）</p>
-</blockquote>
-<p>第7章 站在对象模型的类端（On the Cusp of the Object Model）</p>
-<blockquote>
-<p>7.1 Template</p>
-<p>7.2 异常处理（Exception Handling）</p>
-<p>7.3 执行期类型识别（Runtime Type Identification，RTTI）</p>
-<p>7.4 效率有了，弹性呢？</p>
-</blockquote>
+<p>现代<code>Linux</code>系统中有相非常多的并发源，导致的问题就是并发与竞争，多个并发源竞争同一个共享数据
+竞争的情况来自对资源的共享存取结果，当多个线程操作同一数据结构时，混乱就可能存在，在驱动编程中尽量避免共享资源，采用的方法通常是加锁机制。</p>
+<p>共享资源的互斥</p>
+<p><code>PV</code>操作：PV操作实际上是对一个整形值进行操作，一个想进入临界区获取共享资源的进程调用P操作，如果整形值大于0,将整形值减1，获取共享资源，否则等待，使用完后调用V操作，将整形值增1，唤醒等待的进程</p>
+<p><code>Linux</code>下PV实现：</p>
+<p>要使用PV操作，必须包含<code>&lt;linux/semaphore.h&gt;,</code>相关的数据类型是<code>struct semaphore</code>,PV操作要进行创建然后初始化</p>
+<div class="highlight"><pre><span class="k">static</span> <span class="kr">inline</span> <span class="kt">void</span> <span class="n">sema_init</span><span class="p">(</span><span class="k">struct</span> <span class="n">semaphore</span> <span class="o">*</span><span class="n">sem</span><span class="p">,</span> <span class="kt">int</span> <span class="n">val</span><span class="p">)</span><span class="c1">//val是pv操作的初始整形值</span>
+</pre></div>
+
+
+<p>PV操作一般用于互斥，因此内核提供了如下的宏定义进行申明</p>
+<div class="highlight"><pre><span class="c">#define DECLARE_MUTEX(name)</span>
+</pre></div>
+
+
+<p>如果PV操作必须在运行时初始化，内核提供了如下操作</p>
+<div class="highlight"><pre><span class="c">#define init_MUTEX(sem)     sema_init(sem, 1)</span>
+<span class="c">#define init_MUTEX_LOCKED(sem)  sema_init(sem, 0)</span>
+</pre></div>
+
+
+<p>Linux中P操作对应如下三个函数</p>
+<div class="highlight"><pre><span class="k">extern</span> <span class="kt">void</span> <span class="nf">down</span><span class="p">(</span><span class="k">struct</span> <span class="n">semaphore</span> <span class="o">*</span><span class="n">sem</span><span class="p">);</span><span class="c1">//P操作递减整形值，如果没有，等待</span>
+<span class="k">extern</span> <span class="kt">int</span> <span class="n">__must_check</span> <span class="nf">down_interruptible</span><span class="p">(</span><span class="k">struct</span> <span class="n">semaphore</span> <span class="o">*</span><span class="n">sem</span><span class="p">);</span><span class="c1">//P操作递减整形值，允许</span>
+</pre></div>
+
+
+<p>用户可中断</p>
+<div class="highlight"><pre><span class="k">extern</span> <span class="kt">int</span> <span class="n">__must_check</span> <span class="nf">down_trylock</span><span class="p">(</span><span class="k">struct</span> <span class="n">semaphore</span> <span class="o">*</span><span class="n">sem</span><span class="p">);</span><span class="c1">//P操作不成功，立刻返回，不等待</span>
+</pre></div>
+
+
+<p>V操作：</p>
+<div class="highlight"><pre><span class="k">extern</span> <span class="kt">void</span> <span class="nf">up</span><span class="p">(</span><span class="k">struct</span> <span class="n">semaphore</span> <span class="o">*</span><span class="n">sem</span><span class="p">);</span><span class="c1">//信号使用完毕之后必须要返还给系统</span>
+</pre></div>
+
+
+<p>读者写者的PV操作</p>
+<p>Linux内核为这种情况提供了一个特殊的类型rwsem(在linux/rwsem.h中)，rwsem必须在运行时显示的初始化</p>
+<div class="highlight"><pre><span class="n">Void</span> <span class="n">init_rwsem</span><span class="p">(</span><span class="k">struct</span> <span class="n">rw_semaphore</span> <span class="o">*</span><span class="n">sem</span><span class="p">)</span>
+</pre></div>
+
+
+<p>Completion机制</p>
+<p>Completion是任务使用的一个轻量级机制，允许一个线程告诉另一个线程工作已完成，为使用completion你的代码必须包括<code>&lt;linux/completion.h&gt;</code></p>
+<p>DECLARE_COMPLETION(name)创建completion</p>
+<p>自旋锁简介<linux/spinlock.h>类型为spinlock_t,同任何其他类型一样，自旋锁必须要初始化，注意所有的自旋锁都是不可中断的，一旦你调用 spin_lock你将自旋直到锁变为可用。</p>
+<p>对自旋锁进行操作的相关函数</p>
+<div class="highlight"><pre><span class="c">#define spin_lock_irq(lock)     _spin_lock_irq(lock)</span>
+<span class="c">#define spin_lock_bh(lock)      _spin_lock_bh(lock)//获得锁之前禁止软件中断</span>
+<span class="c">#define spin_lock_irqsave(lock, flags)  //获得锁之间禁止中断，之前的中断保存在flag里   </span>
+<span class="c">#define spin_trylock(lock)  </span>
+<span class="c">#define spin_lock(lock)</span>
+</pre></div>
+
+
+<p>有四个方法来释放自旋锁</p>
+<div class="highlight"><pre><span class="c"># define spin_unlock(lock)      _spin_unlock(lock)</span>
+<span class="c"># define read_unlock(lock)      _read_unlock(lock)</span>
+<span class="c"># define write_unlock(lock)     _write_unlock(lock)</span>
+<span class="c"># define spin_unlock_irq(lock)      _spin_unlock_irq(lock)</span>
+<span class="c"># define read_unlock_irq(lock)      _read_unlock_irq(lock)</span>
+<span class="c"># define write_unlock_irq(lock)     _write_unlock_irq(lock)</span>
+</pre></div>
+
+
+<p>非阻塞的自旋锁操作</p>
+<div class="highlight"><pre><span class="n">Int</span> <span class="n">spin_trylock</span><span class="p">(</span><span class="kt">spinlock_t</span> <span class="o">*</span><span class="n">lock</span><span class="p">)</span>
+<span class="n">Int</span> <span class="n">spin_trylock_bh</span><span class="p">(</span><span class="kt">spinlock_t</span> <span class="o">*</span><span class="n">lock</span><span class="p">)</span>
+</pre></div>
+
+
+<p>这些函数成功时返回非零，否则0，没有try版本来禁止中断</p>
+<p>一个完整的加锁体制对于一个简单的整数值有点过分，对于这样的情况，内核提供了一个原子整数类型称为atomic_t定义在,<code>&lt;asm/atomic.h&gt;</code>中</p>
 						  <div class="clear"></div>
 							</div>
-							<b>本文地址:</b> <a href="http://www.yanyulin.info/pages/2013/11/objectModel.html" target="_self">http://www.yanyulin.info/pages/2013/11/objectModel.html</a>
+							<b>本文地址:</b> <a href="http://www.yanyulin.info/pages/2014/03/concurrent.html" target="_self">http://www.yanyulin.info/pages/2014/03/concurrent.html</a>
 							<div><font color="blue"><b>转载时请保留本文出处,谢谢您的合作</b></font></div>
 							<hr/>
 							<div class="clear" align="left">
@@ -167,10 +188,10 @@
 					<!-- end: entrymeta -->
 				<div class="context_b" align="left">
 					 上一篇: 
-  				 <a href="http://www.yanyulin.info/pages/2013/11/sizeof.html" title="被人误解的SIZEOF" target="_self">被人误解的SIZEOF</a>
+  				 <a href="http://www.yanyulin.info/pages/2014/03/zhihu_1.html" title="一款自动发链接的软件设计思路" target="_self">一款自动发链接的软件设计思路</a>
   				 &nbsp;&nbsp
   				 下一篇:
-  				 <a href="http://www.yanyulin.info/pages/2013/11/huawei_2014_1.html" title="2014年华为校招机试(一)" target="_self">2014年华为校招机试(一)</a>
+  				 <a href="http://www.yanyulin.info/pages/2014/03/concurrent.html" title="Linux系统中并发与竞争机制分析" target="_self">Linux系统中并发与竞争机制分析</a>
 					 
 				</div>
 				<div class="context_b">
@@ -181,13 +202,13 @@
   				 <tr>
  
   				 <td width="50%" align="left">
-  				 <a href="http://www.yanyulin.info/pages/2013/11/effective.html" title="Effective C++(编程的50个细节)" target="_blank">Effective C++(编程的50个细节)</a>
+  				 <a href="http://www.yanyulin.info/pages/2014/03/concurrent.html" title="Linux系统中并发与竞争机制分析" target="_blank">Linux系统中并发与竞争机制分析</a>
   				 </td>
 	
 	 
  
   				 <td width="50%" align="left">
-  				 <a href="http://www.yanyulin.info/pages/2013/11/objectModel.html" title="深度探索C++对象模型" target="_blank">深度探索C++对象模型</a>
+  				 <a href="http://www.yanyulin.info/pages/2013/11/linux0.html" title="Linux中0号进程的创建分析" target="_blank">Linux中0号进程的创建分析</a>
   				 </td>
 	
   				 </tr>
@@ -195,7 +216,7 @@
   				 <tr>
  
   				 <td width="50%" align="left">
-  				 <a href="http://www.yanyulin.info/pages/2013/11/stlOrigin.html" title="STL源码剖析(候捷译)" target="_blank">STL源码剖析(候捷译)</a>
+  				 <a href="http://www.yanyulin.info/pages/2014/02/linux2.html" title="Linux里的输入输出（Linux快速入门）" target="_blank">Linux里的输入输出（Linux快速入门）</a>
   				 </td>
 	
  
@@ -245,10 +266,11 @@
 				<h3>相关标签</h3>
 				<div class="box">			
 						<div class="textwidget">
-							<a href="http://www.yanyulin.info/tag/mian-shi-shu.html" title="查看面试书下的所有文章" target="_blank">面试书</a>
-							<a href="http://www.yanyulin.info/tag/suan-fa-zhi-mei.html" title="查看算法之美下的所有文章" target="_blank">算法之美</a>
-							<a href="http://www.yanyulin.info/tag/cmi-ji.html" title="查看C秘籍下的所有文章" target="_blank">C秘籍</a>
-							<a href="http://www.yanyulin.info/tag/cshu-ku.html" title="查看C++书库下的所有文章" target="_blank">C++书库</a>
+							<a href="http://www.yanyulin.info/tag/linuxhui-zong.html" title="查看Linux汇总下的所有文章" target="_blank">Linux汇总</a>
+							<a href="http://www.yanyulin.info/tag/gong-ju-shi-yong.html" title="查看工具使用下的所有文章" target="_blank">工具使用</a>
+							<a href="http://www.yanyulin.info/tag/cxue-xi.html" title="查看C++学习下的所有文章" target="_blank">C++学习</a>
+							<a href="http://www.yanyulin.info/tag/linuxxue-xi.html" title="查看Linux学习下的所有文章" target="_blank">Linux学习</a>
+							<a href="http://www.yanyulin.info/tag/java.html" title="查看Java下的所有文章" target="_blank">Java</a>
 						</div>
 				</div>
 				<h3>本站直达</h3>
@@ -315,25 +337,25 @@
 				<ul>
 				<ul class="random-post-link">
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2013/07/string.html" title="String StringBuffer StringBuilder的区别分析">String StringBuffer StringBuilder的区别分析</a>
+				<a href="http://www.yanyulin.info/pages/2014/02/classinitiallist.html" title="C++中类初始化列表的妙用">C++中类初始化列表的妙用</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2013/12/neteasyM_1.html" title="网易校招2014年电商面经">网易校招2014年电商面经</a>
+				<a href="http://www.yanyulin.info/pages/2014/01/qunar_1.html" title="去哪儿网校招2014年面经">去哪儿网校招2014年面经</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2013/12/meituan_2014_A.html" title="美团网2014年校招笔试题(研发)">美团网2014年校招笔试题(研发)</a>
+				<a href="http://www.yanyulin.info/pages/2013/06/huawei_2013_1.html" title="2013年华为校招机试(一)">2013年华为校招机试(一)</a>
 				</li>
 				<li class="random-post-link">
 				<a href="http://www.yanyulin.info/pages/2013/11/objectModel.html" title="深度探索C++对象模型">深度探索C++对象模型</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2013/11/vlinux1.html" title="Linux入门版视频教程(基础)">Linux入门版视频教程(基础)</a>
+				<a href="http://www.yanyulin.info/pages/2013/12/vc_1.html" title="VC视频教程(主要讲述`MFC`)">VC视频教程(主要讲述`MFC`)</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2014/02/ripplereginster.html" title="ripple钱包注册/更改/免费激活">ripple钱包注册/更改/免费激活</a>
+				<a href="http://www.yanyulin.info/pages/2014/01/whyRipple.html" title="为什么大家都转向了Ripple">为什么大家都转向了Ripple</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2014/03/zhihu_1.html" title="一款自动发链接的软件设计思路">一款自动发链接的软件设计思路</a>
+				<a href="http://www.yanyulin.info/pages/2013/11/qqLogin.html" title="界面编程模仿篇(模仿腾讯QQ登录界面)">界面编程模仿篇(模仿腾讯QQ登录界面)</a>
 				</li>
 				<li class="random-post-link">
 				<a href="http://www.yanyulin.info/pages/2014/03/duoshuo.html" title="多说评论框如何|怎么样|实际测试">多说评论框如何|怎么样|实际测试</a>
@@ -385,25 +407,25 @@ var duoshuoQuery = {short_name:"yanyulin"};
 				<div class="box_r">
 				<ul>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2013/11/linux0.html" rel="bookmark" title="Linux中0号进程的创建分析">Linux中0号进程的创建分析</a>
+				<a href="http://www.yanyulin.info/pages/2014/03/pelican_page.html" rel="bookmark" title="pelican博客搭建设置分页和分页保存位置">pelican博客搭建设置分页和分页保存位置</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2014/01/qunar_1.html" rel="bookmark" title="去哪儿网校招2014年面经">去哪儿网校招2014年面经</a>
+				<a href="http://www.yanyulin.info/pages/2013/12/neteasyM_1.html" rel="bookmark" title="网易校招2014年电商面经">网易校招2014年电商面经</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2013/12/cxgc_2014_A.html" rel="bookmark" title="创新工场2014年校招笔试题(研发)">创新工场2014年校招笔试题(研发)</a>
+				<a href="http://www.yanyulin.info/pages/2012/11/huawei_2012_1.html" rel="bookmark" title="2012年华为成都校招机试">2012年华为成都校招机试</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2013/12/prgbeautiful.html" rel="bookmark" title="编程之美—微软技术面试心得">编程之美—微软技术面试心得</a>
+				<a href="http://www.yanyulin.info/pages/2013/11/stlOrigin.html" rel="bookmark" title="STL源码剖析(候捷译)">STL源码剖析(候捷译)</a>
 				</li>
 				<li>
 				<a href="http://www.yanyulin.info/pages/2013/11/vlinux1.html" rel="bookmark" title="Linux入门版视频教程(基础)">Linux入门版视频教程(基础)</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2014/02/xrptalk.html" rel="bookmark" title="XRP Talk论坛注册教程">XRP Talk论坛注册教程</a>
+				<a href="http://www.yanyulin.info/pages/2014/02/gko.html" rel="bookmark" title="[赠送]GKO币每天免费领取10ripple">[赠送]GKO币每天免费领取10ripple</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2014/03/zhihu_2.html" rel="bookmark" title="一款自动发链接软件的实现细节分析">一款自动发链接软件的实现细节分析</a>
+				<a href="http://www.yanyulin.info/pages/2013/12/qqLogin_1.html" rel="bookmark" title="界面编程模仿篇(QQ登录界面逼真篇)">界面编程模仿篇(QQ登录界面逼真篇)</a>
 				</li>
 				<li>
 				<a href="http://www.yanyulin.info/pages/2014/03/duoshuo.html" rel="bookmark" title="多说评论框如何|怎么样|实际测试">多说评论框如何|怎么样|实际测试</a>
