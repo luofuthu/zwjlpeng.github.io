@@ -628,7 +628,7 @@ var duoshuoQuery = {short_name:&amp;quot;yanyulin&amp;quot;};
 &lt;p&gt;注意：本程序的输出的文件未进行排序，而ls的输出一般是按照字母的顺序进行输出&lt;/p&gt;
 &lt;p&gt;Main函数使用了ISO C标准使用的风格,argc代表传给程序的参数个数，即&lt;code&gt;argv&lt;/code&gt;中的个数&lt;/p&gt;
 &lt;p&gt;按惯例当程序返回0时表示正常结束，返回其他值表求出错&lt;/p&gt;
-&lt;p&gt;每个进程都有一个工作目录，有时称其为当前工作目录，所有的相对路径都是从工作目录开始解释，进程可以用&lt;code&gt;chrdir&lt;/code&gt;更改其工作目录。&lt;/p&gt;</summary><category term="Linux学习"></category></entry><entry><title>Linux里的输入输出（Linux快速入门）</title><link href="http://www.yanyulin.info/pages/2014/02/linux2.html" rel="alternate"></link><updated>2014-02-22T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-02-22:pages/2014/02/linux2.html</id><summary type="html">&lt;p&gt;阅读本博文之前可以参考以下文章&lt;/p&gt;
+&lt;p&gt;每个进程都有一个工作目录，有时称其为当前工作目录，所有的相对路径都是从工作目录开始解释，进程可以用&lt;code&gt;chrdir&lt;/code&gt;更改其工作目录。&lt;/p&gt;</summary><category term="Linux汇总"></category></entry><entry><title>Linux里的输入输出（Linux快速入门）</title><link href="http://www.yanyulin.info/pages/2014/02/linux2.html" rel="alternate"></link><updated>2014-02-22T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-02-22:pages/2014/02/linux2.html</id><summary type="html">&lt;p&gt;阅读本博文之前可以参考以下文章&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2014/02/linux1.html" target="_blank"&gt;
 快速介绍Linux（Linux入门教程）
 &lt;/a&gt;&lt;/p&gt;
