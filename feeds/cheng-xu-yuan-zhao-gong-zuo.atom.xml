@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>烟雨林</title><link href="http://www.yanyulin.info/" rel="alternate"></link><link href="http://www.yanyulin.info/feeds/cheng-xu-yuan-zhao-gong-zuo.atom.xml" rel="self"></link><id>http://www.yanyulin.info/</id><updated>2014-03-07T00:00:00+08:00</updated><entry><title>2014年百度校招笔试题(移动研发类)</title><link href="http://www.yanyulin.info/pages/2014/03/baidu_2014_B.html" rel="alternate"></link><updated>2014-03-07T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-07:pages/2014/03/baidu_2014_B.html</id><summary type="html">&lt;hr /&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>烟雨林</title><link href="http://www.yanyulin.info/" rel="alternate"></link><link href="http://www.yanyulin.info/feeds/cheng-xu-yuan-zhao-gong-zuo.atom.xml" rel="self"></link><id>http://www.yanyulin.info/</id><updated>2014-03-08T00:00:00+08:00</updated><entry><title>华为校园招聘2014年面经(软件研发)</title><link href="http://www.yanyulin.info/pages/2014/03/huawei_2014_A.html" rel="alternate"></link><updated>2014-03-08T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-08:pages/2014/03/huawei_2014_A.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;华为&lt;/strong&gt;现在已经被黑的很严重了，什么累死了好几个人，什么工资低，什么华为工作比较累，什么加班比较多，等等一系列，大华为已经被好多人黑的不能再黑了，我身边的好多研究生都是将华为作为垫底的，说实在没公司要时，再考虑去华为&lt;/p&gt;
+&lt;p&gt;华为今年的工资待遇是&lt;code&gt;11-13K/M&lt;/code&gt;,过年时会考虑发两个月的绩效，说实在的我个人感觉华为还是相当不错滴，都是年轻人嘛，少年时不奋斗，何时奋斗，少年是不艰苦，以后又有何出息，我个人还是非常好看华为滴...&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;华为，我们不仅仅是世界500强&lt;/strong&gt;，这是今年华为校招时的口号~~~&lt;/p&gt;
+&lt;p&gt;华为要想进行面试，面试之前必须要过机试，机试有三道题，只要做对一道，就有机会进入面试，但是推荐大家还是全做完，也不是很难，而且要尽快做完，因为成绩的取得要依赖于做题的时间，答对的题数，提交的次数...&lt;/p&gt;
+&lt;p&gt;面试总共2面:&lt;/p&gt;
+&lt;p&gt;第一面&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;1、问了我一些项目&lt;/p&gt;
+&lt;p&gt;2、然后让我写一个从1到n输出所有的素数，这个很简单吧，但是要考虑一下效率呦&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;第二面&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;1、boss，估计看是你适不适合当他小弟&lt;/p&gt;
+&lt;p&gt;2、主要问了一下未来得职业规划&lt;/p&gt;
+&lt;p&gt;3、你能不能吃苦，这个问题的答案是很显然的吧，如果你答错了，那绝对是2货行为&lt;/p&gt;
+&lt;/blockquote&gt;</summary><category term="华为面经"></category></entry><entry><title>2014年百度校招笔试题(移动研发类)</title><link href="http://www.yanyulin.info/pages/2014/03/baidu_2014_B.html" rel="alternate"></link><updated>2014-03-07T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-07:pages/2014/03/baidu_2014_B.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;如有错误，或更加精简的方法，请留言，我会更正，以方便更多的人，也欢迎大家将答案粘贴到评论框里，我会挑选出最好的答案，做为问题答案&lt;/p&gt;
 &lt;p&gt;百度2014年移动研发类这套试题和软研考的差不多，这套试题在清华考过，然后在沈阳也考过，不知道是什么情况，我参加了沈阳的，感觉重复好多&lt;/p&gt;
 &lt;p&gt;一、简答题&lt;/p&gt;
