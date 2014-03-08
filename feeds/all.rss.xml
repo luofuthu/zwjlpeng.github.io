@@ -62,7 +62,35 @@
 &lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2014/02/pbaodian.html" target="_blank"&gt;
 程序员面试宝典下载
 &lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Sat, 08 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-03-08:pages/2014/03/meituan_2014_1.html</guid><category>美团面经</category></item><item><title>阿里巴巴校招面经(2014年软件研发)</title><link>http://www.yanyulin.info/pages/2014/03/ali_3.html</link><description>&lt;hr /&gt;
+&lt;/blockquote&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Sat, 08 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-03-08:pages/2014/03/meituan_2014_1.html</guid><category>美团面经</category></item><item><title>大众点评校园招聘面经2014年软件面经</title><link>http://www.yanyulin.info/pages/2014/03/weconnect_2014_1.html</link><description>&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;威盛电子&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;威盛电子股份有限公司&lt;/strong&gt;是台湾地区的积体电路设计公司，主要生产主机板的晶片组、中央处理器(CPU)、以及记忆体。它是世界上最大的独立主机板晶片组设计公司。作为一个无晶圆厂半导体厂商（fabless），VIA主要在研究与发展他的晶片组，然后将晶圆制造外包给晶圆厂进行...&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;重点，面试感觉&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;共有3面技术面，然后最后一面是HR面，加起来总共是4面,工资就不透露了，肯定是没互联网公司高&lt;/p&gt;
+&lt;p&gt;由于我投的是嵌入式，所以各种问我&lt;code&gt;linux kernel&lt;/code&gt;以及&lt;code&gt;andriod&lt;/code&gt;，其实主要的也就是涉及到Linux下层的内层管理，以及调度算法这一块,当然中间问了一些比较简单算法题目，如以下问题：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;1、写了个冒泡排序&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;冒泡排序也有是有效率可言的，大家要把情况考虑详细，如序列已经有序的情况下，冒泡排序的时间复杂度为O(n)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;2、链表倒数第k个节点&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;还是那句好，还是好好看看下面这两本书，不多说&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;面试书下载&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2014/03/offer.html" target="_blank"&gt;
+剑指offer下载
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2014/02/pbaodian.html" target="_blank"&gt;
+程序员面试宝典下载
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;3、然后singleton&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;设计模式中最简单的一种，也是面试中最常让写的一种，因为代码量少，而且很容易考察人思维是否周到&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Sat, 08 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-03-08:pages/2014/03/weconnect_2014_1.html</guid><category>大众点评面经</category></item><item><title>阿里巴巴校招面经(2014年软件研发)</title><link>http://www.yanyulin.info/pages/2014/03/ali_3.html</link><description>&lt;hr /&gt;
 &lt;p&gt;阿里巴巴的面试共分为三面，如果进不了第三面，基本上就是挂了的节奏&lt;/p&gt;
 &lt;p&gt;这是我的&lt;a href="http://www.yanyulin.info" title="烟雨林博客"&gt;处男面&lt;/a&gt;啊，第一次就这么没了&lt;/p&gt;
 &lt;p&gt;我面了总共有2面&lt;/p&gt;
