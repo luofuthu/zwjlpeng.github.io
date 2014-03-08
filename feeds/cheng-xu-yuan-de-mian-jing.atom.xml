@@ -4,7 +4,7 @@
 &lt;p&gt;这是我的&lt;a href="http://www.yanyulin.info" title="烟雨林博客"&gt;处男面&lt;/a&gt;啊，第一次就这么没了&lt;/p&gt;
 &lt;p&gt;我面了总共有2面&lt;/p&gt;
 &lt;p&gt;第一面面技术：&lt;/p&gt;
-&lt;p&gt;先问了我一下项目，由于我做ASIC的，估计他兴趣也不大，问了如下问题：&lt;/p&gt;
+&lt;p&gt;先问了我一下项目，由于我做&lt;code&gt;ASIC&lt;/code&gt;的，估计他兴趣也不大，问了如下问题：&lt;/p&gt;
 &lt;p&gt;1、字符串编辑距离&lt;/p&gt;
 &lt;p&gt;2、写出二分查找算法，以及在什么时候会形成死循环&lt;/p&gt;
 &lt;p&gt;3、linux进程同步&lt;/p&gt;
@@ -18,11 +18,11 @@
 &lt;blockquote&gt;
 &lt;p&gt;这个也简单，但是要注间的边界条件的判断，写程序思维要严谨&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;3、问了我bloom filter。&lt;/p&gt;
+&lt;p&gt;3、问了我&lt;code&gt;bloom filter&lt;/code&gt;。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;搜索引擎中经常使用的一种算法，主要用于判断某个url是否已经拜访过，或者在处理垃圾邮件中也经常使用&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;感觉整体还可以，可能项目不太相关，没有给我offer&lt;/p&gt;
+&lt;p&gt;感觉整体还可以，可能项目不太相关，没有给我&lt;code&gt;offer&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;到此为止&lt;/p&gt;</summary><category term="阿里面经"></category></entry><entry><title>百度校招面经2014年软研面经</title><link href="http://www.yanyulin.info/pages/2014/03/baidu_2.html" rel="alternate"></link><updated>2014-03-07T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-07:pages/2014/03/baidu_2.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;百度面试共分为三面：&lt;/p&gt;
 &lt;blockquote&gt;
