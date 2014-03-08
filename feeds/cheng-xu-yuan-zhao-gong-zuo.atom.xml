@@ -99,7 +99,75 @@
 
 &lt;p&gt;答案提示:  &lt;/p&gt;
 &lt;p&gt;输出最小糖果编号的意思，就是从左至右，从上到下对糖果进行遍历，找到第一个与其他交换后能消除的糖果即可&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;欢迎大家将答案粘贴在后面的评论框里，我会选出最好的答案作为本题的标准答案，以方便更多的师弟师妹们&lt;/strong&gt;&lt;/p&gt;</summary><category term="华为笔试题"></category></entry><entry><title>2014年百度校招笔试题(移动研发类)</title><link href="http://www.yanyulin.info/pages/2014/03/baidu_2014_B.html" rel="alternate"></link><updated>2014-03-07T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-07:pages/2014/03/baidu_2014_B.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;欢迎大家将答案粘贴在后面的评论框里，我会选出最好的答案作为本题的标准答案，以方便更多的师弟师妹们&lt;/strong&gt;&lt;/p&gt;</summary><category term="华为笔试题"></category></entry><entry><title>去哪儿网校招笔试题2014年软研|测试|前端</title><link href="http://www.yanyulin.info/pages/2014/03/qunar_2014_A.html" rel="alternate"></link><updated>2014-03-08T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-08:pages/2014/03/qunar_2014_A.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;一、编程题&lt;/p&gt;
+&lt;p&gt;1、写一个函数，转换相对路径为绝对路径，例如输入路径为&lt;code&gt;/home/abs/../temp/new/../&lt;/code&gt;，输出路径为：&lt;code&gt;/home/temp&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;2、题目的大概意思就是要求写出一个strcpy函数，用于字符串的复制&lt;/p&gt;
+&lt;p&gt;3、题目的大概意思就是在海量数据中，如何求出前100个最小的数，大概就是这样的，解决方法是用堆&lt;/p&gt;
+&lt;p&gt;4、一个10*10的矩阵（可以理解为棋盘），随时生成一组数据填入矩阵，任何一个位置的数字，除4进行计算，按照余数进行着色，余数为0着色为red，1为blue，2为green，3为black，可以理解为生成4种颜色的棋子放入棋盘，如果存在其中同色五星连珠的情况（规则通五子棋），找出任意一组，输出5个棋子的位置下标值&lt;/p&gt;
+&lt;p&gt;5、数据库有考试成绩表scg,包含属性：&lt;/p&gt;
+&lt;p&gt;存储ID 学号(sno) 科目(cno) 分数(grade)&lt;/p&gt;
+&lt;p&gt;1 s001 c01 90&lt;/p&gt;
+&lt;p&gt;2 s001 c02 72&lt;/p&gt;
+&lt;p&gt;3 s002 c01 95&lt;/p&gt;
+&lt;p&gt;...&lt;/p&gt;
+&lt;p&gt;写SQL,求：&lt;/p&gt;
+&lt;p&gt;a)分数少于60的学号和科目，要求有:学号、科目、分数&lt;/p&gt;
+&lt;p&gt;b)超过2科分数&amp;gt;=90的人的学号和科目数，按科目数由大到小排序，要求有：学号、科目数(&amp;gt;=90分)&lt;/p&gt;
+&lt;p&gt;c)每个人成绩最好的三个科目，按学号、分数排序，要求有：学号、科目、分数&lt;/p&gt;
+&lt;p&gt;d)每科目，前2名的分数差:科目、第一名学号、第二名学号、第一分数、第二分数、分数差&lt;/p&gt;
+&lt;p&gt;当数据来源为文本文件(tab分割)时，写程序求上题b/c/d,程序语言不限(shell/python/java等均可，或者使用伪代码描述计算步骤&lt;/p&gt;
+&lt;p&gt;参考答案如下：&lt;/p&gt;
+&lt;p&gt;a) &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;SELECT&lt;/span&gt; &lt;span class="n"&gt;sno&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;cno&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;grade&lt;/span&gt;
+&lt;span class="n"&gt;FROM&lt;/span&gt; &lt;span class="n"&gt;scg&lt;/span&gt;
+&lt;span class="n"&gt;WHERE&lt;/span&gt; &lt;span class="n"&gt;grade&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="mi"&gt;60&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;b)&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;SELECT&lt;/span&gt; &lt;span class="n"&gt;sno&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;COUNT&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;cno&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;FROM&lt;/span&gt; &lt;span class="n"&gt;scg&lt;/span&gt;
+&lt;span class="n"&gt;WHERE&lt;/span&gt; &lt;span class="n"&gt;grade&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;=&lt;/span&gt;&lt;span class="mi"&gt;90&lt;/span&gt;
+&lt;span class="n"&gt;GROUP&lt;/span&gt; &lt;span class="n"&gt;BY&lt;/span&gt; &lt;span class="n"&gt;sno&lt;/span&gt; &lt;span class="n"&gt;HAVING&lt;/span&gt; &lt;span class="n"&gt;COUNT&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;cno&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;
+&lt;span class="n"&gt;ORDER&lt;/span&gt; &lt;span class="n"&gt;BY&lt;/span&gt; &lt;span class="n"&gt;COUNT&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;cno&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;DESC&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;c)&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;SELECT&lt;/span&gt; &lt;span class="n"&gt;TOP&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt; &lt;span class="n"&gt;sno&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;cno&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;grade&lt;/span&gt;  
+&lt;span class="n"&gt;FROM&lt;/span&gt; &lt;span class="n"&gt;scg&lt;/span&gt;
+&lt;span class="n"&gt;GROUP&lt;/span&gt; &lt;span class="n"&gt;BY&lt;/span&gt; &lt;span class="n"&gt;sno&lt;/span&gt;
+&lt;span class="n"&gt;ORDER&lt;/span&gt; &lt;span class="n"&gt;BY&lt;/span&gt; &lt;span class="n"&gt;sno&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;grade&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;d)&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;SELECT&lt;/span&gt; &lt;span class="n"&gt;cno&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;first&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sno&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;second&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sno&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;first&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;grade&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;second&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;grade&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;first&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;grade&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;second&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;grade&lt;/span&gt;
+&lt;span class="n"&gt;FROM&lt;/span&gt; 
+&lt;span class="p"&gt;(&lt;/span&gt; 
+&lt;span class="n"&gt;SELECT&lt;/span&gt; &lt;span class="n"&gt;TOP&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; 
+&lt;span class="n"&gt;FROM&lt;/span&gt; &lt;span class="n"&gt;scg&lt;/span&gt; 
+&lt;span class="n"&gt;GROUP&lt;/span&gt; &lt;span class="n"&gt;BY&lt;/span&gt; &lt;span class="n"&gt;cno&lt;/span&gt; 
+&lt;span class="n"&gt;ORDER&lt;/span&gt; &lt;span class="n"&gt;BY&lt;/span&gt; &lt;span class="n"&gt;grade&lt;/span&gt;
+&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;first&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+  &lt;span class="p"&gt;(&lt;/span&gt;
+&lt;span class="n"&gt;SELECT&lt;/span&gt; &lt;span class="n"&gt;TOP&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;
+&lt;span class="n"&gt;FROM&lt;/span&gt;
+&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="n"&gt;SELECT&lt;/span&gt; &lt;span class="n"&gt;TOP&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; 
+&lt;span class="n"&gt;FROM&lt;/span&gt; &lt;span class="n"&gt;scg&lt;/span&gt;
+&lt;span class="n"&gt;GROUP&lt;/span&gt; &lt;span class="n"&gt;BY&lt;/span&gt; &lt;span class="n"&gt;cno&lt;/span&gt;
+&lt;span class="n"&gt;ORDER&lt;/span&gt; &lt;span class="n"&gt;BY&lt;/span&gt; &lt;span class="n"&gt;grade&lt;/span&gt; &lt;span class="n"&gt;DESC&lt;/span&gt;
+&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;two&lt;/span&gt;
+&lt;span class="n"&gt;GROUP&lt;/span&gt; &lt;span class="n"&gt;BY&lt;/span&gt; &lt;span class="n"&gt;two&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cno&lt;/span&gt;
+&lt;span class="n"&gt;ORDER&lt;/span&gt; &lt;span class="n"&gt;BY&lt;/span&gt; &lt;span class="n"&gt;two&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;grade&lt;/span&gt;
+&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;second&lt;/span&gt;
+&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;strong&gt;欢迎大家将答案粘贴在后面的评论框里，我会选出最好的答案作为本题的标准答案，以方便更多的师弟师妹们&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;到此为止&lt;/p&gt;</summary><category term="去哪面经"></category></entry><entry><title>2014年百度校招笔试题(移动研发类)</title><link href="http://www.yanyulin.info/pages/2014/03/baidu_2014_B.html" rel="alternate"></link><updated>2014-03-07T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-07:pages/2014/03/baidu_2014_B.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;如有错误，或更加精简的方法，请留言，我会更正，以方便更多的人，也欢迎大家将答案粘贴到评论框里，我会挑选出最好的答案，做为问题答案&lt;/p&gt;
 &lt;p&gt;百度2014年移动研发类这套试题和软研考的差不多，这套试题在清华考过，然后在沈阳也考过，不知道是什么情况，我参加了沈阳的，感觉重复好多&lt;/p&gt;
 &lt;p&gt;一、简答题&lt;/p&gt;
