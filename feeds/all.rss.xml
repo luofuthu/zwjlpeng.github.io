@@ -230,7 +230,130 @@
 
 
 &lt;p&gt;&lt;strong&gt;欢迎大家将答案粘贴在后面的评论框里，我会选出最好的答案作为本题的标准答案，以方便更多的师弟师妹们&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;到此为止&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Sat, 08 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-03-08:pages/2014/03/qunar_2014_A.html</guid><category>去哪网笔试题</category></item><item><title>威盛电子校园招聘面经2014年软件面经</title><link>http://www.yanyulin.info/pages/2014/03/weconnect_2014_1.html</link><description>&lt;hr /&gt;
+&lt;p&gt;到此为止&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Sat, 08 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-03-08:pages/2014/03/qunar_2014_A.html</guid><category>去哪网笔试题</category></item><item><title>人人网校招笔试题2014年软件研发类</title><link>http://www.yanyulin.info/pages/2014/03/renren_2014_A.html</link><description>&lt;hr /&gt;
+&lt;p&gt;技术类笔试题&lt;/p&gt;
+&lt;p&gt;1、给定一个有序数组a,长度为len,和一个数X,判断A数组里面是否存在两个数，他们的和为X&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kt"&gt;bool&lt;/span&gt; &lt;span class="n"&gt;judge&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;len&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;存在的话反回true,不存在的话返回false&lt;/p&gt;
+&lt;p&gt;参考答案：&lt;/p&gt;
+&lt;p&gt;解题思路：&lt;code&gt;hash table&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;时间复杂度：&lt;code&gt;O(N)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;空间复杂度：&lt;code&gt;O(N)&lt;/code&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="vi"&gt;#include&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;iostream&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+
+&lt;span class="nx"&gt;using&lt;/span&gt; &lt;span class="nx"&gt;namespace&lt;/span&gt; &lt;span class="nx"&gt;std&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+&lt;span class="nx"&gt;int&lt;/span&gt; &lt;span class="nx"&gt;hash_table&lt;/span&gt;&lt;span class="err"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;;
+
+bool judge(int *a, int len, int x)
+{
+    memset(hash_table, 0, sizeof(hash_table));
+    for (int i=0; i&lt;span class="nt"&gt;&amp;lt;len&lt;/span&gt;&lt;span class="err"&gt;;&lt;/span&gt; &lt;span class="err"&gt;++&lt;/span&gt;&lt;span class="na"&gt;i&lt;/span&gt;&lt;span class="err"&gt;)&lt;/span&gt;
+    &lt;span class="err"&gt;{&lt;/span&gt;
+        &lt;span class="na"&gt;hash_table&lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;x&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="nx"&gt;a&lt;/span&gt;&lt;span class="err"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="err"&gt;]&lt;/span&gt; &lt;span class="err"&gt;=&lt;/span&gt; &lt;span class="na"&gt;1&lt;/span&gt;&lt;span class="err"&gt;;&lt;/span&gt;
+    &lt;span class="err"&gt;}&lt;/span&gt;
+
+    &lt;span class="na"&gt;for&lt;/span&gt; &lt;span class="err"&gt;(&lt;/span&gt;&lt;span class="na"&gt;int&lt;/span&gt; &lt;span class="na"&gt;i=&lt;/span&gt;&lt;span class="s"&gt;0;&lt;/span&gt; &lt;span class="na"&gt;i&lt;/span&gt;&lt;span class="err"&gt;&amp;lt;&lt;/span&gt;&lt;span class="na"&gt;len&lt;/span&gt;&lt;span class="err"&gt;;&lt;/span&gt; &lt;span class="err"&gt;++&lt;/span&gt;&lt;span class="na"&gt;i&lt;/span&gt;&lt;span class="err"&gt;)&lt;/span&gt;
+    &lt;span class="err"&gt;{&lt;/span&gt;
+        &lt;span class="na"&gt;if&lt;/span&gt; &lt;span class="err"&gt;(&lt;/span&gt;&lt;span class="na"&gt;hash_table&lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="na"&gt; =&lt;/span&gt;&lt;span class="s"&gt;=&lt;/span&gt; &lt;span class="na"&gt;1&lt;/span&gt;&lt;span class="err"&gt;)&lt;/span&gt;
+        &lt;span class="err"&gt;{&lt;/span&gt;
+            &lt;span class="na"&gt;return&lt;/span&gt; &lt;span class="na"&gt;true&lt;/span&gt;&lt;span class="err"&gt;;&lt;/span&gt;
+        &lt;span class="err"&gt;}&lt;/span&gt;
+    &lt;span class="err"&gt;}&lt;/span&gt;
+
+    &lt;span class="na"&gt;return&lt;/span&gt; &lt;span class="na"&gt;false&lt;/span&gt;&lt;span class="err"&gt;;&lt;/span&gt;
+&lt;span class="err"&gt;}&lt;/span&gt;
+
+&lt;span class="na"&gt;int&lt;/span&gt; &lt;span class="na"&gt;main&lt;/span&gt;&lt;span class="err"&gt;()&lt;/span&gt;
+&lt;span class="err"&gt;{&lt;/span&gt;
+    &lt;span class="na"&gt;int&lt;/span&gt; &lt;span class="na"&gt;len =&lt;/span&gt;&lt;span class="err"&gt; &lt;/span&gt;&lt;span class="s"&gt;10;&lt;/span&gt;
+    &lt;span class="na"&gt;int&lt;/span&gt; &lt;span class="na"&gt;a&lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="na"&gt; =&lt;/span&gt;&lt;span class="err"&gt; &lt;/span&gt;&lt;span class="s"&gt;{1,&lt;/span&gt; &lt;span class="na"&gt;3&lt;/span&gt;&lt;span class="err"&gt;,&lt;/span&gt; &lt;span class="na"&gt;5&lt;/span&gt;&lt;span class="err"&gt;,&lt;/span&gt; &lt;span class="na"&gt;7&lt;/span&gt;&lt;span class="err"&gt;,&lt;/span&gt; &lt;span class="na"&gt;9&lt;/span&gt;&lt;span class="err"&gt;,&lt;/span&gt; &lt;span class="na"&gt;4&lt;/span&gt;&lt;span class="err"&gt;,&lt;/span&gt; &lt;span class="na"&gt;2&lt;/span&gt;&lt;span class="err"&gt;,&lt;/span&gt; &lt;span class="na"&gt;8&lt;/span&gt;&lt;span class="err"&gt;,&lt;/span&gt; &lt;span class="na"&gt;10&lt;/span&gt;&lt;span class="err"&gt;,&lt;/span&gt; &lt;span class="na"&gt;6&lt;/span&gt;&lt;span class="err"&gt;};&lt;/span&gt;
+    &lt;span class="na"&gt;int&lt;/span&gt; &lt;span class="na"&gt;x =&lt;/span&gt;&lt;span class="err"&gt; &lt;/span&gt;&lt;span class="s"&gt;19;&lt;/span&gt;
+
+    &lt;span class="na"&gt;if&lt;/span&gt; &lt;span class="err"&gt;(&lt;/span&gt;&lt;span class="na"&gt;judge&lt;/span&gt;&lt;span class="err"&gt;(&lt;/span&gt;&lt;span class="na"&gt;a&lt;/span&gt;&lt;span class="err"&gt;,&lt;/span&gt; &lt;span class="na"&gt;len&lt;/span&gt;&lt;span class="err"&gt;,&lt;/span&gt; &lt;span class="na"&gt;x&lt;/span&gt;&lt;span class="err"&gt;))&lt;/span&gt;
+    &lt;span class="err"&gt;{&lt;/span&gt;
+        &lt;span class="na"&gt;cout&lt;/span&gt;&lt;span class="err"&gt;&amp;lt;&amp;lt;&amp;quot;&lt;/span&gt;&lt;span class="na"&gt;Yes&lt;/span&gt;&lt;span class="err"&gt;&amp;quot;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class="na"&gt;endl&lt;/span&gt;&lt;span class="err"&gt;;&lt;/span&gt;
+    &lt;span class="err"&gt;}&lt;/span&gt;
+    &lt;span class="na"&gt;else&lt;/span&gt;
+    &lt;span class="err"&gt;{&lt;/span&gt;
+        &lt;span class="na"&gt;cout&lt;/span&gt;&lt;span class="err"&gt;&amp;lt;&amp;lt;&amp;quot;&lt;/span&gt;&lt;span class="na"&gt;No&lt;/span&gt;&lt;span class="err"&gt;&amp;quot;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class="na"&gt;endl&lt;/span&gt;&lt;span class="err"&gt;;&lt;/span&gt;
+    &lt;span class="err"&gt;}&lt;/span&gt;
+    &lt;span class="na"&gt;system&lt;/span&gt;&lt;span class="err"&gt;(&amp;quot;&lt;/span&gt;&lt;span class="na"&gt;pause&lt;/span&gt;&lt;span class="err"&gt;&amp;quot;);&lt;/span&gt;
+    &lt;span class="na"&gt;return&lt;/span&gt; &lt;span class="na"&gt;0&lt;/span&gt;&lt;span class="err"&gt;;&lt;/span&gt;
+&lt;span class="err"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;2、给定有n个数的数组a,其中超过一半的数为一个定值，在不进行排序的情况下，不开设额外数组的情况下，以最高效的算法找出这个数&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;find&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;参考答案：&lt;/p&gt;
+&lt;p&gt;时间复杂度为O(n)&lt;/p&gt;
+&lt;p&gt;空间复杂度为O(1)&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="vi"&gt;#include&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;iostream&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+
+&lt;span class="nx"&gt;using&lt;/span&gt; &lt;span class="nx"&gt;namespace&lt;/span&gt; &lt;span class="nx"&gt;std&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+&lt;span class="nx"&gt;int&lt;/span&gt; &lt;span class="nb"&gt;find&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;int&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="nx"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;int&lt;/span&gt; &lt;span class="nb"&gt;n&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="nx"&gt;int&lt;/span&gt; &lt;span class="n"&gt;t&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;a&lt;/span&gt;&lt;span class="err"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;;
+    int count = 0;
+    for (int i=0; i&lt;span class="nt"&gt;&amp;lt;n&lt;/span&gt;&lt;span class="err"&gt;;&lt;/span&gt; &lt;span class="err"&gt;++&lt;/span&gt;&lt;span class="na"&gt;i&lt;/span&gt;&lt;span class="err"&gt;)&lt;/span&gt;
+    &lt;span class="err"&gt;{&lt;/span&gt;
+        &lt;span class="na"&gt;if&lt;/span&gt; &lt;span class="err"&gt;(&lt;/span&gt;&lt;span class="na"&gt;count =&lt;/span&gt;&lt;span class="s"&gt;=&lt;/span&gt; &lt;span class="na"&gt;0&lt;/span&gt;&lt;span class="err"&gt;)&lt;/span&gt;
+        &lt;span class="err"&gt;{&lt;/span&gt;
+            &lt;span class="na"&gt;t =&lt;/span&gt;&lt;span class="err"&gt; &lt;/span&gt;&lt;span class="s"&gt;a&lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="s"&gt;;&lt;/span&gt;
+            &lt;span class="na"&gt;count =&lt;/span&gt;&lt;span class="err"&gt; &lt;/span&gt;&lt;span class="s"&gt;1;&lt;/span&gt;
+            &lt;span class="na"&gt;continue&lt;/span&gt;&lt;span class="err"&gt;;&lt;/span&gt;
+        &lt;span class="err"&gt;}&lt;/span&gt;
+        &lt;span class="na"&gt;else&lt;/span&gt;
+        &lt;span class="err"&gt;{&lt;/span&gt;
+            &lt;span class="na"&gt;if&lt;/span&gt; &lt;span class="err"&gt;(&lt;/span&gt;&lt;span class="na"&gt;a&lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="na"&gt; =&lt;/span&gt;&lt;span class="s"&gt;=&lt;/span&gt; &lt;span class="na"&gt;t&lt;/span&gt;&lt;span class="err"&gt;)&lt;/span&gt;
+            &lt;span class="err"&gt;{&lt;/span&gt;
+                &lt;span class="na"&gt;count&lt;/span&gt;&lt;span class="err"&gt;++;&lt;/span&gt;
+            &lt;span class="err"&gt;}&lt;/span&gt;
+            &lt;span class="na"&gt;else&lt;/span&gt;
+            &lt;span class="err"&gt;{&lt;/span&gt;
+                &lt;span class="na"&gt;count--&lt;/span&gt;&lt;span class="err"&gt;;&lt;/span&gt;
+            &lt;span class="err"&gt;}&lt;/span&gt;
+        &lt;span class="err"&gt;}&lt;/span&gt;
+    &lt;span class="err"&gt;}&lt;/span&gt;
+
+    &lt;span class="na"&gt;return&lt;/span&gt; &lt;span class="na"&gt;t&lt;/span&gt;&lt;span class="err"&gt;;&lt;/span&gt;
+&lt;span class="err"&gt;}&lt;/span&gt;
+
+&lt;span class="na"&gt;int&lt;/span&gt; &lt;span class="na"&gt;main&lt;/span&gt;&lt;span class="err"&gt;()&lt;/span&gt;
+&lt;span class="err"&gt;{&lt;/span&gt;
+    &lt;span class="na"&gt;int&lt;/span&gt; &lt;span class="na"&gt;n =&lt;/span&gt;&lt;span class="err"&gt; &lt;/span&gt;&lt;span class="s"&gt;10;&lt;/span&gt;
+    &lt;span class="na"&gt;int&lt;/span&gt; &lt;span class="na"&gt;a&lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="na"&gt; =&lt;/span&gt;&lt;span class="err"&gt; &lt;/span&gt;&lt;span class="s"&gt;{1,&lt;/span&gt; &lt;span class="na"&gt;3&lt;/span&gt;&lt;span class="err"&gt;,&lt;/span&gt; &lt;span class="na"&gt;2&lt;/span&gt;&lt;span class="err"&gt;,&lt;/span&gt; &lt;span class="na"&gt;3&lt;/span&gt;&lt;span class="err"&gt;,&lt;/span&gt; &lt;span class="na"&gt;3&lt;/span&gt;&lt;span class="err"&gt;,&lt;/span&gt; &lt;span class="na"&gt;4&lt;/span&gt;&lt;span class="err"&gt;,&lt;/span&gt; &lt;span class="na"&gt;3&lt;/span&gt;&lt;span class="err"&gt;,&lt;/span&gt; &lt;span class="na"&gt;3&lt;/span&gt;&lt;span class="err"&gt;,&lt;/span&gt; &lt;span class="na"&gt;3&lt;/span&gt;&lt;span class="err"&gt;,&lt;/span&gt; &lt;span class="na"&gt;6&lt;/span&gt;&lt;span class="err"&gt;};&lt;/span&gt;
+
+    &lt;span class="na"&gt;cout&lt;/span&gt;&lt;span class="err"&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class="na"&gt;find&lt;/span&gt;&lt;span class="err"&gt;(&lt;/span&gt;&lt;span class="na"&gt;a&lt;/span&gt;&lt;span class="err"&gt;,&lt;/span&gt; &lt;span class="na"&gt;n&lt;/span&gt;&lt;span class="err"&gt;)&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class="na"&gt;endl&lt;/span&gt;&lt;span class="err"&gt;;&lt;/span&gt;
+
+    &lt;span class="na"&gt;system&lt;/span&gt;&lt;span class="err"&gt;(&amp;quot;&lt;/span&gt;&lt;span class="na"&gt;pause&lt;/span&gt;&lt;span class="err"&gt;&amp;quot;);&lt;/span&gt;
+    &lt;span class="na"&gt;return&lt;/span&gt; &lt;span class="na"&gt;0&lt;/span&gt;&lt;span class="err"&gt;;&lt;/span&gt;
+&lt;span class="err"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;3、人人网最近在研发一个攒人口的新功能，用于回馈长期支持人人网的用户，人品值标识着用户在人人网的尊贵程序，除此之外它还有一个更经济的功能，第一个获得100万人品值的用户将获得一份人人网的实物大奖，攒人品的规则是这样的，人人网首先会给每个老用户发放一个【自动攒人品的手】，每秒种可以自动获得1点人品（且人品值是随着时间连续获得的，即每0.5秒就会获得0.5点人品值）。人品值可以用来兑换各种各样的加速攒人品的道具，道具列表及价如如下：&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;
+&lt;a href="http://www.yanyulin.info/pages/2014/03/renren_2014_A.html" target="_blank"&gt;
+&lt;img src="http://www.yanyulin.info/pics/job/renren0.jpg" alt="烟雨林博客"/&gt;
+&lt;/a&gt;
+&lt;center&gt;&lt;/p&gt;
+&lt;p&gt;a)如果每一种道具可购买无限多次，效果叠加，作为人人网的一名老用户且有钻研精神的你，对这场人品竞赛是志在必得，因此在功能上线前提前想好了最佳方案以便确保成位第一位获得100万人品的用户，请给最快攒到100万人品的策略&lt;/p&gt;
+&lt;p&gt;b)如果每一种道具可购买无限多次，效果叠加，但每一次购买后该道具会成原来价格的1.2倍，请给出最快攒到100万人品的策略&lt;/p&gt;
+&lt;p&gt;参考值：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;log(1000000)=75.78&lt;/code&gt; 备注log底数为1.2&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;log(7000)=45.56&lt;/code&gt; 备注log底数为1.2&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;log(2000)=41.69&lt;/code&gt; 备注log底数为1.2&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;log(500)=34.09&lt;/code&gt; 备注log底数为1.2&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;log(100)=25.26&lt;/code&gt; 备注log底数为1.2&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Sat, 08 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-03-08:pages/2014/03/renren_2014_A.html</guid><category>人人网笔试题</category></item><item><title>威盛电子校园招聘面经2014年软件面经</title><link>http://www.yanyulin.info/pages/2014/03/weconnect_2014_1.html</link><description>&lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;威盛电子&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;威盛电子股份有限公司&lt;/strong&gt;是台湾地区的积体电路设计公司，主要生产主机板的晶片组、中央处理器(CPU)、以及记忆体。它是世界上最大的独立主机板晶片组设计公司。作为一个无晶圆厂半导体厂商（fabless），VIA主要在研究与发展他的晶片组，然后将晶圆制造外包给晶圆厂进行...&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;重点，面试感觉&lt;/strong&gt;&lt;/p&gt;
