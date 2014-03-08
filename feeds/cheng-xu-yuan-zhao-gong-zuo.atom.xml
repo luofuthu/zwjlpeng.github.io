@@ -1,35 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>烟雨林</title><link href="http://www.yanyulin.info/" rel="alternate"></link><link href="http://www.yanyulin.info/feeds/cheng-xu-yuan-zhao-gong-zuo.atom.xml" rel="self"></link><id>http://www.yanyulin.info/</id><updated>2014-03-08T00:00:00+08:00</updated><entry><title>美团网校园招聘2014年面经(软件研发)</title><link href="http://www.yanyulin.info/pages/2014/03/meituan_2014_1.html" rel="alternate"></link><updated>2014-03-08T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-08:pages/2014/03/meituan_2014_1.html</id><summary type="html">&lt;hr /&gt;
-&lt;p&gt;每一年的&lt;code&gt;九月与十月&lt;/code&gt;都是个心酸的日子，也是个收获的季节，&lt;/p&gt;
-&lt;p&gt;在这个&lt;strong&gt;苦逼&lt;/strong&gt;的年代里，在这个为&lt;strong&gt;前途奔波&lt;/strong&gt;的季节，我也不例外，没有什么特殊的机遇，也是经历了一次又一次残酷的海选，海选固然残酷，可我们又能做什么，能做的就是一次又一次的迎头前近，失败了并不可怕，可怕的是失败了后却没有了站起来的勇气...&lt;/p&gt;
-&lt;p&gt;现把我经历简单的分享给各位学弟学妹们，希望，学弟学妹们找工作都能够如愿以偿&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;&lt;a href="http://www.yanyulin.info" target="_blank"&gt;个人&lt;/a&gt;对美团感觉的相当不错，面试官非常好&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;一面：&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;1、问了我下试卷上的题目&lt;/p&gt;
-&lt;p&gt;2、然后问我linux内存管理&lt;/p&gt;
-&lt;p&gt;3、STL相关的知识，STL里最起码的你要知道什么是&lt;strong&gt;关联容器&lt;/strong&gt;，什么是&lt;strong&gt;序列式容器&lt;/strong&gt;吧，还有其底层的实现吧&lt;/p&gt;
-&lt;p&gt;4、然后让我写一个字符串中最长不重复字符串&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;二面：&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;1、问了一个概率题，具体就不说了&lt;/p&gt;
-&lt;p&gt;2、后面算法的问我了一个算法题目（自己出的）&lt;/p&gt;
-&lt;p&gt;3、二叉树分层遍历，这个数据结构均有的，自已看看，没有的扔了此书吧，就是采用队列的方式实现&lt;/p&gt;
-&lt;p&gt;4、数组中连续和最大值&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;这题题，好好看看编程之美与剑指offer,里面也有，下载链接，下面有&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;面试书下载&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2014/03/offer.html" target="_blank"&gt;
-剑指offer下载
-&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2014/02/pbaodian.html" target="_blank"&gt;
-程序员面试宝典下载
-&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;</summary><category term="美团面经"></category></entry><entry><title>2014年百度校招笔试题(移动研发类)</title><link href="http://www.yanyulin.info/pages/2014/03/baidu_2014_B.html" rel="alternate"></link><updated>2014-03-07T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-07:pages/2014/03/baidu_2014_B.html</id><summary type="html">&lt;hr /&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>烟雨林</title><link href="http://www.yanyulin.info/" rel="alternate"></link><link href="http://www.yanyulin.info/feeds/cheng-xu-yuan-zhao-gong-zuo.atom.xml" rel="self"></link><id>http://www.yanyulin.info/</id><updated>2014-03-07T00:00:00+08:00</updated><entry><title>2014年百度校招笔试题(移动研发类)</title><link href="http://www.yanyulin.info/pages/2014/03/baidu_2014_B.html" rel="alternate"></link><updated>2014-03-07T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-07:pages/2014/03/baidu_2014_B.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;如有错误，或更加精简的方法，请留言，我会更正，以方便更多的人，也欢迎大家将答案粘贴到评论框里，我会挑选出最好的答案，做为问题答案&lt;/p&gt;
 &lt;p&gt;百度2014年移动研发类这套试题和软研考的差不多，这套试题在清华考过，然后在沈阳也考过，不知道是什么情况，我参加了沈阳的，感觉重复好多&lt;/p&gt;
 &lt;p&gt;一、简答题&lt;/p&gt;
