@@ -345,7 +345,7 @@ bool judge(int *a, int len, int x)
 &lt;a href="http://www.yanyulin.info/pages/2014/03/renren_2014_A.html" target="_blank"&gt;
 &lt;img src="http://www.yanyulin.info/pics/job/renren0.jpg" alt="烟雨林博客"/&gt;
 &lt;/a&gt;
-&lt;center&gt;&lt;/p&gt;
+&lt;/center&gt;&lt;/p&gt;
 &lt;p&gt;a)如果每一种道具可购买无限多次，效果叠加，作为人人网的一名老用户且有钻研精神的你，对这场人品竞赛是志在必得，因此在功能上线前提前想好了最佳方案以便确保成位第一位获得100万人品的用户，请给最快攒到100万人品的策略&lt;/p&gt;
 &lt;p&gt;b)如果每一种道具可购买无限多次，效果叠加，但每一次购买后该道具会成原来价格的1.2倍，请给出最快攒到100万人品的策略&lt;/p&gt;
 &lt;p&gt;参考值：&lt;/p&gt;
