@@ -16,7 +16,107 @@
 &lt;p&gt;5、sleep与wait的区别&lt;/p&gt;
 &lt;p&gt;6、object类你了解么，有哪些方法&lt;/p&gt;
 &lt;p&gt;7、java里的重载与重写之间的区别&lt;/p&gt;
-&lt;/blockquote&gt;</summary><category term="大众点评面经"></category></entry><entry><title>华为校园招聘面经2014年软件研发</title><link href="http://www.yanyulin.info/pages/2014/03/huawei_2014_A.html" rel="alternate"></link><updated>2014-03-08T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-08:pages/2014/03/huawei_2014_A.html</id><summary type="html">&lt;hr /&gt;
+&lt;/blockquote&gt;</summary><category term="大众点评面经"></category></entry><entry><title>校园招聘华为上机试题2014年武汉地区</title><link href="http://www.yanyulin.info/pages/2014/03/huawei_2014_3.html" rel="alternate"></link><updated>2014-03-08T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-08:pages/2014/03/huawei_2014_3.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;1、&lt;a href="http://www.yanyulin.info" target="_blank"&gt;手机电池&lt;/a&gt;余量的问题，描述: 自从有了智能手机，时刻都要关心手机的电量。你的任务很简单，用程序打印符号来表示当前手机的电量，用10行和10列来表示电池的电量，同时在外围加上边框，每一行表示10%的电量，假设还有60%的电量，则显示如下：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="o"&gt;+----------+&lt;/span&gt;
+
+&lt;span class="o"&gt;|----------|&lt;/span&gt;
+
+&lt;span class="o"&gt;|----------|&lt;/span&gt;
+
+&lt;span class="o"&gt;|----------|&lt;/span&gt;
+
+&lt;span class="o"&gt;|----------|&lt;/span&gt;
+
+&lt;span class="o"&gt;|++++++++++|&lt;/span&gt;
+
+&lt;span class="o"&gt;|++++++++++|&lt;/span&gt;
+
+&lt;span class="o"&gt;|++++++++++|&lt;/span&gt;
+
+&lt;span class="o"&gt;|++++++++++|&lt;/span&gt;
+
+&lt;span class="o"&gt;|++++++++++|&lt;/span&gt;
+
+&lt;span class="o"&gt;|++++++++++|&lt;/span&gt;
+
+&lt;span class="o"&gt;+----------+&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;程序对运行时间限制: 无限制 &lt;/p&gt;
+&lt;p&gt;程序对内存限制:无限制 &lt;/p&gt;
+&lt;p&gt;程序输入: 多组测试数据，第一行为测试数据组数N（N&amp;lt;10），紧接着是N行，每行一个数，表示电量，这个数值可能是0，10，20 ，30，40，50，60，70，80，90，100&lt;/p&gt;
+&lt;p&gt;输出: 每组数据输出一个电池的电量，每组数据之间用15个“=”隔开&lt;/p&gt;
+&lt;p&gt;样例输入:&lt;code&gt;2&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;50&lt;/p&gt;
+&lt;p&gt;0&lt;/p&gt;
+&lt;p&gt;2、在中国，形容夫妻恩爱的词汇中，大家用的比较多的就是“夫妻相”。所谓“夫妻相”，就是两个人看上去比较般配，长相、身材等某些方面有一定的相似度。本题则另辟蹊径，从人的姓名维度，以字母重复个数来寻找最具“夫妻相”的人。&lt;/p&gt;
+&lt;p&gt;题目中预先给定一组女士的姓名拼音。输入男士的姓名拼音（拼音中间可以有空格,字母全部小写），依预先给定姓名拼音的先后遍历所有姓名，输出字母重复数最多的女士姓名。&lt;/p&gt;
+&lt;p&gt;规则1：如果字母重复数最多的女士有多位相同，则以最先匹配的女士做为最具“夫妻相”的人选。&lt;/p&gt;
+&lt;p&gt;规则2：人名中的相同字母，按重复一次处理。例如：li ling 与li lei 重复的字符个数为2,而不是4。&lt;/p&gt;
+&lt;p&gt;预置女士名单(先后循序必须保证):&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="s"&gt;&amp;quot;wang fei&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="s"&gt;&amp;quot;zhang man yu&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="s"&gt;&amp;quot;zhang zhi yi&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="s"&gt;&amp;quot;li li&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="s"&gt;&amp;quot;li xiao man&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="s"&gt;&amp;quot;li yu cun&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="s"&gt;&amp;quot;yang ni&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="s"&gt;&amp;quot;xiao tong&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="s"&gt;&amp;quot;li lei&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="s"&gt;&amp;quot;zhang san&amp;quot;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;运行时间限制: 无限制 &lt;/p&gt;
+&lt;p&gt;内存限制: 无限制 &lt;/p&gt;
+&lt;p&gt;输入: 输入一个男士姓名，字符串 &lt;/p&gt;
+&lt;p&gt;输出: 输出最具“夫妻相”的女士姓名&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;解析一下：华为的上机题目每年就那么多，毕竟题库也是有限的，这道题目在北航上机时也考过&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;3、&lt;code&gt;CandyBrush游戏&lt;/code&gt;，描述: CandyBrush一款流行的消除游戏，在一个方阵中布满各种糖果，任意交换两个糖果，如果交换后出现横向或者竖向有连续三个相同的情况，则可以消除糖果并得分。&lt;/p&gt;
+&lt;p&gt;输入25个字符组成的字符串（编号为1到25），表示5×5的方阵，每个字符表示不同类型的糖果（区分大小写），判断是否有解，即交换某两个糖果后能够消除糖果。&lt;/p&gt;
+&lt;p&gt;举例，下面的方阵无解&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;T&lt;/span&gt; &lt;span class="n"&gt;M&lt;/span&gt; &lt;span class="n"&gt;T&lt;/span&gt; &lt;span class="n"&gt;M&lt;/span&gt; &lt;span class="n"&gt;O&lt;/span&gt;
+&lt;span class="n"&gt;X&lt;/span&gt; &lt;span class="n"&gt;R&lt;/span&gt; &lt;span class="n"&gt;U&lt;/span&gt; &lt;span class="n"&gt;C&lt;/span&gt; &lt;span class="n"&gt;q&lt;/span&gt;
+&lt;span class="n"&gt;A&lt;/span&gt; &lt;span class="n"&gt;B&lt;/span&gt; &lt;span class="n"&gt;C&lt;/span&gt; &lt;span class="n"&gt;X&lt;/span&gt; &lt;span class="n"&gt;R&lt;/span&gt;
+&lt;span class="n"&gt;U&lt;/span&gt; &lt;span class="n"&gt;R&lt;/span&gt; &lt;span class="n"&gt;M&lt;/span&gt; &lt;span class="n"&gt;T&lt;/span&gt; &lt;span class="n"&gt;O&lt;/span&gt;
+&lt;span class="n"&gt;T&lt;/span&gt; &lt;span class="n"&gt;Q&lt;/span&gt; &lt;span class="n"&gt;C&lt;/span&gt; &lt;span class="n"&gt;R&lt;/span&gt; &lt;span class="n"&gt;A&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;下面的方阵交换(0, 2)和(1, 2)两个糖果后，能消除M&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;T&lt;/span&gt; &lt;span class="n"&gt;M&lt;/span&gt; &lt;span class="n"&gt;T&lt;/span&gt; &lt;span class="n"&gt;M&lt;/span&gt; &lt;span class="n"&gt;O&lt;/span&gt;
+&lt;span class="n"&gt;X&lt;/span&gt; &lt;span class="n"&gt;R&lt;/span&gt; &lt;span class="n"&gt;M&lt;/span&gt; &lt;span class="n"&gt;C&lt;/span&gt; &lt;span class="n"&gt;q&lt;/span&gt;
+&lt;span class="n"&gt;A&lt;/span&gt; &lt;span class="n"&gt;B&lt;/span&gt; &lt;span class="n"&gt;C&lt;/span&gt; &lt;span class="n"&gt;X&lt;/span&gt; &lt;span class="n"&gt;R&lt;/span&gt;
+&lt;span class="n"&gt;U&lt;/span&gt; &lt;span class="n"&gt;R&lt;/span&gt; &lt;span class="n"&gt;M&lt;/span&gt; &lt;span class="n"&gt;T&lt;/span&gt; &lt;span class="n"&gt;O&lt;/span&gt;
+&lt;span class="n"&gt;T&lt;/span&gt; &lt;span class="n"&gt;Q&lt;/span&gt; &lt;span class="n"&gt;C&lt;/span&gt; &lt;span class="n"&gt;R&lt;/span&gt; &lt;span class="n"&gt;A&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;如果有解，则输出&lt;code&gt;YES&lt;/code&gt;，同时输出所有交换方案中，被交换糖果最小编号（1到25），比如：上面的方阵中，被交换的糖果，编号最小的为糖果&lt;code&gt;“T”&lt;/code&gt;，编号为3。&lt;/p&gt;
+&lt;p&gt;如果无解，则输出&lt;code&gt;NO&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;运行时间限制: 无限制&lt;/p&gt;
+&lt;p&gt;内存限制: 无限制&lt;/p&gt;
+&lt;p&gt;输入: &lt;/p&gt;
+&lt;p&gt;输入&lt;code&gt;25个字符&lt;/code&gt;组成的字符串，不含空格，表示5×5的方阵&lt;/p&gt;
+&lt;p&gt;输出: &lt;/p&gt;
+&lt;p&gt;如果有解，则输出YES，同时输出所有交换方案中，被交换糖果最小编号，以空格隔开。如果无解，则输出NO。&lt;/p&gt;
+&lt;p&gt;样例输入: &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;TMTMOXRMCqABCXRURMTOTQCRA&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;样例输出: &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;YES&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;答案提示:  &lt;/p&gt;
+&lt;p&gt;输出最小糖果编号的意思，就是从左至右，从上到下对糖果进行遍历，找到第一个与其他交换后能消除的糖果即可&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;欢迎大家将答案粘贴在后面的评论框里，我会选出最好的答案作为本题的标准答案，以方便更多的师弟师妹们&lt;/strong&gt;&lt;/p&gt;</summary><category term="华为笔试题"></category></entry><entry><title>华为校园招聘面经2014年软件研发</title><link href="http://www.yanyulin.info/pages/2014/03/huawei_2014_A.html" rel="alternate"></link><updated>2014-03-08T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-08:pages/2014/03/huawei_2014_A.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;华为&lt;/strong&gt;现在已经被黑的很严重了，什么累死了好几个人，什么工资低，什么华为工作比较累，什么加班比较多，等等一系列，大华为已经被好多人黑的不能再黑了，我身边的好多研究生都是将华为作为垫底的，说实在没公司要时，再考虑去华为&lt;/p&gt;
 &lt;p&gt;华为今年的工资待遇是&lt;code&gt;11-13K/M&lt;/code&gt;,过年时会考虑发两个月的绩效，说实在的我个人感觉华为还是相当不错滴，都是年轻人嘛，少年时不奋斗，何时奋斗，少年是不艰苦，以后又有何出息，我个人还是非常好看华为滴...&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;华为，我们不仅仅是世界500强&lt;/strong&gt;，这是今年华为校招时的口号~~~&lt;/p&gt;

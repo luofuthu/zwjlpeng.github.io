@@ -2,7 +2,7 @@
 <html lang="zh">
 <head>
 <title>
-华为校招机试2014年北京试题 - 烟雨林</title>
+校园招聘华为上机试题2014年武汉地区 - 烟雨林</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
 <meta name="author" content="烟雨林">
@@ -50,9 +50,9 @@
 					</div>
 					<div class="entry_box_s">
 						<div class="entry_title_box">
-							<div class="entry_title">华为校招机试2014年北京试题</div>
+							<div class="entry_title">校园招聘华为上机试题2014年武汉地区</div>
 							<div class="archive_info">
-								<span class="date">2014-03-05</span>
+								<span class="date">2014-03-08</span>
 								<span class="category"> ⁄ <a href="http://www.yanyulin.info/category/cheng-xu-yuan-zhao-gong-zuo.html" title="查看程序员找工作中的全部文章" rel="category tag">程序员找工作</a></span>
 							</div>
 						</div>
@@ -80,46 +80,109 @@
 </script>
 </div>
 							<hr />
-<p>1、回文数的判断(60分)</p>
-<p>给定一个数，然后将其倒过来相加，如果和不是回文串，那么将和再采取同样的操作,判断这个数在7步之内能不能变成回文数，如果能，则输出这个回文数，如果不能，则输出0，变化规则如下述例子所示</p>
-<p>例如 68</p>
-<blockquote>
-<p>68+86=154</p>
-<p>154+451=605</p>
-<p>605+506=1111，</p>
-<p>1111是回文数，输出1111.</p>
-</blockquote>
-<p><strong>运行要求</strong></p>
-<p>运行时间限制: 无限制 </p>
-<p>内存限制: 无限制 </p>
-<p>2、在中国，形容夫妻恩爱的词汇中，大家用的比较多的就是“夫妻相”,所谓“夫妻相”，就是两个人看上去比较般配，长相、身材等某些方面有一定的相似度,本题则另辟蹊径，从人的姓名维度，以字母重复个数来寻找最具“夫妻相”的人。</p>
-<p>题目中预先给定一组女士的姓名拼音，输入男士的姓名拼音（拼音中间可以有空格,字母全部小写），依预先给定姓名拼音的先后遍历所有姓名，输出字母重复数最多的女士姓名。</p>
+<p>1、<a href="http://www.yanyulin.info" target="_blank">手机电池</a>余量的问题，描述: 自从有了智能手机，时刻都要关心手机的电量。你的任务很简单，用程序打印符号来表示当前手机的电量，用10行和10列来表示电池的电量，同时在外围加上边框，每一行表示10%的电量，假设还有60%的电量，则显示如下：</p>
+<div class="highlight"><pre><span class="o">+----------+</span>
+
+<span class="o">|----------|</span>
+
+<span class="o">|----------|</span>
+
+<span class="o">|----------|</span>
+
+<span class="o">|----------|</span>
+
+<span class="o">|++++++++++|</span>
+
+<span class="o">|++++++++++|</span>
+
+<span class="o">|++++++++++|</span>
+
+<span class="o">|++++++++++|</span>
+
+<span class="o">|++++++++++|</span>
+
+<span class="o">|++++++++++|</span>
+
+<span class="o">+----------+</span>
+</pre></div>
+
+
+<p>程序对运行时间限制: 无限制 </p>
+<p>程序对内存限制:无限制 </p>
+<p>程序输入: 多组测试数据，第一行为测试数据组数N（N&lt;10），紧接着是N行，每行一个数，表示电量，这个数值可能是0，10，20 ，30，40，50，60，70，80，90，100</p>
+<p>输出: 每组数据输出一个电池的电量，每组数据之间用15个“=”隔开</p>
+<p>样例输入:<code>2</code></p>
+<p>50</p>
+<p>0</p>
+<p>2、在中国，形容夫妻恩爱的词汇中，大家用的比较多的就是“夫妻相”。所谓“夫妻相”，就是两个人看上去比较般配，长相、身材等某些方面有一定的相似度。本题则另辟蹊径，从人的姓名维度，以字母重复个数来寻找最具“夫妻相”的人。</p>
+<p>题目中预先给定一组女士的姓名拼音。输入男士的姓名拼音（拼音中间可以有空格,字母全部小写），依预先给定姓名拼音的先后遍历所有姓名，输出字母重复数最多的女士姓名。</p>
 <p>规则1：如果字母重复数最多的女士有多位相同，则以最先匹配的女士做为最具“夫妻相”的人选。</p>
 <p>规则2：人名中的相同字母，按重复一次处理。例如：li ling 与li lei 重复的字符个数为2,而不是4。</p>
 <p>预置女士名单(先后循序必须保证):</p>
-<blockquote>
-<p>"wang fei",</p>
-<p>"zhang man yu",</p>
-<p>"zhang zhi yi",</p>
-<p>"li li",</p>
-<p>"li xiao man",</p>
-<p>"li yu cun",</p>
-<p>"yang ni",</p>
-<p>"xiao tong",</p>
-<p>"li lei",</p>
-<p>"zhang san"</p>
-</blockquote>
-<p><strong>运行要求</strong></p>
+<div class="highlight"><pre><span class="s">&quot;wang fei&quot;</span><span class="p">,</span>
+<span class="s">&quot;zhang man yu&quot;</span><span class="p">,</span>
+<span class="s">&quot;zhang zhi yi&quot;</span><span class="p">,</span>
+<span class="s">&quot;li li&quot;</span><span class="p">,</span>
+<span class="s">&quot;li xiao man&quot;</span><span class="p">,</span>
+<span class="s">&quot;li yu cun&quot;</span><span class="p">,</span>
+<span class="s">&quot;yang ni&quot;</span><span class="p">,</span>
+<span class="s">&quot;xiao tong&quot;</span><span class="p">,</span>
+<span class="s">&quot;li lei&quot;</span><span class="p">,</span>
+<span class="s">&quot;zhang san&quot;</span>
+</pre></div>
+
+
 <p>运行时间限制: 无限制 </p>
 <p>内存限制: 无限制 </p>
 <p>输入: 输入一个男士姓名，字符串 </p>
 <p>输出: 输出最具“夫妻相”的女士姓名</p>
-<p>3、实现一个函数，给定一个N进制的数，将其转换成M进制的数，其中N与M均大于0,说白了就是进制数之间的转换</p>
-<p>这套试题，我是在2014年北京北航参加，用了半个小时全做完，全对，交卷的~~</p>
-<p><strong>到此为止，大家写写自已的函数吧，写好后可以给我留言，我会挑出最好的，做为试题答案，为其他人提供方便</strong></p>
+<blockquote>
+<p>解析一下：华为的上机题目每年就那么多，毕竟题库也是有限的，这道题目在北航上机时也考过</p>
+</blockquote>
+<p>3、<code>CandyBrush游戏</code>，描述: CandyBrush一款流行的消除游戏，在一个方阵中布满各种糖果，任意交换两个糖果，如果交换后出现横向或者竖向有连续三个相同的情况，则可以消除糖果并得分。</p>
+<p>输入25个字符组成的字符串（编号为1到25），表示5×5的方阵，每个字符表示不同类型的糖果（区分大小写），判断是否有解，即交换某两个糖果后能够消除糖果。</p>
+<p>举例，下面的方阵无解</p>
+<div class="highlight"><pre><span class="n">T</span> <span class="n">M</span> <span class="n">T</span> <span class="n">M</span> <span class="n">O</span>
+<span class="n">X</span> <span class="n">R</span> <span class="n">U</span> <span class="n">C</span> <span class="n">q</span>
+<span class="n">A</span> <span class="n">B</span> <span class="n">C</span> <span class="n">X</span> <span class="n">R</span>
+<span class="n">U</span> <span class="n">R</span> <span class="n">M</span> <span class="n">T</span> <span class="n">O</span>
+<span class="n">T</span> <span class="n">Q</span> <span class="n">C</span> <span class="n">R</span> <span class="n">A</span>
+</pre></div>
+
+
+<p>下面的方阵交换(0, 2)和(1, 2)两个糖果后，能消除M</p>
+<div class="highlight"><pre><span class="n">T</span> <span class="n">M</span> <span class="n">T</span> <span class="n">M</span> <span class="n">O</span>
+<span class="n">X</span> <span class="n">R</span> <span class="n">M</span> <span class="n">C</span> <span class="n">q</span>
+<span class="n">A</span> <span class="n">B</span> <span class="n">C</span> <span class="n">X</span> <span class="n">R</span>
+<span class="n">U</span> <span class="n">R</span> <span class="n">M</span> <span class="n">T</span> <span class="n">O</span>
+<span class="n">T</span> <span class="n">Q</span> <span class="n">C</span> <span class="n">R</span> <span class="n">A</span>
+</pre></div>
+
+
+<p>如果有解，则输出<code>YES</code>，同时输出所有交换方案中，被交换糖果最小编号（1到25），比如：上面的方阵中，被交换的糖果，编号最小的为糖果<code>“T”</code>，编号为3。</p>
+<p>如果无解，则输出<code>NO</code>。</p>
+<p>运行时间限制: 无限制</p>
+<p>内存限制: 无限制</p>
+<p>输入: </p>
+<p>输入<code>25个字符</code>组成的字符串，不含空格，表示5×5的方阵</p>
+<p>输出: </p>
+<p>如果有解，则输出YES，同时输出所有交换方案中，被交换糖果最小编号，以空格隔开。如果无解，则输出NO。</p>
+<p>样例输入: </p>
+<div class="highlight"><pre><span class="n">TMTMOXRMCqABCXRURMTOTQCRA</span>
+</pre></div>
+
+
+<p>样例输出: </p>
+<div class="highlight"><pre><span class="n">YES</span> <span class="mi">3</span>
+</pre></div>
+
+
+<p>答案提示:  </p>
+<p>输出最小糖果编号的意思，就是从左至右，从上到下对糖果进行遍历，找到第一个与其他交换后能消除的糖果即可</p>
+<p><strong>欢迎大家将答案粘贴在后面的评论框里，我会选出最好的答案作为本题的标准答案，以方便更多的师弟师妹们</strong></p>
 						  <div class="clear"></div>
 							</div>
-							<b>本文地址:</b> <a href="http://www.yanyulin.info/pages/2014/03/huawei_2014_2.html" target="_self">http://www.yanyulin.info/pages/2014/03/huawei_2014_2.html</a>
+							<b>本文地址:</b> <a href="http://www.yanyulin.info/pages/2014/03/huawei_2014_3.html" target="_self">http://www.yanyulin.info/pages/2014/03/huawei_2014_3.html</a>
 							<div><font color="blue"><b>转载时请保留本文出处,谢谢您的合作</b></font></div>
 							<hr/>
 							<div class="clear" align="left">
@@ -151,10 +214,10 @@
 					<!-- end: entrymeta -->
 				<div class="context_b" align="left">
 					 上一篇: 
-  				 <a href="http://www.yanyulin.info/pages/2014/03/git.html" title="git保存用户名与密码(避免用户名密码输入)" target="_self">git保存用户名与密码(避免用户名密码输入)</a>
+  				 <a href="http://www.yanyulin.info/pages/2014/03/huawei_2014_A.html" title="华为校园招聘面经2014年软件研发" target="_self">华为校园招聘面经2014年软件研发</a>
   				 &nbsp;&nbsp
   				 下一篇:
-  				 <a href="http://www.yanyulin.info/pages/2014/03/github_site.html" title="github搭建网站优化(修复过多的302重定向请求)" target="_self">github搭建网站优化(修复过多的302重定向请求)</a>
+  				 <a href="http://www.yanyulin.info/pages/2014/03/dianping_2014_1.html" title="大众点评校园招聘面经2014年软件面经" target="_self">大众点评校园招聘面经2014年软件面经</a>
 					 
 				</div>
 				<div class="context_b">
@@ -334,22 +397,22 @@
 				<ul>
 				<ul class="random-post-link">
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2013/07/string.html" title="String StringBuffer StringBuilder的区别分析">String StringBuffer StringBuilder的区别分析</a>
+				<a href="http://www.yanyulin.info/pages/2013/11/linux0.html" title="Linux中0号进程的创建分析">Linux中0号进程的创建分析</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2014/03/meituan_2014_1.html" title="美团网校园招聘2014年面经(软件研发)">美团网校园招聘2014年面经(软件研发)</a>
+				<a href="http://www.yanyulin.info/pages/2014/01/baidu_1.html" title="百度校招2014年软研面经">百度校招2014年软研面经</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2013/06/google_2013_1.html" title="2013年谷歌校招笔试(一)">2013年谷歌校招笔试(一)</a>
+				<a href="http://www.yanyulin.info/pages/2013/12/meituan_2014_A.html" title="美团网2014年校招笔试题(研发)">美团网2014年校招笔试题(研发)</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2013/12/prgbeautiful.html" title="编程之美—微软技术面试心得">编程之美—微软技术面试心得</a>
+				<a href="http://www.yanyulin.info/pages/2013/12/perl.html" title="编程珠玑(作者:John Bently)">编程珠玑(作者:John Bently)</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2013/11/vlinux2.html" title="Linux基础教程视频版(很详细)">Linux基础教程视频版(很详细)</a>
+				<a href="http://www.yanyulin.info/pages/2013/12/vc_1.html" title="VC视频教程(主要讲述`MFC`)">VC视频教程(主要讲述`MFC`)</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2014/03/getxrp.html" title="【赠送】ripple币免费获取&免费领取">【赠送】ripple币免费获取&免费领取</a>
+				<a href="http://www.yanyulin.info/pages/2014/02/wtc.html" title="[赠送]WTC(万特币)获取30ripple和100WTC">[赠送]WTC(万特币)获取30ripple和100WTC</a>
 				</li>
 				<li class="random-post-link">
 				<a href="http://www.yanyulin.info/pages/2013/11/qqLogin.html" title="界面编程模仿篇(模仿腾讯QQ登录界面)">界面编程模仿篇(模仿腾讯QQ登录界面)</a>
@@ -404,19 +467,19 @@ var duoshuoQuery = {short_name:"yanyulin"};
 				<div class="box_r">
 				<ul>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2013/07/string.html" rel="bookmark" title="String StringBuffer StringBuilder的区别分析">String StringBuffer StringBuilder的区别分析</a>
+				<a href="http://www.yanyulin.info/pages/2013/11/assert.html" rel="bookmark" title="Assert(断言)实现机制剖析">Assert(断言)实现机制剖析</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2013/01/renmingyinhang_1.html" rel="bookmark" title="中国人民银行2013校招技术类面经">中国人民银行2013校招技术类面经</a>
+				<a href="http://www.yanyulin.info/pages/2014/03/weconnect_2014_1.html" rel="bookmark" title="威盛电子校园招聘面经2014年软件面经">威盛电子校园招聘面经2014年软件面经</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2014/03/huawei_2014_2.html" rel="bookmark" title="华为校招机试2014年北京试题">华为校招机试2014年北京试题</a>
+				<a href="http://www.yanyulin.info/pages/2014/03/baidu_2014_B.html" rel="bookmark" title="2014年百度校招笔试题(移动研发类)">2014年百度校招笔试题(移动研发类)</a>
 				</li>
 				<li>
 				<a href="http://www.yanyulin.info/pages/2013/12/perl.html" rel="bookmark" title="编程珠玑(作者:John Bently)">编程珠玑(作者:John Bently)</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2013/12/psbase_1.html" rel="bookmark" title="PhotoShop CS入门版视频教程(基础上)">PhotoShop CS入门版视频教程(基础上)</a>
+				<a href="http://www.yanyulin.info/pages/2013/12/psbase2.html" rel="bookmark" title="Photoshop CS视频教程(下)">Photoshop CS视频教程(下)</a>
 				</li>
 				<li>
 				<a href="http://www.yanyulin.info/pages/2014/02/gko.html" rel="bookmark" title="[赠送]GKO币每天免费领取10ripple">[赠送]GKO币每天免费领取10ripple</a>
