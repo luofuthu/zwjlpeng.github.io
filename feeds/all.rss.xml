@@ -1,5 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>烟雨林</title><link>http://www.yanyulin.info/</link><description></description><atom:link href="http://www.yanyulin.info/feeds/all.rss.xml" rel="self"></atom:link><lastBuildDate>Sat, 08 Mar 2014 00:00:00 +0800</lastBuildDate><item><title>华为校园招聘2014年面经(软件研发)</title><link>http://www.yanyulin.info/pages/2014/03/huawei_2014_A.html</link><description>&lt;hr /&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>烟雨林</title><link>http://www.yanyulin.info/</link><description></description><atom:link href="http://www.yanyulin.info/feeds/all.rss.xml" rel="self"></atom:link><lastBuildDate>Sat, 08 Mar 2014 00:00:00 +0800</lastBuildDate><item><title>大众点评校园招聘面经2014年软件面经</title><link>http://www.yanyulin.info/pages/2014/03/dianping_2014_1.html</link><description>&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;大众点评网简介&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;大众点评网&lt;/strong&gt;于2003年4月由&lt;code&gt;张涛&lt;/code&gt;成立于上海，是中国领先的本地生活信息及交易平台，同时也是全球最早建立的独立第三方消费点评网站，主要为用户提供各种生活信息服务，时至今日分支机构遍布中国各大主要城市&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;重点，面试感觉&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;整体来说，对这个公司的印象不是太好，公司面试时过于功利&lt;/p&gt;
+&lt;p&gt;它会问你有没有一些其他牛逼公司的offer，你说有的话，他就会很想要你，要是你说没有得话，基本上来说就跪了&lt;/p&gt;
+&lt;p&gt;而且大众点评网没有笔试，只有一个上机考试，上机考试考的还有行测，对于一个面技术的人来说，考行测是什么玩意，我从来不看好一个考行测的技术公司，能有多大的前途,我不知道行测能考出啥，在这个奇葩的国度里，我以为只有公务员，事业单位才考，没想到这种技术性的公司也考...&lt;/p&gt;
+&lt;p&gt;我面了一面就跪了，写下面试的问题吧，给师弟师妹们多些参考...&lt;/p&gt;
+&lt;p&gt;问了我如下问题：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;1、面向对象6大原则&lt;/p&gt;
+&lt;p&gt;2、java与c++区别&lt;/p&gt;
+&lt;p&gt;3、Java虚拟机你了解么？具体讲讲&lt;/p&gt;
+&lt;p&gt;4、设计模式singleton，这个要写出代码，也是非常简单的&lt;/p&gt;
+&lt;p&gt;5、sleep与wait的区别&lt;/p&gt;
+&lt;p&gt;6、object类你了解么，有哪些方法&lt;/p&gt;
+&lt;p&gt;7、java里的重载与重写之间的区别&lt;/p&gt;
+&lt;/blockquote&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Sat, 08 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-03-08:pages/2014/03/dianping_2014_1.html</guid><category>大众点评面经</category></item><item><title>华为校园招聘面经2014年软件研发</title><link>http://www.yanyulin.info/pages/2014/03/huawei_2014_A.html</link><description>&lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;华为&lt;/strong&gt;现在已经被黑的很严重了，什么累死了好几个人，什么工资低，什么华为工作比较累，什么加班比较多，等等一系列，大华为已经被好多人黑的不能再黑了，我身边的好多研究生都是将华为作为垫底的，说实在没公司要时，再考虑去华为&lt;/p&gt;
 &lt;p&gt;华为今年的工资待遇是&lt;code&gt;11-13K/M&lt;/code&gt;,过年时会考虑发两个月的绩效，说实在的我个人感觉华为还是相当不错滴，都是年轻人嘛，少年时不奋斗，何时奋斗，少年是不艰苦，以后又有何出息，我个人还是非常好看华为滴...&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;华为，我们不仅仅是世界500强&lt;/strong&gt;，这是今年华为校招时的口号~~~&lt;/p&gt;
