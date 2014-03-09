@@ -300,7 +300,18 @@ void CreateMap()
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;&lt;strong&gt;各位如果有更好的答案，请留言评价，方便更多的人&lt;/strong&gt;&lt;/p&gt;</summary><category term="创新工场笔试题"></category></entry><entry><title>校园招聘华为上机试题2014年武汉地区</title><link href="http://www.yanyulin.info/pages/2014/03/huawei_2014_3.html" rel="alternate"></link><updated>2014-03-08T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-08:pages/2014/03/huawei_2014_3.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;各位如果有更好的答案，请留言评价，方便更多的人&lt;/strong&gt;&lt;/p&gt;</summary><category term="创新工场笔试题"></category></entry><entry><title>去哪儿网校园招联笔试题2014年成都软研|软测|前端</title><link href="http://www.yanyulin.info/pages/2014/03/qunar_2014_B.html" rel="alternate"></link><updated>2014-03-09T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-09:pages/2014/03/qunar_2014_B.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;一、编程题、开发岗三道都必做，前端岗和测试岗前两道必做&lt;/p&gt;
+&lt;p&gt;1、implement a function of String randomAlphabetic(int count)，Creats a random string whose length is the number of characters specified;Characters will be chosen from the set of alpabetic characters.&lt;/p&gt;
+&lt;p&gt;2、已知字母序列&lt;code&gt;【d, g, e, c, f, b, o, a】&lt;/code&gt;，请实现一个函数针对输入的一组字符串 &lt;code&gt;input[] = {"bed", "dog", "dear", "eye"}&lt;/code&gt;，按照字母顺序排序并打印。&lt;/p&gt;
+&lt;p&gt;本例的输出顺序为：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;dear&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;dog&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;eye&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;bed&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;3、有一万个北京单身男女向你提交了基本资料，包括：姓名、性别、年龄、星座，写一段程序尝试找出他们最匹配的一对&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;欢迎大家将答案粘贴在后面的评论框里，我会选出最好的答案作为本题的标准答案，以方便更多的师弟师妹们&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;到此为止&lt;/p&gt;</summary><category term="去哪网笔试题"></category></entry><entry><title>校园招聘华为上机试题2014年武汉地区</title><link href="http://www.yanyulin.info/pages/2014/03/huawei_2014_3.html" rel="alternate"></link><updated>2014-03-08T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-08:pages/2014/03/huawei_2014_3.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;1、&lt;a href="http://www.yanyulin.info" target="_blank"&gt;手机电池&lt;/a&gt;余量的问题，描述: 自从有了智能手机，时刻都要关心手机的电量。你的任务很简单，用程序打印符号来表示当前手机的电量，用10行和10列来表示电池的电量，同时在外围加上边框，每一行表示10%的电量，假设还有60%的电量，则显示如下：&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="o"&gt;+----------+&lt;/span&gt;
 
