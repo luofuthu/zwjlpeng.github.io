@@ -302,8 +302,18 @@ void CreateMap()
 
 &lt;p&gt;&lt;strong&gt;各位如果有更好的答案，请留言评价，方便更多的人&lt;/strong&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Sun, 09 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-03-09:pages/2014/03/cxgc_2013_B.html</guid><category>创新工场笔试题</category></item><item><title>去哪儿网校园招联笔试题2014年成都软研|软测|前端</title><link>http://www.yanyulin.info/pages/2014/03/qunar_2014_B.html</link><description>&lt;hr /&gt;
 &lt;p&gt;一、编程题、开发岗三道都必做，前端岗和测试岗前两道必做&lt;/p&gt;
-&lt;p&gt;1、implement a function of String randomAlphabetic(int count)，Creats a random string whose length is the number of characters specified;Characters will be chosen from the set of alpabetic characters.&lt;/p&gt;
-&lt;p&gt;2、已知字母序列&lt;code&gt;【d, g, e, c, f, b, o, a】&lt;/code&gt;，请实现一个函数针对输入的一组字符串 &lt;code&gt;input[] = {"bed", "dog", "dear", "eye"}&lt;/code&gt;，按照字母顺序排序并打印。&lt;/p&gt;
+&lt;p&gt;1、&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nx"&gt;implement&lt;/span&gt; &lt;span class="nx"&gt;a&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="nx"&gt;of&lt;/span&gt; &lt;span class="nb"&gt;String&lt;/span&gt; &lt;span class="nx"&gt;randomAlphabetic&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kr"&gt;int&lt;/span&gt; &lt;span class="nx"&gt;count&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="err"&gt;，&lt;/span&gt;
+&lt;span class="nx"&gt;Creats&lt;/span&gt; &lt;span class="nx"&gt;a&lt;/span&gt; &lt;span class="nx"&gt;random&lt;/span&gt; &lt;span class="nx"&gt;string&lt;/span&gt; &lt;span class="nx"&gt;whose&lt;/span&gt; &lt;span class="nx"&gt;length&lt;/span&gt; &lt;span class="nx"&gt;is&lt;/span&gt; &lt;span class="nx"&gt;the&lt;/span&gt; &lt;span class="nx"&gt;number&lt;/span&gt; &lt;span class="nx"&gt;of&lt;/span&gt; &lt;span class="nx"&gt;characters&lt;/span&gt; 
+&lt;span class="nx"&gt;specified&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="nx"&gt;Characters&lt;/span&gt; &lt;span class="nx"&gt;will&lt;/span&gt; &lt;span class="nx"&gt;be&lt;/span&gt; &lt;span class="nx"&gt;chosen&lt;/span&gt; &lt;span class="nx"&gt;from&lt;/span&gt; &lt;span class="nx"&gt;the&lt;/span&gt; &lt;span class="nx"&gt;set&lt;/span&gt; &lt;span class="nx"&gt;of&lt;/span&gt; &lt;span class="nx"&gt;alpabetic&lt;/span&gt; &lt;span class="nx"&gt;characters&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;2、已知字母序列&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;【d, g, e, c, f, b, o, a】&lt;/code&gt;，&lt;/p&gt;
+&lt;p&gt;请实现一个函数针对输入的一组字符串&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;input[] = {"bed", "dog", "dear", "eye"}&lt;/code&gt;，&lt;/p&gt;
+&lt;p&gt;按照字母顺序排序并打印。&lt;/p&gt;
 &lt;p&gt;本例的输出顺序为：&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;dear&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;dog&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;eye&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;bed&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
