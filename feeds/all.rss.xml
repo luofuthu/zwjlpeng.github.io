@@ -1,5 +1,306 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>烟雨林</title><link>http://www.yanyulin.info/</link><description></description><atom:link href="http://www.yanyulin.info/feeds/all.rss.xml" rel="self"></atom:link><lastBuildDate>Sun, 09 Mar 2014 00:00:00 +0800</lastBuildDate><item><title>保护Ripple币以及万特币的几点安全措施</title><link>http://www.yanyulin.info/pages/2014/03/ripple_safe.html</link><description>&lt;hr /&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>烟雨林</title><link>http://www.yanyulin.info/</link><description></description><atom:link href="http://www.yanyulin.info/feeds/all.rss.xml" rel="self"></atom:link><lastBuildDate>Sun, 09 Mar 2014 00:00:00 +0800</lastBuildDate><item><title>创新工场校园招聘笔试题2013年软件研发</title><link>http://www.yanyulin.info/pages/2014/03/cxgc_2013_B.html</link><description>&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;如有错误，或更加精简的方法，请留言，我会更正，以方便更多的人&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;时间：2012年9月27日 地点：鼎好大厦10层&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;考试时长：1小时&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;第一部份选择题&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;1，阅读以下程序，求z的结果&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#define N 3  &lt;/span&gt;
+&lt;span class="cp"&gt;#define Y(n) ((N+1)*n)  &lt;/span&gt;
+&lt;span class="n"&gt;z&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="err"&gt;（&lt;/span&gt;&lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;Y&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="err"&gt;）&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;解析48&lt;/p&gt;
+&lt;p&gt;2有关多线程，多进程的描述错误的是&lt;/p&gt;
+&lt;p&gt;A）子进程获得父进程的数据空间，堆和栈的复制品&lt;/p&gt;
+&lt;p&gt;B）线程可以与同进程的其他线程共享数据，但是它拥有自己的栈空间且拥有独立的执行序列&lt;/p&gt;
+&lt;p&gt;C）线程执行开销小，但是不利于资源管理和保护&lt;/p&gt;
+&lt;p&gt;D）进程适合在SMP机器上进行，而线程则可以跨机器迁移&lt;/p&gt;
+&lt;p&gt;解答：D&lt;/p&gt;
+&lt;p&gt;3、求sizeof（s）&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;struct&lt;/span&gt; &lt;span class="n"&gt;s&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;  &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+   &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+   &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;z&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+ &lt;span class="kt"&gt;double&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;解答：16&lt;/p&gt;
+&lt;p&gt;4、序列&lt;code&gt;{2,1,4,9,8,10,6,20}&lt;/code&gt;是某排序算法第二轮排序的结果，则该算法只能是&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;A快速排序&lt;/code&gt;  &lt;/p&gt;
+&lt;p&gt;B冒泡排序&lt;/p&gt;
+&lt;p&gt;C选择排序    &lt;/p&gt;
+&lt;p&gt;D插入排序&lt;/p&gt;
+&lt;p&gt;5、我们需要监听一个事件状态，让它在状态发生改变时主动发出通知，请问需要哪种设计模式？&lt;/p&gt;
+&lt;p&gt;A装饰者模式 &lt;/p&gt;
+&lt;p&gt;B建造者模式&lt;/p&gt;
+&lt;p&gt;C创新工场模式&lt;/p&gt;
+&lt;p&gt;D观察者模式&lt;/p&gt;
+&lt;p&gt;解答：D&lt;/p&gt;
+&lt;p&gt;6、有2012瓶矿泉水，其中有一瓶有毒，请问需要多少只老鼠才能一次性找到有毒的矿泉水？&lt;/p&gt;
+&lt;p&gt;解答：11只&lt;/p&gt;
+&lt;p&gt;二 问答题&lt;/p&gt;
+&lt;p&gt;1、有0-n这n+1个数，但是其中丢了一个数，请问如何找出丢了哪个数？&lt;/p&gt;
+&lt;p&gt;解答：求这n个数的sum，然后计算n(n+1)/2-sum可得。&lt;/p&gt;
+&lt;p&gt;2、 解释&lt;code&gt;#typedef char (*func)(int,char*)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;解答：定义了一个函数指针的数据类型；该数据类型可以用来定义函数指针；定义的函数指针指向的函数的参数为&lt;code&gt;(int,char*)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;3、求以下程序输出结果&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="p"&gt;{{&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;},{&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="p"&gt;}},{{&lt;/span&gt;&lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;9&lt;/span&gt;&lt;span class="p"&gt;},{&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;11&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;12&lt;/span&gt;&lt;span class="p"&gt;}}};&lt;/span&gt;
+&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;ptr&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;)(&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="n"&gt;printf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="err"&gt;“&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="n"&gt;d&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="err"&gt;”&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;)(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ptr&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;解答：&lt;/p&gt;
+&lt;p&gt;考察多级指针，一定要明确指针指向的是什么，才能知道它加1后跳过了多少字节。&amp;amp;a是个四级指针，指向的是a这样的数组，所以它加1，就会跳过整个数组。&lt;/p&gt;
+&lt;p&gt;4、求以下程序输出结果&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="vi"&gt;#include&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;iostream&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="nx"&gt;using&lt;/span&gt; &lt;span class="nx"&gt;namespace&lt;/span&gt; &lt;span class="nx"&gt;std&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="nb"&gt;class&lt;/span&gt; &lt;span class="nx"&gt;A&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="k"&gt;public&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="nx"&gt;virtual&lt;/span&gt; &lt;span class="bp"&gt;void&lt;/span&gt; &lt;span class="nx"&gt;print&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="nx"&gt;cout&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;A::print()&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;endl&lt;/span&gt;&lt;span class="p"&gt;;}&lt;/span&gt;
+&lt;span class="p"&gt;};&lt;/span&gt;
+&lt;span class="nb"&gt;class&lt;/span&gt; &lt;span class="nx"&gt;B&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="nf"&gt;A&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="k"&gt;public&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="nx"&gt;virtual&lt;/span&gt; &lt;span class="bp"&gt;void&lt;/span&gt; &lt;span class="nx"&gt;print&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="nx"&gt;cout&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;B::print()&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;endl&lt;/span&gt;&lt;span class="p"&gt;;}&lt;/span&gt;
+&lt;span class="p"&gt;};&lt;/span&gt;
+&lt;span class="nb"&gt;class&lt;/span&gt; &lt;span class="nx"&gt;C&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="nf"&gt;A&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="k"&gt;public&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="nx"&gt;virtual&lt;/span&gt; &lt;span class="bp"&gt;void&lt;/span&gt; &lt;span class="nx"&gt;print&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="nx"&gt;cout&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;C::print()&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;endl&lt;/span&gt;&lt;span class="p"&gt;;}&lt;/span&gt;
+&lt;span class="p"&gt;};&lt;/span&gt;
+&lt;span class="bp"&gt;void&lt;/span&gt; &lt;span class="nx"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;A&lt;/span&gt; &lt;span class="nx"&gt;a&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="nx"&gt;a.print&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="bp"&gt;void&lt;/span&gt; &lt;span class="nx"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="nx"&gt;A&lt;/span&gt; &lt;span class="nx"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="nx"&gt;aa&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="nx"&gt;ab&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="nx"&gt;ac&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="nx"&gt;B&lt;/span&gt; &lt;span class="nx"&gt;b&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="nx"&gt;C&lt;/span&gt; &lt;span class="nx"&gt;c&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="n"&gt;aa&lt;/span&gt;&lt;span class="o"&gt;=&amp;amp;&lt;/span&gt;&lt;span class="nx"&gt;a&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="n"&gt;ab&lt;/span&gt;&lt;span class="o"&gt;=&amp;amp;&lt;/span&gt;&lt;span class="nx"&gt;b&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="n"&gt;ac&lt;/span&gt;&lt;span class="o"&gt;=&amp;amp;&lt;/span&gt;&lt;span class="nx"&gt;c&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="nx"&gt;a.print&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+    &lt;span class="nx"&gt;b.print&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+    &lt;span class="nx"&gt;c.print&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+    &lt;span class="nx"&gt;aa&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="nx"&gt;print&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+    &lt;span class="nx"&gt;ab&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="nx"&gt;print&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+    &lt;span class="nx"&gt;ac&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="nx"&gt;print&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+    &lt;span class="nx"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;a&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="nx"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;b&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="nx"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;c&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;解答：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;print&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+
+&lt;span class="n"&gt;B&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;print&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+&lt;span class="n"&gt;C&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;print&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+&lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;print&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+
+&lt;span class="n"&gt;B&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;print&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+&lt;span class="n"&gt;C&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;print&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+
+&lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;print&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+&lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;print&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+&lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;print&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;三算法编程题&lt;/p&gt;
+&lt;p&gt;1，有1分,2分,5分,10分四种硬币，每种硬币数量无限，给定n分钱，求有多少种组合可以组合成n分钱？&lt;/p&gt;
+&lt;p&gt;解答：&lt;/p&gt;
+&lt;p&gt;思路： &lt;/p&gt;
+&lt;p&gt;1、四层循环&lt;/p&gt;
+&lt;p&gt;2、使用回溯法在空间中搜索&lt;/p&gt;
+&lt;p&gt;代码为思路2：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="vi"&gt;#include&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;stdafx.h&amp;quot;&lt;/span&gt;
+&lt;span class="vi"&gt;#include&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;vector&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="vi"&gt;#include&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;iostream&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="nx"&gt;using&lt;/span&gt; &lt;span class="nx"&gt;namespace&lt;/span&gt; &lt;span class="nx"&gt;std&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+&lt;span class="nx"&gt;int&lt;/span&gt; &lt;span class="n"&gt;count&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="nx"&gt;int&lt;/span&gt; &lt;span class="n"&gt;Target&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+&lt;span class="nx"&gt;int&lt;/span&gt; &lt;span class="nx"&gt;coin&lt;/span&gt;&lt;span class="err"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;={1,2,5,10};
+int total=0;
+vector&lt;span class="nt"&gt;&amp;lt;int&amp;gt;&lt;/span&gt; solution;
+
+void dfs(int index)
+{
+    if( total == Target )
+    {
+        count++;
+        cout &lt;span class="err"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;&amp;lt; count&lt;/span&gt; &lt;span class="err"&gt;&amp;lt;&amp;lt;&amp;quot;&lt;/span&gt;&lt;span class="na"&gt;:&lt;/span&gt;&lt;span class="err"&gt;&amp;quot;&lt;/span&gt; &lt;span class="err"&gt;;&lt;/span&gt;
+        &lt;span class="na"&gt;for&lt;/span&gt;&lt;span class="err"&gt;(&lt;/span&gt; &lt;span class="na"&gt;int&lt;/span&gt; &lt;span class="na"&gt;i=&lt;/span&gt;&lt;span class="s"&gt;0;&lt;/span&gt; &lt;span class="na"&gt;i&lt;/span&gt;&lt;span class="err"&gt;&amp;lt;(&lt;/span&gt;&lt;span class="na"&gt;int&lt;/span&gt;&lt;span class="err"&gt;)&lt;/span&gt;&lt;span class="na"&gt;solution&lt;/span&gt;&lt;span class="err"&gt;.&lt;/span&gt;&lt;span class="na"&gt;size&lt;/span&gt;&lt;span class="err"&gt;();&lt;/span&gt; &lt;span class="na"&gt;i&lt;/span&gt;&lt;span class="err"&gt;++)&lt;/span&gt;
+        &lt;span class="err"&gt;{&lt;/span&gt;
+            &lt;span class="na"&gt;cout&lt;/span&gt;  &lt;span class="err"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="na"&gt;solution&lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="err"&gt;&amp;lt;&amp;lt;&amp;quot;&lt;/span&gt; &lt;span class="err"&gt;&amp;quot;;&lt;/span&gt;
+        &lt;span class="err"&gt;}&lt;/span&gt;
+        &lt;span class="na"&gt;cout&lt;/span&gt; &lt;span class="err"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="na"&gt;endl&lt;/span&gt;&lt;span class="err"&gt;;&lt;/span&gt;
+        &lt;span class="na"&gt;return&lt;/span&gt;&lt;span class="err"&gt;;&lt;/span&gt;
+    &lt;span class="err"&gt;}&lt;/span&gt;
+
+    &lt;span class="na"&gt;if&lt;/span&gt;&lt;span class="err"&gt;(&lt;/span&gt; &lt;span class="na"&gt;total&lt;/span&gt; &lt;span class="nt"&gt;&amp;gt;&lt;/span&gt; Target )
+        return;
+
+    for( int i=index; i&lt;span class="nt"&gt;&amp;lt;4&lt;/span&gt;&lt;span class="err"&gt;;&lt;/span&gt; &lt;span class="na"&gt;i&lt;/span&gt;&lt;span class="err"&gt;++)&lt;/span&gt;
+    &lt;span class="err"&gt;{&lt;/span&gt;
+        &lt;span class="na"&gt;total&lt;/span&gt; &lt;span class="err"&gt;+=&lt;/span&gt; &lt;span class="na"&gt;coin&lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="err"&gt;;&lt;/span&gt;
+        &lt;span class="na"&gt;solution&lt;/span&gt;&lt;span class="err"&gt;.&lt;/span&gt;&lt;span class="na"&gt;push_back&lt;/span&gt;&lt;span class="err"&gt;(&lt;/span&gt; &lt;span class="na"&gt;coin&lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; &lt;span class="err"&gt;);&lt;/span&gt;
+        &lt;span class="na"&gt;dfs&lt;/span&gt;&lt;span class="err"&gt;(&lt;/span&gt;&lt;span class="na"&gt;i&lt;/span&gt;&lt;span class="err"&gt;);&lt;/span&gt;
+        &lt;span class="na"&gt;solution&lt;/span&gt;&lt;span class="err"&gt;.&lt;/span&gt;&lt;span class="na"&gt;pop_back&lt;/span&gt;&lt;span class="err"&gt;();&lt;/span&gt;
+        &lt;span class="na"&gt;total&lt;/span&gt; &lt;span class="na"&gt;-=&lt;/span&gt;&lt;span class="s"&gt;coin&lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="s"&gt;;&lt;/span&gt;
+    &lt;span class="err"&gt;}&lt;/span&gt;
+&lt;span class="err"&gt;}&lt;/span&gt;
+
+&lt;span class="na"&gt;int&lt;/span&gt; &lt;span class="na"&gt;_tmain&lt;/span&gt;&lt;span class="err"&gt;(&lt;/span&gt;&lt;span class="na"&gt;int&lt;/span&gt; &lt;span class="na"&gt;argc&lt;/span&gt;&lt;span class="err"&gt;,&lt;/span&gt; &lt;span class="na"&gt;_TCHAR&lt;/span&gt;&lt;span class="err"&gt;*&lt;/span&gt; &lt;span class="na"&gt;argv&lt;/span&gt;&lt;span class="cp"&gt;[]&lt;/span&gt;&lt;span class="err"&gt;)&lt;/span&gt;
+&lt;span class="err"&gt;{&lt;/span&gt;
+    &lt;span class="na"&gt;while&lt;/span&gt;&lt;span class="err"&gt;(&lt;/span&gt;&lt;span class="na"&gt;1&lt;/span&gt;&lt;span class="err"&gt;)&lt;/span&gt;
+    &lt;span class="err"&gt;{&lt;/span&gt;
+        &lt;span class="na"&gt;count=&lt;/span&gt;&lt;span class="s"&gt;0;&lt;/span&gt;
+        &lt;span class="na"&gt;cin&lt;/span&gt; &lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;&amp;gt; Target;
+        dfs(0);
+        cout &lt;span class="err"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;&amp;lt; count&lt;/span&gt; &lt;span class="err"&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class="na"&gt;endl&lt;/span&gt;&lt;span class="err"&gt;;&lt;/span&gt;
+    &lt;span class="err"&gt;}&lt;/span&gt;
+    &lt;span class="na"&gt;return&lt;/span&gt; &lt;span class="na"&gt;0&lt;/span&gt;&lt;span class="err"&gt;;&lt;/span&gt;
+&lt;span class="err"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;2、马戏团里有个叠罗汉的表演，为了便于美观，下面的人身高和体重都要大于上面的人。现在知道n个演员的身高和体重，请问最多能叠多少层？&lt;/p&gt;
+&lt;p&gt;解答：&lt;/p&gt;
+&lt;p&gt;思路：&lt;/p&gt;
+&lt;p&gt;首先生成一个有向图，用连接矩阵的方式来表示。map[i][j]==1表示第i个人上面可以放第j个人。然后开始对每个人进行深度搜索，这个图中不可能有环。所以对于每个人来说就是一棵树，搜索树的高度，再找出最高的高度即是答案。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="vi"&gt;#include&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;stdafx.h&amp;quot;&lt;/span&gt;
+&lt;span class="vi"&gt;#include&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;iostream&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="vi"&gt;#include&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;fstream&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="vi"&gt;#include&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;vector&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="vi"&gt;#include&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;cstdlib&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="nx"&gt;using&lt;/span&gt; &lt;span class="nx"&gt;namespace&lt;/span&gt; &lt;span class="nx"&gt;std&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+&lt;span class="nx"&gt;int&lt;/span&gt; &lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="nx"&gt;double&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="nx"&gt;weight&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="nx"&gt;double&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="nb"&gt;height&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+&lt;span class="nx"&gt;int&lt;/span&gt; &lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="kt"&gt;map&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="nx"&gt;int&lt;/span&gt; &lt;span class="n"&gt;maxDepth&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+&lt;span class="nx"&gt;vector&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;int&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nx"&gt;bestPath&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+&lt;span class="nx"&gt;int&lt;/span&gt; &lt;span class="nx"&gt;dfs&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="nx"&gt;int&lt;/span&gt; &lt;span class="nb"&gt;index&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;vector&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;int&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="nb"&gt;path&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="nx"&gt;int&lt;/span&gt; &lt;span class="n"&gt;flag&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="nx"&gt;int&lt;/span&gt; &lt;span class="n"&gt;depth&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="nx"&gt;vector&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;int&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nx"&gt;bestPath&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="nb"&gt;for&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="nx"&gt;int&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nb"&gt;N&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="kt"&gt;map&lt;/span&gt;&lt;span class="err"&gt;[&lt;/span&gt;&lt;span class="nb"&gt;index&lt;/span&gt;&lt;span class="cp"&gt;][&lt;/span&gt;&lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; != 0)
+        { 
+            flag = 1;
+            vector&lt;span class="nt"&gt;&amp;lt;int&amp;gt;&lt;/span&gt; tPath;
+            int t = dfs(i, tPath);
+            if( t &amp;gt; depth )
+            {
+                path = tPath;
+                depth = t;
+            }
+        }
+    }
+
+    if( flag==0 )
+    {   
+        path.clear();
+        path.push_back(index);
+        return 1;
+    }
+    else
+    {
+//      path = bestPath;
+        path.push_back(index);
+        return depth+1;
+    }
+}
+
+void CreateMap()
+{
+    map = new int*&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nb"&gt;N&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;;
+
+    for( int i=0; i&lt;span class="nt"&gt;&amp;lt;N&lt;/span&gt;&lt;span class="err"&gt;;&lt;/span&gt; &lt;span class="na"&gt;i&lt;/span&gt;&lt;span class="err"&gt;++)&lt;/span&gt;
+    &lt;span class="err"&gt;{&lt;/span&gt;
+        &lt;span class="na"&gt;map&lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="na"&gt; =&lt;/span&gt;&lt;span class="err"&gt; &lt;/span&gt;&lt;span class="s"&gt;new&lt;/span&gt; &lt;span class="na"&gt;int&lt;/span&gt; &lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nb"&gt;N&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="err"&gt;;&lt;/span&gt;
+        &lt;span class="na"&gt;memset&lt;/span&gt;&lt;span class="err"&gt;(&lt;/span&gt; &lt;span class="na"&gt;map&lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="err"&gt;,&lt;/span&gt; &lt;span class="na"&gt;0&lt;/span&gt;&lt;span class="err"&gt;,&lt;/span&gt; &lt;span class="na"&gt;N&lt;/span&gt;&lt;span class="err"&gt;*&lt;/span&gt;&lt;span class="na"&gt;sizeof&lt;/span&gt;&lt;span class="err"&gt;(&lt;/span&gt;&lt;span class="na"&gt;int&lt;/span&gt;&lt;span class="err"&gt;)&lt;/span&gt; &lt;span class="err"&gt;);&lt;/span&gt;
+    &lt;span class="err"&gt;}&lt;/span&gt;
+
+    &lt;span class="na"&gt;for&lt;/span&gt;&lt;span class="err"&gt;(&lt;/span&gt; &lt;span class="na"&gt;int&lt;/span&gt; &lt;span class="na"&gt;i=&lt;/span&gt;&lt;span class="s"&gt;0;&lt;/span&gt; &lt;span class="na"&gt;i&lt;/span&gt;&lt;span class="err"&gt;&amp;lt;&lt;/span&gt;&lt;span class="na"&gt;N&lt;/span&gt;&lt;span class="err"&gt;;&lt;/span&gt; &lt;span class="na"&gt;i&lt;/span&gt;&lt;span class="err"&gt;++)&lt;/span&gt;
+    &lt;span class="err"&gt;{&lt;/span&gt;
+        &lt;span class="na"&gt;for&lt;/span&gt;&lt;span class="err"&gt;(&lt;/span&gt; &lt;span class="na"&gt;int&lt;/span&gt; &lt;span class="na"&gt;j=&lt;/span&gt;&lt;span class="s"&gt;0;&lt;/span&gt; &lt;span class="na"&gt;j&lt;/span&gt;&lt;span class="err"&gt;&amp;lt;&lt;/span&gt;&lt;span class="na"&gt;N&lt;/span&gt;&lt;span class="err"&gt;;&lt;/span&gt; &lt;span class="na"&gt;j&lt;/span&gt;&lt;span class="err"&gt;++)&lt;/span&gt;
+        &lt;span class="err"&gt;{&lt;/span&gt;
+            &lt;span class="na"&gt;if&lt;/span&gt;&lt;span class="err"&gt;(&lt;/span&gt; &lt;span class="na"&gt;weight&lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;j&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="err"&gt;&amp;lt;&lt;/span&gt;&lt;span class="na"&gt;weight&lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; &lt;span class="err"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="na"&gt;height&lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;j&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="err"&gt;&amp;lt;&lt;/span&gt;&lt;span class="na"&gt;height&lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; &lt;span class="err"&gt;)&lt;/span&gt;
+                &lt;span class="na"&gt;map&lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="cp"&gt;][&lt;/span&gt;&lt;span class="nx"&gt;j&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="na"&gt;=&lt;/span&gt;&lt;span class="s"&gt;1;&lt;/span&gt;
+        &lt;span class="err"&gt;}&lt;/span&gt;
+    &lt;span class="err"&gt;}&lt;/span&gt;
+&lt;span class="err"&gt;}&lt;/span&gt;
+
+&lt;span class="na"&gt;void&lt;/span&gt; &lt;span class="na"&gt;CreateData&lt;/span&gt;&lt;span class="err"&gt;()&lt;/span&gt;
+&lt;span class="err"&gt;{&lt;/span&gt;
+    &lt;span class="na"&gt;ofstream&lt;/span&gt; &lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="err"&gt;(&lt;/span&gt; &lt;span class="err"&gt;&amp;quot;&lt;/span&gt;&lt;span class="na"&gt;in&lt;/span&gt;&lt;span class="err"&gt;.&lt;/span&gt;&lt;span class="na"&gt;txt&lt;/span&gt;&lt;span class="err"&gt;&amp;quot;&lt;/span&gt; &lt;span class="err"&gt;);&lt;/span&gt;
+    &lt;span class="na"&gt;int&lt;/span&gt; &lt;span class="na"&gt;N =&lt;/span&gt;&lt;span class="err"&gt; &lt;/span&gt;&lt;span class="s"&gt;30;&lt;/span&gt;
+    &lt;span class="na"&gt;out&lt;/span&gt; &lt;span class="err"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="na"&gt;N&lt;/span&gt; &lt;span class="err"&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class="na"&gt;endl&lt;/span&gt;&lt;span class="err"&gt;;&lt;/span&gt;
+    &lt;span class="na"&gt;for&lt;/span&gt;&lt;span class="err"&gt;(&lt;/span&gt; &lt;span class="na"&gt;int&lt;/span&gt; &lt;span class="na"&gt;i=&lt;/span&gt;&lt;span class="s"&gt;0;&lt;/span&gt; &lt;span class="na"&gt;i&lt;/span&gt;&lt;span class="err"&gt;&amp;lt;&lt;/span&gt;&lt;span class="na"&gt;N&lt;/span&gt;&lt;span class="err"&gt;;&lt;/span&gt; &lt;span class="na"&gt;i&lt;/span&gt;&lt;span class="err"&gt;++)&lt;/span&gt;
+        &lt;span class="na"&gt;out&lt;/span&gt; &lt;span class="err"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="na"&gt;rand&lt;/span&gt;&lt;span class="err"&gt;()&lt;/span&gt; &lt;span class="err"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="err"&gt;&amp;quot;&lt;/span&gt; &lt;span class="err"&gt;&amp;quot;;&lt;/span&gt;
+    &lt;span class="na"&gt;out&lt;/span&gt; &lt;span class="err"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="na"&gt;endl&lt;/span&gt;&lt;span class="err"&gt;;&lt;/span&gt;
+
+    &lt;span class="na"&gt;for&lt;/span&gt;&lt;span class="err"&gt;(&lt;/span&gt; &lt;span class="na"&gt;int&lt;/span&gt; &lt;span class="na"&gt;i=&lt;/span&gt;&lt;span class="s"&gt;0;&lt;/span&gt; &lt;span class="na"&gt;i&lt;/span&gt;&lt;span class="err"&gt;&amp;lt;&lt;/span&gt;&lt;span class="na"&gt;N&lt;/span&gt;&lt;span class="err"&gt;;&lt;/span&gt; &lt;span class="na"&gt;i&lt;/span&gt;&lt;span class="err"&gt;++)&lt;/span&gt;
+        &lt;span class="na"&gt;out&lt;/span&gt; &lt;span class="err"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="na"&gt;rand&lt;/span&gt;&lt;span class="err"&gt;()&lt;/span&gt; &lt;span class="err"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="err"&gt;&amp;quot;&lt;/span&gt; &lt;span class="err"&gt;&amp;quot;;&lt;/span&gt;
+&lt;span class="err"&gt;}&lt;/span&gt;
+
+&lt;span class="na"&gt;int&lt;/span&gt; &lt;span class="na"&gt;main&lt;/span&gt;&lt;span class="err"&gt;()&lt;/span&gt;
+&lt;span class="err"&gt;{&lt;/span&gt;
+    &lt;span class="na"&gt;CreateData&lt;/span&gt;&lt;span class="err"&gt;();&lt;/span&gt;   
+    &lt;span class="na"&gt;freopen&lt;/span&gt;&lt;span class="err"&gt;(&lt;/span&gt; &lt;span class="err"&gt;&amp;quot;&lt;/span&gt;&lt;span class="na"&gt;in&lt;/span&gt;&lt;span class="err"&gt;.&lt;/span&gt;&lt;span class="na"&gt;txt&lt;/span&gt;&lt;span class="err"&gt;&amp;quot;,&lt;/span&gt; &lt;span class="err"&gt;&amp;quot;&lt;/span&gt;&lt;span class="na"&gt;r&lt;/span&gt;&lt;span class="err"&gt;&amp;quot;,&lt;/span&gt; &lt;span class="na"&gt;stdin&lt;/span&gt; &lt;span class="err"&gt;);&lt;/span&gt;
+    &lt;span class="na"&gt;cout&lt;/span&gt; &lt;span class="err"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="err"&gt;&amp;quot;&lt;/span&gt;&lt;span class="na"&gt;Please&lt;/span&gt; &lt;span class="na"&gt;input&lt;/span&gt; &lt;span class="na"&gt;N:&lt;/span&gt;&lt;span class="err"&gt;&amp;quot;&lt;/span&gt; &lt;span class="err"&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class="na"&gt;endl&lt;/span&gt;&lt;span class="err"&gt;;&lt;/span&gt;
+    &lt;span class="na"&gt;cin&lt;/span&gt; &lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;&amp;gt; N;
+    height = new double&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nb"&gt;N&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;;
+    weight = new double&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nb"&gt;N&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;;
+    for( int i=0; i&lt;span class="nt"&gt;&amp;lt;N&lt;/span&gt;&lt;span class="err"&gt;;&lt;/span&gt; &lt;span class="na"&gt;i&lt;/span&gt;&lt;span class="err"&gt;++)&lt;/span&gt;
+        &lt;span class="na"&gt;cin&lt;/span&gt; &lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;&amp;gt; height&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;;
+    for( int i=0; i&lt;span class="nt"&gt;&amp;lt;N&lt;/span&gt;&lt;span class="err"&gt;;&lt;/span&gt; &lt;span class="na"&gt;i&lt;/span&gt;&lt;span class="err"&gt;++)&lt;/span&gt;
+        &lt;span class="na"&gt;cin&lt;/span&gt; &lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;&amp;gt; weight&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;;
+
+    CreateMap();
+    int depth=0;
+    for(int i=0; i&lt;span class="nt"&gt;&amp;lt;N&lt;/span&gt;&lt;span class="err"&gt;;&lt;/span&gt;&lt;span class="na"&gt;i&lt;/span&gt;&lt;span class="err"&gt;++)&lt;/span&gt;
+    &lt;span class="err"&gt;{&lt;/span&gt;
+        &lt;span class="na"&gt;vector&lt;/span&gt;&lt;span class="err"&gt;&amp;lt;&lt;/span&gt;&lt;span class="na"&gt;int&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt; tPath;
+        int t=dfs(i,tPath);
+        if( t&amp;gt;depth )
+        {
+            bestPath = tPath;
+            depth = t;
+        }
+    }
+    cout &lt;span class="err"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;&amp;lt; depth&lt;/span&gt; &lt;span class="err"&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class="na"&gt;endl&lt;/span&gt;&lt;span class="err"&gt;;&lt;/span&gt;
+    &lt;span class="na"&gt;for&lt;/span&gt;&lt;span class="err"&gt;(&lt;/span&gt; &lt;span class="na"&gt;int&lt;/span&gt; &lt;span class="na"&gt;i=&lt;/span&gt;&lt;span class="s"&gt;0;&lt;/span&gt; &lt;span class="na"&gt;i&lt;/span&gt;&lt;span class="err"&gt;&amp;lt;(&lt;/span&gt;&lt;span class="na"&gt;int&lt;/span&gt;&lt;span class="err"&gt;)&lt;/span&gt;&lt;span class="na"&gt;bestPath&lt;/span&gt;&lt;span class="err"&gt;.&lt;/span&gt;&lt;span class="na"&gt;size&lt;/span&gt;&lt;span class="err"&gt;();&lt;/span&gt; &lt;span class="na"&gt;i&lt;/span&gt;&lt;span class="err"&gt;++)&lt;/span&gt;
+    &lt;span class="err"&gt;{&lt;/span&gt;
+        &lt;span class="na"&gt;cout&lt;/span&gt; &lt;span class="err"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="na"&gt;height&lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;bestPath&lt;/span&gt;&lt;span class="err"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="err"&gt;]&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="err"&gt;&amp;quot;&lt;/span&gt; &lt;span class="err"&gt;&amp;quot;&lt;/span&gt; &lt;span class="err"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="na"&gt;weight&lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;bestPath&lt;/span&gt;&lt;span class="err"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="err"&gt;]&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class="na"&gt;endl&lt;/span&gt;&lt;span class="err"&gt;;&lt;/span&gt;
+    &lt;span class="err"&gt;}&lt;/span&gt;
+    &lt;span class="na"&gt;return&lt;/span&gt; &lt;span class="na"&gt;0&lt;/span&gt;&lt;span class="err"&gt;;&lt;/span&gt;
+&lt;span class="err"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;strong&gt;各位如果有更好的答案，请留言评价，方便更多的人&lt;/strong&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Sun, 09 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-03-09:pages/2014/03/cxgc_2013_B.html</guid><category>创新工场笔试题</category></item><item><title>保护Ripple币以及万特币的几点安全措施</title><link>http://www.yanyulin.info/pages/2014/03/ripple_safe.html</link><description>&lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;如何保护ripple钱包，如何防止钱包被盗，本博文将向大家介绍几种方法&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;引言&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;万特币是基于&lt;code&gt;Ripple币&lt;/code&gt;的一种货币，具体简介，大家可以参考&lt;/p&gt;
