@@ -176,7 +176,138 @@
 &lt;p&gt;2、手机上玩的连连看，用什么算法可以找到两个相同的字符。（&lt;code&gt;BFS&lt;/code&gt;算法）&lt;/p&gt;
 &lt;p&gt;3、一群大雁在空中假设一字排开，如果每个大雁之间的前后距离不超过n，切任意两个大雁之间前后的距离只能是1-n的整数，同时不允许大雁之间出现交叉情况，即每个大雁只能向前方飞行，设计算法，打印出m只大雁之间在空中飞行可能出现的队形 &lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;大家可以参考&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Mon, 10 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-03-10:pages/2014/03/cxgc_2014_1.html</guid><category>创新工场面经</category></item><item><title>华为校园招聘面试经验2014年软件研发武汉区</title><link>http://www.yanyulin.info/pages/2014/03/huawei_2014_B.html</link><description>&lt;hr /&gt;
+&lt;p&gt;大家可以参考&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Mon, 10 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-03-10:pages/2014/03/cxgc_2014_1.html</guid><category>创新工场面经</category></item><item><title>创新工场校园招聘面经面试经验2014年武汉研发类</title><link>http://www.yanyulin.info/pages/2014/03/cxgc_2014_2.html</link><description>&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;本人没进面试，下面是身边同学的面试题目&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;1、如何优化快速排序&lt;/p&gt;
+&lt;p&gt;在这里我用的是&lt;code&gt;Median Of Three Partitioning&lt;/code&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="vi"&gt;#include&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;iostream&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="nx"&gt;using&lt;/span&gt; &lt;span class="nx"&gt;namespace&lt;/span&gt; &lt;span class="nx"&gt;std&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+&lt;span class="bp"&gt;void&lt;/span&gt; &lt;span class="nx"&gt;swap&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;int&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="nx"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;int&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="nx"&gt;b&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="nx"&gt;int&lt;/span&gt; &lt;span class="n"&gt;t&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="nx"&gt;a&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="nx"&gt;b&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;t&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="nx"&gt;int&lt;/span&gt; &lt;span class="nx"&gt;partition&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;int&lt;/span&gt; &lt;span class="kd"&gt;data&lt;/span&gt;&lt;span class="err"&gt;[&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;, int low, int high)
+{
+    int pivot = data&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;high&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;;
+    int i = low - 1;
+    int j = high;
+
+    while (1)
+    {
+        while (data&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; &lt;span class="nt"&gt;&amp;lt; pivot&lt;/span&gt;&lt;span class="err"&gt;)&lt;/span&gt;
+        &lt;span class="err"&gt;{&lt;/span&gt;
+        &lt;span class="err"&gt;}&lt;/span&gt;
+
+        &lt;span class="na"&gt;while&lt;/span&gt; &lt;span class="err"&gt;(&lt;/span&gt;&lt;span class="na"&gt;data&lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="nx"&gt;j&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; &lt;span class="nt"&gt;&amp;gt;&lt;/span&gt; pivot)
+        {
+            if (j == low)
+            {
+                break;
+            }
+        }
+
+        if (i &amp;gt;= j)
+        {
+            break;
+        }
+
+        swap(data&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;, data&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;j&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;);
+    }
+
+    swap(data&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;, data&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;high&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;);
+
+    return i;
+}
+
+void QuickSort(int data&lt;span class="cp"&gt;[]&lt;/span&gt;, int low, int high)
+{
+    if (low &amp;gt;= high)
+    {
+        return ;
+    }
+
+    int pivot = partition(data, low, high);
+
+    QuickSort(data, low, pivot-1);
+    QuickSort(data, pivot+1, high);
+}
+
+/*
+    函数介绍：Improved QuickSort
+    Median-of-Three Partitioning
+*/
+void QuickSort_Opt(int data&lt;span class="cp"&gt;[]&lt;/span&gt;, int low, int high)
+{
+    if (low &amp;gt;= high)
+    {
+        return ;
+    }
+
+    int mid = low + (high - low) / 2;
+
+    swap(data&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;mid&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;, data&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;high&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;);  // 用data&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;high&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;记录middle value，
+                                    // 并作为支点
+    if (data&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;low&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; &amp;gt; data&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;high&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;)
+    {
+        swap(data&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;low&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;, data&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;high&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;);
+    }
+
+    if (data&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;low&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; &amp;gt; data&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;high&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;)
+    {
+        swap(data&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;low&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;, data&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;high&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;);
+    }
+
+    if (data&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;high&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; &amp;gt; data&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;high&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;)
+    {
+        swap(data&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;high&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;, data&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;high&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;);
+    }
+
+    int pivot = partition(data, low+1, high-1); // 此处剔除了第一个元素和最后一个元素，
+                                                // 因为第一个元素肯定小于支点的值,
+                                                //最后一个元素肯定大于支点的值；
+
+    QuickSort_Opt(data, low, pivot-1);
+    QuickSort_Opt(data, pivot+1, high);
+}
+
+int main()
+{
+    int data&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;15&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; = {1, 3, 5, 7, 9, 2, 4, 6, 8, 10, -1, -3, -5, -7, -9};
+
+    QuickSort_Opt(data, 0, 14);
+
+    for (int i=0; i&lt;span class="nt"&gt;&amp;lt;15&lt;/span&gt;&lt;span class="err"&gt;;&lt;/span&gt; &lt;span class="err"&gt;++&lt;/span&gt;&lt;span class="na"&gt;i&lt;/span&gt;&lt;span class="err"&gt;)&lt;/span&gt;
+    &lt;span class="err"&gt;{&lt;/span&gt;
+        &lt;span class="na"&gt;cout&lt;/span&gt;&lt;span class="err"&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class="na"&gt;data&lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="err"&gt;&amp;lt;&amp;lt;&amp;quot;&lt;/span&gt; &lt;span class="err"&gt;&amp;quot;;&lt;/span&gt;
+    &lt;span class="err"&gt;}&lt;/span&gt;
+    &lt;span class="na"&gt;cout&lt;/span&gt;&lt;span class="err"&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class="na"&gt;endl&lt;/span&gt;&lt;span class="err"&gt;;&lt;/span&gt;
+
+    &lt;span class="na"&gt;system&lt;/span&gt;&lt;span class="err"&gt;(&amp;quot;&lt;/span&gt;&lt;span class="na"&gt;pause&lt;/span&gt;&lt;span class="err"&gt;&amp;quot;);&lt;/span&gt;
+    &lt;span class="na"&gt;return&lt;/span&gt; &lt;span class="na"&gt;0&lt;/span&gt;&lt;span class="err"&gt;;&lt;/span&gt;
+&lt;span class="err"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;2、图算法&lt;/p&gt;
+&lt;p&gt;最小生成树之Kruskal&lt;/p&gt;
+&lt;p&gt;3、如何判断两个节点是不是属于同一棵树？&lt;/p&gt;
+&lt;p&gt;考察并查集&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;Quick&lt;/span&gt; &lt;span class="n"&gt;Find&lt;/span&gt;
+
+&lt;span class="n"&gt;Quick&lt;/span&gt; &lt;span class="n"&gt;Union&lt;/span&gt;
+
+&lt;span class="n"&gt;Weighted&lt;/span&gt; &lt;span class="n"&gt;version&lt;/span&gt; &lt;span class="n"&gt;of&lt;/span&gt; &lt;span class="n"&gt;quick&lt;/span&gt; &lt;span class="k"&gt;union&lt;/span&gt;
+
+&lt;span class="n"&gt;Weighted&lt;/span&gt; &lt;span class="n"&gt;quick&lt;/span&gt; &lt;span class="k"&gt;union&lt;/span&gt; &lt;span class="n"&gt;with&lt;/span&gt; &lt;span class="n"&gt;Path&lt;/span&gt; &lt;span class="n"&gt;compression&lt;/span&gt; &lt;span class="n"&gt;by&lt;/span&gt; &lt;span class="n"&gt;halving&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;4、虚函数表放在什么地方？&lt;/p&gt;
+&lt;p&gt;根据网上查资料，得出结论是虚函数表在Linux/Unix中存放在可执行文件的只读数据段中（rodata），在微软的编译器中，虚函数表存放在常量段中&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Mon, 10 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-03-10:pages/2014/03/cxgc_2014_2.html</guid><category>创新工场面经</category></item><item><title>华为校园招聘面试经验2014年软件研发武汉区</title><link>http://www.yanyulin.info/pages/2014/03/huawei_2014_B.html</link><description>&lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;华为，我们不仅仅是世界500强&lt;/strong&gt;，这是今年华为校招时的口号~~~&lt;/p&gt;
 &lt;p&gt;华为要想进行面试，面试之前必须要过机试，机试有三道题，只要做对一道，就有机会进入面试，但是推荐大家还是全做完，也不是很难，而且要尽快做完，因为成绩的取得要依赖于做题的时间，答对的题数，提交的次数...&lt;/p&gt;
 &lt;p&gt;我应聘的是&lt;code&gt;研究工程师&lt;/code&gt;，面试问的全是项目&lt;/p&gt;
