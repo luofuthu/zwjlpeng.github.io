@@ -2,7 +2,7 @@
 <html lang="zh">
 <head>
 <title>
-2013年谷歌校招笔试(一) - 烟雨林</title>
+美团网校园招聘面经2014年软件研发 - 烟雨林</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
 <meta name="author" content="烟雨林">
@@ -45,15 +45,15 @@
 		<div id="content">							 
 					<div id="map">
 						<div class="browse">现在的位置: <a title="返回首页" href="http://www.yanyulin.info">烟雨首页</a> ＞
-						<a href="http://www.yanyulin.info/category/cheng-xu-yuan-zhao-gong-zuo.html" title="查看程序员找工作中的全部文章" rel="category tag">程序员找工作</a>＞正文</div>
+						<a href="http://www.yanyulin.info/category/cheng-xu-yuan-de-mian-jing.html" title="查看程序员的面经中的全部文章" rel="category tag">程序员的面经</a>＞正文</div>
 						<div class="font"><a href="javascript:doZoom(12)">小</a> <a href="javascript:doZoom(13)">中</a> <a href="javascript:doZoom(18)">大</a></div>
 					</div>
 					<div class="entry_box_s">
 						<div class="entry_title_box">
-							<div class="entry_title">2013年谷歌校招笔试(一)</div>
+							<div class="entry_title">美团网校园招聘面经2014年软件研发</div>
 							<div class="archive_info">
-								<span class="date">2013-06-11</span>
-								<span class="category"> ⁄ <a href="http://www.yanyulin.info/category/cheng-xu-yuan-zhao-gong-zuo.html" title="查看程序员找工作中的全部文章" rel="category tag">程序员找工作</a></span>
+								<span class="date">2014-03-10</span>
+								<span class="category"> ⁄ <a href="http://www.yanyulin.info/category/cheng-xu-yuan-de-mian-jing.html" title="查看程序员的面经中的全部文章" rel="category tag">程序员的面经</a></span>
 							</div>
 						</div>
 						<div class="entry">
@@ -79,97 +79,34 @@
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 </div>
-							<hr />
-<p>一：单选题</p>
-<p>1：使用C语言将一个1G字节的数组从头到尾全部设置为’A’,在一台典型的当代PC上，需要花费的CPU时间的数量级最接近：(<code>B</code>)</p>
-<p>A 0.001秒 B 1秒 C 100秒 D 2小时</p>
-<p>2：在某些极端要求性能的场合，我们需要对程序进行优化，关天优化，以下说法正确的是(<code>D</code>)</p>
-<p>A 将程序整个用汇编语言改写会大大提高程序性能</p>
-<p>B 在优化前，可以先确定哪部分代码最费时，然后对这部份代码用汇编改写，使用汇编的语句越少，程序运行的越快。</p>
-<p>C:使用汇编语句虽然可以提高程序的性能，但会降低程序的可移植性，所以应该绝对避免</p>
-<p>D:适当调整汇编指令的顺序，可以缩短程序的运行时间 </p>
-<p>3:对如下C语言程序在普通的X86PC上运行输出正确的是(<code>B</code>)</p>
-<div class="highlight"><pre><span class="n">Char</span> <span class="o">*</span> <span class="nf">f</span><span class="p">()</span>
-<span class="p">{</span>
-<span class="n">Char</span> <span class="n">x</span><span class="p">[</span><span class="mi">512</span><span class="p">];</span>
-<span class="n">Sprintf</span><span class="p">(</span><span class="n">x</span> <span class="p">,</span><span class="err">”</span><span class="n">hello</span> <span class="n">world</span><span class="err">”</span><span class="p">);</span>
-<span class="n">Return</span> <span class="n">x</span><span class="o">+</span><span class="mi">6</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="n">Main</span><span class="p">()</span>
-<span class="p">{</span>
-<span class="n">Printf</span><span class="p">(</span><span class="err">“</span><span class="o">%</span><span class="n">s</span><span class="err">”</span><span class="p">,</span><span class="n">f</span><span class="p">());</span>
-<span class="p">}</span>
-</pre></div>
-
-
-<p>A 程序可能崩溃，也可能输出<code>hello world</code></p>
-<p>B 程序可能崩溃，也可能输出 <code>world</code></p>
-<p>C 程序可能崩溃，也可能输出<code>hello</code></p>
-<p>D 程序一定崩溃</p>
-<p>4:方程<code>X1+X2+X3+X4=30</code>,有多少满足<code>X1&gt;=2,X2&gt;=0,X3&gt;=-5,X4&gt;=8</code>的整数解（<code>A</code>）</p>
-<p>A 3276  B:3654 C:2925 D:17550</p>
-<p>5:一个袋子里装了100个苹果，100个香蕉，100个桔子，100个梨，如果每分钟从里面随机抽取一种水果，那么最多过多少分钟肯定至少能拿到一打相同种类的水果(1打=12)（<code>D</code>）</p>
-<p>A:40 B:12 C:24 D:45</p>
-<p>6:双败淘汰赛与淘汰赛相仿，也是负者出局，但负一场并未淘汰，只是跌入负者组，在负者组再负者（即总共已负两场）才被淘汰，现在有10个人来参加又败淘汰赛，假设我们取消最后胜利组冠军的比赛，那么一共需要多少场比赛？（<code>B</code>）</p>
-<p>A:16 B:17 C:18 D:19 E:20</p>
-<p>7:n个结点的二叉树，最多可以有多少层(<code>D</code>)</p>
-<p>A: n/2 B:log(n) C:n-1 D:n</p>
-<p>8:下面哪一个序列不是上图的一个拓扑排序？（<code>C</code>）</p>
-<p>A:ebfgadch B:aebdfch C:adchebfg D:aedbfgch</p>
-<p>9：假如某主机安装了2GB内存，在其上运行的某支持MMU的32位Linux发行版中，一共运行了X,Y,Z三个进程，下面关于三个进程使用的内存方式，哪个是可行的(<code>D</code>)</p>
-<p>A.X,Y,Z的虚拟地址空间都映射到0-4G的虚拟地址上</p>
-<p>B.X在堆上分配总大小为1GB的空间，Y在堆上分配200MB,Z在堆上分配500MB，并且内存映射访问一个1GB的文件。</p>
-<p>C.X在堆上分配1GB,Y在堆上分配800MB,Z在堆上分配400MB</p>
-<p>D.以上访问方式都是可行的</p>
-<p>10：当使用TCP协议编程时，下列问题哪个是由程序员考虑和处理的(<code>D</code>)</p>
-<p>A:乱序数据包的传递 </p>
-<p>B数据传输过程中的纠错 </p>
-<p>C:网络拥塞处理 </p>
-<p>D:发送数据的格式与应用层的协议</p>
-<p>二：程序设计与算法</p>
-<p>1：给定三个整数a,b,c实现函数int median(int a,int b,int c),返回三个数的中位数，不可以使用sort,要求整数操作（比较,位运行，加减乘除)次数尽量少，并分析说明程序最坏和平均情况下使用的操作次数</p>
-<div class="highlight"><pre><span class="kt">int</span> <span class="nf">median</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span><span class="kt">int</span> <span class="n">b</span><span class="p">,</span><span class="kt">int</span> <span class="n">c</span><span class="p">)</span>
-<span class="p">{</span>
-<span class="kt">int</span> <span class="n">abMax</span><span class="o">=</span><span class="p">((</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">)</span><span class="o">+</span><span class="n">abs</span><span class="p">(</span><span class="n">a</span><span class="o">-</span><span class="n">b</span><span class="p">))</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span>
-<span class="kt">int</span> <span class="n">acMax</span><span class="o">=</span><span class="p">((</span><span class="n">a</span><span class="o">+</span><span class="n">c</span><span class="p">)</span><span class="o">+</span><span class="n">abs</span><span class="p">(</span><span class="n">a</span><span class="o">-</span><span class="n">c</span><span class="p">))</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span>
-<span class="k">if</span><span class="p">(</span><span class="n">abMax</span><span class="o">!=</span><span class="n">acMax</span><span class="p">)</span>
-<span class="k">return</span> <span class="n">abMax</span><span class="o">&lt;</span><span class="n">acMax</span><span class="o">?</span><span class="n">abMax</span><span class="o">:</span><span class="n">acMax</span><span class="p">;</span>
-<span class="k">else</span>
-<span class="k">return</span> <span class="p">((</span><span class="n">b</span><span class="o">+</span><span class="n">c</span><span class="p">)</span><span class="o">+</span><span class="n">abs</span><span class="p">(</span><span class="n">b</span><span class="o">-</span><span class="n">c</span><span class="p">))</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
-
-
-<p>2：给定一个key(只含有ASCII编码的小写英文字母),例如kof，然后对input的string(只含有ASCII编码的小写英文字母)利用这个key进行排序，顺序是:先按照key中的字符顺序，然后对key中不包含key的字符，按a-z排序</p>
-<div class="highlight"><pre><span class="vi">#include</span><span class="o">&lt;</span><span class="nx">iostream</span><span class="o">&gt;</span>
-<span class="vi">#include</span><span class="o">&lt;</span><span class="nx">algorithm</span><span class="o">&gt;</span>
-<span class="vi">#include</span><span class="o">&lt;</span><span class="kt">string</span><span class="bp">.</span><span class="nx">h</span><span class="o">&gt;</span>
-<span class="nx">using</span> <span class="nx">namespace</span> <span class="nx">std</span><span class="p">;</span>
-<span class="nx">int</span> <span class="nx">main</span><span class="p">()</span>
-<span class="p">{</span>
-<span class="nx">char</span> <span class="nb">key</span><span class="err">[</span><span class="mi">4</span><span class="cp">]</span>=&quot;kof&quot;;
-char str<span class="cp">[</span><span class="mi">50</span><span class="cp">]</span>=&quot;wqtewqtewkwetiowoweff&quot;;
-sort(str,str+strlen(str));
-int flag=0;
-for(int i=0;i<span class="nt">&lt;strlen</span><span class="err">(</span><span class="na">key</span><span class="err">);</span><span class="na">i</span><span class="err">++)</span>
-<span class="err">{</span>
-<span class="na">for</span><span class="err">(</span><span class="na">int</span> <span class="na">j=</span><span class="s">0;j&lt;strlen(str);j++)</span>
-<span class="err">{</span>
-<span class="na">if</span><span class="err">(</span><span class="na">key</span><span class="cp">[</span><span class="nx">i</span><span class="cp">]</span><span class="na">=</span><span class="s">=str</span><span class="cp">[</span><span class="nx">j</span><span class="cp">]</span><span class="s">)</span>
-<span class="err">{</span>
-<span class="na">for</span><span class="err">(</span><span class="na">int</span> <span class="na">k=</span><span class="s">j;k</span><span class="nt">&gt;</span>flag;k--)
-{
-str<span class="cp">[</span><span class="nx">k</span><span class="cp">]</span>=str<span class="cp">[</span><span class="nx">k</span><span class="o">-</span><span class="mi">1</span><span class="cp">]</span>;
-}
-str<span class="cp">[</span><span class="nx">flag</span><span class="cp">]</span>=key<span class="cp">[</span><span class="nx">i</span><span class="cp">]</span>;
-++flag;
-}
-}
-}
-</pre></div>
+							<p><code>UC</code>的笔试之类的，最后都没过。然后我就决定暑假恶补基础，暑假回家之后由于一些原因决定卖队友大四不参加比赛了，不过...</p>
+<hr />
+<p>从半年前开始找工作，一路被鄙视到现在。以至于面了一些公司也不敢发帖写面经了</p>
+<p>作为一个没有项目经验的渣渣，一开始问啥啥都不会，</p>
+<p>回忆一下，半年前找实习的时候，我第一次笔试和面试都给了<code>CVTE</code>，当时因为选错方向就跪了。腾讯实习的时候也是选错方向，加上基础差，没经验也跪了。也不怕死的投了微软，做了一份全英的试题。还有UC的笔试之类的，最后都没过。然后我就决定暑假恶补基础，暑假回家之后由于一些原因决定卖队友大四不参加比赛了，不过那时候没怎么练也打不过师弟师妹们了，还不如把机会让给他们去练练</p>
+<p>九月份一开始我就基本上有校园招聘并且在广州有考场的公司都投了简历,第一场笔试应该是美团网的，一开始我不知道有这个，同学说明天就要截止了就顺手投了一份</p>
+<p>美团的笔试题：</p>
+<p><a  href="http://www.yanyulin.info/pages/2014/03/meituan_2014_B.html" target="_blank">美团网校招笔试题2014年研发东北</a></p>
+<p>还好数学题我会，前5道都做出来了，第6道做过反而没写完...</p>
+<p>剑指Offer里面第一道题就是，<code>O(n+m)</code>的解法就5行吧，之前看过二分的写法而且一个星期前还敲过，最后居然没写不出来，只写了个想法...</p>
+<p>之后收到第二天的面试通知</p>
+<p>一面问了一些基础问题</p>
+<p>C++类的……之类的</p>
+<p>有一道算法题，叫你写出 将1到n按字典序排序输出的程序</p>
+<p>二面的时候也问了</p>
+<p>一些C++的基础题，</p>
+<p>还有 求第k大数 这类问题网上都有详细的解法，我就不说了</p>
+<p>还问了一些关于优化的问题，具体忘了，反正答得不顺利，表现不好，面试官叹了几声气</p>
+<p>我就有种不详的预感了，最后他用两个问题把我秒了</p>
+<p>问：你操作系统，数据库，网络哪个学得好?(其实我感觉都没学好)</p>
+<p>答：操作系统……吧</p>
+<p>问：CPU的调度算法有哪些？</p>
+<p>答：……（我只知道进程的）</p>
+<p>之后问了一些linux的操作命令，例如：软链接和硬链接是什么？</p>
+<p>二面就结束了。之后没有接到三面。</p>
 						  <div class="clear"></div>
 							</div>
-							<b>本文地址:</b> <a href="http://www.yanyulin.info/pages/2013/06/google_2013_1.html" target="_self">http://www.yanyulin.info/pages/2013/06/google_2013_1.html</a>
+							<b>本文地址:</b> <a href="http://www.yanyulin.info/pages/2014/03/meituan_2014_2.html" target="_self">http://www.yanyulin.info/pages/2014/03/meituan_2014_2.html</a>
 							<div><font color="blue"><b>转载时请保留本文出处,谢谢您的合作</b></font></div>
 							<hr/>
 							<div class="clear" align="left">
@@ -201,10 +138,10 @@ str<span class="cp">[</span><span class="nx">flag</span><span class="cp">]</span
 					<!-- end: entrymeta -->
 				<div class="context_b" align="left">
 					 上一篇: 
-  				 <a href="http://www.yanyulin.info/pages/2013/06/huawei_2013_1.html" title="2013年华为校招机试(一)" target="_self">2013年华为校招机试(一)</a>
+  				 <a href="http://www.yanyulin.info/pages/2014/03/meituan_2014_B.html" title="美团网校招笔试题2014年研发东北" target="_self">美团网校招笔试题2014年研发东北</a>
   				 &nbsp;&nbsp
   				 下一篇:
-  				 <a href="http://www.yanyulin.info/pages/2013/07/string.html" title="String StringBuffer StringBuilder的区别分析" target="_self">String StringBuffer StringBuilder的区别分析</a>
+  				 <a href="http://www.yanyulin.info/pages/2014/03/cvte_2014_1.html" title="CVTE校园招聘面经2014年软件研发面经" target="_self">CVTE校园招聘面经2014年软件研发面经</a>
 					 
 				</div>
 				<div class="context_b">
@@ -215,10 +152,18 @@ str<span class="cp">[</span><span class="nx">flag</span><span class="cp">]</span
   				 <tr>
  
   				 <td width="50%" align="left">
-  				 <a href="http://www.yanyulin.info/pages/2013/06/google_2013_1.html" title="2013年谷歌校招笔试(一)" target="_blank">2013年谷歌校招笔试(一)</a>
+  				 <a href="http://www.yanyulin.info/pages/2014/03/meituan_2014_1.html" title="美团网校园招聘2014年面经(软件研发)" target="_blank">美团网校园招聘2014年面经(软件研发)</a>
   				 </td>
 	
+	 
  
+  				 <td width="50%" align="left">
+  				 <a href="http://www.yanyulin.info/pages/2014/03/meituan_2014_2.html" title="美团网校园招聘面经2014年软件研发" target="_blank">美团网校园招聘面经2014年软件研发</a>
+  				 </td>
+	
+  				 </tr>
+ 
+  				 <td><a href="#" align="left"></a></td>
   				 <td><a href="#" align="left"></a></td>
 			</table>
 				</div>
@@ -265,19 +210,17 @@ str<span class="cp">[</span><span class="nx">flag</span><span class="cp">]</span
 				<h3>相关标签</h3>
 				<div class="box">			
 						<div class="textwidget">
-							<a href="http://www.yanyulin.info/tag/mei-tuan-wang-bi-shi-ti.html" title="查看美团网笔试题下的所有文章" target="_blank">美团网笔试题</a>
-							<a href="http://www.yanyulin.info/tag/chuang-xin-gong-chang-bi-shi-ti.html" title="查看创新工场笔试题下的所有文章" target="_blank">创新工场笔试题</a>
-							<a href="http://www.yanyulin.info/tag/qu-na-wang-bi-shi-ti.html" title="查看去哪网笔试题下的所有文章" target="_blank">去哪网笔试题</a>
-							<a href="http://www.yanyulin.info/tag/hua-wei-bi-shi-ti.html" title="查看华为笔试题下的所有文章" target="_blank">华为笔试题</a>
-							<a href="http://www.yanyulin.info/tag/ren-ren-wang-bi-shi-ti.html" title="查看人人网笔试题下的所有文章" target="_blank">人人网笔试题</a>
-							<a href="http://www.yanyulin.info/tag/bai-du-bi-shi-ti.html" title="查看百度笔试题下的所有文章" target="_blank">百度笔试题</a>
-							<a href="http://www.yanyulin.info/tag/ya-ma-xun-bi-shi-ti.html" title="查看亚马逊笔试题下的所有文章" target="_blank">亚马逊笔试题</a>
-							<a href="http://www.yanyulin.info/tag/wei-ruan-bi-shi-ti.html" title="查看微软笔试题下的所有文章" target="_blank">微软笔试题</a>
-							<a href="http://www.yanyulin.info/tag/ya-hu-bi-shi-ti.html" title="查看雅虎笔试题下的所有文章" target="_blank">雅虎笔试题</a>
-							<a href="http://www.yanyulin.info/tag/zhong-xing-bi-shi-ti.html" title="查看中兴笔试题下的所有文章" target="_blank">中兴笔试题</a>
-							<a href="http://www.yanyulin.info/tag/a-li-ba-ba-bi-shi-ti.html" title="查看阿里巴巴笔试题下的所有文章" target="_blank">阿里巴巴笔试题</a>
-							<a href="http://www.yanyulin.info/tag/bao-feng-bi-shi-ti.html" title="查看暴风笔试题下的所有文章" target="_blank">暴风笔试题</a>
-							<a href="http://www.yanyulin.info/tag/gu-ge-bi-shi-ti.html" title="查看谷歌笔试题下的所有文章" target="_blank">谷歌笔试题</a>
+							<a href="http://www.yanyulin.info/tag/teng-xun-mian-jing.html" title="查看腾讯面经下的所有文章" target="_blank">腾讯面经</a>
+							<a href="http://www.yanyulin.info/tag/mei-tuan-mian-jing.html" title="查看美团面经下的所有文章" target="_blank">美团面经</a>
+							<a href="http://www.yanyulin.info/tag/da-zhong-dian-ping-mian-jing.html" title="查看大众点评面经下的所有文章" target="_blank">大众点评面经</a>
+							<a href="http://www.yanyulin.info/tag/hua-wei-mian-jing.html" title="查看华为面经下的所有文章" target="_blank">华为面经</a>
+							<a href="http://www.yanyulin.info/tag/qi-ta-mian-jing.html" title="查看其他面经下的所有文章" target="_blank">其他面经</a>
+							<a href="http://www.yanyulin.info/tag/a-li-mian-jing.html" title="查看阿里面经下的所有文章" target="_blank">阿里面经</a>
+							<a href="http://www.yanyulin.info/tag/bai-du-mian-jing.html" title="查看百度面经下的所有文章" target="_blank">百度面经</a>
+							<a href="http://www.yanyulin.info/tag/qu-na-mian-jing.html" title="查看去哪面经下的所有文章" target="_blank">去哪面经</a>
+							<a href="http://www.yanyulin.info/tag/ren-ren-mian-jing.html" title="查看人人面经下的所有文章" target="_blank">人人面经</a>
+							<a href="http://www.yanyulin.info/tag/wang-yi-mian-jing.html" title="查看网易面经下的所有文章" target="_blank">网易面经</a>
+							<a href="http://www.yanyulin.info/tag/yin-xing-mian-jing.html" title="查看银行面经下的所有文章" target="_blank">银行面经</a>
 						</div>
 				</div>
 				<h3>本站直达</h3>
@@ -344,25 +287,25 @@ str<span class="cp">[</span><span class="nx">flag</span><span class="cp">]</span
 				<ul>
 				<ul class="random-post-link">
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2013/12/htaccess.html" title=".htaccess简明教程(SEO优化)">.htaccess简明教程(SEO优化)</a>
+				<a href="http://www.yanyulin.info/pages/2014/03/concurrent.html" title="Linux系统中并发与竞争机制分析">Linux系统中并发与竞争机制分析</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2014/03/tencent_2014_1.html" title="腾讯校园招聘面经2014年软件研发面经">腾讯校园招聘面经2014年软件研发面经</a>
+				<a href="http://www.yanyulin.info/pages/2014/01/qunar_1.html" title="去哪儿网校招2014年面经">去哪儿网校招2014年面经</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2014/03/huawei_2014_3.html" title="校园招聘华为上机试题2014年武汉地区">校园招聘华为上机试题2014年武汉地区</a>
+				<a href="http://www.yanyulin.info/pages/2014/03/huawei_2014_2.html" title="华为校招机试2014年北京试题">华为校招机试2014年北京试题</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2013/12/perl.html" title="编程珠玑(作者:John Bently)">编程珠玑(作者:John Bently)</a>
+				<a href="http://www.yanyulin.info/pages/2013/11/objectModel.html" title="深度探索C++对象模型">深度探索C++对象模型</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2013/12/psbase2.html" title="Photoshop CS视频教程(下)">Photoshop CS视频教程(下)</a>
+				<a href="http://www.yanyulin.info/pages/2013/11/vlinux2.html" title="Linux基础教程视频版(很详细)">Linux基础教程视频版(很详细)</a>
 				</li>
 				<li class="random-post-link">
 				<a href="http://www.yanyulin.info/pages/2014/03/getxrp.html" title="【赠送】ripple币免费获取&免费领取">【赠送】ripple币免费获取&免费领取</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2014/03/zhihu_2.html" title="一款自动发链接软件的实现细节分析">一款自动发链接软件的实现细节分析</a>
+				<a href="http://www.yanyulin.info/pages/2014/03/zhihu_1.html" title="一款自动发链接的软件设计思路">一款自动发链接的软件设计思路</a>
 				</li>
 				<li class="random-post-link">
 				<a href="http://www.yanyulin.info/pages/2014/03/duoshuo.html" title="多说评论框如何|怎么样|实际测试">多说评论框如何|怎么样|实际测试</a>
@@ -414,16 +357,16 @@ var duoshuoQuery = {short_name:"yanyulin"};
 				<div class="box_r">
 				<ul>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2014/02/classinitiallist.html" rel="bookmark" title="C++中类初始化列表的妙用">C++中类初始化列表的妙用</a>
+				<a href="http://www.yanyulin.info/pages/2014/02/linux1.html" rel="bookmark" title="快速介绍Linux（Linux入门教程）">快速介绍Linux（Linux入门教程）</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2014/03/tencent_2014_1.html" rel="bookmark" title="腾讯校园招聘面经2014年软件研发面经">腾讯校园招聘面经2014年软件研发面经</a>
+				<a href="http://www.yanyulin.info/pages/2013/12/neteasyM_1.html" rel="bookmark" title="网易校招2014年电商面经">网易校招2014年电商面经</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2014/03/huawei_2014_3.html" rel="bookmark" title="校园招聘华为上机试题2014年武汉地区">校园招聘华为上机试题2014年武汉地区</a>
+				<a href="http://www.yanyulin.info/pages/2013/12/yahoo_2014_A.html" rel="bookmark" title="雅虎2014年校招笔试题">雅虎2014年校招笔试题</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2013/12/perl.html" rel="bookmark" title="编程珠玑(作者:John Bently)">编程珠玑(作者:John Bently)</a>
+				<a href="http://www.yanyulin.info/pages/2013/11/effective.html" rel="bookmark" title="Effective C++(编程的50个细节)">Effective C++(编程的50个细节)</a>
 				</li>
 				<li>
 				<a href="http://www.yanyulin.info/pages/2013/11/vlinux1.html" rel="bookmark" title="Linux入门版视频教程(基础)">Linux入门版视频教程(基础)</a>
@@ -432,7 +375,7 @@ var duoshuoQuery = {short_name:"yanyulin"};
 				<a href="http://www.yanyulin.info/pages/2014/03/getxrp.html" rel="bookmark" title="【赠送】ripple币免费获取&免费领取">【赠送】ripple币免费获取&免费领取</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2013/12/qqLogin_1.html" rel="bookmark" title="界面编程模仿篇(QQ登录界面逼真篇)">界面编程模仿篇(QQ登录界面逼真篇)</a>
+				<a href="http://www.yanyulin.info/pages/2014/03/zhihu_2.html" rel="bookmark" title="一款自动发链接软件的实现细节分析">一款自动发链接软件的实现细节分析</a>
 				</li>
 				<li>
 				<a href="http://www.yanyulin.info/pages/2014/03/duoshuo.html" rel="bookmark" title="多说评论框如何|怎么样|实际测试">多说评论框如何|怎么样|实际测试</a>
