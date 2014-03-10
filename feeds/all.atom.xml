@@ -1,5 +1,210 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>烟雨林</title><link href="http://www.yanyulin.info/" rel="alternate"></link><link href="http://www.yanyulin.info/feeds/all.atom.xml" rel="self"></link><id>http://www.yanyulin.info/</id><updated>2014-03-10T00:00:00+08:00</updated><entry><title>腾讯校园招聘面经2014年软件研发面经</title><link href="http://www.yanyulin.info/pages/2014/03/tencent_2014_1.html" rel="alternate"></link><updated>2014-03-10T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-10:pages/2014/03/tencent_2014_1.html</id><summary type="html">&lt;hr /&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>烟雨林</title><link href="http://www.yanyulin.info/" rel="alternate"></link><link href="http://www.yanyulin.info/feeds/all.atom.xml" rel="self"></link><id>http://www.yanyulin.info/</id><updated>2014-03-10T00:00:00+08:00</updated><entry><title>美团网校招笔试题2014年研发东北</title><link href="http://www.yanyulin.info/pages/2014/03/meituan_2014_B.html" rel="alternate"></link><updated>2014-03-10T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-10:pages/2014/03/meituan_2014_B.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;如有错误，或更加精简的方法，请留言，我会更正，以方便更多的人&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;1、一堆硬币，一个机器人，如果是反的就翻正，如果是正的就抛掷一次，无穷多次后，求正反的比例&lt;/p&gt;
+&lt;p&gt;解析：假设某个阶段正面硬币的比例为p，则反面的比例为1-p，下一次翻转后，p的部分分为p/2的正面、p/2的反面，而1-p的反面部分全部变为正面。趋于平衡时，前后两次正反的比例应相等，即：p/(1-p)=(p/2+(1-p))/(p/2)，得到p=2/3。&lt;/p&gt;
+&lt;p&gt;更直接一点，翻转前后正面（反面）相等，即p=p/2+(1-p)，直接得到p=2/3。&lt;/p&gt;
+&lt;p&gt;2、概率题：一个汽车公司的产品，甲厂占40%，乙厂占60%，甲的次品率是1%，乙的次品率是2%，现在抽出一件汽车时次品，问是甲生产的可能性&lt;/p&gt;
+&lt;p&gt;解：p=1/4利用贝叶斯,感谢网友指正~&lt;/p&gt;
+&lt;p&gt;3、100盏等，熄熄灭灭，求最后亮的&lt;/p&gt;
+&lt;p&gt;解：应该是相当于求1-100这100个数的因子个数，因子个数为奇数的就是亮的灯。又因为所有的数分解为两个不相同的数的时候为两个因子，因此只有平方数满足要求。共有10盏灯。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="err"&gt;（&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="err"&gt;）&lt;/span&gt;
+&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="err"&gt;（&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="err"&gt;，&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="err"&gt;，&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="err"&gt;）&lt;/span&gt;
+&lt;span class="mi"&gt;9&lt;/span&gt; &lt;span class="err"&gt;（&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="err"&gt;，&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="err"&gt;，&lt;/span&gt;&lt;span class="mi"&gt;9&lt;/span&gt;&lt;span class="err"&gt;）&lt;/span&gt;
+&lt;span class="mi"&gt;16&lt;/span&gt; &lt;span class="err"&gt;（&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="err"&gt;，&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="err"&gt;，&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="err"&gt;，&lt;/span&gt;&lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="err"&gt;，&lt;/span&gt;&lt;span class="mi"&gt;16&lt;/span&gt;&lt;span class="err"&gt;）&lt;/span&gt;
+&lt;span class="mi"&gt;25&lt;/span&gt;
+&lt;span class="mi"&gt;36&lt;/span&gt;
+&lt;span class="mi"&gt;49&lt;/span&gt;
+&lt;span class="mi"&gt;64&lt;/span&gt;
+&lt;span class="mi"&gt;81&lt;/span&gt;
+&lt;span class="mi"&gt;100&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;4、链表翻转,给出一个链表和一个数k，比如链表1→2→3→4→5→6，k=2，则翻转后2→1→4→3→6→5，若k=3,翻转后3→2→1→6→5→4，若k=4，翻转后4→3→2→1→5→6，用程序实现. &lt;/p&gt;
+&lt;p&gt;解:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="vi"&gt;#include&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;iostream&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="nx"&gt;using&lt;/span&gt; &lt;span class="nx"&gt;namespace&lt;/span&gt; &lt;span class="nx"&gt;std&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+&lt;span class="nx"&gt;struct&lt;/span&gt; &lt;span class="nb"&gt;ListNode&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="nx"&gt;int&lt;/span&gt; &lt;span class="nx"&gt;m_nValue&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="nb"&gt;ListNode&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="nx"&gt;m_pNext&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;};&lt;/span&gt;
+
+&lt;span class="nb"&gt;ListNode&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="nx"&gt;CreateList&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;int&lt;/span&gt; &lt;span class="nx"&gt;val&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="nb"&gt;ListNode&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;pHead&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;new&lt;/span&gt; &lt;span class="nb"&gt;ListNode&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+    &lt;span class="nx"&gt;pHead&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="nx"&gt;m_nValue&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;val&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="nx"&gt;pHead&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="nx"&gt;m_pNext&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kt"&gt;NULL&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nx"&gt;pHead&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="bp"&gt;void&lt;/span&gt; &lt;span class="nx"&gt;InsertNode&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;ListNode&lt;/span&gt; &lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="nx"&gt;pHead&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;int&lt;/span&gt; &lt;span class="nx"&gt;val&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="nb"&gt;ListNode&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;pNode&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;new&lt;/span&gt; &lt;span class="nb"&gt;ListNode&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="nx"&gt;pNode&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="nx"&gt;m_nValue&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;val&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="nx"&gt;pNode&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="nx"&gt;m_pNext&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kt"&gt;NULL&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+    &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="nx"&gt;pHead&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="nx"&gt;m_pNext&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="kt"&gt;NULL&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="nx"&gt;pHead&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="nx"&gt;pHead&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="nx"&gt;m_pNext&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="nx"&gt;pHead&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="nx"&gt;m_pNext&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;pNode&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="nx"&gt;pHead&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;pNode&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="bp"&gt;void&lt;/span&gt; &lt;span class="nx"&gt;PrintList&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;ListNode&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="nx"&gt;pHead&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;pHead&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="kt"&gt;NULL&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="nx"&gt;cout&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;pHead&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="nx"&gt;m_nValue&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot; &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+        &lt;span class="n"&gt;pHead&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;pHead&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="nx"&gt;m_pNext&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="nx"&gt;cout&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;endl&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="nb"&gt;ListNode&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="nb"&gt;Reverse&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;ListNode&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="nx"&gt;pHead&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;pHead&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="kt"&gt;NULL&lt;/span&gt; &lt;span class="o"&gt;||&lt;/span&gt; &lt;span class="nx"&gt;pHead&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="nx"&gt;m_pNext&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="kt"&gt;NULL&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nx"&gt;pHead&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+
+    &lt;span class="nb"&gt;ListNode&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;pPre&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kt"&gt;NULL&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="nb"&gt;ListNode&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;pCurrent&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;pHead&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="nb"&gt;ListNode&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;pPost&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;pHead&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="nx"&gt;m_pNext&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+    &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;pCurrent&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="nx"&gt;m_pNext&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="kt"&gt;NULL&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="nx"&gt;pCurrent&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="nx"&gt;m_pNext&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;pPre&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+        &lt;span class="n"&gt;pPre&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;pCurrent&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+        &lt;span class="n"&gt;pCurrent&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;pPost&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+        &lt;span class="n"&gt;pPost&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;pPost&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="nx"&gt;m_pNext&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="nx"&gt;pCurrent&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="nx"&gt;m_pNext&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;pPre&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nx"&gt;pCurrent&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+
+
+
+&lt;span class="nb"&gt;ListNode&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="nx"&gt;ReverseList&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;ListNode&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="nx"&gt;pHead&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;int&lt;/span&gt; &lt;span class="nx"&gt;k&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;pHead&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="kt"&gt;NULL&lt;/span&gt; &lt;span class="o"&gt;||&lt;/span&gt; &lt;span class="nx"&gt;pHead&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="nx"&gt;m_pNext&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="kt"&gt;NULL&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nx"&gt;pHead&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+
+    &lt;span class="nb"&gt;ListNode&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;pPre&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kt"&gt;NULL&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="nb"&gt;ListNode&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;pCurrent&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;pHead&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="nb"&gt;ListNode&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;pPost&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;pHead&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="nx"&gt;m_pNext&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="nb"&gt;ListNode&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;pStart&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kt"&gt;NULL&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="nb"&gt;ListNode&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;pEnd&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kt"&gt;NULL&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+    &lt;span class="nx"&gt;int&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="n"&gt;pEnd&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;pCurrent&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="nx"&gt;pEnd&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="nx"&gt;m_pNext&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kt"&gt;NULL&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;pPost&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="kt"&gt;NULL&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="nb"&gt;n&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;n&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;k&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+        &lt;span class="p"&gt;{&lt;/span&gt;
+            &lt;span class="n"&gt;pStart&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;pPre&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+            &lt;span class="nx"&gt;pEnd&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="nx"&gt;m_pNext&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;ReverseList&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;pCurrent&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;k&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+
+            &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nx"&gt;pStart&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+        &lt;span class="p"&gt;}&lt;/span&gt;
+        &lt;span class="k"&gt;else&lt;/span&gt;
+        &lt;span class="p"&gt;{&lt;/span&gt;
+            &lt;span class="nx"&gt;pCurrent&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="nx"&gt;m_pNext&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;pPre&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+            &lt;span class="n"&gt;pPre&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;pCurrent&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+            &lt;span class="n"&gt;pCurrent&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;pPost&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+            &lt;span class="n"&gt;pPost&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;pPost&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="nx"&gt;m_pNext&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+        &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+
+    &lt;span class="nx"&gt;pCurrent&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="nx"&gt;m_pNext&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;pPre&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="n"&gt;pStart&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;Reverse&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;pCurrent&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nx"&gt;pStart&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="nx"&gt;int&lt;/span&gt; &lt;span class="nx"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="nb"&gt;ListNode&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;pHead&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kt"&gt;NULL&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="nb"&gt;ListNode&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;head&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kt"&gt;NULL&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="nx"&gt;int&lt;/span&gt; &lt;span class="nb"&gt;n&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="nx"&gt;cout&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;输入链表中节点的个数 n：&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;endl&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="nx"&gt;cin&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class="nb"&gt;n&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="nx"&gt;cout&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;请输入n个整数值：&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;endl&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="nb"&gt;for&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;int&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nb"&gt;n&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="nx"&gt;int&lt;/span&gt; &lt;span class="kd"&gt;data&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+        &lt;span class="nx"&gt;cin&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class="kd"&gt;data&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;pHead&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="kt"&gt;NULL&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="p"&gt;{&lt;/span&gt;
+            &lt;span class="n"&gt;pHead&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;CreateList&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kd"&gt;data&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+            &lt;span class="n"&gt;head&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;pHead&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+        &lt;span class="p"&gt;}&lt;/span&gt;
+        &lt;span class="k"&gt;else&lt;/span&gt;
+        &lt;span class="p"&gt;{&lt;/span&gt;
+            &lt;span class="nx"&gt;InsertNode&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="nx"&gt;pHead&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kd"&gt;data&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+        &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+
+    &lt;span class="nx"&gt;int&lt;/span&gt; &lt;span class="nx"&gt;k&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="nx"&gt;cout&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;请输入k:&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;endl&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="nx"&gt;cin&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class="nx"&gt;k&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="n"&gt;head&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;ReverseList&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;head&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;k&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="nx"&gt;PrintList&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;head&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+
+    &lt;span class="nx"&gt;system&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;pause&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;5、一个函数access(),调用频率不能超过R次/sec，用程序实现一个函数，当超过R次/sec时返回access false，不超过时返回success&lt;/p&gt;
+&lt;p&gt;解：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#define false 0&lt;/span&gt;
+&lt;span class="cp"&gt;#define success 1&lt;/span&gt;
+&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;getcurrentms&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="k"&gt;struct&lt;/span&gt; &lt;span class="n"&gt;timeval&lt;/span&gt; &lt;span class="n"&gt;tv&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+  &lt;span class="n"&gt;gettimeofday&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;tv&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="nb"&gt;NULL&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+  &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;tv&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;tv_sec&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="mi"&gt;1000&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;tv&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;tv_usec&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;1000&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="c1"&gt;//得到毫秒数&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="kt"&gt;bool&lt;/span&gt; &lt;span class="nf"&gt;count_access&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="k"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;count&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+  &lt;span class="k"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;time_ms_old&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;time_ms_now&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+  &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;count&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+  &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="n"&gt;time_ms_old&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;getcurrentms&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+  &lt;span class="p"&gt;}&lt;/span&gt;
+  &lt;span class="n"&gt;count&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+  &lt;span class="n"&gt;access&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+  &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;count&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;=&lt;/span&gt;&lt;span class="n"&gt;R&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+  &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="n"&gt;time_ms_now&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;getcurrentms&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;time_ms_now&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;time_ms_pld&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;=&lt;/span&gt;&lt;span class="mi"&gt;1000&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nb"&gt;false&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="k"&gt;else&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;success&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+  &lt;span class="p"&gt;}&lt;/span&gt;
+  &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;success&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;6、一个m*n的矩阵，从左到右从上到下都是递增的，给一个数elem，求是否在矩阵中，给出思路和代 码.&lt;/p&gt;
+&lt;p&gt;解: 思路:从矩阵的右上角开始判断即可,每次可以消除一行或一列,详见&lt;a href="http://www.yanyulin.info/category/jing-pin-shu-ji.html" target="_blank"&gt;精品书箱&lt;/a&gt;剑指offer一书.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;各位如果有更好的答案，请留言评价，方便更多的人&lt;/strong&gt;&lt;/p&gt;</summary><category term="美团网笔试题"></category></entry><entry><title>腾讯校园招聘面经2014年软件研发面经</title><link href="http://www.yanyulin.info/pages/2014/03/tencent_2014_1.html" rel="alternate"></link><updated>2014-03-10T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-10:pages/2014/03/tencent_2014_1.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;腾讯校招，之前有内推过广研，不过失败了，不知道是否有不良记录&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;笔试题目大部分人应该已经都做过，网上也有，就不说了&lt;/p&gt;
 &lt;p&gt;一面的流程大概是：&lt;/p&gt;
