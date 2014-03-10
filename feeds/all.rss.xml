@@ -171,9 +171,11 @@
 
 &lt;p&gt;二、实现归并排序的非递归算法。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;下面几个问题，是其他面试官问我们班同学的算法：&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
 &lt;p&gt;1、一串数字的每两个数之间的差值是1或者-1，给定一个数N，求如何找到第一个N的位置，如：&lt;code&gt;3,4,3,2,1,2,3,4,3,4,5,6,5&lt;/code&gt;，求第一个5所在的位置。&lt;/p&gt;
 &lt;p&gt;2、手机上玩的连连看，用什么算法可以找到两个相同的字符。（&lt;code&gt;BFS&lt;/code&gt;算法）&lt;/p&gt;
 &lt;p&gt;3、一群大雁在空中假设一字排开，如果每个大雁之间的前后距离不超过n，切任意两个大雁之间前后的距离只能是1-n的整数，同时不允许大雁之间出现交叉情况，即每个大雁只能向前方飞行，设计算法，打印出m只大雁之间在空中飞行可能出现的队形 &lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;大家可以参考&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Mon, 10 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-03-10:pages/2014/03/cxgc_2014_1.html</guid><category>创新工场面经</category></item><item><title>美团网校园招聘面经2014年软件研发</title><link>http://www.yanyulin.info/pages/2014/03/meituan_2014_2.html</link><description>&lt;hr /&gt;
 &lt;p&gt;从半年前开始找工作，一路被鄙视到现在。以至于面了一些公司也不敢发帖写面经了&lt;/p&gt;
 &lt;p&gt;作为一个没有项目经验的渣渣，一开始问啥啥都不会，&lt;/p&gt;
