@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>烟雨林</title><link>http://www.yanyulin.info/</link><description></description><atom:link href="http://www.yanyulin.info/feeds/all.rss.xml" rel="self"></atom:link><lastBuildDate>Mon, 10 Mar 2014 00:00:00 +0800</lastBuildDate><item><title>美团网校招笔试题2014年研发东北</title><link>http://www.yanyulin.info/pages/2014/03/meituan_2014_B.html</link><description>&lt;hr /&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>烟雨林</title><link>http://www.yanyulin.info/</link><description></description><atom:link href="http://www.yanyulin.info/feeds/all.rss.xml" rel="self"></atom:link><lastBuildDate>Mon, 10 Mar 2014 00:00:00 +0800</lastBuildDate><item><title>腾讯校园招聘面经2014年软件研发面经</title><link>http://www.yanyulin.info/pages/2014/03/cvte_2014_1.html</link><description>&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;简介&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;CVTE&lt;/code&gt;集团成立于2003年，总部位于广州科学城，建筑面积2万平方米，旗下设有多家独立的子公司，在香港设有全球服务中心，在国内设有26个营销服务中心和近1000个售后服务网点。CVTE目前致力于多类相关产品的研发、销售和内容服务，包括液晶电视主板设计、电源设计、移动互联、智能机顶盒、商用显示、工业设计、嵌入式游戏、医疗和教育等产业方向&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;面试&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;CVTE之前实习的时候有投过，也写了第一次面经，其实投的时候感觉没有合适的岗位，最后还是投了&lt;/p&gt;
+&lt;p&gt;因为听说福利好&lt;/p&gt;
+&lt;p&gt;流程：在线评测 -》 一面hr面 -》 笔试 -》 二面技术面 -》 终面&lt;/p&gt;
+&lt;p&gt;一面收简历并筛掉一部分人,我报的是windows方向的，笔试的题目没有算法题，有概念题，翻译题什么的&lt;/p&gt;
+&lt;p&gt;过了笔试后，第二天坐车去他们公司，他们公司的技术面没有其他公司的技术面问得那么久，也没其他公司难&lt;/p&gt;
+&lt;p&gt;第二天晚上收到终面的通知，我一开始以为很大机会有Offer，结果就跪在hr面上了...&lt;/p&gt;
+&lt;p&gt;扣分点回想起来大概是：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;1、cvte一开始投的时候要回答一些问题，这里是有伏笔的，终面的时候会围绕着这些问题问，我终面的时候没有想到这个问题，估计扣了不少分&lt;/p&gt;
+&lt;p&gt;2、而且当时同组的8,9个人里面就我一个没有装正装（其实搞技术去其他公司的一般不用的）&lt;/p&gt;
+&lt;p&gt;3、他们说我说话太小声了，表达得也不好&lt;/p&gt;
+&lt;p&gt;4、别人在讲的时候，她们会留意其他人在有没有在听（难怪有的人好像很有经验，一坐下来就拿着纸和笔）。忙了几天就这样被鄙视了，感觉很压抑。&lt;/p&gt;
+&lt;/blockquote&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Mon, 10 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-03-10:pages/2014/03/cvte_2014_1.html</guid><category>腾讯面经</category></item><item><title>美团网校招笔试题2014年研发东北</title><link>http://www.yanyulin.info/pages/2014/03/meituan_2014_B.html</link><description>&lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;如有错误，或更加精简的方法，请留言，我会更正，以方便更多的人&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;1、一堆硬币，一个机器人，如果是反的就翻正，如果是正的就抛掷一次，无穷多次后，求正反的比例&lt;/p&gt;
 &lt;p&gt;解析：假设某个阶段正面硬币的比例为p，则反面的比例为1-p，下一次翻转后，p的部分分为p/2的正面、p/2的反面，而1-p的反面部分全部变为正面。趋于平衡时，前后两次正反的比例应相等，即：p/(1-p)=(p/2+(1-p))/(p/2)，得到p=2/3。&lt;/p&gt;
