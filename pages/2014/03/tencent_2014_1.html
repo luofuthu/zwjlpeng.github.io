@@ -2,7 +2,7 @@
 <html lang="zh">
 <head>
 <title>
-2014年百度校招笔试题(移动研发类) - 烟雨林</title>
+腾讯校园招聘面经2014年软件研发面经 - 烟雨林</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
 <meta name="author" content="烟雨林">
@@ -45,15 +45,15 @@
 		<div id="content">							 
 					<div id="map">
 						<div class="browse">现在的位置: <a title="返回首页" href="http://www.yanyulin.info">烟雨首页</a> ＞
-						<a href="http://www.yanyulin.info/category/cheng-xu-yuan-zhao-gong-zuo.html" title="查看程序员找工作中的全部文章" rel="category tag">程序员找工作</a>＞正文</div>
+						<a href="http://www.yanyulin.info/category/cheng-xu-yuan-de-mian-jing.html" title="查看程序员的面经中的全部文章" rel="category tag">程序员的面经</a>＞正文</div>
 						<div class="font"><a href="javascript:doZoom(12)">小</a> <a href="javascript:doZoom(13)">中</a> <a href="javascript:doZoom(18)">大</a></div>
 					</div>
 					<div class="entry_box_s">
 						<div class="entry_title_box">
-							<div class="entry_title">2014年百度校招笔试题(移动研发类)</div>
+							<div class="entry_title">腾讯校园招聘面经2014年软件研发面经</div>
 							<div class="archive_info">
-								<span class="date">2014-03-07</span>
-								<span class="category"> ⁄ <a href="http://www.yanyulin.info/category/cheng-xu-yuan-zhao-gong-zuo.html" title="查看程序员找工作中的全部文章" rel="category tag">程序员找工作</a></span>
+								<span class="date">2014-03-08</span>
+								<span class="category"> ⁄ <a href="http://www.yanyulin.info/category/cheng-xu-yuan-de-mian-jing.html" title="查看程序员的面经中的全部文章" rel="category tag">程序员的面经</a></span>
 							</div>
 						</div>
 						<div class="entry">
@@ -80,36 +80,59 @@
 </script>
 </div>
 							<hr />
-<p>如有错误，或更加精简的方法，请留言，我会更正，以方便更多的人，也欢迎大家将答案粘贴到评论框里，我会挑选出最好的答案，做为问题答案</p>
-<p>百度2014年移动研发类这套试题和软研考的差不多，这套试题在清华考过，然后在沈阳也考过，不知道是什么情况，我参加了沈阳的，感觉重复好多</p>
-<p>一、简答题</p>
-<p>1、简述计算机的存储系统分为哪几个层次，为什么这样的分层能够提高程序的执行效率。</p>
+<p><strong>腾讯校招，之前有内推过广研，不过失败了，不知道是否有不良记录</strong></p>
+<p>笔试题目大部分人应该已经都做过，网上也有，就不说了</p>
+<p>一面的流程大概是：</p>
 <blockquote>
-<p>目前，在计算机系统中通常采用三级层次结构来构成存储系统，主要由高速缓冲存储器Cache、主存储器和辅助存储器组成,存储系统多级层次结构中，由上向下分三级，其容量逐渐增大，速度逐级降低，成本则逐次减少,整个结构又可以看成两个层次：它们分别是主存一辅存层次和cache一主存层次,一个较大的存储系统是由各种不同类型的存储设备构成，是一个具有多级层次结构的存储系统。该系统既有与CPU相近的速度，又有极大的容量，而成本又是较低的</p>
-</blockquote>
-<p>2、浮点数在计算中如何表示，如何判断两个浮点数相等。</p>
+<p>介绍自己，讲一下自已的项目经验，问一些技术相关的问题，然后是面试官提问</p>
+<p>他问我的问题大概是：</p>
 <blockquote>
-<p>浮点数在计算机如何表示，大家可以自已百度去，一般就是拆分成指数、尾数的形式，对于判断两个浮点数是否相等，切记不能直接使用==进行判断，浮点数之间相等的判断一般是两数相减，看相减后两数之间差值的绝对值是否在我们约定的误差范围之内，如果在误范围之内，就表示我们可以接受，就认为这两个浮点数是相等的，否则就认为这两个浮点数是不等的。</p>
+<p>tcp协议的三次握手</p>
+<p>10亿个数找中位数，写代码</p>
+<p>链表反转</p>
+<p>非递归的二分查找</p>
+<p>linux的一些命令</p>
+<p>字符串去空格和制表符</p>
+<p>C++类的一些问题</p>
 </blockquote>
-<p>3、简述TCP与UDP协议的差别，两者与HTTP的关系。并列举HTTP的方法，以及常见的<code>返回状态码</code>。</p>
-<p>二、算法与程序设计题</p>
-<p>1.设计一个反转字符串的函数<code>char *reverse_str(char *str)</code>,不使用系统函数。</p>
+</blockquote>
+<p>总体来说都比较基础，还有一些我忘了</p>
+<p>不过在面试的时候他让我看了笔试的成绩，然后我提问的时候问了两个问题</p>
+<p>我的问题：</p>
+<p>1.问：这次招聘的比例大概多少？</p>
 <blockquote>
-<p>算法思想，设计两个指针，分别指向字符串的两头，然后从字符串的两头向中间靠近，在靠近的过程中，对两指针指向的字符作交换，即可，简单题目，大家不可失分</p>
+<p>答：今年应该挺大，今年的笔试成绩都挺不错（也不可能说出具体的数字，不过可能意思的招的比以前多吧）</p>
 </blockquote>
-<p>2.给定一个字符串,<code>（1，（2，3），（4，（5，6），7））</code>,使它变为<code>（1，2，3，4，5，6，7）</code>，设计一个算法消除其中嵌套的括号。(c/c++)</p>
-<p>3.使用C语言实现<code>htonl</code>（将long型的数据转化为网络字节码），不可以使用系统自带的函数进行处理。</p>
-<p>三、系统设计题</p>
-<p>面向对象是一种思想，使用C语言来实现下列问题。</p>
+<p>2、问：我的笔试成绩大概排多少？</p>
 <blockquote>
-<p>1、如何定义一个类？</p>
-<p>2、如何创建以及销毁对象？</p>
-<p>3、如何实现类的继承？</p>
+<p>答：你自己觉得呢（本来想试探一下的，不过没问出什么来）之后过了一面，到昨天的中午才收到二面短信</p>
 </blockquote>
-<p><strong>本篇答案不全，希望有时间的同学补全</strong></p>
+<p>二面的面试官一般是主管来着，我的那个面试官没怎么问技术的，就基本上像是在聊天</p>
+<p>中间跟我说，他手上的几份简历中只有我一个是本科的，其他都是中科大，华工什么的，其中一个英语过了专业八级...</p>
+<p>我顿时吓尿了，然后他又安慰我说我的笔试成绩比他们高，他们会公平考虑的，然后我直接地问二面会筛多少人，他明确的告诉我他最终只能给两个Offer</p>
+<p>然后今天中午收到他的电话，叫我等hr面，顿时有点激动</p>
+<p>不过短信通知是到27号才hr面的。其实我挺当心hr面会挂了，自从上次被cvte鄙视了之后..，现在结果如何还是未知数，只能自求多福了。如果能过的话，那也是运气好而已，也许是笔试成绩还行吧</p>
+<p>作为一个弱菜，我只能说说自己面试了几次之后的一些看法：</p>
+<p>1、最好的面经是一定是在自己面试的过程中积累的。网上的那些只能作为参考。每个人的情况都不一样，自己缺什么就重点补那方面的知识。</p>
+<p>2、面试题大部分都雷同（我只能这么说），大部分题目一般解法巧妙，大部分人短时间内做不出来，这很正常的，不然出这题干嘛。所以要多上网做一些题目，其实有时候打不出来也不一定就没戏，他主要还是看你面对难题的想法。</p>
+<p>3、面试过程一般会手写一些比较短又常用的代码，要多点积累。</p>
+<p>推荐搞IT技术的看两本书：《剑指Offer》《编程之美》讲得很好的两本书，对面试很有用</p>
+<p>然后就是具体方向看具体哪一方面的一些面试题了</p>
+<p>面试书下载</p>
+<blockquote>
+<p><a href="http://www.yanyulin.info/pages/2014/03/offer.html" target="_blank">
+剑指offer下载
+</a></p>
+<p><a href="http://www.yanyulin.info/pages/2014/02/pbaodian.html" target="_blank">
+程序员面试宝典下载
+</a></p>
+<p><a href="http://www.yanyulin.info/pages/2013/12/prgbeautiful.html" target="_blank">
+编程之美—微软技术面试心得
+</a></p>
+</blockquote>
 						  <div class="clear"></div>
 							</div>
-							<b>本文地址:</b> <a href="http://www.yanyulin.info/pages/2014/03/baidu_2014_B.html" target="_self">http://www.yanyulin.info/pages/2014/03/baidu_2014_B.html</a>
+							<b>本文地址:</b> <a href="http://www.yanyulin.info/pages/2014/03/tencent_2014_1.html" target="_self">http://www.yanyulin.info/pages/2014/03/tencent_2014_1.html</a>
 							<div><font color="blue"><b>转载时请保留本文出处,谢谢您的合作</b></font></div>
 							<hr/>
 							<div class="clear" align="left">
@@ -141,10 +164,10 @@
 					<!-- end: entrymeta -->
 				<div class="context_b" align="left">
 					 上一篇: 
-  				 <a href="http://www.yanyulin.info/pages/2014/03/concurrent.html" title="Linux系统中并发与竞争机制分析" target="_self">Linux系统中并发与竞争机制分析</a>
+  				 <a href="http://www.yanyulin.info/pages/2014/03/weconnect_2014_1.html" title="威盛电子校园招聘面经2014年软件面经" target="_self">威盛电子校园招聘面经2014年软件面经</a>
   				 &nbsp;&nbsp
   				 下一篇:
-  				 <a href="http://www.yanyulin.info/pages/2014/03/baidu_2.html" title="百度校招面经2014年软研面经" target="_self">百度校招面经2014年软研面经</a>
+  				 <a href="http://www.yanyulin.info/pages/2014/03/renren_2014_A.html" title="人人网校招笔试题2014年软件研发类" target="_self">人人网校招笔试题2014年软件研发类</a>
 					 
 				</div>
 				<div class="context_b">
@@ -155,18 +178,10 @@
   				 <tr>
  
   				 <td width="50%" align="left">
-  				 <a href="http://www.yanyulin.info/pages/2013/12/baidu_2014_A.html" title="2014年百度校招笔试试卷A" target="_blank">2014年百度校招笔试试卷A</a>
+  				 <a href="http://www.yanyulin.info/pages/2014/03/tencent_2014_1.html" title="腾讯校园招聘面经2014年软件研发面经" target="_blank">腾讯校园招聘面经2014年软件研发面经</a>
   				 </td>
 	
-	 
  
-  				 <td width="50%" align="left">
-  				 <a href="http://www.yanyulin.info/pages/2014/03/baidu_2014_B.html" title="2014年百度校招笔试题(移动研发类)" target="_blank">2014年百度校招笔试题(移动研发类)</a>
-  				 </td>
-	
-  				 </tr>
- 
-  				 <td><a href="#" align="left"></a></td>
   				 <td><a href="#" align="left"></a></td>
 			</table>
 				</div>
@@ -213,19 +228,17 @@
 				<h3>相关标签</h3>
 				<div class="box">			
 						<div class="textwidget">
-							<a href="http://www.yanyulin.info/tag/chuang-xin-gong-chang-bi-shi-ti.html" title="查看创新工场笔试题下的所有文章" target="_blank">创新工场笔试题</a>
-							<a href="http://www.yanyulin.info/tag/qu-na-wang-bi-shi-ti.html" title="查看去哪网笔试题下的所有文章" target="_blank">去哪网笔试题</a>
-							<a href="http://www.yanyulin.info/tag/hua-wei-bi-shi-ti.html" title="查看华为笔试题下的所有文章" target="_blank">华为笔试题</a>
-							<a href="http://www.yanyulin.info/tag/ren-ren-wang-bi-shi-ti.html" title="查看人人网笔试题下的所有文章" target="_blank">人人网笔试题</a>
-							<a href="http://www.yanyulin.info/tag/bai-du-bi-shi-ti.html" title="查看百度笔试题下的所有文章" target="_blank">百度笔试题</a>
-							<a href="http://www.yanyulin.info/tag/ya-ma-xun-bi-shi-ti.html" title="查看亚马逊笔试题下的所有文章" target="_blank">亚马逊笔试题</a>
-							<a href="http://www.yanyulin.info/tag/wei-ruan-bi-shi-ti.html" title="查看微软笔试题下的所有文章" target="_blank">微软笔试题</a>
-							<a href="http://www.yanyulin.info/tag/ya-hu-bi-shi-ti.html" title="查看雅虎笔试题下的所有文章" target="_blank">雅虎笔试题</a>
-							<a href="http://www.yanyulin.info/tag/zhong-xing-bi-shi-ti.html" title="查看中兴笔试题下的所有文章" target="_blank">中兴笔试题</a>
-							<a href="http://www.yanyulin.info/tag/a-li-ba-ba-bi-shi-ti.html" title="查看阿里巴巴笔试题下的所有文章" target="_blank">阿里巴巴笔试题</a>
-							<a href="http://www.yanyulin.info/tag/mei-tuan-wang-bi-shi-ti.html" title="查看美团网笔试题下的所有文章" target="_blank">美团网笔试题</a>
-							<a href="http://www.yanyulin.info/tag/bao-feng-bi-shi-ti.html" title="查看暴风笔试题下的所有文章" target="_blank">暴风笔试题</a>
-							<a href="http://www.yanyulin.info/tag/gu-ge-bi-shi-ti.html" title="查看谷歌笔试题下的所有文章" target="_blank">谷歌笔试题</a>
+							<a href="http://www.yanyulin.info/tag/da-zhong-dian-ping-mian-jing.html" title="查看大众点评面经下的所有文章" target="_blank">大众点评面经</a>
+							<a href="http://www.yanyulin.info/tag/hua-wei-mian-jing.html" title="查看华为面经下的所有文章" target="_blank">华为面经</a>
+							<a href="http://www.yanyulin.info/tag/mei-tuan-mian-jing.html" title="查看美团面经下的所有文章" target="_blank">美团面经</a>
+							<a href="http://www.yanyulin.info/tag/teng-xun-mian-jing.html" title="查看腾讯面经下的所有文章" target="_blank">腾讯面经</a>
+							<a href="http://www.yanyulin.info/tag/qi-ta-mian-jing.html" title="查看其他面经下的所有文章" target="_blank">其他面经</a>
+							<a href="http://www.yanyulin.info/tag/a-li-mian-jing.html" title="查看阿里面经下的所有文章" target="_blank">阿里面经</a>
+							<a href="http://www.yanyulin.info/tag/bai-du-mian-jing.html" title="查看百度面经下的所有文章" target="_blank">百度面经</a>
+							<a href="http://www.yanyulin.info/tag/qu-na-mian-jing.html" title="查看去哪面经下的所有文章" target="_blank">去哪面经</a>
+							<a href="http://www.yanyulin.info/tag/ren-ren-mian-jing.html" title="查看人人面经下的所有文章" target="_blank">人人面经</a>
+							<a href="http://www.yanyulin.info/tag/wang-yi-mian-jing.html" title="查看网易面经下的所有文章" target="_blank">网易面经</a>
+							<a href="http://www.yanyulin.info/tag/yin-xing-mian-jing.html" title="查看银行面经下的所有文章" target="_blank">银行面经</a>
 						</div>
 				</div>
 				<h3>本站直达</h3>
@@ -292,25 +305,25 @@
 				<ul>
 				<ul class="random-post-link">
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2013/11/linux0.html" title="Linux中0号进程的创建分析">Linux中0号进程的创建分析</a>
+				<a href="http://www.yanyulin.info/pages/2013/12/htaccess.html" title=".htaccess简明教程(SEO优化)">.htaccess简明教程(SEO优化)</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2010/11/ali_2.html" title="阿里巴巴校招2010年软研面经">阿里巴巴校招2010年软研面经</a>
+				<a href="http://www.yanyulin.info/pages/2014/03/tencent_2014_1.html" title="腾讯校园招聘面经2014年软件研发面经">腾讯校园招聘面经2014年软件研发面经</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2012/11/huawei_2012_1.html" title="2012年华为成都校招机试">2012年华为成都校招机试</a>
+				<a href="http://www.yanyulin.info/pages/2013/06/huawei_2013_1.html" title="2013年华为校招机试(一)">2013年华为校招机试(一)</a>
 				</li>
 				<li class="random-post-link">
 				<a href="http://www.yanyulin.info/pages/2013/12/perl.html" title="编程珠玑(作者:John Bently)">编程珠玑(作者:John Bently)</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2013/11/vlinux1.html" title="Linux入门版视频教程(基础)">Linux入门版视频教程(基础)</a>
+				<a href="http://www.yanyulin.info/pages/2013/12/psbase_1.html" title="PhotoShop CS入门版视频教程(基础上)">PhotoShop CS入门版视频教程(基础上)</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2014/02/ripplereginster.html" title="ripple钱包注册/更改/免费激活">ripple钱包注册/更改/免费激活</a>
+				<a href="http://www.yanyulin.info/pages/2014/01/whyRipple.html" title="为什么大家都转向了Ripple">为什么大家都转向了Ripple</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2014/03/zhihu_1.html" title="一款自动发链接的软件设计思路">一款自动发链接的软件设计思路</a>
+				<a href="http://www.yanyulin.info/pages/2014/03/zhihu_2.html" title="一款自动发链接软件的实现细节分析">一款自动发链接软件的实现细节分析</a>
 				</li>
 				<li class="random-post-link">
 				<a href="http://www.yanyulin.info/pages/2014/03/duoshuo.html" title="多说评论框如何|怎么样|实际测试">多说评论框如何|怎么样|实际测试</a>
@@ -362,25 +375,25 @@ var duoshuoQuery = {short_name:"yanyulin"};
 				<div class="box_r">
 				<ul>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2014/02/classinitiallist.html" rel="bookmark" title="C++中类初始化列表的妙用">C++中类初始化列表的妙用</a>
+				<a href="http://www.yanyulin.info/pages/2014/01/pelican_question.html" rel="bookmark" title="pelican创建博客常见问题汇总">pelican创建博客常见问题汇总</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2014/01/baidu_1.html" rel="bookmark" title="百度校招2014年软研面经">百度校招2014年软研面经</a>
+				<a href="http://www.yanyulin.info/pages/2014/01/ali_1.html" rel="bookmark" title="阿里巴巴校招2014年软研面经">阿里巴巴校招2014年软研面经</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2013/12/amzon_2014_A.html" rel="bookmark" title="亚马逊2014年校招笔试题(研发)">亚马逊2014年校招笔试题(研发)</a>
+				<a href="http://www.yanyulin.info/pages/2013/06/huawei_2013_1.html" rel="bookmark" title="2013年华为校招机试(一)">2013年华为校招机试(一)</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2013/11/objectModel.html" rel="bookmark" title="深度探索C++对象模型">深度探索C++对象模型</a>
+				<a href="http://www.yanyulin.info/pages/2014/02/pbaodian.html" rel="bookmark" title="程序员面试宝典--欧立奇">程序员面试宝典--欧立奇</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2013/11/vlinux1.html" rel="bookmark" title="Linux入门版视频教程(基础)">Linux入门版视频教程(基础)</a>
+				<a href="http://www.yanyulin.info/pages/2013/12/psbase2.html" rel="bookmark" title="Photoshop CS视频教程(下)">Photoshop CS视频教程(下)</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2014/03/xrpfree.html" rel="bookmark" title="[赠送]免费领取赠送获取ripple币啦">[赠送]免费领取赠送获取ripple币啦</a>
+				<a href="http://www.yanyulin.info/pages/2014/01/whyRipple.html" rel="bookmark" title="为什么大家都转向了Ripple">为什么大家都转向了Ripple</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2013/11/qqLogin.html" rel="bookmark" title="界面编程模仿篇(模仿腾讯QQ登录界面)">界面编程模仿篇(模仿腾讯QQ登录界面)</a>
+				<a href="http://www.yanyulin.info/pages/2013/12/qqLogin_1.html" rel="bookmark" title="界面编程模仿篇(QQ登录界面逼真篇)">界面编程模仿篇(QQ登录界面逼真篇)</a>
 				</li>
 				<li>
 				<a href="http://www.yanyulin.info/pages/2014/03/duoshuo.html" rel="bookmark" title="多说评论框如何|怎么样|实际测试">多说评论框如何|怎么样|实际测试</a>
