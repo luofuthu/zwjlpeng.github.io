@@ -2,7 +2,7 @@
 <html lang="zh">
 <head>
 <title>
-git保存用户名与密码(避免用户名密码输入) - 烟雨林</title>
+创新工场校园招聘面经面试经验2014年研发类 - 烟雨林</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
 <meta name="author" content="烟雨林">
@@ -24,7 +24,7 @@ git保存用户名与密码(避免用户名密码输入) - 烟雨林</title>
 					   	<div >
 						  		<ul>	
 						   						<li><a href="http://www.yanyulin.info">烟雨首页</a></li>
-						  																<li class="current-menu-item current_page_item "><a href="http://www.yanyulin.info/category/bian-cheng-yu-yan.html">编程语言</a></li>
+						  				  											<li><a href="http://www.yanyulin.info/category/bian-cheng-yu-yan.html">编程语言</a></li>
 						  				  											<li><a href="http://www.yanyulin.info/category/jing-pin-shu-ji.html">精品书籍</a></li>
 						  				  											<li><a href="http://www.yanyulin.info/category/shi-pin-jiao-cheng.html">视频教程</a></li>
 						  				  											<li><a href="http://www.yanyulin.info/category/tou-zi-li-cai.html">投资理财</a></li>
@@ -45,15 +45,15 @@ git保存用户名与密码(避免用户名密码输入) - 烟雨林</title>
 		<div id="content">							 
 					<div id="map">
 						<div class="browse">现在的位置: <a title="返回首页" href="http://www.yanyulin.info">烟雨首页</a> ＞
-						<a href="http://www.yanyulin.info/category/bian-cheng-yu-yan.html" title="查看编程语言中的全部文章" rel="category tag">编程语言</a>＞正文</div>
+						<a href="http://www.yanyulin.info/category/cheng-xu-yuan-zhao-gong-zuo.html" title="查看程序员找工作中的全部文章" rel="category tag">程序员找工作</a>＞正文</div>
 						<div class="font"><a href="javascript:doZoom(12)">小</a> <a href="javascript:doZoom(13)">中</a> <a href="javascript:doZoom(18)">大</a></div>
 					</div>
 					<div class="entry_box_s">
 						<div class="entry_title_box">
-							<div class="entry_title">git保存用户名与密码(避免用户名密码输入)</div>
+							<div class="entry_title">创新工场校园招聘面经面试经验2014年研发类</div>
 							<div class="archive_info">
-								<span class="date">2014-03-04</span>
-								<span class="category"> ⁄ <a href="http://www.yanyulin.info/category/bian-cheng-yu-yan.html" title="查看编程语言中的全部文章" rel="category tag">编程语言</a></span>
+								<span class="date">2014-03-10</span>
+								<span class="category"> ⁄ <a href="http://www.yanyulin.info/category/cheng-xu-yuan-zhao-gong-zuo.html" title="查看程序员找工作中的全部文章" rel="category tag">程序员找工作</a></span>
 							</div>
 						</div>
 						<div class="entry">
@@ -80,54 +80,81 @@ git保存用户名与密码(避免用户名密码输入) - 烟雨林</title>
 </script>
 </div>
 							<hr />
-<p><strong>写在前面的话</strong></p>
-<p>由于本博客是托管于github之上，因此每次<code>git push -u origin master</code>时都得输入用户名与密码，是非常烦人的，经过一番尝试，原来可以写一个配置文件避免输入用户名与密码，这样通过git上传文件到github上就非常方便了~~~</p>
-<p><code>git</code>工具是由linux之父开发的一款分布式代码管理工具，代码开源，功能强大，<code>git</code>开发的一般流程是首先从服务器上<code>clone</code>一份主干代码，相当于创建了分支，然后修改分支代码，最后将修改后的代码提交到服务器上，为了安全，每一提交都需要输入用户名与密码，肯定是很繁琐的，因此得想办法，避免每次提交时都需要输入<strong>用户名与密码</strong></p>
-<p><strong>方法</strong></p>
-<p>1、设置环境变量，在我的电脑上单击右键-&gt;属性-&gt;高级-&gt;环境变量-&gt;系统变量-&gt;新建里写上如下代码：</p>
-<div class="highlight"><pre><span class="err">变量名：</span><span class="n">HOME</span>
-<span class="err">变量值</span><span class="o">:%</span><span class="n">HOMEPATH</span>
+<p><strong>以下记录的是我的创新工场一面经历</strong></p>
+<p>一面时主要问的是算法，问了我两个算法，如下所示：</p>
+<blockquote>
+<p>一、输入字符串：AB123abd32HDU, 输出：12233ABDHUabd  时间复杂度：O（N）</p>
+<p>我写的代码如下：</p>
+</blockquote>
+<div class="highlight"><pre><span class="vi">#include</span> <span class="o">&lt;</span><span class="nx">iostream</span><span class="o">&gt;</span>
+<span class="nx">using</span> <span class="nx">namespace</span> <span class="nx">std</span><span class="p">;</span>
+<span class="nx">int</span> <span class="nx">main</span><span class="p">(){</span>
+    <span class="nx">char</span> <span class="nx">str</span><span class="err">[</span><span class="mi">100</span><span class="cp">]</span>;
+    int hash<span class="cp">[</span><span class="mi">63</span><span class="cp">]</span>={0};
+    cout<span class="err">&lt;&lt;</span>&quot;input:&quot;;
+    cin&gt;&gt;str;
+    for (int i=0;i<span class="nt">&lt;strlen</span><span class="err">(</span><span class="na">str</span><span class="err">);</span><span class="na">i</span><span class="err">++)</span>
+    <span class="err">{</span>
+        <span class="na">if</span> <span class="err">((</span><span class="na">str</span><span class="cp">[</span><span class="nx">i</span><span class="cp">]</span><span class="err">&lt;&#39;</span><span class="na">0</span><span class="err">&#39;||</span><span class="na">str</span><span class="cp">[</span><span class="nx">i</span><span class="cp">]</span><span class="nt">&gt;</span>&#39;9&#39;)<span class="err">&amp;&amp;</span>(str<span class="cp">[</span><span class="nx">i</span><span class="cp">]</span><span class="err">&lt;</span>&#39;A&#39;||str<span class="cp">[</span><span class="nx">i</span><span class="cp">]</span>&gt;&#39;Z&#39;)<span class="err">&amp;&amp;</span>(str<span class="cp">[</span><span class="nx">i</span><span class="cp">]</span><span class="err">&lt;</span>&#39;a&#39;||str<span class="cp">[</span><span class="nx">i</span><span class="cp">]</span>&gt;&#39;z&#39;))
+        {
+            cout<span class="err">&lt;&lt;</span>&quot;invalid input!\n&quot;;
+            break;
+        }
+        if (str<span class="cp">[</span><span class="nx">i</span><span class="cp">]</span>&gt;=&#39;0&#39;<span class="err">&amp;&amp;</span>str<span class="cp">[</span><span class="nx">i</span><span class="cp">]</span><span class="err">&lt;</span>=&#39;9&#39;)
+        {
+            hash<span class="cp">[</span><span class="nx">str</span><span class="err">[</span><span class="nx">i</span><span class="cp">]</span>-&#39;0&#39;]++;
+        }
+        if (str<span class="cp">[</span><span class="nx">i</span><span class="cp">]</span>&gt;=&#39;A&#39;<span class="err">&amp;&amp;</span>str<span class="cp">[</span><span class="nx">i</span><span class="cp">]</span><span class="err">&lt;</span>=&#39;Z&#39;)
+        {
+            hash<span class="cp">[</span><span class="nx">str</span><span class="err">[</span><span class="nx">i</span><span class="cp">]</span>-&#39;A&#39;+10]++;
+        }
+        if (str<span class="cp">[</span><span class="nx">i</span><span class="cp">]</span>&gt;=&#39;a&#39;<span class="err">&amp;&amp;</span>str<span class="cp">[</span><span class="nx">i</span><span class="cp">]</span><span class="err">&lt;</span>=&#39;z&#39;)
+        {
+            hash<span class="cp">[</span><span class="nx">str</span><span class="err">[</span><span class="nx">i</span><span class="cp">]</span>-&#39;a&#39;+36]++;
+        }
+    }
+    int j=0;
+    cout<span class="err">&lt;&lt;</span>&quot;\noutput:&quot;;
+    for (i=0;i<span class="nt">&lt;10</span><span class="err">;</span><span class="na">i</span><span class="err">++)</span>
+    <span class="err">{</span>
+        <span class="na">while</span> <span class="err">(</span><span class="na">hash</span><span class="cp">[</span><span class="nx">i</span><span class="cp">]</span><span class="nt">&gt;</span>0)
+        {
+            str<span class="cp">[</span><span class="nx">j</span><span class="o">++</span><span class="cp">]</span>=i+&#39;0&#39;;
+            hash<span class="cp">[</span><span class="nx">i</span><span class="cp">]</span>--;
+        }
+    }
+
+    for (i=10;i<span class="nt">&lt;36</span><span class="err">;</span><span class="na">i</span><span class="err">++)</span>
+    <span class="err">{</span>
+        <span class="na">while</span> <span class="err">(</span><span class="na">hash</span><span class="cp">[</span><span class="nx">i</span><span class="cp">]</span><span class="nt">&gt;</span>0)
+        {
+            str<span class="cp">[</span><span class="nx">j</span><span class="o">++</span><span class="cp">]</span>=i-10+&#39;A&#39;;
+            hash<span class="cp">[</span><span class="nx">i</span><span class="cp">]</span>--;
+        }
+    }
+    for (i=36;i<span class="nt">&lt;62</span><span class="err">;</span><span class="na">i</span><span class="err">++)</span>
+    <span class="err">{</span>
+        <span class="na">while</span> <span class="err">(</span><span class="na">hash</span><span class="cp">[</span><span class="nx">i</span><span class="cp">]</span><span class="nt">&gt;</span>0)
+        {
+            str<span class="cp">[</span><span class="nx">j</span><span class="o">++</span><span class="cp">]</span>=i-36+&#39;a&#39;;
+            hash<span class="cp">[</span><span class="nx">i</span><span class="cp">]</span>--;
+        }
+    }
+    cout<span class="err">&lt;</span><span class="nt">&lt;str</span><span class="err">&lt;&lt;</span><span class="na">endl</span><span class="err">;</span>
+    <span class="na">return</span> <span class="na">0</span><span class="err">;</span>
+<span class="err">}</span>
 </pre></div>
 
 
-<p>如果使用的是Win7系统可以直接输入以下命令:</p>
-<div class="highlight"><pre><span class="n">setx</span> <span class="n">HOME</span> <span class="o">%</span><span class="n">USERPROFILE</span><span class="o">%</span>
-</pre></div>
-
-
-<p>以下是WinXP下的截图：</p>
-<p><center>
-<a href="http://www.yanyulin.info/pages/2014/03/git.html">
-<img src="http://www.yanyulin.info/pics/tools/git0.jpg"  alt="烟雨林博客"/>
-</a>
-</center></p>
-<p>2、在运行窗口（可以按Windows+R键）中输入如下命令，即可以打开%HOMEPATH%文件夹，在该文件夹下建立一个文件，文件名为<code>_netrc</code></p>
-<p><center>
-<a href="http://www.yanyulin.info/pages/2014/03/git.html">
-<img src="http://www.yanyulin.info/pics/tools/git1.jpg"  alt="烟雨林博客"/>
-</a>
-</center></p>
-<p>命令如下：</p>
-<div class="highlight"><pre><span class="c">%HOMEPATH%</span>
-</pre></div>
-
-
-<p>3、以记事本的形貌打开_netrc文件，在文件里面输入如下配置项：</p>
-<div class="highlight"><pre><span class="n">machine</span> <span class="n">github</span><span class="p">.</span><span class="n">com</span>
-<span class="n">login</span> <span class="o">*****</span><span class="err">@</span><span class="n">gmail</span><span class="p">.</span><span class="n">com</span>
-<span class="n">password</span> <span class="o">******</span>
-</pre></div>
-
-
-<p><strong>备注</strong></p>
-<p>代码中</p>
-<p>machine：表示要上传的服务器，上述代码中表示要上专到github.com中</p>
-<p>login：填入登录用户名，例子中应该填入github帐户名</p>
-<p>password：填入登录密码，例子中应该填入github帐户密码</p>
-<p>如有问题，可以联系我，联系方式，看博客下方邮箱</p>
+<p>二、实现归并排序的非递归算法。</p>
+<p><strong>下面几个问题，是其他面试官问我们班同学的算法：</strong></p>
+<p>1、一串数字的每两个数之间的差值是1或者-1，给定一个数N，求如何找到第一个N的位置，如：<code>3,4,3,2,1,2,3,4,3,4,5,6,5</code>，求第一个5所在的位置。</p>
+<p>2、手机上玩的连连看，用什么算法可以找到两个相同的字符。（<code>BFS</code>算法）</p>
+<p>3、一群大雁在空中假设一字排开，如果每个大雁之间的前后距离不超过n，切任意两个大雁之间前后的距离只能是1-n的整数，同时不允许大雁之间出现交叉情况，即每个大雁只能向前方飞行，设计算法，打印出m只大雁之间在空中飞行可能出现的队形 </p>
+<p>大家可以参考</p>
 						  <div class="clear"></div>
 							</div>
-							<b>本文地址:</b> <a href="http://www.yanyulin.info/pages/2014/03/git.html" target="_self">http://www.yanyulin.info/pages/2014/03/git.html</a>
+							<b>本文地址:</b> <a href="http://www.yanyulin.info/pages/2014/03/cxgc_2014_1.html" target="_self">http://www.yanyulin.info/pages/2014/03/cxgc_2014_1.html</a>
 							<div><font color="blue"><b>转载时请保留本文出处,谢谢您的合作</b></font></div>
 							<hr/>
 							<div class="clear" align="left">
@@ -159,10 +186,10 @@ git保存用户名与密码(避免用户名密码输入) - 烟雨林</title>
 					<!-- end: entrymeta -->
 				<div class="context_b" align="left">
 					 上一篇: 
-  				 <a href="http://www.yanyulin.info/pages/2014/03/pelican_page.html" title="pelican博客搭建设置分页和分页保存位置" target="_self">pelican博客搭建设置分页和分页保存位置</a>
+  				 <a href="http://www.yanyulin.info/pages/2014/03/meituan_2014_2.html" title="美团网校园招聘面经2014年软件研发" target="_self">美团网校园招聘面经2014年软件研发</a>
   				 &nbsp;&nbsp
   				 下一篇:
-  				 <a href="http://www.yanyulin.info/pages/2014/03/huawei_2014_2.html" title="华为校招机试2014年北京试题" target="_self">华为校招机试2014年北京试题</a>
+  				 <a href="http://www.yanyulin.info/pages/2014/03/cvte_2014_1.html" title="CVTE校园招聘面经2014年软件研发面经" target="_self">CVTE校园招聘面经2014年软件研发面经</a>
 					 
 				</div>
 				<div class="context_b">
@@ -173,74 +200,10 @@ git保存用户名与密码(避免用户名密码输入) - 烟雨林</title>
   				 <tr>
  
   				 <td width="50%" align="left">
-  				 <a href="http://www.yanyulin.info/pages/2014/03/comment.html" title="博客添加第三方评论系统多说评论框" target="_blank">博客添加第三方评论系统多说评论框</a>
+  				 <a href="http://www.yanyulin.info/pages/2014/03/cxgc_2014_1.html" title="创新工场校园招聘面经面试经验2014年研发类" target="_blank">创新工场校园招聘面经面试经验2014年研发类</a>
   				 </td>
 	
-	 
  
-  				 <td width="50%" align="left">
-  				 <a href="http://www.yanyulin.info/pages/2014/03/git.html" title="git保存用户名与密码(避免用户名密码输入)" target="_blank">git保存用户名与密码(避免用户名密码输入)</a>
-  				 </td>
-	
-  				 </tr>
-	 
-  				 <tr>
- 
-  				 <td width="50%" align="left">
-  				 <a href="http://www.yanyulin.info/pages/2013/11/github.html" title="Github简明教程(入门篇)" target="_blank">Github简明教程(入门篇)</a>
-  				 </td>
-	
-	 
- 
-  				 <td width="50%" align="left">
-  				 <a href="http://www.yanyulin.info/pages/2013/11/githubM.html" title="Github上如何给别人贡献代码" target="_blank">Github上如何给别人贡献代码</a>
-  				 </td>
-	
-  				 </tr>
-	 
-  				 <tr>
- 
-  				 <td width="50%" align="left">
-  				 <a href="http://www.yanyulin.info/pages/2014/03/github_site.html" title="github搭建网站优化(修复过多的302重定向请求)" target="_blank">github搭建网站优化(修复过多的302重定向请求)</a>
-  				 </td>
-	
-	 
- 
-  				 <td width="50%" align="left">
-  				 <a href="http://www.yanyulin.info/pages/2013/12/htaccess.html" title=".htaccess简明教程(SEO优化)" target="_blank">.htaccess简明教程(SEO优化)</a>
-  				 </td>
-	
-  				 </tr>
-	 
-  				 <tr>
- 
-  				 <td width="50%" align="left">
-  				 <a href="http://www.yanyulin.info/pages/2014/03/navigator.html" title="pelican创建博客如何设置导航条" target="_blank">pelican创建博客如何设置导航条</a>
-  				 </td>
-	
-	 
- 
-  				 <td width="50%" align="left">
-  				 <a href="http://www.yanyulin.info/pages/2013/11/pelican.html" title="pelican搭建属于自已的博客" target="_blank">pelican搭建属于自已的博客</a>
-  				 </td>
-	
-  				 </tr>
-	 
-  				 <tr>
- 
-  				 <td width="50%" align="left">
-  				 <a href="http://www.yanyulin.info/pages/2014/03/pelican_page.html" title="pelican博客搭建设置分页和分页保存位置" target="_blank">pelican博客搭建设置分页和分页保存位置</a>
-  				 </td>
-	
-	 
- 
-  				 <td width="50%" align="left">
-  				 <a href="http://www.yanyulin.info/pages/2014/01/pelican_question.html" title="pelican创建博客常见问题汇总" target="_blank">pelican创建博客常见问题汇总</a>
-  				 </td>
-	
-  				 </tr>
- 
-  				 <td><a href="#" align="left"></a></td>
   				 <td><a href="#" align="left"></a></td>
 			</table>
 				</div>
@@ -287,10 +250,20 @@ git保存用户名与密码(避免用户名密码输入) - 烟雨林</title>
 				<h3>相关标签</h3>
 				<div class="box">			
 						<div class="textwidget">
-							<a href="http://www.yanyulin.info/tag/linuxhui-zong.html" title="查看Linux汇总下的所有文章" target="_blank">Linux汇总</a>
-							<a href="http://www.yanyulin.info/tag/gong-ju-shi-yong.html" title="查看工具使用下的所有文章" target="_blank">工具使用</a>
-							<a href="http://www.yanyulin.info/tag/cxue-xi.html" title="查看C++学习下的所有文章" target="_blank">C++学习</a>
-							<a href="http://www.yanyulin.info/tag/java.html" title="查看Java下的所有文章" target="_blank">Java</a>
+							<a href="http://www.yanyulin.info/tag/chuang-xin-gong-chang-mian-jing.html" title="查看创新工场面经下的所有文章" target="_blank">创新工场面经</a>
+							<a href="http://www.yanyulin.info/tag/mei-tuan-wang-bi-shi-ti.html" title="查看美团网笔试题下的所有文章" target="_blank">美团网笔试题</a>
+							<a href="http://www.yanyulin.info/tag/qu-na-wang-bi-shi-ti.html" title="查看去哪网笔试题下的所有文章" target="_blank">去哪网笔试题</a>
+							<a href="http://www.yanyulin.info/tag/chuang-xin-gong-chang-bi-shi-ti.html" title="查看创新工场笔试题下的所有文章" target="_blank">创新工场笔试题</a>
+							<a href="http://www.yanyulin.info/tag/hua-wei-bi-shi-ti.html" title="查看华为笔试题下的所有文章" target="_blank">华为笔试题</a>
+							<a href="http://www.yanyulin.info/tag/ren-ren-wang-bi-shi-ti.html" title="查看人人网笔试题下的所有文章" target="_blank">人人网笔试题</a>
+							<a href="http://www.yanyulin.info/tag/bai-du-bi-shi-ti.html" title="查看百度笔试题下的所有文章" target="_blank">百度笔试题</a>
+							<a href="http://www.yanyulin.info/tag/ya-ma-xun-bi-shi-ti.html" title="查看亚马逊笔试题下的所有文章" target="_blank">亚马逊笔试题</a>
+							<a href="http://www.yanyulin.info/tag/wei-ruan-bi-shi-ti.html" title="查看微软笔试题下的所有文章" target="_blank">微软笔试题</a>
+							<a href="http://www.yanyulin.info/tag/ya-hu-bi-shi-ti.html" title="查看雅虎笔试题下的所有文章" target="_blank">雅虎笔试题</a>
+							<a href="http://www.yanyulin.info/tag/zhong-xing-bi-shi-ti.html" title="查看中兴笔试题下的所有文章" target="_blank">中兴笔试题</a>
+							<a href="http://www.yanyulin.info/tag/a-li-ba-ba-bi-shi-ti.html" title="查看阿里巴巴笔试题下的所有文章" target="_blank">阿里巴巴笔试题</a>
+							<a href="http://www.yanyulin.info/tag/bao-feng-bi-shi-ti.html" title="查看暴风笔试题下的所有文章" target="_blank">暴风笔试题</a>
+							<a href="http://www.yanyulin.info/tag/gu-ge-bi-shi-ti.html" title="查看谷歌笔试题下的所有文章" target="_blank">谷歌笔试题</a>
 						</div>
 				</div>
 				<h3>本站直达</h3>
@@ -357,25 +330,25 @@ git保存用户名与密码(避免用户名密码输入) - 烟雨林</title>
 				<ul>
 				<ul class="random-post-link">
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2013/11/sizeof.html" title="被人误解的SIZEOF">被人误解的SIZEOF</a>
+				<a href="http://www.yanyulin.info/pages/2013/12/htaccess.html" title=".htaccess简明教程(SEO优化)">.htaccess简明教程(SEO优化)</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2014/03/cvte_2014_1.html" title="CVTE校园招聘面经2014年软件研发面经">CVTE校园招聘面经2014年软件研发面经</a>
+				<a href="http://www.yanyulin.info/pages/2013/12/neteasyM_1.html" title="网易校招2014年电商面经">网易校招2014年电商面经</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2013/12/meituan_2014_A.html" title="美团网2014年校招笔试题(研发)">美团网2014年校招笔试题(研发)</a>
+				<a href="http://www.yanyulin.info/pages/2013/09/huawei_2013_2.html" title="2013届华为校园招聘成都上机题目">2013届华为校园招聘成都上机题目</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2013/11/objectModel.html" title="深度探索C++对象模型">深度探索C++对象模型</a>
+				<a href="http://www.yanyulin.info/pages/2013/11/deepc.html" title="C语言深度解剖(含金量高)">C语言深度解剖(含金量高)</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2013/11/vlinux2.html" title="Linux基础教程视频版(很详细)">Linux基础教程视频版(很详细)</a>
+				<a href="http://www.yanyulin.info/pages/2013/11/vlinux1.html" title="Linux入门版视频教程(基础)">Linux入门版视频教程(基础)</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2014/03/ripple_safe.html" title="保护Ripple币以及万特币的几点安全措施">保护Ripple币以及万特币的几点安全措施</a>
+				<a href="http://www.yanyulin.info/pages/2014/01/whyRipple.html" title="为什么大家都转向了Ripple">为什么大家都转向了Ripple</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2014/03/zhihu_2.html" title="一款自动发链接软件的实现细节分析">一款自动发链接软件的实现细节分析</a>
+				<a href="http://www.yanyulin.info/pages/2013/11/qqLogin.html" title="界面编程模仿篇(模仿腾讯QQ登录界面)">界面编程模仿篇(模仿腾讯QQ登录界面)</a>
 				</li>
 				<li class="random-post-link">
 				<a href="http://www.yanyulin.info/pages/2014/03/duoshuo.html" title="多说评论框如何|怎么样|实际测试">多说评论框如何|怎么样|实际测试</a>
@@ -427,22 +400,22 @@ var duoshuoQuery = {short_name:"yanyulin"};
 				<div class="box_r">
 				<ul>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2013/11/githubM.html" rel="bookmark" title="Github上如何给别人贡献代码">Github上如何给别人贡献代码</a>
+				<a href="http://www.yanyulin.info/pages/2013/12/htaccess.html" rel="bookmark" title=".htaccess简明教程(SEO优化)">.htaccess简明教程(SEO优化)</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2014/03/dianping_2014_1.html" rel="bookmark" title="大众点评校园招聘面经2014年软件面经">大众点评校园招聘面经2014年软件面经</a>
+				<a href="http://www.yanyulin.info/pages/2014/01/qunar_1.html" rel="bookmark" title="去哪儿网校招2014年面经">去哪儿网校招2014年面经</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2013/12/alibaba_2014_A.html" rel="bookmark" title="阿里巴巴2014年校招笔试题(研发)">阿里巴巴2014年校招笔试题(研发)</a>
+				<a href="http://www.yanyulin.info/pages/2014/03/cxgc_2013_B.html" rel="bookmark" title="创新工场校园招聘笔试题2013年软件研发">创新工场校园招聘笔试题2013年软件研发</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2014/03/offer.html" rel="bookmark" title="剑指Offer书籍PDF下载及简介">剑指Offer书籍PDF下载及简介</a>
+				<a href="http://www.yanyulin.info/pages/2013/11/objectModel.html" rel="bookmark" title="深度探索C++对象模型">深度探索C++对象模型</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2013/11/vlinux1.html" rel="bookmark" title="Linux入门版视频教程(基础)">Linux入门版视频教程(基础)</a>
+				<a href="http://www.yanyulin.info/pages/2013/12/vc_1.html" rel="bookmark" title="VC视频教程(主要讲述`MFC`)">VC视频教程(主要讲述`MFC`)</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2014/02/xrptalk.html" rel="bookmark" title="XRP Talk论坛注册教程">XRP Talk论坛注册教程</a>
+				<a href="http://www.yanyulin.info/pages/2014/02/gko.html" rel="bookmark" title="[赠送]GKO币每天免费领取10ripple">[赠送]GKO币每天免费领取10ripple</a>
 				</li>
 				<li>
 				<a href="http://www.yanyulin.info/pages/2014/03/zhihu_1.html" rel="bookmark" title="一款自动发链接的软件设计思路">一款自动发链接的软件设计思路</a>

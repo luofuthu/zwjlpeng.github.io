@@ -102,7 +102,79 @@
 &lt;p&gt;2、而且当时同组的8,9个人里面就我一个没有装正装（其实搞技术去其他公司的一般不用的）&lt;/p&gt;
 &lt;p&gt;3、他们说我说话太小声了，表达得也不好&lt;/p&gt;
 &lt;p&gt;4、别人在讲的时候，她们会留意其他人在有没有在听（难怪有的人好像很有经验，一坐下来就拿着纸和笔）。忙了几天就这样被鄙视了，感觉很压抑。&lt;/p&gt;
-&lt;/blockquote&gt;</summary><category term="腾讯面经"></category></entry><entry><title>美团网校园招聘面经2014年软件研发</title><link href="http://www.yanyulin.info/pages/2014/03/meituan_2014_2.html" rel="alternate"></link><updated>2014-03-10T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-10:pages/2014/03/meituan_2014_2.html</id><summary type="html">&lt;hr /&gt;
+&lt;/blockquote&gt;</summary><category term="腾讯面经"></category></entry><entry><title>创新工场校园招聘面经面试经验2014年研发类</title><link href="http://www.yanyulin.info/pages/2014/03/cxgc_2014_1.html" rel="alternate"></link><updated>2014-03-10T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-10:pages/2014/03/cxgc_2014_1.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;以下记录的是我的创新工场一面经历&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;一面时主要问的是算法，问了我两个算法，如下所示：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;一、输入字符串：AB123abd32HDU, 输出：12233ABDHUabd  时间复杂度：O（N）&lt;/p&gt;
+&lt;p&gt;我写的代码如下：&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="vi"&gt;#include&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;iostream&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="nx"&gt;using&lt;/span&gt; &lt;span class="nx"&gt;namespace&lt;/span&gt; &lt;span class="nx"&gt;std&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="nx"&gt;int&lt;/span&gt; &lt;span class="nx"&gt;main&lt;/span&gt;&lt;span class="p"&gt;(){&lt;/span&gt;
+    &lt;span class="nx"&gt;char&lt;/span&gt; &lt;span class="nx"&gt;str&lt;/span&gt;&lt;span class="err"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;;
+    int hash&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;63&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;={0};
+    cout&lt;span class="err"&gt;&amp;lt;&amp;lt;&lt;/span&gt;&amp;quot;input:&amp;quot;;
+    cin&amp;gt;&amp;gt;str;
+    for (int i=0;i&lt;span class="nt"&gt;&amp;lt;strlen&lt;/span&gt;&lt;span class="err"&gt;(&lt;/span&gt;&lt;span class="na"&gt;str&lt;/span&gt;&lt;span class="err"&gt;);&lt;/span&gt;&lt;span class="na"&gt;i&lt;/span&gt;&lt;span class="err"&gt;++)&lt;/span&gt;
+    &lt;span class="err"&gt;{&lt;/span&gt;
+        &lt;span class="na"&gt;if&lt;/span&gt; &lt;span class="err"&gt;((&lt;/span&gt;&lt;span class="na"&gt;str&lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="err"&gt;&amp;lt;&amp;#39;&lt;/span&gt;&lt;span class="na"&gt;0&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;||&lt;/span&gt;&lt;span class="na"&gt;str&lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;&amp;#39;9&amp;#39;)&lt;span class="err"&gt;&amp;amp;&amp;amp;&lt;/span&gt;(str&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="err"&gt;&amp;lt;&lt;/span&gt;&amp;#39;A&amp;#39;||str&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;&amp;gt;&amp;#39;Z&amp;#39;)&lt;span class="err"&gt;&amp;amp;&amp;amp;&lt;/span&gt;(str&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="err"&gt;&amp;lt;&lt;/span&gt;&amp;#39;a&amp;#39;||str&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;&amp;gt;&amp;#39;z&amp;#39;))
+        {
+            cout&lt;span class="err"&gt;&amp;lt;&amp;lt;&lt;/span&gt;&amp;quot;invalid input!\n&amp;quot;;
+            break;
+        }
+        if (str&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;&amp;gt;=&amp;#39;0&amp;#39;&lt;span class="err"&gt;&amp;amp;&amp;amp;&lt;/span&gt;str&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="err"&gt;&amp;lt;&lt;/span&gt;=&amp;#39;9&amp;#39;)
+        {
+            hash&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;str&lt;/span&gt;&lt;span class="err"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;-&amp;#39;0&amp;#39;]++;
+        }
+        if (str&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;&amp;gt;=&amp;#39;A&amp;#39;&lt;span class="err"&gt;&amp;amp;&amp;amp;&lt;/span&gt;str&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="err"&gt;&amp;lt;&lt;/span&gt;=&amp;#39;Z&amp;#39;)
+        {
+            hash&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;str&lt;/span&gt;&lt;span class="err"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;-&amp;#39;A&amp;#39;+10]++;
+        }
+        if (str&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;&amp;gt;=&amp;#39;a&amp;#39;&lt;span class="err"&gt;&amp;amp;&amp;amp;&lt;/span&gt;str&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="err"&gt;&amp;lt;&lt;/span&gt;=&amp;#39;z&amp;#39;)
+        {
+            hash&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;str&lt;/span&gt;&lt;span class="err"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;-&amp;#39;a&amp;#39;+36]++;
+        }
+    }
+    int j=0;
+    cout&lt;span class="err"&gt;&amp;lt;&amp;lt;&lt;/span&gt;&amp;quot;\noutput:&amp;quot;;
+    for (i=0;i&lt;span class="nt"&gt;&amp;lt;10&lt;/span&gt;&lt;span class="err"&gt;;&lt;/span&gt;&lt;span class="na"&gt;i&lt;/span&gt;&lt;span class="err"&gt;++)&lt;/span&gt;
+    &lt;span class="err"&gt;{&lt;/span&gt;
+        &lt;span class="na"&gt;while&lt;/span&gt; &lt;span class="err"&gt;(&lt;/span&gt;&lt;span class="na"&gt;hash&lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;0)
+        {
+            str&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;j&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;=i+&amp;#39;0&amp;#39;;
+            hash&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;--;
+        }
+    }
+
+    for (i=10;i&lt;span class="nt"&gt;&amp;lt;36&lt;/span&gt;&lt;span class="err"&gt;;&lt;/span&gt;&lt;span class="na"&gt;i&lt;/span&gt;&lt;span class="err"&gt;++)&lt;/span&gt;
+    &lt;span class="err"&gt;{&lt;/span&gt;
+        &lt;span class="na"&gt;while&lt;/span&gt; &lt;span class="err"&gt;(&lt;/span&gt;&lt;span class="na"&gt;hash&lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;0)
+        {
+            str&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;j&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;=i-10+&amp;#39;A&amp;#39;;
+            hash&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;--;
+        }
+    }
+    for (i=36;i&lt;span class="nt"&gt;&amp;lt;62&lt;/span&gt;&lt;span class="err"&gt;;&lt;/span&gt;&lt;span class="na"&gt;i&lt;/span&gt;&lt;span class="err"&gt;++)&lt;/span&gt;
+    &lt;span class="err"&gt;{&lt;/span&gt;
+        &lt;span class="na"&gt;while&lt;/span&gt; &lt;span class="err"&gt;(&lt;/span&gt;&lt;span class="na"&gt;hash&lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;0)
+        {
+            str&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;j&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;=i-36+&amp;#39;a&amp;#39;;
+            hash&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;--;
+        }
+    }
+    cout&lt;span class="err"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;str&lt;/span&gt;&lt;span class="err"&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class="na"&gt;endl&lt;/span&gt;&lt;span class="err"&gt;;&lt;/span&gt;
+    &lt;span class="na"&gt;return&lt;/span&gt; &lt;span class="na"&gt;0&lt;/span&gt;&lt;span class="err"&gt;;&lt;/span&gt;
+&lt;span class="err"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;二、实现归并排序的非递归算法。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;下面几个问题，是其他面试官问我们班同学的算法：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;1、一串数字的每两个数之间的差值是1或者-1，给定一个数N，求如何找到第一个N的位置，如：&lt;code&gt;3,4,3,2,1,2,3,4,3,4,5,6,5&lt;/code&gt;，求第一个5所在的位置。&lt;/p&gt;
+&lt;p&gt;2、手机上玩的连连看，用什么算法可以找到两个相同的字符。（&lt;code&gt;BFS&lt;/code&gt;算法）&lt;/p&gt;
+&lt;p&gt;3、一群大雁在空中假设一字排开，如果每个大雁之间的前后距离不超过n，切任意两个大雁之间前后的距离只能是1-n的整数，同时不允许大雁之间出现交叉情况，即每个大雁只能向前方飞行，设计算法，打印出m只大雁之间在空中飞行可能出现的队形 &lt;/p&gt;
+&lt;p&gt;大家可以参考&lt;/p&gt;</summary><category term="创新工场面经"></category></entry><entry><title>美团网校园招聘面经2014年软件研发</title><link href="http://www.yanyulin.info/pages/2014/03/meituan_2014_2.html" rel="alternate"></link><updated>2014-03-10T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-10:pages/2014/03/meituan_2014_2.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;从半年前开始找工作，一路被鄙视到现在。以至于面了一些公司也不敢发帖写面经了&lt;/p&gt;
 &lt;p&gt;作为一个没有项目经验的渣渣，一开始问啥啥都不会，&lt;/p&gt;
 &lt;p&gt;回忆一下，半年前找实习的时候，我第一次笔试和面试都给了&lt;code&gt;CVTE&lt;/code&gt;，当时因为选错方向就跪了。腾讯实习的时候也是选错方向，加上基础差，没经验也跪了。也不怕死的投了微软，做了一份全英的试题。还有UC的笔试之类的，最后都没过。然后我就决定暑假恶补基础，暑假回家之后由于一些原因决定卖队友大四不参加比赛了，不过那时候没怎么练也打不过师弟师妹们了，还不如把机会让给他们去练练&lt;/p&gt;
