@@ -179,7 +179,9 @@
 &lt;p&gt;大家可以参考&lt;/p&gt;</summary><category term="创新工场面经"></category></entry><entry><title>创新工场校园招聘面经面试经验2014年武汉研发类</title><link href="http://www.yanyulin.info/pages/2014/03/cxgc_2014_2.html" rel="alternate"></link><updated>2014-03-10T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-10:pages/2014/03/cxgc_2014_2.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;本人没进面试，下面是身边同学的面试题目&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;1、如何优化快速排序&lt;/p&gt;
+&lt;blockquote&gt;
 &lt;p&gt;在这里我用的是&lt;code&gt;Median Of Three Partitioning&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="vi"&gt;#include&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;iostream&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
 &lt;span class="nx"&gt;using&lt;/span&gt; &lt;span class="nx"&gt;namespace&lt;/span&gt; &lt;span class="nx"&gt;std&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 
@@ -293,9 +295,13 @@ int main()
 
 
 &lt;p&gt;2、图算法&lt;/p&gt;
+&lt;blockquote&gt;
 &lt;p&gt;最小生成树之Kruskal&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;3、如何判断两个节点是不是属于同一棵树？&lt;/p&gt;
+&lt;blockquote&gt;
 &lt;p&gt;考察并查集&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;Quick&lt;/span&gt; &lt;span class="n"&gt;Find&lt;/span&gt;
 
 &lt;span class="n"&gt;Quick&lt;/span&gt; &lt;span class="n"&gt;Union&lt;/span&gt;
@@ -307,7 +313,9 @@ int main()
 
 
 &lt;p&gt;4、虚函数表放在什么地方？&lt;/p&gt;
-&lt;p&gt;根据网上查资料，得出结论是虚函数表在Linux/Unix中存放在可执行文件的只读数据段中（rodata），在微软的编译器中，虚函数表存放在常量段中&lt;/p&gt;</summary><category term="创新工场面经"></category></entry><entry><title>华为校园招聘面试经验2014年软件研发武汉区</title><link href="http://www.yanyulin.info/pages/2014/03/huawei_2014_B.html" rel="alternate"></link><updated>2014-03-10T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-10:pages/2014/03/huawei_2014_B.html</id><summary type="html">&lt;hr /&gt;
+&lt;blockquote&gt;
+&lt;p&gt;根据网上查资料，得出结论是虚函数表在Linux/Unix中存放在可执行文件的只读数据段中（rodata），在微软的编译器中，虚函数表存放在常量段中&lt;/p&gt;
+&lt;/blockquote&gt;</summary><category term="创新工场面经"></category></entry><entry><title>华为校园招聘面试经验2014年软件研发武汉区</title><link href="http://www.yanyulin.info/pages/2014/03/huawei_2014_B.html" rel="alternate"></link><updated>2014-03-10T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-10:pages/2014/03/huawei_2014_B.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;华为，我们不仅仅是世界500强&lt;/strong&gt;，这是今年华为校招时的口号~~~&lt;/p&gt;
 &lt;p&gt;华为要想进行面试，面试之前必须要过机试，机试有三道题，只要做对一道，就有机会进入面试，但是推荐大家还是全做完，也不是很难，而且要尽快做完，因为成绩的取得要依赖于做题的时间，答对的题数，提交的次数...&lt;/p&gt;
 &lt;p&gt;我应聘的是&lt;code&gt;研究工程师&lt;/code&gt;，面试问的全是项目&lt;/p&gt;
