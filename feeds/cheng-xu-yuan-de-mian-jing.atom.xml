@@ -1,5 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>烟雨林</title><link href="http://www.yanyulin.info/" rel="alternate"></link><link href="http://www.yanyulin.info/feeds/cheng-xu-yuan-de-mian-jing.atom.xml" rel="self"></link><id>http://www.yanyulin.info/</id><updated>2014-03-10T00:00:00+08:00</updated><entry><title>CVTE校园招聘面经2014年软件研发面经</title><link href="http://www.yanyulin.info/pages/2014/03/cvte_2014_1.html" rel="alternate"></link><updated>2014-03-10T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-10:pages/2014/03/cvte_2014_1.html</id><summary type="html">&lt;hr /&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>烟雨林</title><link href="http://www.yanyulin.info/" rel="alternate"></link><link href="http://www.yanyulin.info/feeds/cheng-xu-yuan-de-mian-jing.atom.xml" rel="self"></link><id>http://www.yanyulin.info/</id><updated>2014-03-10T00:00:00+08:00</updated><entry><title>阿里巴巴校招面经2014年软件研发</title><link href="http://www.yanyulin.info/pages/2014/03/ali_4.html" rel="alternate"></link><updated>2014-03-10T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-10:pages/2014/03/ali_4.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;最近招聘好多，发个面试经历刻不容缓&lt;/p&gt;
+&lt;p&gt;闲话我会写少一点，减少小伙伴们阅读的时间&lt;/p&gt;
+&lt;p&gt;先祝小伙伴们旗开得胜&lt;/p&gt;
+&lt;p&gt;星期一晚上收到通知，预约到星期二早上面试，选了10点，最早的一轮，研发工程师&lt;/p&gt;
+&lt;p&gt;面试官很和蔼，握手，笑容，虐了你也笑。面试官叫做冥志&lt;/p&gt;
+&lt;p&gt;自我介绍&lt;/p&gt;
+&lt;p&gt;1、&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;cal&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;unsigned&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;   &lt;span class="c1"&gt;//给定一个无符号整型，求十进制上出每一位数字的和&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;2、&lt;/p&gt;
+&lt;p&gt;给定1~100整数，确定的1~100，即1、2、3、。。。100&lt;/p&gt;
+&lt;p&gt;3、&lt;/p&gt;
+&lt;p&gt;有1个缺了怎么办？  //扫一遍求和减去sum，水题&lt;/p&gt;
+&lt;p&gt;4、&lt;/p&gt;
+&lt;p&gt;继续问，缺2个呢，想了一下，说，其实这题我看过，不过实在是忘记了...没办法，排序吧  &lt;/p&gt;
+&lt;p&gt;5、&lt;/p&gt;
+&lt;p&gt;给一叠52张牌，其中10张向上，42张向下，现在你在一个黑麻麻的屋子里，让你把这一堆牌分成两堆（没要求数量一样），要求两堆牌中向上的牌的数量一样。&lt;/p&gt;
+&lt;p&gt;一看就是无解题，想了很久说不会，面试官说没事，这个需要跳跃性思维&lt;/p&gt;
+&lt;p&gt;6、&lt;/p&gt;
+&lt;p&gt;一下位运算的操作：一个数字，化成二进制，交换奇偶位置。&lt;/p&gt;
+&lt;p&gt;我写了个o(log)，问我怎么优化。&lt;/p&gt;
+&lt;p&gt;我说log那个量可以写成常量。&lt;/p&gt;
+&lt;p&gt;最后写成了o(1)的。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt; &lt;span class="mh"&gt;0x55555555&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt; &lt;span class="mh"&gt;0x55555555&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;一个数字*7，怎么写比较快&lt;/p&gt;
+&lt;p&gt;一开始傻逼了，后来改正了&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;7、&lt;/p&gt;
+&lt;p&gt;进程和线程的区别。//烂大街了吧&lt;/p&gt;
+&lt;p&gt;8、&lt;/p&gt;
+&lt;p&gt;问了一下多态。//秒了，我暑假把c++primer看了一遍的。呵呵。&lt;/p&gt;
+&lt;p&gt;9、&lt;/p&gt;
+&lt;p&gt;问我多态怎么实现，不是代码怎么实现，是编译器怎么实现。&lt;/p&gt;
+&lt;p&gt;我说虚表。&lt;/p&gt;
+&lt;p&gt;10、&lt;/p&gt;
+&lt;p&gt;然后问虚表是什么时候做的。我说我猜是编译的时候就做好了，然后再继续虚表的细节，我都猜了&lt;/p&gt;
+&lt;p&gt;11、&lt;/p&gt;
+&lt;p&gt;问了一下课程有哪些，喜欢哪些，我说除了算法数据结构之外，操作系统还可以&lt;/p&gt;
+&lt;p&gt;问我分数，自豪答我数据结构100，屌丝地说操作系统什么的80+，幸好他不是广工的&lt;/p&gt;
+&lt;p&gt;那你喜欢操作系统，哪一块？调度还是存储还是。。？&lt;/p&gt;
+&lt;p&gt;进程什么的吧。&lt;/p&gt;
+&lt;p&gt;优先级翻转是什么？有了解吗？&lt;/p&gt;
+&lt;p&gt;硬着头皮答了一下，回来查了一下，丢脸了&lt;/p&gt;
+&lt;p&gt;然后聊了一下人生，聊了一下其他。好像没了，可能有漏了题目，我记起来的话会编辑这篇文章&lt;/p&gt;
+&lt;p&gt;握手，言谢。让我出去等，说要给组织人员反馈&lt;/p&gt;
+&lt;p&gt;等了一下通知我继续面。&lt;/p&gt;
+&lt;p&gt;进到去发现有两个人，介绍之后，女的是技术，男的是hr&lt;/p&gt;
+&lt;p&gt;说这是因为你走了绿色通道，这是终面&lt;/p&gt;
+&lt;p&gt;我说我啊？我没走绿色通道啊&lt;/p&gt;
+&lt;p&gt;hr说反正这就是终面啦，哈哈&lt;/p&gt;
+&lt;p&gt;坐下来他们看简历，和我聊天了两句，赞了一下我的手机号 几乎对称，问我是不是自己买的，我说学校发的&lt;/p&gt;
+&lt;p&gt;也赞我确实拿了挺多奖啊，（其实是面试官不知道acm，知道acm都知道我的奖不多了），礼貌说了谢谢&lt;/p&gt;
+&lt;p&gt;坐下来就问我课程，可能上一面的记录有，就问到操作系统的课程实验难道没有做个系统啊什么的？&lt;/p&gt;
+&lt;p&gt;我说没有，都是模拟的，她说怎么模拟，我都不敢说了，人家都是内核级别的模拟，我们都应用级别的模拟，
+我怎么敢说，丢广工脸啊&lt;/p&gt;
+&lt;p&gt;然后就问我你读内核读哪个版本的源码。我说，呵呵&lt;/p&gt;
+&lt;p&gt;然后针对我的屌丝项目问了一下，给我加了需求，让我解决&lt;/p&gt;
+&lt;p&gt;明显是解决不了的嘛= =...&lt;/p&gt;
+&lt;p&gt;架构上就决定了我那个项目多屌丝了&lt;/p&gt;
+&lt;p&gt;然后问我acm那块，说算法。指明了问图轮，可能面试官熟悉&lt;/p&gt;
+&lt;p&gt;就给她说了个最短路，吊她胃口，然后在用个堆优化一下，杠杠的&lt;/p&gt;
+&lt;p&gt;然后聊了一下以后的发展，好奇什么技术什么的&lt;/p&gt;
+&lt;p&gt;其中我说到 云存储还可以做，但是云计算暂时不能做&lt;/p&gt;
+&lt;p&gt;然后她很热情给我讲了其实还有很多可以做的，而且比较成熟&lt;/p&gt;
+&lt;p&gt;可能她内部有开源资料？羡慕&lt;/p&gt;
+&lt;p&gt;然后hr问了两个问题，兴趣爱好，篮球和吉他。其实还有一个，女人。当然，我没说&lt;/p&gt;
+&lt;p&gt;最后到我提问的环节，我反问了技术面试官对我指导一下，她很热情“你的基础还挺扎实 //这是我最开心的一句话了，我暑假恶补了，暑假前有面试官说过我基础不扎实&lt;/p&gt;
+&lt;p&gt;就是做的东西比较少，&lt;/p&gt;
+&lt;p&gt;有一些东西你要多尝试去做，&lt;/p&gt;
+&lt;p&gt;发挥你的想象力，&lt;/p&gt;
+&lt;p&gt;现存很多解决问题的方法都是很简单的，&lt;/p&gt;
+&lt;p&gt;就是需要有人敢做。&lt;/p&gt;
+&lt;p&gt;多读读别人的源码，&lt;/p&gt;
+&lt;p&gt;了解别人的意图，&lt;/p&gt;
+&lt;p&gt;不想我们以前很封闭。//确实，她看起来30+岁，目测也是个技术大牛。&lt;/p&gt;
+&lt;p&gt;”//大概这么多，可能我忘记了。&lt;/p&gt;
+&lt;p&gt;说一周内有消息。&lt;/p&gt;
+&lt;p&gt;点头感谢，溜人。&lt;/p&gt;
+&lt;p&gt;感谢读完，小伙伴们加油&lt;/p&gt;</summary><category term="阿里面经"></category></entry><entry><title>CVTE校园招聘面经2014年软件研发面经</title><link href="http://www.yanyulin.info/pages/2014/03/cvte_2014_1.html" rel="alternate"></link><updated>2014-03-10T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-10:pages/2014/03/cvte_2014_1.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;简介&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;CVTE&lt;/code&gt;集团成立于2003年，总部位于广州科学城，建筑面积2万平方米，旗下设有多家独立的子公司，在香港设有全球服务中心，在国内设有26个营销服务中心和近1000个售后服务网点。CVTE目前致力于多类相关产品的研发、销售和内容服务，包括液晶电视主板设计、电源设计、移动互联、智能机顶盒、商用显示、工业设计、嵌入式游戏、医疗和教育等产业方向&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;面试&lt;/strong&gt;&lt;/p&gt;

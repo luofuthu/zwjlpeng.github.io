@@ -2,7 +2,7 @@
 <html lang="zh">
 <head>
 <title>
-STL源码剖析(候捷译) - 烟雨林</title>
+阿里巴巴校招面经2014年软件研发 - 烟雨林</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
 <meta name="author" content="烟雨林">
@@ -25,7 +25,7 @@ STL源码剖析(候捷译) - 烟雨林</title>
 						  		<ul>	
 						   						<li><a href="http://www.yanyulin.info">烟雨首页</a></li>
 						  				  											<li><a href="http://www.yanyulin.info/category/bian-cheng-yu-yan.html">编程语言</a></li>
-						  																<li class="current-menu-item current_page_item "><a href="http://www.yanyulin.info/category/jing-pin-shu-ji.html">精品书籍</a></li>
+						  				  											<li><a href="http://www.yanyulin.info/category/jing-pin-shu-ji.html">精品书籍</a></li>
 						  				  											<li><a href="http://www.yanyulin.info/category/shi-pin-jiao-cheng.html">视频教程</a></li>
 						  				  											<li><a href="http://www.yanyulin.info/category/tou-zi-li-cai.html">投资理财</a></li>
 						  				  											<li><a href="http://www.yanyulin.info/category/wan-zhuan-ji-zhu.html">玩转技术</a></li>
@@ -45,15 +45,15 @@ STL源码剖析(候捷译) - 烟雨林</title>
 		<div id="content">							 
 					<div id="map">
 						<div class="browse">现在的位置: <a title="返回首页" href="http://www.yanyulin.info">烟雨首页</a> ＞
-						<a href="http://www.yanyulin.info/category/jing-pin-shu-ji.html" title="查看精品书籍中的全部文章" rel="category tag">精品书籍</a>＞正文</div>
+						<a href="http://www.yanyulin.info/category/cheng-xu-yuan-de-mian-jing.html" title="查看程序员的面经中的全部文章" rel="category tag">程序员的面经</a>＞正文</div>
 						<div class="font"><a href="javascript:doZoom(12)">小</a> <a href="javascript:doZoom(13)">中</a> <a href="javascript:doZoom(18)">大</a></div>
 					</div>
 					<div class="entry_box_s">
 						<div class="entry_title_box">
-							<div class="entry_title">STL源码剖析(候捷译)</div>
+							<div class="entry_title">阿里巴巴校招面经2014年软件研发</div>
 							<div class="archive_info">
-								<span class="date">2013-11-21</span>
-								<span class="category"> ⁄ <a href="http://www.yanyulin.info/category/jing-pin-shu-ji.html" title="查看精品书籍中的全部文章" rel="category tag">精品书籍</a></span>
+								<span class="date">2014-03-10</span>
+								<span class="category"> ⁄ <a href="http://www.yanyulin.info/category/cheng-xu-yuan-de-mian-jing.html" title="查看程序员的面经中的全部文章" rel="category tag">程序员的面经</a></span>
 							</div>
 						</div>
 						<div class="entry">
@@ -80,26 +80,96 @@ STL源码剖析(候捷译) - 烟雨林</title>
 </script>
 </div>
 							<hr />
-<p>STL源码剖析 PDF格式下载:<a href="http://yunpan.cn/QUj5p6EIPZH9y" target="_blank" title="《STL源码剖析》">点这里</a></p>
-<p>STL源码剖析此书是一本不可多得的好书，大师的精典之作，大多数程序员只知道集合类非常好用，只需要向集合类中填加元素，不用担心空间的开设，以及空间的回收，也不用考虑集合类的效率，更重要的是集合类还给我们提供了各种各样的函数，但是知其所以然而不知其因为然，这样的程序员是不合格的，《STL源码剖析》很好的给我们讲解了集合类的底层实现，以及泛型算法。</p>
-<p>STL源码剖析</p>
-<blockquote>
-<p>前言</p>
-<p>第1章STL概论与版本简介</p>
-<p>第2章 空间配置器（allocator）</p>
-<p>第3章迭代器（iterators）概念与traits编程技法</p>
-<p>第4章 序列式容器（sequence containers）</p>
-<p>第5章 关联式容器（associattive containers）</p>
-<p>第6章 算法（algorithms）</p>
-<p>第7章 仿函数（functors，另名 函数对象function objects）</p>
-<p>第8章 配接器（adapters）</p>
-<p>附录A 参考书籍与推荐读物</p>
-<p>附录B 候捷网站（本书支持站点简介）</p>
-<p>附录C STLPort 的移植经验（by孟岩</p>
-</blockquote>
+<p>最近招聘好多，发个面试经历刻不容缓</p>
+<p>闲话我会写少一点，减少小伙伴们阅读的时间</p>
+<p>先祝小伙伴们旗开得胜</p>
+<p>星期一晚上收到通知，预约到星期二早上面试，选了10点，最早的一轮，研发工程师</p>
+<p>面试官很和蔼，握手，笑容，虐了你也笑。面试官叫做冥志</p>
+<p>自我介绍</p>
+<p>1、</p>
+<div class="highlight"><pre><span class="kt">int</span> <span class="nf">cal</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span><span class="p">);</span>   <span class="c1">//给定一个无符号整型，求十进制上出每一位数字的和</span>
+</pre></div>
+
+
+<p>2、</p>
+<p>给定1~100整数，确定的1~100，即1、2、3、。。。100</p>
+<p>3、</p>
+<p>有1个缺了怎么办？  //扫一遍求和减去sum，水题</p>
+<p>4、</p>
+<p>继续问，缺2个呢，想了一下，说，其实这题我看过，不过实在是忘记了...没办法，排序吧  </p>
+<p>5、</p>
+<p>给一叠52张牌，其中10张向上，42张向下，现在你在一个黑麻麻的屋子里，让你把这一堆牌分成两堆（没要求数量一样），要求两堆牌中向上的牌的数量一样。</p>
+<p>一看就是无解题，想了很久说不会，面试官说没事，这个需要跳跃性思维</p>
+<p>6、</p>
+<p>一下位运算的操作：一个数字，化成二进制，交换奇偶位置。</p>
+<p>我写了个o(log)，问我怎么优化。</p>
+<p>我说log那个量可以写成常量。</p>
+<p>最后写成了o(1)的。</p>
+<div class="highlight"><pre><span class="n">x</span><span class="o">=</span><span class="p">(</span> <span class="n">x</span> <span class="o">&amp;</span> <span class="mh">0x55555555</span> <span class="p">)</span> <span class="o">|</span> <span class="p">(</span> <span class="p">(</span> <span class="n">x</span><span class="o">&lt;&lt;</span><span class="mi">1</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mh">0x55555555</span><span class="p">);</span>
+</pre></div>
+
+
+<p>一个数字*7，怎么写比较快</p>
+<p>一开始傻逼了，后来改正了</p>
+<div class="highlight"><pre><span class="n">x</span><span class="o">=</span><span class="p">(</span><span class="n">x</span><span class="o">&lt;&lt;</span><span class="mi">3</span><span class="p">)</span><span class="o">-</span><span class="n">x</span><span class="p">;</span>
+</pre></div>
+
+
+<p>7、</p>
+<p>进程和线程的区别。//烂大街了吧</p>
+<p>8、</p>
+<p>问了一下多态。//秒了，我暑假把c++primer看了一遍的。呵呵。</p>
+<p>9、</p>
+<p>问我多态怎么实现，不是代码怎么实现，是编译器怎么实现。</p>
+<p>我说虚表。</p>
+<p>10、</p>
+<p>然后问虚表是什么时候做的。我说我猜是编译的时候就做好了，然后再继续虚表的细节，我都猜了</p>
+<p>11、</p>
+<p>问了一下课程有哪些，喜欢哪些，我说除了算法数据结构之外，操作系统还可以</p>
+<p>问我分数，自豪答我数据结构100，屌丝地说操作系统什么的80+，幸好他不是广工的</p>
+<p>那你喜欢操作系统，哪一块？调度还是存储还是。。？</p>
+<p>进程什么的吧。</p>
+<p>优先级翻转是什么？有了解吗？</p>
+<p>硬着头皮答了一下，回来查了一下，丢脸了</p>
+<p>然后聊了一下人生，聊了一下其他。好像没了，可能有漏了题目，我记起来的话会编辑这篇文章</p>
+<p>握手，言谢。让我出去等，说要给组织人员反馈</p>
+<p>等了一下通知我继续面。</p>
+<p>进到去发现有两个人，介绍之后，女的是技术，男的是hr</p>
+<p>说这是因为你走了绿色通道，这是终面</p>
+<p>我说我啊？我没走绿色通道啊</p>
+<p>hr说反正这就是终面啦，哈哈</p>
+<p>坐下来他们看简历，和我聊天了两句，赞了一下我的手机号 几乎对称，问我是不是自己买的，我说学校发的</p>
+<p>也赞我确实拿了挺多奖啊，（其实是面试官不知道acm，知道acm都知道我的奖不多了），礼貌说了谢谢</p>
+<p>坐下来就问我课程，可能上一面的记录有，就问到操作系统的课程实验难道没有做个系统啊什么的？</p>
+<p>我说没有，都是模拟的，她说怎么模拟，我都不敢说了，人家都是内核级别的模拟，我们都应用级别的模拟，
+我怎么敢说，丢广工脸啊</p>
+<p>然后就问我你读内核读哪个版本的源码。我说，呵呵</p>
+<p>然后针对我的屌丝项目问了一下，给我加了需求，让我解决</p>
+<p>明显是解决不了的嘛= =...</p>
+<p>架构上就决定了我那个项目多屌丝了</p>
+<p>然后问我acm那块，说算法。指明了问图轮，可能面试官熟悉</p>
+<p>就给她说了个最短路，吊她胃口，然后在用个堆优化一下，杠杠的</p>
+<p>然后聊了一下以后的发展，好奇什么技术什么的</p>
+<p>其中我说到 云存储还可以做，但是云计算暂时不能做</p>
+<p>然后她很热情给我讲了其实还有很多可以做的，而且比较成熟</p>
+<p>可能她内部有开源资料？羡慕</p>
+<p>然后hr问了两个问题，兴趣爱好，篮球和吉他。其实还有一个，女人。当然，我没说</p>
+<p>最后到我提问的环节，我反问了技术面试官对我指导一下，她很热情“你的基础还挺扎实 //这是我最开心的一句话了，我暑假恶补了，暑假前有面试官说过我基础不扎实</p>
+<p>就是做的东西比较少，</p>
+<p>有一些东西你要多尝试去做，</p>
+<p>发挥你的想象力，</p>
+<p>现存很多解决问题的方法都是很简单的，</p>
+<p>就是需要有人敢做。</p>
+<p>多读读别人的源码，</p>
+<p>了解别人的意图，</p>
+<p>不想我们以前很封闭。//确实，她看起来30+岁，目测也是个技术大牛。</p>
+<p>”//大概这么多，可能我忘记了。</p>
+<p>说一周内有消息。</p>
+<p>点头感谢，溜人。</p>
+<p>感谢读完，小伙伴们加油</p>
 						  <div class="clear"></div>
 							</div>
-							<b>本文地址:</b> <a href="http://www.yanyulin.info/pages/2013/11/stlOrigin.html" target="_self">http://www.yanyulin.info/pages/2013/11/stlOrigin.html</a>
+							<b>本文地址:</b> <a href="http://www.yanyulin.info/pages/2014/03/ali_4.html" target="_self">http://www.yanyulin.info/pages/2014/03/ali_4.html</a>
 							<div><font color="blue"><b>转载时请保留本文出处,谢谢您的合作</b></font></div>
 							<hr/>
 							<div class="clear" align="left">
@@ -131,10 +201,10 @@ STL源码剖析(候捷译) - 烟雨林</title>
 					<!-- end: entrymeta -->
 				<div class="context_b" align="left">
 					 上一篇: 
-  				 <a href="http://www.yanyulin.info/pages/2013/11/github.html" title="Github简明教程(入门篇)" target="_self">Github简明教程(入门篇)</a>
+  				 <a href="http://www.yanyulin.info/pages/2014/03/cvte_2014_1.html" title="CVTE校园招聘面经2014年软件研发面经" target="_self">CVTE校园招聘面经2014年软件研发面经</a>
   				 &nbsp;&nbsp
   				 下一篇:
-  				 <a href="http://www.yanyulin.info/pages/2013/11/githubM.html" title="Github上如何给别人贡献代码" target="_self">Github上如何给别人贡献代码</a>
+  				 <a href="http://www.yanyulin.info/pages/2014/03/ali_4.html" title="阿里巴巴校招面经2014年软件研发" target="_self">阿里巴巴校招面经2014年软件研发</a>
 					 
 				</div>
 				<div class="context_b">
@@ -145,13 +215,13 @@ STL源码剖析(候捷译) - 烟雨林</title>
   				 <tr>
  
   				 <td width="50%" align="left">
-  				 <a href="http://www.yanyulin.info/pages/2013/11/effective.html" title="Effective C++(编程的50个细节)" target="_blank">Effective C++(编程的50个细节)</a>
+  				 <a href="http://www.yanyulin.info/pages/2014/01/ali_1.html" title="阿里巴巴校招2014年软研面经" target="_blank">阿里巴巴校招2014年软研面经</a>
   				 </td>
 	
 	 
  
   				 <td width="50%" align="left">
-  				 <a href="http://www.yanyulin.info/pages/2013/11/objectModel.html" title="深度探索C++对象模型" target="_blank">深度探索C++对象模型</a>
+  				 <a href="http://www.yanyulin.info/pages/2010/11/ali_2.html" title="阿里巴巴校招2010年软研面经" target="_blank">阿里巴巴校招2010年软研面经</a>
   				 </td>
 	
   				 </tr>
@@ -159,10 +229,18 @@ STL源码剖析(候捷译) - 烟雨林</title>
   				 <tr>
  
   				 <td width="50%" align="left">
-  				 <a href="http://www.yanyulin.info/pages/2013/11/stlOrigin.html" title="STL源码剖析(候捷译)" target="_blank">STL源码剖析(候捷译)</a>
+  				 <a href="http://www.yanyulin.info/pages/2014/03/ali_3.html" title="阿里巴巴校招面经(2014年软件研发)" target="_blank">阿里巴巴校招面经(2014年软件研发)</a>
   				 </td>
 	
+	 
  
+  				 <td width="50%" align="left">
+  				 <a href="http://www.yanyulin.info/pages/2014/03/ali_4.html" title="阿里巴巴校招面经2014年软件研发" target="_blank">阿里巴巴校招面经2014年软件研发</a>
+  				 </td>
+	
+  				 </tr>
+ 
+  				 <td><a href="#" align="left"></a></td>
   				 <td><a href="#" align="left"></a></td>
 			</table>
 				</div>
@@ -209,10 +287,17 @@ STL源码剖析(候捷译) - 烟雨林</title>
 				<h3>相关标签</h3>
 				<div class="box">			
 						<div class="textwidget">
-							<a href="http://www.yanyulin.info/tag/mian-shi-shu.html" title="查看面试书下的所有文章" target="_blank">面试书</a>
-							<a href="http://www.yanyulin.info/tag/suan-fa-zhi-mei.html" title="查看算法之美下的所有文章" target="_blank">算法之美</a>
-							<a href="http://www.yanyulin.info/tag/cmi-ji.html" title="查看C秘籍下的所有文章" target="_blank">C秘籍</a>
-							<a href="http://www.yanyulin.info/tag/cshu-ku.html" title="查看C++书库下的所有文章" target="_blank">C++书库</a>
+							<a href="http://www.yanyulin.info/tag/a-li-mian-jing.html" title="查看阿里面经下的所有文章" target="_blank">阿里面经</a>
+							<a href="http://www.yanyulin.info/tag/teng-xun-mian-jing.html" title="查看腾讯面经下的所有文章" target="_blank">腾讯面经</a>
+							<a href="http://www.yanyulin.info/tag/mei-tuan-mian-jing.html" title="查看美团面经下的所有文章" target="_blank">美团面经</a>
+							<a href="http://www.yanyulin.info/tag/da-zhong-dian-ping-mian-jing.html" title="查看大众点评面经下的所有文章" target="_blank">大众点评面经</a>
+							<a href="http://www.yanyulin.info/tag/hua-wei-mian-jing.html" title="查看华为面经下的所有文章" target="_blank">华为面经</a>
+							<a href="http://www.yanyulin.info/tag/qi-ta-mian-jing.html" title="查看其他面经下的所有文章" target="_blank">其他面经</a>
+							<a href="http://www.yanyulin.info/tag/bai-du-mian-jing.html" title="查看百度面经下的所有文章" target="_blank">百度面经</a>
+							<a href="http://www.yanyulin.info/tag/qu-na-mian-jing.html" title="查看去哪面经下的所有文章" target="_blank">去哪面经</a>
+							<a href="http://www.yanyulin.info/tag/ren-ren-mian-jing.html" title="查看人人面经下的所有文章" target="_blank">人人面经</a>
+							<a href="http://www.yanyulin.info/tag/wang-yi-mian-jing.html" title="查看网易面经下的所有文章" target="_blank">网易面经</a>
+							<a href="http://www.yanyulin.info/tag/yin-xing-mian-jing.html" title="查看银行面经下的所有文章" target="_blank">银行面经</a>
 						</div>
 				</div>
 				<h3>本站直达</h3>
@@ -279,22 +364,22 @@ STL源码剖析(候捷译) - 烟雨林</title>
 				<ul>
 				<ul class="random-post-link">
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2013/11/linux0.html" title="Linux中0号进程的创建分析">Linux中0号进程的创建分析</a>
+				<a href="http://www.yanyulin.info/pages/2013/11/sizeof.html" title="被人误解的SIZEOF">被人误解的SIZEOF</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2014/01/baidu_1.html" title="百度校招2014年软研面经">百度校招2014年软研面经</a>
+				<a href="http://www.yanyulin.info/pages/2014/03/meituan_2014_1.html" title="美团网校园招聘2014年面经(软件研发)">美团网校园招聘2014年面经(软件研发)</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2013/12/amzon_2014_A.html" title="亚马逊2014年校招笔试题(研发)">亚马逊2014年校招笔试题(研发)</a>
+				<a href="http://www.yanyulin.info/pages/2013/12/alibaba_2014_A.html" title="阿里巴巴2014年校招笔试题(研发)">阿里巴巴2014年校招笔试题(研发)</a>
 				</li>
 				<li class="random-post-link">
 				<a href="http://www.yanyulin.info/pages/2013/11/objectModel.html" title="深度探索C++对象模型">深度探索C++对象模型</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2013/12/psbase2.html" title="Photoshop CS视频教程(下)">Photoshop CS视频教程(下)</a>
+				<a href="http://www.yanyulin.info/pages/2013/11/vlinux1.html" title="Linux入门版视频教程(基础)">Linux入门版视频教程(基础)</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2014/03/ripple_safe.html" title="保护Ripple币以及万特币的几点安全措施">保护Ripple币以及万特币的几点安全措施</a>
+				<a href="http://www.yanyulin.info/pages/2014/03/getxrp.html" title="【赠送】ripple币免费获取&免费领取">【赠送】ripple币免费获取&免费领取</a>
 				</li>
 				<li class="random-post-link">
 				<a href="http://www.yanyulin.info/pages/2013/12/qqLogin_1.html" title="界面编程模仿篇(QQ登录界面逼真篇)">界面编程模仿篇(QQ登录界面逼真篇)</a>
@@ -349,25 +434,25 @@ var duoshuoQuery = {short_name:"yanyulin"};
 				<div class="box_r">
 				<ul>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2014/02/classinitiallist.html" rel="bookmark" title="C++中类初始化列表的妙用">C++中类初始化列表的妙用</a>
+				<a href="http://www.yanyulin.info/pages/2014/03/git.html" rel="bookmark" title="git保存用户名与密码(避免用户名密码输入)">git保存用户名与密码(避免用户名密码输入)</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2014/03/ali_3.html" rel="bookmark" title="阿里巴巴校招面经(2014年软件研发)">阿里巴巴校招面经(2014年软件研发)</a>
+				<a href="http://www.yanyulin.info/pages/2013/12/neteasyM_1.html" rel="bookmark" title="网易校招2014年电商面经">网易校招2014年电商面经</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2014/03/baidu_2014_B.html" rel="bookmark" title="2014年百度校招笔试题(移动研发类)">2014年百度校招笔试题(移动研发类)</a>
+				<a href="http://www.yanyulin.info/pages/2014/03/cxgc_2013_B.html" rel="bookmark" title="创新工场校园招聘笔试题2013年软件研发">创新工场校园招聘笔试题2013年软件研发</a>
 				</li>
 				<li>
 				<a href="http://www.yanyulin.info/pages/2013/11/effective.html" rel="bookmark" title="Effective C++(编程的50个细节)">Effective C++(编程的50个细节)</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2013/12/psbase_1.html" rel="bookmark" title="PhotoShop CS入门版视频教程(基础上)">PhotoShop CS入门版视频教程(基础上)</a>
+				<a href="http://www.yanyulin.info/pages/2013/11/vlinux2.html" rel="bookmark" title="Linux基础教程视频版(很详细)">Linux基础教程视频版(很详细)</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2014/02/wtc.html" rel="bookmark" title="[赠送]WTC(万特币)获取30ripple和100WTC">[赠送]WTC(万特币)获取30ripple和100WTC</a>
+				<a href="http://www.yanyulin.info/pages/2014/02/jed.html" rel="bookmark" title="JED币免费获取30 ripple币">JED币免费获取30 ripple币</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2014/03/zhihu_2.html" rel="bookmark" title="一款自动发链接软件的实现细节分析">一款自动发链接软件的实现细节分析</a>
+				<a href="http://www.yanyulin.info/pages/2013/11/qqLogin.html" rel="bookmark" title="界面编程模仿篇(模仿腾讯QQ登录界面)">界面编程模仿篇(模仿腾讯QQ登录界面)</a>
 				</li>
 				<li>
 				<a href="http://www.yanyulin.info/pages/2014/03/duoshuo.html" rel="bookmark" title="多说评论框如何|怎么样|实际测试">多说评论框如何|怎么样|实际测试</a>
