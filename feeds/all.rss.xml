@@ -417,7 +417,25 @@
 
 &lt;p&gt;6、一个m*n的矩阵，从左到右从上到下都是递增的，给一个数elem，求是否在矩阵中，给出思路和代 码.&lt;/p&gt;
 &lt;p&gt;解: 思路:从矩阵的右上角开始判断即可,每次可以消除一行或一列,详见&lt;a href="http://www.yanyulin.info/category/jing-pin-shu-ji.html" target="_blank"&gt;精品书箱&lt;/a&gt;剑指offer一书.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;各位如果有更好的答案，请留言评价，方便更多的人&lt;/strong&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Mon, 10 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-03-10:pages/2014/03/meituan_2014_B.html</guid><category>美团网笔试题</category></item><item><title>去哪儿网校园招联笔试题2014年产品经理试题</title><link>http://www.yanyulin.info/pages/2014/03/qunar_2014_C.html</link><description>&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;各位如果有更好的答案，请留言评价，方便更多的人&lt;/strong&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Mon, 10 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-03-10:pages/2014/03/meituan_2014_B.html</guid><category>美团网笔试题</category></item><item><title>湖南麒麟校园招聘面经2014年软研面经</title><link>http://www.yanyulin.info/pages/2014/03/qilin_2014_1.html</link><description>&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;湖南麒麟&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;湖南麒麟信息工程技术有限公司&lt;/code&gt;，暨操作系统湖南省工程研究中心，2011年正式升级为国家地方联合工程研究中心，是由湖南省发改委批复的高科技实体。公司以国防科技大学计算机学院为依托，吸收了 国内的优秀技术资源和资本，致力于基础软件的研究与发展。公司总部座落于长沙，设有研发、测试、生产等职能部门，并在北京设立了营销和技术服务中心。公司 坚持“科技成果产业化、运行机制企业化、发展方向市场化”的发展思路；倡导创新文化，鼓励员工积极参与技术创新；重视企业制度建设，形成了以人为本的现代 化管理制度...&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;评价&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;对该公司不是很了解，不作评论&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;重点，面试感觉&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;地点：华科8号楼415&lt;/p&gt;
+&lt;p&gt;问题：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;1、内核安全？&lt;/p&gt;
+&lt;p&gt;2、缓冲区溢出是什么造成的？&lt;/p&gt;
+&lt;p&gt;3、内存泄露是怎么造成的？内存出错？&lt;/p&gt;
+&lt;p&gt;4、在一个局部函数内malloc，malloc是在堆上还是在栈上，函数结束时内存发生什么变化？&lt;/p&gt;
+&lt;p&gt;5、堆和栈的区别？&lt;/p&gt;
+&lt;p&gt;6、什么情况下定义变量是在堆上？什么情况下定义变量是在栈上？&lt;/p&gt;
+&lt;p&gt;7、对linux内核的了解程度？&lt;/p&gt;
+&lt;p&gt;8、函数指针用在什么情况下？为什么不直接使用函数名而去使用函数指针？&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;湖南麒麟待遇：&lt;code&gt;5.5K*16&lt;/code&gt; 硕士&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Mon, 10 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-03-10:pages/2014/03/qilin_2014_1.html</guid><category>其他面经</category></item><item><title>去哪儿网校园招联笔试题2014年产品经理试题</title><link>http://www.yanyulin.info/pages/2014/03/qunar_2014_C.html</link><description>&lt;hr /&gt;
 &lt;p&gt;1、你不仅要以一个普通网民的身份，而且要作为一个旁观者、思考者的身份来回答以下问题&lt;/p&gt;
 &lt;p&gt;我们重点考察的是你对产品策划的敏感程度以及是否能够站在用户易用性的角度来考虑问题，同时我们也会考察你的分析问题以及解决问题的能力，如用以支撑观点的论证分析和逻辑思路，此外你的观点不一定要正确，但请条理清晰，逻辑严密的给出理由，也请成体系的把握核心要点&lt;/p&gt;
 &lt;p&gt;1、很多人会选择假期出游，但是选择出游目的地时又会犯愁，如果你设计一个产品，解决这样的需求，你会怎么做，请说明理由。&lt;/p&gt;
