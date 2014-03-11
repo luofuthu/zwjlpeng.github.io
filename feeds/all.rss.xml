@@ -1280,7 +1280,7 @@ int main()
 &lt;p&gt;7、对linux内核的了解程度？&lt;/p&gt;
 &lt;p&gt;8、函数指针用在什么情况下？为什么不直接使用函数名而去使用函数指针？&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;湖南麒麟待遇：&lt;code&gt;5.5K*16&lt;/code&gt; 硕士&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Mon, 10 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-03-10:pages/2014/03/qilin_2014_1.html</guid><category>其他面经</category></item><item><title>去哪儿网校园招联笔试题2014年产品经理试题</title><link>http://www.yanyulin.info/pages/2014/03/qunar_2014_C.html</link><description>&lt;hr /&gt;
+&lt;p&gt;湖南麒麟待遇：&lt;code&gt;5.5K*16&lt;/code&gt; 硕士&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Mon, 10 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-03-10:pages/2014/03/qilin_2014_1.html</guid><category>其他面经</category></item><item><title>去哪儿网校园招聘笔试题2014年产品经理试题</title><link>http://www.yanyulin.info/pages/2014/03/qunar_2014_C.html</link><description>&lt;hr /&gt;
 &lt;p&gt;1、你不仅要以一个普通网民的身份，而且要作为一个旁观者、思考者的身份来回答以下问题&lt;/p&gt;
 &lt;p&gt;我们重点考察的是你对产品策划的敏感程度以及是否能够站在用户易用性的角度来考虑问题，同时我们也会考察你的分析问题以及解决问题的能力，如用以支撑观点的论证分析和逻辑思路，此外你的观点不一定要正确，但请条理清晰，逻辑严密的给出理由，也请成体系的把握核心要点&lt;/p&gt;
 &lt;p&gt;1、很多人会选择假期出游，但是选择出游目的地时又会犯愁，如果你设计一个产品，解决这样的需求，你会怎么做，请说明理由。&lt;/p&gt;
@@ -1789,7 +1789,7 @@ void CreateMap()
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;&lt;strong&gt;各位如果有更好的答案，请留言评价，方便更多的人&lt;/strong&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Sun, 09 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-03-09:pages/2014/03/cxgc_2013_B.html</guid><category>创新工场笔试题</category></item><item><title>去哪儿网校园招联笔试题2014年成都软研|软测|前端</title><link>http://www.yanyulin.info/pages/2014/03/qunar_2014_B.html</link><description>&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;各位如果有更好的答案，请留言评价，方便更多的人&lt;/strong&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Sun, 09 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-03-09:pages/2014/03/cxgc_2013_B.html</guid><category>创新工场笔试题</category></item><item><title>去哪儿网校园招聘笔试题2014年成都软研|软测|前端</title><link>http://www.yanyulin.info/pages/2014/03/qunar_2014_B.html</link><description>&lt;hr /&gt;
 &lt;p&gt;一、编程题、开发岗三道都必做，前端岗和测试岗前两道必做&lt;/p&gt;
 &lt;p&gt;1、&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nx"&gt;implement&lt;/span&gt; &lt;span class="nx"&gt;a&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="nx"&gt;of&lt;/span&gt; &lt;span class="nb"&gt;String&lt;/span&gt; &lt;span class="nx"&gt;randomAlphabetic&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kr"&gt;int&lt;/span&gt; &lt;span class="nx"&gt;count&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="err"&gt;，&lt;/span&gt;
