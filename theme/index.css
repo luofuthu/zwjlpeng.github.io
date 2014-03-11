@@ -444,10 +444,6 @@ body {
 #top #topnav li ul li a:hover {
 	background:#0e4681;
 }
-#top #topnav li a,#topnav li a:link,#top #topnav li a:visited {
-	text-shadow:none;
-	color:#000;
-}
 #top #topnav li {
 	border-right:none;
 }

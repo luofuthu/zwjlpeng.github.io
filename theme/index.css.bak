@@ -368,6 +368,9 @@ a:hover {
 	border-left:1px solid #ccc;
 	border-right:1px solid #ccc;
 }
+.box a{
+	
+}
 .widget ul li {
 	list-style:none;
 	margin:0;
@@ -443,10 +446,6 @@ body {
 }
 #top #topnav li ul li a:hover {
 	background:#0e4681;
-}
-#top #topnav li a,#topnav li a:link,#top #topnav li a:visited {
-	text-shadow:none;
-	color:#000;
 }
 #top #topnav li {
 	border-right:none;
@@ -596,9 +595,6 @@ body {
 }
 #top #topnav ul li .current-menu-item {
 	background:none;
-}
-.post_entry {
-	padding-right:0px;
 }
 .thumbnail_box {
 	width:200px;
