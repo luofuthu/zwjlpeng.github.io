@@ -373,6 +373,20 @@ a:hover {
 	padding-right:2.5px;
 	margin:0px;
 }
+
+
+
+#tbl{
+	width:300px;
+	border:0px;
+}
+
+#tagsLink a:hover,#tbl a:hover {
+	color:#FFFFFF;
+}
+#tbl a{
+	background-color:;
+}
 .widget ul li {
 	list-style:none;
 	margin:0;
