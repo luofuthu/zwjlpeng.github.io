@@ -368,6 +368,11 @@ a:hover {
 	border-left:1px solid #ccc;
 	border-right:1px solid #ccc;
 }
+#tagsLink{
+	float:left;
+	padding-right:3px;
+	margin:0px;
+}
 .widget ul li {
 	list-style:none;
 	margin:0;
