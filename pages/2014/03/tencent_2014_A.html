@@ -2,7 +2,7 @@
 <html lang="zh">
 <head>
 <title>
-腾讯校园招聘笔试题目2012年软件研发类 - 烟雨林</title>
+腾讯校园招聘笔试题目2014年软件研发类武汉 - 烟雨林</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
 <meta name="author" content="烟雨林">
@@ -51,9 +51,9 @@
 					</div>
 					<div class="entry_box_s">
 						<div class="entry_title_box">
-							<div class="entry_title">腾讯校园招聘笔试题目2012年软件研发类</div>
+							<div class="entry_title">腾讯校园招聘笔试题目2014年软件研发类武汉</div>
 							<div class="archive_info">
-								<span class="date">2014-03-10</span>
+								<span class="date">2014-03-11</span>
 								<span class="category"> ⁄ <a href="http://www.yanyulin.info/category/cheng-xu-yuan-zhao-gong-zuo.html" title="查看程序员找工作中的全部文章" rel="category tag">程序员找工作</a></span>
 							</div>
 						</div>
@@ -81,151 +81,54 @@
 </script>
 </div>
 							<hr />
-<p>1、请定义一个宏，比较两个数a、b 的大小，不能使用大于、小于、if 语句</p>
-<div class="highlight"><pre><span class="c">#define max(a,b) (((a-b)&amp;(1&lt;&lt;31))?(b):(a))</span>
-</pre></div>
-
-
-<p>2、如何输出源文件的标题和目前执行行的行数</p>
-<p>1）<code>__DATE__</code>：当前文件的编译日期。与在<code>time.h</code>中定义的<code>asctime</code>函数返回的格式一样，即是<code>Mmm DD yyyy（月、日、年)</code>；</p>
-<p>2)<code>__FILE__</code>：当前源文件的名称。字符串格式<code>（const char）</code>；</p>
-<p>3）<code>__LINE__</code>：当前代码在源文件中的行数。一个整数。</p>
-<p>4)<code>__TIME__</code>：当前源文件的编译时间。一个字符串（hh:mm:ss)；</p>
-<p>5）<code>__TIMESTAMP__</code>：当前源文件最后编译的日期时间。一个字符串（格式为：<code>Ddd Mmm Date hh:mm:ss yyyy</code>，即星期几、月、日、时、分、秒、年）；</p>
-<p>其中通过宏<code>__FILE__</code>和<code>__LIEN__</code>可以快速的定位程序出错的文件和位置，并通过<code>Email</code>的形式发送给开发人员，从而进行快速维护。</p>
-<p>3、两个数相乘，小数点后位数没有限制，请写一个高精度算法纪录小数点在a,b中的位置去掉a,b中的小数点</p>
-<p>计算c=a*b; （同整数的大数相乘算法）加上小数点</p>
-<p>4、有A、B、C、D 四个人，要在夜里过一座桥。他们通过这座桥分别需要耗时1、2、5、10 分钟，只有一支手电，并且同时最多只能两个人一起过桥。</p>
-<p>请问，如何安排，能够在17 分钟内这四个人都过桥？</p>
-<div class="highlight"><pre><span class="err">去：</span><span class="n">AB</span><span class="o">---------------------------------</span><span class="mi">2</span>
-
-<span class="err">回：</span><span class="n">A</span><span class="o">-----------------------------------</span><span class="mi">1</span>
-
-<span class="err">去：</span><span class="n">CD</span><span class="o">---------------------------------</span><span class="mi">10</span>
-
-<span class="err">回：</span><span class="n">B</span><span class="o">------------------------------------</span><span class="mi">2</span>
-
-<span class="err">去：</span><span class="n">AB</span><span class="o">----------------------------------</span><span class="mi">2</span>
-</pre></div>
-
-
-<p>5、C++将父类的析构函数定义为虚函数，下列正确的是哪个？</p>
-<p>A、释放父类指针时能正确释放子类对象</p>
-<p>B、释放子类指针时能正确释放父类对象</p>
-<p>C、这样做是错误的</p>
-<p>D、以上全错</p>
-<p>C++的多态肯定是使用父类的指针指向子类的对象，所以肯定是释放子类的对象，如果不使用虚函数的话，父类的指针就只能够释放父类的对象。</p>
-<p>6、<code>typedef char *String_t</code>; 和 <code>#define String_d char *</code>这两句在使用上有什么区别？</p>
-<p>答：typedef char *String_t 定义了一个新的类型别名，有类型检查。而#define String_d char * 只是做了个简单的替换，无类型检查，前者在编译的时候处理，后者在预编译的时候处理。</p>
-<p>7、给定一个字符串，求出其最长的重复子串</p>
-<div class="highlight"><pre><span class="vi">#include</span><span class="o">&lt;</span><span class="nx">iostream</span><span class="o">&gt;</span>
-<span class="nx">using</span> <span class="nx">namespace</span> <span class="nx">std</span><span class="p">;</span>
-<span class="nx">int</span> <span class="nx">main</span><span class="p">()</span>
+<p>1、有100W个关键字，长度小于等于50字节。用高效的算法找出top10的热词，并对内存的占用不超过1MB？</p>
+<p>解析：</p>
+<blockquote>
+<p>1、先把100W个关键字hash映射到小文件，根据题意，<code>100W*50B = 50*10^6B = 50M</code>，而内存只有1M，故干脆搞一个hash函数 <code>% 50</code>，分解成50个小文件</p>
+<p>2、针对对每个小文件依次运用<code>hashmap(key，value)</code>完成每个key的value次数统计，后用堆找出每个小文件中value次数最大的<code>top 10</code>；</p>
+<p>3、最后依次对每两小文件的top 10归并，得到最终的<code>top 10</code></p>
+</blockquote>
+<p>2、求二叉树的任意两个节点的最近公共祖先？</p>
+<p>解析：递归解法</p>
+<blockquote>
+<p>1、如果两个节点分别在根节点的左子树和右子树，则返回根节点</p>
+<p>2、如果两个节点都在左子树，则递归处理左子树；如果两个节点都在右子树，则递归处理右子树</p>
+</blockquote>
+<p>参考代码如下：</p>
+<div class="highlight"><pre><span class="kt">bool</span> <span class="nf">FindNode</span><span class="p">(</span><span class="n">BinaryTreeNode</span> <span class="o">*</span> <span class="n">pRoot</span><span class="p">,</span> <span class="n">BinaryTreeNode</span> <span class="o">*</span> <span class="n">pNode</span><span class="p">)</span>
 <span class="p">{</span>
-    <span class="nx">char</span> <span class="nx">str</span><span class="err">[</span><span class="cp">]</span>=&quot;huahuahuahualkjljlkdf&quot;;
-    int len=strlen(str);
-    int i;
-    int j;
-    int k=0;
-    int first;
-    int max=0;
-    for (i=1;i<span class="nt">&lt;len</span><span class="err">;</span><span class="na">i</span><span class="err">++)</span>
-    <span class="err">{</span>
-        <span class="na">for</span> <span class="err">(</span><span class="na">j=</span><span class="s">0;j&lt;i;j++)</span>
-        <span class="err">{</span>
-            <span class="na">if</span> <span class="err">(</span><span class="na">str</span><span class="cp">[</span><span class="nx">j</span><span class="cp">]</span><span class="na">=</span><span class="s">=str</span><span class="cp">[</span><span class="nx">i</span><span class="o">+</span><span class="nx">k</span><span class="cp">]</span><span class="s">)</span>
-            <span class="err">{</span>
-                <span class="na">k</span><span class="err">++;</span>
-            <span class="err">}</span>
-            <span class="na">else</span>
-            <span class="err">{</span>
-                <span class="na">k=</span><span class="s">0;</span>
-            <span class="err">}</span>
-            <span class="na">if</span> <span class="err">(</span><span class="na">k</span><span class="nt">&gt;</span>max)
-            {
-                max=k;
-                first=j+1-max;
-            }
-        }
-        k=0;
-    }
+    <span class="k">if</span><span class="p">(</span><span class="n">pRoot</span> <span class="o">==</span> <span class="nb">NULL</span> <span class="o">||</span> <span class="n">pNode</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span>
+        <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
 
-    cout<span class="err">&lt;&lt;</span>&quot;子串长度：&quot;<span class="err">&lt;</span><span class="nt">&lt;max</span><span class="err">&lt;&lt;</span><span class="na">endl</span><span class="err">;</span>
-    <span class="na">for</span> <span class="err">(</span><span class="na">i=</span><span class="s">first;i&lt;(first+max);i++)</span>
-    <span class="err">{</span>
-        <span class="na">cout</span><span class="err">&lt;&lt;</span><span class="na">str</span><span class="cp">[</span><span class="nx">i</span><span class="cp">]</span><span class="err">;</span>
-    <span class="err">}</span>
-    <span class="na">cout</span><span class="err">&lt;&lt;</span><span class="na">endl</span><span class="err">;</span>
-    <span class="na">return</span> <span class="na">0</span><span class="err">;</span>
-<span class="err">}</span>
-</pre></div>
+    <span class="k">if</span><span class="p">(</span><span class="n">pRoot</span> <span class="o">==</span> <span class="n">pNode</span><span class="p">)</span>
+        <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
 
+    <span class="kt">bool</span> <span class="n">found</span> <span class="o">=</span> <span class="n">FindNode</span><span class="p">(</span><span class="n">pRoot</span><span class="o">-&gt;</span><span class="n">m_pLeft</span><span class="p">,</span> <span class="n">pNode</span><span class="p">);</span>
+    <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">found</span><span class="p">)</span>
+        <span class="n">found</span> <span class="o">=</span> <span class="n">FindNode</span><span class="p">(</span><span class="n">pRoot</span><span class="o">-&gt;</span><span class="n">m_pRight</span><span class="p">,</span> <span class="n">pNode</span><span class="p">);</span>
 
-<p>8、给定一个数组a[N],我们希望构造数组b[N]，其中<code>b[i]=a[0]*a[1]*...*a[N-1]/a[i]</code>。在构造过程：
-不允许使用除法；</p>
-<p>要求<code>O(1)</code>空间复杂度和<code>O(n)</code>时间复杂度；</p>
-<p>除遍历计数器与<code>a[N] b[N]</code>外，不可使用新的变量(包括栈临时变量、对空间和全局静态变量等)；</p>
-<p>请用程序实现并简单描述。</p>
-<p>解答：</p>
-<p>迭代计算：</p>
-<p>i前的部分：</p>
-<div class="highlight"><pre><span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="mi">1</span>
+    <span class="k">return</span> <span class="n">found</span><span class="p">;</span>
+<span class="p">}</span>
 
-<span class="n">b</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-
-<span class="n">b</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">=</span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="n">b</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
-
-<span class="n">b</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">=</span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">=</span><span class="n">b</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">*</span><span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
-
-<span class="p">..........</span>
-
-<span class="n">b</span><span class="p">[</span><span class="n">N</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span><span class="o">=</span><span class="n">b</span><span class="p">[</span><span class="n">N</span><span class="o">-</span><span class="mi">3</span><span class="p">]</span><span class="o">*</span><span class="n">a</span><span class="p">[</span><span class="n">N</span><span class="o">-</span><span class="mi">3</span><span class="p">]</span>
-</pre></div>
-
-
-<p>i后半部分</p>
-<div class="highlight"><pre><span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="n">a</span><span class="p">[</span><span class="n">N</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-
-<span class="n">b</span><span class="p">[</span><span class="n">N</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span><span class="o">=</span><span class="n">b</span><span class="p">[</span><span class="n">N</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span><span class="o">*</span><span class="n">a</span><span class="p">[</span><span class="n">N</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="n">b</span><span class="p">[</span><span class="n">N</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span><span class="o">*</span><span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>   <span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">a</span><span class="p">[</span><span class="n">N</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
-
-<span class="n">b</span><span class="p">[</span><span class="n">N</span><span class="o">-</span><span class="mi">3</span><span class="p">]</span><span class="o">=</span><span class="n">b</span><span class="p">[</span><span class="n">N</span><span class="o">-</span><span class="mi">3</span><span class="p">]</span><span class="o">*</span><span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-
-<span class="p">......</span>
-</pre></div>
-
-
-<p>代码</p>
-<div class="highlight"><pre><span class="vi">#include</span><span class="o">&lt;</span><span class="nx">iostream</span><span class="o">&gt;</span>
-<span class="nx">using</span> <span class="nx">namespace</span> <span class="nx">std</span><span class="p">;</span>
-<span class="vi">#define</span> <span class="nb">N</span> <span class="mi">10</span>
-<span class="nx">int</span> <span class="nx">main</span><span class="p">()</span>
+<span class="n">BinaryTreeNode</span> <span class="o">*</span> <span class="nf">GetLastCommonParent</span><span class="p">(</span><span class="n">BinaryTreeNode</span> <span class="o">*</span> <span class="n">pRoot</span><span class="p">,</span> 
+                                     <span class="n">BinaryTreeNode</span> <span class="o">*</span> <span class="n">pNode1</span><span class="p">,</span> 
+                                     <span class="n">BinaryTreeNode</span> <span class="o">*</span> <span class="n">pNode2</span><span class="p">)</span>
 <span class="p">{</span>
-    <span class="nx">int</span> <span class="nx">a</span><span class="err">[</span><span class="nb">N</span><span class="cp">]</span>;
-    int b<span class="cp">[</span><span class="nb">N</span><span class="cp">]</span>;
-    int i;
-    cout<span class="err">&lt;&lt;</span>&quot;请输入&quot;<span class="err">&lt;</span><span class="nt">&lt;N</span><span class="err">&lt;&lt;&quot;个数字&quot;&lt;&lt;</span><span class="na">endl</span><span class="err">;</span>
-    <span class="na">for</span> <span class="err">(</span><span class="na">i=</span><span class="s">0;i&lt;N;i++)</span>
-    <span class="err">{</span>
-        <span class="na">cin</span><span class="nt">&gt;</span>&gt;a<span class="cp">[</span><span class="nx">i</span><span class="cp">]</span>;
-    }
-    b<span class="cp">[</span><span class="mi">0</span><span class="cp">]</span>=1;
-    for (i=1;i<span class="nt">&lt;N</span><span class="err">;</span><span class="na">i</span><span class="err">++)</span>
-    <span class="err">{</span>
-        <span class="na">b</span><span class="cp">[</span><span class="nx">i</span><span class="cp">]</span><span class="na"> =</span><span class="s">b</span><span class="cp">[</span><span class="nx">i</span><span class="o">-</span><span class="mi">1</span><span class="cp">]</span><span class="s">*a</span><span class="cp">[</span><span class="nx">i</span><span class="o">-</span><span class="mi">1</span><span class="cp">]</span><span class="s">;</span>
-    <span class="err">}</span>
-    <span class="na">b</span><span class="cp">[</span><span class="mi">0</span><span class="cp">]</span><span class="na">=</span><span class="s">a</span><span class="cp">[</span><span class="nb">N</span><span class="o">-</span><span class="mi">1</span><span class="cp">]</span><span class="s">;</span>
-    <span class="na">for</span> <span class="err">(</span><span class="na">i=</span><span class="s">N-2;i</span><span class="nt">&gt;</span>=1;i--)
-    {
-        b<span class="cp">[</span><span class="nx">i</span><span class="cp">]</span> *= b<span class="cp">[</span><span class="mi">0</span><span class="cp">]</span>;
-        b<span class="cp">[</span><span class="mi">0</span><span class="cp">]</span> *= a<span class="cp">[</span><span class="nx">i</span><span class="cp">]</span>;
-    }
-    for (i=0;i<span class="nt">&lt;N</span><span class="err">;</span><span class="na">i</span><span class="err">++)</span>
-    <span class="err">{</span>
-        <span class="na">cout</span><span class="err">&lt;&lt;</span><span class="na">b</span><span class="cp">[</span><span class="nx">i</span><span class="cp">]</span><span class="err">&lt;&lt;&quot;</span> <span class="err">&quot;;</span>
-    <span class="err">}</span>
-    <span class="na">cout</span><span class="err">&lt;&lt;</span><span class="na">endl</span><span class="err">;</span>
-    <span class="na">return</span> <span class="na">0</span><span class="err">;</span>
-<span class="err">}</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">FindNode</span><span class="p">(</span><span class="n">pRoot</span><span class="o">-&gt;</span><span class="n">m_pLeft</span><span class="p">,</span> <span class="n">pNode1</span><span class="p">))</span>
+    <span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">FindNode</span><span class="p">(</span><span class="n">pRoot</span><span class="o">-&gt;</span><span class="n">m_pRight</span><span class="p">,</span> <span class="n">pNode2</span><span class="p">))</span>
+            <span class="k">return</span> <span class="n">pRoot</span><span class="p">;</span>
+        <span class="k">else</span>
+            <span class="k">return</span> <span class="n">GetLastCommonParent</span><span class="p">(</span><span class="n">pRoot</span><span class="o">-&gt;</span><span class="n">m_pLeft</span><span class="p">,</span> <span class="n">pNode1</span><span class="p">,</span> <span class="n">pNode2</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">else</span>
+    <span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">FindNode</span><span class="p">(</span><span class="n">pRoot</span><span class="o">-&gt;</span><span class="n">m_pLeft</span><span class="p">,</span> <span class="n">pNode2</span><span class="p">))</span>
+            <span class="k">return</span> <span class="n">pRoot</span><span class="p">;</span>
+        <span class="k">else</span>
+            <span class="k">return</span> <span class="n">GetLastCommonParent</span><span class="p">(</span><span class="n">pRoot</span><span class="o">-&gt;</span><span class="n">m_pRight</span><span class="p">,</span> <span class="n">pNode1</span><span class="p">,</span> <span class="n">pNode2</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 						  <div class="clear"></div>
 							</div>
@@ -261,10 +164,10 @@
 					<!-- end: entrymeta -->
 				<div class="context_b" align="left">
 					 上一篇: 
-  				 <a href="http://www.yanyulin.info/pages/2014/03/cxgc_2013_B.html" title="创新工场校园招聘笔试题2013年软件研发" target="_self">创新工场校园招聘笔试题2013年软件研发</a>
+  				 <a href="http://www.yanyulin.info/pages/2014/03/ali_4.html" title="阿里巴巴校招面经2014年软件研发面经" target="_self">阿里巴巴校招面经2014年软件研发面经</a>
   				 &nbsp;&nbsp
   				 下一篇:
-  				 <a href="http://www.yanyulin.info/pages/2014/03/tencent_2014_1.html" title="腾讯校园招聘面经2014年软件研发面经" target="_self">腾讯校园招聘面经2014年软件研发面经</a>
+  				 <a href="http://www.yanyulin.info/pages/2014/03/meituan_2014_C.html" title="美团网校园招聘笔试题2014年研发类长沙" target="_self">美团网校园招聘笔试题2014年研发类长沙</a>
 					 
 				</div>
 				<div class="context_b">
@@ -275,10 +178,18 @@
   				 <tr>
  
   				 <td width="50%" align="left">
-  				 <a href="http://www.yanyulin.info/pages/2014/03/tencent_2014_A.html" title="腾讯校园招聘笔试题目2012年软件研发类" target="_blank">腾讯校园招聘笔试题目2012年软件研发类</a>
+  				 <a href="http://www.yanyulin.info/pages/2014/03/tencent_2012_A.html" title="腾讯校园招聘笔试题目2012年软件研发类" target="_blank">腾讯校园招聘笔试题目2012年软件研发类</a>
   				 </td>
 	
+	 
  
+  				 <td width="50%" align="left">
+  				 <a href="http://www.yanyulin.info/pages/2014/03/tencent_2014_A.html" title="腾讯校园招聘笔试题目2014年软件研发类武汉" target="_blank">腾讯校园招聘笔试题目2014年软件研发类武汉</a>
+  				 </td>
+	
+  				 </tr>
+ 
+  				 <td><a href="#" align="left"></a></td>
   				 <td><a href="#" align="left"></a></td>
 			</table>
 				</div>
@@ -326,25 +237,25 @@
 				<div class="box">			
 						<div class="textwidget">
 							<div id="tagsLink">
-							<a href="http://www.yanyulin.info/tag/360bi-shi-ti.html" title="查看360笔试题下的所有文章" style="background-color: #169EDD" target="_blank">360笔试题</a>
+							<a href="http://www.yanyulin.info/tag/360bi-shi-ti.html" title="查看360笔试题下的所有文章" style="background-color: #8C8BC6" target="_blank">360笔试题</a>
 						  </div>
 							<div id="tagsLink">
-							<a href="http://www.yanyulin.info/tag/mei-tuan-wang-bi-shi-ti.html" title="查看美团网笔试题下的所有文章" style="background-color: #169EDD" target="_blank">美团网笔试题</a>
-						  </div>
-							<div id="tagsLink">
-							<a href="http://www.yanyulin.info/tag/qu-na-wang-bi-shi-ti.html" title="查看去哪网笔试题下的所有文章" style="background-color: #96C2AA" target="_blank">去哪网笔试题</a>
+							<a href="http://www.yanyulin.info/tag/mei-tuan-wang-bi-shi-ti.html" title="查看美团网笔试题下的所有文章" style="background-color: #84A4B3" target="_blank">美团网笔试题</a>
 						  </div>
 							<div id="tagsLink">
 							<a href="http://www.yanyulin.info/tag/teng-xun-bi-shi-ti.html" title="查看腾讯笔试题下的所有文章" style="background-color: #84A4B3" target="_blank">腾讯笔试题</a>
 						  </div>
 							<div id="tagsLink">
-							<a href="http://www.yanyulin.info/tag/chuang-xin-gong-chang-bi-shi-ti.html" title="查看创新工场笔试题下的所有文章" style="background-color: #169EDD" target="_blank">创新工场笔试题</a>
+							<a href="http://www.yanyulin.info/tag/qu-na-wang-bi-shi-ti.html" title="查看去哪网笔试题下的所有文章" style="background-color: #84A4B3" target="_blank">去哪网笔试题</a>
 						  </div>
 							<div id="tagsLink">
-							<a href="http://www.yanyulin.info/tag/hua-wei-bi-shi-ti.html" title="查看华为笔试题下的所有文章" style="background-color: #D17C93" target="_blank">华为笔试题</a>
+							<a href="http://www.yanyulin.info/tag/chuang-xin-gong-chang-bi-shi-ti.html" title="查看创新工场笔试题下的所有文章" style="background-color: #8C8BC6" target="_blank">创新工场笔试题</a>
 						  </div>
 							<div id="tagsLink">
-							<a href="http://www.yanyulin.info/tag/ren-ren-wang-bi-shi-ti.html" title="查看人人网笔试题下的所有文章" style="background-color: #84A4B3" target="_blank">人人网笔试题</a>
+							<a href="http://www.yanyulin.info/tag/hua-wei-bi-shi-ti.html" title="查看华为笔试题下的所有文章" style="background-color: #169EDD" target="_blank">华为笔试题</a>
+						  </div>
+							<div id="tagsLink">
+							<a href="http://www.yanyulin.info/tag/ren-ren-wang-bi-shi-ti.html" title="查看人人网笔试题下的所有文章" style="background-color: #D17C93" target="_blank">人人网笔试题</a>
 						  </div>
 							<div id="tagsLink">
 							<a href="http://www.yanyulin.info/tag/bai-du-bi-shi-ti.html" title="查看百度笔试题下的所有文章" style="background-color: #169EDD" target="_blank">百度笔试题</a>
@@ -353,22 +264,22 @@
 							<a href="http://www.yanyulin.info/tag/ya-ma-xun-bi-shi-ti.html" title="查看亚马逊笔试题下的所有文章" style="background-color: #96C2AA" target="_blank">亚马逊笔试题</a>
 						  </div>
 							<div id="tagsLink">
-							<a href="http://www.yanyulin.info/tag/wei-ruan-bi-shi-ti.html" title="查看微软笔试题下的所有文章" style="background-color: #8C8BC6" target="_blank">微软笔试题</a>
+							<a href="http://www.yanyulin.info/tag/wei-ruan-bi-shi-ti.html" title="查看微软笔试题下的所有文章" style="background-color: #169EDD" target="_blank">微软笔试题</a>
 						  </div>
 							<div id="tagsLink">
 							<a href="http://www.yanyulin.info/tag/ya-hu-bi-shi-ti.html" title="查看雅虎笔试题下的所有文章" style="background-color: #8C8BC6" target="_blank">雅虎笔试题</a>
 						  </div>
 							<div id="tagsLink">
-							<a href="http://www.yanyulin.info/tag/zhong-xing-bi-shi-ti.html" title="查看中兴笔试题下的所有文章" style="background-color: #D17C93" target="_blank">中兴笔试题</a>
+							<a href="http://www.yanyulin.info/tag/zhong-xing-bi-shi-ti.html" title="查看中兴笔试题下的所有文章" style="background-color: #96C2AA" target="_blank">中兴笔试题</a>
 						  </div>
 							<div id="tagsLink">
-							<a href="http://www.yanyulin.info/tag/a-li-ba-ba-bi-shi-ti.html" title="查看阿里巴巴笔试题下的所有文章" style="background-color: #84A4B3" target="_blank">阿里巴巴笔试题</a>
+							<a href="http://www.yanyulin.info/tag/a-li-ba-ba-bi-shi-ti.html" title="查看阿里巴巴笔试题下的所有文章" style="background-color: #D17C93" target="_blank">阿里巴巴笔试题</a>
 						  </div>
 							<div id="tagsLink">
-							<a href="http://www.yanyulin.info/tag/bao-feng-bi-shi-ti.html" title="查看暴风笔试题下的所有文章" style="background-color: #84A4B3" target="_blank">暴风笔试题</a>
+							<a href="http://www.yanyulin.info/tag/bao-feng-bi-shi-ti.html" title="查看暴风笔试题下的所有文章" style="background-color: #96C2AA" target="_blank">暴风笔试题</a>
 						  </div>
 							<div id="tagsLink">
-							<a href="http://www.yanyulin.info/tag/gu-ge-bi-shi-ti.html" title="查看谷歌笔试题下的所有文章" style="background-color: #96C2AA" target="_blank">谷歌笔试题</a>
+							<a href="http://www.yanyulin.info/tag/gu-ge-bi-shi-ti.html" title="查看谷歌笔试题下的所有文章" style="background-color: #84A4B3" target="_blank">谷歌笔试题</a>
 						  </div>
 						</div>
 						<div class="clear"></div>
@@ -437,25 +348,25 @@
 				<ul>
 				<ul class="random-post-link">
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2013/12/htaccess.html" target="_blank" title=".htaccess简明教程(SEO优化)">.htaccess简明教程(SEO优化)</a>
+				<a href="http://www.yanyulin.info/pages/2014/03/concurrent.html" target="_blank" title="Linux系统中并发与竞争机制分析">Linux系统中并发与竞争机制分析</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2014/03/meituan_2014_2.html" target="_blank" title="美团网校园招聘面经2014年软件研发">美团网校园招聘面经2014年软件研发</a>
+				<a href="http://www.yanyulin.info/pages/2014/03/meituan_2014_1.html" target="_blank" title="美团网校园招聘2014年面经(软件研发)">美团网校园招聘2014年面经(软件研发)</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2013/09/huawei_2013_2.html" target="_blank" title="2013届华为校园招聘成都上机题目">2013届华为校园招聘成都上机题目</a>
+				<a href="http://www.yanyulin.info/pages/2014/03/meituan_2014_B.html" target="_blank" title="美团网校招笔试题2014年研发东北">美团网校招笔试题2014年研发东北</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2013/11/effective.html" target="_blank" title="Effective C++(编程的50个细节)">Effective C++(编程的50个细节)</a>
+				<a href="http://www.yanyulin.info/pages/2013/12/prgbeautiful.html" target="_blank" title="编程之美—微软技术面试心得">编程之美—微软技术面试心得</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2013/11/vlinux2.html" target="_blank" title="Linux基础教程视频版(很详细)">Linux基础教程视频版(很详细)</a>
+				<a href="http://www.yanyulin.info/pages/2013/12/vc_1.html" target="_blank" title="VC视频教程(主要讲述`MFC`)">VC视频教程(主要讲述`MFC`)</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2014/02/gko.html" target="_blank" title="[赠送]GKO币每天免费领取10ripple">[赠送]GKO币每天免费领取10ripple</a>
+				<a href="http://www.yanyulin.info/pages/2014/01/whyRipple.html" target="_blank" title="为什么大家都转向了Ripple">为什么大家都转向了Ripple</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2013/11/fetchPage.html" target="_blank" title="爬虫的自我解剖(抓取网页HtmlUnit)">爬虫的自我解剖(抓取网页HtmlUnit)</a>
+				<a href="http://www.yanyulin.info/pages/2014/03/zhihu_1.html" target="_blank" title="一款自动发链接的软件设计思路">一款自动发链接的软件设计思路</a>
 				</li>
 				<li class="random-post-link">
 				<a href="http://www.yanyulin.info/pages/2014/03/duoshuo.html" target="_blank" title="多说评论框如何|怎么样|实际测试">多说评论框如何|怎么样|实际测试</a>
@@ -507,25 +418,25 @@ var duoshuoQuery = {short_name:"yanyulin"};
 				<div class="box_r">
 				<ul>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2014/02/classinitiallist.html" target="_blank" title="C++中类初始化列表的妙用">C++中类初始化列表的妙用</a>
+				<a href="http://www.yanyulin.info/pages/2014/03/git.html" target="_blank" title="git保存用户名与密码(避免用户名密码输入)">git保存用户名与密码(避免用户名密码输入)</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2014/03/ali_3.html" target="_blank" title="阿里巴巴校招面经(2014年软件研发)">阿里巴巴校招面经(2014年软件研发)</a>
+				<a href="http://www.yanyulin.info/pages/2014/03/huawei_2014_A.html" target="_blank" title="华为校园招聘面经2014年软件研发">华为校园招聘面经2014年软件研发</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2014/03/baidu_2014_B.html" target="_blank" title="2014年百度校招笔试题(移动研发类)">2014年百度校招笔试题(移动研发类)</a>
+				<a href="http://www.yanyulin.info/pages/2013/12/microsoft_2014_A.html" target="_blank" title="微软2014年校招笔试题">微软2014年校招笔试题</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2013/12/perl.html" target="_blank" title="编程珠玑(作者:John Bently)">编程珠玑(作者:John Bently)</a>
+				<a href="http://www.yanyulin.info/pages/2013/11/objectModel.html" target="_blank" title="深度探索C++对象模型">深度探索C++对象模型</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2013/11/vlinux2.html" target="_blank" title="Linux基础教程视频版(很详细)">Linux基础教程视频版(很详细)</a>
+				<a href="http://www.yanyulin.info/pages/2013/12/psbase_1.html" target="_blank" title="PhotoShop CS入门版视频教程(基础上)">PhotoShop CS入门版视频教程(基础上)</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2014/03/xrpfree.html" target="_blank" title="[赠送]免费领取赠送获取ripple币啦">[赠送]免费领取赠送获取ripple币啦</a>
+				<a href="http://www.yanyulin.info/pages/2014/01/whyRipple.html" target="_blank" title="为什么大家都转向了Ripple">为什么大家都转向了Ripple</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2014/03/zhihu_2.html" target="_blank" title="一款自动发链接软件的实现细节分析">一款自动发链接软件的实现细节分析</a>
+				<a href="http://www.yanyulin.info/pages/2013/11/fetchPage.html" target="_blank" title="爬虫的自我解剖(抓取网页HtmlUnit)">爬虫的自我解剖(抓取网页HtmlUnit)</a>
 				</li>
 				<li>
 				<a href="http://www.yanyulin.info/pages/2014/03/duoshuo.html" target="_blank" title="多说评论框如何|怎么样|实际测试">多说评论框如何|怎么样|实际测试</a>

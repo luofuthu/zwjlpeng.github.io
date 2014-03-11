@@ -258,7 +258,56 @@
 &lt;p&gt;如果不能更改子网掩码，需要在A和B做什么设置?&lt;/p&gt;
 &lt;p&gt;A和B通信时，C是否能够通过&lt;code&gt;sniffer&lt;/code&gt;截获A和B通信的报文，如果只能截获一部分报文，是哪一类报文?&lt;/p&gt;
 &lt;p&gt;C可以仅通过&lt;code&gt;sniffer&lt;/code&gt;得知A和B的IP地址和MAC地址吗?如果能，如何获得?&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;各位如果有更好的答案，请留言评价，方便更多的人&lt;/strong&gt;&lt;/p&gt;</summary><category term="美团网笔试题"></category></entry><entry><title>美团网校招笔试题2014年研发东北</title><link href="http://www.yanyulin.info/pages/2014/03/meituan_2014_B.html" rel="alternate"></link><updated>2014-03-10T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-10:pages/2014/03/meituan_2014_B.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;各位如果有更好的答案，请留言评价，方便更多的人&lt;/strong&gt;&lt;/p&gt;</summary><category term="美团网笔试题"></category></entry><entry><title>腾讯校园招聘笔试题目2014年软件研发类武汉</title><link href="http://www.yanyulin.info/pages/2014/03/tencent_2014_A.html" rel="alternate"></link><updated>2014-03-11T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-11:pages/2014/03/tencent_2014_A.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;1、有100W个关键字，长度小于等于50字节。用高效的算法找出top10的热词，并对内存的占用不超过1MB？&lt;/p&gt;
+&lt;p&gt;解析：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;1、先把100W个关键字hash映射到小文件，根据题意，&lt;code&gt;100W*50B = 50*10^6B = 50M&lt;/code&gt;，而内存只有1M，故干脆搞一个hash函数 &lt;code&gt;% 50&lt;/code&gt;，分解成50个小文件&lt;/p&gt;
+&lt;p&gt;2、针对对每个小文件依次运用&lt;code&gt;hashmap(key，value)&lt;/code&gt;完成每个key的value次数统计，后用堆找出每个小文件中value次数最大的&lt;code&gt;top 10&lt;/code&gt;；&lt;/p&gt;
+&lt;p&gt;3、最后依次对每两小文件的top 10归并，得到最终的&lt;code&gt;top 10&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;2、求二叉树的任意两个节点的最近公共祖先？&lt;/p&gt;
+&lt;p&gt;解析：递归解法&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;1、如果两个节点分别在根节点的左子树和右子树，则返回根节点&lt;/p&gt;
+&lt;p&gt;2、如果两个节点都在左子树，则递归处理左子树；如果两个节点都在右子树，则递归处理右子树&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;参考代码如下：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kt"&gt;bool&lt;/span&gt; &lt;span class="nf"&gt;FindNode&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;BinaryTreeNode&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;pRoot&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;BinaryTreeNode&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;pNode&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pRoot&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="nb"&gt;NULL&lt;/span&gt; &lt;span class="o"&gt;||&lt;/span&gt; &lt;span class="n"&gt;pNode&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="nb"&gt;NULL&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nb"&gt;false&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+    &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pRoot&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="n"&gt;pNode&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nb"&gt;true&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+    &lt;span class="kt"&gt;bool&lt;/span&gt; &lt;span class="n"&gt;found&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;FindNode&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pRoot&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;m_pLeft&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;pNode&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="n"&gt;found&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="n"&gt;found&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;FindNode&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pRoot&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;m_pRight&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;pNode&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;found&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="n"&gt;BinaryTreeNode&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="nf"&gt;GetLastCommonParent&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;BinaryTreeNode&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;pRoot&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; 
+                                     &lt;span class="n"&gt;BinaryTreeNode&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;pNode1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; 
+                                     &lt;span class="n"&gt;BinaryTreeNode&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;pNode2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;FindNode&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pRoot&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;m_pLeft&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;pNode1&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+    &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;FindNode&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pRoot&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;m_pRight&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;pNode2&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+            &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;pRoot&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+        &lt;span class="k"&gt;else&lt;/span&gt;
+            &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;GetLastCommonParent&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pRoot&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;m_pLeft&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;pNode1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;pNode2&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="k"&gt;else&lt;/span&gt;
+    &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;FindNode&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pRoot&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;m_pLeft&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;pNode2&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+            &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;pRoot&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+        &lt;span class="k"&gt;else&lt;/span&gt;
+            &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;GetLastCommonParent&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pRoot&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;m_pRight&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;pNode1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;pNode2&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="腾讯笔试题"></category></entry><entry><title>美团网校招笔试题2014年研发东北</title><link href="http://www.yanyulin.info/pages/2014/03/meituan_2014_B.html" rel="alternate"></link><updated>2014-03-10T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-10:pages/2014/03/meituan_2014_B.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;如有错误，或更加精简的方法，请留言，我会更正，以方便更多的人&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;1、一堆硬币，一个机器人，如果是反的就翻正，如果是正的就抛掷一次，无穷多次后，求正反的比例&lt;/p&gt;
 &lt;p&gt;解析：假设某个阶段正面硬币的比例为p，则反面的比例为1-p，下一次翻转后，p的部分分为p/2的正面、p/2的反面，而1-p的反面部分全部变为正面。趋于平衡时，前后两次正反的比例应相等，即：p/(1-p)=(p/2+(1-p))/(p/2)，得到p=2/3。&lt;/p&gt;
@@ -475,7 +524,7 @@
 &lt;p&gt;2）如何去搭讪又不被反感?之前要准备些什么?为什么?&lt;/p&gt;
 &lt;p&gt;3)如果白富美/高富帅有男/女朋友，请你为你的死党或者闺蜜设计策略，找到突破口，最终得手。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;欢迎大家将答案粘贴在后面的评论框里，我会选出最好的答案作为本题的标准答案，以方便更多的师弟师妹们&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;到此为止&lt;/p&gt;</summary><category term="去哪网笔试题"></category></entry><entry><title>腾讯校园招聘笔试题目2012年软件研发类</title><link href="http://www.yanyulin.info/pages/2014/03/tencent_2014_A.html" rel="alternate"></link><updated>2014-03-10T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-10:pages/2014/03/tencent_2014_A.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;到此为止&lt;/p&gt;</summary><category term="去哪网笔试题"></category></entry><entry><title>腾讯校园招聘笔试题目2012年软件研发类</title><link href="http://www.yanyulin.info/pages/2014/03/tencent_2012_A.html" rel="alternate"></link><updated>2014-03-10T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-10:pages/2014/03/tencent_2012_A.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;1、请定义一个宏，比较两个数a、b 的大小，不能使用大于、小于、if 语句&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;#define max(a,b) (((a-b)&amp;amp;(1&amp;lt;&amp;lt;31))?(b):(a))&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;

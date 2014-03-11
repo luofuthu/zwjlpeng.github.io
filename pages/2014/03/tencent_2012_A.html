@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<title>
+腾讯校园招聘笔试题目2012年软件研发类 - 烟雨林</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
+<meta name="author" content="烟雨林">
+<meta name="description" content="烟雨林，是一个专注于互联网、搜索引擎、社会化网络、IT技术、程序员找工作、软件应用、公务员等领域的原创IT科技博客">
+<meta name="keywords" content="烟雨|烟雨林|编程语言|互联网|程序员找工作|视频教程|公务员|Linux|数据挖掘|自然语言处理|移动互联">
+<link rel="stylesheet" type="text/css" href="http://www.yanyulin.info/theme/index.css" />
+<link rel="shortcut icon" href="http://www.yanyulin.info/theme/images/favicon.ico">
+</head>
+<body >
+   <div id="hed">
+			<div class="top_part">
+				<a href="http://www.yanyulin.info"><img src="http://www.yanyulin.info/theme/images/logo.png"/ alt="烟雨林" title="烟雨林" width="127px" height="29px"></a>
+			</div>
+	 </div>
+	 <div id="wrapper">
+			<div id="top">
+				<div id='topnav'>
+					<div >
+					   	<div >
+						  		<ul>	
+						   						<li><a href="http://www.yanyulin.info">烟雨首页</a></li>
+						  				  											<li><a href="http://www.yanyulin.info/category/bian-cheng-yu-yan.html">编程语言</a></li>
+						  				  											<li><a href="http://www.yanyulin.info/category/cheng-xu-yuan-de-mian-jing.html">程序员的面经</a></li>
+						  																<li class="current-menu-item current_page_item "><a href="http://www.yanyulin.info/category/cheng-xu-yuan-zhao-gong-zuo.html">程序员找工作</a></li>
+						  				  											<li><a href="http://www.yanyulin.info/category/jing-pin-shu-ji.html">精品书籍</a></li>
+						  				  											<li><a href="http://www.yanyulin.info/category/shi-pin-jiao-cheng.html">视频教程</a></li>
+						  				  											<li><a href="http://www.yanyulin.info/category/wan-zhuan-ji-zhu.html">玩转技术</a></li>
+						  				  											<li><a href="http://www.yanyulin.info/category/yan-yu-za-tan.html">烟雨杂谈</a></li>
+						  		</ul>
+					   	</div> 
+				  </div>
+			  </div>
+			</div>
+<script type="text/javascript">
+    function doZoom(size) {
+        var zoom = document.all ? document.all['entry'] : document.getElementById('entry');
+        zoom.style.fontSize = size + 'px';
+    }
+</script>
+<div class="test_right">
+		<div id="content">							 
+					<div id="map">
+						<div class="browse">现在的位置: <a title="返回首页" href="http://www.yanyulin.info">烟雨首页</a> ＞
+						<a href="http://www.yanyulin.info/category/cheng-xu-yuan-zhao-gong-zuo.html" title="查看程序员找工作中的全部文章" rel="category tag">程序员找工作</a>＞正文</div>
+						<div class="font"><a href="javascript:doZoom(12)">小</a> <a href="javascript:doZoom(13)">中</a> <a href="javascript:doZoom(18)">大</a></div>
+					</div>
+					<div class="entry_box_s">
+						<div class="entry_title_box">
+							<div class="entry_title">腾讯校园招聘笔试题目2012年软件研发类</div>
+							<div class="archive_info">
+								<span class="date">2014-03-10</span>
+								<span class="category"> ⁄ <a href="http://www.yanyulin.info/category/cheng-xu-yuan-zhao-gong-zuo.html" title="查看程序员找工作中的全部文章" rel="category tag">程序员找工作</a></span>
+							</div>
+						</div>
+						<div class="entry">
+							<div id="entry" style="font-size: 14px; ">
+							<hr/>
+<div align="left" style="padding:0px">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 320*50 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:320px;height:50px"
+     data-ad-client="ca-pub-6620728980314958"
+     data-ad-slot="6117203227"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- BOTTOM_ONE -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:320px;height:50px"
+     data-ad-client="ca-pub-6620728980314958"
+     data-ad-slot="1687003628"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+							<hr />
+<p>1、请定义一个宏，比较两个数a、b 的大小，不能使用大于、小于、if 语句</p>
+<div class="highlight"><pre><span class="c">#define max(a,b) (((a-b)&amp;(1&lt;&lt;31))?(b):(a))</span>
+</pre></div>
+
+
+<p>2、如何输出源文件的标题和目前执行行的行数</p>
+<p>1）<code>__DATE__</code>：当前文件的编译日期。与在<code>time.h</code>中定义的<code>asctime</code>函数返回的格式一样，即是<code>Mmm DD yyyy（月、日、年)</code>；</p>
+<p>2)<code>__FILE__</code>：当前源文件的名称。字符串格式<code>（const char）</code>；</p>
+<p>3）<code>__LINE__</code>：当前代码在源文件中的行数。一个整数。</p>
+<p>4)<code>__TIME__</code>：当前源文件的编译时间。一个字符串（hh:mm:ss)；</p>
+<p>5）<code>__TIMESTAMP__</code>：当前源文件最后编译的日期时间。一个字符串（格式为：<code>Ddd Mmm Date hh:mm:ss yyyy</code>，即星期几、月、日、时、分、秒、年）；</p>
+<p>其中通过宏<code>__FILE__</code>和<code>__LIEN__</code>可以快速的定位程序出错的文件和位置，并通过<code>Email</code>的形式发送给开发人员，从而进行快速维护。</p>
+<p>3、两个数相乘，小数点后位数没有限制，请写一个高精度算法纪录小数点在a,b中的位置去掉a,b中的小数点</p>
+<p>计算c=a*b; （同整数的大数相乘算法）加上小数点</p>
+<p>4、有A、B、C、D 四个人，要在夜里过一座桥。他们通过这座桥分别需要耗时1、2、5、10 分钟，只有一支手电，并且同时最多只能两个人一起过桥。</p>
+<p>请问，如何安排，能够在17 分钟内这四个人都过桥？</p>
+<div class="highlight"><pre><span class="err">去：</span><span class="n">AB</span><span class="o">---------------------------------</span><span class="mi">2</span>
+
+<span class="err">回：</span><span class="n">A</span><span class="o">-----------------------------------</span><span class="mi">1</span>
+
+<span class="err">去：</span><span class="n">CD</span><span class="o">---------------------------------</span><span class="mi">10</span>
+
+<span class="err">回：</span><span class="n">B</span><span class="o">------------------------------------</span><span class="mi">2</span>
+
+<span class="err">去：</span><span class="n">AB</span><span class="o">----------------------------------</span><span class="mi">2</span>
+</pre></div>
+
+
+<p>5、C++将父类的析构函数定义为虚函数，下列正确的是哪个？</p>
+<p>A、释放父类指针时能正确释放子类对象</p>
+<p>B、释放子类指针时能正确释放父类对象</p>
+<p>C、这样做是错误的</p>
+<p>D、以上全错</p>
+<p>C++的多态肯定是使用父类的指针指向子类的对象，所以肯定是释放子类的对象，如果不使用虚函数的话，父类的指针就只能够释放父类的对象。</p>
+<p>6、<code>typedef char *String_t</code>; 和 <code>#define String_d char *</code>这两句在使用上有什么区别？</p>
+<p>答：typedef char *String_t 定义了一个新的类型别名，有类型检查。而#define String_d char * 只是做了个简单的替换，无类型检查，前者在编译的时候处理，后者在预编译的时候处理。</p>
+<p>7、给定一个字符串，求出其最长的重复子串</p>
+<div class="highlight"><pre><span class="vi">#include</span><span class="o">&lt;</span><span class="nx">iostream</span><span class="o">&gt;</span>
+<span class="nx">using</span> <span class="nx">namespace</span> <span class="nx">std</span><span class="p">;</span>
+<span class="nx">int</span> <span class="nx">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="nx">char</span> <span class="nx">str</span><span class="err">[</span><span class="cp">]</span>=&quot;huahuahuahualkjljlkdf&quot;;
+    int len=strlen(str);
+    int i;
+    int j;
+    int k=0;
+    int first;
+    int max=0;
+    for (i=1;i<span class="nt">&lt;len</span><span class="err">;</span><span class="na">i</span><span class="err">++)</span>
+    <span class="err">{</span>
+        <span class="na">for</span> <span class="err">(</span><span class="na">j=</span><span class="s">0;j&lt;i;j++)</span>
+        <span class="err">{</span>
+            <span class="na">if</span> <span class="err">(</span><span class="na">str</span><span class="cp">[</span><span class="nx">j</span><span class="cp">]</span><span class="na">=</span><span class="s">=str</span><span class="cp">[</span><span class="nx">i</span><span class="o">+</span><span class="nx">k</span><span class="cp">]</span><span class="s">)</span>
+            <span class="err">{</span>
+                <span class="na">k</span><span class="err">++;</span>
+            <span class="err">}</span>
+            <span class="na">else</span>
+            <span class="err">{</span>
+                <span class="na">k=</span><span class="s">0;</span>
+            <span class="err">}</span>
+            <span class="na">if</span> <span class="err">(</span><span class="na">k</span><span class="nt">&gt;</span>max)
+            {
+                max=k;
+                first=j+1-max;
+            }
+        }
+        k=0;
+    }
+
+    cout<span class="err">&lt;&lt;</span>&quot;子串长度：&quot;<span class="err">&lt;</span><span class="nt">&lt;max</span><span class="err">&lt;&lt;</span><span class="na">endl</span><span class="err">;</span>
+    <span class="na">for</span> <span class="err">(</span><span class="na">i=</span><span class="s">first;i&lt;(first+max);i++)</span>
+    <span class="err">{</span>
+        <span class="na">cout</span><span class="err">&lt;&lt;</span><span class="na">str</span><span class="cp">[</span><span class="nx">i</span><span class="cp">]</span><span class="err">;</span>
+    <span class="err">}</span>
+    <span class="na">cout</span><span class="err">&lt;&lt;</span><span class="na">endl</span><span class="err">;</span>
+    <span class="na">return</span> <span class="na">0</span><span class="err">;</span>
+<span class="err">}</span>
+</pre></div>
+
+
+<p>8、给定一个数组a[N],我们希望构造数组b[N]，其中<code>b[i]=a[0]*a[1]*...*a[N-1]/a[i]</code>。在构造过程：
+不允许使用除法；</p>
+<p>要求<code>O(1)</code>空间复杂度和<code>O(n)</code>时间复杂度；</p>
+<p>除遍历计数器与<code>a[N] b[N]</code>外，不可使用新的变量(包括栈临时变量、对空间和全局静态变量等)；</p>
+<p>请用程序实现并简单描述。</p>
+<p>解答：</p>
+<p>迭代计算：</p>
+<p>i前的部分：</p>
+<div class="highlight"><pre><span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="mi">1</span>
+
+<span class="n">b</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="n">b</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">=</span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="n">b</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+
+<span class="n">b</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">=</span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">=</span><span class="n">b</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">*</span><span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+
+<span class="p">..........</span>
+
+<span class="n">b</span><span class="p">[</span><span class="n">N</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span><span class="o">=</span><span class="n">b</span><span class="p">[</span><span class="n">N</span><span class="o">-</span><span class="mi">3</span><span class="p">]</span><span class="o">*</span><span class="n">a</span><span class="p">[</span><span class="n">N</span><span class="o">-</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
+
+
+<p>i后半部分</p>
+<div class="highlight"><pre><span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="n">a</span><span class="p">[</span><span class="n">N</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="n">b</span><span class="p">[</span><span class="n">N</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span><span class="o">=</span><span class="n">b</span><span class="p">[</span><span class="n">N</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span><span class="o">*</span><span class="n">a</span><span class="p">[</span><span class="n">N</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="n">b</span><span class="p">[</span><span class="n">N</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span><span class="o">*</span><span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>   <span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">a</span><span class="p">[</span><span class="n">N</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+
+<span class="n">b</span><span class="p">[</span><span class="n">N</span><span class="o">-</span><span class="mi">3</span><span class="p">]</span><span class="o">=</span><span class="n">b</span><span class="p">[</span><span class="n">N</span><span class="o">-</span><span class="mi">3</span><span class="p">]</span><span class="o">*</span><span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="p">......</span>
+</pre></div>
+
+
+<p>代码</p>
+<div class="highlight"><pre><span class="vi">#include</span><span class="o">&lt;</span><span class="nx">iostream</span><span class="o">&gt;</span>
+<span class="nx">using</span> <span class="nx">namespace</span> <span class="nx">std</span><span class="p">;</span>
+<span class="vi">#define</span> <span class="nb">N</span> <span class="mi">10</span>
+<span class="nx">int</span> <span class="nx">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="nx">int</span> <span class="nx">a</span><span class="err">[</span><span class="nb">N</span><span class="cp">]</span>;
+    int b<span class="cp">[</span><span class="nb">N</span><span class="cp">]</span>;
+    int i;
+    cout<span class="err">&lt;&lt;</span>&quot;请输入&quot;<span class="err">&lt;</span><span class="nt">&lt;N</span><span class="err">&lt;&lt;&quot;个数字&quot;&lt;&lt;</span><span class="na">endl</span><span class="err">;</span>
+    <span class="na">for</span> <span class="err">(</span><span class="na">i=</span><span class="s">0;i&lt;N;i++)</span>
+    <span class="err">{</span>
+        <span class="na">cin</span><span class="nt">&gt;</span>&gt;a<span class="cp">[</span><span class="nx">i</span><span class="cp">]</span>;
+    }
+    b<span class="cp">[</span><span class="mi">0</span><span class="cp">]</span>=1;
+    for (i=1;i<span class="nt">&lt;N</span><span class="err">;</span><span class="na">i</span><span class="err">++)</span>
+    <span class="err">{</span>
+        <span class="na">b</span><span class="cp">[</span><span class="nx">i</span><span class="cp">]</span><span class="na"> =</span><span class="s">b</span><span class="cp">[</span><span class="nx">i</span><span class="o">-</span><span class="mi">1</span><span class="cp">]</span><span class="s">*a</span><span class="cp">[</span><span class="nx">i</span><span class="o">-</span><span class="mi">1</span><span class="cp">]</span><span class="s">;</span>
+    <span class="err">}</span>
+    <span class="na">b</span><span class="cp">[</span><span class="mi">0</span><span class="cp">]</span><span class="na">=</span><span class="s">a</span><span class="cp">[</span><span class="nb">N</span><span class="o">-</span><span class="mi">1</span><span class="cp">]</span><span class="s">;</span>
+    <span class="na">for</span> <span class="err">(</span><span class="na">i=</span><span class="s">N-2;i</span><span class="nt">&gt;</span>=1;i--)
+    {
+        b<span class="cp">[</span><span class="nx">i</span><span class="cp">]</span> *= b<span class="cp">[</span><span class="mi">0</span><span class="cp">]</span>;
+        b<span class="cp">[</span><span class="mi">0</span><span class="cp">]</span> *= a<span class="cp">[</span><span class="nx">i</span><span class="cp">]</span>;
+    }
+    for (i=0;i<span class="nt">&lt;N</span><span class="err">;</span><span class="na">i</span><span class="err">++)</span>
+    <span class="err">{</span>
+        <span class="na">cout</span><span class="err">&lt;&lt;</span><span class="na">b</span><span class="cp">[</span><span class="nx">i</span><span class="cp">]</span><span class="err">&lt;&lt;&quot;</span> <span class="err">&quot;;</span>
+    <span class="err">}</span>
+    <span class="na">cout</span><span class="err">&lt;&lt;</span><span class="na">endl</span><span class="err">;</span>
+    <span class="na">return</span> <span class="na">0</span><span class="err">;</span>
+<span class="err">}</span>
+</pre></div>
+						  <div class="clear"></div>
+							</div>
+							<b>本文地址:</b> <a href="http://www.yanyulin.info/pages/2014/03/tencent_2012_A.html" target="_self">http://www.yanyulin.info/pages/2014/03/tencent_2012_A.html</a>
+							<div><font color="blue"><b>转载时请保留本文出处,谢谢您的合作</b></font></div>
+							<hr/>
+							<div class="clear" align="left">
+<!--广告-->
+							</div>
+						</div>			
+						<!-- Baidu Button BEGIN -->
+						<div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+						<a class="bds_qzone"></a>
+						<a class="bds_tsina"></a>
+						<a class="bds_tqq"></a>
+						<a class="bds_renren"></a>
+						<a class="bds_t163"></a>
+						<span class="bds_more"></span>
+						</div>
+						<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=6864225" ></script>
+						<script type="text/javascript" id="bdshell_js"></script>
+						<script type="text/javascript">			
+   		      document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+            </script>
+            <!-- Baidu Button END -->
+						<div class="clear"></div>
+						<!-- end: entry -->
+					</div>
+					<!-- entrymeta -->	
+				<center>
+					<div class="entry_sb">
+					</div>
+					<!-- end: entrymeta -->
+				<div class="context_b" align="left">
+					 上一篇: 
+  				 <a href="http://www.yanyulin.info/pages/2014/03/tencent_2014_1.html" title="腾讯校园招聘面经2014年软件研发面经" target="_self">腾讯校园招聘面经2014年软件研发面经</a>
+  				 &nbsp;&nbsp
+  				 下一篇:
+  				 <a href="http://www.yanyulin.info/pages/2014/03/qunar_2014_C.html" title="去哪儿网校园招联笔试题2014年产品经理试题" target="_self">去哪儿网校园招联笔试题2014年产品经理试题</a>
+					 
+				</div>
+				<div class="context_b">
+ 
+			<table border="0px" width="100%">
+			
+	 
+  				 <tr>
+ 
+  				 <td width="50%" align="left">
+  				 <a href="http://www.yanyulin.info/pages/2014/03/tencent_2012_A.html" title="腾讯校园招聘笔试题目2012年软件研发类" target="_blank">腾讯校园招聘笔试题目2012年软件研发类</a>
+  				 </td>
+	
+	 
+ 
+  				 <td width="50%" align="left">
+  				 <a href="http://www.yanyulin.info/pages/2014/03/tencent_2014_A.html" title="腾讯校园招聘笔试题目2014年软件研发类武汉" target="_blank">腾讯校园招聘笔试题目2014年软件研发类武汉</a>
+  				 </td>
+	
+  				 </tr>
+ 
+  				 <td><a href="#" align="left"></a></td>
+  				 <td><a href="#" align="left"></a></td>
+			</table>
+				</div>
+				<div class="context_b">
+			 <div class="ds-thread"></div>
+			 <script type="text/javascript">
+			 	var duoshuoQuery={short_name:"yanyulin"};
+			 	var ds=document.createElement("script");
+			 	ds.type="text/javascript";
+			 	ds.async=true;
+			 	ds.src="http://static.duoshuo.com/embed.js";
+			 	ds.charset="UTF-8";document.getElementsByTagName("head")[0].appendChild(ds);
+			 </script>
+				</div>
+				</center>
+		</div>
+</div>
+<div id="sidebar">					
+	<div class="widget">
+				<h3 style="padding-left:5px">
+<form method="get" action="http://www.google.com.hk/search" target="_blank">
+<input type="text" name="q" style="width:227px">
+<input type="submit" value="站内搜索" name="btnG" id="btnG" style="cursor:pointer;background-color: #4A8BF4;" title="站内搜索">
+<input type="hidden" name="ie" value="UTF-8">
+<input type="hidden" name="oe" value="UTF-8">
+<input type="hidden" name="hl" value="zh-CN">
+<input type="hidden" name="domains" value="www.yanyulin.info">
+<input type="hidden" name="sitesearch" value="www.yanyulin.info">
+</form>
+				</h3>	
+				<div class="box" style="padding:5px 0px 0px 0px" align="center">			
+					<div class="textwidget" style="padding:0px 0px 0px 0px" align="center">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- LEFT_SIDE -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-6620728980314958"
+     data-ad-slot="9349871228"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+					 </div>
+				</div>
+				<h3>相关标签</h3>
+				<div class="box">			
+						<div class="textwidget">
+							<div id="tagsLink">
+							<a href="http://www.yanyulin.info/tag/360bi-shi-ti.html" title="查看360笔试题下的所有文章" style="background-color: #D17C93" target="_blank">360笔试题</a>
+						  </div>
+							<div id="tagsLink">
+							<a href="http://www.yanyulin.info/tag/mei-tuan-wang-bi-shi-ti.html" title="查看美团网笔试题下的所有文章" style="background-color: #8C8BC6" target="_blank">美团网笔试题</a>
+						  </div>
+							<div id="tagsLink">
+							<a href="http://www.yanyulin.info/tag/teng-xun-bi-shi-ti.html" title="查看腾讯笔试题下的所有文章" style="background-color: #84A4B3" target="_blank">腾讯笔试题</a>
+						  </div>
+							<div id="tagsLink">
+							<a href="http://www.yanyulin.info/tag/qu-na-wang-bi-shi-ti.html" title="查看去哪网笔试题下的所有文章" style="background-color: #84A4B3" target="_blank">去哪网笔试题</a>
+						  </div>
+							<div id="tagsLink">
+							<a href="http://www.yanyulin.info/tag/chuang-xin-gong-chang-bi-shi-ti.html" title="查看创新工场笔试题下的所有文章" style="background-color: #169EDD" target="_blank">创新工场笔试题</a>
+						  </div>
+							<div id="tagsLink">
+							<a href="http://www.yanyulin.info/tag/hua-wei-bi-shi-ti.html" title="查看华为笔试题下的所有文章" style="background-color: #8C8BC6" target="_blank">华为笔试题</a>
+						  </div>
+							<div id="tagsLink">
+							<a href="http://www.yanyulin.info/tag/ren-ren-wang-bi-shi-ti.html" title="查看人人网笔试题下的所有文章" style="background-color: #84A4B3" target="_blank">人人网笔试题</a>
+						  </div>
+							<div id="tagsLink">
+							<a href="http://www.yanyulin.info/tag/bai-du-bi-shi-ti.html" title="查看百度笔试题下的所有文章" style="background-color: #96C2AA" target="_blank">百度笔试题</a>
+						  </div>
+							<div id="tagsLink">
+							<a href="http://www.yanyulin.info/tag/ya-ma-xun-bi-shi-ti.html" title="查看亚马逊笔试题下的所有文章" style="background-color: #8C8BC6" target="_blank">亚马逊笔试题</a>
+						  </div>
+							<div id="tagsLink">
+							<a href="http://www.yanyulin.info/tag/wei-ruan-bi-shi-ti.html" title="查看微软笔试题下的所有文章" style="background-color: #84A4B3" target="_blank">微软笔试题</a>
+						  </div>
+							<div id="tagsLink">
+							<a href="http://www.yanyulin.info/tag/ya-hu-bi-shi-ti.html" title="查看雅虎笔试题下的所有文章" style="background-color: #84A4B3" target="_blank">雅虎笔试题</a>
+						  </div>
+							<div id="tagsLink">
+							<a href="http://www.yanyulin.info/tag/zhong-xing-bi-shi-ti.html" title="查看中兴笔试题下的所有文章" style="background-color: #8C8BC6" target="_blank">中兴笔试题</a>
+						  </div>
+							<div id="tagsLink">
+							<a href="http://www.yanyulin.info/tag/a-li-ba-ba-bi-shi-ti.html" title="查看阿里巴巴笔试题下的所有文章" style="background-color: #169EDD" target="_blank">阿里巴巴笔试题</a>
+						  </div>
+							<div id="tagsLink">
+							<a href="http://www.yanyulin.info/tag/bao-feng-bi-shi-ti.html" title="查看暴风笔试题下的所有文章" style="background-color: #8C8BC6" target="_blank">暴风笔试题</a>
+						  </div>
+							<div id="tagsLink">
+							<a href="http://www.yanyulin.info/tag/gu-ge-bi-shi-ti.html" title="查看谷歌笔试题下的所有文章" style="background-color: #8C8BC6" target="_blank">谷歌笔试题</a>
+						  </div>
+						</div>
+						<div class="clear"></div>
+				</div>
+				<h3>本站直达</h3>
+				<div class="box">
+				<div class="textwidget">
+					<table id="tbl">
+  					<tbody>
+  						<tr>
+ 
+    							<td align="center"><a href="http://www.yanyulin.info/category/bian-cheng-yu-yan.html" title="查看编程语言下的所有文章">编程语言</a></td>
+			
+ 
+    							<td align="center"><a href="http://www.yanyulin.info/category/cheng-xu-yuan-zhao-gong-zuo.html" title="查看程序员找工作下的所有文章">程序员找工作</a></td>
+			
+ 
+    							<td align="center"><a href="http://www.yanyulin.info/category/jing-pin-shu-ji.html" title="查看精品书籍下的所有文章">精品书籍</a></td>
+			
+ 
+    							<td align="center"><a href="http://www.yanyulin.info/category/shi-pin-jiao-cheng.html" title="查看视频教程下的所有文章">视频教程</a></td>
+			
+ 
+    							<td align="center"><a href="http://www.yanyulin.info/category/wan-zhuan-ji-zhu.html" title="查看玩转技术下的所有文章">玩转技术</a></td>
+			
+  						</tr>	
+  						<tr>
+ 
+    							<td align="center"><a href="http://www.yanyulin.info/category/tou-zi-li-cai.html" title="查看投资理财下的所有文章">投资理财</a></td>
+			
+ 
+    							<td align="center"><a href="http://www.yanyulin.info/category/cheng-xu-yuan-de-mian-jing.html" title="查看程序员的面经下的所有文章">程序员的面经</a></td>
+			
+ 
+    							<td align="center"><a href="http://www.yanyulin.info/category/yan-yu-za-tan.html" title="查看烟雨杂谈下的所有文章">烟雨杂谈</a></td>
+			
+  						<td align="center"><a href="#"></a></td>
+  						<td align="center"><a href="#"></a></td>
+						</tbody>
+					</table>
+				</div>
+				</div>
+				<h3>邮箱订阅</h3>
+				<div class="box">			
+				<div class="textwidget">
+				<!--QQ邮件列表订阅嵌入代码-->
+				<table  border="0">
+  			<tbody>
+  			<tr>
+  			<td>
+				<!--以下是QQ邮件列表订阅嵌入代码-->
+        <div style="width: 110px;overflow: hidden; " class="WB_widget WB_follow_ex">
+        <div class="follow_btn_line" node-type="inner">
+        <a class="follow_btn status_followed" node-type="followBtn" target="_blank" title="烟雨林博客" href="http://list.qq.com/cgi-bin/qf_invite?id=8949c93bdc7fcbda12adc078acb2809d6f6eba09998d35e6">
+				<img border="0" width="107px" height="22px" alt="邮箱订阅" src="http://www.yanyulin.info/pics/picMode_light_s.png" />
+        </a></div></div>
+			  </td>
+				</tr>
+			  </tbody>
+			  </table>
+				</div>
+				</div>
+				<div class="random_r">
+				<h3>随便看看</h3>
+				<div class="box_r">
+				<ul>
+				<ul class="random-post-link">
+				<li class="random-post-link">
+				<a href="http://www.yanyulin.info/pages/2013/11/github.html" target="_blank" title="Github简明教程(入门篇)">Github简明教程(入门篇)</a>
+				</li>
+				<li class="random-post-link">
+				<a href="http://www.yanyulin.info/pages/2014/01/baidu_1.html" target="_blank" title="百度校招2014年软研面经">百度校招2014年软研面经</a>
+				</li>
+				<li class="random-post-link">
+				<a href="http://www.yanyulin.info/pages/2013/06/huawei_2013_1.html" target="_blank" title="2013年华为校招机试(一)">2013年华为校招机试(一)</a>
+				</li>
+				<li class="random-post-link">
+				<a href="http://www.yanyulin.info/pages/2013/11/deepc.html" target="_blank" title="C语言深度解剖(含金量高)">C语言深度解剖(含金量高)</a>
+				</li>
+				<li class="random-post-link">
+				<a href="http://www.yanyulin.info/pages/2013/12/psbase_1.html" target="_blank" title="PhotoShop CS入门版视频教程(基础上)">PhotoShop CS入门版视频教程(基础上)</a>
+				</li>
+				<li class="random-post-link">
+				<a href="http://www.yanyulin.info/pages/2014/02/xrptalk.html" target="_blank" title="XRP Talk论坛注册教程">XRP Talk论坛注册教程</a>
+				</li>
+				<li class="random-post-link">
+				<a href="http://www.yanyulin.info/pages/2013/11/qqLogin.html" target="_blank" title="界面编程模仿篇(模仿腾讯QQ登录界面)">界面编程模仿篇(模仿腾讯QQ登录界面)</a>
+				</li>
+				<li class="random-post-link">
+				<a href="http://www.yanyulin.info/pages/2014/03/duoshuo.html" target="_blank" title="多说评论框如何|怎么样|实际测试">多说评论框如何|怎么样|实际测试</a>
+				</li>
+				</ul>
+				</ul>
+				<div class="clear"></div>
+				</div>
+				</div>
+				
+			<div class="hotarticles" align="center">
+						<hr/>
+				<div class="box_r" align="center">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- LEFT_SIDE -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-6620728980314958"
+     data-ad-slot="9349871228"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+				</div>
+				</div>
+				
+				
+					<div class="hotarticles">
+				<h3>最新评论</h3>
+				<div class="box_comment" style="padding:0px 10px 0 10px">
+<ul class="ds-recent-comments" data-num-items="5" data-show-title="0" data-show-avatars="1" data-show-time="1" data-show-admin="0" data-excerpt-length="40"></ul>
+<div class="clear"></div>
+<!--多说js加载开始，一个页面只需要加载一次 -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"yanyulin"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+<!--多说js加载结束，一个页面只需要加载一次 -->
+				</div>
+				</div>				
+				
+				<div class="hotarticles">
+				<h3>年度排行</h3>
+				<div class="box_r">
+				<ul>
+				<li>
+				<a href="http://www.yanyulin.info/pages/2014/03/git.html" target="_blank" title="git保存用户名与密码(避免用户名密码输入)">git保存用户名与密码(避免用户名密码输入)</a>
+				</li>
+				<li>
+				<a href="http://www.yanyulin.info/pages/2013/01/renmingyinhang_1.html" target="_blank" title="中国人民银行2013校招技术类面经">中国人民银行2013校招技术类面经</a>
+				</li>
+				<li>
+				<a href="http://www.yanyulin.info/pages/2013/06/google_2013_1.html" target="_blank" title="2013年谷歌校招笔试(一)">2013年谷歌校招笔试(一)</a>
+				</li>
+				<li>
+				<a href="http://www.yanyulin.info/pages/2013/12/prgbeautiful.html" target="_blank" title="编程之美—微软技术面试心得">编程之美—微软技术面试心得</a>
+				</li>
+				<li>
+				<a href="http://www.yanyulin.info/pages/2013/11/vlinux2.html" target="_blank" title="Linux基础教程视频版(很详细)">Linux基础教程视频版(很详细)</a>
+				</li>
+				<li>
+				<a href="http://www.yanyulin.info/pages/2014/03/ripple_safe.html" target="_blank" title="保护Ripple币以及万特币的几点安全措施">保护Ripple币以及万特币的几点安全措施</a>
+				</li>
+				<li>
+				<a href="http://www.yanyulin.info/pages/2013/11/fetchPage.html" target="_blank" title="爬虫的自我解剖(抓取网页HtmlUnit)">爬虫的自我解剖(抓取网页HtmlUnit)</a>
+				</li>
+				<li>
+				<a href="http://www.yanyulin.info/pages/2014/03/duoshuo.html" target="_blank" title="多说评论框如何|怎么样|实际测试">多说评论框如何|怎么样|实际测试</a>
+				</li>
+				<div class="clear"></div>
+				</div>
+				</div>
+				</div>
+				<div class="hotarticles" align="center">
+						<hr/>
+				<div class="box_r" align="center">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 160*600 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:160px;height:600px"
+     data-ad-client="ca-pub-6620728980314958"
+     data-ad-slot="3421088826"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+				<div class="clear"></div>
+				</div>
+				</div>
+				</div>
+	</div>
+</div>	 </div>		
+	 <div id="my_footer_wrapper">
+	 <div class="link">
+	 <a href="http://www.zhangxiaolong.org" target="_blank">Atlas</a>
+	 <a href="http://weibo.com/lamazi" target="_blank">我的微博</a>
+	 <a href="http://blog.csdn.net/column/details/job-school.html" target="_blank">IT公司笔试题</a>
+	 <div class="clear"></div>
+   </div>
+   </div>
+	 <div id="my_footer_wrapper">
+	 <div id="my_footer">		
+	 <span>【</span><a href="http://www.yanyulin.info/sitemap.xml" target="_blank">本站地图</a><span>】
+	 </span> 		
+	 <span>【</span><a href="http://www.yanyulin.info/feeds/all.rss.xml" target="_blank">RSS订阅</a><span>】
+	 </span>  		
+	 <span>【</span><a href="http://www.yanyulin.info/sitemap.xml" target="_blank">谷歌地图</a><span>】
+	 </span> 		
+	 <span>【</span><a href="http://www.yanyulin.info" target="_blank">电脑版</a><span>】</span>    
+	 </div>
+  </div>  
+  <div id="my_copyright_wrapper">
+		<div id="my_copyright">
+		博主邮箱: zwjlpeng@gmail.com Copyright@2010-2020 <a href="http://www.yanyulin.info">烟雨林个人博客</a>
+		</div>
+  </div>
+    <script>
+     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+     ga('create', 'UA-45829467-1', '');
+     ga('send', 'pageview');
+   </script>
+
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Ffc8ddb27d7faba664a1416d848575847' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+
+</body>
+</html>
