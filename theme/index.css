@@ -370,9 +370,14 @@ a:hover {
 }
 #tagsLink{
 	float:left;
-	padding-right:3px;
+	padding-right:2.5px;
 	margin:0px;
 }
+
+#tagsLink a:hover {
+	color:#FFFFFF;
+}
+
 .widget ul li {
 	list-style:none;
 	margin:0;
