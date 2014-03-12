@@ -1,5 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>烟雨林</title><link href="http://www.yanyulin.info/" rel="alternate"></link><link href="http://www.yanyulin.info/feeds/cheng-xu-yuan-zhao-gong-zuo.atom.xml" rel="self"></link><id>http://www.yanyulin.info/</id><updated>2014-03-12T00:00:00+08:00</updated><entry><title>金山校园招聘笔试题2013年实习生技术类</title><link href="http://www.yanyulin.info/pages/2014/03/wps_2014_a.html" rel="alternate"></link><updated>2014-03-12T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-12:pages/2014/03/wps_2014_a.html</id><summary type="html">&lt;hr /&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>烟雨林</title><link href="http://www.yanyulin.info/" rel="alternate"></link><link href="http://www.yanyulin.info/feeds/cheng-xu-yuan-zhao-gong-zuo.atom.xml" rel="self"></link><id>http://www.yanyulin.info/</id><updated>2014-03-12T00:00:00+08:00</updated><entry><title>大众点评笔试题校招笔试题2014年技术类</title><link href="http://www.yanyulin.info/pages/2014/03/dianping_2014_a.html" rel="alternate"></link><updated>2014-03-12T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-12:pages/2014/03/dianping_2014_a.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;大众点评此次笔试题选择的方式是在线笔试题&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;1、团购&lt;code&gt;（Group purchase）&lt;/code&gt;就是团体购物，指认识或不认识的消费者联合起来，加大与商家的谈判能力，以求得最优价格的一种购物方式，大众点评团是中国领先的本地生活消费平台，致力于为消费者提供本地餐馆美食、电影、KTV、休闲娱乐、酒店旅游、美容保健、婚庆亲子、购物等生活服务信息。&lt;/p&gt;
+&lt;p&gt;为了更好的服务消费者，点评推出了优惠券这项功能，并且也扩张到了非常多的商户。现在计划上线一个新的业务，在团购的基础上增加优惠券功能，更大幅度的让利消费者。&lt;/p&gt;
+&lt;p&gt;现在需要实现这个功能，具体的业务需求描述如下(描述有点长，大家不用担心，题目不难)：团购的购物车里面的每一件商品为Product类，其中包含&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;id,name,description,price,category&lt;/code&gt;(类型，uuid类型),&lt;code&gt;count, totalPrice&lt;/code&gt; 等等&lt;/p&gt;
+&lt;p&gt;现在需要增加 优惠劵的功能，当用户添加完所有的商品后，有一个地方可以输入优惠劵&lt;code&gt;code&lt;/code&gt;，当用户应用优惠劵后，购物车将自动列出优惠后的价格，包括跟使用之前的价格对比。&lt;/p&gt;
+&lt;p&gt;注意事项&lt;/p&gt;
+&lt;p&gt;a. 当前优惠劵只有一种，就是满&lt;code&gt;200减20&lt;/code&gt;，上不封顶，例如&lt;code&gt;满400减40&lt;/code&gt;，&lt;code&gt;满600减60&lt;/code&gt;...未满200的不优惠&lt;/p&gt;
+&lt;p&gt;b. 优惠劵不能叠加多次使用，比如团购总价为240，使用优惠劵后变为220，不能继续再使用该优惠劵，优惠劵类自定。属性自定。&lt;/p&gt;
+&lt;p&gt;后期优惠劵功能可能扩充，比如(后期功能可不实现，但是要提供思路和方法)&lt;/p&gt;
+&lt;p&gt;c1. 针对&lt;code&gt;Product&lt;/code&gt;的&lt;code&gt;category&lt;/code&gt;，比如食物，书籍，衣服，电子产品等等，该优惠劵会针对于该类型的Product，不会应用到别的category的产品&lt;/p&gt;
+&lt;p&gt;c2. 打折券，不仅仅是限制于满200减20，而是可以打折，每一个优惠劵可以有不同的折率&lt;/p&gt;
+&lt;p&gt;d). 优惠劵不能叠加使用，比如不能使用两个不同的优惠劵。但是当用户多次输入不同的优惠劵后，我们必须给用户提供更划算的优惠劵方案。&lt;/p&gt;
+&lt;p&gt;根据以上的业务需求，完成功能实现（编写相应的代码和测试代码，语言不限，可以用伪代码表示。不需要考虑界面问题）。&lt;/p&gt;
+&lt;p&gt;答案：在&lt;code&gt;大话设计模式&lt;/code&gt;中寻找答案。这应该是策略模式的应用&lt;/p&gt;
+&lt;p&gt;2、十六进制序列&lt;/p&gt;
+&lt;p&gt;描述：有一个十六进制序列由S1S2…Sk组成，其中Sk由1到k的十六进制数字依次组成。给定一个位置i，返回第i个位置上的字符。数字i为32位int&lt;/p&gt;
+&lt;p&gt;例如，S1S2…Sk的前200个字符为&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="mi"&gt;112123123412345123456123456712345678123456789123456789&lt;/span&gt;&lt;span class="n"&gt;A123456789AB123456789ABC1234567&lt;/span&gt;
+
+&lt;span class="mi"&gt;89&lt;/span&gt;&lt;span class="n"&gt;ABCD123456789ABCDE123456789ABCDEF123456789ABCDEF10123456789ABCDEF1011123456789ABCDE&lt;/span&gt;
+
+&lt;span class="n"&gt;F101112123456789ABCDEF10111213&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;所以&lt;code&gt;i=50&lt;/code&gt;时，字符为5，i=100时，字符为&lt;code&gt;9&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;要求时间复杂度小于&lt;code&gt;O(n)&lt;/code&gt;，空间复杂度&lt;code&gt;O(1)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;3、uptime命令的输出中有&lt;code&gt;load average: 0.24, 0.30, 0.24&lt;/code&gt;，请&lt;/p&gt;
+&lt;p&gt;(1)解释这里load的数值的含义；&lt;/p&gt;
+&lt;p&gt;(2)说明该数值多大时表示系统负载很高；&lt;/p&gt;
+&lt;p&gt;(3)当系统负载高时，如何找出是什么因素导致负载高的。&lt;/p&gt;
+&lt;p&gt;解析：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;1、系统在过去的1分钟、5分钟和15分钟内的平均负载。&lt;/p&gt;
+&lt;p&gt;2、当该数值达到CPU的总颗数，说明满负载。&lt;/p&gt;
+&lt;p&gt;3、可能是有大的计算任务，死循环任务，大量磁盘IO操作等&lt;/p&gt;
+&lt;/blockquote&gt;</summary><category term="大众点评笔试题"></category></entry><entry><title>金山校园招聘笔试题2013年实习生技术类</title><link href="http://www.yanyulin.info/pages/2014/03/wps_2014_a.html" rel="alternate"></link><updated>2014-03-12T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-12:pages/2014/03/wps_2014_a.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;如有错误，或更加精简的方法，请留言，我会更正，以方便更多的人&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;自我判断题（请选择最符合您本人意愿的一项）&lt;/p&gt;
 &lt;p&gt;1、你觉得你的能力特点是?&lt;/p&gt;
