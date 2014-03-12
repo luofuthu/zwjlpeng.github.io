@@ -1,127 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>烟雨林</title><link href="http://www.yanyulin.info/" rel="alternate"></link><link href="http://www.yanyulin.info/feeds/all.atom.xml" rel="self"></link><id>http://www.yanyulin.info/</id><updated>2014-03-12T00:00:00+08:00</updated><entry><title>金山校园招聘笔试题2013年实习生技术类</title><link href="http://www.yanyulin.info/pages/2014/03/wps_2014_a.html" rel="alternate"></link><updated>2014-03-12T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-12:pages/2014/03/wps_2014_a.html</id><summary type="html">&lt;hr /&gt;
-&lt;p&gt;&lt;strong&gt;如有错误，或更加精简的方法，请留言，我会更正，以方便更多的人&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;自我判断题（请选择最符合您本人意愿的一项）&lt;/p&gt;
-&lt;p&gt;1、你觉得你的能力特点是?&lt;/p&gt;
-&lt;p&gt;a. 注重团队交流&lt;/p&gt;
-&lt;p&gt;b. 注重细节、追求完美&lt;/p&gt;
-&lt;p&gt;c. 擅长钻研&lt;/p&gt;
-&lt;p&gt;d. 重视知识积累&lt;/p&gt;
-&lt;p&gt;e. 做事仔细，思维慎密&lt;/p&gt;
-&lt;p&gt;2、你觉得你的思维特点&lt;/p&gt;
-&lt;p&gt;a. 创造力&lt;/p&gt;
-&lt;p&gt;b. 想象力&lt;/p&gt;
-&lt;p&gt;c. 把握复杂问题&lt;/p&gt;
-&lt;p&gt;d. 洞察细节&lt;/p&gt;
-&lt;p&gt;3、你最喜欢的做事方式&lt;/p&gt;
-&lt;p&gt;a. 用妥当的方式处理问题&lt;/p&gt;
-&lt;p&gt;b. 用快速的方式处理问题&lt;/p&gt;
-&lt;p&gt;c. 用直观的方式处理问题&lt;/p&gt;
-&lt;p&gt;4、对你的合作伙伴你最不能接受的缺点是?&lt;/p&gt;
-&lt;p&gt;a. 浮夸&lt;/p&gt;
-&lt;p&gt;b. 粗心大意&lt;/p&gt;
-&lt;p&gt;c. 墨守成规&lt;/p&gt;
-&lt;p&gt;d. 不求上进&lt;/p&gt;
-&lt;p&gt;选择题（单项选择）&lt;/p&gt;
-&lt;p&gt;1、&lt;code&gt;int x = 18 / 7 * 3&lt;/code&gt;,x变量的数值为?&lt;/p&gt;
-&lt;p&gt;a. 6        &lt;/p&gt;
-&lt;p&gt;b. 7       &lt;/p&gt;
-&lt;p&gt;c. 8        &lt;/p&gt;
-&lt;p&gt;d. 9&lt;/p&gt;
-&lt;p&gt;2、c++是否是大小写敏感的：&lt;/p&gt;
-&lt;p&gt;a. 是       &lt;/p&gt;
-&lt;p&gt;b. 不是&lt;/p&gt;
-&lt;p&gt;3、以下程序的输出结果是：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;cout&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;0&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;endl&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;a. 0    &lt;/p&gt;
-&lt;p&gt;b. "0"     &lt;/p&gt;
-&lt;p&gt;c. 48&lt;/p&gt;
-&lt;p&gt;4、以下哪个不是c++关键字&lt;/p&gt;
-&lt;p&gt;a. class    &lt;/p&gt;
-&lt;p&gt;b. int     &lt;/p&gt;
-&lt;p&gt;c. struct     &lt;/p&gt;
-&lt;p&gt;d. printf&lt;/p&gt;
-&lt;p&gt;5、int * p = new int[10];和上述语句匹配的释放语句是?&lt;/p&gt;
-&lt;p&gt;a. free(p)        &lt;/p&gt;
-&lt;p&gt;b. delete p;         &lt;/p&gt;
-&lt;p&gt;c. delete [] p;        &lt;/p&gt;
-&lt;p&gt;d. delete p [];&lt;/p&gt;
-&lt;p&gt;6、int * p = new int;以下那行语句是合法的?&lt;/p&gt;
-&lt;p&gt;a. *p = 3;    &lt;/p&gt;
-&lt;p&gt;b. p = *3;     &lt;/p&gt;
-&lt;p&gt;c. &amp;amp;p = 3;     &lt;/p&gt;
-&lt;p&gt;d. p = &amp;3;&lt;/p&gt;
-&lt;p&gt;7、const int x = 0x20;printf("%d", x);以上代码片段的输出是?&lt;/p&gt;
-&lt;p&gt;a. 20        &lt;/p&gt;
-&lt;p&gt;b. %d          &lt;/p&gt;
-&lt;p&gt;c. 32&lt;/p&gt;
-&lt;p&gt;8、char x[] = "hello",sizeof(x)的结果为&lt;/p&gt;
-&lt;p&gt;a. 4    &lt;/p&gt;
-&lt;p&gt;b. 5    &lt;/p&gt;
-&lt;p&gt;c. 6&lt;/p&gt;
-&lt;p&gt;9、printf("5432" + 1);上述代码的输出结果是?&lt;/p&gt;
-&lt;p&gt;a. 432        &lt;/p&gt;
-&lt;p&gt;b. 5433       &lt;/p&gt;
-&lt;p&gt;c. 54321       &lt;/p&gt;
-&lt;p&gt;d. 编译不通过&lt;/p&gt;
-&lt;p&gt;10、std::vector&lt;T&gt; x;x.resize(10);sizeof(x)的结果为?&lt;/p&gt;
-&lt;p&gt;a. 0       &lt;/p&gt;
-&lt;p&gt;b. 4       &lt;/p&gt;
-&lt;p&gt;c. 10       &lt;/p&gt;
-&lt;p&gt;d. 不确定&lt;/p&gt;
-&lt;p&gt;综合题&lt;/p&gt;
-&lt;p&gt;1、请实现这么一个函数：传入一个int值，在屏幕输出类似LED显示屏效果的字母拼图，例如：
-输入&lt;code&gt;1234567890&lt;/code&gt;，输出：&lt;/p&gt;
-&lt;p&gt;提示：请注意每个字符的固定宽度和高度，两个数字间保留一个空格&lt;/p&gt;
-&lt;p&gt;函数签名：&lt;code&gt;void LEDprint(int num);&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;2、请编写一段代码测试以下函数执行的正确性：&lt;code&gt;void unique(std::vector&amp;lt;int&amp;gt; &amp;amp; v)&lt;/code&gt;;这个函数的职责是去除传入数组中的重复元素。&lt;/p&gt;
-&lt;p&gt;提示1：函数返回结果不一定是依照某种顺序的；&lt;/p&gt;
-&lt;p&gt;提示2：请尽可能多的考虑各种可能出现bug的情况组合；&lt;/p&gt;
-&lt;p&gt;提示3：你编写的代码应当返回一个int值，返回0表示测试通过，返回1表示出现错误。&lt;/p&gt;
-&lt;p&gt;3、实现如下函数：&lt;code&gt;void printInChinese(int num);&lt;/code&gt;这个函数输入一个小于100000000（一亿）的正整数，并在屏幕上打印这个数字的中文写法。&lt;/p&gt;
-&lt;p&gt;例如：&lt;/p&gt;
-&lt;p&gt;17 -&amp;gt; 一十七&lt;/p&gt;
-&lt;p&gt;120 -&amp;gt; 一百二十&lt;/p&gt;
-&lt;p&gt;201 -&amp;gt; 二百零一&lt;/p&gt;
-&lt;p&gt;1074 -&amp;gt; 一千零七十四&lt;/p&gt;
-&lt;p&gt;65536 -&amp;gt; 六万五千五百三十六&lt;/p&gt;
-&lt;p&gt;1010101 -&amp;gt; 一百零一万零一百零一&lt;/p&gt;
-&lt;p&gt;提示：请注意‘零’的处理。&lt;/p&gt;
-&lt;p&gt;扩展：如果需要处理通用简化习惯，你将怎么处理，例如：&lt;/p&gt;
-&lt;p&gt;17 -&amp;gt; 十七&lt;/p&gt;
-&lt;p&gt;120 -&amp;gt; 一百二&lt;/p&gt;
-&lt;p&gt;//对于特殊情况的考虑 需要考虑在十位和十万位开头 且为1的情况。&lt;/p&gt;
-&lt;p&gt;末尾的情况稍微复杂点 可以考虑先将所有要输出的数据缓存，然后根据末尾0的情况适当输出。&lt;/p&gt;
-&lt;p&gt;已知完全弹性碰撞公式如下：&lt;/p&gt;
-&lt;p&gt;其中m1 m2为小球质量，v1 v2为原始速度，v1' v2'是碰撞后的速度。&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;struct&lt;/span&gt; &lt;span class="kt"&gt;ball_t&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-&lt;span class="kt"&gt;double&lt;/span&gt; &lt;span class="n"&gt;m&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="c1"&gt;// 质量&lt;/span&gt;
-&lt;span class="kt"&gt;double&lt;/span&gt; &lt;span class="n"&gt;v&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="c1"&gt;// 速度，速度为正表示球体往x轴正方向运动&lt;/span&gt;
-&lt;span class="kt"&gt;double&lt;/span&gt; &lt;span class="n"&gt;pos&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="c1"&gt;// 在x坐标轴的位置&lt;/span&gt;
-&lt;span class="p"&gt;};&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;请实现以下函数：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;progress&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;ball_t&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;b1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kt"&gt;ball_t&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;b2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kt"&gt;double&lt;/span&gt; &lt;span class="n"&gt;leftWall&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kt"&gt;double&lt;/span&gt; &lt;span class="n"&gt;rightWall&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kt"&gt;double&lt;/span&gt; &lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;这个函数输入两个球的当前状况（包括质量，速度，在x轴的位置），以及左右墙壁的位置，输出两个球在t秒钟后的状况（包括质量，速度，在x轴的位置）。&lt;/p&gt;
-&lt;p&gt;特殊说明：球体碰撞墙面也是完全弹性碰撞，即球体速度变为原本的负数。&lt;/p&gt;
-&lt;p&gt;4、一个工程由如下文件组成：&lt;code&gt;head1.h head2.h src1.cpp src2.cpp main.cpp&lt;/code&gt;,最终编译结果为&lt;code&gt;xxx.exe&lt;/code&gt;（或者xxx，如果在linux下的话）,请写出你熟悉的某种编译器将这5个文件转换为最终结果xxx.exe（或xxx）的详细过程。写出每一个步骤，并作相关的解释，如果你熟悉某编译器的话，请写出这个编译器每一步用到的命令行。&lt;/p&gt;
-&lt;p&gt;先将head1.h和src1.cpp文件生成1.o文件,将head2.h和src2.cpp文件生成2.o文件,再将main.cpp文件生成main.o文件,最后将这些.o文件生成xxx.exe&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;g&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;o&lt;/span&gt; &lt;span class="mf"&gt;1.&lt;/span&gt;&lt;span class="n"&gt;o&lt;/span&gt;  &lt;span class="n"&gt;head1&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;h&lt;/span&gt; &lt;span class="n"&gt;src1&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cpp&lt;/span&gt;
-&lt;span class="n"&gt;g&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;o&lt;/span&gt; &lt;span class="mf"&gt;2.&lt;/span&gt;&lt;span class="n"&gt;o&lt;/span&gt;  &lt;span class="n"&gt;head2&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;h&lt;/span&gt; &lt;span class="n"&gt;src2&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cpp&lt;/span&gt;
-&lt;span class="n"&gt;g&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;o&lt;/span&gt; &lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;o&lt;/span&gt; &lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cpp&lt;/span&gt;
-&lt;span class="n"&gt;g&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;o&lt;/span&gt; &lt;span class="n"&gt;xxx&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exe&lt;/span&gt; &lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;o&lt;/span&gt; &lt;span class="mf"&gt;1.&lt;/span&gt;&lt;span class="n"&gt;o&lt;/span&gt; &lt;span class="mf"&gt;2.&lt;/span&gt;&lt;span class="n"&gt;o&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;&lt;strong&gt;各位如果有更好的答案，请留言评价，方便更多的人&lt;/strong&gt;&lt;/p&gt;</summary><category term="金山笔试题"></category></entry><entry><title>奇虎360校园招聘笔试题2014年研发类技术类</title><link href="http://www.yanyulin.info/pages/2014/03/360_2014_a.html" rel="alternate"></link><updated>2014-03-11T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-11:pages/2014/03/360_2014_a.html</id><summary type="html">&lt;hr /&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>烟雨林</title><link>http://www.yanyulin.info/</link><description></description><atom:link href="http://www.yanyulin.info/feeds/all.rss.xml" rel="self"></atom:link><lastBuildDate>Tue, 11 Mar 2014 00:00:00 +0800</lastBuildDate><item><title>奇虎360校园招聘笔试题2014年研发类技术类</title><link>http://www.yanyulin.info/pages/2014/03/360_2014_a.html</link><description>&lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;如有错误，或更加精简的方法，请留言，我会更正，以方便更多的人&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;1、有5名同学争夺3项比赛的冠军，若每项只设1名冠军，则获得冠军的可能情况的种数是?&lt;/p&gt;
 &lt;p&gt;A 120种&lt;/p&gt;
@@ -261,7 +139,7 @@
 &lt;p&gt;1、传教士与野人均能划船，但船上只能载两个人&lt;/p&gt;
 &lt;p&gt;2、两边岸上的野人人数不能超过传教士人数，否则么野人就会把传教士吃掉&lt;/p&gt;
 &lt;p&gt;3、假定野人总是服从安排，设编程实现一个安全的方法将人全部运过去&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;各位如果有更好的答案，请留言评价，方便更多的人&lt;/strong&gt;&lt;/p&gt;</summary><category term="360笔试题"></category></entry><entry><title>宇龙酷派校园招聘面经2014年软件面经</title><link href="http://www.yanyulin.info/pages/2014/03/coolpad_2014_1.html" rel="alternate"></link><updated>2014-03-11T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-11:pages/2014/03/coolpad_2014_1.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;各位如果有更好的答案，请留言评价，方便更多的人&lt;/strong&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Tue, 11 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-03-11:pages/2014/03/360_2014_a.html</guid><category>360笔试题</category></item><item><title>宇龙酷派校园招聘面经2014年软件面经</title><link>http://www.yanyulin.info/pages/2014/03/coolpad_2014_1.html</link><description>&lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;宇龙酷派&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;宇龙酷派&lt;/strong&gt;创立于&lt;code&gt;1993年4月&lt;/code&gt;，系中国无线科技有限公司（香港主板上市公司，股票代码2369）的全资附属子公司，是中国专业的智能手机终端、移动数据平台系统、增值业务运营一体化解决方案提供商，专注于以智能手机为核心的无线数据一体化解决方案，并致力发展成为全球无线数据一体化终端的领导者...&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;重点，面试感觉&lt;/strong&gt;&lt;/p&gt;
@@ -281,7 +159,7 @@
 &lt;p&gt;3、程序员的核心素质是什么？大概是效率吧&lt;/p&gt;
 &lt;p&gt;4、对移动互联网软件开发有兴趣没？&lt;/p&gt;
 &lt;p&gt;5、其他的随便聊&lt;/p&gt;
-&lt;/blockquote&gt;</summary><category term="酷派面经"></category></entry><entry><title>宇龙酷派校园招聘笔试题2014年技术类笔试题南昌</title><link href="http://www.yanyulin.info/pages/2014/03/coolpad_2014_A.html" rel="alternate"></link><updated>2014-03-11T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-11:pages/2014/03/coolpad_2014_A.html</id><summary type="html">&lt;hr /&gt;
+&lt;/blockquote&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Tue, 11 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-03-11:pages/2014/03/coolpad_2014_1.html</guid><category>酷派面经</category></item><item><title>宇龙酷派校园招聘笔试题2014年技术类笔试题南昌</title><link>http://www.yanyulin.info/pages/2014/03/coolpad_2014_A.html</link><description>&lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;宇龙酷派&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;宇龙酷派&lt;/strong&gt;创立于&lt;code&gt;1993年4月&lt;/code&gt;，系中国无线科技有限公司（香港主板上市公司，股票代码2369）的全资附属子公司，是中国专业的智能手机终端、移动数据平台系统、增值业务运营一体化解决方案提供商，专注于以智能手机为核心的无线数据一体化解决方案，并致力发展成为全球无线数据一体化终端的领导者...&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;笔试题&lt;/strong&gt;&lt;/p&gt;
@@ -298,7 +176,7 @@
 &lt;p&gt;5、一个员工要到几个城市去调研，已经知道各个城市间的路程（路费），写出走完所有城市路程最小的算法&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;分支限界求旅行商问题&lt;/p&gt;
-&lt;/blockquote&gt;</summary><category term="酷派笔试题"></category></entry><entry><title>美团网校园招聘笔试题2014年研发类长沙</title><link href="http://www.yanyulin.info/pages/2014/03/meituan_2014_C.html" rel="alternate"></link><updated>2014-03-11T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-11:pages/2014/03/meituan_2014_C.html</id><summary type="html">&lt;hr /&gt;
+&lt;/blockquote&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Tue, 11 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-03-11:pages/2014/03/coolpad_2014_A.html</guid><category>酷派笔试题</category></item><item><title>美团网校园招聘笔试题2014年研发类长沙</title><link>http://www.yanyulin.info/pages/2014/03/meituan_2014_C.html</link><description>&lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;如有错误，或更加精简的方法，请留言，我会更正，以方便更多的人&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;1、有ABCD四个人要在夜里过一座桥，他们通过这座桥分别需要耗时1、2、5、10分钟，现在只有一支手电，过桥时必须带有手电，并且同时最多只能两个人一起过桥。请问如何安排能够让四个人尽快都过桥。&lt;/p&gt;
 &lt;blockquote&gt;
@@ -417,7 +295,7 @@
 &lt;p&gt;如果不能更改子网掩码，需要在A和B做什么设置?&lt;/p&gt;
 &lt;p&gt;A和B通信时，C是否能够通过&lt;code&gt;sniffer&lt;/code&gt;截获A和B通信的报文，如果只能截获一部分报文，是哪一类报文?&lt;/p&gt;
 &lt;p&gt;C可以仅通过&lt;code&gt;sniffer&lt;/code&gt;得知A和B的IP地址和MAC地址吗?如果能，如何获得?&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;各位如果有更好的答案，请留言评价，方便更多的人&lt;/strong&gt;&lt;/p&gt;</summary><category term="美团网笔试题"></category></entry><entry><title>腾讯校园招聘笔试题目2014年软件研发类武汉</title><link href="http://www.yanyulin.info/pages/2014/03/tencent_2014_A.html" rel="alternate"></link><updated>2014-03-11T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-11:pages/2014/03/tencent_2014_A.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;各位如果有更好的答案，请留言评价，方便更多的人&lt;/strong&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Tue, 11 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-03-11:pages/2014/03/meituan_2014_C.html</guid><category>美团网笔试题</category></item><item><title>腾讯校园招聘笔试题目2014年软件研发类武汉</title><link>http://www.yanyulin.info/pages/2014/03/tencent_2014_A.html</link><description>&lt;hr /&gt;
 &lt;p&gt;1、有100W个关键字，长度小于等于50字节。用高效的算法找出top10的热词，并对内存的占用不超过1MB？&lt;/p&gt;
 &lt;p&gt;解析：&lt;/p&gt;
 &lt;blockquote&gt;
@@ -466,7 +344,7 @@
             &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;GetLastCommonParent&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pRoot&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;m_pRight&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;pNode1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;pNode2&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
     &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</summary><category term="腾讯笔试题"></category></entry><entry><title>迅雷校园招聘笔试题2014年技术类笔试题武汉</title><link href="http://www.yanyulin.info/pages/2014/03/xunlei_2014_A.html" rel="alternate"></link><updated>2014-03-11T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-11:pages/2014/03/xunlei_2014_A.html</id><summary type="html">&lt;hr /&gt;
+&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Tue, 11 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-03-11:pages/2014/03/tencent_2014_A.html</guid><category>腾讯笔试题</category></item><item><title>迅雷校园招聘笔试题2014年技术类笔试题武汉</title><link>http://www.yanyulin.info/pages/2014/03/xunlei_2014_A.html</link><description>&lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;转载时请赋上原文链接，谢谢&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;1、现有某个堆栈S,按顺序ABCD进栈，则出栈序列中不可能存在的是&lt;/p&gt;
 &lt;p&gt;A DCBA        &lt;/p&gt;
@@ -827,7 +705,7 @@ D、 B: :func1( ) 不是虚函数，而A: :func2( ) 是虚函数    &lt;/p&gt;
  &lt;span class="n"&gt;BSTreeNode&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;left&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
  &lt;span class="n"&gt;BSTreeNode&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;right&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</summary><category term="迅雷笔试题"></category></entry><entry><title>阿里巴巴校招面经2014年软件研发面经</title><link href="http://www.yanyulin.info/pages/2014/03/ali_4.html" rel="alternate"></link><updated>2014-03-10T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-10:pages/2014/03/ali_4.html</id><summary type="html">&lt;hr /&gt;
+&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Tue, 11 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-03-11:pages/2014/03/xunlei_2014_A.html</guid><category>迅雷笔试题</category></item><item><title>阿里巴巴校招面经2014年软件研发面经</title><link>http://www.yanyulin.info/pages/2014/03/ali_4.html</link><description>&lt;hr /&gt;
 &lt;p&gt;最近招聘好多，发个面试经历刻不容缓&lt;/p&gt;
 &lt;p&gt;闲话我会写少一点，减少小伙伴们阅读的时间&lt;/p&gt;
 &lt;p&gt;先祝小伙伴们旗开得胜&lt;/p&gt;
@@ -914,7 +792,7 @@ D、 B: :func1( ) 不是虚函数，而A: :func2( ) 是虚函数    &lt;/p&gt;
 &lt;p&gt;”//大概这么多，可能我忘记了。&lt;/p&gt;
 &lt;p&gt;说一周内有消息。&lt;/p&gt;
 &lt;p&gt;点头感谢，溜人。&lt;/p&gt;
-&lt;p&gt;感谢读完，小伙伴们加油&lt;/p&gt;</summary><category term="阿里面经"></category></entry><entry><title>CVTE校园招聘面经2014年软件研发面经</title><link href="http://www.yanyulin.info/pages/2014/03/cvte_2014_1.html" rel="alternate"></link><updated>2014-03-10T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-10:pages/2014/03/cvte_2014_1.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;感谢读完，小伙伴们加油&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Mon, 10 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-03-10:pages/2014/03/ali_4.html</guid><category>阿里面经</category></item><item><title>CVTE校园招聘面经2014年软件研发面经</title><link>http://www.yanyulin.info/pages/2014/03/cvte_2014_1.html</link><description>&lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;简介&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;CVTE&lt;/code&gt;集团成立于2003年，总部位于广州科学城，建筑面积2万平方米，旗下设有多家独立的子公司，在香港设有全球服务中心，在国内设有26个营销服务中心和近1000个售后服务网点。CVTE目前致力于多类相关产品的研发、销售和内容服务，包括液晶电视主板设计、电源设计、移动互联、智能机顶盒、商用显示、工业设计、嵌入式游戏、医疗和教育等产业方向&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;面试&lt;/strong&gt;&lt;/p&gt;
@@ -930,7 +808,7 @@ D、 B: :func1( ) 不是虚函数，而A: :func2( ) 是虚函数    &lt;/p&gt;
 &lt;p&gt;2、而且当时同组的8,9个人里面就我一个没有装正装（其实搞技术去其他公司的一般不用的）&lt;/p&gt;
 &lt;p&gt;3、他们说我说话太小声了，表达得也不好&lt;/p&gt;
 &lt;p&gt;4、别人在讲的时候，她们会留意其他人在有没有在听（难怪有的人好像很有经验，一坐下来就拿着纸和笔）。忙了几天就这样被鄙视了，感觉很压抑。&lt;/p&gt;
-&lt;/blockquote&gt;</summary><category term="CVTE面经"></category></entry><entry><title>创新工场校园招聘面经面试经验2014年研发类</title><link href="http://www.yanyulin.info/pages/2014/03/cxgc_2014_1.html" rel="alternate"></link><updated>2014-03-10T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-10:pages/2014/03/cxgc_2014_1.html</id><summary type="html">&lt;hr /&gt;
+&lt;/blockquote&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Mon, 10 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-03-10:pages/2014/03/cvte_2014_1.html</guid><category>CVTE面经</category></item><item><title>创新工场校园招聘面经面试经验2014年研发类</title><link>http://www.yanyulin.info/pages/2014/03/cxgc_2014_1.html</link><description>&lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;以下记录的是我的创新工场一面经历&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;一面时主要问的是算法，问了我两个算法，如下所示：&lt;/p&gt;
 &lt;blockquote&gt;
@@ -1004,7 +882,7 @@ D、 B: :func1( ) 不是虚函数，而A: :func2( ) 是虚函数    &lt;/p&gt;
 &lt;p&gt;2、手机上玩的连连看，用什么算法可以找到两个相同的字符。（&lt;code&gt;BFS&lt;/code&gt;算法）&lt;/p&gt;
 &lt;p&gt;3、一群大雁在空中假设一字排开，如果每个大雁之间的前后距离不超过n，切任意两个大雁之间前后的距离只能是1-n的整数，同时不允许大雁之间出现交叉情况，即每个大雁只能向前方飞行，设计算法，打印出m只大雁之间在空中飞行可能出现的队形 &lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;大家可以参考&lt;/p&gt;</summary><category term="创新工场面经"></category></entry><entry><title>创新工场校园招聘面经面试经验2014年武汉研发类</title><link href="http://www.yanyulin.info/pages/2014/03/cxgc_2014_2.html" rel="alternate"></link><updated>2014-03-10T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-10:pages/2014/03/cxgc_2014_2.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;大家可以参考&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Mon, 10 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-03-10:pages/2014/03/cxgc_2014_1.html</guid><category>创新工场面经</category></item><item><title>创新工场校园招聘面经面试经验2014年武汉研发类</title><link>http://www.yanyulin.info/pages/2014/03/cxgc_2014_2.html</link><description>&lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;本人没进面试，下面是身边同学的面试题目&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;1、如何优化快速排序&lt;/p&gt;
 &lt;blockquote&gt;
@@ -1143,7 +1021,7 @@ int main()
 &lt;p&gt;4、虚函数表放在什么地方？&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;根据网上查资料，得出结论是虚函数表在Linux/Unix中存放在可执行文件的只读数据段中（rodata），在微软的编译器中，虚函数表存放在常量段中&lt;/p&gt;
-&lt;/blockquote&gt;</summary><category term="创新工场面经"></category></entry><entry><title>华为校园招聘面试经验2014年软件研发武汉区</title><link href="http://www.yanyulin.info/pages/2014/03/huawei_2014_B.html" rel="alternate"></link><updated>2014-03-10T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-10:pages/2014/03/huawei_2014_B.html</id><summary type="html">&lt;hr /&gt;
+&lt;/blockquote&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Mon, 10 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-03-10:pages/2014/03/cxgc_2014_2.html</guid><category>创新工场面经</category></item><item><title>华为校园招聘面试经验2014年软件研发武汉区</title><link>http://www.yanyulin.info/pages/2014/03/huawei_2014_B.html</link><description>&lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;华为，我们不仅仅是世界500强&lt;/strong&gt;，这是今年华为校招时的口号~~~&lt;/p&gt;
 &lt;p&gt;华为要想进行面试，面试之前必须要过机试，机试有三道题，只要做对一道，就有机会进入面试，但是推荐大家还是全做完，也不是很难，而且要尽快做完，因为成绩的取得要依赖于做题的时间，答对的题数，提交的次数...&lt;/p&gt;
 &lt;p&gt;我应聘的是&lt;code&gt;研究工程师&lt;/code&gt;，面试问的全是项目&lt;/p&gt;
@@ -1156,7 +1034,7 @@ int main()
 &lt;p&gt;基础类题目：&lt;/p&gt;
 &lt;p&gt;如TCP协议的三次握手，四次分手等&lt;/p&gt;
 &lt;p&gt;再有，就是华为一直强调的就是能吃苦，因此面试结束之后，一定会问你，你能吃苦嘛&lt;/p&gt;
-&lt;p&gt;答案我想只要你不是傻子，基本上都会说，肯定能，还会搞两个例子出来说明一下，自已能吃苦~~~&lt;/p&gt;</summary><category term="华为面经"></category></entry><entry><title>美团网校园招聘面经2014年软件研发</title><link href="http://www.yanyulin.info/pages/2014/03/meituan_2014_2.html" rel="alternate"></link><updated>2014-03-10T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-10:pages/2014/03/meituan_2014_2.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;答案我想只要你不是傻子，基本上都会说，肯定能，还会搞两个例子出来说明一下，自已能吃苦~~~&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Mon, 10 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-03-10:pages/2014/03/huawei_2014_B.html</guid><category>华为面经</category></item><item><title>美团网校园招聘面经2014年软件研发</title><link>http://www.yanyulin.info/pages/2014/03/meituan_2014_2.html</link><description>&lt;hr /&gt;
 &lt;p&gt;从半年前开始找工作，一路被鄙视到现在。以至于面了一些公司也不敢发帖写面经了&lt;/p&gt;
 &lt;p&gt;作为一个没有项目经验的渣渣，一开始问啥啥都不会，&lt;/p&gt;
 &lt;p&gt;回忆一下，半年前找实习的时候，我第一次笔试和面试都给了&lt;code&gt;CVTE&lt;/code&gt;，当时因为选错方向就跪了。腾讯实习的时候也是选错方向，加上基础差，没经验也跪了。也不怕死的投了微软，做了一份全英的试题。还有UC的笔试之类的，最后都没过。然后我就决定暑假恶补基础，暑假回家之后由于一些原因决定卖队友大四不参加比赛了，不过那时候没怎么练也打不过师弟师妹们了，还不如把机会让给他们去练练&lt;/p&gt;
@@ -1179,7 +1057,7 @@ int main()
 &lt;p&gt;问：CPU的调度算法有哪些？&lt;/p&gt;
 &lt;p&gt;答：……（我只知道进程的）&lt;/p&gt;
 &lt;p&gt;之后问了一些linux的操作命令，例如：软链接和硬链接是什么？&lt;/p&gt;
-&lt;p&gt;二面就结束了。之后没有接到三面。&lt;/p&gt;</summary><category term="美团面经"></category></entry><entry><title>美团网校招笔试题2014年研发东北</title><link href="http://www.yanyulin.info/pages/2014/03/meituan_2014_B.html" rel="alternate"></link><updated>2014-03-10T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-10:pages/2014/03/meituan_2014_B.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;二面就结束了。之后没有接到三面。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Mon, 10 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-03-10:pages/2014/03/meituan_2014_2.html</guid><category>美团面经</category></item><item><title>美团网校招笔试题2014年研发东北</title><link>http://www.yanyulin.info/pages/2014/03/meituan_2014_B.html</link><description>&lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;如有错误，或更加精简的方法，请留言，我会更正，以方便更多的人&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;1、一堆硬币，一个机器人，如果是反的就翻正，如果是正的就抛掷一次，无穷多次后，求正反的比例&lt;/p&gt;
 &lt;p&gt;解析：假设某个阶段正面硬币的比例为p，则反面的比例为1-p，下一次翻转后，p的部分分为p/2的正面、p/2的反面，而1-p的反面部分全部变为正面。趋于平衡时，前后两次正反的比例应相等，即：p/(1-p)=(p/2+(1-p))/(p/2)，得到p=2/3。&lt;/p&gt;
@@ -1384,7 +1262,7 @@ int main()
 
 &lt;p&gt;6、一个m*n的矩阵，从左到右从上到下都是递增的，给一个数elem，求是否在矩阵中，给出思路和代 码.&lt;/p&gt;
 &lt;p&gt;解: 思路:从矩阵的右上角开始判断即可,每次可以消除一行或一列,详见&lt;a href="http://www.yanyulin.info/category/jing-pin-shu-ji.html" target="_blank"&gt;精品书箱&lt;/a&gt;剑指offer一书.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;各位如果有更好的答案，请留言评价，方便更多的人&lt;/strong&gt;&lt;/p&gt;</summary><category term="美团网笔试题"></category></entry><entry><title>湖南麒麟校园招聘面经2014年软研面经</title><link href="http://www.yanyulin.info/pages/2014/03/qilin_2014_1.html" rel="alternate"></link><updated>2014-03-10T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-10:pages/2014/03/qilin_2014_1.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;各位如果有更好的答案，请留言评价，方便更多的人&lt;/strong&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Mon, 10 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-03-10:pages/2014/03/meituan_2014_B.html</guid><category>美团网笔试题</category></item><item><title>湖南麒麟校园招聘面经2014年软研面经</title><link>http://www.yanyulin.info/pages/2014/03/qilin_2014_1.html</link><description>&lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;湖南麒麟&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;湖南麒麟信息工程技术有限公司&lt;/code&gt;，暨操作系统湖南省工程研究中心，2011年正式升级为国家地方联合工程研究中心，是由湖南省发改委批复的高科技实体。公司以国防科技大学计算机学院为依托，吸收了 国内的优秀技术资源和资本，致力于基础软件的研究与发展。公司总部座落于长沙，设有研发、测试、生产等职能部门，并在北京设立了营销和技术服务中心。公司 坚持“科技成果产业化、运行机制企业化、发展方向市场化”的发展思路；倡导创新文化，鼓励员工积极参与技术创新；重视企业制度建设，形成了以人为本的现代 化管理制度...&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;评价&lt;/strong&gt;&lt;/p&gt;
@@ -1402,7 +1280,7 @@ int main()
 &lt;p&gt;7、对linux内核的了解程度？&lt;/p&gt;
 &lt;p&gt;8、函数指针用在什么情况下？为什么不直接使用函数名而去使用函数指针？&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;湖南麒麟待遇：&lt;code&gt;5.5K*16&lt;/code&gt; 硕士&lt;/p&gt;</summary><category term="其他面经"></category></entry><entry><title>去哪儿网校园招聘笔试题2014年产品经理试题</title><link href="http://www.yanyulin.info/pages/2014/03/qunar_2014_C.html" rel="alternate"></link><updated>2014-03-10T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-10:pages/2014/03/qunar_2014_C.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;湖南麒麟待遇：&lt;code&gt;5.5K*16&lt;/code&gt; 硕士&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Mon, 10 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-03-10:pages/2014/03/qilin_2014_1.html</guid><category>其他面经</category></item><item><title>去哪儿网校园招聘笔试题2014年产品经理试题</title><link>http://www.yanyulin.info/pages/2014/03/qunar_2014_C.html</link><description>&lt;hr /&gt;
 &lt;p&gt;1、你不仅要以一个普通网民的身份，而且要作为一个旁观者、思考者的身份来回答以下问题&lt;/p&gt;
 &lt;p&gt;我们重点考察的是你对产品策划的敏感程度以及是否能够站在用户易用性的角度来考虑问题，同时我们也会考察你的分析问题以及解决问题的能力，如用以支撑观点的论证分析和逻辑思路，此外你的观点不一定要正确，但请条理清晰，逻辑严密的给出理由，也请成体系的把握核心要点&lt;/p&gt;
 &lt;p&gt;1、很多人会选择假期出游，但是选择出游目的地时又会犯愁，如果你设计一个产品，解决这样的需求，你会怎么做，请说明理由。&lt;/p&gt;
@@ -1414,7 +1292,7 @@ int main()
 &lt;p&gt;2）如何去搭讪又不被反感?之前要准备些什么?为什么?&lt;/p&gt;
 &lt;p&gt;3)如果白富美/高富帅有男/女朋友，请你为你的死党或者闺蜜设计策略，找到突破口，最终得手。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;欢迎大家将答案粘贴在后面的评论框里，我会选出最好的答案作为本题的标准答案，以方便更多的师弟师妹们&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;到此为止&lt;/p&gt;</summary><category term="去哪网笔试题"></category></entry><entry><title>腾讯校园招聘笔试题目2012年软件研发类</title><link href="http://www.yanyulin.info/pages/2014/03/tencent_2012_A.html" rel="alternate"></link><updated>2014-03-10T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-10:pages/2014/03/tencent_2012_A.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;到此为止&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Mon, 10 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-03-10:pages/2014/03/qunar_2014_C.html</guid><category>去哪网笔试题</category></item><item><title>腾讯校园招聘笔试题目2012年软件研发类</title><link>http://www.yanyulin.info/pages/2014/03/tencent_2012_A.html</link><description>&lt;hr /&gt;
 &lt;p&gt;1、请定义一个宏，比较两个数a、b 的大小，不能使用大于、小于、if 语句&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;#define max(a,b) (((a-b)&amp;amp;(1&amp;lt;&amp;lt;31))?(b):(a))&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
@@ -1560,7 +1438,7 @@ int main()
     &lt;span class="na"&gt;cout&lt;/span&gt;&lt;span class="err"&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class="na"&gt;endl&lt;/span&gt;&lt;span class="err"&gt;;&lt;/span&gt;
     &lt;span class="na"&gt;return&lt;/span&gt; &lt;span class="na"&gt;0&lt;/span&gt;&lt;span class="err"&gt;;&lt;/span&gt;
 &lt;span class="err"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</summary><category term="腾讯笔试题"></category></entry><entry><title>腾讯校园招聘面经2014年软件研发面经</title><link href="http://www.yanyulin.info/pages/2014/03/tencent_2014_1.html" rel="alternate"></link><updated>2014-03-10T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-10:pages/2014/03/tencent_2014_1.html</id><summary type="html">&lt;hr /&gt;
+&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Mon, 10 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-03-10:pages/2014/03/tencent_2012_A.html</guid><category>腾讯笔试题</category></item><item><title>腾讯校园招聘面经2014年软件研发面经</title><link>http://www.yanyulin.info/pages/2014/03/tencent_2014_1.html</link><description>&lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;腾讯校招，之前有内推过广研，不过失败了，不知道是否有不良记录&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;笔试题目大部分人应该已经都做过，网上也有，就不说了&lt;/p&gt;
 &lt;p&gt;一面的流程大概是：&lt;/p&gt;
@@ -1610,7 +1488,7 @@ int main()
 &lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2013/12/prgbeautiful.html" target="_blank"&gt;
 编程之美—微软技术面试心得
 &lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;</summary><category term="腾讯面经"></category></entry><entry><title>创新工场校园招聘笔试题2013年软件研发</title><link href="http://www.yanyulin.info/pages/2014/03/cxgc_2013_B.html" rel="alternate"></link><updated>2014-03-09T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-09:pages/2014/03/cxgc_2013_B.html</id><summary type="html">&lt;hr /&gt;
+&lt;/blockquote&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Mon, 10 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-03-10:pages/2014/03/tencent_2014_1.html</guid><category>腾讯面经</category></item><item><title>创新工场校园招聘笔试题2013年软件研发</title><link>http://www.yanyulin.info/pages/2014/03/cxgc_2013_B.html</link><description>&lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;如有错误，或更加精简的方法，请留言，我会更正，以方便更多的人&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;时间：2012年9月27日 地点：鼎好大厦10层&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;考试时长：1小时&lt;/strong&gt;&lt;/p&gt;
@@ -1911,7 +1789,7 @@ void CreateMap()
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;&lt;strong&gt;各位如果有更好的答案，请留言评价，方便更多的人&lt;/strong&gt;&lt;/p&gt;</summary><category term="创新工场笔试题"></category></entry><entry><title>去哪儿网校园招聘笔试题2014年成都软研|软测|前端</title><link href="http://www.yanyulin.info/pages/2014/03/qunar_2014_B.html" rel="alternate"></link><updated>2014-03-09T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-09:pages/2014/03/qunar_2014_B.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;各位如果有更好的答案，请留言评价，方便更多的人&lt;/strong&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Sun, 09 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-03-09:pages/2014/03/cxgc_2013_B.html</guid><category>创新工场笔试题</category></item><item><title>去哪儿网校园招聘笔试题2014年成都软研|软测|前端</title><link>http://www.yanyulin.info/pages/2014/03/qunar_2014_B.html</link><description>&lt;hr /&gt;
 &lt;p&gt;一、编程题、开发岗三道都必做，前端岗和测试岗前两道必做&lt;/p&gt;
 &lt;p&gt;1、&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nx"&gt;implement&lt;/span&gt; &lt;span class="nx"&gt;a&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="nx"&gt;of&lt;/span&gt; &lt;span class="nb"&gt;String&lt;/span&gt; &lt;span class="nx"&gt;randomAlphabetic&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kr"&gt;int&lt;/span&gt; &lt;span class="nx"&gt;count&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="err"&gt;，&lt;/span&gt;
@@ -1932,7 +1810,7 @@ void CreateMap()
 
 &lt;p&gt;3、有一万个北京单身男女向你提交了基本资料，包括：姓名、性别、年龄、星座，写一段程序尝试找出他们最匹配的一对&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;欢迎大家将答案粘贴在后面的评论框里，我会选出最好的答案作为本题的标准答案，以方便更多的师弟师妹们&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;到此为止&lt;/p&gt;</summary><category term="去哪网笔试题"></category></entry><entry><title>保护Ripple币以及万特币的几点安全措施</title><link href="http://www.yanyulin.info/pages/2014/03/ripple_safe.html" rel="alternate"></link><updated>2014-03-09T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-09:pages/2014/03/ripple_safe.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;到此为止&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Sun, 09 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-03-09:pages/2014/03/qunar_2014_B.html</guid><category>去哪网笔试题</category></item><item><title>保护Ripple币以及万特币的几点安全措施</title><link>http://www.yanyulin.info/pages/2014/03/ripple_safe.html</link><description>&lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;如何保护ripple钱包，如何防止钱包被盗，本博文将向大家介绍几种方法&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;引言&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;万特币是基于&lt;code&gt;Ripple币&lt;/code&gt;的一种货币，具体简介，大家可以参考&lt;/p&gt;
@@ -1959,7 +1837,7 @@ ripple钱包注册/更改/免费激活
 &lt;p&gt;8、注意注册时，就尽量采用复杂的别人难以破解的账户和密码进行注册。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;备注&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;本博客会不定期举行RIPPLE币赠送以及万特币赠送活动，频率大概是两周一次，大家可以点击右侧的订阅按钮，订阅即可，更新会通知大家&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;到此为止&lt;/p&gt;</summary><category term="瑞波币"></category></entry><entry><title>[赠送]免费领取赠送获取ripple币啦</title><link href="http://www.yanyulin.info/pages/2014/03/xrpfree.html" rel="alternate"></link><updated>2014-03-09T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-09:pages/2014/03/xrpfree.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;到此为止&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Sun, 09 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-03-09:pages/2014/03/ripple_safe.html</guid><category>瑞波币</category></item><item><title>[赠送]免费领取赠送获取ripple币啦</title><link>http://www.yanyulin.info/pages/2014/03/xrpfree.html</link><description>&lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;备注&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;&lt;a href="http://www.yanyulin.info" target="_blank"&gt;本博客&lt;/a&gt;会不定期举行RIPPLE币赠送以及万特币赠送活动，频率大概是两周一次，大家可以点击右侧的订阅按钮，订阅即可，更新会通知大家&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;第一轮的赠送大家热情太高了，实在对不住了，都说了已经截至了，还有不间断的留言，为了满足大家的热情，&lt;a href="http://www.yanyulin.info" target="_blank"&gt;烟雨林博客&lt;/a&gt;决定不定期举行赠送，以下是上次赠送时的信息，当然截至日期之后，均未发，对不住后来的哥们们啦，为了满足大家的热情，将继续赠送...&lt;/p&gt;
@@ -2005,7 +1883,7 @@ ripple钱包注册/更改/免费激活
 &lt;p&gt;&lt;strong&gt;2、对于不是以社交帐号登录的用户，只赠送&lt;code&gt;0.1-0.2XRP&lt;/code&gt;币，高贵的万币币不赠~~~&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;3、将本文转载出去，转载文要求附上&lt;code&gt;文章出处链接&lt;/code&gt;，将视&lt;/strong&gt;转载论坛或者...&lt;strong&gt;的质量，将赠送至少&lt;code&gt;0.6xrp币&lt;/code&gt;加100WTC（等于4XRP币），留言形式为已信任WTC+Ripple钱包地址+转载地址&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;4、对本文进行评价并转发到微博者，将视微博粉丝数至少获赠0.5XRP币加80WTC（等于3XRP币），粉毕数45个以下的，赠送数量将采用第一条或者第二条~~~&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;到此为止&lt;/p&gt;</summary><category term="瑞波币"></category></entry><entry><title>大众点评校园招聘面经2014年软件面经</title><link href="http://www.yanyulin.info/pages/2014/03/dianping_2014_1.html" rel="alternate"></link><updated>2014-03-08T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-08:pages/2014/03/dianping_2014_1.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;到此为止&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Sun, 09 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-03-09:pages/2014/03/xrpfree.html</guid><category>瑞波币</category></item><item><title>大众点评校园招聘面经2014年软件面经</title><link>http://www.yanyulin.info/pages/2014/03/dianping_2014_1.html</link><description>&lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;大众点评网简介&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;大众点评网&lt;/strong&gt;于2003年4月由&lt;code&gt;张涛&lt;/code&gt;成立于上海，是中国领先的本地生活信息及交易平台，同时也是全球最早建立的独立第三方消费点评网站，主要为用户提供各种生活信息服务，时至今日分支机构遍布中国各大主要城市&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;重点，面试感觉&lt;/strong&gt;&lt;/p&gt;
@@ -2022,7 +1900,7 @@ ripple钱包注册/更改/免费激活
 &lt;p&gt;5、sleep与wait的区别&lt;/p&gt;
 &lt;p&gt;6、object类你了解么，有哪些方法&lt;/p&gt;
 &lt;p&gt;7、java里的重载与重写之间的区别&lt;/p&gt;
-&lt;/blockquote&gt;</summary><category term="大众点评面经"></category></entry><entry><title>校园招聘华为上机试题2014年武汉地区</title><link href="http://www.yanyulin.info/pages/2014/03/huawei_2014_3.html" rel="alternate"></link><updated>2014-03-08T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-08:pages/2014/03/huawei_2014_3.html</id><summary type="html">&lt;hr /&gt;
+&lt;/blockquote&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Sat, 08 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-03-08:pages/2014/03/dianping_2014_1.html</guid><category>大众点评面经</category></item><item><title>校园招聘华为上机试题2014年武汉地区</title><link>http://www.yanyulin.info/pages/2014/03/huawei_2014_3.html</link><description>&lt;hr /&gt;
 &lt;p&gt;1、&lt;a href="http://www.yanyulin.info" target="_blank"&gt;手机电池&lt;/a&gt;余量的问题，描述: 自从有了智能手机，时刻都要关心手机的电量。你的任务很简单，用程序打印符号来表示当前手机的电量，用10行和10列来表示电池的电量，同时在外围加上边框，每一行表示10%的电量，假设还有60%的电量，则显示如下：&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="o"&gt;+----------+&lt;/span&gt;
 
@@ -2122,7 +2000,7 @@ ripple钱包注册/更改/免费激活
 
 &lt;p&gt;答案提示:  &lt;/p&gt;
 &lt;p&gt;输出最小糖果编号的意思，就是从左至右，从上到下对糖果进行遍历，找到第一个与其他交换后能消除的糖果即可&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;欢迎大家将答案粘贴在后面的评论框里，我会选出最好的答案作为本题的标准答案，以方便更多的师弟师妹们&lt;/strong&gt;&lt;/p&gt;</summary><category term="华为笔试题"></category></entry><entry><title>华为校园招聘面经2014年软件研发</title><link href="http://www.yanyulin.info/pages/2014/03/huawei_2014_A.html" rel="alternate"></link><updated>2014-03-08T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-08:pages/2014/03/huawei_2014_A.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;欢迎大家将答案粘贴在后面的评论框里，我会选出最好的答案作为本题的标准答案，以方便更多的师弟师妹们&lt;/strong&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Sat, 08 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-03-08:pages/2014/03/huawei_2014_3.html</guid><category>华为笔试题</category></item><item><title>华为校园招聘面经2014年软件研发</title><link>http://www.yanyulin.info/pages/2014/03/huawei_2014_A.html</link><description>&lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;华为&lt;/strong&gt;现在已经被黑的很严重了，什么累死了好几个人，什么工资低，什么华为工作比较累，什么加班比较多，等等一系列，大华为已经被好多人黑的不能再黑了，我身边的好多研究生都是将华为作为垫底的，说实在没公司要时，再考虑去华为&lt;/p&gt;
 &lt;p&gt;华为今年的工资待遇是&lt;code&gt;11-13K/M&lt;/code&gt;,过年时会考虑发两个月的绩效，说实在的我个人感觉华为还是相当不错滴，都是年轻人嘛，少年时不奋斗，何时奋斗，少年是不艰苦，以后又有何出息，我个人还是非常好看华为滴...&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;华为，我们不仅仅是世界500强&lt;/strong&gt;，这是今年华为校招时的口号~~~&lt;/p&gt;
@@ -2138,7 +2016,7 @@ ripple钱包注册/更改/免费激活
 &lt;p&gt;1、boss，估计看是你适不适合当他小弟&lt;/p&gt;
 &lt;p&gt;2、主要问了一下未来得职业规划&lt;/p&gt;
 &lt;p&gt;3、你能不能吃苦，这个问题的答案是很显然的吧，如果你答错了，那绝对是2货行为&lt;/p&gt;
-&lt;/blockquote&gt;</summary><category term="华为面经"></category></entry><entry><title>美团网校园招聘2014年面经(软件研发)</title><link href="http://www.yanyulin.info/pages/2014/03/meituan_2014_1.html" rel="alternate"></link><updated>2014-03-08T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-08:pages/2014/03/meituan_2014_1.html</id><summary type="html">&lt;hr /&gt;
+&lt;/blockquote&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Sat, 08 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-03-08:pages/2014/03/huawei_2014_A.html</guid><category>华为面经</category></item><item><title>美团网校园招聘2014年面经(软件研发)</title><link>http://www.yanyulin.info/pages/2014/03/meituan_2014_1.html</link><description>&lt;hr /&gt;
 &lt;p&gt;每一年的&lt;code&gt;九月与十月&lt;/code&gt;都是个心酸的日子，也是个收获的季节，&lt;/p&gt;
 &lt;p&gt;在这个&lt;strong&gt;苦逼&lt;/strong&gt;的年代里，在这个为&lt;strong&gt;前途奔波&lt;/strong&gt;的季节，我也不例外，没有什么特殊的机遇，也是经历了一次又一次残酷的海选，海选固然残酷，可我们又能做什么，能做的就是一次又一次的迎头前近，失败了并不可怕，可怕的是失败了后却没有了站起来的勇气...&lt;/p&gt;
 &lt;p&gt;现把我经历简单的分享给各位学弟学妹们，希望，学弟学妹们找工作都能够如愿以偿&lt;/p&gt;
@@ -2168,7 +2046,7 @@ ripple钱包注册/更改/免费激活
 &lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2014/02/pbaodian.html" target="_blank"&gt;
 程序员面试宝典下载
 &lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;</summary><category term="美团面经"></category></entry><entry><title>去哪儿网校招笔试题2014年软研|测试|前端</title><link href="http://www.yanyulin.info/pages/2014/03/qunar_2014_A.html" rel="alternate"></link><updated>2014-03-08T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-08:pages/2014/03/qunar_2014_A.html</id><summary type="html">&lt;hr /&gt;
+&lt;/blockquote&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Sat, 08 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-03-08:pages/2014/03/meituan_2014_1.html</guid><category>美团面经</category></item><item><title>去哪儿网校招笔试题2014年软研|测试|前端</title><link>http://www.yanyulin.info/pages/2014/03/qunar_2014_A.html</link><description>&lt;hr /&gt;
 &lt;p&gt;一、编程题&lt;/p&gt;
 &lt;p&gt;1、写一个函数，转换相对路径为绝对路径，例如输入路径为&lt;code&gt;/home/abs/../temp/new/../&lt;/code&gt;，输出路径为：&lt;code&gt;/home/temp&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;2、题目的大概意思就是要求写出一个strcpy函数，用于字符串的复制&lt;/p&gt;
@@ -2236,7 +2114,7 @@ ripple钱包注册/更改/免费激活
 
 
 &lt;p&gt;&lt;strong&gt;欢迎大家将答案粘贴在后面的评论框里，我会选出最好的答案作为本题的标准答案，以方便更多的师弟师妹们&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;到此为止&lt;/p&gt;</summary><category term="去哪网笔试题"></category></entry><entry><title>人人网校招笔试题2014年软件研发类</title><link href="http://www.yanyulin.info/pages/2014/03/renren_2014_A.html" rel="alternate"></link><updated>2014-03-08T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-08:pages/2014/03/renren_2014_A.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;到此为止&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Sat, 08 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-03-08:pages/2014/03/qunar_2014_A.html</guid><category>去哪网笔试题</category></item><item><title>人人网校招笔试题2014年软件研发类</title><link>http://www.yanyulin.info/pages/2014/03/renren_2014_A.html</link><description>&lt;hr /&gt;
 &lt;p&gt;技术类笔试题&lt;/p&gt;
 &lt;p&gt;1、给定一个有序数组a,长度为len,和一个数X,判断A数组里面是否存在两个数，他们的和为X&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kt"&gt;bool&lt;/span&gt; &lt;span class="n"&gt;judge&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;len&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -2359,7 +2237,7 @@ bool judge(int *a, int len, int x)
 &lt;p&gt;&lt;code&gt;log(7000)=45.56&lt;/code&gt; 备注log底数为1.2&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;log(2000)=41.69&lt;/code&gt; 备注log底数为1.2&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;log(500)=34.09&lt;/code&gt; 备注log底数为1.2&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;log(100)=25.26&lt;/code&gt; 备注log底数为1.2&lt;/p&gt;</summary><category term="人人网笔试题"></category></entry><entry><title>威盛电子校园招聘面经2014年软件面经</title><link href="http://www.yanyulin.info/pages/2014/03/weconnect_2014_1.html" rel="alternate"></link><updated>2014-03-08T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-08:pages/2014/03/weconnect_2014_1.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;&lt;code&gt;log(100)=25.26&lt;/code&gt; 备注log底数为1.2&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Sat, 08 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-03-08:pages/2014/03/renren_2014_A.html</guid><category>人人网笔试题</category></item><item><title>威盛电子校园招聘面经2014年软件面经</title><link>http://www.yanyulin.info/pages/2014/03/weconnect_2014_1.html</link><description>&lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;威盛电子&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;威盛电子股份有限公司&lt;/strong&gt;是台湾地区的积体电路设计公司，主要生产主机板的晶片组、中央处理器(CPU)、以及记忆体。它是世界上最大的独立主机板晶片组设计公司。作为一个无晶圆厂半导体厂商（fabless），VIA主要在研究与发展他的晶片组，然后将晶圆制造外包给晶圆厂进行...&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;重点，面试感觉&lt;/strong&gt;&lt;/p&gt;
@@ -2387,7 +2265,7 @@ bool judge(int *a, int len, int x)
 &lt;blockquote&gt;
 &lt;p&gt;设计模式中最简单的一种，也是面试中最常让写的一种，因为代码量少，而且很容易考察人思维是否周到&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;/blockquote&gt;</summary><category term="其他面经"></category></entry><entry><title>阿里巴巴校招面经(2014年软件研发)</title><link href="http://www.yanyulin.info/pages/2014/03/ali_3.html" rel="alternate"></link><updated>2014-03-07T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-07:pages/2014/03/ali_3.html</id><summary type="html">&lt;hr /&gt;
+&lt;/blockquote&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Sat, 08 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-03-08:pages/2014/03/weconnect_2014_1.html</guid><category>其他面经</category></item><item><title>阿里巴巴校招面经(2014年软件研发)</title><link>http://www.yanyulin.info/pages/2014/03/ali_3.html</link><description>&lt;hr /&gt;
 &lt;p&gt;阿里巴巴的面试共分为三面，如果进不了第三面，基本上就是挂了的节奏&lt;/p&gt;
 &lt;p&gt;这是我的&lt;a href="http://www.yanyulin.info" title="烟雨林博客"&gt;处男面&lt;/a&gt;啊，第一次就这么没了&lt;/p&gt;
 &lt;p&gt;我面了总共有2面&lt;/p&gt;
@@ -2411,7 +2289,7 @@ bool judge(int *a, int len, int x)
 &lt;p&gt;搜索引擎中经常使用的一种算法，主要用于判断某个url是否已经拜访过，或者在处理垃圾邮件中也经常使用&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;感觉整体还可以，可能项目不太相关，没有给我&lt;code&gt;offer&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;到此为止&lt;/p&gt;</summary><category term="阿里面经"></category></entry><entry><title>百度校招面经2014年软研面经</title><link href="http://www.yanyulin.info/pages/2014/03/baidu_2.html" rel="alternate"></link><updated>2014-03-07T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-07:pages/2014/03/baidu_2.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;到此为止&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Fri, 07 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-03-07:pages/2014/03/ali_3.html</guid><category>阿里面经</category></item><item><title>百度校招面经2014年软研面经</title><link>http://www.yanyulin.info/pages/2014/03/baidu_2.html</link><description>&lt;hr /&gt;
 &lt;p&gt;百度面试共分为三面：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;二面技术&lt;/p&gt;
@@ -2445,7 +2323,7 @@ bool judge(int *a, int len, int x)
 &lt;/blockquote&gt;
 &lt;p&gt;三面&lt;/p&gt;
 &lt;p&gt;项目经理面，主要问了我下项目，然后问了下我TCP四次握手。算法不怎么问，主要考察你这个人，他想不想要。&lt;/p&gt;
-&lt;p&gt;到此为止&lt;/p&gt;</summary><category term="百度面经"></category></entry><entry><title>2014年百度校招笔试题(移动研发类)</title><link href="http://www.yanyulin.info/pages/2014/03/baidu_2014_B.html" rel="alternate"></link><updated>2014-03-07T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-07:pages/2014/03/baidu_2014_B.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;到此为止&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Fri, 07 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-03-07:pages/2014/03/baidu_2.html</guid><category>百度面经</category></item><item><title>2014年百度校招笔试题(移动研发类)</title><link>http://www.yanyulin.info/pages/2014/03/baidu_2014_B.html</link><description>&lt;hr /&gt;
 &lt;p&gt;如有错误，或更加精简的方法，请留言，我会更正，以方便更多的人，也欢迎大家将答案粘贴到评论框里，我会挑选出最好的答案，做为问题答案&lt;/p&gt;
 &lt;p&gt;百度2014年移动研发类这套试题和软研考的差不多，这套试题在清华考过，然后在沈阳也考过，不知道是什么情况，我参加了沈阳的，感觉重复好多&lt;/p&gt;
 &lt;p&gt;一、简答题&lt;/p&gt;
@@ -2472,7 +2350,7 @@ bool judge(int *a, int len, int x)
 &lt;p&gt;2、如何创建以及销毁对象？&lt;/p&gt;
 &lt;p&gt;3、如何实现类的继承？&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;本篇答案不全，希望有时间的同学补全&lt;/strong&gt;&lt;/p&gt;</summary><category term="百度笔试题"></category></entry><entry><title>Linux系统中并发与竞争机制分析</title><link href="http://www.yanyulin.info/pages/2014/03/concurrent.html" rel="alternate"></link><updated>2014-03-07T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-07:pages/2014/03/concurrent.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;本篇答案不全，希望有时间的同学补全&lt;/strong&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Fri, 07 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-03-07:pages/2014/03/baidu_2014_B.html</guid><category>百度笔试题</category></item><item><title>Linux系统中并发与竞争机制分析</title><link>http://www.yanyulin.info/pages/2014/03/concurrent.html</link><description>&lt;hr /&gt;
 &lt;p&gt;现代&lt;code&gt;Linux&lt;/code&gt;系统中有相非常多的并发源，导致的问题就是并发与竞争，多个并发源竞争同一个共享数据
 竞争的情况来自对资源的共享存取结果，当多个线程操作同一数据结构时，混乱就可能存在，在驱动编程中尽量避免共享资源，采用的方法通常是加锁机制。&lt;/p&gt;
 &lt;p&gt;共享资源的互斥&lt;/p&gt;
@@ -2546,7 +2424,7 @@ bool judge(int *a, int len, int x)
 
 
 &lt;p&gt;这些函数成功时返回非零，否则0，没有try版本来禁止中断&lt;/p&gt;
-&lt;p&gt;一个完整的加锁体制对于一个简单的整数值有点过分，对于这样的情况，内核提供了一个原子整数类型称为atomic_t定义在,&lt;code&gt;&amp;lt;asm/atomic.h&amp;gt;&lt;/code&gt;中&lt;/p&gt;</summary><category term="Linux汇总"></category></entry><entry><title>创新工场2013年校园招聘笔试题(研发)</title><link href="http://www.yanyulin.info/pages/2014/03/cxgc_2013_A.html" rel="alternate"></link><updated>2014-03-07T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-07:pages/2014/03/cxgc_2013_A.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;一个完整的加锁体制对于一个简单的整数值有点过分，对于这样的情况，内核提供了一个原子整数类型称为atomic_t定义在,&lt;code&gt;&amp;lt;asm/atomic.h&amp;gt;&lt;/code&gt;中&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Fri, 07 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-03-07:pages/2014/03/concurrent.html</guid><category>Linux汇总</category></item><item><title>创新工场2013年校园招聘笔试题(研发)</title><link>http://www.yanyulin.info/pages/2014/03/cxgc_2013_A.html</link><description>&lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;如有错误，或更加精简的方法，请留言，我会更正，以方便更多的人&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;第一部份选择题&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;1、假设系统有A类资源m个，现在有n个进程需要互斥使用A类资源，而每个进程对A类资源的最大需求为w，哪种情况一定不会发生死锁？&lt;/p&gt;
@@ -2640,7 +2518,7 @@ bool judge(int *a, int len, int x)
 &lt;p&gt;&lt;strong&gt;第三部分编程题&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;1、设计一个算法，编程实现去掉一个字符串里的重复字符，要求不能额外开辟内存空间&lt;/p&gt;
 &lt;p&gt;2、设X[1:n]是由不同实数组成的数组，如果i&lt;j且X[i]&gt;X[j],则称实数对(X[i],X[j])是该数组的一个反序，如，若X=[3,5,2,4],则该数组存在3个反序，（3，2）、（5，2）和(5,4),反序的个数可以用来衡量一个数组的无序程序，请设计一个算法并用代码实现，计算给定数组的反序个数，并分析算法的时间复杂度。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;各位如果有更好的答案，请留言评价，方便更多的人&lt;/strong&gt;&lt;/p&gt;</summary><category term="创新工场笔试题"></category></entry><entry><title>剑指Offer书籍PDF下载及简介</title><link href="http://www.yanyulin.info/pages/2014/03/offer.html" rel="alternate"></link><updated>2014-03-07T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-07:pages/2014/03/offer.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;各位如果有更好的答案，请留言评价，方便更多的人&lt;/strong&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Fri, 07 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-03-07:pages/2014/03/cxgc_2013_A.html</guid><category>创新工场笔试题</category></item><item><title>剑指Offer书籍PDF下载及简介</title><link>http://www.yanyulin.info/pages/2014/03/offer.html</link><description>&lt;hr /&gt;
 &lt;p&gt;剑指offer PDF格式下载:&lt;a href="http://pan.baidu.com/s/1hq0wGy4" target="_blank" title="《剑指offer》"&gt;点这里&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;下载密码为&lt;code&gt;t3ku&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;书评&lt;/strong&gt;&lt;/p&gt;
@@ -2835,7 +2713,7 @@ bool judge(int *a, int len, int x)
 &lt;blockquote&gt;
 &lt;p&gt;7.1 案例一：（面试题49）把字符串转换成整数 244&lt;/p&gt;
 &lt;p&gt;7.2 案例二：（面试题50）树中两个结点的最低公共祖先 252&lt;/p&gt;
-&lt;/blockquote&gt;</summary><category term="面试书"></category></entry><entry><title>一款自动发链接的软件设计思路</title><link href="http://www.yanyulin.info/pages/2014/03/zhihu_1.html" rel="alternate"></link><updated>2014-03-06T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-06:pages/2014/03/zhihu_1.html</id><summary type="html">&lt;hr /&gt;
+&lt;/blockquote&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Fri, 07 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-03-07:pages/2014/03/offer.html</guid><category>面试书</category></item><item><title>一款自动发链接的软件设计思路</title><link>http://www.yanyulin.info/pages/2014/03/zhihu_1.html</link><description>&lt;hr /&gt;
 &lt;p&gt;快毕业了，看了看那些年为了赚点钱自已干的蠢事，看了看自已电脑上的几款自已写的软件，虽然不是很完美，但删掉也实在可惜，于是起笔，记录在自已的&lt;a href="http://www.yanyulin.info"&gt;个人博客&lt;/a&gt;上，供&lt;code&gt;有缘人&lt;/code&gt;参阅，以及完善，今天分享的是一款在&lt;code&gt;知乎&lt;/code&gt;上群发链接的软件，&lt;code&gt;知乎&lt;/code&gt;是一个神圣的论坛，其实挺不错的，却被我这样的程序员糟蹋了，&lt;strong&gt;有罪呀&lt;/strong&gt;，现在不谈这些，只谈技术~~~&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;写此软件原由&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;最大的原因是学生时代&lt;strong&gt;缺钱&lt;/strong&gt;，需求就是能够实现在高权重的论坛上群发链接，进行网站的推广~~&lt;/p&gt;
@@ -2870,7 +2748,7 @@ bool judge(int *a, int len, int x)
 &lt;p&gt;到此为止，这就是整个软件设计过程中需要考虑的问题，&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2014/03/zhihu_2.html" target="_blank"&gt;
 下一篇将会介绍软件的实现
-&lt;/a&gt;&lt;/p&gt;</summary><category term="实用工具"></category></entry><entry><title>一款自动发链接软件的实现细节分析</title><link href="http://www.yanyulin.info/pages/2014/03/zhihu_2.html" rel="alternate"></link><updated>2014-03-06T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-06:pages/2014/03/zhihu_2.html</id><summary type="html">&lt;hr /&gt;
+&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Thu, 06 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-03-06:pages/2014/03/zhihu_1.html</guid><category>实用工具</category></item><item><title>一款自动发链接软件的实现细节分析</title><link>http://www.yanyulin.info/pages/2014/03/zhihu_2.html</link><description>&lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;源码下载&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://pan.baidu.com/s/1mgG38yk" target="_blank"&gt;
 自动发链接软件下载
@@ -3054,7 +2932,7 @@ bool judge(int *a, int len, int x)
 
 
 &lt;p&gt;7、还有一个问题就是发贴帐号肯定不止一个，如何多个帐号都对同一个帖子进行回复，而且回答的内容一样，必然会引起管理员的怀疑，以至封号，解决办法自已看源码吧，代码都差不多，自已把源码下下来，看看吧，不难~~&lt;/p&gt;
-&lt;p&gt;8、程序的运行截图，大家可以自已运行一下，如果有什么问题，可以在博文下面留言&lt;/p&gt;</summary><category term="实用工具"></category></entry><entry><title>github搭建网站优化(修复过多的302重定向请求)</title><link href="http://www.yanyulin.info/pages/2014/03/github_site.html" rel="alternate"></link><updated>2014-03-05T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-05:pages/2014/03/github_site.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;8、程序的运行截图，大家可以自已运行一下，如果有什么问题，可以在博文下面留言&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Thu, 06 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-03-06:pages/2014/03/zhihu_2.html</guid><category>实用工具</category></item><item><title>github搭建网站优化(修复过多的302重定向请求)</title><link>http://www.yanyulin.info/pages/2014/03/github_site.html</link><description>&lt;hr /&gt;
 &lt;p&gt;本博客采用&lt;strong&gt;pelican&lt;/strong&gt;搭建，服务器采用的是免费的&lt;strong&gt;github&lt;/strong&gt;,博客搭建完成后，需要在博客根目录下写上一个配置文件&lt;code&gt;CNAME&lt;/code&gt;,其中&lt;code&gt;CNAME&lt;/code&gt;写上自已的域名，然后在DNS域名解析器里写上三条A记录，等上24个小时，即可在全球任何地点访问自已的网站，本网站的DNS采用的是免费的&lt;a href="https://www.dnspod.cn" target="_blank"&gt;DNSpod&lt;/a&gt;进行解析，在DNSPod里的配置如下所示：&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;主机记录&lt;/span&gt;       &lt;span class="err"&gt;记录类型&lt;/span&gt;    &lt;span class="err"&gt;线路类型&lt;/span&gt;    &lt;span class="err"&gt;记录值&lt;/span&gt;        &lt;span class="n"&gt;MX&lt;/span&gt;&lt;span class="err"&gt;优先级&lt;/span&gt;    &lt;span class="n"&gt;TTL&lt;/span&gt;      
   &lt;span class="n"&gt;www&lt;/span&gt;         &lt;span class="n"&gt;A&lt;/span&gt;          &lt;span class="err"&gt;默认&lt;/span&gt;  &lt;span class="mf"&gt;207.97.227.245&lt;/span&gt;     &lt;span class="o"&gt;-&lt;/span&gt;         &lt;span class="mi"&gt;600&lt;/span&gt;
@@ -3103,7 +2981,7 @@ bool judge(int *a, int len, int x)
 &lt;/center&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;pelican搭建博客教程如下&lt;/strong&gt;：&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2013/11/pelican.html" target="_blank"&gt;
-http://www.yanyulin.info/pages/2013/11/pelican.html&lt;/a&gt;&lt;/p&gt;</summary><category term="工具使用"></category></entry><entry><title>华为校招机试2014年北京试题</title><link href="http://www.yanyulin.info/pages/2014/03/huawei_2014_2.html" rel="alternate"></link><updated>2014-03-05T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-05:pages/2014/03/huawei_2014_2.html</id><summary type="html">&lt;hr /&gt;
+http://www.yanyulin.info/pages/2013/11/pelican.html&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Wed, 05 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-03-05:pages/2014/03/github_site.html</guid><category>工具使用</category></item><item><title>华为校招机试2014年北京试题</title><link>http://www.yanyulin.info/pages/2014/03/huawei_2014_2.html</link><description>&lt;hr /&gt;
 &lt;p&gt;1、回文数的判断(60分)&lt;/p&gt;
 &lt;p&gt;给定一个数，然后将其倒过来相加，如果和不是回文串，那么将和再采取同样的操作,判断这个数在7步之内能不能变成回文数，如果能，则输出这个回文数，如果不能，则输出0，变化规则如下述例子所示&lt;/p&gt;
 &lt;p&gt;例如 68&lt;/p&gt;
@@ -3140,7 +3018,7 @@ http://www.yanyulin.info/pages/2013/11/pelican.html&lt;/a&gt;&lt;/p&gt;</summary
 &lt;p&gt;输出: 输出最具“夫妻相”的女士姓名&lt;/p&gt;
 &lt;p&gt;3、实现一个函数，给定一个N进制的数，将其转换成M进制的数，其中N与M均大于0,说白了就是进制数之间的转换&lt;/p&gt;
 &lt;p&gt;这套试题，我是在2014年北京北航参加，用了半个小时全做完，全对，交卷的~~&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;到此为止，大家写写自已的函数吧，写好后可以给我留言，我会挑出最好的，做为试题答案，为其他人提供方便&lt;/strong&gt;&lt;/p&gt;</summary><category term="华为笔试题"></category></entry><entry><title>git保存用户名与密码(避免用户名密码输入)</title><link href="http://www.yanyulin.info/pages/2014/03/git.html" rel="alternate"></link><updated>2014-03-04T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-04:pages/2014/03/git.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;到此为止，大家写写自已的函数吧，写好后可以给我留言，我会挑出最好的，做为试题答案，为其他人提供方便&lt;/strong&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Wed, 05 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-03-05:pages/2014/03/huawei_2014_2.html</guid><category>华为笔试题</category></item><item><title>git保存用户名与密码(避免用户名密码输入)</title><link>http://www.yanyulin.info/pages/2014/03/git.html</link><description>&lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;写在前面的话&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;由于本博客是托管于github之上，因此每次&lt;code&gt;git push -u origin master&lt;/code&gt;时都得输入用户名与密码，是非常烦人的，经过一番尝试，原来可以写一个配置文件避免输入用户名与密码，这样通过git上传文件到github上就非常方便了~~~&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;git&lt;/code&gt;工具是由linux之父开发的一款分布式代码管理工具，代码开源，功能强大，&lt;code&gt;git&lt;/code&gt;开发的一般流程是首先从服务器上&lt;code&gt;clone&lt;/code&gt;一份主干代码，相当于创建了分支，然后修改分支代码，最后将修改后的代码提交到服务器上，为了安全，每一提交都需要输入用户名与密码，肯定是很繁琐的，因此得想办法，避免每次提交时都需要输入&lt;strong&gt;用户名与密码&lt;/strong&gt;&lt;/p&gt;
@@ -3185,7 +3063,7 @@ http://www.yanyulin.info/pages/2013/11/pelican.html&lt;/a&gt;&lt;/p&gt;</summary
 &lt;p&gt;machine：表示要上传的服务器，上述代码中表示要上专到github.com中&lt;/p&gt;
 &lt;p&gt;login：填入登录用户名，例子中应该填入github帐户名&lt;/p&gt;
 &lt;p&gt;password：填入登录密码，例子中应该填入github帐户密码&lt;/p&gt;
-&lt;p&gt;如有问题，可以联系我，联系方式，看博客下方邮箱&lt;/p&gt;</summary><category term="工具使用"></category></entry><entry><title>pelican博客搭建设置分页和分页保存位置</title><link href="http://www.yanyulin.info/pages/2014/03/pelican_page.html" rel="alternate"></link><updated>2014-03-04T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-04:pages/2014/03/pelican_page.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;如有问题，可以联系我，联系方式，看博客下方邮箱&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Tue, 04 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-03-04:pages/2014/03/git.html</guid><category>工具使用</category></item><item><title>pelican博客搭建设置分页和分页保存位置</title><link>http://www.yanyulin.info/pages/2014/03/pelican_page.html</link><description>&lt;hr /&gt;
 &lt;p&gt;本篇&lt;strong&gt;博客&lt;/strong&gt;紧随前几篇博客而来&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2013/11/pelican.html" target="_blank" &gt;pelican搭建属于自已的博客&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2014/01/pelican_question.html" target="_blank" &gt;pelican创建博客常见问题汇总&lt;/a&gt;&lt;/p&gt;
@@ -3299,7 +3177,7 @@ http://www.yanyulin.info/pages/2013/11/pelican.html&lt;/a&gt;&lt;/p&gt;</summary
 &lt;p&gt;5、&lt;code&gt;articles_paginator.num_pages&lt;/code&gt;代表的是总共的分页数目&lt;/p&gt;
 &lt;p&gt;6、&lt;code&gt;{{ SITEURL }}&lt;/code&gt;代表的是网站域名，在配置文件中可以查到，此处就是&lt;a href="www.yanyulin.info"  target="_blank"&gt;http://www.yanyulin.info&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;7、&lt;code&gt;{{ page_name }}&lt;/code&gt;代表的是分页名，其中分页名还含有分页所在的目录，即假如分页pelican.html在page目录下的category目录中，则分页名实际上为&lt;strong&gt;category/pelican&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;如有问题，可以联系我，联系方式，看博客下方邮箱&lt;/strong&gt;&lt;/p&gt;</summary><category term="工具使用"></category></entry><entry><title>多说评论框如何|怎么样|实际测试</title><link href="http://www.yanyulin.info/pages/2014/03/duoshuo.html" rel="alternate"></link><updated>2014-03-03T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-03:pages/2014/03/duoshuo.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;如有问题，可以联系我，联系方式，看博客下方邮箱&lt;/strong&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Tue, 04 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-03-04:pages/2014/03/pelican_page.html</guid><category>工具使用</category></item><item><title>多说评论框如何|怎么样|实际测试</title><link>http://www.yanyulin.info/pages/2014/03/duoshuo.html</link><description>&lt;hr /&gt;
 &lt;p&gt;本文非&lt;code&gt;多说水客&lt;/code&gt;，博主也坚决抵制&lt;code&gt;水客&lt;/code&gt;，水客只有误导人的份，本博文以博主自已的博客实际使用心得来&lt;strong&gt;评价第三方评价系统多说&lt;/strong&gt;，目前国内比较出名的第三方社会化评论系统有友言、评论啦、多说，其中友言界面比较简洁，当然也非常优秀，起步较&lt;strong&gt;多说&lt;/strong&gt;要早，评论啦未使用过，不做评价，国外disqus不适合国内的国情，如不支持QQ、百度贴吧、新浪微博分享等&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;如何使用多说可以参考下文&lt;/strong&gt;&lt;/p&gt;
 &lt;blockquote&gt;
@@ -3379,7 +3257,7 @@ http://www.yanyulin.info/pages/2013/11/pelican.html&lt;/a&gt;&lt;/p&gt;</summary
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;从上面的聊天记录可以看出，多说评论技术人员服务还是挺到位的~~~&lt;/p&gt;</summary><category term="烟雨分享"></category></entry><entry><title>pelican创建博客如何设置导航条</title><link href="http://www.yanyulin.info/pages/2014/03/navigator.html" rel="alternate"></link><updated>2014-03-03T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-03:pages/2014/03/navigator.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;从上面的聊天记录可以看出，多说评论技术人员服务还是挺到位的~~~&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Mon, 03 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-03-03:pages/2014/03/duoshuo.html</guid><category>烟雨分享</category></item><item><title>pelican创建博客如何设置导航条</title><link>http://www.yanyulin.info/pages/2014/03/navigator.html</link><description>&lt;hr /&gt;
 &lt;p&gt;Pelican搭建博客中，如果比较懒，可以直接使用官方提供的主题，官方提供的主题均比较简单，做一些简单的博客还是可以的，但要想做到美观、大方似乎还得努力，今天分享一下，&lt;strong&gt;本博客&lt;/strong&gt;(当然也是采用pelican搭建的)在搭建过程中，如何使用pelican创建自定义的菜单，菜单的样式如下图所示：&lt;/p&gt;
 &lt;p&gt;&lt;center&gt;
 &lt;a href="http://www.yanyulin.info/pages/2014/03/navigator.html"&gt;
@@ -3466,7 +3344,7 @@ pelican创建博客常见问题汇总
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;如有问题，可以联系我，联系方式，看博客下方邮箱&lt;/p&gt;</summary><category term="工具使用"></category></entry><entry><title>博客添加第三方评论系统多说评论框</title><link href="http://www.yanyulin.info/pages/2014/03/comment.html" rel="alternate"></link><updated>2014-03-02T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-02:pages/2014/03/comment.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;如有问题，可以联系我，联系方式，看博客下方邮箱&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Mon, 03 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-03-03:pages/2014/03/navigator.html</guid><category>工具使用</category></item><item><title>博客添加第三方评论系统多说评论框</title><link>http://www.yanyulin.info/pages/2014/03/comment.html</link><description>&lt;hr /&gt;
 &lt;p&gt;&lt;code&gt;博客&lt;/code&gt;已经基本搭建完成，前前后后历时将近两周，采用的是开源工具&lt;code&gt;Pelican&lt;/code&gt;搭建，服务器采用的是强大的分布式代码托管库&lt;code&gt;Github&lt;/code&gt;,两者的教程可以参考下面的链接，本博客总共破费了&lt;code&gt;我3美元&lt;/code&gt;：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2013/11/pelican.html" target="_blank"&gt;
@@ -3545,7 +3423,7 @@ var duoshuoQuery = {short_name:&amp;quot;yanyulin&amp;quot;};
 &lt;img src="http://www.yanyulin.info/pics/tools/duoshuo2.jpg"  alt="烟雨林博客"/&gt;
 &lt;/a&gt;
 &lt;/center&gt;&lt;/p&gt;
-&lt;p&gt;如有问题，可以联系我，联系方式，看博客下方邮箱&lt;/p&gt;</summary><category term="工具使用"></category></entry><entry><title>【赠送】ripple币免费获取&amp;免费领取</title><link href="http://www.yanyulin.info/pages/2014/03/getxrp.html" rel="alternate"></link><updated>2014-03-02T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-02:pages/2014/03/getxrp.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;如有问题，可以联系我，联系方式，看博客下方邮箱&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Sun, 02 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-03-02:pages/2014/03/comment.html</guid><category>工具使用</category></item><item><title>【赠送】ripple币免费获取&amp;免费领取</title><link>http://www.yanyulin.info/pages/2014/03/getxrp.html</link><description>&lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;转载时请注明出处&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;赠送前说明&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;最近&lt;code&gt;ripple&lt;/code&gt;的表现实在是太差劲极了，不，是整个虚拟币的表现是&lt;strong&gt;实在糟糕透顶了&lt;/strong&gt;，估计这种情况还会持续下去，虚拟币究竟&lt;strong&gt;有没有价值&lt;/strong&gt;还是一个值得人深思的问题，虚拟币&lt;strong&gt;该不该去中心化&lt;/strong&gt;，随着&lt;strong&gt;门头沟&lt;/strong&gt;事件的爆发，&lt;strong&gt;Mt.Gox&lt;/strong&gt;因黑客盗取的破产，&lt;code&gt;744000比特币&lt;/code&gt;丢失，这么多资金已经足够&lt;strong&gt;摧毁&lt;/strong&gt;这家公司，日本和美国监管机构正在介入，后绪还不知道有什么新闻会曝光，也许&lt;strong&gt;一次致命性的新闻&lt;/strong&gt;会足以使虚拟币走向灭亡，当然ripple的价格也随着比特币的价格浮沉，下面是ripple价格图：&lt;/p&gt;
@@ -3586,7 +3464,7 @@ JED币免费获取30 ripple币
 &lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2014/01/freexrp.html" target="_blank"&gt;
 免费获取ripple币的方法汇总
-&lt;/a&gt;&lt;/p&gt;</summary><category term="瑞波币"></category></entry><entry><title>ripple钱包注册/更改/免费激活</title><link href="http://www.yanyulin.info/pages/2014/02/ripplereginster.html" rel="alternate"></link><updated>2014-02-24T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-02-24:pages/2014/02/ripplereginster.html</id><summary type="html">&lt;hr /&gt;
+&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Sun, 02 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-03-02:pages/2014/03/getxrp.html</guid><category>瑞波币</category></item><item><title>ripple钱包注册/更改/免费激活</title><link>http://www.yanyulin.info/pages/2014/02/ripplereginster.html</link><description>&lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;简介&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;Ripple&lt;/code&gt;是世界上第一个开放的支付网络，通过这个支付网络可以转账任意一种货币，包括美元、欧元、人民币、日元或者比特币，简便易行快捷，交易确认在几秒以内完成，交易费用几乎是零，没有所谓的跨行异地以及跨国支付费用&lt;/p&gt;
 &lt;p&gt;本博文向大家介绍&lt;/p&gt;
@@ -3660,7 +3538,7 @@ https://ripple.com/client/#/register 
 &lt;p&gt;进入钱包后，一切都回来了，之前的钱包里面的钱都在呢。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;需要提醒大家的是，尽管你新建立了用户名和密码，但是用你原来的用户名和密码也可以进入钱包。所以如果你感觉你的钱包已经不安全，请尽快注册新的钱包，将所有钱转移&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;如果觉的本博文对你有用，请捐赠ripple或者wtc(万特币)&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;ripple:r42DgYzKysWR3hkoVM4DhEWNH3v7ax24Ag&lt;/strong&gt;&lt;/p&gt;</summary><category term="瑞波币"></category></entry><entry><title>[赠送]WTC(万特币)获取30ripple和100WTC</title><link href="http://www.yanyulin.info/pages/2014/02/wtc.html" rel="alternate"></link><updated>2014-02-24T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-02-24:pages/2014/02/wtc.html</id><summary type="html">&lt;p&gt;&lt;strong&gt;简介&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;ripple:r42DgYzKysWR3hkoVM4DhEWNH3v7ax24Ag&lt;/strong&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Mon, 24 Feb 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-02-24:pages/2014/02/ripplereginster.html</guid><category>瑞波币</category></item><item><title>[赠送]WTC(万特币)获取30ripple和100WTC</title><link>http://www.yanyulin.info/pages/2014/02/wtc.html</link><description>&lt;p&gt;&lt;strong&gt;简介&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;在最知名、最悠久也最有青春朝气的新水木网站， 在多位远见卓识者多次的深情召唤中，在众多地青屌丝的热情拥抱和呵护下，万特币于2014年春节前夕应时而生！&lt;/p&gt;
 &lt;p&gt;1、万特币是具有中国特色的高知青年的集体的创造物。&lt;/p&gt;
 &lt;p&gt;2、万特币是第一个拥有最民主的发行和管理中心的虚拟币。&lt;/p&gt;
@@ -3716,7 +3594,7 @@ ripple钱包注册/更改/免费激活
 &lt;/center&gt;&lt;/p&gt;
 &lt;p&gt;如果觉的本博文对你有用，请捐赠ripple或者wtc(万特币)&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;ripple:r42DgYzKysWR3hkoVM4DhEWNH3v7ax24Ag&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;到此为止&lt;/p&gt;</summary><category term="瑞波币"></category></entry><entry><title>C++中类初始化列表的妙用</title><link href="http://www.yanyulin.info/pages/2014/02/classinitiallist.html" rel="alternate"></link><updated>2014-02-22T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-02-22:pages/2014/02/classinitiallist.html</id><summary type="html">&lt;p&gt;C++中类初始化列表的妙用&lt;/p&gt;
+&lt;p&gt;到此为止&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Mon, 24 Feb 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-02-24:pages/2014/02/wtc.html</guid><category>瑞波币</category></item><item><title>C++中类初始化列表的妙用</title><link>http://www.yanyulin.info/pages/2014/02/classinitiallist.html</link><description>&lt;p&gt;C++中类初始化列表的妙用&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;1：类的初始化列表是怎么提高效率的？&lt;/p&gt;
 &lt;p&gt;2：类的初始化列表是按照列表中出现的顺序来初始化的吗？&lt;/p&gt;
@@ -3822,7 +3700,7 @@ ripple钱包注册/更改/免费激活
 &lt;p&gt;2:当初始化一个const成员对象时(1、2两种情况可以想想为什么？原理是一样的，注意强调的是对象)&lt;/p&gt;
 &lt;p&gt;3:当调用一个基类的构造函数，而它拥有一组带参数的构造函数时&lt;/p&gt;
 &lt;p&gt;4:当类里面的成员对象有自已的构造函数时，且有参数时(3、4归为一类，为什么必须使用，原理也是一样的)&lt;/p&gt;
-&lt;/blockquote&gt;</summary><category term="C++学习"></category></entry><entry><title>[赠送]GKO币每天免费领取10ripple</title><link href="http://www.yanyulin.info/pages/2014/02/gko.html" rel="alternate"></link><updated>2014-02-22T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-02-22:pages/2014/02/gko.html</id><summary type="html">&lt;p&gt;&lt;strong&gt;简介&lt;/strong&gt;
+&lt;/blockquote&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Sat, 22 Feb 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-02-22:pages/2014/02/classinitiallist.html</guid><category>C++学习</category></item><item><title>[赠送]GKO币每天免费领取10ripple</title><link>http://www.yanyulin.info/pages/2014/02/gko.html</link><description>&lt;p&gt;&lt;strong&gt;简介&lt;/strong&gt;
 &lt;a href="http://www.yanyulin.info/pages/2014/02/gko.html" title="烟雨林"&gt;本文&lt;/a&gt;旨在向大家介绍&lt;code&gt;GKO&lt;/code&gt;币，GKO币（Gecko Coin中文名壁虎币）由&lt;code&gt;Daven&lt;/code&gt;创建，GKO币基于Ripple币，以下是Daven创建GKO币的原话翻译：&lt;/p&gt;
 &lt;p&gt;我认为ripple是一个有着巨大潜力的大平台。我想为ripple社区建立一些有趣的东西。所以我建立了这个网站，壁虎币是免费赠送给大家的，我想以此让新来者或者有经验的ripple玩家体验ripple的巨大乐趣。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;本博文的重点是向大家介绍如何获取GKO币，然后通过GKO币每天免费领取10个ripple币&lt;/strong&gt;&lt;/p&gt;
@@ -3888,7 +3766,7 @@ JED币免费获取30 ripple币
 &lt;img  alt="烟雨林博客" src="http://www.yanyulin.info/pics/invest/gko7.jpg"/&gt;
 &lt;/a&gt;
 &lt;/center&gt;&lt;/p&gt;
-&lt;p&gt;到此为止&lt;/p&gt;</summary><category term="瑞波币"></category></entry><entry><title>快速介绍Linux（Linux入门教程）</title><link href="http://www.yanyulin.info/pages/2014/02/linux1.html" rel="alternate"></link><updated>2014-02-22T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-02-22:pages/2014/02/linux1.html</id><summary type="html">&lt;p&gt;1：严格意义上，可将操作系统定义为一种软件，它控制计算机硬件资源，提供程序运行环境，我们称此种软件为内核，它相对较小，位于环境中心&lt;/p&gt;
+&lt;p&gt;到此为止&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Sat, 22 Feb 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-02-22:pages/2014/02/gko.html</guid><category>瑞波币</category></item><item><title>快速介绍Linux（Linux入门教程）</title><link>http://www.yanyulin.info/pages/2014/02/linux1.html</link><description>&lt;p&gt;1：严格意义上，可将操作系统定义为一种软件，它控制计算机硬件资源，提供程序运行环境，我们称此种软件为内核，它相对较小，位于环境中心&lt;/p&gt;
 &lt;p&gt;&lt;center&gt;
 &lt;a href="http://www.yanyulin.info/pages/2014/02/linux1.html"&gt;
 &lt;img src="http://www.yanyulin.info/pics/tech/linuxmen1.png" alt="烟雨林博客"/&gt;
@@ -3963,7 +3841,7 @@ JED币免费获取30 ripple币
 &lt;p&gt;注意：本程序的输出的文件未进行排序，而ls的输出一般是按照字母的顺序进行输出&lt;/p&gt;
 &lt;p&gt;Main函数使用了ISO C标准使用的风格,argc代表传给程序的参数个数，即&lt;code&gt;argv&lt;/code&gt;中的个数&lt;/p&gt;
 &lt;p&gt;按惯例当程序返回0时表示正常结束，返回其他值表求出错&lt;/p&gt;
-&lt;p&gt;每个进程都有一个工作目录，有时称其为当前工作目录，所有的相对路径都是从工作目录开始解释，进程可以用&lt;code&gt;chrdir&lt;/code&gt;更改其工作目录。&lt;/p&gt;</summary><category term="Linux汇总"></category></entry><entry><title>Linux里的输入输出（Linux快速入门）</title><link href="http://www.yanyulin.info/pages/2014/02/linux2.html" rel="alternate"></link><updated>2014-02-22T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-02-22:pages/2014/02/linux2.html</id><summary type="html">&lt;p&gt;阅读本博文之前可以参考以下文章&lt;/p&gt;
+&lt;p&gt;每个进程都有一个工作目录，有时称其为当前工作目录，所有的相对路径都是从工作目录开始解释，进程可以用&lt;code&gt;chrdir&lt;/code&gt;更改其工作目录。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Sat, 22 Feb 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-02-22:pages/2014/02/linux1.html</guid><category>Linux汇总</category></item><item><title>Linux里的输入输出（Linux快速入门）</title><link>http://www.yanyulin.info/pages/2014/02/linux2.html</link><description>&lt;p&gt;阅读本博文之前可以参考以下文章&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2014/02/linux1.html" target="_blank"&gt;
 快速介绍Linux（Linux入门教程）
 &lt;/a&gt;&lt;/p&gt;
@@ -4026,7 +3904,7 @@ JED币免费获取30 ripple币
 &lt;a href="http://www.yanyulin.info/pages/2014/02/linux2.html"&gt;
 &lt;img src="http://www.yanyulin.info/pics/tech/linuxio2.png" alt="烟雨林博客"/&gt;
 &lt;/a&gt;
-&lt;/center&gt;&lt;/p&gt;</summary><category term="Linux汇总"></category></entry><entry><title>JED币免费获取30 ripple币</title><link href="http://www.yanyulin.info/pages/2014/02/jed.html" rel="alternate"></link><updated>2014-02-17T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-02-17:pages/2014/02/jed.html</id><summary type="html">&lt;hr /&gt;
+&lt;/center&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Sat, 22 Feb 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-02-22:pages/2014/02/linux2.html</guid><category>Linux汇总</category></item><item><title>JED币免费获取30 ripple币</title><link>http://www.yanyulin.info/pages/2014/02/jed.html</link><description>&lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;简介&lt;/strong&gt;
 &lt;a href="http://www.yanyulin.info/pics/inverst/jed_1.jpg" title="烟雨林"&gt;本文&lt;/a&gt;旨在向大家介绍&lt;code&gt;JED&lt;/code&gt;币，JED币是为了纪念&lt;code&gt;Ripple&lt;/code&gt;公司的一个员工，由论坛用户&lt;code&gt;lucky331&lt;/code&gt;发行，用户只需要几步简单的操作，就可以获取9,999,999个JED币，然后再将这些JED币转为Ripple币后，用户即可以免费获得30个Ripple币，祝大家都能够获得&lt;/p&gt;
 &lt;p&gt;1、获得JED币前需要添加Ripple信任线，即信任该币的发行方，如下图所示，点击增加信任线&lt;/p&gt;
@@ -4048,7 +3926,7 @@ JED币免费获取30 ripple币
 免费获取ripple币的方法汇总&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2014/01/whyRipple.html" target="_blank"&gt;
 为什么大家都转向了Ripple&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;到此为止&lt;/p&gt;</summary><category term="瑞波币"></category></entry><entry><title>XRP Talk论坛注册教程</title><link href="http://www.yanyulin.info/pages/2014/02/xrptalk.html" rel="alternate"></link><updated>2014-02-17T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-02-17:pages/2014/02/xrptalk.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;到此为止&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Mon, 17 Feb 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-02-17:pages/2014/02/jed.html</guid><category>瑞波币</category></item><item><title>XRP Talk论坛注册教程</title><link>http://www.yanyulin.info/pages/2014/02/xrptalk.html</link><description>&lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;简介&lt;/strong&gt;
 玩&lt;code&gt;Ripple&lt;/code&gt;币的估计基本上都知道&lt;code&gt;XRP Talk&lt;/code&gt;论坛，在这个论坛上有各种各样的关于&lt;code&gt;Ripple&lt;/code&gt;的介绍，要想了解&lt;code&gt;Ripple&lt;/code&gt;的最新信息以及官方或者个人团队的各种赠送活动，那么此论坛是必须要了解的，并且必须要注册的，本篇博文就带领大家来注册一个&lt;code&gt;XRP Talk&lt;/code&gt;论坛的帐号，有了帐号后，才有机会在该论坛获得赠送。&lt;/p&gt;
 &lt;p&gt;1、&lt;code&gt;XRP Talk&lt;/code&gt;论坛的网址，在浏览器上输入以下网址，或者直接点击下面的链接&lt;/p&gt;
@@ -4070,7 +3948,7 @@ JED币免费获取30 ripple币
 &lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2014/02/xrptalk.html"&gt;
 &lt;img alt="烟雨林博客" src="http://www.yanyulin.info/pics/invest/xrptalk_4.jpg"/&gt;
 &lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;到此为止&lt;/p&gt;</summary><category term="瑞波币"></category></entry><entry><title>程序员面试宝典--欧立奇</title><link href="http://www.yanyulin.info/pages/2014/02/pbaodian.html" rel="alternate"></link><updated>2014-02-15T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-02-15:pages/2014/02/pbaodian.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;到此为止&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Mon, 17 Feb 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-02-17:pages/2014/02/xrptalk.html</guid><category>瑞波币</category></item><item><title>程序员面试宝典--欧立奇</title><link>http://www.yanyulin.info/pages/2014/02/pbaodian.html</link><description>&lt;hr /&gt;
 &lt;p&gt;程序员面试宝典 PDF格式下载:&lt;a href="http://pan.baidu.com/s/1pJvypIV" target="_blank" title="《程序员面试宝典》"&gt;点这里&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;程序员面试宝典本书涉及的内容&lt;code&gt;较多&lt;/code&gt;，书中的测重点在程序语言上，主要关注的是面试过程中公司问起的关于程序语言方面的题目，比较适合小型的&lt;code&gt;IT&lt;/code&gt;公司，同时书中第一篇也介绍了面试前的准备，面试的流程，面试的心态，最后也给出某些公司面试过程中爱考的智力题，但是对于应该名企，该书还少了点算法，总之还是不错的，可以应付找工作。&lt;/p&gt;
 &lt;p&gt;程序员面试宝典--欧立奇&lt;/p&gt;
@@ -4240,7 +4118,7 @@ JED币免费获取30 ripple币
 &lt;/blockquote&gt;
 &lt;p&gt;附录A 简历模板 339&lt;/p&gt;
 &lt;p&gt;附录B 面试经历总结 351&lt;/p&gt;
-&lt;/blockquote&gt;</summary><category term="面试书"></category></entry><entry><title>去哪儿网校招2014年面经</title><link href="http://www.yanyulin.info/pages/2014/01/qunar_1.html" rel="alternate"></link><updated>2014-01-20T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-01-20:pages/2014/01/qunar_1.html</id><summary type="html">&lt;p&gt;面试地点:&lt;strong&gt;沈阳&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Sat, 15 Feb 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-02-15:pages/2014/02/pbaodian.html</guid><category>面试书</category></item><item><title>去哪儿网校招2014年面经</title><link>http://www.yanyulin.info/pages/2014/01/qunar_1.html</link><description>&lt;p&gt;面试地点:&lt;strong&gt;沈阳&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;面试职位:&lt;strong&gt;软件研发工程师(北京)&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;面试结果:&lt;code&gt;失败&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;去哪儿&lt;/strong&gt;目前来说还是一个比较不错的公司，待遇还行，技术上不是很了解，今年校招待遇一般是&lt;code&gt;11-16k/m&lt;/code&gt;,每年发&lt;code&gt;13&lt;/code&gt;个月的基本工资，三个月的奖金，其中奖金的比例是7：2：1，即&lt;code&gt;10%&lt;/code&gt;的人可能拿不到那三个月的奖金，也就是说其他的人不但能拿到这三个月的奖金而且还可高会高于三个月&lt;/p&gt;
@@ -4256,7 +4134,7 @@ JED币免费获取30 ripple币
 &lt;p&gt;去哪网二面:&lt;/p&gt;
 &lt;p&gt;去哪网二面时由于一面给的等级比较低，二面时面的时间比较短，5分钟就让我出来了，哎，就问了下对什么比较感兴趣，你觉的你感兴趣的东西未来的发展走向，就完了&lt;/p&gt;
 &lt;p&gt;最后总结一下，去哪网总共有三面，最后一面直接是&lt;code&gt;HR&lt;/code&gt;面，而且比较好拿Offer,我们班好多人都拿到了，我能说的，就是面试比较水，大家也是这么说~~~&lt;/p&gt;
-&lt;p&gt;到此为止&lt;/p&gt;</summary><category term="去哪面经"></category></entry><entry><title>阿里巴巴校招2014年软研面经</title><link href="http://www.yanyulin.info/pages/2014/01/ali_1.html" rel="alternate"></link><updated>2014-01-19T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-01-19:pages/2014/01/ali_1.html</id><summary type="html">&lt;p&gt;面试地点:&lt;strong&gt;沈阳&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;到此为止&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Mon, 20 Jan 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-01-20:pages/2014/01/qunar_1.html</guid><category>去哪面经</category></item><item><title>阿里巴巴校招2014年软研面经</title><link>http://www.yanyulin.info/pages/2014/01/ali_1.html</link><description>&lt;p&gt;面试地点:&lt;strong&gt;沈阳&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;面试职位:&lt;strong&gt;软件研发工程师(北京)&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;阿里&lt;/strong&gt;一个非常神圣的公司，如果将&lt;code&gt;BAT&lt;/code&gt;按照每年的盈利来说，实际上应该叫做&lt;code&gt;TAB&lt;/code&gt;,腾讯的盈利是最大的，其次就是阿里，再次就是百度，如果按照员工的待遇来排序的话，应该叫做&lt;code&gt;ABT&lt;/code&gt;,三家公司的待遇阿里最高，一般是&lt;code&gt;15K*15&lt;/code&gt;,其次是百度一般&lt;code&gt;13*14.6&lt;/code&gt;，再次就是腾讯....&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;阿里&lt;/strong&gt;总的来说面试还是比较轻松，如果不是算法工程师，就是开发或者研发工程师，一般问的都是一些比较基本的东西&lt;/p&gt;
@@ -4282,7 +4160,7 @@ JED币免费获取30 ripple币
 &lt;p&gt;其实到这里就是&lt;code&gt;HR&lt;/code&gt;面了，简单问一下什么时候能过来实习，如果不能过来的话，将在校招时不需要参加笔试，而是直接进入最后一面，仅此而已&lt;/p&gt;
 &lt;p&gt;校招最后一面:&lt;/p&gt;
 &lt;p&gt;校招最后一面，很悲剧，在阿里实习了两个月了，而自已所在的部门，个人感觉不利于自已的发展，就是网站的日常维护，实在是了无兴趣，因此最后一面，强烈要求换部门，而且还换到北京去，而且还很坚决，估计是自已对那个部门，真的是太失望了吧，面试官说，此次来沈阳招的都是去杭州的，最后给我实习的部门老大打完电话，我就被拒了，可能自已当时也有点犯二吧，阿里虽然把我拒了，但是阿里确实是一个不错的企业~~~&lt;/p&gt;
-&lt;p&gt;到此为止&lt;/p&gt;</summary><category term="阿里面经"></category></entry><entry><title>百度校招2014年软研面经</title><link href="http://www.yanyulin.info/pages/2014/01/baidu_1.html" rel="alternate"></link><updated>2014-01-18T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-01-18:pages/2014/01/baidu_1.html</id><summary type="html">&lt;p&gt;面试地点:&lt;strong&gt;沈阳&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;到此为止&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Sun, 19 Jan 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-01-19:pages/2014/01/ali_1.html</guid><category>阿里面经</category></item><item><title>百度校招2014年软研面经</title><link>http://www.yanyulin.info/pages/2014/01/baidu_1.html</link><description>&lt;p&gt;面试地点:&lt;strong&gt;沈阳&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;面试职位:&lt;strong&gt;软件研发工程师(北京)&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;百度&lt;/strong&gt;面试总结来说，还是非常正规的，而且具有挑战性的，百度面试一般都是有&lt;code&gt;四面&lt;/code&gt;的，前&lt;code&gt;三面&lt;/code&gt;是技术面，后一面是&lt;code&gt;HR&lt;/code&gt;面，&lt;code&gt;百度&lt;/code&gt;与&lt;code&gt;阿里&lt;/code&gt;的面试是我面过这么多公司最正规的，由于面的是软研，面软研的人比较多，因此一二三面都是一般隔一到两天进行，如果你非常想进&lt;code&gt;百度&lt;/code&gt;的话，可以选择报的人数比较少的部门，如&lt;code&gt;运维&lt;/code&gt;，&lt;code&gt;移动开发&lt;/code&gt;等，一般都是三面在一天内进行。&lt;/p&gt;
 &lt;p&gt;在此&lt;strong&gt;提醒一下&lt;/strong&gt;,笔试成绩是非常重要的，百度的面试一般是按照笔试成绩来排的，成绩越高，面试时越靠前，当然面的也就越认真，&lt;code&gt;据说，一般录取的就是笔试成绩靠前的人&lt;/code&gt;&lt;/p&gt;
@@ -4313,7 +4191,7 @@ JED币免费获取30 ripple币
 &lt;p&gt;4、让你设计一个微博系统&lt;/p&gt;
 &lt;p&gt;百度四面时：&lt;/p&gt;
 &lt;p&gt;第四面，就不用说了，是&lt;code&gt;HR&lt;/code&gt;面，你有啥说啥，有啥问啥，没什么好拘谨的~~&lt;/p&gt;
-&lt;p&gt;到此为止&lt;/p&gt;</summary><category term="百度面经"></category></entry><entry><title>免费获取ripple币的方法汇总</title><link href="http://www.yanyulin.info/pages/2014/01/freexrp.html" rel="alternate"></link><updated>2014-01-09T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-01-09:pages/2014/01/freexrp.html</id><summary type="html">&lt;p&gt;&lt;strong&gt;说明&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;到此为止&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Sat, 18 Jan 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-01-18:pages/2014/01/baidu_1.html</guid><category>百度面经</category></item><item><title>免费获取ripple币的方法汇总</title><link>http://www.yanyulin.info/pages/2014/01/freexrp.html</link><description>&lt;p&gt;&lt;strong&gt;说明&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;How to get free ripples?&lt;/strong&gt;
 **
 &lt;a href="http://www.yanyulin.info/pages/2014/01/freexrp.html" title="烟雨林"&gt;本文&lt;/a&gt;旨在汇集获取免费&lt;code&gt;Ripple&lt;/code&gt;币的方法途径，与ripple币的爱好者共享，如果觉的不错的，可以&lt;a href="http://yanyulin.duoshuo.com/share-proxy/?service=weibo&amp;thread_id=1163430636745130206"&gt;点击此处&lt;/a&gt;，将此条微博转发出去，让更多的人知道ripple,让ripple涨的更猛烈些&lt;/p&gt;
@@ -4338,7 +4216,7 @@ JED币免费获取30 ripple币
 &lt;p&gt;4、&lt;a href="https://www.snapswap.us/#/bonus/2000/xrp/how/to" target="_blank"&gt;SnapSwap.us&lt;/a&gt; is giving away 2,000 XRPs when you open up an account and link it to Dwolla! Also, receive 500 XRP with your first deposit of $10.00 or more from your bank account to your Ripple Wallet, and 3 XRP with every subsequent $1.00 deposited, up to 300 XRP per transaction and up to 2,000 XRP total.&lt;/p&gt;
 &lt;p&gt;5、The &lt;a href="http://www.opencoin.in/" target="_blank"&gt;OpenCoin.in&lt;/a&gt; forum is giving away 1 XRP for every forum post and awarding 100 XRP every week to the member who posts the most that week!&lt;/p&gt;
 &lt;p&gt;参考文章&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2014/01/whyRipple.html" target="_blank"&gt;为什么大家都转向了ripple&lt;/a&gt;&lt;/p&gt;</summary><category term="瑞波币"></category></entry><entry><title>pelican创建博客常见问题汇总</title><link href="http://www.yanyulin.info/pages/2014/01/pelican_question.html" rel="alternate"></link><updated>2014-01-08T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-01-08:pages/2014/01/pelican_question.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2014/01/whyRipple.html" target="_blank"&gt;为什么大家都转向了ripple&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Thu, 09 Jan 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-01-09:pages/2014/01/freexrp.html</guid><category>瑞波币</category></item><item><title>pelican创建博客常见问题汇总</title><link>http://www.yanyulin.info/pages/2014/01/pelican_question.html</link><description>&lt;hr /&gt;
 &lt;p&gt;1、No valid files found in content errors&lt;/p&gt;
 &lt;p&gt;当用&lt;code&gt;pelican&lt;/code&gt;创建博客时出现此问题的原因是因为&lt;code&gt;pelican&lt;/code&gt;创建博客时读取到&lt;code&gt;contents&lt;/code&gt;目录下的md文件，而md文件需要&lt;code&gt;markdown&lt;/code&gt;的相库库解析，&lt;code&gt;pelican&lt;/code&gt;此时缺少该库，因此可以通过以下命令安装&lt;code&gt;markdown&lt;/code&gt;的相应库&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;pip&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;markdown&lt;/span&gt;
@@ -4406,7 +4284,7 @@ JED币免费获取30 ripple币
 
 
 &lt;p&gt;8、如果还不知道怎么使用pelican创建博客，看如下教程&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2013/11/pelican.html" title="pelican搭建属于自已的博客"&gt;pelican搭建属于自已的博客&lt;/a&gt;&lt;/p&gt;</summary><category term="工具使用"></category></entry><entry><title>为什么大家都转向了Ripple</title><link href="http://www.yanyulin.info/pages/2014/01/whyRipple.html" rel="alternate"></link><updated>2014-01-07T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-01-07:pages/2014/01/whyRipple.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2013/11/pelican.html" title="pelican搭建属于自已的博客"&gt;pelican搭建属于自已的博客&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Wed, 08 Jan 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-01-08:pages/2014/01/pelican_question.html</guid><category>工具使用</category></item><item><title>为什么大家都转向了Ripple</title><link>http://www.yanyulin.info/pages/2014/01/whyRipple.html</link><description>&lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;简介&lt;/strong&gt;
 &lt;code&gt;Ripple&lt;/code&gt;是世界上第一个开放的支付网络，通过这个支付网络可以转账任意一种货币，包括美元、欧元、人民币、日元或者比特币，简便易行快捷，交易确认在几秒以内完成，交易费用几乎是零，没有所谓的跨行异地以及跨国支付费用,&lt;code&gt;Ripple&lt;/code&gt;是开放源码的点到点支付网络，它可以使你轻松、廉价并安全的把你的金钱转账到互联网上的任何一个人，无论他在世界的哪个地方。因为Ripple是p2p软件，没有任何个人、公司，或政府操控，任何人可以创建一个ripple账户。&lt;/p&gt;
 &lt;p&gt;突然间发现周围很多人都玩起了&lt;code&gt;Ripple&lt;/code&gt;币，为什么玩&lt;code&gt;Ripple&lt;/code&gt;币，我想了想原因大概有以下几点：&lt;/p&gt;
@@ -4422,7 +4300,7 @@ JED币免费获取30 ripple币
 &lt;p&gt;10、&lt;code&gt;Ripple&lt;/code&gt;网络自动进行汇率换算。也就是说，用户可以用任何一种类型的货币向他人支付另外任何一种类型的货币，从而实现所有货币的全网流通&lt;/p&gt;
 &lt;p&gt;11、&lt;code&gt;Ripple&lt;/code&gt;的交易确认过程可在几秒钟之内完成&lt;/p&gt;
 &lt;p&gt;12、&lt;code&gt;Ripple&lt;/code&gt;币无需下载客户端软件，不用进行同步等一系统麻烦的事，玩过LTC/BTC的人一定知道同步要发费一整天，有时还得翻墙下载，而&lt;code&gt;Ripple&lt;/code&gt;所有的这一切都是在网页上完成的，因此更方便，更快捷，当然也是安全的，因为内部的通信采用了各种加密机制&lt;/p&gt;
-&lt;p&gt;就总结到此吧，过几天再更新，觉的不错的欢迎订阅本站，&lt;strong&gt;订阅借口看右侧&lt;/strong&gt;&lt;/p&gt;</summary><category term="瑞波币"></category></entry><entry><title>人人网校招2014年研发面经</title><link href="http://www.yanyulin.info/pages/2013/12/renren_1.html" rel="alternate"></link><updated>2013-12-24T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-12-24:pages/2013/12/renren_1.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;就总结到此吧，过几天再更新，觉的不错的欢迎订阅本站，&lt;strong&gt;订阅借口看右侧&lt;/strong&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Tue, 07 Jan 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-01-07:pages/2014/01/whyRipple.html</guid><category>瑞波币</category></item><item><title>人人网校招2014年研发面经</title><link>http://www.yanyulin.info/pages/2013/12/renren_1.html</link><description>&lt;hr /&gt;
 &lt;p&gt;面试地点:&lt;strong&gt;沈阳&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;面试职位:&lt;strong&gt;软件研发工程师(北京)&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;人人网&lt;/strong&gt;总体来说面试还是比较轻松的，2013.9.23在东北大学参加了人人网的笔试(说起来那一天还是比较忙碌的，参加完网易的面试，紧接着又参加了商泰这个小公司的面试，这一天总共进行了五面，所有的面完后就已经是下午五点了，又急着乘车去了东大，6点的时候参加了人人的笔试)，人人的笔试允许霸笔(不过霸笔是有条件的，据说是因为试卷份数有限，研究生且是985的才有资格参加霸笔，所以最好还是网申一下)，人人的笔试我是霸笔的&lt;/p&gt;
@@ -4434,7 +4312,7 @@ JED币免费获取30 ripple币
 &lt;p&gt;4：记不清了还有一些&lt;/p&gt;
 &lt;p&gt;三面：三面是一个头头面的，三面问了我HashMap是怎么实现的，CurrentHashMap是怎么实现的，以及一致性Hash算法，淘宝的TDDL,消息中间件...,以及让我写了一个算法，一个棋盘，只能向左走或者下走，每次只能走一步，从最左角走到最右角，总共有多少种走法，其实也很简单，是个递归算法，我当时给他用数学公式算出来了结果，并告诉他，然后他让我写程序实现他，最后我也给他实现了，最后等级当然也挺高的&lt;/p&gt;
 &lt;p&gt;HR面，面完后，第二天让我去签约，要求我带三方，对面试结果前三名好像要求带三方，其他的则没要求，三方我们还没发，当然就没给，最后给了我一个意向OFFER,让我三方发了后寄过去&lt;/p&gt;
-&lt;p&gt;最后：总结一下人人的面试还是比较轻松的，而且面试的GG都比较好&lt;/p&gt;</summary><category term="人人面经"></category></entry><entry><title>.htaccess简明教程(SEO优化)</title><link href="http://www.yanyulin.info/pages/2013/12/htaccess.html" rel="alternate"></link><updated>2013-12-23T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-12-23:pages/2013/12/htaccess.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;最后：总结一下人人的面试还是比较轻松的，而且面试的GG都比较好&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Tue, 24 Dec 2013 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2013-12-24:pages/2013/12/renren_1.html</guid><category>人人面经</category></item><item><title>.htaccess简明教程(SEO优化)</title><link>http://www.yanyulin.info/pages/2013/12/htaccess.html</link><description>&lt;hr /&gt;
 &lt;p&gt;.htaccess文件可以用来优化网站，尽管.htaccess只是一个文件，但它可以更改服务器的设置，允许你做许多不同的事情，最流行的功能是可以创建自定义的“404 error”页面，.htaccess并不难，你可以给它想像成就是一个文本文件再加几条服务器的配置命令&lt;/p&gt;
 &lt;p&gt;确定服务器是否支持.htaccess&lt;/p&gt;
 &lt;p&gt;如果主机是&lt;code&gt;unix&lt;/code&gt;或&lt;code&gt;Linux&lt;/code&gt;系统，或任何版本的&lt;code&gt;Apache&lt;/code&gt;网络服务器，理论上都是支持&lt;code&gt;.htaccess&lt;/code&gt;的,除非你的服务器提供商禁用了&lt;code&gt;.htacess&lt;/code&gt;文件&lt;/p&gt;
@@ -4511,7 +4389,7 @@ JED币免费获取30 ripple币
 &lt;blockquote&gt;
 &lt;p&gt;&lt;code&gt;/full/parth/to/.htpasswd&lt;/code&gt;则应该替换为指向&lt;code&gt;.htpasswd&lt;/code&gt;文件,.htpasswd也是一个没有文件名文档，可以放置在你网站里的任何地方（此时&lt;code&gt;密码应加密&lt;/code&gt;），但建议你将其保存在网站Web根目录外，这样通过网络就无法访问到它了,文件里的内容是username:password(用户名:密码)&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;/blockquote&gt;</summary><category term="工具使用"></category></entry><entry><title>编程珠玑(作者:John Bently)</title><link href="http://www.yanyulin.info/pages/2013/12/perl.html" rel="alternate"></link><updated>2013-12-23T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-12-23:pages/2013/12/perl.html</id><summary type="html">&lt;hr /&gt;
+&lt;/blockquote&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Mon, 23 Dec 2013 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2013-12-23:pages/2013/12/htaccess.html</guid><category>工具使用</category></item><item><title>编程珠玑(作者:John Bently)</title><link>http://www.yanyulin.info/pages/2013/12/perl.html</link><description>&lt;hr /&gt;
 &lt;p&gt;作者简介：&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;Jon Bentley&lt;/code&gt;世界著名计算机科学家，被誉为影响算法发展的十位大师之一。他先后任职于卡内基-梅隆大学（1976~1982）、贝尔实验室（1982~2001）和Avaya实验室（2001年至今）。在卡内基-梅隆大学担任教授期间，他培养了包括Tcl语言设计者John Ousterhout、Java语言设计者James Gosling、《算法导论》作者之一Charles Leiserson在内的许多计算机科学大家。2004年荣获Dr.Dobb's程序设计卓越奖。&lt;/p&gt;
 &lt;p&gt;电子书下载地址:&lt;a href="http://pan.baidu.com/s/1pJEZU7D" target="_blank"&gt;点这里&lt;/a&gt;&lt;/p&gt;
@@ -4687,7 +4565,7 @@ JED币免费获取30 ripple币
 &lt;p&gt;附录e　用于搜索的c++类&lt;/p&gt;
 &lt;p&gt;部分习题提示&lt;/p&gt;
 &lt;p&gt;部分习题答案&lt;/p&gt;
-&lt;/blockquote&gt;</summary><category term="算法之美"></category></entry><entry><title>网易校招2014年电商面经</title><link href="http://www.yanyulin.info/pages/2013/12/neteasyM_1.html" rel="alternate"></link><updated>2013-12-11T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-12-11:pages/2013/12/neteasyM_1.html</id><summary type="html">&lt;hr /&gt;
+&lt;/blockquote&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Mon, 23 Dec 2013 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2013-12-23:pages/2013/12/perl.html</guid><category>算法之美</category></item><item><title>网易校招2014年电商面经</title><link>http://www.yanyulin.info/pages/2013/12/neteasyM_1.html</link><description>&lt;hr /&gt;
 &lt;p&gt;面试地点:&lt;strong&gt;沈阳&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;面试职位:&lt;strong&gt;软件研发工程师(北京)&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;网易&lt;/strong&gt;一直以来都是一个我很向往的公司，无奈，我却没有去成，当然不是被拒，而是我把它拒了，我很向往它，但是却很无奈。人生往往就是这样，有时候最想去的公司，却不一定能去成.&lt;/p&gt;
@@ -4707,7 +4585,7 @@ JED币免费获取30 ripple币
 &lt;p&gt;二面：&lt;/p&gt;
 &lt;p&gt;网易的面试过程好像很简单，二面就是HR面了，HR面你懂的，纯粹扯谈，不过HR很好，基本上问的就是未来你的职业规划，你对工资的要求，你对加班的要求，你对户口的要求，等等，面完后感觉还行，HR好像对我很满意，最后我问了下结果什么时候出来，他说要等北京那边的考完后，也就是&lt;strong&gt;10.8&lt;/strong&gt;北京考后，两边笔试面试结果汇总择优录取&lt;/p&gt;
 &lt;p&gt;等待：&lt;/p&gt;
-&lt;p&gt;等待就像栀子花开，漫长却很期待，9.23后,我一直在等待着网易，等了一个多月，他都没给我回音，10.25号我将三方寄到了百度，10.28号一觉睡醒，收到了网易的offer,当然待遇比百度要高那么几万，那时我在北京，网易HR让我去找他面谈一下，他告诉我，我是第一批被录取的，让我再考虑一下，一个星期给答复，我也不想拒百度，结果就这样悲剧吧，事后还给我打了个电话，让我再考虑下~~&lt;/p&gt;</summary><category term="网易面经"></category></entry><entry><title>亚马逊2014年校招笔试题(研发)</title><link href="http://www.yanyulin.info/pages/2013/12/amzon_2014_A.html" rel="alternate"></link><updated>2013-12-07T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-12-07:pages/2013/12/amzon_2014_A.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;等待就像栀子花开，漫长却很期待，9.23后,我一直在等待着网易，等了一个多月，他都没给我回音，10.25号我将三方寄到了百度，10.28号一觉睡醒，收到了网易的offer,当然待遇比百度要高那么几万，那时我在北京，网易HR让我去找他面谈一下，他告诉我，我是第一批被录取的，让我再考虑一下，一个星期给答复，我也不想拒百度，结果就这样悲剧吧，事后还给我打了个电话，让我再考虑下~~&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Wed, 11 Dec 2013 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2013-12-11:pages/2013/12/neteasyM_1.html</guid><category>网易面经</category></item><item><title>亚马逊2014年校招笔试题(研发)</title><link>http://www.yanyulin.info/pages/2013/12/amzon_2014_A.html</link><description>&lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;如有错误，或更加精简的方法，请留言，我会更正，以方便更多的人&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;1、Given a set of open intervals, check whether there exists an interval which is completely inside another interval. If exists, print “1”, otherwise print “0”. You just need to consider the case that all the end points are integers and there are no exactly the same open intervals.&lt;/p&gt;
 &lt;blockquote&gt;
@@ -4754,7 +4632,7 @@ The sum of the number of M cards equals to N-1.&lt;/p&gt;
 &lt;p&gt;6&lt;/p&gt;
 &lt;p&gt;Given three cards (one can move 2 steps, two can move 1 steps), we have three choices: path one is 1 -&amp;gt; 2 -&amp;gt; 1 -&amp;gt; 1, path two is 1 -&amp;gt; 2 -&amp;gt; 2 -&amp;gt; 1, path three is 1 -&amp;gt; 1 -&amp;gt; 2 -&amp;gt; 1. The maximum score is 6, which is the output.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;各位如果有更好的答案，请留言评价，方便更多的人&lt;/strong&gt;&lt;/p&gt;</summary><category term="亚马逊笔试题"></category></entry><entry><title>微软2014年校招笔试题</title><link href="http://www.yanyulin.info/pages/2013/12/microsoft_2014_A.html" rel="alternate"></link><updated>2013-12-07T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-12-07:pages/2013/12/microsoft_2014_A.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;各位如果有更好的答案，请留言评价，方便更多的人&lt;/strong&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Sat, 07 Dec 2013 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2013-12-07:pages/2013/12/amzon_2014_A.html</guid><category>亚马逊笔试题</category></item><item><title>微软2014年校招笔试题</title><link>http://www.yanyulin.info/pages/2013/12/microsoft_2014_A.html</link><description>&lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;如有错误，或更加精简的方法，请留言，我会更正，以方便更多的人&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;1、Which statement(s) is(are) correct about thread and process？Select all that apply.(5 Points)&lt;/p&gt;
 &lt;p&gt;A、Threads share the same address space of the parent process;Processes share the same address space of the parent process.&lt;/p&gt;
@@ -4912,7 +4790,7 @@ D、5,4,3,2,1&lt;/p&gt;
 &lt;p&gt;Notes:&lt;/p&gt;
 &lt;p&gt;1、Space Complexity should be O(1) &lt;/p&gt;
 &lt;p&gt;2、Only the ".next" field of a node is modifiable.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;各位如果有更好的答案，请留言评价，方便更多的人&lt;/strong&gt;&lt;/p&gt;</summary><category term="微软笔试题"></category></entry><entry><title>雅虎2014年校招笔试题</title><link href="http://www.yanyulin.info/pages/2013/12/yahoo_2014_A.html" rel="alternate"></link><updated>2013-12-07T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-12-07:pages/2013/12/yahoo_2014_A.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;各位如果有更好的答案，请留言评价，方便更多的人&lt;/strong&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Sat, 07 Dec 2013 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2013-12-07:pages/2013/12/microsoft_2014_A.html</guid><category>微软笔试题</category></item><item><title>雅虎2014年校招笔试题</title><link>http://www.yanyulin.info/pages/2013/12/yahoo_2014_A.html</link><description>&lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;如有错误，或更加精简的方法，请留言，我会更正，以方便更多的人&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;1、Which protocol is used to query the destination MAC address with the destination IP address?()&lt;/p&gt;
 &lt;p&gt;A UDP   B ARP C RARP  D ICMP&lt;/p&gt;
@@ -5037,7 +4915,7 @@ D、5,4,3,2,1&lt;/p&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;&lt;strong&gt;各位如果有更好的答案，请留言评价，方便更多的人&lt;/strong&gt;&lt;/p&gt;</summary><category term="雅虎笔试题"></category></entry><entry><title>中兴2014年校招笔试题</title><link href="http://www.yanyulin.info/pages/2013/12/zte_2014_A.html" rel="alternate"></link><updated>2013-12-07T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-12-07:pages/2013/12/zte_2014_A.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;各位如果有更好的答案，请留言评价，方便更多的人&lt;/strong&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Sat, 07 Dec 2013 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2013-12-07:pages/2013/12/yahoo_2014_A.html</guid><category>雅虎笔试题</category></item><item><title>中兴2014年校招笔试题</title><link>http://www.yanyulin.info/pages/2013/12/zte_2014_A.html</link><description>&lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;如有错误，或更加精简的方法，请留言，我会更正，以方便更多的人&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;一：单选题&lt;/p&gt;
 &lt;p&gt;1、下列的设备数据传输方式中,哪种方式的效率最差()&lt;/p&gt;
@@ -5207,7 +5085,7 @@ A 数值边界  B 字符串边界   C 指标边界   D 内存边界&lt;/p&gt;
 &lt;p&gt;五、应用题&lt;/p&gt;
 &lt;p&gt;1、编写一个单例模式(Singleton）的实例&lt;/p&gt;
 &lt;p&gt;2、编写一个队列操作用链表实现&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;各位如果有更好的答案，请留言评价，方便更多的人&lt;/strong&gt;&lt;/p&gt;</summary><category term="中兴笔试题"></category></entry><entry><title>阿里巴巴2014年校招笔试题(研发)</title><link href="http://www.yanyulin.info/pages/2013/12/alibaba_2014_A.html" rel="alternate"></link><updated>2013-12-06T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-12-06:pages/2013/12/alibaba_2014_A.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;各位如果有更好的答案，请留言评价，方便更多的人&lt;/strong&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Sat, 07 Dec 2013 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2013-12-07:pages/2013/12/zte_2014_A.html</guid><category>中兴笔试题</category></item><item><title>阿里巴巴2014年校招笔试题(研发)</title><link>http://www.yanyulin.info/pages/2013/12/alibaba_2014_A.html</link><description>&lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;如有错误，或更加精简的方法，请留言，我会更正，以方便更多的人&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;第一部分 单选题&lt;/strong&gt; &lt;/p&gt;
 &lt;p&gt;1 一次内存访、SSD硬盘访问和SATA硬盘随机访问的时间分别约是（）。&lt;/p&gt;
@@ -5379,7 +5257,7 @@ A、25/51 B、26/51 C、1/2 D、1/3 &lt;/p&gt;
 
 &lt;p&gt;2 已知：为了保持请求的并行度，一台web应用服务器目前需要10个到一台&lt;code&gt;oracle&lt;/code&gt;的数据库连接，目前oracle数据库能够稳定承载的连接数是7000个。目前已经拥有的web应用服务器数是400台，并且web服务器以每年以300的规模在增长。 &lt;/p&gt;
 &lt;p&gt;问题：目前能够才去的策略有哪些？请从原理上对这些策略为什么能够起作用进行一下分析。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;各位如果有更好的答案，请留言评价，方便更多的人&lt;/strong&gt;&lt;/p&gt;</summary><category term="阿里巴巴笔试题"></category></entry><entry><title>创新工场2014年校招笔试题(研发)</title><link href="http://www.yanyulin.info/pages/2013/12/cxgc_2014_A.html" rel="alternate"></link><updated>2013-12-06T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-12-06:pages/2013/12/cxgc_2014_A.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;各位如果有更好的答案，请留言评价，方便更多的人&lt;/strong&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Fri, 06 Dec 2013 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2013-12-06:pages/2013/12/alibaba_2014_A.html</guid><category>阿里巴巴笔试题</category></item><item><title>创新工场2014年校招笔试题(研发)</title><link>http://www.yanyulin.info/pages/2013/12/cxgc_2014_A.html</link><description>&lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;如有错误，或更加精简的方法，请留言，我会更正，以方便更多的人&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;选择题&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;1 若进栈序列为&lt;code&gt;a、b、c、d&lt;/code&gt;，进栈过程中可以出栈，那么（）不可能是一个出栈序列。&lt;/p&gt;
@@ -5419,7 +5297,7 @@ Which is not a typical programming technique for IPC:&lt;/p&gt;
 &lt;p&gt;1 输入一个整数无序数组，用堆排序的方法使数组有序&lt;/p&gt;
 &lt;p&gt;2 求一个正整数N的开方，要求不能用库函数&lt;code&gt;sqrt()&lt;/code&gt;，结果的精度在&lt;code&gt;0.001&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;3 给定一个矩阵&lt;code&gt;int maxtrixA[m][n]&lt;/code&gt;,每行和每列都是增序的，实现一个算法去找矩阵中的某个元素&lt;code&gt;element&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;各位如果有更好的答案，请留言评价，方便更多的人&lt;/strong&gt;&lt;/p&gt;</summary><category term="创新工场笔试题"></category></entry><entry><title>美团网2014年校招笔试题(研发)</title><link href="http://www.yanyulin.info/pages/2013/12/meituan_2014_A.html" rel="alternate"></link><updated>2013-12-06T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-12-06:pages/2013/12/meituan_2014_A.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;各位如果有更好的答案，请留言评价，方便更多的人&lt;/strong&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Fri, 06 Dec 2013 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2013-12-06:pages/2013/12/cxgc_2014_A.html</guid><category>创新工场笔试题</category></item><item><title>美团网2014年校招笔试题(研发)</title><link>http://www.yanyulin.info/pages/2013/12/meituan_2014_A.html</link><description>&lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;如有错误，或更加精简的方法，请留言，我会更正，以方便更多的人&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;1、某二叉树中序序列为A,B,C,D,E,F,G。后序序列为B,D,C,A,F,G,E,则该二叉树节点的前序序列是?请写出分析&lt;code&gt;过程及结果&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;2、定义一个二进制数字串的“长度”为从最右侧开始算起连续1的个数（说明，如果最右侧为0，则长度为0，如果最右侧为1，则开始数连续的1的个数作为长度）。例如&lt;code&gt;length(100011)=2,length(100000)=0,&lt;/code&gt;请分析一个随机的N位字串的“长度”的期望值是多少，注意这个长度是从最右侧算起的，比如&lt;code&gt;length(111011)=2&lt;/code&gt;,即使，字符串左边出现更长的长度&lt;/p&gt;
@@ -5441,7 +5319,7 @@ Which is not a typical programming technique for IPC:&lt;/p&gt;
 &lt;p&gt;例如序列：-2.5 4 0 3 0.5 8 -1 &lt;/p&gt;
 &lt;p&gt;则取出的连续序列为3 0.5 8&lt;/p&gt;
 &lt;p&gt;最大乘积为3&lt;em&gt;0.5&lt;/em&gt;8&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;各位如果有更好的答案，请留言评价，方便更多的人&lt;/strong&gt;&lt;/p&gt;</summary><category term="美团网笔试题"></category></entry><entry><title>编程之美—微软技术面试心得</title><link href="http://www.yanyulin.info/pages/2013/12/prgbeautiful.html" rel="alternate"></link><updated>2013-12-05T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-12-05:pages/2013/12/prgbeautiful.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;各位如果有更好的答案，请留言评价，方便更多的人&lt;/strong&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Fri, 06 Dec 2013 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2013-12-06:pages/2013/12/meituan_2014_A.html</guid><category>美团网笔试题</category></item><item><title>编程之美—微软技术面试心得</title><link>http://www.yanyulin.info/pages/2013/12/prgbeautiful.html</link><description>&lt;hr /&gt;
 &lt;p&gt;&lt;code&gt;编程之美&lt;/code&gt;收集了约&lt;code&gt;60&lt;/code&gt;道算法和程序设计题目，这些题目大部分在近年的笔试，面试中出现过，或者是被微软员工热烈讨论过。作者试图从书中各种有趣的问题出发，引导读者发现问题，&lt;code&gt;分析问题&lt;/code&gt;，解决问题，寻找更优的解法&lt;/p&gt;
 &lt;p&gt;电子书下载地址:&lt;a href="http://yunpan.cn/QU98W2IsqzW8m" target="_blank"&gt;点这里&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;觉的好的，请多多分享&lt;/strong&gt;&lt;/p&gt;
@@ -5518,7 +5396,7 @@ Which is not a typical programming technique for IPC:&lt;/p&gt;
 &lt;p&gt;4.9数独知多少 307&lt;/p&gt;
 &lt;p&gt;4.10数字哑谜和回文 315&lt;/p&gt;
 &lt;p&gt;4.11挖雷游戏的概率 322&lt;/p&gt;
-&lt;/blockquote&gt;</summary><category term="算法之美"></category></entry><entry><title>Photoshop CS视频教程(下)</title><link href="http://www.yanyulin.info/pages/2013/12/psbase2.html" rel="alternate"></link><updated>2013-12-05T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-12-05:pages/2013/12/psbase2.html</id><summary type="html">&lt;p&gt;,画笔面板7,画笔面板8,画笔面板9,画笔面板10,图像的剪切复制与粘贴,图像的缩放旋转与斜切。&lt;/p&gt;
+&lt;/blockquote&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Thu, 05 Dec 2013 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2013-12-05:pages/2013/12/prgbeautiful.html</guid><category>算法之美</category></item><item><title>Photoshop CS视频教程(下)</title><link>http://www.yanyulin.info/pages/2013/12/psbase2.html</link><description>&lt;p&gt;,画笔面板7,画笔面板8,画笔面板9,画笔面板10,图像的剪切复制与粘贴,图像的缩放旋转与斜切。&lt;/p&gt;
 &lt;hr /&gt;
 &lt;p&gt;视频教程下载地址:&lt;a href="http://yunpan.cn/QUGwJ8GLNDNW7" target="_blank"&gt;点这里&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;觉的好的，请多多分享&lt;/strong&gt;&lt;/p&gt;
@@ -5552,7 +5430,7 @@ Which is not a typical programming technique for IPC:&lt;/p&gt;
 &lt;p&gt;画笔面板10&lt;/p&gt;
 &lt;p&gt;图像的剪切复制与粘贴&lt;/p&gt;
 &lt;p&gt;图像的缩放旋转与斜切&lt;/p&gt;
-&lt;/blockquote&gt;</summary><category term="PhotoShop视频"></category></entry><entry><title>VC视频教程(主要讲述`MFC`)</title><link href="http://www.yanyulin.info/pages/2013/12/vc_1.html" rel="alternate"></link><updated>2013-12-05T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-12-05:pages/2013/12/vc_1.html</id><summary type="html">&lt;hr /&gt;
+&lt;/blockquote&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Thu, 05 Dec 2013 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2013-12-05:pages/2013/12/psbase2.html</guid><category>PhotoShop视频</category></item><item><title>VC视频教程(主要讲述`MFC`)</title><link>http://www.yanyulin.info/pages/2013/12/vc_1.html</link><description>&lt;hr /&gt;
 &lt;p&gt;视频教程下载地址:&lt;a href="http://yunpan.cn/QUGwZ275t5VQK" target="_blank"&gt;点这里&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;觉的好的，请多多分享&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;VC视频教程(主要讲述&lt;code&gt;MFC&lt;/code&gt;)&lt;/strong&gt;&lt;/p&gt;
@@ -5577,7 +5455,7 @@ Which is not a typical programming technique for IPC:&lt;/p&gt;
 &lt;p&gt;孙鑫C++教程18&lt;/p&gt;
 &lt;p&gt;孙鑫C++教程19&lt;/p&gt;
 &lt;p&gt;孙鑫C++教程20&lt;/p&gt;
-&lt;/blockquote&gt;</summary><category term="VC视频"></category></entry><entry><title>PhotoShop CS入门版视频教程(基础上)</title><link href="http://www.yanyulin.info/pages/2013/12/psbase_1.html" rel="alternate"></link><updated>2013-12-04T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-12-04:pages/2013/12/psbase_1.html</id><summary type="html">&lt;hr /&gt;
+&lt;/blockquote&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Thu, 05 Dec 2013 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2013-12-05:pages/2013/12/vc_1.html</guid><category>VC视频</category></item><item><title>PhotoShop CS入门版视频教程(基础上)</title><link>http://www.yanyulin.info/pages/2013/12/psbase_1.html</link><description>&lt;hr /&gt;
 &lt;p&gt;视频教程下载地址:&lt;a href="http://yunpan.cn/QUGwKCTFL3cLC" target="_blank"&gt;点这里&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;觉的好的，请多多分享&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;PhotoShop CS入门版视频教程(基础上)&lt;/strong&gt;&lt;/p&gt;
@@ -5610,7 +5488,7 @@ Which is not a typical programming technique for IPC:&lt;/p&gt;
 &lt;p&gt;渐变工具5&lt;/p&gt;
 &lt;p&gt;油漆桶工具&lt;/p&gt;
 &lt;p&gt;模糊、锐化与涂抹工具&lt;/p&gt;
-&lt;/blockquote&gt;</summary><category term="PhotoShop视频"></category></entry><entry><title>2014年百度校招笔试试卷A</title><link href="http://www.yanyulin.info/pages/2013/12/baidu_2014_A.html" rel="alternate"></link><updated>2013-12-03T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-12-03:pages/2013/12/baidu_2014_A.html</id><summary type="html">&lt;hr /&gt;
+&lt;/blockquote&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Wed, 04 Dec 2013 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2013-12-04:pages/2013/12/psbase_1.html</guid><category>PhotoShop视频</category></item><item><title>2014年百度校招笔试试卷A</title><link>http://www.yanyulin.info/pages/2013/12/baidu_2014_A.html</link><description>&lt;hr /&gt;
 &lt;p&gt;如有错误，或更加精简的方法，请留言，我会更正，以方便更多的人&lt;/p&gt;
 &lt;p&gt;一、简答题&lt;/p&gt;
 &lt;p&gt;1、当前计算机系统一般会采用层次结构存储数据，请介绍下典型计算机存储系统一般分为哪几个层次，为什么采用分层存储数据能有效提高程序的执行效率?&lt;/p&gt;
@@ -5688,7 +5566,7 @@ Which is not a typical programming technique for IPC:&lt;/p&gt;
 &lt;p&gt;输入2：&lt;code&gt;task-relations&lt;/code&gt;，二元组数组，每个二元组表示一组关系&lt;/p&gt;
 &lt;p&gt;输入3：&lt;code&gt;task-id&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;输出：最晚完成时间&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;本篇答案不全，希望有时间的同学补全&lt;/strong&gt;&lt;/p&gt;</summary><category term="百度笔试题"></category></entry><entry><title>界面编程模仿篇(QQ登录界面逼真篇)</title><link href="http://www.yanyulin.info/pages/2013/12/qqLogin_1.html" rel="alternate"></link><updated>2013-12-01T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-12-01:pages/2013/12/qqLogin_1.html</id><summary type="html">&lt;p&gt;写了好多天的爬虫，偷空前前后后用了两天的时间(排除吃饭睡觉)写完了这个QQ登录界面，看起来还凑和着吧，如果是的大神的，莫见笑，纯属业余作品，废话先不多说，截图如下,其中第二幅图片中的红色方框部份有待完善，明天开始继续搞爬虫，等有时间时再完善，先凑和着吧：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;本篇答案不全，希望有时间的同学补全&lt;/strong&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Tue, 03 Dec 2013 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2013-12-03:pages/2013/12/baidu_2014_A.html</guid><category>百度笔试题</category></item><item><title>界面编程模仿篇(QQ登录界面逼真篇)</title><link>http://www.yanyulin.info/pages/2013/12/qqLogin_1.html</link><description>&lt;p&gt;写了好多天的爬虫，偷空前前后后用了两天的时间(排除吃饭睡觉)写完了这个QQ登录界面，看起来还凑和着吧，如果是的大神的，莫见笑，纯属业余作品，废话先不多说，截图如下,其中第二幅图片中的红色方框部份有待完善，明天开始继续搞爬虫，等有时间时再完善，先凑和着吧：&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2013/12/qqLogin_1.html"&gt;
 &lt;img alt="烟雨林博客" src="http://www.yanyulin.info/pics/tech/qq_5.jpg"/&gt;
 &lt;/a&gt;&lt;/p&gt;
@@ -5783,7 +5661,7 @@ Which is not a typical programming technique for IPC:&lt;/p&gt;
 &lt;p&gt;7、最重要的一点，就是如何缩减代码的长度，增加代码复用，这个得自已考虑去&lt;/p&gt;
 &lt;p&gt;8、程序中不采用任何界面布局，Java中的界面布局不太适合，将布局设置成&lt;code&gt;null&lt;/code&gt;,自已控制控件的位置&lt;/p&gt;
 &lt;p&gt;备注：本程序开发过程中需要用到的软件请参考
-&lt;a href="http://www.yanyulin.info/pages/2013/11/qqLogin.html" target="_blank"&gt;&lt;strong&gt;界面编程模仿篇(模仿腾讯QQ登录界面先行篇)&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;</summary><category term="界面编程"></category></entry><entry><title>界面编程模仿篇(模仿腾讯QQ登录界面)</title><link href="http://www.yanyulin.info/pages/2013/11/qqLogin.html" rel="alternate"></link><updated>2013-11-29T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-11-29:pages/2013/11/qqLogin.html</id><summary type="html">&lt;p&gt;写了几天的爬虫，过几天再继续写，今天偷会懒，写了个仿QQ登录界面，截图如下，怎么样，还凑和吧，如果是大神的，请不要见笑，截图如下，明天争取完成，完成后，将附上文档与代码上传到本人的github上，进行开源,如果大家愿意，后绪一块更改，注意，我强调的只是&lt;strong&gt;界面&lt;/strong&gt;,QQ?你想吧内部的各种通信协议，分布式数据库，大数据的处理，各种缓存...&lt;/p&gt;
+&lt;a href="http://www.yanyulin.info/pages/2013/11/qqLogin.html" target="_blank"&gt;&lt;strong&gt;界面编程模仿篇(模仿腾讯QQ登录界面先行篇)&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Sun, 01 Dec 2013 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2013-12-01:pages/2013/12/qqLogin_1.html</guid><category>界面编程</category></item><item><title>界面编程模仿篇(模仿腾讯QQ登录界面)</title><link>http://www.yanyulin.info/pages/2013/11/qqLogin.html</link><description>&lt;p&gt;写了几天的爬虫，过几天再继续写，今天偷会懒，写了个仿QQ登录界面，截图如下，怎么样，还凑和吧，如果是大神的，请不要见笑，截图如下，明天争取完成，完成后，将附上文档与代码上传到本人的github上，进行开源,如果大家愿意，后绪一块更改，注意，我强调的只是&lt;strong&gt;界面&lt;/strong&gt;,QQ?你想吧内部的各种通信协议，分布式数据库，大数据的处理，各种缓存...&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2013/11/qqLogin.html"&gt;
 &lt;img alt="烟雨林博客"  src="http://www.yanyulin.info/pics/tech/qq_1.jpg"/&gt;
 &lt;/a&gt;&lt;/p&gt;
@@ -5805,7 +5683,7 @@ Which is not a typical programming technique for IPC:&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2013/11/qqLogin.html"&gt;
 &lt;img alt="烟雨林博客"  src="http://www.yanyulin.info/pics/tech/qq_4.jpg"/&gt;
 &lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;5、从上面的过程中，可以看出QQ图片保存在哪了吧，你完全可以用自已的图片替换掉rdb文件里的图片，这样QQ运行的时候，就变成了你的图片了，在替换之前，最好先备份下&lt;/p&gt;</summary><category term="界面编程"></category></entry><entry><title>爬虫的自我解剖(抓取网页HtmlUnit)</title><link href="http://www.yanyulin.info/pages/2013/11/fetchPage.html" rel="alternate"></link><updated>2013-11-28T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-11-28:pages/2013/11/fetchPage.html</id><summary type="html">&lt;p&gt;网络爬虫第一个要面临的问题，就是如何抓取网页，抓取其实很容易，没你想的那么复杂，一个开源&lt;code&gt;HtmlUnit&lt;/code&gt;包，4行代码就OK啦，例子如下：&lt;/p&gt;
+&lt;p&gt;5、从上面的过程中，可以看出QQ图片保存在哪了吧，你完全可以用自已的图片替换掉rdb文件里的图片，这样QQ运行的时候，就变成了你的图片了，在替换之前，最好先备份下&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Fri, 29 Nov 2013 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2013-11-29:pages/2013/11/qqLogin.html</guid><category>界面编程</category></item><item><title>爬虫的自我解剖(抓取网页HtmlUnit)</title><link>http://www.yanyulin.info/pages/2013/11/fetchPage.html</link><description>&lt;p&gt;网络爬虫第一个要面临的问题，就是如何抓取网页，抓取其实很容易，没你想的那么复杂，一个开源&lt;code&gt;HtmlUnit&lt;/code&gt;包，4行代码就OK啦，例子如下：&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;final&lt;/span&gt; &lt;span class="n"&gt;WebClient&lt;/span&gt; &lt;span class="n"&gt;webClient&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;new&lt;/span&gt; &lt;span class="n"&gt;WebClient&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
 &lt;span class="n"&gt;final&lt;/span&gt; &lt;span class="n"&gt;HtmlPage&lt;/span&gt; &lt;span class="n"&gt;page&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;webClient&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;getPage&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;http://www.yanyulin.info&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;out&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;println&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;page&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;asText&lt;/span&gt;&lt;span class="p"&gt;());&lt;/span&gt;
@@ -5892,7 +5770,7 @@ Which is not a typical programming technique for IPC:&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://yunpan.cn/QURZedFfjFWfQ" target="_blank"&gt;Java皮肤库下载&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://yunpan.cn/QURZ5UXwjnk6W" target="_blank"&gt;HtmlUnit源码包下载&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://yunpan.cn/QURZ5uZLwFmM9" target="_blank"&gt;HtmlUnit的Jar包下载&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;</summary><category term="搜索引擎"></category></entry><entry><title>Linux基础教程视频版(很详细)</title><link href="http://www.yanyulin.info/pages/2013/11/vlinux2.html" rel="alternate"></link><updated>2013-11-26T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-11-26:pages/2013/11/vlinux2.html</id><summary type="html">&lt;hr /&gt;
+&lt;/blockquote&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Thu, 28 Nov 2013 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2013-11-28:pages/2013/11/fetchPage.html</guid><category>搜索引擎</category></item><item><title>Linux基础教程视频版(很详细)</title><link>http://www.yanyulin.info/pages/2013/11/vlinux2.html</link><description>&lt;hr /&gt;
 &lt;p&gt;Linux基础教程视频版(很详细)下载地址:&lt;a href="http://yunpan.cn/QUxBUTNhe7RF3" target="_blank"&gt;点这里&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;如果觉的不错，请多多分享&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Linux基础教程视频版(很详细)&lt;/p&gt;
@@ -5920,7 +5798,7 @@ Which is not a typical programming technique for IPC:&lt;/p&gt;
 &lt;p&gt;第12章 指针的用法实验&lt;/p&gt;
 &lt;p&gt;第13章 结构体与共同体&lt;/p&gt;
 &lt;p&gt;第13章 结构体与共同体实验&lt;/p&gt;
-&lt;/blockquote&gt;</summary><category term="Linux视频"></category></entry><entry><title>pelican搭建属于自已的博客</title><link href="http://www.yanyulin.info/pages/2013/11/pelican.html" rel="alternate"></link><updated>2013-11-24T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-11-24:pages/2013/11/pelican.html</id><summary type="html">&lt;hr /&gt;
+&lt;/blockquote&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Tue, 26 Nov 2013 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2013-11-26:pages/2013/11/vlinux2.html</guid><category>Linux视频</category></item><item><title>pelican搭建属于自已的博客</title><link>http://www.yanyulin.info/pages/2013/11/pelican.html</link><description>&lt;hr /&gt;
 &lt;p&gt;一直都想搭建一个属于自已的博客，无耐总是抽不出时间，9月份完工作，10月份却又有搞不完的事，一拖再拖，前不久才将自已的博客搭建完成&lt;/p&gt;
 &lt;p&gt;搭建博客工具的选择：&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;WordPress&lt;/code&gt;、&lt;code&gt;Zblog&lt;/code&gt;、各种&lt;code&gt;cms&lt;/code&gt;,功能都很强大，各种插件，各种牛X，各种方便，但在我看来，也正是因为功能的太过强大，显得太笨重，修改起来太过麻烦，更可耻的是还需要数据库的支持，我这样的叼丝学生估计还负担不起，而国外提供免费数据库的空间绝大多数都不太稳定，国内空间别提了，各种泪&lt;/p&gt;
@@ -6033,7 +5911,7 @@ Which is not a typical programming technique for IPC:&lt;/p&gt;
 &lt;p&gt;在Godaddy上用支付宝花购买为期一年的顶级域名，并去修改Nameservers为这两个地址：&lt;code&gt;f1g1ns1.dnspod.net&lt;/code&gt;、&lt;code&gt;f1g1ns2.dnspod.net&lt;/code&gt;。&lt;/p&gt;
 &lt;p&gt;在Dnspod上添加新域名，并申请一条A记录指向Github Pages的ip:&lt;code&gt;207.97.227.245&lt;/code&gt;；&lt;/p&gt;
 &lt;p&gt;在Pelican主目录新建CNAME文件，添上刚刚申请的域名，如我的&lt;code&gt;www.yanyulin.info&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Pelican官方文档: http://docs.getpelican.com/en/3.2&lt;/p&gt;</summary><category term="工具使用"></category></entry><entry><title>2014年暴风笔试试卷A</title><link href="http://www.yanyulin.info/pages/2013/11/baofeng_2014_A.html" rel="alternate"></link><updated>2013-11-23T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-11-23:pages/2013/11/baofeng_2014_A.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;Pelican官方文档: http://docs.getpelican.com/en/3.2&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Sun, 24 Nov 2013 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2013-11-24:pages/2013/11/pelican.html</guid><category>工具使用</category></item><item><title>2014年暴风笔试试卷A</title><link>http://www.yanyulin.info/pages/2013/11/baofeng_2014_A.html</link><description>&lt;hr /&gt;
 &lt;p&gt;如有错误，或更加精简的方法，请留言，我会更正，以方便更多的人
 暴风影音2014年A郑，据说可以解决&lt;code&gt;户口&lt;/code&gt;
 注:以下如无特殊说明，均假设计算机编程环境为&lt;code&gt;intel x86&lt;/code&gt;的&lt;code&gt;32位CPU&lt;/code&gt;,编译器为VS,编程语言首选C语言，也可以使用自已熟悉的编程语言。&lt;/p&gt;
@@ -6210,7 +6088,7 @@ D
 &lt;p&gt;&lt;code&gt;Windows 7&lt;/code&gt;：多用户多任务&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;Linux、Unix&lt;/code&gt;：多用户多任务&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;Windows 2003(Windows Server 2003)&lt;/code&gt;：多用户多任务&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;Windows XP&lt;/code&gt;及以前&lt;code&gt;Windows&lt;/code&gt;版本：单用户多任务&lt;/p&gt;</summary><category term="暴风笔试题"></category></entry><entry><title>C语言深度解剖(含金量高)</title><link href="http://www.yanyulin.info/pages/2013/11/deepc.html" rel="alternate"></link><updated>2013-11-23T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-11-23:pages/2013/11/deepc.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;&lt;code&gt;Windows XP&lt;/code&gt;及以前&lt;code&gt;Windows&lt;/code&gt;版本：单用户多任务&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Sat, 23 Nov 2013 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2013-11-23:pages/2013/11/baofeng_2014_A.html</guid><category>暴风笔试题</category></item><item><title>C语言深度解剖(含金量高)</title><link>http://www.yanyulin.info/pages/2013/11/deepc.html</link><description>&lt;hr /&gt;
 &lt;p&gt;&lt;code&gt;C语言深度解剖(编程的50个细节)&lt;/code&gt;这本书不太适合C语言刚入门的初学者，书中讲解了每一个关键字背后的秘密，&lt;code&gt;"十鸟在林，不如一鸟在手"&lt;/code&gt;真正把C语言整明白了再学其他语言也很简单，如果C语言都没学明白，别的语言学的再好，也不过是花架子，因为你并不理解底层是怎么个回事，本书我个人强烈推荐。&lt;/p&gt;
 &lt;p&gt;电子书PDF格式下载:&lt;a href="http://yunpan.cn/QUmRc4AqnmIBE" target="_blank" title="《Effective C++》"&gt;点这里&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;第一章 关键字&lt;/p&gt;
@@ -6283,7 +6161,7 @@ D
 &lt;blockquote&gt;
 &lt;p&gt;7.1 文件内部的一般规则&lt;/p&gt;
 &lt;p&gt;7.2 文件命名的规则&lt;/p&gt;
-&lt;/blockquote&gt;</summary><category term="C秘籍"></category></entry><entry><title>Effective C++(编程的50个细节)</title><link href="http://www.yanyulin.info/pages/2013/11/effective.html" rel="alternate"></link><updated>2013-11-23T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-11-23:pages/2013/11/effective.html</id><summary type="html">&lt;hr /&gt;
+&lt;/blockquote&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Sat, 23 Nov 2013 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2013-11-23:pages/2013/11/deepc.html</guid><category>C秘籍</category></item><item><title>Effective C++(编程的50个细节)</title><link>http://www.yanyulin.info/pages/2013/11/effective.html</link><description>&lt;hr /&gt;
 &lt;p&gt;&lt;code&gt;Effective C++(编程的50个细节)&lt;/code&gt;着重讲解了编写C++程序应该注意的50个细节问题，书中的每一条准则描述了一个编写出更好的C++的方式，每一个条款的背后都有具体范例支持，书中讲的都是C++的编程技巧和注意事项，很多都是自己平时不太注意但又很重要的内容，绝对经典，作者Scott Meyers是全世界最知名的C++软件开发专家之一。&lt;/p&gt;
 &lt;p&gt;电子书PDF格式下载:&lt;a href="http://yunpan.cn/QUdi9Cq7G6RAZ" target="_blank" title="《Effective C++》"&gt;点这里&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;1、从C转向C++&lt;/p&gt;
@@ -6353,7 +6231,7 @@ D
 &lt;p&gt;条款48:重视编译器警告&lt;/p&gt;
 &lt;p&gt;条款49:熟悉标准库&lt;/p&gt;
 &lt;p&gt;条款50:提高对C++的认识&lt;/p&gt;
-&lt;/blockquote&gt;</summary><category term="C++书库"></category></entry><entry><title>Github上如何给别人贡献代码</title><link href="http://www.yanyulin.info/pages/2013/11/githubM.html" rel="alternate"></link><updated>2013-11-22T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-11-22:pages/2013/11/githubM.html</id><summary type="html">&lt;hr /&gt;
+&lt;/blockquote&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Sat, 23 Nov 2013 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2013-11-23:pages/2013/11/effective.html</guid><category>C++书库</category></item><item><title>Github上如何给别人贡献代码</title><link>http://www.yanyulin.info/pages/2013/11/githubM.html</link><description>&lt;hr /&gt;
 &lt;p&gt;本篇博文仅随前篇博文&lt;a href="http://www.yanyulin.info/pages/2013/11/github.html" title="Github简明教程(入门篇)"&gt;&lt;code&gt;Github&lt;/code&gt;简明教程(入门篇)&lt;/a&gt;，当然我的独立博客也是采用Github搭建，我所介绍的Github正是我搭建博客过程中一点一点学习的过程，如有错误，还请指出，同样大神们可以绕过。&lt;/p&gt;
 &lt;p&gt;本篇重点介绍&lt;code&gt;Github&lt;/code&gt;上如何给别人贡献代码，通过这个过程，也可以知道如果一个项目托管到Github上，团队成员之间合作的流程，给别人贡献代码，特别是一些开源组织，是件光荣的事&lt;/p&gt;
 &lt;p&gt;1、搜索你要贡献的代码仓库，在这里我创建了两个帐号，一个主帐号，里面有一个代码仓库mfjc，一个是将要贡献代码的帐号howard5888,搜索代码仓库如下图：
@@ -6427,7 +6305,7 @@ D
 &lt;img src="http://www.yanyulin.info/pics/tools/2github12.jpg"  alt="烟雨林博客"    width="100%"/&gt;
 &lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;下一篇将介绍如何利用Github搭建属于自已的博客&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://www.yanyulin.info" title="烟雨林个人博客"&gt;烟雨林个人博客&lt;/a&gt;&lt;/p&gt;</summary><category term="工具使用"></category></entry><entry><title>STL源码剖析(候捷译)</title><link href="http://www.yanyulin.info/pages/2013/11/stlOrigin.html" rel="alternate"></link><updated>2013-11-21T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-11-21:pages/2013/11/stlOrigin.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;&lt;a href="http://www.yanyulin.info" title="烟雨林个人博客"&gt;烟雨林个人博客&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Fri, 22 Nov 2013 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2013-11-22:pages/2013/11/githubM.html</guid><category>工具使用</category></item><item><title>STL源码剖析(候捷译)</title><link>http://www.yanyulin.info/pages/2013/11/stlOrigin.html</link><description>&lt;hr /&gt;
 &lt;p&gt;STL源码剖析 PDF格式下载:&lt;a href="http://yunpan.cn/QUj5p6EIPZH9y" target="_blank" title="《STL源码剖析》"&gt;点这里&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;STL源码剖析此书是一本不可多得的好书，大师的精典之作，大多数程序员只知道集合类非常好用，只需要向集合类中填加元素，不用担心空间的开设，以及空间的回收，也不用考虑集合类的效率，更重要的是集合类还给我们提供了各种各样的函数，但是知其所以然而不知其因为然，这样的程序员是不合格的，《STL源码剖析》很好的给我们讲解了集合类的底层实现，以及泛型算法。&lt;/p&gt;
 &lt;p&gt;STL源码剖析&lt;/p&gt;
@@ -6444,7 +6322,7 @@ D
 &lt;p&gt;附录A 参考书籍与推荐读物&lt;/p&gt;
 &lt;p&gt;附录B 候捷网站（本书支持站点简介）&lt;/p&gt;
 &lt;p&gt;附录C STLPort 的移植经验（by孟岩&lt;/p&gt;
-&lt;/blockquote&gt;</summary><category term="C++书库"></category></entry><entry><title>Github简明教程(入门篇)</title><link href="http://www.yanyulin.info/pages/2013/11/github.html" rel="alternate"></link><updated>2013-11-20T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-11-20:pages/2013/11/github.html</id><summary type="html">&lt;hr /&gt;
+&lt;/blockquote&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Thu, 21 Nov 2013 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2013-11-21:pages/2013/11/stlOrigin.html</guid><category>C++书库</category></item><item><title>Github简明教程(入门篇)</title><link>http://www.yanyulin.info/pages/2013/11/github.html</link><description>&lt;hr /&gt;
 &lt;p&gt;Github作为一项目托管仓库，里面有着各种各样的高质量代码，本篇博客针对Git入门或者初学者，各位大神可以绕过，关于GitHub的强大之处可以自已百度谷歌去，在继续阅读本篇博客之前，如果还没有帐号的同学，先到github官网上申请一个帐号http://www.github.com&lt;/p&gt;
 &lt;p&gt;1、首先登录自已的帐号，创建属于自已的代码库
 &lt;a href="http://www.yanyulin.info" target="_blank"&gt;
@@ -6494,7 +6372,7 @@ D
 跳转进入下一个页面，在页面最下方，就有如下图所示的删除铵钮
 &lt;a href="http://www.yanyulin.info" target="_blank"&gt;
 &lt;img src="http://www.yanyulin.info/pics/tools/github6.jpg"  alt="烟雨林博客" width="100%"/&gt;
-&lt;/a&gt;&lt;/p&gt;</summary><category term="工具使用"></category></entry><entry><title>Linux中0号进程的创建分析</title><link href="http://www.yanyulin.info/pages/2013/11/linux0.html" rel="alternate"></link><updated>2013-11-19T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-11-19:pages/2013/11/linux0.html</id><summary type="html">&lt;hr /&gt;
+&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Wed, 20 Nov 2013 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2013-11-20:pages/2013/11/github.html</guid><category>工具使用</category></item><item><title>Linux中0号进程的创建分析</title><link>http://www.yanyulin.info/pages/2013/11/linux0.html</link><description>&lt;hr /&gt;
 &lt;p&gt;&lt;code&gt;Linux&lt;/code&gt;中1号进程是由0号进程来创建的，因此必须要知道的是如何创建0号进程，由于在创建进程时，程序一直运行在内核态，而进程运行在用户态，因此创建0号进程涉及到特权级的变化，即从特权级0变到特权级3，&lt;code&gt;Linux&lt;/code&gt;是通过模拟中断返回来实现特权级的变化以及创建0号进程，通过将0号进程的代码段选择子以及程序计数器&lt;code&gt;EIP&lt;/code&gt;直接压入内核态堆栈，然后利用iret汇编指令中断返回跳转到0号进程运行。&lt;/p&gt;
 &lt;p&gt;代码如下&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;move_to_user_mode&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;&lt;span class="c1"&gt;//创建0号进程，开始进入0号进程，切换到特权级3运行&lt;/span&gt;
@@ -6637,7 +6515,7 @@ D
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;根据这个表可以看到的是任务0的内核态堆栈指针esp0=PAGE_SIZE+(long)&amp;amp;init_task,即第一个PCB块(task_struct)的顶部空间，PAGE_SIZE=4k,ss0=0x10,0x10查一下head.s你就会发现是gdt的第一个描述符，即内核代码段，后面还有几个是对数据段寄存器的定义以及ldt的定义&lt;/p&gt;</summary><category term="Linux汇总"></category></entry><entry><title>Assert(断言)实现机制剖析</title><link href="http://www.yanyulin.info/pages/2013/11/assert.html" rel="alternate"></link><updated>2013-11-18T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-11-18:pages/2013/11/assert.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;根据这个表可以看到的是任务0的内核态堆栈指针esp0=PAGE_SIZE+(long)&amp;amp;init_task,即第一个PCB块(task_struct)的顶部空间，PAGE_SIZE=4k,ss0=0x10,0x10查一下head.s你就会发现是gdt的第一个描述符，即内核代码段，后面还有几个是对数据段寄存器的定义以及ldt的定义&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Tue, 19 Nov 2013 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2013-11-19:pages/2013/11/linux0.html</guid><category>Linux汇总</category></item><item><title>Assert(断言)实现机制剖析</title><link>http://www.yanyulin.info/pages/2013/11/assert.html</link><description>&lt;hr /&gt;
 &lt;p&gt;断言(assert)的作用是用来判断程序运行的正确性，确保程序运行的行为与我们理解的一致。其调用形式为assert(logic expression),如果逻辑表达式为假，则调用abort()终止程序的运行。&lt;/p&gt;
 &lt;p&gt;查看MSDN帮助文档，可以得到assert的解释信息如下：&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;The&lt;/span&gt; &lt;span class="n"&gt;ANSI&lt;/span&gt; &lt;span class="n"&gt;assert&lt;/span&gt; &lt;span class="n"&gt;macro&lt;/span&gt; &lt;span class="n"&gt;is&lt;/span&gt; &lt;span class="n"&gt;typically&lt;/span&gt; &lt;span class="n"&gt;used&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;identify&lt;/span&gt; &lt;span class="n"&gt;logic&lt;/span&gt; &lt;span class="n"&gt;errors&lt;/span&gt; &lt;span class="n"&gt;during&lt;/span&gt; &lt;span class="n"&gt;program&lt;/span&gt; &lt;span class="n"&gt;development&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; 
@@ -6728,7 +6606,7 @@ Assert断言在程序的作用&lt;/p&gt;
 &lt;li&gt;断言只是用来检查程序的逻辑正确性，不能代替条件替换&lt;/li&gt;
 &lt;li&gt;断言比printf语句这种形式的打印好使&lt;/li&gt;
 &lt;li&gt;断言参数可以是函数调用,但是函数返回值要是真假,如assert(sort()),解释看上面源码分析&lt;/li&gt;
-&lt;/ol&gt;</summary><category term="C++学习"></category></entry><entry><title>2014年华为校招机试(一)</title><link href="http://www.yanyulin.info/pages/2013/11/huawei_2014_1.html" rel="alternate"></link><updated>2013-11-18T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-11-18:pages/2013/11/huawei_2014_1.html</id><summary type="html">&lt;hr /&gt;
+&lt;/ol&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Mon, 18 Nov 2013 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2013-11-18:pages/2013/11/assert.html</guid><category>C++学习</category></item><item><title>2014年华为校招机试(一)</title><link>http://www.yanyulin.info/pages/2013/11/huawei_2014_1.html</link><description>&lt;hr /&gt;
 &lt;p&gt;通过键盘输入一串小写字母(a~z)组成的字符串。请编写一个字符串过滤程序，若字符串中出现多个相同的字符，将非首次出现的字符过滤掉。
 比如字符串“abacacde”过滤结果为“abcde”。
 要求实现函数：&lt;code&gt;void stringFilter(const char *pInputStr, long lInputLen, char *pOutputStr)&lt;/code&gt;&lt;/p&gt;
@@ -6774,7 +6652,7 @@ Assert断言在程序的作用&lt;/p&gt;
         &lt;span class="n"&gt;count&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;?&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;pOutputStr&lt;/span&gt;&lt;span class="o"&gt;++=&lt;/span&gt;&lt;span class="n"&gt;count&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;48&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;pOutputStr&lt;/span&gt;&lt;span class="o"&gt;++=&lt;/span&gt;&lt;span class="n"&gt;pInputStr&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;+=&lt;/span&gt;&lt;span class="n"&gt;count&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;pOutputStr&lt;/span&gt;&lt;span class="o"&gt;++=&lt;/span&gt;&lt;span class="n"&gt;pInputStr&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;+=&lt;/span&gt;&lt;span class="n"&gt;count&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
     &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</summary><category term="华为笔试题"></category></entry><entry><title>深度探索C++对象模型</title><link href="http://www.yanyulin.info/pages/2013/11/objectModel.html" rel="alternate"></link><updated>2013-11-18T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-11-18:pages/2013/11/objectModel.html</id><summary type="html">&lt;hr /&gt;
+&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Mon, 18 Nov 2013 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2013-11-18:pages/2013/11/huawei_2014_1.html</guid><category>华为笔试题</category></item><item><title>深度探索C++对象模型</title><link>http://www.yanyulin.info/pages/2013/11/objectModel.html</link><description>&lt;hr /&gt;
 &lt;p&gt;电子书PDF格式下载:&lt;a href="http://yunpan.cn/QUK3HwIaW6tu2" target="_blank" title="《深度探索C++对象模型》"&gt;点这里&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;第0章 导读（译者的话）&lt;/p&gt;
 &lt;p&gt;第1章 关于对象（Object Lessons）&lt;/p&gt;
@@ -6827,7 +6705,7 @@ Assert断言在程序的作用&lt;/p&gt;
 &lt;p&gt;7.2 异常处理（Exception Handling）&lt;/p&gt;
 &lt;p&gt;7.3 执行期类型识别（Runtime Type Identification，RTTI）&lt;/p&gt;
 &lt;p&gt;7.4 效率有了，弹性呢？&lt;/p&gt;
-&lt;/blockquote&gt;</summary><category term="C++书库"></category></entry><entry><title>被人误解的SIZEOF</title><link href="http://www.yanyulin.info/pages/2013/11/sizeof.html" rel="alternate"></link><updated>2013-11-18T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-11-18:pages/2013/11/sizeof.html</id><summary type="html">&lt;hr /&gt;
+&lt;/blockquote&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Mon, 18 Nov 2013 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2013-11-18:pages/2013/11/objectModel.html</guid><category>C++书库</category></item><item><title>被人误解的SIZEOF</title><link>http://www.yanyulin.info/pages/2013/11/sizeof.html</link><description>&lt;hr /&gt;
 &lt;p&gt;sizeof是一个函数吗?&lt;/p&gt;
 &lt;p&gt;sizeof与strlen的区别?&lt;/p&gt;
 &lt;p&gt;sizeof(int)(*p)的值是多少?&lt;/p&gt;
@@ -6873,7 +6751,7 @@ Assert断言在程序的作用&lt;/p&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;因为a是一个指向整形的指针，结果为4也是很显然的&lt;/p&gt;</summary><category term="C++学习"></category></entry><entry><title>Linux入门版视频教程(基础)</title><link href="http://www.yanyulin.info/pages/2013/11/vlinux1.html" rel="alternate"></link><updated>2013-11-18T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-11-18:pages/2013/11/vlinux1.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;因为a是一个指向整形的指针，结果为4也是很显然的&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Mon, 18 Nov 2013 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2013-11-18:pages/2013/11/sizeof.html</guid><category>C++学习</category></item><item><title>Linux入门版视频教程(基础)</title><link>http://www.yanyulin.info/pages/2013/11/vlinux1.html</link><description>&lt;hr /&gt;
 &lt;p&gt;视频教程下载地址:&lt;a href="http://yunpan.cn/QUKdFfemwQhzP" target="_blank"&gt;点这里&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Linux基本知识以及启动&lt;/p&gt;
 &lt;blockquote&gt;
@@ -6909,7 +6787,7 @@ Assert断言在程序的作用&lt;/p&gt;
 &lt;p&gt;Telnet&lt;/p&gt;
 &lt;p&gt;等&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;/blockquote&gt;</summary><category term="Linux视频"></category></entry><entry><title>2013届华为校园招聘成都上机题目</title><link href="http://www.yanyulin.info/pages/2013/09/huawei_2013_2.html" rel="alternate"></link><updated>2013-09-11T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-09-11:pages/2013/09/huawei_2013_2.html</id><summary type="html">&lt;p&gt;1.手机号码合法性判断（20分）&lt;/p&gt;
+&lt;/blockquote&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Mon, 18 Nov 2013 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2013-11-18:pages/2013/11/vlinux1.html</guid><category>Linux视频</category></item><item><title>2013届华为校园招聘成都上机题目</title><link>http://www.yanyulin.info/pages/2013/09/huawei_2013_2.html</link><description>&lt;p&gt;1.手机号码合法性判断（20分）&lt;/p&gt;
 &lt;p&gt;问题描述：&lt;/p&gt;
 &lt;p&gt;我国大陆运营商的手机号码标准格式为：国家码+手机号码，例如：8613912345678。特点如下：&lt;/p&gt;
 &lt;p&gt;1、 长度13位；&lt;/p&gt;
@@ -7059,7 +6937,7 @@ Assert断言在程序的作用&lt;/p&gt;
     &lt;span class="p"&gt;}&lt;/span&gt;
     &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mh"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="err"&gt;｝&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</summary><category term="华为笔试题"></category></entry><entry><title>String StringBuffer StringBuilder的区别分析</title><link href="http://www.yanyulin.info/pages/2013/07/string.html" rel="alternate"></link><updated>2013-07-31T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-07-31:pages/2013/07/string.html</id><summary type="html">&lt;hr /&gt;
+&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Wed, 11 Sep 2013 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2013-09-11:pages/2013/09/huawei_2013_2.html</guid><category>华为笔试题</category></item><item><title>String StringBuffer StringBuilder的区别分析</title><link>http://www.yanyulin.info/pages/2013/07/string.html</link><description>&lt;hr /&gt;
 &lt;p&gt;这是一道很常见的面试题目，至少我遇到过String/StringBuffer/StringBuilder的区别：String是不可变的对象(final)类型，每一次对String对象的更改均是生成一个新的String对象，原有的对象不会改变，相比之下StringBuffer与StringBuilder均是可更改的对象，效率要大于String,两者之间的区别在于StringBuffer适用于多线程，是线程安全的，而StringBuiler是JDK5.0后出来的，专门针对单线程，效率上要高于StringBuffer。&lt;/p&gt;
 &lt;p&gt;String测试的源代码：&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c1"&gt;//生成一个字符串对象&lt;/span&gt;
@@ -7180,7 +7058,7 @@ StringBuilder的测试源代码：&lt;/p&gt;
 
 
 &lt;p&gt;上面的代码也是类似的，说明了StringBuilder与StringBuffer类似，但比StringBuffer的效率更改，这是为什么呢，看看源代码就知道了:)
-源代码中StringBuffer与StringBuilder继承自同一个父类，代码极奇相似，只是StringBuilder各个函数少了synchonized关键字，这也就说明了StringBuilder不是线程安全的，即然有了synchronized关键字，那么代码每次运行的时候均需要锁住该对象，以避免其他对象调用该方法，不管是单线程还是多线程，因此这需要一定的开销，因此StringBuiler的效率要高于StringBuffer:)&lt;/p&gt;</summary><category term="Java"></category></entry><entry><title>2013年谷歌校招笔试(一)</title><link href="http://www.yanyulin.info/pages/2013/06/google_2013_1.html" rel="alternate"></link><updated>2013-06-11T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-06-11:pages/2013/06/google_2013_1.html</id><summary type="html">&lt;hr /&gt;
+源代码中StringBuffer与StringBuilder继承自同一个父类，代码极奇相似，只是StringBuilder各个函数少了synchonized关键字，这也就说明了StringBuilder不是线程安全的，即然有了synchronized关键字，那么代码每次运行的时候均需要锁住该对象，以避免其他对象调用该方法，不管是单线程还是多线程，因此这需要一定的开销，因此StringBuiler的效率要高于StringBuffer:)&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Wed, 31 Jul 2013 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2013-07-31:pages/2013/07/string.html</guid><category>Java</category></item><item><title>2013年谷歌校招笔试(一)</title><link>http://www.yanyulin.info/pages/2013/06/google_2013_1.html</link><description>&lt;hr /&gt;
 &lt;p&gt;一：单选题&lt;/p&gt;
 &lt;p&gt;1：使用C语言将一个1G字节的数组从头到尾全部设置为’A’,在一台典型的当代PC上，需要花费的CPU时间的数量级最接近：(&lt;code&gt;B&lt;/code&gt;)&lt;/p&gt;
 &lt;p&gt;A 0.001秒 B 1秒 C 100秒 D 2小时&lt;/p&gt;
@@ -7267,7 +7145,7 @@ str&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;flag&lt;/span&gt;
 }
 }
 }
-&lt;/pre&gt;&lt;/div&gt;</summary><category term="谷歌笔试题"></category></entry><entry><title>2013年华为校招机试(一)</title><link href="http://www.yanyulin.info/pages/2013/06/huawei_2013_1.html" rel="alternate"></link><updated>2013-06-11T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-06-11:pages/2013/06/huawei_2013_1.html</id><summary type="html">&lt;hr /&gt;
+&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Tue, 11 Jun 2013 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2013-06-11:pages/2013/06/google_2013_1.html</guid><category>谷歌笔试题</category></item><item><title>2013年华为校招机试(一)</title><link>http://www.yanyulin.info/pages/2013/06/huawei_2013_1.html</link><description>&lt;hr /&gt;
 &lt;p&gt;通过键盘输入任意一个字符串序列，字符串可能包含多个子串，子串以空格分隔，请编写一个程序，自动分离出各个子串，并使用’,’将其分隔，并且在最后也补充一个’,’，并将子串存储。&lt;/p&gt;
 &lt;p&gt;如果输入&lt;code&gt;”abc def ghi d”&lt;/code&gt;,结果将是&lt;code&gt;abc,def,gh,i,d&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;要求实现函数&lt;code&gt;Void DivideString(const char *pInputStr,long IinputLen,char *pOutputStr);&lt;/code&gt;&lt;/p&gt;
@@ -7322,7 +7200,7 @@ str&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;flag&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;InputSrc&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</summary><category term="华为笔试题"></category></entry><entry><title>中国人民银行2013校招技术类面经</title><link href="http://www.yanyulin.info/pages/2013/01/renmingyinhang_1.html" rel="alternate"></link><updated>2013-01-19T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-01-19:pages/2013/01/renmingyinhang_1.html</id><summary type="html">&lt;p&gt;面试地点:&lt;strong&gt;北京&lt;/strong&gt;&lt;/p&gt;
+&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Tue, 11 Jun 2013 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2013-06-11:pages/2013/06/huawei_2013_1.html</guid><category>华为笔试题</category></item><item><title>中国人民银行2013校招技术类面经</title><link>http://www.yanyulin.info/pages/2013/01/renmingyinhang_1.html</link><description>&lt;p&gt;面试地点:&lt;strong&gt;北京&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;面试职位:&lt;strong&gt;技术类岗位&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;中国人民银行&lt;/strong&gt;在2013年校招中只有一面，结果会在2月旬的时候进行通知，随后会进行体检，再然后是政治材料的政审，中国人民银行据说只要进入了，就相当于公务员的待遇，不知道真假~~~&lt;/p&gt;
 &lt;p&gt;只有一面&lt;/p&gt;
@@ -7334,7 +7212,7 @@ str&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;flag&lt;/span&gt;
 &lt;p&gt;为什么选择这样的行业而没有选择互联网等相关的企业，说白了就是问你为什么选择中国人民银行&lt;/p&gt;
 &lt;p&gt;小结：语言表达能力有待加强，感觉说的语无伦次、逻辑混乱&lt;/p&gt;
 &lt;p&gt;而且就面了&lt;code&gt;5&lt;/code&gt;分钟，貌似正常应该&lt;code&gt;10&lt;/code&gt;分钟&lt;/p&gt;
-&lt;p&gt;到此为止&lt;/p&gt;</summary><category term="银行面经"></category></entry><entry><title>2012年华为校招南京机试</title><link href="http://www.yanyulin.info/pages/2012/11/huawei_2012_3.html" rel="alternate"></link><updated>2012-11-12T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2012-11-12:pages/2012/11/huawei_2012_3.html</id><summary type="html">&lt;p&gt;一：给定一个字符串，寻找它的一个最大子字符串，该子字符串是回文。例如给定一个用例的字符串&lt;code&gt;”gabcdcbaef”&lt;/code&gt;,那么最大回文 字串是”abcdcba”&lt;/p&gt;
+&lt;p&gt;到此为止&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Sat, 19 Jan 2013 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2013-01-19:pages/2013/01/renmingyinhang_1.html</guid><category>银行面经</category></item><item><title>2012年华为校招南京机试</title><link>http://www.yanyulin.info/pages/2012/11/huawei_2012_3.html</link><description>&lt;p&gt;一：给定一个字符串，寻找它的一个最大子字符串，该子字符串是回文。例如给定一个用例的字符串&lt;code&gt;”gabcdcbaef”&lt;/code&gt;,那么最大回文 字串是”abcdcba”&lt;/p&gt;
 &lt;p&gt;函数声明为&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="n"&gt;huiwen&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;char&lt;/span&gt; &lt;span class="n"&gt;input&lt;/span&gt;&lt;span class="p"&gt;[],&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;len&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kt"&gt;char&lt;/span&gt; &lt;span class="n"&gt;output&lt;/span&gt;&lt;span class="p"&gt;[])&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
@@ -7549,7 +7427,7 @@ str&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;flag&lt;/span&gt;
         &lt;span class="n"&gt;result&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;strlen&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;result&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;l&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mh"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;tmp&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
     &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</summary><category term="华为笔试题"></category></entry><entry><title>2012年华为成都校招机试</title><link href="http://www.yanyulin.info/pages/2012/11/huawei_2012_1.html" rel="alternate"></link><updated>2012-11-11T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2012-11-11:pages/2012/11/huawei_2012_1.html</id><summary type="html">&lt;p&gt;1：去掉一个数组里的最大值与最小值，求数组元素的平均值。&lt;/p&gt;
+&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Mon, 12 Nov 2012 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2012-11-12:pages/2012/11/huawei_2012_3.html</guid><category>华为笔试题</category></item><item><title>2012年华为成都校招机试</title><link>http://www.yanyulin.info/pages/2012/11/huawei_2012_1.html</link><description>&lt;p&gt;1：去掉一个数组里的最大值与最小值，求数组元素的平均值。&lt;/p&gt;
 &lt;p&gt;函数接口为：&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kt"&gt;float&lt;/span&gt; &lt;span class="n"&gt;avescore&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;float&lt;/span&gt; &lt;span class="n"&gt;score&lt;/span&gt;&lt;span class="p"&gt;[]&lt;/span&gt; &lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
@@ -7627,7 +7505,7 @@ str&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;flag&lt;/span&gt;
     &lt;span class="n"&gt;free&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;od&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
     &lt;span class="n"&gt;free&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ev&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</summary><category term="华为笔试题"></category></entry><entry><title>阿里巴巴校招2010年软研面经</title><link href="http://www.yanyulin.info/pages/2010/11/ali_2.html" rel="alternate"></link><updated>2010-11-19T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2010-11-19:pages/2010/11/ali_2.html</id><summary type="html">&lt;p&gt;刚刚参加了阿里巴巴的面试，现将题目公布于此，希望对找工作的人有帮助。&lt;/p&gt;
+&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Sun, 11 Nov 2012 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2012-11-11:pages/2012/11/huawei_2012_1.html</guid><category>华为笔试题</category></item><item><title>阿里巴巴校招2010年软研面经</title><link>http://www.yanyulin.info/pages/2010/11/ali_2.html</link><description>&lt;p&gt;刚刚参加了阿里巴巴的面试，现将题目公布于此，希望对找工作的人有帮助。&lt;/p&gt;
 &lt;p&gt;1、String,StringBuffer, StringBuilder 的区别是什么？String为什么是不可变的？&lt;/p&gt;
 &lt;p&gt;这道题源码分析，可以参考这篇博文
 &lt;a href="http://www.yanyulin.info/pages/2013/07/string.html" target="_blank"&gt;
@@ -7701,4 +7579,4 @@ WHERE y.num BETWEEN 200 AND 300；
 具体大小应根据内存总大小值来确定，一般这两个值应相等，否则当内存不够时，造成GC重新分配内存。
 &lt;code&gt;-XX:PermSize=1024m&lt;/code&gt; 设置永久内存区大小
 &lt;code&gt;-XX:MaxParmSize=1024m&lt;/code&gt; 设置最大永久内存区大小。&lt;/p&gt;
-&lt;p&gt;到此为止&lt;/p&gt;</summary><category term="阿里面经"></category></entry></feed>
+&lt;p&gt;到此为止&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Fri, 19 Nov 2010 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2010-11-19:pages/2010/11/ali_2.html</guid><category>阿里面经</category></item></channel></rss>
