@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>烟雨林</title><link>http://www.yanyulin.info/</link><description></description><atom:link href="http://www.yanyulin.info/feeds/all.rss.xml" rel="self"></atom:link><lastBuildDate>Thu, 13 Mar 2014 00:00:00 +0800</lastBuildDate><item><title>暴风影音笔试题校招笔试题2014年技术类</title><link>http://www.yanyulin.info/pages/2014/03/baofeng_2014_A.html</link><description>&lt;hr /&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>烟雨林</title><link>http://www.yanyulin.info/</link><description></description><atom:link href="http://www.yanyulin.info/feeds/all.rss.xml" rel="self"></atom:link><lastBuildDate>Thu, 13 Mar 2014 00:00:00 +0800</lastBuildDate><item><title>暴风影音笔试题校招笔试题2014年技术类</title><link>http://www.yanyulin.info/pages/2014/03/baofeng_2014_B.html</link><description>&lt;hr /&gt;
 &lt;p&gt;如有错误，或更加精简的方法，请留言，我会更正，以方便更多的人
 暴风影音2014年A郑，据说可以解决&lt;code&gt;户口&lt;/code&gt;
 注:以下如无特殊说明，均假设计算机编程环境为&lt;code&gt;intel x86&lt;/code&gt;的&lt;code&gt;32位CPU&lt;/code&gt;,编译器为VS,编程语言首选C语言，也可以使用自已熟悉的编程语言。&lt;/p&gt;
@@ -66,7 +66,7 @@
 &lt;p&gt;6、编写程序，在原字符串中把尾部m个字符移动到字符串的头部，要求：长度为n字符串操作时间复杂度为O(n),空间复杂度为O(1)。&lt;/p&gt;
 &lt;p&gt;如：原字符串为&lt;code&gt;”Ilovebaofeng”&lt;/code&gt;，m=7，输出结果：&lt;code&gt;”baofengIlove”&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;7、暴风影音的片源服务器上保存着两个文件a和b，各存放50亿条URL，每条URL占用64字节，内存限制是4G，让你找出a,b文件共同的URL。要求：算法设计。&lt;/p&gt;
-&lt;p&gt;解：大数据问题。5*64=320G,4G内存无法一次性装入。因此可以用一个hash函数将a文件的URL hash到n个小文件中，对b文件的URL做同样的操作，因此，所有可能相同的URL都会被分到相同的小文件中。因为hash函数的特点是如果a=b,则hash(a)=hash(b).再对每一个小文件统计相同的URL即可，可以两次扫描，也可以用位图。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Thu, 13 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-03-13:pages/2014/03/baofeng_2014_A.html</guid><category>暴风笔试题</category></item><item><title>大众点评笔试题校招笔试题2014年技术类</title><link>http://www.yanyulin.info/pages/2014/03/dianping_2014_a.html</link><description>&lt;hr /&gt;
+&lt;p&gt;解：大数据问题。5*64=320G,4G内存无法一次性装入。因此可以用一个hash函数将a文件的URL hash到n个小文件中，对b文件的URL做同样的操作，因此，所有可能相同的URL都会被分到相同的小文件中。因为hash函数的特点是如果a=b,则hash(a)=hash(b).再对每一个小文件统计相同的URL即可，可以两次扫描，也可以用位图。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Thu, 13 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-03-13:pages/2014/03/baofeng_2014_B.html</guid><category>暴风笔试题</category></item><item><title>大众点评笔试题校招笔试题2014年技术类</title><link>http://www.yanyulin.info/pages/2014/03/dianping_2014_a.html</link><description>&lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;大众点评此次笔试题选择的方式是在线笔试题&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;1、团购&lt;code&gt;（Group purchase）&lt;/code&gt;就是团体购物，指认识或不认识的消费者联合起来，加大与商家的谈判能力，以求得最优价格的一种购物方式，大众点评团是中国领先的本地生活消费平台，致力于为消费者提供本地餐馆美食、电影、KTV、休闲娱乐、酒店旅游、美容保健、婚庆亲子、购物等生活服务信息。&lt;/p&gt;
 &lt;p&gt;为了更好的服务消费者，点评推出了优惠券这项功能，并且也扩张到了非常多的商户。现在计划上线一个新的业务，在团购的基础上增加优惠券功能，更大幅度的让利消费者。&lt;/p&gt;
