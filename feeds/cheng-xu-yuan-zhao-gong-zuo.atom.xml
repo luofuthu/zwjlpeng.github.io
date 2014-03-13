@@ -1,5 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>烟雨林</title><link href="http://www.yanyulin.info/" rel="alternate"></link><link href="http://www.yanyulin.info/feeds/cheng-xu-yuan-zhao-gong-zuo.atom.xml" rel="self"></link><id>http://www.yanyulin.info/</id><updated>2014-03-12T00:00:00+08:00</updated><entry><title>大众点评笔试题校招笔试题2014年技术类</title><link href="http://www.yanyulin.info/pages/2014/03/dianping_2014_a.html" rel="alternate"></link><updated>2014-03-12T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-12:pages/2014/03/dianping_2014_a.html</id><summary type="html">&lt;hr /&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>烟雨林</title><link href="http://www.yanyulin.info/" rel="alternate"></link><link href="http://www.yanyulin.info/feeds/cheng-xu-yuan-zhao-gong-zuo.atom.xml" rel="self"></link><id>http://www.yanyulin.info/</id><updated>2014-03-13T00:00:00+08:00</updated><entry><title>暴风影音笔试题校招笔试题2014年技术类</title><link href="http://www.yanyulin.info/pages/2014/03/baofeng_2014_A.html" rel="alternate"></link><updated>2014-03-13T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-13:pages/2014/03/baofeng_2014_A.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;如有错误，或更加精简的方法，请留言，我会更正，以方便更多的人
+暴风影音2014年A郑，据说可以解决&lt;code&gt;户口&lt;/code&gt;
+注:以下如无特殊说明，均假设计算机编程环境为&lt;code&gt;intel x86&lt;/code&gt;的&lt;code&gt;32位CPU&lt;/code&gt;,编译器为VS,编程语言首选C语言，也可以使用自已熟悉的编程语言。&lt;/p&gt;
+&lt;p&gt;1、1.升序排列下列数值：(101001)2,(40)10,(23)8,(18)16&lt;/p&gt;
+&lt;p&gt;解：其中后面的2、10、8、16表示的是进制数&lt;/p&gt;
+&lt;p&gt;2、写出下列函数的返回值&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;func&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;300&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
+            &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+            &lt;span class="k"&gt;while&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
+                &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+                &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+            &lt;span class="p"&gt;}&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;解：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;x = x&amp;amp;(x-1)&lt;/code&gt;的作用是将x(二进制表示)最右边的1消去，所以，程序的功能是求x的二进制表示法有多少个1.因为&lt;code&gt;300(10)=100101100(2)&lt;/code&gt;,所以返回值是4.&lt;/p&gt;
+&lt;p&gt;3、写出下面代码的输出&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#include&amp;lt;stdio.h&amp;gt;&lt;/span&gt;
+&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="p"&gt;(){&lt;/span&gt;
+    &lt;span class="kt"&gt;char&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;abcdef&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="kt"&gt;char&lt;/span&gt; &lt;span class="n"&gt;str&lt;/span&gt;&lt;span class="p"&gt;[]&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;123456&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+    &lt;span class="n"&gt;printf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;d%&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;
+    &lt;span class="n"&gt;printf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;c%&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;]);&lt;/span&gt;
+    &lt;span class="n"&gt;printf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;c%&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;str&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;
+    &lt;span class="n"&gt;printf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;c%&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;str&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;]);&lt;/span&gt;
+
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;解：&lt;/p&gt;
+&lt;p&gt;这道题出得十分YD,注意是d%而不是%d,所以，你懂的。答案是,一不小心，可能会跌爆眼镜！&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;d&lt;/span&gt;
+&lt;span class="n"&gt;c&lt;/span&gt;
+&lt;span class="n"&gt;c&lt;/span&gt;
+&lt;span class="n"&gt;c&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;4、使用C语言写出存储内容为整数的单链表数据类型定义，并使用自己定义的单链表数据类型定义，完成下面的算法，要求优化时间与空间复杂度。&lt;/p&gt;
+&lt;p&gt;算法要求：合并两个已经排序的单链表为一个排序的单链表，相同内容只保留一个&lt;/p&gt;
+&lt;p&gt;如：单链表a:1-&amp;gt;2-&amp;gt;3-&amp;gt;4&lt;/p&gt;
+&lt;p&gt;单链表b:3-&amp;gt;4-&amp;gt;5&lt;/p&gt;
+&lt;p&gt;输出：1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5&lt;/p&gt;
+&lt;p&gt;解：合并两个链表的方法其它同类型的面试题已经有讲过不少了，这里多了一个“去重”要求。只需要多处理一种情况即可。下面用的是C++，稍作改进就可以变成C.&lt;/p&gt;
+&lt;p&gt;5、编写程序，把一个有序整数数组放到以整数为元素的二叉树中，生成一个平衡排序二叉树。设计并变成实现一种遍历方法，是这种遍历方法的输出正好是输入数据的次序。
+如数组 a:{1,2,3,4,5,6,7}
+生成的二叉树：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;        &lt;span class="mi"&gt;4&lt;/span&gt;
+
+    &lt;span class="mi"&gt;2&lt;/span&gt;       &lt;span class="mi"&gt;6&lt;/span&gt;
+
+ &lt;span class="mi"&gt;1&lt;/span&gt;    &lt;span class="mi"&gt;3&lt;/span&gt;   &lt;span class="mi"&gt;5&lt;/span&gt;    &lt;span class="mi"&gt;7&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;解：&lt;/p&gt;
+&lt;p&gt;本来将一个有序数组放到一棵二叉树有很多种摆放方式，但是题目要求是平衡二叉树，容易想到的是二分思想，当每个结点左边和右边的结点数相等（或只相差1个的时候）这棵树就是平衡的，最后再中序输出即可。&lt;/p&gt;
+&lt;p&gt;6、编写程序，在原字符串中把尾部m个字符移动到字符串的头部，要求：长度为n字符串操作时间复杂度为O(n),空间复杂度为O(1)。&lt;/p&gt;
+&lt;p&gt;如：原字符串为&lt;code&gt;”Ilovebaofeng”&lt;/code&gt;，m=7，输出结果：&lt;code&gt;”baofengIlove”&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;7、暴风影音的片源服务器上保存着两个文件a和b，各存放50亿条URL，每条URL占用64字节，内存限制是4G，让你找出a,b文件共同的URL。要求：算法设计。&lt;/p&gt;
+&lt;p&gt;解：大数据问题。5*64=320G,4G内存无法一次性装入。因此可以用一个hash函数将a文件的URL hash到n个小文件中，对b文件的URL做同样的操作，因此，所有可能相同的URL都会被分到相同的小文件中。因为hash函数的特点是如果a=b,则hash(a)=hash(b).再对每一个小文件统计相同的URL即可，可以两次扫描，也可以用位图。&lt;/p&gt;</summary><category term="暴风笔试题"></category></entry><entry><title>大众点评笔试题校招笔试题2014年技术类</title><link href="http://www.yanyulin.info/pages/2014/03/dianping_2014_a.html" rel="alternate"></link><updated>2014-03-12T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-12:pages/2014/03/dianping_2014_a.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;大众点评此次笔试题选择的方式是在线笔试题&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;1、团购&lt;code&gt;（Group purchase）&lt;/code&gt;就是团体购物，指认识或不认识的消费者联合起来，加大与商家的谈判能力，以求得最优价格的一种购物方式，大众点评团是中国领先的本地生活消费平台，致力于为消费者提供本地餐馆美食、电影、KTV、休闲娱乐、酒店旅游、美容保健、婚庆亲子、购物等生活服务信息。&lt;/p&gt;
 &lt;p&gt;为了更好的服务消费者，点评推出了优惠券这项功能，并且也扩张到了非常多的商户。现在计划上线一个新的业务，在团购的基础上增加优惠券功能，更大幅度的让利消费者。&lt;/p&gt;

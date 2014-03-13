@@ -1,5 +1,139 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>烟雨林</title><link href="http://www.yanyulin.info/" rel="alternate"></link><link href="http://www.yanyulin.info/feeds/all.atom.xml" rel="self"></link><id>http://www.yanyulin.info/</id><updated>2014-03-12T00:00:00+08:00</updated><entry><title>大众点评笔试题校招笔试题2014年技术类</title><link href="http://www.yanyulin.info/pages/2014/03/dianping_2014_a.html" rel="alternate"></link><updated>2014-03-12T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-12:pages/2014/03/dianping_2014_a.html</id><summary type="html">&lt;hr /&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>烟雨林</title><link href="http://www.yanyulin.info/" rel="alternate"></link><link href="http://www.yanyulin.info/feeds/all.atom.xml" rel="self"></link><id>http://www.yanyulin.info/</id><updated>2014-03-13T00:00:00+08:00</updated><entry><title>暴风影音笔试题校招笔试题2014年技术类</title><link href="http://www.yanyulin.info/pages/2014/03/baofeng_2014_A.html" rel="alternate"></link><updated>2014-03-13T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-13:pages/2014/03/baofeng_2014_A.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;如有错误，或更加精简的方法，请留言，我会更正，以方便更多的人
+暴风影音2014年A郑，据说可以解决&lt;code&gt;户口&lt;/code&gt;
+注:以下如无特殊说明，均假设计算机编程环境为&lt;code&gt;intel x86&lt;/code&gt;的&lt;code&gt;32位CPU&lt;/code&gt;,编译器为VS,编程语言首选C语言，也可以使用自已熟悉的编程语言。&lt;/p&gt;
+&lt;p&gt;1、1.升序排列下列数值：(101001)2,(40)10,(23)8,(18)16&lt;/p&gt;
+&lt;p&gt;解：其中后面的2、10、8、16表示的是进制数&lt;/p&gt;
+&lt;p&gt;2、写出下列函数的返回值&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;func&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;300&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
+            &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+            &lt;span class="k"&gt;while&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
+                &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+                &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+            &lt;span class="p"&gt;}&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;解：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;x = x&amp;amp;(x-1)&lt;/code&gt;的作用是将x(二进制表示)最右边的1消去，所以，程序的功能是求x的二进制表示法有多少个1.因为&lt;code&gt;300(10)=100101100(2)&lt;/code&gt;,所以返回值是4.&lt;/p&gt;
+&lt;p&gt;3、写出下面代码的输出&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#include&amp;lt;stdio.h&amp;gt;&lt;/span&gt;
+&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="p"&gt;(){&lt;/span&gt;
+    &lt;span class="kt"&gt;char&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;abcdef&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="kt"&gt;char&lt;/span&gt; &lt;span class="n"&gt;str&lt;/span&gt;&lt;span class="p"&gt;[]&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;123456&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+    &lt;span class="n"&gt;printf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;d%&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;
+    &lt;span class="n"&gt;printf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;c%&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;]);&lt;/span&gt;
+    &lt;span class="n"&gt;printf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;c%&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;str&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;
+    &lt;span class="n"&gt;printf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;c%&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;str&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;]);&lt;/span&gt;
+
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;解：&lt;/p&gt;
+&lt;p&gt;这道题出得十分YD,注意是d%而不是%d,所以，你懂的。答案是,一不小心，可能会跌爆眼镜！&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;d&lt;/span&gt;
+&lt;span class="n"&gt;c&lt;/span&gt;
+&lt;span class="n"&gt;c&lt;/span&gt;
+&lt;span class="n"&gt;c&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;4、使用C语言写出存储内容为整数的单链表数据类型定义，并使用自己定义的单链表数据类型定义，完成下面的算法，要求优化时间与空间复杂度。&lt;/p&gt;
+&lt;p&gt;算法要求：合并两个已经排序的单链表为一个排序的单链表，相同内容只保留一个&lt;/p&gt;
+&lt;p&gt;如：单链表a:1-&amp;gt;2-&amp;gt;3-&amp;gt;4&lt;/p&gt;
+&lt;p&gt;单链表b:3-&amp;gt;4-&amp;gt;5&lt;/p&gt;
+&lt;p&gt;输出：1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5&lt;/p&gt;
+&lt;p&gt;解：合并两个链表的方法其它同类型的面试题已经有讲过不少了，这里多了一个“去重”要求。只需要多处理一种情况即可。下面用的是C++，稍作改进就可以变成C.&lt;/p&gt;
+&lt;p&gt;5、编写程序，把一个有序整数数组放到以整数为元素的二叉树中，生成一个平衡排序二叉树。设计并变成实现一种遍历方法，是这种遍历方法的输出正好是输入数据的次序。
+如数组 a:{1,2,3,4,5,6,7}
+生成的二叉树：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;        &lt;span class="mi"&gt;4&lt;/span&gt;
+
+    &lt;span class="mi"&gt;2&lt;/span&gt;       &lt;span class="mi"&gt;6&lt;/span&gt;
+
+ &lt;span class="mi"&gt;1&lt;/span&gt;    &lt;span class="mi"&gt;3&lt;/span&gt;   &lt;span class="mi"&gt;5&lt;/span&gt;    &lt;span class="mi"&gt;7&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;解：&lt;/p&gt;
+&lt;p&gt;本来将一个有序数组放到一棵二叉树有很多种摆放方式，但是题目要求是平衡二叉树，容易想到的是二分思想，当每个结点左边和右边的结点数相等（或只相差1个的时候）这棵树就是平衡的，最后再中序输出即可。&lt;/p&gt;
+&lt;p&gt;6、编写程序，在原字符串中把尾部m个字符移动到字符串的头部，要求：长度为n字符串操作时间复杂度为O(n),空间复杂度为O(1)。&lt;/p&gt;
+&lt;p&gt;如：原字符串为&lt;code&gt;”Ilovebaofeng”&lt;/code&gt;，m=7，输出结果：&lt;code&gt;”baofengIlove”&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;7、暴风影音的片源服务器上保存着两个文件a和b，各存放50亿条URL，每条URL占用64字节，内存限制是4G，让你找出a,b文件共同的URL。要求：算法设计。&lt;/p&gt;
+&lt;p&gt;解：大数据问题。5*64=320G,4G内存无法一次性装入。因此可以用一个hash函数将a文件的URL hash到n个小文件中，对b文件的URL做同样的操作，因此，所有可能相同的URL都会被分到相同的小文件中。因为hash函数的特点是如果a=b,则hash(a)=hash(b).再对每一个小文件统计相同的URL即可，可以两次扫描，也可以用位图。&lt;/p&gt;</summary><category term="暴风笔试题"></category></entry><entry><title>暴风影音笔试题校招笔试题2014年技术类</title><link href="http://www.yanyulin.info/pages/2014/03/baofeng_2014_A.html" rel="alternate"></link><updated>2014-03-13T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-13:pages/2014/03/baofeng_2014_A.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;如有错误，或更加精简的方法，请留言，我会更正，以方便更多的人
+暴风影音2014年A郑，据说可以解决&lt;code&gt;户口&lt;/code&gt;
+注:以下如无特殊说明，均假设计算机编程环境为&lt;code&gt;intel x86&lt;/code&gt;的&lt;code&gt;32位CPU&lt;/code&gt;,编译器为VS,编程语言首选C语言，也可以使用自已熟悉的编程语言。&lt;/p&gt;
+&lt;p&gt;1、1.升序排列下列数值：(101001)2,(40)10,(23)8,(18)16&lt;/p&gt;
+&lt;p&gt;解：其中后面的2、10、8、16表示的是进制数&lt;/p&gt;
+&lt;p&gt;2、写出下列函数的返回值&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;func&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;300&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
+            &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+            &lt;span class="k"&gt;while&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
+                &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+                &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+            &lt;span class="p"&gt;}&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;解：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;x = x&amp;amp;(x-1)&lt;/code&gt;的作用是将x(二进制表示)最右边的1消去，所以，程序的功能是求x的二进制表示法有多少个1.因为&lt;code&gt;300(10)=100101100(2)&lt;/code&gt;,所以返回值是4.&lt;/p&gt;
+&lt;p&gt;3、写出下面代码的输出&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#include&amp;lt;stdio.h&amp;gt;&lt;/span&gt;
+&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="p"&gt;(){&lt;/span&gt;
+    &lt;span class="kt"&gt;char&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;abcdef&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="kt"&gt;char&lt;/span&gt; &lt;span class="n"&gt;str&lt;/span&gt;&lt;span class="p"&gt;[]&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;123456&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+    &lt;span class="n"&gt;printf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;d%&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;
+    &lt;span class="n"&gt;printf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;c%&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;]);&lt;/span&gt;
+    &lt;span class="n"&gt;printf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;c%&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;str&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;
+    &lt;span class="n"&gt;printf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;c%&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;str&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;]);&lt;/span&gt;
+
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;解：&lt;/p&gt;
+&lt;p&gt;这道题出得十分YD,注意是d%而不是%d,所以，你懂的。答案是,一不小心，可能会跌爆眼镜！&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;d&lt;/span&gt;
+&lt;span class="n"&gt;c&lt;/span&gt;
+&lt;span class="n"&gt;c&lt;/span&gt;
+&lt;span class="n"&gt;c&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;4、使用C语言写出存储内容为整数的单链表数据类型定义，并使用自己定义的单链表数据类型定义，完成下面的算法，要求优化时间与空间复杂度。&lt;/p&gt;
+&lt;p&gt;算法要求：合并两个已经排序的单链表为一个排序的单链表，相同内容只保留一个&lt;/p&gt;
+&lt;p&gt;如：单链表a:1-&amp;gt;2-&amp;gt;3-&amp;gt;4&lt;/p&gt;
+&lt;p&gt;单链表b:3-&amp;gt;4-&amp;gt;5&lt;/p&gt;
+&lt;p&gt;输出：1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5&lt;/p&gt;
+&lt;p&gt;解：合并两个链表的方法其它同类型的面试题已经有讲过不少了，这里多了一个“去重”要求。只需要多处理一种情况即可。下面用的是C++，稍作改进就可以变成C.&lt;/p&gt;
+&lt;p&gt;5、编写程序，把一个有序整数数组放到以整数为元素的二叉树中，生成一个平衡排序二叉树。设计并变成实现一种遍历方法，是这种遍历方法的输出正好是输入数据的次序。
+如数组 a:{1,2,3,4,5,6,7}
+生成的二叉树：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;        &lt;span class="mi"&gt;4&lt;/span&gt;
+
+    &lt;span class="mi"&gt;2&lt;/span&gt;       &lt;span class="mi"&gt;6&lt;/span&gt;
+
+ &lt;span class="mi"&gt;1&lt;/span&gt;    &lt;span class="mi"&gt;3&lt;/span&gt;   &lt;span class="mi"&gt;5&lt;/span&gt;    &lt;span class="mi"&gt;7&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;解：&lt;/p&gt;
+&lt;p&gt;本来将一个有序数组放到一棵二叉树有很多种摆放方式，但是题目要求是平衡二叉树，容易想到的是二分思想，当每个结点左边和右边的结点数相等（或只相差1个的时候）这棵树就是平衡的，最后再中序输出即可。&lt;/p&gt;
+&lt;p&gt;6、编写程序，在原字符串中把尾部m个字符移动到字符串的头部，要求：长度为n字符串操作时间复杂度为O(n),空间复杂度为O(1)。&lt;/p&gt;
+&lt;p&gt;如：原字符串为&lt;code&gt;”Ilovebaofeng”&lt;/code&gt;，m=7，输出结果：&lt;code&gt;”baofengIlove”&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;7、暴风影音的片源服务器上保存着两个文件a和b，各存放50亿条URL，每条URL占用64字节，内存限制是4G，让你找出a,b文件共同的URL。要求：算法设计。&lt;/p&gt;
+&lt;p&gt;解：大数据问题。5*64=320G,4G内存无法一次性装入。因此可以用一个hash函数将a文件的URL hash到n个小文件中，对b文件的URL做同样的操作，因此，所有可能相同的URL都会被分到相同的小文件中。因为hash函数的特点是如果a=b,则hash(a)=hash(b).再对每一个小文件统计相同的URL即可，可以两次扫描，也可以用位图。&lt;/p&gt;</summary><category term="暴风笔试题"></category></entry><entry><title>大众点评笔试题校招笔试题2014年技术类</title><link href="http://www.yanyulin.info/pages/2014/03/dianping_2014_a.html" rel="alternate"></link><updated>2014-03-12T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-12:pages/2014/03/dianping_2014_a.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;大众点评此次笔试题选择的方式是在线笔试题&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;1、团购&lt;code&gt;（Group purchase）&lt;/code&gt;就是团体购物，指认识或不认识的消费者联合起来，加大与商家的谈判能力，以求得最优价格的一种购物方式，大众点评团是中国领先的本地生活消费平台，致力于为消费者提供本地餐馆美食、电影、KTV、休闲娱乐、酒店旅游、美容保健、婚庆亲子、购物等生活服务信息。&lt;/p&gt;
 &lt;p&gt;为了更好的服务消费者，点评推出了优惠券这项功能，并且也扩张到了非常多的商户。现在计划上线一个新的业务，在团购的基础上增加优惠券功能，更大幅度的让利消费者。&lt;/p&gt;
@@ -6490,7 +6624,184 @@ D
 &lt;p&gt;条款48:重视编译器警告&lt;/p&gt;
 &lt;p&gt;条款49:熟悉标准库&lt;/p&gt;
 &lt;p&gt;条款50:提高对C++的认识&lt;/p&gt;
-&lt;/blockquote&gt;</summary><category term="C++书库"></category></entry><entry><title>Github上如何给别人贡献代码</title><link href="http://www.yanyulin.info/pages/2013/11/githubM.html" rel="alternate"></link><updated>2013-11-22T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-11-22:pages/2013/11/githubM.html</id><summary type="html">&lt;hr /&gt;
+&lt;/blockquote&gt;</summary><category term="C++书库"></category></entry><entry><title>2014年暴风笔试试卷A</title><link href="http://www.yanyulin.info/pages/2013/11/baofeng_2014_A.html" rel="alternate"></link><updated>2013-11-23T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-11-23:pages/2013/11/baofeng_2014_A.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;如有错误，或更加精简的方法，请留言，我会更正，以方便更多的人
+暴风影音2014年A郑，据说可以解决&lt;code&gt;户口&lt;/code&gt;
+注:以下如无特殊说明，均假设计算机编程环境为&lt;code&gt;intel x86&lt;/code&gt;的&lt;code&gt;32位CPU&lt;/code&gt;,编译器为VS,编程语言首选C语言，也可以使用自已熟悉的编程语言。&lt;/p&gt;
+&lt;p&gt;1、已知一个二叉树的先序遍历和中序遍历得到的序列为&lt;code&gt;ABDEGCFH&lt;/code&gt;和&lt;code&gt;DBGEAFHC&lt;/code&gt;，请:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;1:根据先序遍历和中序遍历计算出该二叉树的结构图&lt;/p&gt;
+&lt;p&gt;2:根据1的结果，计算该二叉树的后序遍历后序遍历结果&lt;/p&gt;
+&lt;p&gt;3:完成后序遍历代码（不得使用迭代函数）&lt;/p&gt;
+&lt;p&gt;答案如下&lt;/p&gt;
+&lt;p&gt;1:结构图如下：&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2013/11/baofeng_2014_A.html"&gt;
+&lt;img src="http://www.yanyulin.info/pics/daan/bd1.jpg"/&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;2:后序遍历结果是&lt;code&gt;DGEBHFCA&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;3:代码如下：&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;postorder&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;BinarySearchTree&lt;/span&gt; &lt;span class="n"&gt;T&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="n"&gt;BinarySearchTree&lt;/span&gt; &lt;span class="n"&gt;preNode&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;currNode&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="n"&gt;stack&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;BinarySearchTrees&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+&lt;span class="n"&gt;preNode&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;NULL&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;push&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;T&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="k"&gt;while&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;empty&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="n"&gt;currNode&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;top&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;preNode&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="nb"&gt;NULL&lt;/span&gt; &lt;span class="o"&gt;||&lt;/span&gt; &lt;span class="n"&gt;preNode&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;m_pLeft&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="n"&gt;currNode&lt;/span&gt; &lt;span class="o"&gt;||&lt;/span&gt; &lt;span class="n"&gt;preNode&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;m_pRight&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="n"&gt;currNode&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;currNode&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;m_pLeft&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+            &lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;push&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;currNode&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;m_pLeft&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+        &lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;currNode&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;m_pRight&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+            &lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;push&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;currNode&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;m_pRight&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;currNode&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;m_pLeft&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="n"&gt;preNode&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;currNode&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;m_pRight&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+            &lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;push&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;currNode&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;m_pRight&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="k"&gt;else&lt;/span&gt;
+    &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="n"&gt;cout&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;currNode&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;m_nValue&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+        &lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pop&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="n"&gt;preNode&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;currNode&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;2、将内存中一张宽为X，高为Y的RGB32格式的图片向右旋转90度。源地址BYTE &lt;em&gt;pSrc为指向图片的首地址，目标地址BYTE &lt;/em&gt;pDst为输出的目标缓冲区，备注：RGB32是一种图像格式，它用4个连续BYTE来表示一个像素，图片的存储方式为一行一样连续存：
+&lt;table border="1px"&gt;
+&lt;tr&gt;
+&lt;td&gt;
+A
+&lt;/td&gt;
+&lt;td&gt;
+B
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+C
+&lt;/td&gt;
+&lt;td&gt;
+D
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+如上表为宽度为2且高度为2的图像，共4个像素，在内存中存储为&lt;code&gt;A[4]B[4]C[4]D[4]&lt;/code&gt;,&lt;code&gt;void rotate(BYTE *pSrc, BYTE *pDest, int X, int Y){ }&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;解：此问题先考虑每个像素占一个字节的情况，然后再将问题扩展为占四个字节的情况。假设现在有8个像素，宽度为4高度为2，即&lt;/p&gt;
+&lt;p&gt;ABCD&lt;/p&gt;
+&lt;p&gt;EFGH&lt;/p&gt;
+&lt;p&gt;旋转之后变为宽度为2，高度为4,即&lt;/p&gt;
+&lt;p&gt;EA&lt;/p&gt;
+&lt;p&gt;FB&lt;/p&gt;
+&lt;p&gt;GC&lt;/p&gt;
+&lt;p&gt;HD&lt;/p&gt;
+&lt;p&gt;A[0][0]-&amp;gt;A[0][1]&lt;/p&gt;
+&lt;p&gt;B[0][1]-&amp;gt;B[1][1]&lt;/p&gt;
+&lt;p&gt;C[0][2]-&amp;gt;C[2][1]&lt;/p&gt;
+&lt;p&gt;D[0][3]-&amp;gt;D[3][1]&lt;/p&gt;
+&lt;p&gt;E[1][0]-&amp;gt;E[0][0]&lt;/p&gt;
+&lt;p&gt;F[1][1]-&amp;gt;F[0][1]&lt;/p&gt;
+&lt;p&gt;G[1][2]-&amp;gt;G[0][2]&lt;/p&gt;
+&lt;p&gt;H[1][3]-&amp;gt;H[0][3]&lt;/p&gt;
+&lt;p&gt;第0行的变为了第&lt;code&gt;(x-1)&lt;/code&gt;列，其中原矩阵中的列号与旋转矩阵的行号相同，第&lt;code&gt;（x-1）&lt;/code&gt;行变换为了第0行，其中原矩阵的列号与旋转矩阵的行号相同这里用i表示行，j表示列，则旋转后的&lt;code&gt;pDest[j][x-i-1] = pSrc[i][j]&lt;/code&gt;，然后将其扩展为4字节问题，即赋值时要一次性复制4字节。代码如下&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;typedef&lt;/span&gt; &lt;span class="kt"&gt;char&lt;/span&gt; &lt;span class="n"&gt;BYTE&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="k"&gt;const&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;size&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="c1"&gt;//4字节&lt;/span&gt;
+&lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;rotate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;BYTE&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;pSrc&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;BYTE&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;pDest&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;j&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;j&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;j&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="p"&gt;{&lt;/span&gt;
+            &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;dpos&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;j&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;size&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+            &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;spos&lt;/span&gt;  &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;j&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;size&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+            &lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;k&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;k&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;size&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;k&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="c1"&gt;//每次复制4个字节&lt;/span&gt;
+                &lt;span class="n"&gt;pDest&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;dpos&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;k&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pSrc&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;spos&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;k&lt;/span&gt;&lt;span class="p"&gt;];&lt;/span&gt;
+        &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;3、给定字符串A和B，输出A和B中第一个最长公共子串，比如A="wepiabc"，B="pabcni"则输出“abc”&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#define MAXLEN 50&lt;/span&gt;
+&lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;LCS&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;char&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kt"&gt;char&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;B&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kt"&gt;char&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;sub&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;tmp&lt;/span&gt;&lt;span class="p"&gt;[][&lt;/span&gt;&lt;span class="n"&gt;MAXLEN&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;j&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;max&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;pos&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;len_a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;len_b&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="n"&gt;len_a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;strlen&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="n"&gt;len_b&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;strlen&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;B&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;      
+    &lt;span class="n"&gt;max&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="n"&gt;pos&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;  
+    &lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;len_a&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;j&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;j&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;len_b&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;j&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="p"&gt;{&lt;/span&gt;
+            &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="n"&gt;B&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;j&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+            &lt;span class="p"&gt;{&lt;/span&gt;
+                &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="o"&gt;||&lt;/span&gt; &lt;span class="n"&gt;j&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+                    &lt;span class="n"&gt;tmp&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="n"&gt;j&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+                &lt;span class="k"&gt;else&lt;/span&gt;
+                    &lt;span class="n"&gt;tmp&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="n"&gt;j&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tmp&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="n"&gt;j&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+                &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;max&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;tmp&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="n"&gt;j&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+                &lt;span class="p"&gt;{&lt;/span&gt;
+                    &lt;span class="n"&gt;max&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tmp&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="n"&gt;j&lt;/span&gt;&lt;span class="p"&gt;];&lt;/span&gt;
+                    &lt;span class="n"&gt;pos&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+                &lt;span class="p"&gt;}&lt;/span&gt;
+            &lt;span class="p"&gt;}&lt;/span&gt;
+        &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="n"&gt;sub&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;max&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="sc"&gt;&amp;#39;\0&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;max&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="n"&gt;sub&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;max&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;pos&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;];&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;4、 TCP建立连接需要几次握手过程？为什么会采用这么多次握手，请简述过程。若最后一次握手失败，会怎样处理?&lt;/p&gt;
+&lt;p&gt;解：TCP建立连接需要3次握手,过程如下图所示，第三次握手失败，服务器端处于SYN_RCVD状态，服务器端发送复位报文请求建立连接。&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2013/11/baofeng_2014_A.html"&gt;
+&lt;img src="http://www.yanyulin.info/pics/daan/bd2.jpg"/&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;5、ClassA是一个类，那么语句ClassA a, *b[2], c[3], &amp;amp;d = a;执行时调用到ClassA的构造函数次数为&lt;/p&gt;
+&lt;p&gt;解:4次&lt;/p&gt;
+&lt;p&gt;6、32位系统中&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;struct&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="kt"&gt;char&lt;/span&gt; &lt;span class="n"&gt;buf&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;];&lt;/span&gt;&lt;span class="c1"&gt;//4字节&lt;/span&gt;
+    &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="c1"&gt;//4字节&lt;/span&gt;
+    &lt;span class="kt"&gt;char&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="c1"&gt;//4字节&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="n"&gt;sT&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;请问sizeof(sT)=?多少&lt;/p&gt;
+&lt;p&gt;解:12&lt;/p&gt;
+&lt;p&gt;7、甲和乙进行打靶比赛，各打两发子弹，中靶数量最多的人获胜，甲每发子弹中弹的概率是60%，而乙每发子弹中靶的概率是30%，则比赛中乙战胜甲的可能性(&lt;code&gt;C&lt;/code&gt;)&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;A&lt;/code&gt; 小于5%    &lt;code&gt;B&lt;/code&gt; 在5%~12%之间  &lt;code&gt;C&lt;/code&gt; 在10%~15%之间    &lt;code&gt;D&lt;/code&gt; 大于15%&lt;/p&gt;
+&lt;p&gt;8、请回答下列程序执行后的输出结果&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kt"&gt;char&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;A&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;this is a string!&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;B&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;NULL&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="n"&gt;memcpy&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;B&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="n"&gt;printf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;B&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;解:因为B是野指针，会导致运行时错误。&lt;/p&gt;
+&lt;p&gt;9、分别指出下列操作系统是哪一种类型？（单用户单任务/单用户多任务/多用户单任务/多用户多任务）&lt;/p&gt;
+&lt;p&gt;DOS、Windows 7、Windows 2003、Linux、Unix&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;DOS&lt;/code&gt;：单用户单任务&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Windows 7&lt;/code&gt;：多用户多任务&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Linux、Unix&lt;/code&gt;：多用户多任务&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Windows 2003(Windows Server 2003)&lt;/code&gt;：多用户多任务&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Windows XP&lt;/code&gt;及以前&lt;code&gt;Windows&lt;/code&gt;版本：单用户多任务&lt;/p&gt;</summary><category term="暴风笔试题"></category></entry><entry><title>Github上如何给别人贡献代码</title><link href="http://www.yanyulin.info/pages/2013/11/githubM.html" rel="alternate"></link><updated>2013-11-22T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2013-11-22:pages/2013/11/githubM.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;本篇博文仅随前篇博文&lt;a href="http://www.yanyulin.info/pages/2013/11/github.html" title="Github简明教程(入门篇)"&gt;&lt;code&gt;Github&lt;/code&gt;简明教程(入门篇)&lt;/a&gt;，当然我的独立博客也是采用Github搭建，我所介绍的Github正是我搭建博客过程中一点一点学习的过程，如有错误，还请指出，同样大神们可以绕过。&lt;/p&gt;
 &lt;p&gt;本篇重点介绍&lt;code&gt;Github&lt;/code&gt;上如何给别人贡献代码，通过这个过程，也可以知道如果一个项目托管到Github上，团队成员之间合作的流程，给别人贡献代码，特别是一些开源组织，是件光荣的事&lt;/p&gt;
 &lt;p&gt;1、搜索你要贡献的代码仓库，在这里我创建了两个帐号，一个主帐号，里面有一个代码仓库mfjc，一个是将要贡献代码的帐号howard5888,搜索代码仓库如下图：
