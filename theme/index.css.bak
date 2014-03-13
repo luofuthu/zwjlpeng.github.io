@@ -6,7 +6,7 @@ blockquote.pull-right{float:right;padding-left:0;padding-right:15px;border-left:
 blockquote.pull-right p,blockquote.pull-right small{text-align:right;}
 q:before,q:after,blockquote:before,blockquote:after{content:"";}
 .btn-info.xsmall {
-padding: 1px 3px 1px;
+padding: 1px 1px 1px 1px;
 font-size: 11px;
 float: right;
 border-radius: 2px;
