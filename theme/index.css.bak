@@ -361,7 +361,7 @@ a:hover {
 	border:0px;
 }
 
-#tagsLink a:hover{
+#tagsLink a:hover,#tbl a:hover {
 	color:#FFFFFF;
 }
 .widget ul li {
