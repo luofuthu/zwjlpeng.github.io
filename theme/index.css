@@ -9,8 +9,6 @@ q:before,q:after,blockquote:before,blockquote:after{content:"";}
 padding: 1px 3px 1px;
 font-size: 11px;
 float: right;
--webkit-border-radius: 2px;
--moz-border-radius: 2px;
 border-radius: 2px;
 }
 .btn-info {
