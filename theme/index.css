@@ -364,9 +364,6 @@ a:hover {
 #tagsLink a:hover,#tbl a:hover {
 	color:#FFFFFF;
 }
-#tbl a{
-	background-color:#169EDD;
-}
 .widget ul li {
 	list-style:none;
 	margin:0;
