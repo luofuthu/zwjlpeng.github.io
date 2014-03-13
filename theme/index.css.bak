@@ -159,7 +159,7 @@ ul {
 	clear:both;
 }
 body {
-	font:12px 'Microsoft YaHei',微软雅黑,Arial,Lucida Grande,Tahoma,sans-serif;
+	font:12px,'Microsoft YaHei',微软雅黑,Arial,Lucida Grande,Tahoma,sans-serif;
 	font-family:微软雅黑,宋体,Arial,Helvetica,sans-serif;
 	color:#000;
 }
