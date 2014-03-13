@@ -509,7 +509,6 @@ body {
 
 .entry_box {
 	background:transparent;
-	_width:730px;
 }
 
 #top #topnav {
