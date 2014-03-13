@@ -350,17 +350,14 @@ a:hover {
 }
 #tagsLink{
 	float:left;
-	padding-right:2.5px;
+	padding-right:2px;
 	margin:0px;
 }
 
-
-
-#tbl{
-	width:300px;
-	border:0px;
+#tagsLink a{
+background-color: #169EDD;
+padding:1px 1px 1px 1px;
 }
-
 #tagsLink a:hover,#tbl a:hover {
 	color:#FFFFFF;
 }
