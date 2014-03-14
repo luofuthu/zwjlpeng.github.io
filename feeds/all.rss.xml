@@ -195,7 +195,252 @@
 &lt;p&gt;不是等几天发来的拒信，而是第三面当面被刷了，像我这种当面被拒绝的貌似从来还没有听说过，也许是自己实在太弱让他们都觉得无法容忍了吧。辛苦了一个下午，和中午刚来的时候，心情简直一个天上一个地下。到一楼的前台，面试官很诚恳的对我说：你的素质还是高于一般本科生的，如果考完研想过来百度实习到时还可以联系他。好好回去补补基础。我没说什么，和他握了握手，说了声谢谢，回头去取了身份证，走出了百度的大厦。回去的路上，在西二旗走了很久很久，心理还是不住的难过。给在百度实习的好基友发了封短信，被刷了，他很吃惊，发了几封短信询问缘由。我说我还是太弱了，回去打好基础吧。 &lt;/p&gt;
 &lt;p&gt;感觉最近很沮丧，表白被妹子怒拒，去了百度又被面试官怒拒。回来时迷路又饿着肚子走了一个多小时的路。一时觉得我挫爆了，但是面试官说得对，我确实太浮躁了，基础不好。还是安安心心的打好基础，读个研再出来吧。 &lt;/p&gt;
 &lt;p&gt;敲下此篇，纪念我第一次处女面。在这里感谢百度的面试官，在我浮躁时给我泼了冷水。祝愿各位去百度面试的北邮同学都能顺利拿到&lt;code&gt;offer&lt;/code&gt;。百度，明年我还会再来的！给自己加油！
-到此为止&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Fri, 14 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-03-14:pages/2014/03/baidu_3.html</guid><category>百度面经</category></item><item><title>暴风影音笔试题校招笔试题2014年技术类</title><link>http://www.yanyulin.info/pages/2014/03/baofeng_2014_B.html</link><description>&lt;hr /&gt;
+到此为止&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Fri, 14 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-03-14:pages/2014/03/baidu_3.html</guid><category>百度面经</category></item><item><title>腾讯校园招聘笔试题目2014年软件研发类武汉</title><link>http://www.yanyulin.info/pages/2014/03/tencent_2014_B.html</link><description>&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;考试时间120分钟&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;一 不定项选择题(共25题，每题4分，共100分，少选、错选、多选均不得分)&lt;/p&gt;
+&lt;p&gt;1 已知一棵二叉树，如果先序遍历的节点顺序是：ADCEFGHB，中序遍历是：CDFEGHAB，则后序遍历结果为：(D)&lt;/p&gt;
+&lt;p&gt;A.CFHGEBDA &lt;/p&gt;
+&lt;p&gt;B.CDFEGHBA &lt;/p&gt;
+&lt;p&gt;C.FGHCDEBA&lt;/p&gt;
+&lt;p&gt;D.CFHGEDBA&lt;/p&gt;
+&lt;p&gt;2 下列哪两个数据结构，同时具有较高的查找和删除性能?(CD)&lt;/p&gt;
+&lt;p&gt;A.有序数组 &lt;/p&gt;
+&lt;p&gt;B.有序链表 &lt;/p&gt;
+&lt;p&gt;C.AVL树 &lt;/p&gt;
+&lt;p&gt;D.Hash表&lt;/p&gt;
+&lt;p&gt;3 下列排序算法中，哪些时间复杂度不会超过nlogn?(BC)&lt;/p&gt;
+&lt;p&gt;A.快速排序 &lt;/p&gt;
+&lt;p&gt;B.堆排序 &lt;/p&gt;
+&lt;p&gt;C.归并排序 &lt;/p&gt;
+&lt;p&gt;D.冒泡排序
+　　&lt;/p&gt;
+&lt;p&gt;4 初始序列为1 8 6 2 5 4 7 3一组数采用堆排序，当建堆(小根堆)完毕时，堆所对应的二叉树中序遍历序列为：(A)&lt;/p&gt;
+&lt;p&gt;A.8 3 2 5 1 6 4 7&lt;/p&gt;
+&lt;p&gt;B.3 2 8 5 1 4 6 7&lt;/p&gt;
+&lt;p&gt;C.3 8 2 5 1 6 7 4&lt;/p&gt;
+&lt;p&gt;D.8 2 3 5 1 4 7 6&lt;/p&gt;
+&lt;p&gt;5 当n=5时，下列函数的返回值是：(A)&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;foo&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+　　&lt;span class="p"&gt;{&lt;/span&gt;
+　　&lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+　　&lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;foo&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;foo&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+　　&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;A.5 &lt;/p&gt;
+&lt;p&gt;B.7&lt;/p&gt;
+&lt;p&gt;C.8 &lt;/p&gt;
+&lt;p&gt;D.10&lt;/p&gt;
+&lt;p&gt;6 S市A，B共有两个区，人口比例为3：5，据历史统计A的犯罪率为0.01%，B区为0.015%，现有一起新案件发生在S市，那么案件发生在A区的可能性有多大?(C)&lt;/p&gt;
+&lt;p&gt;A.37.5% &lt;/p&gt;
+&lt;p&gt;B.32.5% &lt;/p&gt;
+&lt;p&gt;C.28.6% &lt;/p&gt;
+&lt;p&gt;D.26.1%&lt;/p&gt;
+&lt;p&gt;7 Unix系统中，哪些可以用于进程间的通信?(BCD)
+　　&lt;/p&gt;
+&lt;p&gt;A.Socket &lt;/p&gt;
+&lt;p&gt;B.共享内存 &lt;/p&gt;
+&lt;p&gt;C.消息队列 &lt;/p&gt;
+&lt;p&gt;D.信号量
+　　&lt;/p&gt;
+&lt;p&gt;8 静态变量通常存储在进程哪个区?(C)
+　　&lt;/p&gt;
+&lt;p&gt;A.栈区 &lt;/p&gt;
+&lt;p&gt;B.堆区 &lt;/p&gt;
+&lt;p&gt;C.全局区 &lt;/p&gt;
+&lt;p&gt;D.代码区
+　　&lt;/p&gt;
+&lt;p&gt;9 查询性能(B)
+　　&lt;/p&gt;
+&lt;p&gt;A. 在Name字段上添加主键
+　　&lt;/p&gt;
+&lt;p&gt;B. 在Name字段上添加索引
+　　&lt;/p&gt;
+&lt;p&gt;C. 在Age字段上添加主键
+　　&lt;/p&gt;
+&lt;p&gt;D. 在Age字段上添加索引
+　　&lt;/p&gt;
+&lt;p&gt;10 IP地址131.153.12.71是一个(B)类IP地址。
+　　&lt;/p&gt;
+&lt;p&gt;A.A &lt;/p&gt;
+&lt;p&gt;B.B &lt;/p&gt;
+&lt;p&gt;C.C&lt;/p&gt;
+&lt;p&gt;D.D
+　　&lt;/p&gt;
+&lt;p&gt;11 下推自动识别机的语言是：(C)
+　　&lt;/p&gt;
+&lt;p&gt;A. 0型语言 &lt;/p&gt;
+&lt;p&gt;B.1型语言 &lt;/p&gt;
+&lt;p&gt;C.2型语言 &lt;/p&gt;
+&lt;p&gt;D.3型语言
+　　&lt;/p&gt;
+&lt;p&gt;12 下列程序的输出是：(D)&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;　　&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="n"&gt;define&lt;/span&gt; &lt;span class="n"&gt;add&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;
+　　&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+　　&lt;span class="p"&gt;{&lt;/span&gt;
+　　&lt;span class="n"&gt;printf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="err"&gt;“&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="err"&gt;”&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;add&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;
+　　&lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+　　&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;A.23 &lt;/p&gt;
+&lt;p&gt;B.35 &lt;/p&gt;
+&lt;p&gt;C.16 &lt;/p&gt;
+&lt;p&gt;D.19
+　　&lt;/p&gt;
+&lt;p&gt;13 浏览器访问某页面，HTTP协议返回状态码为403时表示：(B)
+　　&lt;/p&gt;
+&lt;p&gt;A 找不到该页面
+　　&lt;/p&gt;
+&lt;p&gt;B 禁止访问
+　　&lt;/p&gt;
+&lt;p&gt;C 内部服务器访问
+　　&lt;/p&gt;
+&lt;p&gt;D 服务器繁忙
+　　&lt;/p&gt;
+&lt;p&gt;14 如果某系统15*4=112成立，则系统采用的是(A)进制。
+　　&lt;/p&gt;
+&lt;p&gt;A.6 &lt;/p&gt;
+&lt;p&gt;B.7 &lt;/p&gt;
+&lt;p&gt;C.8 &lt;/p&gt;
+&lt;p&gt;D.9
+　　&lt;/p&gt;
+&lt;p&gt;15 某段文本中各个字母出现的频率分别是{a:4，b:3，o:12，h:7，i:10}，使用哈夫曼编码，则哪种是可能的编码：(A)
+　　&lt;/p&gt;
+&lt;p&gt;A a(000) b(001) h(01) i(10) o(11)
+　　&lt;/p&gt;
+&lt;p&gt;B a(0000) b(0001) h(001) o(01) i(1)
+　　&lt;/p&gt;
+&lt;p&gt;C a(000) b(001) h(01) i(10) o(00)
+　　&lt;/p&gt;
+&lt;p&gt;D a(0000) b(0001) h(001) o(000) i(1)
+　　&lt;/p&gt;
+&lt;p&gt;16 TCP和IP分别对应了OSI中的哪几层?(CD)
+　　&lt;/p&gt;
+&lt;p&gt;A Application layer
+　　&lt;/p&gt;
+&lt;p&gt;B Presentation layer
+　　&lt;/p&gt;
+&lt;p&gt;C Transport layer
+　　&lt;/p&gt;
+&lt;p&gt;D Network layer
+　　&lt;/p&gt;
+&lt;p&gt;17 一个栈的入栈序列是A,B,C,D,E，则栈的不可能的输出序列是?(C)
+　　&lt;/p&gt;
+&lt;p&gt;A.EDCBA &lt;/p&gt;
+&lt;p&gt;B.DECBA &lt;/p&gt;
+&lt;p&gt;C.DCEAB &lt;/p&gt;
+&lt;p&gt;D.ABCDE
+　　&lt;/p&gt;
+&lt;p&gt;18 同一进程下的线程可以共享以下?(BD)
+　　&lt;/p&gt;
+&lt;p&gt;A. stack &lt;/p&gt;
+&lt;p&gt;B.data section &lt;/p&gt;
+&lt;p&gt;C.register set &lt;/p&gt;
+&lt;p&gt;D.file fd
+　　&lt;/p&gt;
+&lt;p&gt;19 对于派生类的构造函数，在定义对象时构造函数的执行顺序为?(D)
+　　&lt;/p&gt;
+&lt;p&gt;1：成员对象的构造函数
+　　&lt;/p&gt;
+&lt;p&gt;2：基类的构造函数
+　　&lt;/p&gt;
+&lt;p&gt;3：派生类本身的构造函数
+　　&lt;/p&gt;
+&lt;p&gt;A.123&lt;/p&gt;
+&lt;p&gt;B.231 &lt;/p&gt;
+&lt;p&gt;C.321 &lt;/p&gt;
+&lt;p&gt;D.213
+　　&lt;/p&gt;
+&lt;p&gt;20 如何减少换页错误?(BC)
+　　&lt;/p&gt;
+&lt;p&gt;A 进程倾向于占用CPU
+　　&lt;/p&gt;
+&lt;p&gt;B 访问局部性(locality of reference)满足进程要求
+　　&lt;/p&gt;
+&lt;p&gt;C 进程倾向于占用I/O
+　　&lt;/p&gt;
+&lt;p&gt;D 使用基于最短剩余时间(shortest remaining time)的调度机制
+　　&lt;/p&gt;
+&lt;p&gt;21 递归函数最终会结束，那么这个函数一定?(B)
+　　&lt;/p&gt;
+&lt;p&gt;A 使用了局部变量
+　　&lt;/p&gt;
+&lt;p&gt;B 有一个分支不调用自身
+　　&lt;/p&gt;
+&lt;p&gt;C 使用了全局变量或者使用了一个或多个参数
+　　&lt;/p&gt;
+&lt;p&gt;D 没有循环调用
+　　&lt;/p&gt;
+&lt;p&gt;22 编译过程中，语法分析器的任务是(B)
+　　&lt;/p&gt;
+&lt;p&gt;A分析单词是怎样构成的
+　　&lt;/p&gt;
+&lt;p&gt;B 分析单词串是如何构成语言和说明的
+　　&lt;/p&gt;
+&lt;p&gt;C 分析语句和说明是如何构成程序的
+　　&lt;/p&gt;
+&lt;p&gt;D 分析程序的结构
+　　&lt;/p&gt;
+&lt;p&gt;23 同步机制应该遵循哪些基本准则?(ABCD)
+　　&lt;/p&gt;
+&lt;p&gt;A.空闲让进 &lt;/p&gt;
+&lt;p&gt;B.忙则等待 &lt;/p&gt;
+&lt;p&gt;C.有限等待 &lt;/p&gt;
+&lt;p&gt;D.让权等待
+　　&lt;/p&gt;
+&lt;p&gt;24 进程进入等待状态有哪几种方式?(D)
+　　&lt;/p&gt;
+&lt;p&gt;A CPU调度给优先级更高的线程
+　　&lt;/p&gt;
+&lt;p&gt;B 阻塞的线程获得资源或者信号
+　　&lt;/p&gt;
+&lt;p&gt;C 在时间片轮转的情况下，如果时间片到了
+　　&lt;/p&gt;
+&lt;p&gt;D 获得spinlock未果
+　　&lt;/p&gt;
+&lt;p&gt;25 设计模式中，属于结构型模式的有哪些?(BC)
+　　&lt;/p&gt;
+&lt;p&gt;A 状态模式 &lt;/p&gt;
+&lt;p&gt;B 装饰模式 &lt;/p&gt;
+&lt;p&gt;C 代理模式 &lt;/p&gt;
+&lt;p&gt;D 观察者模式&lt;/p&gt;
+&lt;p&gt;二、填空题(共4题10个空，每空2分，共20 分)&lt;/p&gt;
+&lt;p&gt;1 设有字母序列{Q,D,F,X,A,P,N,B,Y,M,C,W}，请写出按二路归并方法对该序列进行一趟扫描后的结果为DQFXAPBNMYCW。
+　　&lt;/p&gt;
+&lt;p&gt;2 关键码序列(Q,H,C,Y,Q,A,M,S,R,D,F,X)，要按照关键码值递增的次序进行排序，若采用初始步长为4的Shell的排序法，则一趟扫描的结果是QACSQDFXRHMY;若采用以第一个元素为分界元素的快速排序法，则扫描一趟的结果是FHCDQAMQRSYX。
+　　&lt;/p&gt;
+&lt;p&gt;3 二进制地址为011011110000，大小为(4)10和(16)10块的伙伴地址分别为：&lt;code&gt;_________，_________&lt;/code&gt;。
+　　&lt;/p&gt;
+&lt;p&gt;4 设t是给定的一棵二叉树，下面的递归程序count(t)用于求得：二叉树t中具有非空的左、右两个儿子的结点个数N2;只有非空左儿子的个数NL;只有非空右儿子的结点个数NR和叶子结点个数N0。N2，NL,NR、N0都是全局量，且在调用count(t)之前都置为0。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;    &lt;span class="k"&gt;typedef&lt;/span&gt; &lt;span class="k"&gt;struct&lt;/span&gt; &lt;span class="n"&gt;node&lt;/span&gt;
+　　&lt;span class="p"&gt;{&lt;/span&gt;
+　　&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+　　&lt;span class="k"&gt;struct&lt;/span&gt; &lt;span class="n"&gt;node&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;lchild&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;rchild&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+　　&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="n"&gt;node&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+　　&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;N2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;NL&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;NR&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;N0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+　　&lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;count&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;node&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+　　&lt;span class="p"&gt;{&lt;/span&gt;
+　　&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;lchild&lt;/span&gt;&lt;span class="o"&gt;!=&lt;/span&gt;&lt;span class="nb"&gt;NULL&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+　　&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;rchild&lt;/span&gt;&lt;span class="o"&gt;!=&lt;/span&gt;&lt;span class="nb"&gt;NULL&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;N2&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+　　&lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="n"&gt;NL&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+　　&lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;rchild&lt;/span&gt;&lt;span class="o"&gt;!=&lt;/span&gt;&lt;span class="nb"&gt;NULL&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;NR&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+　　&lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="n"&gt;N0&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+　　&lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;lchild&lt;/span&gt;&lt;span class="o"&gt;!=&lt;/span&gt;&lt;span class="nb"&gt;NULL&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;count&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;lchild&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+　　&lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;rchild&lt;/span&gt;&lt;span class="o"&gt;!=&lt;/span&gt;&lt;span class="nb"&gt;NULL&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;count&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;rchild&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+　　&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="cm"&gt;/* call form :if(t!=NULL) count(t);*/&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;三、其他方向简答题(共2题，每题20分)，选作题，不计入总分)
+　　&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;1 请设计一个排队系统，能够让每个进入队伍的用户都能看到自己在队列中所处的位置和变化，队伍可能随时有人加入和退出;当有人退出影响到用户的位置排名时需要及时反馈到用户。
+　　&lt;/p&gt;
+&lt;p&gt;2 A，B两个整数集合，设计一个算法求他们的交集，尽可能的高效。&lt;/p&gt;
+&lt;/blockquote&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Fri, 14 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-03-14:pages/2014/03/tencent_2014_B.html</guid><category>腾讯笔试题</category></item><item><title>暴风影音笔试题校招笔试题2014年技术类</title><link>http://www.yanyulin.info/pages/2014/03/baofeng_2014_B.html</link><description>&lt;hr /&gt;
 &lt;p&gt;如有错误，或更加精简的方法，请留言，我会更正，以方便更多的人
 暴风影音2014年A郑，据说可以解决&lt;code&gt;户口&lt;/code&gt;
 注:以下如无特殊说明，均假设计算机编程环境为&lt;code&gt;intel x86&lt;/code&gt;的&lt;code&gt;32位CPU&lt;/code&gt;,编译器为VS,编程语言首选C语言，也可以使用自已熟悉的编程语言。&lt;/p&gt;
