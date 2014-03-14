@@ -1,5 +1,184 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>烟雨林</title><link href="http://www.yanyulin.info/" rel="alternate"></link><link href="http://www.yanyulin.info/feeds/cheng-xu-yuan-zhao-gong-zuo.atom.xml" rel="self"></link><id>http://www.yanyulin.info/</id><updated>2014-03-13T00:00:00+08:00</updated><entry><title>暴风影音笔试题校招笔试题2014年技术类</title><link href="http://www.yanyulin.info/pages/2014/03/baofeng_2014_B.html" rel="alternate"></link><updated>2014-03-13T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-13:pages/2014/03/baofeng_2014_B.html</id><summary type="html">&lt;hr /&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>烟雨林</title><link href="http://www.yanyulin.info/" rel="alternate"></link><link href="http://www.yanyulin.info/feeds/cheng-xu-yuan-zhao-gong-zuo.atom.xml" rel="self"></link><id>http://www.yanyulin.info/</id><updated>2014-03-14T00:00:00+08:00</updated><entry><title>阿里巴巴笔试题校招笔试题2014年笔试题</title><link href="http://www.yanyulin.info/pages/2014/03/alibaba_2014_B.html" rel="alternate"></link><updated>2014-03-14T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-14:pages/2014/03/alibaba_2014_B.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;如有错误，或更加精简的方法，请留言，我会更正，以方便更多的人&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;此试题为整个东北区的，包括哈尔滨、沈阳...&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;第一部分 单选题&lt;/strong&gt; &lt;/p&gt;
+&lt;p&gt;1假设把整数关键码K散列到N个槽列表，以下哪些散列函数是好的散列函数&lt;/p&gt;
+&lt;p&gt;A: h(K)=K/N;&lt;/p&gt;
+&lt;p&gt;B: h(K)=1;&lt;/p&gt;
+&lt;p&gt;C: h(K)=K mod N;&lt;/p&gt;
+&lt;p&gt;D: h(K)=(K+rand(N)) mod N, rand(N)返回0到N-1的整数  &lt;/p&gt;
+&lt;p&gt;2 下面排序算法中，初始数据集的排列顺序对算法的性能无影响的是&lt;/p&gt;
+&lt;p&gt;A: 堆排序 &lt;/p&gt;
+&lt;p&gt;B：插入排序&lt;/p&gt;
+&lt;p&gt;C: 冒泡排序 &lt;/p&gt;
+&lt;p&gt;D:快速排序&lt;/p&gt;
+&lt;p&gt;3 下面说法错误的是&lt;/p&gt;
+&lt;p&gt;A: CISC计算机比RISC计算机指令多&lt;/p&gt;
+&lt;p&gt;B: 在指令格式中，采用扩展操作码设计方案的目的是为了保持指令字长不变而增加寻址空间&lt;/p&gt;
+&lt;p&gt;C:增加流水线段数理论上可以提高CPU频率&lt;/p&gt;
+&lt;p&gt;D:冯诺依曼体系结构的主要特征是存储程序的工作方式&lt;/p&gt;
+&lt;p&gt;4 不属于冯诺依曼体系结构必要组成部分是：&lt;/p&gt;
+&lt;p&gt;A:CPU &lt;/p&gt;
+&lt;p&gt;B: Cache &lt;/p&gt;
+&lt;p&gt;C:RAM &lt;/p&gt;
+&lt;p&gt;D:ROM&lt;/p&gt;
+&lt;p&gt;5 一个栈的入栈序列式ABCDE则不可能的出栈序列是:&lt;/p&gt;
+&lt;p&gt;A:DECBA  &lt;/p&gt;
+&lt;p&gt;B:DCEBA  &lt;/p&gt;
+&lt;p&gt;C:ECDBA  &lt;/p&gt;
+&lt;p&gt;D:ABCDE   &lt;/p&gt;
+&lt;p&gt;6 你认为可以完成编写一个C语言编译器的语言是&lt;/p&gt;
+&lt;p&gt;A：汇编 &lt;/p&gt;
+&lt;p&gt;B:C语言 &lt;/p&gt;
+&lt;p&gt;C:VB &lt;/p&gt;
+&lt;p&gt;D:以上全可以   &lt;/p&gt;
+&lt;p&gt;7 关于C++/JAVA类中的static成员和对象成员的说法正确的是：&lt;/p&gt;
+&lt;p&gt;A：static成员变量在对象构造时候生成&lt;/p&gt;
+&lt;p&gt;B: static成员函数在对象成员函数中无法调用&lt;/p&gt;
+&lt;p&gt;C: 虚成员函数不可能是static成员函数&lt;/p&gt;
+&lt;p&gt;D: static成员函数不能访问static成员变量&lt;/p&gt;
+&lt;p&gt;8、下图中从A点走向Z点共有多少种走法，每次只能向右或者向下走一步&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;
+&lt;img src="http://www.yanyulin.info/pics/job/ali2014_1.jpg" alt="烟雨林博客"/&gt;
+&lt;/a&gt; &lt;/p&gt;
+&lt;p&gt;9：某进程在运行过程中需要等待从磁盘上读入数据，此时进程的状态将：&lt;/p&gt;
+&lt;p&gt;A: 从就绪变为运行  &lt;/p&gt;
+&lt;p&gt;B:从运行变为就绪&lt;/p&gt;
+&lt;p&gt;C: 从运行变为阻塞  &lt;/p&gt;
+&lt;p&gt;D:从阻塞变为就绪&lt;/p&gt;
+&lt;p&gt;10：下面算法的时间复杂度为：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;Int&lt;/span&gt; &lt;span class="nf"&gt;f&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;unsigned&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+
+&lt;span class="n"&gt;If&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;||&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;Return&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+&lt;span class="n"&gt;Else&lt;/span&gt;
+
+&lt;span class="n"&gt;Return&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;A: O(1)   &lt;/p&gt;
+&lt;p&gt;B:O(n)  &lt;/p&gt;
+&lt;p&gt;C:O(N*N)  &lt;/p&gt;
+&lt;p&gt;D:O(n!)&lt;/p&gt;
+&lt;p&gt;11: n从1开始，每个操作可以选择对n加1或者对n加倍。若想获得整数2013，最少需要多少个操作&lt;/p&gt;
+&lt;p&gt;A:18   &lt;/p&gt;
+&lt;p&gt;B:24   &lt;/p&gt;
+&lt;p&gt;C:21  &lt;/p&gt;
+&lt;p&gt;D；不可能&lt;/p&gt;
+&lt;p&gt;12：对于一个具有n个顶点的无向图，若采用邻接表数据结构表示，则存放表头节点的数组大小为：&lt;/p&gt;
+&lt;p&gt;A: n  &lt;/p&gt;
+&lt;p&gt;B: n+1   &lt;/p&gt;
+&lt;p&gt;C: n-1   &lt;/p&gt;
+&lt;p&gt;D:n+边数&lt;/p&gt;
+&lt;p&gt;14：如下函数，在&lt;code&gt;32bit&lt;/code&gt;系统&lt;code&gt;foo(2^31-3)&lt;/code&gt;的值是：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;Int&lt;/span&gt; &lt;span class="nf"&gt;foo&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+
+&lt;span class="n"&gt;Return&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;-&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;A： 0   &lt;/p&gt;
+&lt;p&gt;B: 1  &lt;/p&gt;
+&lt;p&gt;C:2  &lt;/p&gt;
+&lt;p&gt;D:4&lt;/p&gt;
+&lt;p&gt;15：对于顺序存储的线性数组，访问节点和增加节点删除节点的时间复杂度为：&lt;/p&gt;
+&lt;p&gt;A: O(n),O(n) &lt;/p&gt;
+&lt;p&gt;B:O(n),O(1)&lt;/p&gt;
+&lt;p&gt;C:O(1),O(n) &lt;/p&gt;
+&lt;p&gt;D:O(n),O(n)&lt;/p&gt;
+&lt;p&gt;16:在32为系统环境，编译选项为4字节对齐，那么sizeof(A)和sizeof(B)是：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;Struct&lt;/span&gt; &lt;span class="n"&gt;A&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+
+&lt;span class="n"&gt;Int&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="kt"&gt;short&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="kt"&gt;char&lt;/span&gt; &lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+&lt;span class="p"&gt;};&lt;/span&gt;
+
+&lt;span class="n"&gt;Struct&lt;/span&gt; &lt;span class="n"&gt;B&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="kt"&gt;short&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="kt"&gt;char&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;;};&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;A: 16,16    &lt;/p&gt;
+&lt;p&gt;B:13,12   &lt;/p&gt;
+&lt;p&gt;C:16,12 &lt;/p&gt;
+&lt;p&gt;D:11,16&lt;/p&gt;
+&lt;p&gt;17:袋中有红球，黄球，白球各一个，每次任意取一个放回，如此连续3次，则下列事件中概率是8/9的是：&lt;/p&gt;
+&lt;p&gt;A: 颜色全相同 &lt;/p&gt;
+&lt;p&gt;B:颜色全不相同&lt;/p&gt;
+&lt;p&gt;C:颜色全相同&lt;/p&gt;
+&lt;p&gt;D:颜色无红色&lt;/p&gt;
+&lt;p&gt;18：一个洗牌程序的功能是将n张牌的顺序打乱，以下关于洗牌程序的功能定义说法最恰当的是：&lt;/p&gt;
+&lt;p&gt;A: 每张牌出现在n个位置上的概率相等&lt;/p&gt;
+&lt;p&gt;B: 每张牌出现在n个位置上的概率独立&lt;/p&gt;
+&lt;p&gt;C: 任何连续位置上的两张牌的内容独立&lt;/p&gt;
+&lt;p&gt;D: n张牌的任何两个不同排列出现的概率相等&lt;/p&gt;
+&lt;p&gt;19：用两种颜色去染排成一个圈的6个棋子，如果通过旋转得到则只算一种，一共有多少种染色：&lt;/p&gt;
+&lt;p&gt;A: 10 &lt;/p&gt;
+&lt;p&gt;B:11 &lt;/p&gt;
+&lt;p&gt;C:14: &lt;/p&gt;
+&lt;p&gt;D:15&lt;/p&gt;
+&lt;p&gt;20：递归式的先序遍历一个n节点，深度为d的二叉树，则需要栈空间的大小为：&lt;/p&gt;
+&lt;p&gt;A: O(n) &lt;/p&gt;
+&lt;p&gt;B:O(d)  &lt;/p&gt;
+&lt;p&gt;C:O(logn)  &lt;/p&gt;
+&lt;p&gt;D:(nlogn)&lt;/p&gt;
+&lt;p&gt;第二部分：多选&lt;/p&gt;
+&lt;p&gt;21：两个线程运行在双核机器上，每个线程主线程如下，线程1&lt;code&gt;：x=1;r1=y;&lt;/code&gt;线程2：&lt;code&gt;y=1;r2=x;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;X和y是全局变量，初始为0。以下哪一个是r1和r2的可能值：&lt;/p&gt;
+&lt;p&gt;A: r1=1,r2=1&lt;/p&gt;
+&lt;p&gt;B: r1=1,r2=0&lt;/p&gt;
+&lt;p&gt;C:r1=0,r2=0&lt;/p&gt;
+&lt;p&gt;D:r1=0,r2=1&lt;/p&gt;
+&lt;p&gt;22.关于Linux系统的负载，以下表述正确的是：&lt;/p&gt;
+&lt;p&gt;A: 通过就绪和运行的进程数来反映&lt;/p&gt;
+&lt;p&gt;B: 通过TOP命令查看&lt;/p&gt;
+&lt;p&gt;C: 通过uptime查看&lt;/p&gt;
+&lt;p&gt;D: &lt;code&gt;Load:2.5,1.3,1.1&lt;/code&gt;表示系统的负载压力在逐渐变小&lt;/p&gt;
+&lt;p&gt;23：关于排序算法的以下说法，错误的是：&lt;/p&gt;
+&lt;p&gt;A: 快速排序的平均时间复杂度O(nlogn),最坏O(N^2)&lt;/p&gt;
+&lt;p&gt;B:堆排序平均时间复杂度O(nlogn)，最坏O(nlogn)&lt;/p&gt;
+&lt;p&gt;C:冒泡排序平均时间复杂度O(n^2),最坏O(n^2)&lt;/p&gt;
+&lt;p&gt;D:归并排序的平均时间复杂度O(nlogn),最坏O(n^2)&lt;/p&gt;
+&lt;p&gt;24:假设函数rand_k会随机返回一个【1，k】之间的随机数（k&amp;gt;=2）,并且每个证书出现的概率相等。目前有rand_7,通过调用rand_7（）和四则运算符，并适当增加逻辑判断和循环控制逻辑，下列函数可以实现的有：&lt;/p&gt;
+&lt;p&gt;A:rand_3 B:rand_21  C:rand_23  D:rand_49&lt;/p&gt;
+&lt;p&gt;第三部份&lt;/p&gt;
+&lt;p&gt;1、两个较长的单向链表a和b，为了找出及诶单noed满足&lt;code&gt;node in a&lt;/code&gt;并且&lt;code&gt;node in b&lt;/code&gt;，请设计空间使用尽量小的算法（用&lt;code&gt;c/c++，java&lt;/code&gt; 或者伪代码）&lt;/p&gt;
+&lt;p&gt;2、当存储数据量超出单节点数据管理能力的时候，可以采用的办法有数据库&lt;code&gt;sharding&lt;/code&gt;的解决方案，也就是按照一定的规律把数据分散存储在多个数据管理节点N中（节点编号为0,1,2，，，，N-1）。&lt;/p&gt;
+&lt;p&gt;假设存储的数据时a  请完成为数据a计算存储节点的程序。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#define N 5&lt;/span&gt;
+
+&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;hash&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;element&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
+
+   &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;element&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="mi"&gt;2654435761&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;shardingIndex&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
+
+    &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;p&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;hash&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+
+    &lt;span class="n"&gt;_________________________&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="c1"&gt;//这里是空格&lt;/span&gt;
+
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;3、宿舍内5个同学一起玩对战游戏。每场比赛有一些人作为红方，另一些人作为蓝方。请问至少需要多少场比赛，才能使任意两个人之间有一场红方对蓝方和蓝方对红方的比赛？&lt;/p&gt;
+&lt;p&gt;4、一个有10亿条记录的文本文件，已按照关键字排好序存储。请设计算法，可以快速的从文件中查找指字关键字的记录&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;各位如果有更好的答案，请留言评价，方便更多的人&lt;/strong&gt;&lt;/p&gt;</summary><category term="阿里巴巴笔试题"></category></entry><entry><title>暴风影音笔试题校招笔试题2014年技术类</title><link href="http://www.yanyulin.info/pages/2014/03/baofeng_2014_B.html" rel="alternate"></link><updated>2014-03-13T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-13:pages/2014/03/baofeng_2014_B.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;如有错误，或更加精简的方法，请留言，我会更正，以方便更多的人
 暴风影音2014年A郑，据说可以解决&lt;code&gt;户口&lt;/code&gt;
 注:以下如无特殊说明，均假设计算机编程环境为&lt;code&gt;intel x86&lt;/code&gt;的&lt;code&gt;32位CPU&lt;/code&gt;,编译器为VS,编程语言首选C语言，也可以使用自已熟悉的编程语言。&lt;/p&gt;
