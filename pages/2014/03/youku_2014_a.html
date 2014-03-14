@@ -2,7 +2,7 @@
 <html lang="zh">
 <head>
 <title>
-git保存用户名与密码(避免用户名密码输入) - 烟雨林</title>
+优酷校园招聘笔试题2014年研发类 - 烟雨林</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
 <meta name="author" content="烟雨林">
@@ -24,9 +24,9 @@ git保存用户名与密码(避免用户名密码输入) - 烟雨林</title>
 					   	<div >
 						  		<ul>	
 						   						<li><a href="http://www.yanyulin.info">烟雨首页</a></li>
-						  																<li class="current-menu-item current_page_item "><a href="http://www.yanyulin.info/category/bian-cheng-yu-yan.html">编程语言</a></li>
+						  				  											<li><a href="http://www.yanyulin.info/category/bian-cheng-yu-yan.html">编程语言</a></li>
 						  				  											<li><a href="http://www.yanyulin.info/category/cheng-xu-yuan-de-mian-jing.html">程序员的面经</a></li>
-						  				  											<li><a href="http://www.yanyulin.info/category/cheng-xu-yuan-zhao-gong-zuo.html">程序员找工作</a></li>
+						  																<li class="current-menu-item current_page_item "><a href="http://www.yanyulin.info/category/cheng-xu-yuan-zhao-gong-zuo.html">程序员找工作</a></li>
 						  				  											<li><a href="http://www.yanyulin.info/category/jing-pin-shu-ji.html">精品书籍</a></li>
 						  				  											<li><a href="http://www.yanyulin.info/category/shi-pin-jiao-cheng.html">视频教程</a></li>
 						  				  											<li><a href="http://www.yanyulin.info/category/wan-zhuan-ji-zhu.html">玩转技术</a></li>
@@ -46,15 +46,15 @@ git保存用户名与密码(避免用户名密码输入) - 烟雨林</title>
 		<div id="content">							 
 					<div id="map">
 						<div class="browse">现在的位置: <a title="返回首页" href="http://www.yanyulin.info" target="_blank">烟雨首页</a> ＞
-						<a href="http://www.yanyulin.info/category/bian-cheng-yu-yan.html"  target="_blank" title="查看编程语言中的全部文章" rel="category tag">编程语言</a>＞正文</div>
+						<a href="http://www.yanyulin.info/category/cheng-xu-yuan-zhao-gong-zuo.html"  target="_blank" title="查看程序员找工作中的全部文章" rel="category tag">程序员找工作</a>＞正文</div>
 						<div class="font"><a href="javascript:doZoom(12)">小</a> <a href="javascript:doZoom(13)">中</a> <a href="javascript:doZoom(18)">大</a></div>
 					</div>
 					<div class="entry_box_s">
 						<div class="entry_title_box">
-							<div class="entry_title">git保存用户名与密码(避免用户名密码输入)</div>
+							<div class="entry_title">优酷校园招聘笔试题2014年研发类</div>
 							<div class="archive_info">
-								<span class="date">2014-03-04</span>
-								<span class="category"> ⁄ <a href="http://www.yanyulin.info/category/bian-cheng-yu-yan.html" target="_blank" title="查看编程语言中的全部文章" rel="category tag">编程语言</a></span>
+								<span class="date">2014-03-14</span>
+								<span class="category"> ⁄ <a href="http://www.yanyulin.info/category/cheng-xu-yuan-zhao-gong-zuo.html" target="_blank" title="查看程序员找工作中的全部文章" rel="category tag">程序员找工作</a></span>
 							</div>
 						</div>
 						<div class="entry">
@@ -81,54 +81,44 @@ git保存用户名与密码(避免用户名密码输入) - 烟雨林</title>
 </script>
 </div>
 							<hr />
-<p><strong>写在前面的话</strong></p>
-<p>由于本博客是托管于github之上，因此每次<code>git push -u origin master</code>时都得输入用户名与密码，是非常烦人的，经过一番尝试，原来可以写一个配置文件避免输入用户名与密码，这样通过git上传文件到github上就非常方便了~~~</p>
-<p><code>git</code>工具是由linux之父开发的一款分布式代码管理工具，代码开源，功能强大，<code>git</code>开发的一般流程是首先从服务器上<code>clone</code>一份主干代码，相当于创建了分支，然后修改分支代码，最后将修改后的代码提交到服务器上，为了安全，每一提交都需要输入用户名与密码，肯定是很繁琐的，因此得想办法，避免每次提交时都需要输入<strong>用户名与密码</strong></p>
-<p><strong>方法</strong></p>
-<p>1、设置环境变量，在我的电脑上单击右键-&gt;属性-&gt;高级-&gt;环境变量-&gt;系统变量-&gt;新建里写上如下代码：</p>
-<div class="highlight"><pre><span class="err">变量名：</span><span class="n">HOME</span>
-<span class="err">变量值</span><span class="o">:%</span><span class="n">HOMEPATH</span>
-</pre></div>
-
-
-<p>如果使用的是Win7系统可以直接输入以下命令:</p>
-<div class="highlight"><pre><span class="n">setx</span> <span class="n">HOME</span> <span class="o">%</span><span class="n">USERPROFILE</span><span class="o">%</span>
-</pre></div>
-
-
-<p>以下是WinXP下的截图：</p>
-<p><center>
-<a href="http://www.yanyulin.info/pages/2014/03/git.html">
-<img src="http://www.yanyulin.info/pics/tools/git0.jpg"  alt="烟雨林博客"/>
-</a>
-</center></p>
-<p>2、在运行窗口（可以按Windows+R键）中输入如下命令，即可以打开%HOMEPATH%文件夹，在该文件夹下建立一个文件，文件名为<code>_netrc</code></p>
-<p><center>
-<a href="http://www.yanyulin.info/pages/2014/03/git.html">
-<img src="http://www.yanyulin.info/pics/tools/git1.jpg"  alt="烟雨林博客"/>
-</a>
-</center></p>
-<p>命令如下：</p>
-<div class="highlight"><pre><span class="c">%HOMEPATH%</span>
-</pre></div>
-
-
-<p>3、以记事本的形貌打开_netrc文件，在文件里面输入如下配置项：</p>
-<div class="highlight"><pre><span class="n">machine</span> <span class="n">github</span><span class="p">.</span><span class="n">com</span>
-<span class="n">login</span> <span class="o">*****</span><span class="err">@</span><span class="n">gmail</span><span class="p">.</span><span class="n">com</span>
-<span class="n">password</span> <span class="o">******</span>
-</pre></div>
-
-
-<p><strong>备注</strong></p>
-<p>代码中</p>
-<p>machine：表示要上传的服务器，上述代码中表示要上专到github.com中</p>
-<p>login：填入登录用户名，例子中应该填入github帐户名</p>
-<p>password：填入登录密码，例子中应该填入github帐户密码</p>
-<p>如有问题，可以联系我，联系方式，看博客下方邮箱</p>
+<p><strong>先总体说下题型，共有20道选择题，4道简答题，3道编程题和1道扩展题，题目都比较简单，限时一小时完成</strong></p>
+<p>一、选择题</p>
+<p>选择题非常简单，都是基础题，什么死锁发生的条件、HashMap和HashSet查找插入删除的时间复杂度、Thread类和Runnable接口、排序复杂度比较、建堆调整堆等等，具体的也记不得了。</p>
+<p>二、简答题</p>
+<ol>
+<li>
+<p>简述Servlet的生命周期</p>
+</li>
+<li>
+<p>写出至少8个Java常用的包名称</p>
+</li>
+<li>
+<p>Overload和Override的区别，Overloaded方法能不能修改返回值类型？</p>
+</li>
+<li>
+<p>不用中间变量交换a和b的值</p>
+</li>
+</ol>
+<p>三、编程题</p>
+<ol>
+<li>
+<p>有N个人围一圈依次报数，数到3的人出列，问当只剩一个人时他原来的位子在哪里？</p>
+</li>
+<li>
+<p>有两个已递增有序的单链表pLinkList和qLinkList，将这两个链表合并成一个递增有序的链表，请自己定义单链表的结构。</p>
+</li>
+<li>
+<p>具体题目不记得，大概意思就是：从N个数中随机抽取出M个数（M &lt; N），为了使抽取比较均匀，请自己定义抽取函数使得抽取的数既均匀又尽量随机。</p>
+</li>
+</ol>
+<p>四、扩展题</p>
+<p>具体题目也记不清了，一大堆，大概意思是：有一个海量日志库，里面的每条日志记录都有相应的关键词和访问次数，但记录是无序的，为了挖掘客户偏好，需要找出前N个最高访问次数的日志记录，请设计算法尽量使时间复杂度和空间复杂度最低。</p>
+<p>答案可以参考这篇博客</p>
+<p>http://www.cnblogs.com/Leo_wl/p/3340359.html</p>
+<p><strong>各位如果有更好的答案，请留言评价，方便更多的人</strong></p>
 						  <div class="clear"></div>
 							</div>
-							<b>本文地址:</b> <a href="http://www.yanyulin.info/pages/2014/03/git.html" target="_self">http://www.yanyulin.info/pages/2014/03/git.html</a>
+							<b>本文地址:</b> <a href="http://www.yanyulin.info/pages/2014/03/youku_2014_a.html" target="_self">http://www.yanyulin.info/pages/2014/03/youku_2014_a.html</a>
 							<div><font color="blue"><b>转载时请保留本文出处,谢谢您的合作</b></font></div>
 							<hr/>
 							<div class="clear" align="left">
@@ -160,10 +150,10 @@ git保存用户名与密码(避免用户名密码输入) - 烟雨林</title>
 					<!-- end: entrymeta -->
 				<div class="context_b" align="left">
 					 上一篇: 
-  				 <a href="http://www.yanyulin.info/pages/2014/03/pelican_page.html" title="pelican博客搭建设置分页和分页保存位置" target="_blank">pelican博客搭建设置分页和分页保存位置</a>
+  				 <a href="http://www.yanyulin.info/pages/2014/03/baofeng_2014_B.html" title="暴风影音笔试题校招笔试题2014年技术类" target="_blank">暴风影音笔试题校招笔试题2014年技术类</a>
   				 &nbsp;&nbsp
   				 下一篇:
-  				 <a href="http://www.yanyulin.info/pages/2014/03/huawei_2014_2.html" title="华为校招机试2014年北京试题" target="_blank">华为校招机试2014年北京试题</a>
+  				 <a href="http://www.yanyulin.info/pages/2014/03/tencent_2014_B.html" title="腾讯笔试题校园招聘笔试题2014年技术类" target="_blank">腾讯笔试题校园招聘笔试题2014年技术类</a>
 					 
 				</div>
 				<div class="context_b">
@@ -174,79 +164,15 @@ git保存用户名与密码(避免用户名密码输入) - 烟雨林</title>
   				 <tr>
  
   				 <td width="50%" align="left">
-  				 <a href="http://www.yanyulin.info/pages/2014/03/comment.html" title="博客添加第三方评论系统多说评论框" target="_blank">博客添加第三方评论系统多说评论框</a>
+  				 <a href="http://www.yanyulin.info/pages/2014/03/youku_2014_a.html" title="优酷校园招聘笔试题2014年研发类" target="_blank">优酷校园招聘笔试题2014年研发类</a>
   				 </td>
 	
-	 
  
-  				 <td width="50%" align="left">
-  				 <a href="http://www.yanyulin.info/pages/2014/03/git.html" title="git保存用户名与密码(避免用户名密码输入)" target="_blank">git保存用户名与密码(避免用户名密码输入)</a>
-  				 </td>
-	
-  				 </tr>
-	 
-  				 <tr>
- 
-  				 <td width="50%" align="left">
-  				 <a href="http://www.yanyulin.info/pages/2013/11/github.html" title="Github简明教程(入门篇)" target="_blank">Github简明教程(入门篇)</a>
-  				 </td>
-	
-	 
- 
-  				 <td width="50%" align="left">
-  				 <a href="http://www.yanyulin.info/pages/2013/11/githubM.html" title="Github上如何给别人贡献代码" target="_blank">Github上如何给别人贡献代码</a>
-  				 </td>
-	
-  				 </tr>
-	 
-  				 <tr>
- 
-  				 <td width="50%" align="left">
-  				 <a href="http://www.yanyulin.info/pages/2014/03/github_site.html" title="github搭建网站优化(修复过多的302重定向请求)" target="_blank">github搭建网站优化(修复过多的302重定向请求)</a>
-  				 </td>
-	
-	 
- 
-  				 <td width="50%" align="left">
-  				 <a href="http://www.yanyulin.info/pages/2013/12/htaccess.html" title=".htaccess简明教程(SEO优化)" target="_blank">.htaccess简明教程(SEO优化)</a>
-  				 </td>
-	
-  				 </tr>
-	 
-  				 <tr>
- 
-  				 <td width="50%" align="left">
-  				 <a href="http://www.yanyulin.info/pages/2014/03/navigator.html" title="pelican创建博客如何设置导航条" target="_blank">pelican创建博客如何设置导航条</a>
-  				 </td>
-	
-	 
- 
-  				 <td width="50%" align="left">
-  				 <a href="http://www.yanyulin.info/pages/2013/11/pelican.html" title="pelican搭建属于自已的博客" target="_blank">pelican搭建属于自已的博客</a>
-  				 </td>
-	
-  				 </tr>
-	 
-  				 <tr>
- 
-  				 <td width="50%" align="left">
-  				 <a href="http://www.yanyulin.info/pages/2014/03/pelican_page.html" title="pelican博客搭建设置分页和分页保存位置" target="_blank">pelican博客搭建设置分页和分页保存位置</a>
-  				 </td>
-	
-	 
- 
-  				 <td width="50%" align="left">
-  				 <a href="http://www.yanyulin.info/pages/2014/01/pelican_question.html" title="pelican创建博客常见问题汇总" target="_blank">pelican创建博客常见问题汇总</a>
-  				 </td>
-	
-  				 </tr>
- 
-  				 <td><a href="#" align="left"></a></td>
   				 <td><a href="#" align="left"></a></td>
 			</table>
 				</div>
 				<div class="context_b">
-			 <div class="ds-thread" data-title="git保存用户名与密码(避免用户名密码输入)"></div>
+			 <div class="ds-thread" data-title="优酷校园招聘笔试题2014年研发类"></div>
 			 <script type="text/javascript">
 			 	var duoshuoQuery={short_name:"yanyulin"};
 			 	var ds=document.createElement("script");
@@ -289,16 +215,64 @@ git保存用户名与密码(避免用户名密码输入) - 烟雨林</title>
 				<div class="box">			
 						<div class="textwidget">
 							<div id="tagsLink">
-							<a  href="http://www.yanyulin.info/tag/linuxhui-zong.html" title="查看Linux汇总下的所有文章" style="background-color: #8C8BC6" target="_blank">Linux汇总</a>
+							<a  href="http://www.yanyulin.info/tag/a-li-ba-ba-bi-shi-ti.html" title="查看阿里巴巴笔试题下的所有文章" style="background-color: #8C8BC6" target="_blank">阿里巴巴笔试题</a>
 						  </div>
 							<div id="tagsLink">
-							<a  href="http://www.yanyulin.info/tag/gong-ju-shi-yong.html" title="查看工具使用下的所有文章" style="background-color: #96C2AA" target="_blank">工具使用</a>
+							<a  href="http://www.yanyulin.info/tag/teng-xun-bi-shi-ti.html" title="查看腾讯笔试题下的所有文章" style="background-color: #169EDD" target="_blank">腾讯笔试题</a>
 						  </div>
 							<div id="tagsLink">
-							<a  href="http://www.yanyulin.info/tag/cxue-xi.html" title="查看C++学习下的所有文章" style="background-color: #84A4B3" target="_blank">C++学习</a>
+							<a  href="http://www.yanyulin.info/tag/you-ku-bi-shi-ti.html" title="查看优酷笔试题下的所有文章" style="background-color: #D17C93" target="_blank">优酷笔试题</a>
 						  </div>
 							<div id="tagsLink">
-							<a  href="http://www.yanyulin.info/tag/java.html" title="查看Java下的所有文章" style="background-color: #8C8BC6" target="_blank">Java</a>
+							<a  href="http://www.yanyulin.info/tag/bao-feng-bi-shi-ti.html" title="查看暴风笔试题下的所有文章" style="background-color: #8C8BC6" target="_blank">暴风笔试题</a>
+						  </div>
+							<div id="tagsLink">
+							<a  href="http://www.yanyulin.info/tag/da-zhong-dian-ping-bi-shi-ti.html" title="查看大众点评笔试题下的所有文章" style="background-color: #D17C93" target="_blank">大众点评笔试题</a>
+						  </div>
+							<div id="tagsLink">
+							<a  href="http://www.yanyulin.info/tag/ren-ren-wang-bi-shi-ti.html" title="查看人人网笔试题下的所有文章" style="background-color: #84A4B3" target="_blank">人人网笔试题</a>
+						  </div>
+							<div id="tagsLink">
+							<a  href="http://www.yanyulin.info/tag/jin-shan-bi-shi-ti.html" title="查看金山笔试题下的所有文章" style="background-color: #169EDD" target="_blank">金山笔试题</a>
+						  </div>
+							<div id="tagsLink">
+							<a  href="http://www.yanyulin.info/tag/360bi-shi-ti.html" title="查看360笔试题下的所有文章" style="background-color: #169EDD" target="_blank">360笔试题</a>
+						  </div>
+							<div id="tagsLink">
+							<a  href="http://www.yanyulin.info/tag/ku-pai-bi-shi-ti.html" title="查看酷派笔试题下的所有文章" style="background-color: #84A4B3" target="_blank">酷派笔试题</a>
+						  </div>
+							<div id="tagsLink">
+							<a  href="http://www.yanyulin.info/tag/mei-tuan-wang-bi-shi-ti.html" title="查看美团网笔试题下的所有文章" style="background-color: #D17C93" target="_blank">美团网笔试题</a>
+						  </div>
+							<div id="tagsLink">
+							<a  href="http://www.yanyulin.info/tag/xun-lei-bi-shi-ti.html" title="查看迅雷笔试题下的所有文章" style="background-color: #84A4B3" target="_blank">迅雷笔试题</a>
+						  </div>
+							<div id="tagsLink">
+							<a  href="http://www.yanyulin.info/tag/qu-na-wang-bi-shi-ti.html" title="查看去哪网笔试题下的所有文章" style="background-color: #169EDD" target="_blank">去哪网笔试题</a>
+						  </div>
+							<div id="tagsLink">
+							<a  href="http://www.yanyulin.info/tag/chuang-xin-gong-chang-bi-shi-ti.html" title="查看创新工场笔试题下的所有文章" style="background-color: #169EDD" target="_blank">创新工场笔试题</a>
+						  </div>
+							<div id="tagsLink">
+							<a  href="http://www.yanyulin.info/tag/hua-wei-bi-shi-ti.html" title="查看华为笔试题下的所有文章" style="background-color: #96C2AA" target="_blank">华为笔试题</a>
+						  </div>
+							<div id="tagsLink">
+							<a  href="http://www.yanyulin.info/tag/bai-du-bi-shi-ti.html" title="查看百度笔试题下的所有文章" style="background-color: #8C8BC6" target="_blank">百度笔试题</a>
+						  </div>
+							<div id="tagsLink">
+							<a  href="http://www.yanyulin.info/tag/ya-ma-xun-bi-shi-ti.html" title="查看亚马逊笔试题下的所有文章" style="background-color: #8C8BC6" target="_blank">亚马逊笔试题</a>
+						  </div>
+							<div id="tagsLink">
+							<a  href="http://www.yanyulin.info/tag/wei-ruan-bi-shi-ti.html" title="查看微软笔试题下的所有文章" style="background-color: #96C2AA" target="_blank">微软笔试题</a>
+						  </div>
+							<div id="tagsLink">
+							<a  href="http://www.yanyulin.info/tag/ya-hu-bi-shi-ti.html" title="查看雅虎笔试题下的所有文章" style="background-color: #D17C93" target="_blank">雅虎笔试题</a>
+						  </div>
+							<div id="tagsLink">
+							<a  href="http://www.yanyulin.info/tag/zhong-xing-bi-shi-ti.html" title="查看中兴笔试题下的所有文章" style="background-color: #8C8BC6" target="_blank">中兴笔试题</a>
+						  </div>
+							<div id="tagsLink">
+							<a  href="http://www.yanyulin.info/tag/gu-ge-bi-shi-ti.html" title="查看谷歌笔试题下的所有文章" style="background-color: #8C8BC6" target="_blank">谷歌笔试题</a>
 						  </div>
 						</div>
 						<div class="clear"></div>
@@ -367,25 +341,25 @@ git保存用户名与密码(避免用户名密码输入) - 烟雨林</title>
 				<ul>
 				<ul class="random-post-link">
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2013/11/github.html" target="_blank" title="Github简明教程(入门篇)">Github简明教程(入门篇)</a>
+				<a href="http://www.yanyulin.info/pages/2013/11/sizeof.html" target="_blank" title="被人误解的SIZEOF">被人误解的SIZEOF</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2014/01/baidu_1.html" target="_blank" title="百度校招2014年软研面经">百度校招2014年软研面经</a>
+				<a href="http://www.yanyulin.info/pages/2014/03/baidu_3.html" target="_blank" title="百度面经校招面经2014年软研面经">百度面经校招面经2014年软研面经</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2014/03/tencent_2012_A.html" target="_blank" title="腾讯校园招聘笔试题目2012年软件研发类">腾讯校园招聘笔试题目2012年软件研发类</a>
+				<a href="http://www.yanyulin.info/pages/2013/11/baofeng_2014_A.html" target="_blank" title="2014年暴风笔试试卷A">2014年暴风笔试试卷A</a>
 				</li>
 				<li class="random-post-link">
 				<a href="http://www.yanyulin.info/pages/2013/11/effective.html" target="_blank" title="Effective C++(编程的50个细节)">Effective C++(编程的50个细节)</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2013/11/vlinux2.html" target="_blank" title="Linux基础教程视频版(很详细)">Linux基础教程视频版(很详细)</a>
+				<a href="http://www.yanyulin.info/pages/2013/12/psbase_1.html" target="_blank" title="PhotoShop CS入门版视频教程(基础上)">PhotoShop CS入门版视频教程(基础上)</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2014/03/ripple_safe.html" target="_blank" title="保护Ripple币以及万特币的几点安全措施">保护Ripple币以及万特币的几点安全措施</a>
+				<a href="http://www.yanyulin.info/pages/2014/02/ripplereginster.html" target="_blank" title="ripple钱包注册/更改/免费激活">ripple钱包注册/更改/免费激活</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2013/12/qqLogin_1.html" target="_blank" title="界面编程模仿篇(QQ登录界面逼真篇)">界面编程模仿篇(QQ登录界面逼真篇)</a>
+				<a href="http://www.yanyulin.info/pages/2014/03/zhihu_1.html" target="_blank" title="一款自动发链接的软件设计思路">一款自动发链接的软件设计思路</a>
 				</li>
 				<li class="random-post-link">
 				<a href="http://www.yanyulin.info/pages/2014/03/duoshuo.html" target="_blank" title="多说评论框如何|怎么样|实际测试">多说评论框如何|怎么样|实际测试</a>
@@ -416,25 +390,25 @@ git保存用户名与密码(避免用户名密码输入) - 烟雨林</title>
 				<div class="box_r">
 				<ul>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2014/03/git.html" target="_blank" title="git保存用户名与密码(避免用户名密码输入)">git保存用户名与密码(避免用户名密码输入)</a>
+				<a href="http://www.yanyulin.info/pages/2014/03/concurrent.html" target="_blank" title="Linux系统中并发与竞争机制分析">Linux系统中并发与竞争机制分析</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2014/03/cvte_2014_1.html" target="_blank" title="CVTE校园招聘面经2014年软件研发面经">CVTE校园招聘面经2014年软件研发面经</a>
+				<a href="http://www.yanyulin.info/pages/2014/03/huawei_2014_B.html" target="_blank" title="华为校园招聘面试经验2014年软件研发武汉区">华为校园招聘面试经验2014年软件研发武汉区</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2013/12/meituan_2014_A.html" target="_blank" title="美团网2014年校招笔试题(研发)">美团网2014年校招笔试题(研发)</a>
+				<a href="http://www.yanyulin.info/pages/2013/06/huawei_2013_1.html" target="_blank" title="2013年华为校招机试(一)">2013年华为校招机试(一)</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2013/11/stlOrigin.html" target="_blank" title="STL源码剖析(候捷译)">STL源码剖析(候捷译)</a>
+				<a href="http://www.yanyulin.info/pages/2013/12/perl.html" target="_blank" title="编程珠玑(作者:John Bently)">编程珠玑(作者:John Bently)</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2013/11/vlinux2.html" target="_blank" title="Linux基础教程视频版(很详细)">Linux基础教程视频版(很详细)</a>
+				<a href="http://www.yanyulin.info/pages/2013/12/vc_1.html" target="_blank" title="VC视频教程(主要讲述`MFC`)">VC视频教程(主要讲述`MFC`)</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2014/03/getxrp.html" target="_blank" title="【赠送】ripple币免费获取&免费领取">【赠送】ripple币免费获取&免费领取</a>
+				<a href="http://www.yanyulin.info/pages/2014/02/gko.html" target="_blank" title="[赠送]GKO币每天免费领取10ripple">[赠送]GKO币每天免费领取10ripple</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2014/03/zhihu_2.html" target="_blank" title="一款自动发链接软件的实现细节分析">一款自动发链接软件的实现细节分析</a>
+				<a href="http://www.yanyulin.info/pages/2013/11/qqLogin.html" target="_blank" title="界面编程模仿篇(模仿腾讯QQ登录界面)">界面编程模仿篇(模仿腾讯QQ登录界面)</a>
 				</li>
 				<li>
 				<a href="http://www.yanyulin.info/pages/2014/03/duoshuo.html" target="_blank" title="多说评论框如何|怎么样|实际测试">多说评论框如何|怎么样|实际测试</a>
