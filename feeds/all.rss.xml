@@ -39,7 +39,7 @@
 &lt;p&gt;C: 虚成员函数不可能是static成员函数&lt;/p&gt;
 &lt;p&gt;D: static成员函数不能访问static成员变量&lt;/p&gt;
 &lt;p&gt;8、下图中从A点走向Z点共有多少种走法，每次只能向右或者向下走一步&lt;/p&gt;
-&lt;p&gt;&lt;a href=""&gt;
+&lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2014/03/alibaba_2014_B.html"&gt;
 &lt;img src="http://www.yanyulin.info/pics/job/ali2014_1.jpg" alt="烟雨林博客"/&gt;
 &lt;/a&gt; &lt;/p&gt;
 &lt;p&gt;9：某进程在运行过程中需要等待从磁盘上读入数据，此时进程的状态将：&lt;/p&gt;
