@@ -198,10 +198,10 @@
 &lt;p&gt;D.冒泡排序
 　　&lt;/p&gt;
 &lt;p&gt;4 初始序列为1 8 6 2 5 4 7 3一组数采用堆排序，当建堆(小根堆)完毕时，堆所对应的二叉树中序遍历序列为：(A)&lt;/p&gt;
-&lt;p&gt;A.8 3 2 5 1 6 4 7&lt;/p&gt;
-&lt;p&gt;B.3 2 8 5 1 4 6 7&lt;/p&gt;
-&lt;p&gt;C.3 8 2 5 1 6 7 4&lt;/p&gt;
-&lt;p&gt;D.8 2 3 5 1 4 7 6&lt;/p&gt;
+&lt;p&gt;A.&lt;code&gt;8 3 2 5 1 6 4 7&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;B.&lt;code&gt;3 2 8 5 1 4 6 7&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;C.&lt;code&gt;3 8 2 5 1 6 7 4&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;D.&lt;code&gt;8 2 3 5 1 4 7 6&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;5 当n=5时，下列函数的返回值是：(A)&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;foo&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 　　&lt;span class="p"&gt;{&lt;/span&gt;
@@ -216,10 +216,10 @@
 &lt;p&gt;C.8 &lt;/p&gt;
 &lt;p&gt;D.10&lt;/p&gt;
 &lt;p&gt;6 S市A，B共有两个区，人口比例为3：5，据历史统计A的犯罪率为0.01%，B区为0.015%，现有一起新案件发生在S市，那么案件发生在A区的可能性有多大?(C)&lt;/p&gt;
-&lt;p&gt;A.37.5% &lt;/p&gt;
-&lt;p&gt;B.32.5% &lt;/p&gt;
-&lt;p&gt;C.28.6% &lt;/p&gt;
-&lt;p&gt;D.26.1%&lt;/p&gt;
+&lt;p&gt;A.&lt;code&gt;37.5%&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;B.&lt;code&gt;32.5%&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;C.&lt;code&gt;28.6%&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;D.&lt;code&gt;26.1%&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;7 Unix系统中，哪些可以用于进程间的通信?(BCD)
 　　&lt;/p&gt;
 &lt;p&gt;A.Socket &lt;/p&gt;
