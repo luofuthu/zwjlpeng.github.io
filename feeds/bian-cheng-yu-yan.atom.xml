@@ -1,5 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>烟雨林</title><link href="http://www.yanyulin.info/" rel="alternate"></link><link href="http://www.yanyulin.info/feeds/bian-cheng-yu-yan.atom.xml" rel="self"></link><id>http://www.yanyulin.info/</id><updated>2014-03-07T00:00:00+08:00</updated><entry><title>Linux系统中并发与竞争机制分析</title><link href="http://www.yanyulin.info/pages/2014/03/concurrent.html" rel="alternate"></link><updated>2014-03-07T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-07:pages/2014/03/concurrent.html</id><summary type="html">&lt;hr /&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>烟雨林</title><link href="http://www.yanyulin.info/" rel="alternate"></link><link href="http://www.yanyulin.info/feeds/bian-cheng-yu-yan.atom.xml" rel="self"></link><id>http://www.yanyulin.info/</id><updated>2014-03-15T00:00:00+08:00</updated><entry><title>Velocity入门教程HelloWord程序</title><link href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_1.html" rel="alternate"></link><updated>2014-03-15T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-15:pages/2014/03/velocity_disabuse_1.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;简介&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Velocity&lt;/code&gt;是&lt;code&gt;Apache&lt;/code&gt;公司的开源产品，是一套基于&lt;code&gt;Java&lt;/code&gt;语言的模板引擎，可以很灵活的将后台数据对象与模板文件结合在一起，说的直白一点，就是允许任何人使用模板语言引用后台java代码定义的对象&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Velocity&lt;/code&gt;应用于Web开发时，界面设计人员可以和java程序开发人员同步开发一个遵循MVC架构的web站点，也就是说，页面设计人员可以只关注页面的显示效果，而由Java程序开发人员关注业务逻辑编码&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Velocity&lt;/code&gt;将 java代码从web页面中分离出来，这样为web站点的长期维护提供了便利,之所以写这篇文章，是因为在淘宝实习，淘宝的WebX框架也使用了&lt;code&gt;Velocity&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;入门例子&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Velocity&lt;/code&gt;应用于&lt;code&gt;java&lt;/code&gt;工程时，创建完一个普通的java工程后，需要引入相应的jar包，才能让工程支持&lt;code&gt;Velocity&lt;/code&gt;模板引擎(velocity-1.7.jar/ commons-*.jar)&lt;/p&gt;
+&lt;p&gt;如下是例子一&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nx"&gt;VelJava工程的后台java代码&lt;/span&gt;&lt;span class="sb"&gt;`VelJava.java`&lt;/span&gt;
+
+&lt;span class="c1"&gt;//构造函数  &lt;/span&gt;
+&lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="nf"&gt;VelJava&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="nx"&gt;throws&lt;/span&gt; &lt;span class="nx"&gt;IOException&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;  
+    &lt;span class="c1"&gt;//初始化Velocity模板  &lt;/span&gt;
+    &lt;span class="nx"&gt;Velocity.init&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;  
+    &lt;span class="c1"&gt;//创建一个VeloctiyContext对象  &lt;/span&gt;
+    &lt;span class="nx"&gt;VelocityContext&lt;/span&gt; &lt;span class="n"&gt;context&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;new&lt;/span&gt; &lt;span class="nx"&gt;VelocityContext&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;  
+    &lt;span class="c1"&gt;//向VelocityContext对象中放入一个键值对  &lt;/span&gt;
+    &lt;span class="nx"&gt;context.put&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;list&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="na"&gt;getNames&lt;/span&gt;&lt;span class="p"&gt;());&lt;/span&gt;  
+    &lt;span class="nx"&gt;Template&lt;/span&gt; &lt;span class="n"&gt;template&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kt"&gt;null&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;  
+    &lt;span class="c1"&gt;//通过静态方法获取一个模板  &lt;/span&gt;
+    &lt;span class="n"&gt;template&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nx"&gt;Velocity.getTemplate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;test.vm&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
+    &lt;span class="c1"&gt;//创建一个输出流  &lt;/span&gt;
+    &lt;span class="nx"&gt;BufferedWriter&lt;/span&gt; &lt;span class="n"&gt;writer&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;new&lt;/span&gt; &lt;span class="nx"&gt;BufferedWriter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;new&lt;/span&gt; &lt;span class="nx"&gt;OutputStreamWriter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;System.out&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;  
+    &lt;span class="c1"&gt;//将模板与context中的对象结合，然后输出  &lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;template&lt;/span&gt;&lt;span class="o"&gt;!=&lt;/span&gt;&lt;span class="kt"&gt;null&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  
+        &lt;span class="nx"&gt;template.merge&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;context&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;writer&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
+    &lt;span class="c1"&gt;//刷新缓存  &lt;/span&gt;
+    &lt;span class="nx"&gt;writer.flush&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;  
+    &lt;span class="c1"&gt;//关闭writer  &lt;/span&gt;
+    &lt;span class="nx"&gt;writer.close&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;  
+&lt;span class="p"&gt;}&lt;/span&gt;  
+&lt;span class="c1"&gt;//VelocityContext键值对中的值  &lt;/span&gt;
+&lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="nf"&gt;ArrayList&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="kt"&gt;String&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nx"&gt;getNames&lt;/span&gt;&lt;span class="p"&gt;(){&lt;/span&gt;  
+    &lt;span class="nx"&gt;ArrayList&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="kt"&gt;String&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;list&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;new&lt;/span&gt; &lt;span class="nx"&gt;ArrayList&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="kt"&gt;String&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;  
+    &lt;span class="nx"&gt;list.add&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;element 1&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
+    &lt;span class="nx"&gt;list.add&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;element 2&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
+    &lt;span class="nx"&gt;list.add&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;element 3&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
+    &lt;span class="nx"&gt;list.add&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;element 4&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nb"&gt;list&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;  
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;strong&gt;备注&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;在这个例子中，以健值对的形式将getNames()函数的返回值存放在Velocity容器中，并给其一个键值为&lt;code&gt;list&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;模板文件的代码如下&lt;code&gt;test.vm&lt;/code&gt;：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;##声明了一个变量  &lt;/span&gt;
+&lt;span class="cp"&gt;#set( $this = &amp;quot;ppTest&amp;quot;)  &lt;/span&gt;
+&lt;span class="cp"&gt;##将变量打印出来  &lt;/span&gt;
+&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="n"&gt;this&lt;/span&gt; &lt;span class="n"&gt;is&lt;/span&gt; &lt;span class="n"&gt;great&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;  
+&lt;span class="cp"&gt;##对后台的list进行扫描，将集合中的元素一个一个的打印出来  &lt;/span&gt;
+&lt;span class="cp"&gt;#foreach( $name in $list )  &lt;/span&gt;
+&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt; &lt;span class="n"&gt;is&lt;/span&gt; &lt;span class="n"&gt;showed&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;  
+&lt;span class="cp"&gt;#end  &lt;/span&gt;
+&lt;span class="cp"&gt;##设置一个判断条件，将将判断条件赋值为真  &lt;/span&gt;
+&lt;span class="cp"&gt;#set( $condition = true)  &lt;/span&gt;
+&lt;span class="cp"&gt;##判断条件为真，执行  &lt;/span&gt;
+&lt;span class="cp"&gt;#if ($condition)  &lt;/span&gt;
+&lt;span class="n"&gt;The&lt;/span&gt; &lt;span class="n"&gt;condition&lt;/span&gt; &lt;span class="n"&gt;is&lt;/span&gt; &lt;span class="nb"&gt;true&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;  
+&lt;span class="cp"&gt;##判断条件为假时，执行  &lt;/span&gt;
+&lt;span class="cp"&gt;#else  &lt;/span&gt;
+&lt;span class="n"&gt;The&lt;/span&gt; &lt;span class="n"&gt;condition&lt;/span&gt; &lt;span class="n"&gt;is&lt;/span&gt; &lt;span class="nb"&gt;false&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;  
+&lt;span class="cp"&gt;#end&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;strong&gt;备注&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;其中的##表示的是注释&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;#&lt;/code&gt;set类表示的是预处理指令&lt;/p&gt;
+&lt;p&gt;$变量名表示声明的是一个变量&lt;/p&gt;
+&lt;p&gt;上面的代码注释的已经很清楚了，如果只是应用，不需要了解更多细节的话，上面的代码已经够了，从上面的代码中可以看出&lt;code&gt;Velocity&lt;/code&gt;的一个好处就是模板文件与后台文件可以同步开发，只要约定好一些共有的变量定义即可，在模板输出时，由模板引擎进行变量的替换,替换之后再进行相应的输出&lt;/p&gt;
+&lt;p&gt;第二个例子：&lt;code&gt;Velocity&lt;/code&gt;动态创建模板并渲染(Java工程)&lt;/p&gt;
+&lt;p&gt;例子二，演示了在Java工程将模板渲染后以指定的编码方式&lt;code&gt;GBK&lt;/code&gt;输出，同时也演示了动态创建模板，然后进行渲染&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="k"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="p"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;  
+    &lt;span class="c1"&gt;//初始化Velocity引擎  &lt;/span&gt;
+    &lt;span class="n"&gt;Velocity&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;init&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;  
+    &lt;span class="c1"&gt;//获取一个VelocityContext对象  &lt;/span&gt;
+    &lt;span class="n"&gt;VelocityContext&lt;/span&gt; &lt;span class="n"&gt;context&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;new&lt;/span&gt; &lt;span class="n"&gt;VelocityContext&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;  
+    &lt;span class="c1"&gt;//向此对象容器中加入相应的键值对  &lt;/span&gt;
+    &lt;span class="n"&gt;context&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;put&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;name&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Velocity&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
+    &lt;span class="n"&gt;context&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;put&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;project&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Jakarta&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
+    &lt;span class="c1"&gt;//StringWriter底层其实就是一个StringBuffer  &lt;/span&gt;
+    &lt;span class="n"&gt;StringWriter&lt;/span&gt; &lt;span class="n"&gt;w&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;new&lt;/span&gt; &lt;span class="n"&gt;StringWriter&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;  
+    &lt;span class="c1"&gt;//将test2.vm与context进行合并，生成的最终代码写入StringWriter的buf中  &lt;/span&gt;
+    &lt;span class="n"&gt;Velocity&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mergeTemplate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;test2.vm&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;GBK&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;context&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;w&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
+    &lt;span class="c1"&gt;//将其在控制台上打印出来  &lt;/span&gt;
+    &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;out&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;println&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;模板:&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;w&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
+    &lt;span class="c1"&gt;//动态创建模板  &lt;/span&gt;
+    &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;正在使用 $project $name 渲染模板&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;  
+    &lt;span class="n"&gt;w&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;new&lt;/span&gt; &lt;span class="n"&gt;StringWriter&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;  
+    &lt;span class="cm"&gt;/* &lt;/span&gt;
+&lt;span class="cm"&gt;     *context：对输入的字符串进行渲染 &lt;/span&gt;
+&lt;span class="cm"&gt;     *w:渲染后的结果输出的地方 &lt;/span&gt;
+&lt;span class="cm"&gt;     *mystring:发生错误时，被用来作为错误文件的名字 &lt;/span&gt;
+&lt;span class="cm"&gt;     *s:包括VTL语言的输入字符串 &lt;/span&gt;
+&lt;span class="cm"&gt;    */&lt;/span&gt;   
+    &lt;span class="n"&gt;Velocity&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;evaluate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;context&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;w&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;mystring&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
+    &lt;span class="c1"&gt;//将结果进行输出来  &lt;/span&gt;
+    &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;out&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;println&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;w&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;例子二的模板文件&lt;code&gt;test2.vm&lt;/code&gt;如下：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;Hello&lt;/span&gt; &lt;span class="err"&gt;来自于&lt;/span&gt; &lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt; &lt;span class="err"&gt;在&lt;/span&gt; &lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="n"&gt;project&lt;/span&gt; &lt;span class="err"&gt;工程里&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;例子二与例子一极为相似，例子二的模板只不过是在代码中创建的，例子一中的模板是直接引用外部的test.vm文件，从上面的代码中可以揣测一下Velocity是如何工作的，大概是这样的&lt;/p&gt;
+&lt;p&gt;1、将外部的vm文件读入内存&lt;/p&gt;
+&lt;p&gt;2、Velocity模板引擎对vm文件进行解析&lt;/p&gt;
+&lt;p&gt;3、解析之后对模板文件中的变量进行替换，并执行vm中的相应判断逻辑&lt;/p&gt;
+&lt;p&gt;4、执行完后，整个页面的渲染结果就知道了，再直接输出即可&lt;/p&gt;
+&lt;p&gt;从这里可以看出只要前后台代码的开发人员能够约定相同的变量，则前后台的开发完全可以并行执行&lt;/p&gt;</summary><category term="淘宝技术"></category></entry><entry><title>Linux系统中并发与竞争机制分析</title><link href="http://www.yanyulin.info/pages/2014/03/concurrent.html" rel="alternate"></link><updated>2014-03-07T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-07:pages/2014/03/concurrent.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;现代&lt;code&gt;Linux&lt;/code&gt;系统中有相非常多的并发源，导致的问题就是并发与竞争，多个并发源竞争同一个共享数据
 竞争的情况来自对资源的共享存取结果，当多个线程操作同一数据结构时，混乱就可能存在，在驱动编程中尽量避免共享资源，采用的方法通常是加锁机制。&lt;/p&gt;
 &lt;p&gt;共享资源的互斥&lt;/p&gt;
