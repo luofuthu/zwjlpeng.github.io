@@ -1,5 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>烟雨林</title><link href="http://www.yanyulin.info/" rel="alternate"></link><link href="http://www.yanyulin.info/feeds/tou-zi-li-cai.atom.xml" rel="self"></link><id>http://www.yanyulin.info/</id><updated>2014-03-09T00:00:00+08:00</updated><entry><title>保护Ripple币以及万特币的几点安全措施</title><link href="http://www.yanyulin.info/pages/2014/03/ripple_safe.html" rel="alternate"></link><updated>2014-03-09T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-09:pages/2014/03/ripple_safe.html</id><summary type="html">&lt;hr /&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>烟雨林</title><link href="http://www.yanyulin.info/" rel="alternate"></link><link href="http://www.yanyulin.info/feeds/tou-zi-li-cai.atom.xml" rel="self"></link><id>http://www.yanyulin.info/</id><updated>2014-03-16T00:00:00+08:00</updated><entry><title>怎么删除Ripple里的信任网关</title><link href="http://www.yanyulin.info/pages/2014/03/deletetrust.html" rel="alternate"></link><updated>2014-03-16T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-16:pages/2014/03/deletetrust.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;经常看到有人在问，怎么或者如何删除Ripple里的信任网关，&lt;code&gt;how to delete trust line&lt;/code&gt;,其实很简单，只是有条件的删除，看完篇文章后，相信大家也就不再纠结怎么删除ripple里的肉关啦？&lt;/p&gt;
+&lt;p&gt;如某网友:&lt;/p&gt;
+&lt;p&gt;当添加一个网关后，然后通过网关交易后，发现不想要这个网关，居然无法彻底删除，在钱包中总是占用一个位置，即使将信任数改为0也不行。因为钱包总是有这个网关的余额：，如下图中，我想删除掉XIB，我怎么也删除不了，我甚至将那些币原数退回给网关，最后还是总有个小数点。网关根本不能清0&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;网关的危害&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;信任网关，如果网关的发行者不可靠，可能会上当受骗，信任后，钱包里的保留值也相应增加，即信任一个网关后，钱包里要有5ripple作为保留值，例如钱包里现在有100ripple,保留值是20xrp,那么当增加一条信任线后，保留值就会变成25xrp,25xrp意味着你的钱包里只有75xrp可以用于交换，25xrp相当于只是个数字了，而且不会再改变的数字了&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;删除网关的方法&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;将网关的信任额度设置为0，如果你钱包里该网关发行的货币量数量恰好也为0，那么该信任网关将会自动消失，但是如果你钱包里还有该网关发行的货币，哪怕只有0.00000000001,那么信任线也不会消失&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;为什么设置为0后，钱包里显示该网关的货币量也为0，信任线还存在&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;如果你刚信任一个网关，假设该网关发行了货量符号为YYL，信任后该网关没有给你发货币，即你钱包里有0YYL,此时你取消对该网关的信任，那么信任线将立即消失&lt;/p&gt;
+&lt;p&gt;但若该网关给你发行了1000的YYL,那么你的信任线将永远都取消不了啦，为什么呢？因为每次交易时都会收取(+-)1%的手绪费，这1%的手绪费不是从交易的货币中扣取，而是从你钱包的余额中扣取，因此无论如何，你每次的交易，钱包里都要留有足够的余额来支持交易产生的费用，结果就是钱包里的货币永远都不可能到达0，当数字为0.000000000000000001时，虽然钱包显示为0，但实际上是不为0的，所以也就删除不了信任线,那么有人就在想我把所有的货币都发出去，这样我钱包里就没余额了，很抱歉，这时的手续费变成了-1%，即钱包的发行者又给你发了很少量很少量的货币，迫使你的钱包货币量不为0&lt;/p&gt;
+&lt;p&gt;例如，假设你信任了1000YYL&lt;/p&gt;
+&lt;p&gt;网关发行者给你发送了100YYL&lt;/p&gt;
+&lt;p&gt;那么当你给B发送了50YYL时，这时的手续费就会从你余额里的50YYL中扣取&lt;/p&gt;
+&lt;p&gt;例如，假设你信任了1000YYL&lt;/p&gt;
+&lt;p&gt;网关发行者给你发送了100YYL&lt;/p&gt;
+&lt;p&gt;那么当你给B发送了100YYL时，这时的手续费就没有，而是网关的发行者给你发送了交易时的非常非常少量的货币以维持他的信任线不会消失&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;措施&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;如果你觉的某个网关不行了，又担心安全性，最好的方法就是将其信任线更改为0&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;这也是一个ripple里的bug问题&lt;/strong&gt;&lt;/p&gt;</summary><category term="瑞波币"></category></entry><entry><title>保护Ripple币以及万特币的几点安全措施</title><link href="http://www.yanyulin.info/pages/2014/03/ripple_safe.html" rel="alternate"></link><updated>2014-03-09T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-09:pages/2014/03/ripple_safe.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;如何保护ripple钱包，如何防止钱包被盗，本博文将向大家介绍几种方法&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;引言&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;万特币是基于&lt;code&gt;Ripple币&lt;/code&gt;的一种货币，具体简介，大家可以参考&lt;/p&gt;
