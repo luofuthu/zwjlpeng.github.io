@@ -2,7 +2,7 @@
 <html lang="zh">
 <head>
 <title>
-博客添加第三方评论系统多说评论框 - 烟雨林</title>
+Velocity入门例子自定义呈现容器 - 烟雨林</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
 <meta name="author" content="烟雨林">
@@ -51,11 +51,11 @@
 					</div>
 					<div class="entry_box_s">
 						<div class="entry_title_box">
-							<div class="entry_title">博客添加第三方评论系统多说评论框</div>
+							<div class="entry_title">Velocity入门例子自定义呈现容器</div>
 							<div class="archive_info">
-								<span class="date">2014-03-02</span>
+								<span class="date">2014-03-16</span>
 								<span class="category"> ⁄ 							
-						  <a href="http://www.yanyulin.info/tag/gong-ju-shi-yong.html" target="_blank" title="查看同类文章" rel="category tag">工具使用</a>&nbsp;
+						  <a href="http://www.yanyulin.info/tag/tao-bao-ji-zhu.html" target="_blank" title="查看同类文章" rel="category tag">淘宝技术</a>&nbsp;
 						  </span>
 							</div>
 						</div>
@@ -83,88 +83,97 @@
 </script>
 </div>
 							<hr />
-<p><code>博客</code>已经基本搭建完成，前前后后历时将近两周，采用的是开源工具<code>Pelican</code>搭建，服务器采用的是强大的分布式代码托管库<code>Github</code>,两者的教程可以参考下面的链接，本博客总共破费了<code>我3美元</code>：</p>
-<blockquote>
-<p><a href="http://www.yanyulin.info/pages/2013/11/pelican.html" target="_blank">
-pelican搭建属于自已的博客</a></p>
-<p><a href="http://www.yanyulin.info/pages/2013/11/github.html" target="_blank">
-Github简明教程(入门篇)</a></p>
-<p><a href="http://www.yanyulin.info/pages/2013/11/githubM.html" target="_blank">
-Github上如何给别人贡献代码</a></p>
-<p><a href="http://www.yanyulin.info/pages/2014/01/pelican_question.html" target="_blank">
-pelican创建博客常见问题汇总
+<p>本篇博文仅随前一篇博文而来</p>
+<p><a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_1.html" target="_blank">
+Velocity入门教程HelloWord程序
 </a></p>
-</blockquote>
-<p>今天<code>分享</code>一下，博客如何添加<strong>第三方评论系统</strong>，国外的第三方评论系统已经做的相当强大，如<code>disqus</code>,但国外终究是国外，与国内行情不同，如<code>disqus</code>不支持<strong>微博、QQ、人人、百度贴吧</strong>登录以及分享等，国内的第三方评论系统起步较国外晚，但做的也相当不错，如<strong>多说、友言、评论啦</strong>等，比较符合国内的行情，本博客最初搭建时采用的第三方评论系统为<code>disqus</code>,最后发现<code>disqus</code>除了上述的缺点之外，还有一个非常严重的问题，就是在<code>IE7/IE6</code>下，<code>disqus</code>会出现问题，即不能很好的跨浏览器，使用了将近两周，于是弃之，改用了国内的多说</p>
-<p><strong>为什么采用第三方评论系统</strong></p>
-<blockquote>
-<p>1.数据库以及空间贵，我等屌丝还支付不起</p>
-<p>2.第三方评论系统具有强大的反垃圾机制，可以有效的过滤垃圾流言</p>
-<p>3.添加容易，界面操作方便，省去了我们自已写代码</p>
-<p>4.功能比较强大，都带有自已的<code>分享按钮</code>以及<strong>微博、QQ、人人、百度贴吧</strong>登录</p>
-</blockquote>
-<p><strong>多说评论框</strong>*</p>
-<blockquote>
-<p>1.支持国内目前主流的SNS,如<strong>微博、QQ、人人、百度贴吧</strong>,国外嘛，也没必要，你懂的~</p>
-<p>2.团队技术实力还是比较强大</p>
-<p>3.<code>多说</code>支持<code>SEO优化</code>,这是其最为突出的地方，也最吸引人的...</p>
-<p>4.评论系统反馈比较及时，界面美观，提供自定义....</p>
-</blockquote>
-<p><strong>重点</strong></p>
-<p>1.向博客中添加评论系统，首先要在多说网上注册自已的帐号，注册帐号后要验证自已的域名，邮箱等，如下图所示：</p>
-<p><center>
-<a href="http://www.yanyulin.info/pages/2014/03/comment.html">
-<img src="http://www.yanyulin.info/pics/tools/duoshuo1.jpg"  alt="烟雨林博客"/>
-</a>
-</center></p>
-<p>2.点击管理员左侧的工具，获取通用代码，或者直接复制下面的代码，将该代码粘贴到博客中需要添加评论的地方，即可</p>
-<div class="highlight"><pre><span class="c">&lt;!-- Duoshuo Comment BEGIN --&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;ds-thread&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
-<span class="nt">&lt;script</span> <span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span><span class="nt">&gt;</span>
-var duoshuoQuery = {short_name:&quot;yanyulin&quot;};
-    (function() {
-        var ds = document.createElement(&#39;script&#39;);
-        ds.type = &#39;text/javascript&#39;;ds.async = true;
-        ds.src = &#39;http://static.duoshuo.com/embed.js&#39;;
-        ds.charset = &#39;UTF-8&#39;;
-        (document.getElementsByTagName(&#39;head&#39;)<span class="cp">[</span><span class="mi">0</span><span class="cp">]</span> 
-        || document.getElementsByTagName(&#39;body&#39;)<span class="cp">[</span><span class="mi">0</span><span class="cp">]</span>).appendChild(ds);
-    })();
-    <span class="nt">&lt;/script&gt;</span>
-<span class="c">&lt;!-- Duoshuo Comment END --&gt;</span>
+<p>本篇博文主要介绍velocity中如何自定义呈现容器即<code>VelocityContext</code></p>
+<p>例子中实现的是自定义义的VelocityContext容器，用自定义的容器来渲染模板文件，并将结果输出</p>
+<div class="highlight"><pre><span class="c1">//自定义的VelocityContext  </span>
+<span class="k">class</span> <span class="n">DBContext</span> <span class="k">extends</span> <span class="n">AbstractContext</span><span class="p">{</span>  
+    <span class="n">private</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="n">Object</span><span class="o">&gt;</span> <span class="n">props</span><span class="o">=</span><span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">Object</span><span class="o">&gt;</span><span class="p">();</span>  
+    <span class="n">public</span> <span class="k">void</span> <span class="n">setUp</span><span class="p">(){</span>  
+    <span class="p">}</span>  
+    <span class="n">public</span> <span class="n">DBContext</span><span class="p">(){</span>  
+        <span class="k">super</span><span class="p">();</span>  
+    <span class="p">}</span>  
+    <span class="n">public</span> <span class="n">DBContext</span><span class="p">(</span><span class="n">Context</span> <span class="n">inner</span><span class="p">){</span>  
+        <span class="k">super</span><span class="p">(</span><span class="n">inner</span><span class="p">);</span>  
+    <span class="p">}</span>  
+    <span class="p">@</span><span class="n">Override</span>  
+    <span class="n">public</span> <span class="n">boolean</span> <span class="n">internalContainsKey</span><span class="p">(</span><span class="n">Object</span> <span class="n">arg0</span><span class="p">)</span> <span class="p">{</span>  
+        <span class="k">return</span> <span class="n">false</span><span class="p">;</span>  
+    <span class="p">}</span>  
+    <span class="p">@</span><span class="n">Override</span>  
+    <span class="n">public</span> <span class="n">Object</span> <span class="n">internalGet</span><span class="p">(</span><span class="n">String</span> <span class="n">arg0</span><span class="p">)</span> <span class="p">{</span>  
+        <span class="n">Object</span> <span class="n">pp</span><span class="o">=</span><span class="n">props</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="n">arg0</span><span class="p">);</span>  
+        <span class="k">return</span> <span class="n">pp</span><span class="p">;</span>  
+    <span class="p">}</span>  
+    <span class="p">@</span><span class="n">Override</span>  
+    <span class="n">public</span> <span class="n">Object</span><span class="p">[]</span> <span class="n">internalGetKeys</span><span class="p">()</span> <span class="p">{</span>  
+        <span class="k">return</span> <span class="k">null</span><span class="p">;</span>  
+    <span class="p">}</span>  
+    <span class="p">@</span><span class="n">Override</span>  
+    <span class="n">public</span> <span class="n">Object</span> <span class="n">internalPut</span><span class="p">(</span><span class="n">String</span> <span class="n">key</span><span class="p">,</span> <span class="n">Object</span> <span class="n">value</span><span class="p">)</span> <span class="p">{</span>  
+        <span class="n">props</span><span class="p">.</span><span class="n">put</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">);</span>  
+        <span class="k">return</span> <span class="k">null</span><span class="p">;</span>  
+    <span class="p">}</span>  
+    <span class="p">@</span><span class="n">Override</span>  
+    <span class="n">public</span> <span class="n">Object</span> <span class="n">internalRemove</span><span class="p">(</span><span class="n">Object</span> <span class="n">arg0</span><span class="p">)</span> <span class="p">{</span>  
+        <span class="k">return</span> <span class="k">null</span><span class="p">;</span>  
+    <span class="p">}</span>  
+<span class="p">}</span>  
+<span class="n">public</span> <span class="k">class</span> <span class="n">DBContextTest</span> <span class="p">{</span>  
+    <span class="n">public</span> <span class="n">DBContextTest</span><span class="p">(</span><span class="n">String</span> <span class="n">templateFile</span><span class="p">){</span>  
+        <span class="c1">//初始化Velocity模板引擎，为单例模式  </span>
+        <span class="n">RuntimeSingleton</span><span class="p">.</span><span class="n">init</span><span class="p">(</span><span class="k">new</span> <span class="n">Properties</span><span class="p">());</span>  
+        <span class="c1">//获取模板文件  </span>
+        <span class="n">Template</span> <span class="n">template</span><span class="o">=</span><span class="n">RuntimeSingleton</span><span class="p">.</span><span class="n">getTemplate</span><span class="p">(</span><span class="n">templateFile</span><span class="p">);</span>  
+        <span class="c1">//创建一个VelocityContext对象，这里使用的是自定义的VelocityContext对象  </span>
+        <span class="n">DBContext</span> <span class="n">dbc</span><span class="o">=</span><span class="k">new</span> <span class="n">DBContext</span><span class="p">();</span>  
+        <span class="c1">//创建一个Hashtable对象  </span>
+        <span class="n">Hashtable</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">h</span><span class="o">=</span><span class="k">new</span> <span class="n">Hashtable</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="n">String</span><span class="o">&gt;</span><span class="p">();</span>  
+        <span class="c1">//向创建的Hashtable对象里填加值  </span>
+        <span class="n">h</span><span class="p">.</span><span class="n">put</span><span class="p">(</span><span class="s">&quot;Bar&quot;</span><span class="p">,</span> <span class="s">&quot;来自于hashtable&quot;</span><span class="p">);</span>  
+        <span class="c1">//向VelocityContext容器中填加两个值  </span>
+        <span class="n">dbc</span><span class="p">.</span><span class="n">put</span><span class="p">(</span><span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="s">&quot;欢迎&quot;</span><span class="p">);</span>  
+        <span class="n">dbc</span><span class="p">.</span><span class="n">put</span><span class="p">(</span><span class="s">&quot;hashtable&quot;</span><span class="p">,</span> <span class="n">h</span><span class="p">);</span>  
+        <span class="n">Writer</span> <span class="n">writer</span><span class="o">=</span><span class="k">new</span> <span class="n">BufferedWriter</span><span class="p">(</span><span class="k">new</span> <span class="n">OutputStreamWriter</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="n">out</span><span class="p">));</span>  
+        <span class="c1">//使用自定义的VelocityContext对template进行渲染，并将渲染的结果输出到writer中  </span>
+        <span class="n">template</span><span class="p">.</span><span class="n">merge</span><span class="p">(</span><span class="n">dbc</span><span class="p">,</span> <span class="n">writer</span><span class="p">);</span>  
+        <span class="n">try</span> <span class="p">{</span>  
+        <span class="c1">//清空缓存，防止因缓存而打印不全  </span>
+            <span class="n">writer</span><span class="p">.</span><span class="n">flush</span><span class="p">();</span>  
+            <span class="n">writer</span><span class="p">.</span><span class="n">close</span><span class="p">();</span>  
+        <span class="p">}</span> <span class="n">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>  
+            <span class="n">System</span><span class="p">.</span><span class="n">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">getMessage</span><span class="p">());</span>  
+        <span class="p">}</span>  
+    <span class="p">}</span>  
+    <span class="n">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">main</span><span class="p">(</span><span class="n">String</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>  
+        <span class="n">DBContextTest</span> <span class="n">t</span><span class="p">;</span>  
+        <span class="n">t</span><span class="o">=</span><span class="k">new</span> <span class="n">DBContextTest</span><span class="p">(</span><span class="s">&quot;test2.vm&quot;</span><span class="p">);</span>  
+    <span class="p">}</span>  
+<span class="p">}</span>
 </pre></div>
 
 
-<p><strong>备注</strong>代码中的的<code>short_name</code>要改写成添加站点时<code>http://www.XXXX.duoshuo.com</code>中的<code>XXXX</code>部分，添加成功后，运行图我如下图如博文下面的评论框所示</p>
-<p>3.给博文添加最新评论，效果如我的博客右侧栏如示，代码如下：</p>
-<div class="highlight"><pre><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;ds-recent-comments&quot;</span> <span class="na">data-num-items=</span><span class="s">&quot;7&quot;</span> <span class="na">data-show-title=</span><span class="s">&quot;0&quot;</span> <span class="na">data-show-avatars=</span><span class="s">&quot;1&quot;</span> <span class="na">data-show-time=</span><span class="s">&quot;1&quot;</span> <span class="na">data-show-admin=</span><span class="s">&quot;0&quot;</span> <span class="na">data-excerpt-length=</span><span class="s">&quot;40&quot;</span><span class="nt">&gt;&lt;/ul&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;clear&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
-<span class="c">&lt;!--多说js加载开始，一个页面只需要加载一次 --&gt;</span>
-<span class="nt">&lt;script</span> <span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span><span class="nt">&gt;</span>
-var duoshuoQuery = {short_name:&quot;yanyulin&quot;};
-(function() {
-    var ds = document.createElement(&#39;script&#39;);
-    ds.type = &#39;text/javascript&#39;;ds.async = true;
-    ds.src = &#39;http://static.duoshuo.com/embed.js&#39;;
-    ds.charset = &#39;UTF-8&#39;;
-    (document.getElementsByTagName(&#39;head&#39;)<span class="cp">[</span><span class="mi">0</span><span class="cp">]</span> || document.getElementsByTagName(&#39;body&#39;)<span class="cp">[</span><span class="mi">0</span><span class="cp">]</span>).appendChild(ds);
-})();
-<span class="nt">&lt;/script&gt;</span>
-<span class="c">&lt;!--多说js加载结束，一个页面只需要加载一次 --&gt;</span>
+<p><strong>备注</strong></p>
+<p>1、自定义的呈现容器使用HashMap来存放键值对</p>
+<p>2、从代码中可以看出自定义呈现容器中只能向HaspMap中增加元素，而无法从容器中删除元素</p>
+<p>3、从主程序代码中可以看出Velocity模板引擎实例化为单例模式，什么叫单例模式可以参考设计模式一书</p>
+<p>后台的模板文件如下如示，即函数的参数<code>templateFile</code></p>
+<div class="highlight"><pre><span class="cp">##Hello 来自于 $name 在 $project 工程里.  </span>
+<span class="err">$</span><span class="n">string</span>  
+<span class="cp">##实际上调用 的是hashtable.get(&quot;Bar&quot;)  </span>
+<span class="err">$</span><span class="n">hashtable</span><span class="p">.</span><span class="n">Bar</span>  
+<span class="cp">##将值全部打印出来  </span>
+<span class="cp">#foreach($value in $hashtable.keySet())  </span>
+<span class="err">$</span><span class="n">hashtable</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="err">$</span><span class="n">value</span><span class="p">)</span>  
+<span class="cp">#end</span>
 </pre></div>
-
-
-<p><strong>备注</strong>代码中的的<code>short_name</code>要改写成添加站点时<code>http://www.XXXX.duoshuo.com</code>中的<code>XXXX</code>部分</p>
-<p>最终的结果如下图所示</p>
-<p><center>
-<a href="http://www.yanyulin.info/pages/2014/03/comment.html">
-<img src="http://www.yanyulin.info/pics/tools/duoshuo2.jpg"  alt="烟雨林博客"/>
-</a>
-</center></p>
-<p>如有问题，可以联系我，联系方式，看博客下方邮箱</p>
 						  <div class="clear"></div>
 							</div>
-							<b>本文地址:</b> <a href="http://www.yanyulin.info/pages/2014/03/comment.html" target="_self">http://www.yanyulin.info/pages/2014/03/comment.html</a>
+							<b>本文地址:</b> <a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_2.html" target="_self">http://www.yanyulin.info/pages/2014/03/velocity_disabuse_2.html</a>
 							<div><font color="blue"><b>转载时请保留本文出处,谢谢您的合作</b></font></div>
 							<hr/>
 							<div class="clear" align="left">
@@ -196,10 +205,10 @@ var duoshuoQuery = {short_name:&quot;yanyulin&quot;};
 					<!-- end: entrymeta -->
 				<div class="context_b" align="left">
 					 上一篇: 
-  				 <a href="http://www.yanyulin.info/pages/2014/03/getxrp.html" title="【赠送】ripple币免费获取&免费领取" target="_blank">【赠送】ripple币免费获取&免费领取</a>
+  				 <a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_1.html" title="Velocity入门教程HelloWord程序" target="_blank">Velocity入门教程HelloWord程序</a>
   				 &nbsp;&nbsp
   				 下一篇:
-  				 <a href="http://www.yanyulin.info/pages/2014/03/navigator.html" title="pelican创建博客如何设置导航条" target="_blank">pelican创建博客如何设置导航条</a>
+  				 <a href="http://www.yanyulin.info/pages/2014/03/annotation.html" title="Java中Annotation注解机制实现分析" target="_blank">Java中Annotation注解机制实现分析</a>
 					 
 				</div>
 				<div class="context_b">
@@ -210,69 +219,13 @@ var duoshuoQuery = {short_name:&quot;yanyulin&quot;};
   				 <tr>
  
   				 <td width="50%" align="left">
-  				 <a href="http://www.yanyulin.info/pages/2014/03/comment.html" title="博客添加第三方评论系统多说评论框" target="_blank">博客添加第三方评论系统多说评论框</a>
+  				 <a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_1.html" title="Velocity入门教程HelloWord程序" target="_blank">Velocity入门教程HelloWord程序</a>
   				 </td>
 	
 	 
  
   				 <td width="50%" align="left">
-  				 <a href="http://www.yanyulin.info/pages/2014/03/git.html" title="git保存用户名与密码(避免用户名密码输入)" target="_blank">git保存用户名与密码(避免用户名密码输入)</a>
-  				 </td>
-	
-  				 </tr>
-	 
-  				 <tr>
- 
-  				 <td width="50%" align="left">
-  				 <a href="http://www.yanyulin.info/pages/2013/11/github.html" title="Github简明教程(入门篇)" target="_blank">Github简明教程(入门篇)</a>
-  				 </td>
-	
-	 
- 
-  				 <td width="50%" align="left">
-  				 <a href="http://www.yanyulin.info/pages/2013/11/githubM.html" title="Github上如何给别人贡献代码" target="_blank">Github上如何给别人贡献代码</a>
-  				 </td>
-	
-  				 </tr>
-	 
-  				 <tr>
- 
-  				 <td width="50%" align="left">
-  				 <a href="http://www.yanyulin.info/pages/2014/03/github_site.html" title="github搭建网站优化(修复过多的302重定向请求)" target="_blank">github搭建网站优化(修复过多的302重定向请求)</a>
-  				 </td>
-	
-	 
- 
-  				 <td width="50%" align="left">
-  				 <a href="http://www.yanyulin.info/pages/2013/12/htaccess.html" title=".htaccess简明教程(SEO优化)" target="_blank">.htaccess简明教程(SEO优化)</a>
-  				 </td>
-	
-  				 </tr>
-	 
-  				 <tr>
- 
-  				 <td width="50%" align="left">
-  				 <a href="http://www.yanyulin.info/pages/2014/03/navigator.html" title="pelican创建博客如何设置导航条" target="_blank">pelican创建博客如何设置导航条</a>
-  				 </td>
-	
-	 
- 
-  				 <td width="50%" align="left">
-  				 <a href="http://www.yanyulin.info/pages/2013/11/pelican.html" title="pelican搭建属于自已的博客" target="_blank">pelican搭建属于自已的博客</a>
-  				 </td>
-	
-  				 </tr>
-	 
-  				 <tr>
- 
-  				 <td width="50%" align="left">
-  				 <a href="http://www.yanyulin.info/pages/2014/03/pelican_page.html" title="pelican博客搭建设置分页和分页保存位置" target="_blank">pelican博客搭建设置分页和分页保存位置</a>
-  				 </td>
-	
-	 
- 
-  				 <td width="50%" align="left">
-  				 <a href="http://www.yanyulin.info/pages/2014/01/pelican_question.html" title="pelican创建博客常见问题汇总" target="_blank">pelican创建博客常见问题汇总</a>
+  				 <a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_2.html" title="Velocity入门例子自定义呈现容器" target="_blank">Velocity入门例子自定义呈现容器</a>
   				 </td>
 	
   				 </tr>
@@ -282,7 +235,7 @@ var duoshuoQuery = {short_name:&quot;yanyulin&quot;};
 			</table>
 				</div>
 				<div class="context_b">
-			 <div class="ds-thread" data-title="博客添加第三方评论系统多说评论框"></div>
+			 <div class="ds-thread" data-title="Velocity入门例子自定义呈现容器"></div>
 			 <script type="text/javascript">
 			 	var duoshuoQuery={short_name:"yanyulin"};
 			 	var ds=document.createElement("script");
@@ -325,10 +278,10 @@ var duoshuoQuery = {short_name:&quot;yanyulin&quot;};
 				<div class="box">			
 						<div class="textwidget">
 							<div id="tagsLink">
-							<a  href="http://www.yanyulin.info/tag/javafen-xi.html" title="查看Java分析下的所有文章" style="background-color: #8C8BC6" target="_blank">Java分析</a>
+							<a  href="http://www.yanyulin.info/tag/javafen-xi.html" title="查看Java分析下的所有文章" style="background-color: #169EDD" target="_blank">Java分析</a>
 						  </div>
 							<div id="tagsLink">
-							<a  href="http://www.yanyulin.info/tag/tao-bao-ji-zhu.html" title="查看淘宝技术下的所有文章" style="background-color: #84A4B3" target="_blank">淘宝技术</a>
+							<a  href="http://www.yanyulin.info/tag/tao-bao-ji-zhu.html" title="查看淘宝技术下的所有文章" style="background-color: #169EDD" target="_blank">淘宝技术</a>
 						  </div>
 							<div id="tagsLink">
 							<a  href="http://www.yanyulin.info/tag/linuxhui-zong.html" title="查看Linux汇总下的所有文章" style="background-color: #96C2AA" target="_blank">Linux汇总</a>
@@ -337,7 +290,7 @@ var duoshuoQuery = {short_name:&quot;yanyulin&quot;};
 							<a  href="http://www.yanyulin.info/tag/gong-ju-shi-yong.html" title="查看工具使用下的所有文章" style="background-color: #D17C93" target="_blank">工具使用</a>
 						  </div>
 							<div id="tagsLink">
-							<a  href="http://www.yanyulin.info/tag/cxue-xi.html" title="查看C++学习下的所有文章" style="background-color: #96C2AA" target="_blank">C++学习</a>
+							<a  href="http://www.yanyulin.info/tag/cxue-xi.html" title="查看C++学习下的所有文章" style="background-color: #169EDD" target="_blank">C++学习</a>
 						  </div>
 						</div>
 						<div class="clear"></div>
@@ -406,25 +359,25 @@ var duoshuoQuery = {short_name:&quot;yanyulin&quot;};
 				<ul>
 				<ul class="random-post-link">
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2014/02/classinitiallist.html" target="_blank" title="C++中类初始化列表的妙用">C++中类初始化列表的妙用</a>
+				<a href="http://www.yanyulin.info/pages/2014/03/git.html" target="_blank" title="git保存用户名与密码(避免用户名密码输入)">git保存用户名与密码(避免用户名密码输入)</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2013/12/renren_1.html" target="_blank" title="人人网校招2014年研发面经">人人网校招2014年研发面经</a>
+				<a href="http://www.yanyulin.info/pages/2014/03/meituan_2014_1.html" target="_blank" title="美团网校园招聘2014年面经(软件研发)">美团网校园招聘2014年面经(软件研发)</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2014/03/wps_2014_a.html" target="_blank" title="金山校园招聘笔试题2013年实习生技术类">金山校园招聘笔试题2013年实习生技术类</a>
+				<a href="http://www.yanyulin.info/pages/2014/03/tencent_2014_A.html" target="_blank" title="腾讯校园招聘笔试题目2014年软件研发类武汉">腾讯校园招聘笔试题目2014年软件研发类武汉</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2013/12/perl.html" target="_blank" title="编程珠玑(作者:John Bently)">编程珠玑(作者:John Bently)</a>
+				<a href="http://www.yanyulin.info/pages/2014/02/pbaodian.html" target="_blank" title="程序员面试宝典--欧立奇">程序员面试宝典--欧立奇</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2013/12/psbase2.html" target="_blank" title="Photoshop CS视频教程(下)">Photoshop CS视频教程(下)</a>
+				<a href="http://www.yanyulin.info/pages/2013/11/vlinux2.html" target="_blank" title="Linux基础教程视频版(很详细)">Linux基础教程视频版(很详细)</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2014/01/whyRipple.html" target="_blank" title="为什么大家都转向了Ripple">为什么大家都转向了Ripple</a>
+				<a href="http://www.yanyulin.info/pages/2014/02/jed.html" target="_blank" title="JED币免费获取30 ripple币">JED币免费获取30 ripple币</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2014/03/zhihu_2.html" target="_blank" title="一款自动发链接软件的实现细节分析">一款自动发链接软件的实现细节分析</a>
+				<a href="http://www.yanyulin.info/pages/2013/11/qqLogin.html" target="_blank" title="界面编程模仿篇(模仿腾讯QQ登录界面)">界面编程模仿篇(模仿腾讯QQ登录界面)</a>
 				</li>
 				<li class="random-post-link">
 				<a href="http://www.yanyulin.info/pages/2014/03/duoshuo.html" target="_blank" title="多说评论框如何|怎么样|实际测试">多说评论框如何|怎么样|实际测试</a>
@@ -455,16 +408,16 @@ var duoshuoQuery = {short_name:&quot;yanyulin&quot;};
 				<div class="box_r">
 				<ul>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2014/03/annotation.html" target="_blank" title="Java中Annotation注解机制实现分析">Java中Annotation注解机制实现分析</a>
+				<a href="http://www.yanyulin.info/pages/2013/11/pelican.html" target="_blank" title="pelican搭建属于自已的博客">pelican搭建属于自已的博客</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2014/03/dianping_2014_1.html" target="_blank" title="大众点评校园招聘面经2014年软件面经">大众点评校园招聘面经2014年软件面经</a>
+				<a href="http://www.yanyulin.info/pages/2014/03/ali_3.html" target="_blank" title="阿里巴巴校招面经(2014年软件研发)">阿里巴巴校招面经(2014年软件研发)</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2013/12/baidu_2014_A.html" target="_blank" title="2014年百度校招笔试试卷A">2014年百度校招笔试试卷A</a>
+				<a href="http://www.yanyulin.info/pages/2014/03/youku_2014_a.html" target="_blank" title="优酷校园招聘笔试题2014年研发类">优酷校园招聘笔试题2014年研发类</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2013/12/prgbeautiful.html" target="_blank" title="编程之美—微软技术面试心得">编程之美—微软技术面试心得</a>
+				<a href="http://www.yanyulin.info/pages/2014/02/pbaodian.html" target="_blank" title="程序员面试宝典--欧立奇">程序员面试宝典--欧立奇</a>
 				</li>
 				<li>
 				<a href="http://www.yanyulin.info/pages/2013/12/vc_1.html" target="_blank" title="VC视频教程(主要讲述`MFC`)">VC视频教程(主要讲述`MFC`)</a>
@@ -473,7 +426,7 @@ var duoshuoQuery = {short_name:&quot;yanyulin&quot;};
 				<a href="http://www.yanyulin.info/pages/2014/01/freexrp.html" target="_blank" title="免费获取ripple币的方法汇总">免费获取ripple币的方法汇总</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2014/03/xiaomiqianggou.html" target="_blank" title="一款小米抢购软件实现源码分析(HttpClient)">一款小米抢购软件实现源码分析(HttpClient)</a>
+				<a href="http://www.yanyulin.info/pages/2013/11/fetchPage.html" target="_blank" title="爬虫的自我解剖(抓取网页HtmlUnit)">爬虫的自我解剖(抓取网页HtmlUnit)</a>
 				</li>
 				<li>
 				<a href="http://www.yanyulin.info/pages/2014/03/duoshuo.html" target="_blank" title="多说评论框如何|怎么样|实际测试">多说评论框如何|怎么样|实际测试</a>
