@@ -1,5 +1,121 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>烟雨林</title><link href="http://www.yanyulin.info/" rel="alternate"></link><link href="http://www.yanyulin.info/feeds/bian-cheng-yu-yan.atom.xml" rel="self"></link><id>http://www.yanyulin.info/</id><updated>2014-03-15T00:00:00+08:00</updated><entry><title>Velocity入门教程HelloWord程序</title><link href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_1.html" rel="alternate"></link><updated>2014-03-15T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-15:pages/2014/03/velocity_disabuse_1.html</id><summary type="html">&lt;hr /&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>烟雨林</title><link href="http://www.yanyulin.info/" rel="alternate"></link><link href="http://www.yanyulin.info/feeds/bian-cheng-yu-yan.atom.xml" rel="self"></link><id>http://www.yanyulin.info/</id><updated>2014-03-16T00:00:00+08:00</updated><entry><title>Java中Annotation注解机制实现分析</title><link href="http://www.yanyulin.info/pages/2014/03/annotation.html" rel="alternate"></link><updated>2014-03-16T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-16:pages/2014/03/annotation.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;Java中的Annotation很常见，只是时常被人忽略而已，因为如果不和Java反射机制混合使用时，&lt;code&gt;Annotation&lt;/code&gt;注解估计也只能被用来起着注解说明的用途了，以下就是Java中一个典型的&lt;code&gt;Annotation&lt;/code&gt;注解&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2014/03/annotation.html"&gt;
+&lt;img src="http://www.yanyulin.info/pics/java/annotation_1.jpg" alt="烟雨林博客"/&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;红色方框中的@Override，是不是见过:),只是经常被忽略而已，去掉也没大影响，是的，真的没什么影响，如果你跟踪@Override注解，你会发现如下代码：&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2014/03/annotation.html"&gt;
+&lt;img src="http://www.yanyulin.info/pics/java/annotation_2.jpg" alt="烟雨林博客"/&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;代码的第一行说明了该注解是用来修饰方法的，代码的第二行是用来说明注解只出现在源代码中，即注解在代码编译后的字节码文件以及运行时是不会出现的，所以呢，你去掉该注解是不会影响程序的运行，但不是所有的注解都可以去掉，有些注解去掉了，就要影响程序的运行了，因为注解已经被编译进字节码文件中，代码在运行的过程中会通过反射机制从注解中获取一 些相关的信息，最典型的莫过于淘宝的WebX框架，随处可见这样的使用，如下代码：&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2014/03/annotation.html"&gt;
+&lt;img src="http://www.yanyulin.info/pics/java/annotation_3.jpg" alt="烟雨林博客"/&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;这里的&lt;code&gt;@FormGroup&lt;/code&gt;就不能去掉，如果跟踪可以发现注解的是这样说明的&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2014/03/annotation.html"&gt;
+&lt;img src="http://www.yanyulin.info/pics/java/annotation_4.jpg" alt="烟雨林博客"/&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;代码的第一行说明了注解会出现在运行时，第二行则说明了该注解是用来修饰方法参数的,所以注解去掉后，程序将无法运行，因为WebX框架将会通过Java反射机制获取注解参数初始化simple。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Annotation详解&lt;/code&gt;：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Annotation&lt;/code&gt;提供了一条与程序元素关联任何信息或者任何元数据的途径，从某些方面看，&lt;code&gt;Annotation&lt;/code&gt;就像修饰符一样被使用，并应用于包/类型/构造方法/方法/成员变量/参数/本地变量的声明中,这些信息被存储在
+Annotation的“name=value”结构对中。&lt;/p&gt;
+&lt;p&gt;样例解释(此代码来源于&lt;code&gt;WebX框架&lt;/code&gt;中的&lt;code&gt;FormGroup.java&lt;/code&gt;)：&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2014/03/annotation.html"&gt;
+&lt;img src="http://www.yanyulin.info/pics/java/annotation_5.jpg" alt="烟雨林博客"/&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;上面的代码就是图一中的@FromGroup的实现，代码中的第一行表示注解将会出现在运行时，这里可以说明一下，注解出现的三个时期，CLASS/SOURCE/RUNTIME,其中CLASS说明注解将会出现在字节码文件中，SOURCE表示注解将会出现在源代码文件中，RUNTIME表示注解将会出现在运行期，备注：出现在字节码文件中的注解，在加载进JVM时不一定会出现，取决于注解的设置，在没有设定RetentionPolicy时，系统默认的是CLASS。&lt;/p&gt;
+&lt;p&gt;其次ElementType是用来指定&lt;code&gt;Annotation&lt;/code&gt;类型可以用在哪一些元素上的，包括TYPE（类型），METHOD（方法），&lt;code&gt;FIELD（字段）&lt;/code&gt;，&lt;code&gt;PARAMETER（参数）&lt;/code&gt;等。其中TYPE是指可以用在Class,Interface等类型上。
+最后就是注解里的属性说明了，看起来有点像函数,个人觉的看着不爽，这里有四个属性，每个属性均有一个默认的值，其中应该注意的就是第一个参数value,例如注解写成这种形式时@FormGroup(“simple”)就表示对注解中的 value赋值为simple,其他的取默认值。&lt;/p&gt;
+&lt;p&gt;仿照WebX里的&lt;code&gt;@FormGromp&lt;/code&gt;自已设计一个参数注解，可以节省代码。&lt;/p&gt;
+&lt;p&gt;本例子是基于Java工程，而不是淘宝的WebX工程,实现参数注解&lt;/p&gt;
+&lt;p&gt;注解FormGroup.java文件&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;package&lt;/span&gt; &lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pp&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="n"&gt;import&lt;/span&gt; &lt;span class="n"&gt;java&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;lang&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;annotation&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ElementType&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="n"&gt;import&lt;/span&gt; &lt;span class="n"&gt;java&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;lang&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;annotation&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Retention&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="n"&gt;import&lt;/span&gt; &lt;span class="n"&gt;java&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;lang&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;annotation&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;RetentionPolicy&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="n"&gt;import&lt;/span&gt; &lt;span class="n"&gt;java&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;lang&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;annotation&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Target&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="err"&gt;@&lt;/span&gt;&lt;span class="n"&gt;Retention&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;RetentionPolicy&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;RUNTIME&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="err"&gt;@&lt;/span&gt;&lt;span class="n"&gt;Target&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt; &lt;span class="n"&gt;ElementType&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;PARAMETER&lt;/span&gt; &lt;span class="p"&gt;})&lt;/span&gt;
+&lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="err"&gt;@&lt;/span&gt;&lt;span class="n"&gt;interface&lt;/span&gt; &lt;span class="n"&gt;FormGroup&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="c1"&gt;//value是默认值，适用于这种形式@FormGroup(&amp;quot;simple&amp;quot;)&lt;/span&gt;
+    &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;value&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="k"&gt;default&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="k"&gt;default&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;instanceKey&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="k"&gt;default&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="n"&gt;boolean&lt;/span&gt; &lt;span class="n"&gt;skipIfInvalid&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="k"&gt;default&lt;/span&gt; &lt;span class="nb"&gt;true&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;一个简单的JavaBean文件SimpleObject.java&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;package&lt;/span&gt; &lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pp&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+&lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="n"&gt;class&lt;/span&gt; &lt;span class="n"&gt;SimpleObject&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="n"&gt;private&lt;/span&gt; &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+&lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="nf"&gt;getName&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;setName&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="n"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;使用注解的类Action.java,主要是模拟WebX框架的Action机制&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;package&lt;/span&gt; &lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pp&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="n"&gt;class&lt;/span&gt; &lt;span class="n"&gt;Action&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="c1"&gt;//使用参数注解的方法&lt;/span&gt;
+&lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="n"&gt;printfUser&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="err"&gt;@&lt;/span&gt;&lt;span class="n"&gt;FormGroup&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;pp&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;SimpleObject&lt;/span&gt; &lt;span class="n"&gt;so&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
+    &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;out&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;println&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;so&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;getName&lt;/span&gt;&lt;span class="p"&gt;());&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;最后一个InvokeMain.java通过Java反射机制调用printfUser函数&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;package&lt;/span&gt; &lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pp&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="n"&gt;import&lt;/span&gt; &lt;span class="n"&gt;java&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;lang&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;annotation&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Annotation&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="n"&gt;import&lt;/span&gt; &lt;span class="n"&gt;java&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;lang&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;reflect&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Method&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="n"&gt;class&lt;/span&gt; &lt;span class="n"&gt;InvokeMain&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="n"&gt;refInvoke&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="n"&gt;try&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="c1"&gt;//利用Java反射机制获取Action里的方法说明&lt;/span&gt;
+        &lt;span class="n"&gt;Method&lt;/span&gt; &lt;span class="n"&gt;mtd&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;Action&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;class&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;getDeclaredMethod&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;printfUser&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;SimpleObject&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;class&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+        &lt;span class="c1"&gt;//利用反射获取相关的参数注解&lt;/span&gt;
+        &lt;span class="n"&gt;Annotation&lt;/span&gt; &lt;span class="p"&gt;[][]&lt;/span&gt;&lt;span class="n"&gt;ant&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;mtd&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;getParameterAnnotations&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+        &lt;span class="c1"&gt;//将参数注解转换成特定的注解类型&lt;/span&gt;
+        &lt;span class="n"&gt;FormGroup&lt;/span&gt; &lt;span class="n"&gt;tmp&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;FormGroup&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="n"&gt;ant&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;];&lt;/span&gt;
+        &lt;span class="c1"&gt;//构造一个JavaBean对象&lt;/span&gt;
+        &lt;span class="n"&gt;SimpleObject&lt;/span&gt; &lt;span class="n"&gt;so&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;new&lt;/span&gt; &lt;span class="n"&gt;SimpleObject&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+        &lt;span class="c1"&gt;//对对象设置值 &lt;/span&gt;
+        &lt;span class="n"&gt;so&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;setName&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;tmp&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;value&lt;/span&gt;&lt;span class="p"&gt;());&lt;/span&gt;
+        &lt;span class="c1"&gt;//调用对象里的方法&lt;/span&gt;
+        &lt;span class="n"&gt;mtd&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;invoke&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;new&lt;/span&gt; &lt;span class="n"&gt;Action&lt;/span&gt;&lt;span class="p"&gt;(),&lt;/span&gt; &lt;span class="n"&gt;so&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="n"&gt;catch&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Exception&lt;/span&gt; &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;printStackTrace&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="k"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="p"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="n"&gt;new&lt;/span&gt; &lt;span class="n"&gt;InvokeMain&lt;/span&gt;&lt;span class="p"&gt;().&lt;/span&gt;&lt;span class="n"&gt;refInvoke&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;好了，终于完了，不是吗,这里的过程其实与&lt;code&gt;WebX&lt;/code&gt;框架的流程是一样的，哦，其实是我认为是一样的，WebX框架在接受到一个请求后，在页面显示之前，如图一所示，@FormGroup中的simple代表的是表单，在提交到相应的Action处理之前，中间会有一个反射机制的调用，反射机制中会从参数注解获取表单的名称，根据表单的名称进而从表单中获得用户提交的参数，即各种request.getParameter的调用，然后创建一个对象&lt;code&gt;SimpleObject simple&lt;/code&gt;,并用获取的参数对simple进行赋值，然后通过反射机制调用&lt;code&gt;SimpleAction&lt;/code&gt;里的&lt;code&gt;doGreeting&lt;/code&gt;,看看我们上面的代码&lt;code&gt;Method.invoke()&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;看了好久，也没找到WebX实现从注解中获取表单参数的代码，只找到了下面这几行关键代码，有找到的可以告诉我一下&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="n"&gt;Object&lt;/span&gt; &lt;span class="nf"&gt;invoke&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Object&lt;/span&gt; &lt;span class="n"&gt;obj&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Object&lt;/span&gt;&lt;span class="p"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;throws&lt;/span&gt; &lt;span class="n"&gt;InvocationTargetException&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;fc&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;invoke&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;index&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;obj&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;从这里我们可以看到无论例子中还是WebX中注解的确是个好东西，可以节省代码的编写，将代码中共同的部分抽取出来，使得程序可以更加关注业务处理方面的内容，这也符合Spring中面向切面编程的要求。&lt;/p&gt;
+&lt;p&gt;如果你是一个&lt;code&gt;C/C++&lt;/code&gt;爱好者，像我一样，很抱谦，C++里真的没有注解Anotaton这一说，也没有反射这一说，如果说C++实现了反射(用typeid)我想作用也是很局限的，仅能判写出运行时类的类型，而且还是建立在虚基类或者虚函数的基础上，只要在这两个情况下，C++里的内存对象布局里虚函数表中才会有一项指明类的类别，这样运行时才能判断出来，如果没有虚函数虚基类这个词，那么你使用typeid获取的类的类型信息，均是在编译时期都已经确定好的，而不是运行期!&lt;/p&gt;</summary><category term="Java分析"></category></entry><entry><title>Velocity入门教程HelloWord程序</title><link href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_1.html" rel="alternate"></link><updated>2014-03-15T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-15:pages/2014/03/velocity_disabuse_1.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;简介&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;Velocity&lt;/code&gt;是&lt;code&gt;Apache&lt;/code&gt;公司的开源产品，是一套基于&lt;code&gt;Java&lt;/code&gt;语言的模板引擎，可以很灵活的将后台数据对象与模板文件结合在一起，说的直白一点，就是允许任何人使用模板语言引用后台java代码定义的对象&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;Velocity&lt;/code&gt;应用于Web开发时，界面设计人员可以和java程序开发人员同步开发一个遵循MVC架构的web站点，也就是说，页面设计人员可以只关注页面的显示效果，而由Java程序开发人员关注业务逻辑编码&lt;/p&gt;
@@ -1587,4 +1703,4 @@ StringBuilder的测试源代码：&lt;/p&gt;
 
 
 &lt;p&gt;上面的代码也是类似的，说明了StringBuilder与StringBuffer类似，但比StringBuffer的效率更改，这是为什么呢，看看源代码就知道了:)
-源代码中StringBuffer与StringBuilder继承自同一个父类，代码极奇相似，只是StringBuilder各个函数少了synchonized关键字，这也就说明了StringBuilder不是线程安全的，即然有了synchronized关键字，那么代码每次运行的时候均需要锁住该对象，以避免其他对象调用该方法，不管是单线程还是多线程，因此这需要一定的开销，因此StringBuiler的效率要高于StringBuffer:)&lt;/p&gt;</summary><category term="Java"></category></entry></feed>
+源代码中StringBuffer与StringBuilder继承自同一个父类，代码极奇相似，只是StringBuilder各个函数少了synchonized关键字，这也就说明了StringBuilder不是线程安全的，即然有了synchronized关键字，那么代码每次运行的时候均需要锁住该对象，以避免其他对象调用该方法，不管是单线程还是多线程，因此这需要一定的开销，因此StringBuiler的效率要高于StringBuffer:)&lt;/p&gt;</summary><category term="Java分析"></category></entry></feed>
