@@ -3,8 +3,8 @@
 &lt;p&gt;本篇博文仅随前两篇博文而来&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_1.html" target="_blank"&gt;
 Velocity入门教程HelloWord程序
-&lt;/a&gt;
-&lt;a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_2.html" target="_blank"&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_2.html" target="_blank"&gt;
 Velocity入门例子自定义呈现容器
 &lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;本篇博文主要介绍velocity中的事件处理机制&lt;/p&gt;
