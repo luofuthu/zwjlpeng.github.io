@@ -2,7 +2,7 @@
 <html lang="zh">
 <head>
 <title>
-Velocity入门例子自定义呈现容器 - 烟雨林</title>
+Velocity入门例子事件监听机制 - 烟雨林</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
 <meta name="author" content="烟雨林">
@@ -51,9 +51,9 @@ Velocity入门例子自定义呈现容器 - 烟雨林</title>
 					</div>
 					<div class="entry_box_s">
 						<div class="entry_title_box">
-							<div class="entry_title">Velocity入门例子自定义呈现容器</div>
+							<div class="entry_title">Velocity入门例子事件监听机制</div>
 							<div class="archive_info">
-								<span class="date">2014-03-16</span>
+								<span class="date">2014-03-17</span>
 								<span class="category"> ⁄ 							
 						  <a href="http://www.yanyulin.info/tag/tao-bao-ji-zhu.html" target="_blank" title="查看同类文章" rel="category tag">淘宝技术</a>&nbsp;
 						  </span>
@@ -83,97 +83,79 @@ Velocity入门例子自定义呈现容器 - 烟雨林</title>
 </script>
 </div>
 							<hr />
-<p>本篇博文仅随前一篇博文而来</p>
+<p>本篇博文仅随前两篇博文而来</p>
 <p><a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_1.html" target="_blank">
 Velocity入门教程HelloWord程序
+</a>
+<a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_2.html" target="_blank">
+Velocity入门例子自定义呈现容器
 </a></p>
-<p>本篇博文主要介绍velocity中如何自定义呈现容器即<code>VelocityContext</code></p>
-<p>例子中实现的是自定义义的VelocityContext容器，用自定义的容器来渲染模板文件，并将结果输出</p>
-<div class="highlight"><pre><span class="c1">//自定义的VelocityContext  </span>
-<span class="k">class</span> <span class="n">DBContext</span> <span class="k">extends</span> <span class="n">AbstractContext</span><span class="p">{</span>  
-    <span class="n">private</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="n">Object</span><span class="o">&gt;</span> <span class="n">props</span><span class="o">=</span><span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">Object</span><span class="o">&gt;</span><span class="p">();</span>  
-    <span class="n">public</span> <span class="k">void</span> <span class="n">setUp</span><span class="p">(){</span>  
+<p>本篇博文主要介绍velocity中的事件处理机制</p>
+<p>例子中是一个事件处理样例，在模板中对后台Java对象的引用被渲染之前，先要经过注册的事件处理器的处理</p>
+<div class="highlight"><pre><span class="n">public</span> <span class="n">class</span> <span class="n">EventExample</span> <span class="n">implements</span> <span class="n">ReferenceInsertionEventHandler</span>         <span class="p">{</span>  
+    <span class="n">public</span> <span class="k">static</span> <span class="kt">void</span> <span class="n">main</span><span class="p">(</span> <span class="n">String</span> <span class="n">args</span><span class="p">[]</span> <span class="p">)</span>  
+    <span class="p">{</span>  
+        <span class="n">new</span> <span class="n">EventExample</span><span class="p">();</span>  
     <span class="p">}</span>  
-    <span class="n">public</span> <span class="n">DBContext</span><span class="p">(){</span>  
-        <span class="k">super</span><span class="p">();</span>  
-    <span class="p">}</span>  
-    <span class="n">public</span> <span class="n">DBContext</span><span class="p">(</span><span class="n">Context</span> <span class="n">inner</span><span class="p">){</span>  
-        <span class="k">super</span><span class="p">(</span><span class="n">inner</span><span class="p">);</span>  
-    <span class="p">}</span>  
-    <span class="p">@</span><span class="n">Override</span>  
-    <span class="n">public</span> <span class="n">boolean</span> <span class="n">internalContainsKey</span><span class="p">(</span><span class="n">Object</span> <span class="n">arg0</span><span class="p">)</span> <span class="p">{</span>  
-        <span class="k">return</span> <span class="n">false</span><span class="p">;</span>  
-    <span class="p">}</span>  
-    <span class="p">@</span><span class="n">Override</span>  
-    <span class="n">public</span> <span class="n">Object</span> <span class="n">internalGet</span><span class="p">(</span><span class="n">String</span> <span class="n">arg0</span><span class="p">)</span> <span class="p">{</span>  
-        <span class="n">Object</span> <span class="n">pp</span><span class="o">=</span><span class="n">props</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="n">arg0</span><span class="p">);</span>  
-        <span class="k">return</span> <span class="n">pp</span><span class="p">;</span>  
-    <span class="p">}</span>  
-    <span class="p">@</span><span class="n">Override</span>  
-    <span class="n">public</span> <span class="n">Object</span><span class="p">[]</span> <span class="n">internalGetKeys</span><span class="p">()</span> <span class="p">{</span>  
-        <span class="k">return</span> <span class="k">null</span><span class="p">;</span>  
-    <span class="p">}</span>  
-    <span class="p">@</span><span class="n">Override</span>  
-    <span class="n">public</span> <span class="n">Object</span> <span class="n">internalPut</span><span class="p">(</span><span class="n">String</span> <span class="n">key</span><span class="p">,</span> <span class="n">Object</span> <span class="n">value</span><span class="p">)</span> <span class="p">{</span>  
-        <span class="n">props</span><span class="p">.</span><span class="n">put</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">);</span>  
-        <span class="k">return</span> <span class="k">null</span><span class="p">;</span>  
-    <span class="p">}</span>  
-    <span class="p">@</span><span class="n">Override</span>  
-    <span class="n">public</span> <span class="n">Object</span> <span class="n">internalRemove</span><span class="p">(</span><span class="n">Object</span> <span class="n">arg0</span><span class="p">)</span> <span class="p">{</span>  
-        <span class="k">return</span> <span class="k">null</span><span class="p">;</span>  
-    <span class="p">}</span>  
-<span class="p">}</span>  
-<span class="n">public</span> <span class="k">class</span> <span class="n">DBContextTest</span> <span class="p">{</span>  
-    <span class="n">public</span> <span class="n">DBContextTest</span><span class="p">(</span><span class="n">String</span> <span class="n">templateFile</span><span class="p">){</span>  
-        <span class="c1">//初始化Velocity模板引擎，为单例模式  </span>
-        <span class="n">RuntimeSingleton</span><span class="p">.</span><span class="n">init</span><span class="p">(</span><span class="k">new</span> <span class="n">Properties</span><span class="p">());</span>  
-        <span class="c1">//获取模板文件  </span>
-        <span class="n">Template</span> <span class="n">template</span><span class="o">=</span><span class="n">RuntimeSingleton</span><span class="p">.</span><span class="n">getTemplate</span><span class="p">(</span><span class="n">templateFile</span><span class="p">);</span>  
-        <span class="c1">//创建一个VelocityContext对象，这里使用的是自定义的VelocityContext对象  </span>
-        <span class="n">DBContext</span> <span class="n">dbc</span><span class="o">=</span><span class="k">new</span> <span class="n">DBContext</span><span class="p">();</span>  
-        <span class="c1">//创建一个Hashtable对象  </span>
-        <span class="n">Hashtable</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">h</span><span class="o">=</span><span class="k">new</span> <span class="n">Hashtable</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="n">String</span><span class="o">&gt;</span><span class="p">();</span>  
-        <span class="c1">//向创建的Hashtable对象里填加值  </span>
-        <span class="n">h</span><span class="p">.</span><span class="n">put</span><span class="p">(</span><span class="s">&quot;Bar&quot;</span><span class="p">,</span> <span class="s">&quot;来自于hashtable&quot;</span><span class="p">);</span>  
-        <span class="c1">//向VelocityContext容器中填加两个值  </span>
-        <span class="n">dbc</span><span class="p">.</span><span class="n">put</span><span class="p">(</span><span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="s">&quot;欢迎&quot;</span><span class="p">);</span>  
-        <span class="n">dbc</span><span class="p">.</span><span class="n">put</span><span class="p">(</span><span class="s">&quot;hashtable&quot;</span><span class="p">,</span> <span class="n">h</span><span class="p">);</span>  
-        <span class="n">Writer</span> <span class="n">writer</span><span class="o">=</span><span class="k">new</span> <span class="n">BufferedWriter</span><span class="p">(</span><span class="k">new</span> <span class="n">OutputStreamWriter</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="n">out</span><span class="p">));</span>  
-        <span class="c1">//使用自定义的VelocityContext对template进行渲染，并将渲染的结果输出到writer中  </span>
-        <span class="n">template</span><span class="p">.</span><span class="n">merge</span><span class="p">(</span><span class="n">dbc</span><span class="p">,</span> <span class="n">writer</span><span class="p">);</span>  
-        <span class="n">try</span> <span class="p">{</span>  
-        <span class="c1">//清空缓存，防止因缓存而打印不全  </span>
-            <span class="n">writer</span><span class="p">.</span><span class="n">flush</span><span class="p">();</span>  
-            <span class="n">writer</span><span class="p">.</span><span class="n">close</span><span class="p">();</span>  
-        <span class="p">}</span> <span class="n">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>  
-            <span class="n">System</span><span class="p">.</span><span class="n">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">getMessage</span><span class="p">());</span>  
+    <span class="n">public</span> <span class="n">EventExample</span><span class="p">()</span>  
+    <span class="p">{</span>  
+        <span class="n">Velocity</span><span class="p">.</span><span class="n">init</span><span class="p">();</span>  
+        <span class="n">VelocityContext</span> <span class="n">context</span> <span class="o">=</span> <span class="n">new</span> <span class="n">VelocityContext</span><span class="p">();</span>  
+        <span class="n">context</span><span class="p">.</span><span class="n">put</span><span class="p">(</span><span class="s">&quot;name&quot;</span><span class="p">,</span> <span class="s">&quot;Velocity&quot;</span><span class="p">);</span>  
+        <span class="n">EventCartridge</span> <span class="n">ec</span> <span class="o">=</span> <span class="n">new</span> <span class="n">EventCartridge</span><span class="p">();</span>  
+        <span class="c1">//注册事件处理器  </span>
+        <span class="n">ec</span><span class="p">.</span><span class="n">addEventHandler</span><span class="p">(</span><span class="n">this</span><span class="p">);</span>  
+        <span class="c1">//将注册的事件处理器与context容器进行绑定  </span>
+        <span class="n">ec</span><span class="p">.</span><span class="n">attachToContext</span><span class="p">(</span> <span class="n">context</span> <span class="p">);</span>  
+        <span class="n">try</span>  
+        <span class="p">{</span>  
+            <span class="n">System</span><span class="p">.</span><span class="n">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">);</span>  
+            <span class="n">System</span><span class="p">.</span><span class="n">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Velocity事件处理样例&quot;</span><span class="p">);</span>  
+            <span class="n">System</span><span class="p">.</span><span class="n">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;============================&quot;</span><span class="p">);</span>  
+            <span class="n">System</span><span class="p">.</span><span class="n">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">);</span>  
+            <span class="n">String</span> <span class="n">s</span> <span class="o">=</span> <span class="s">&quot;打印name:$name.&quot;</span><span class="p">;</span>  
+            <span class="n">StringWriter</span> <span class="n">w</span> <span class="o">=</span> <span class="n">new</span> <span class="n">StringWriter</span><span class="p">();</span>  
+            <span class="n">Velocity</span><span class="p">.</span><span class="n">evaluate</span><span class="p">(</span> <span class="n">context</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="s">&quot;mystring&quot;</span><span class="p">,</span> <span class="n">s</span> <span class="p">);</span>  
+            <span class="n">System</span><span class="p">.</span><span class="n">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;渲染结果 : &quot;</span><span class="p">);</span>  
+            <span class="n">System</span><span class="p">.</span><span class="n">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;   &quot;</span> <span class="o">+</span>  <span class="n">w</span><span class="p">.</span><span class="n">toString</span><span class="p">());</span>  
+            <span class="n">System</span><span class="p">.</span><span class="n">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">);</span>  
+            <span class="n">s</span> <span class="o">=</span> <span class="s">&quot;模板文件 中引用后台未定义的对象$floobie , $nullvalue&quot;</span><span class="p">;</span>  
+            <span class="n">w</span> <span class="o">=</span> <span class="n">new</span> <span class="n">StringWriter</span><span class="p">();</span>  
+            <span class="n">Velocity</span><span class="p">.</span><span class="n">evaluate</span><span class="p">(</span> <span class="n">context</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="s">&quot;mystring&quot;</span><span class="p">,</span> <span class="n">s</span> <span class="p">);</span>  
+            <span class="n">System</span><span class="p">.</span><span class="n">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;空引用测试: &quot;</span><span class="p">);</span>  
+            <span class="n">System</span><span class="p">.</span><span class="n">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;   &quot;</span> <span class="o">+</span> <span class="n">w</span><span class="p">.</span><span class="n">toString</span><span class="p">());</span>  
+        <span class="p">}</span>  
+        <span class="n">catch</span><span class="p">(</span> <span class="n">Exception</span> <span class="n">e</span> <span class="p">)</span>  
+        <span class="p">{</span>  
+            <span class="n">System</span><span class="p">.</span><span class="n">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Exception : &quot;</span> <span class="o">+</span> <span class="n">e</span> <span class="p">);</span>  
         <span class="p">}</span>  
     <span class="p">}</span>  
-    <span class="n">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">main</span><span class="p">(</span><span class="n">String</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>  
-        <span class="n">DBContextTest</span> <span class="n">t</span><span class="p">;</span>  
-        <span class="n">t</span><span class="o">=</span><span class="k">new</span> <span class="n">DBContextTest</span><span class="p">(</span><span class="s">&quot;test2.vm&quot;</span><span class="p">);</span>  
+    <span class="c1">//模板渲染时在将后台对象插入模板引用之前调用  </span>
+    <span class="n">public</span> <span class="n">Object</span> <span class="n">referenceInsert</span><span class="p">(</span> <span class="n">String</span> <span class="n">reference</span><span class="p">,</span> <span class="n">Object</span> <span class="n">value</span>  <span class="p">){</span>  
+        <span class="n">String</span> <span class="n">s</span> <span class="o">=</span> <span class="n">null</span><span class="p">;</span>  
+        <span class="k">if</span><span class="p">(</span> <span class="n">value</span> <span class="o">!=</span> <span class="n">null</span> <span class="p">){</span>  
+            <span class="n">s</span> <span class="o">=</span> <span class="s">&quot;渲染之前 &quot;</span> <span class="o">+</span> <span class="n">value</span><span class="p">.</span><span class="n">toString</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot;渲染完成&quot;</span><span class="p">;</span>  
+        <span class="p">}</span>  
+        <span class="k">else</span><span class="p">{</span>  
+            <span class="k">if</span> <span class="p">(</span> <span class="n">reference</span><span class="p">.</span><span class="n">equals</span><span class="p">(</span><span class="s">&quot;floobie&quot;</span><span class="p">)</span> <span class="p">){</span>  
+                <span class="n">s</span> <span class="o">=</span> <span class="s">&quot;&lt;no floobie value&gt;&quot;</span><span class="p">;</span>  
+            <span class="p">}</span>  
+        <span class="p">}</span>  
+    <span class="c1">//将value提交给模板中引用value的地方使用  </span>
+        <span class="k">return</span> <span class="n">s</span><span class="p">;</span>  
     <span class="p">}</span>  
 <span class="p">}</span>
 </pre></div>
 
 
 <p><strong>备注</strong></p>
-<p>1、自定义的呈现容器使用HashMap来存放键值对</p>
-<p>2、从代码中可以看出自定义呈现容器中只能向HaspMap中增加元素，而无法从容器中删除元素</p>
-<p>3、从主程序代码中可以看出Velocity模板引擎实例化为单例模式，什么叫单例模式可以参考设计模式一书</p>
-<p>后台的模板文件如下如示，即函数的参数<code>templateFile</code></p>
-<div class="highlight"><pre><span class="cp">##Hello 来自于 $name 在 $project 工程里.  </span>
-<span class="err">$</span><span class="n">string</span>  
-<span class="cp">##实际上调用 的是hashtable.get(&quot;Bar&quot;)  </span>
-<span class="err">$</span><span class="n">hashtable</span><span class="p">.</span><span class="n">Bar</span>  
-<span class="cp">##将值全部打印出来  </span>
-<span class="cp">#foreach($value in $hashtable.keySet())  </span>
-<span class="err">$</span><span class="n">hashtable</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="err">$</span><span class="n">value</span><span class="p">)</span>  
-<span class="cp">#end</span>
-</pre></div>
+<p>1、程序中采用的是动态创建模板，动态创建模板可以参考Velocity入门教程之HelloWorld,动态创建的模板为"打印name:$name."，其中$name就是需要使用Velocity来渲染的对象</p>
+<p>2、在创建动态模板<code>"打印name:$name."</code>之前已经向容器中放入了键值为name的键值对，因此模板中的<code>$name</code>即可以从后台中取出键为name的值进行渲染</p>
+<p>3、同样的道理，<code>"模板文件 中引用后台未定义的对象$floobie , $nullvalue"</code>也是一个动态创建的模板，但此模板中的参数floobie在context不存存以floobie为键的键值对，因此在渲染时$floobie被渲染为空</p>
+<p>4、Velocity中为用户提供了各种事件，其中<code>referenceInsert</code>就表示在对模板中的引用对象进行渲染之前可以由程序员自定义想要的操作</p>
 						  <div class="clear"></div>
 							</div>
-							<b>本文地址:</b> <a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_2.html" target="_self">http://www.yanyulin.info/pages/2014/03/velocity_disabuse_2.html</a>
+							<b>本文地址:</b> <a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_3.html" target="_self">http://www.yanyulin.info/pages/2014/03/velocity_disabuse_3.html</a>
 							<div><font color="blue"><b>转载时请保留本文出处,谢谢您的合作</b></font></div>
 							<hr/>
 							<div class="clear" align="left">
@@ -205,10 +187,10 @@ Velocity入门教程HelloWord程序
 					<!-- end: entrymeta -->
 				<div class="context_b" align="left">
 					 上一篇: 
-  				 <a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_1.html" title="Velocity入门教程HelloWord程序" target="_blank">Velocity入门教程HelloWord程序</a>
+  				 <a href="http://www.yanyulin.info/pages/2014/03/annotation.html" title="Java中Annotation注解机制实现分析" target="_blank">Java中Annotation注解机制实现分析</a>
   				 &nbsp;&nbsp
   				 下一篇:
-  				 <a href="http://www.yanyulin.info/pages/2014/03/deletetrust.html" title="怎么删除Ripple里的信任网关" target="_blank">怎么删除Ripple里的信任网关</a>
+  				 <a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_3.html" title="Velocity入门例子事件监听机制" target="_blank">Velocity入门例子事件监听机制</a>
 					 
 				</div>
 				<div class="context_b">
@@ -241,7 +223,7 @@ Velocity入门教程HelloWord程序
 			</table>
 				</div>
 				<div class="context_b">
-			 <div class="ds-thread" data-title="Velocity入门例子自定义呈现容器"></div>
+			 <div class="ds-thread" data-title="Velocity入门例子事件监听机制"></div>
 			 <script type="text/javascript">
 			 	var duoshuoQuery={short_name:"yanyulin"};
 			 	var ds=document.createElement("script");
@@ -284,19 +266,19 @@ Velocity入门教程HelloWord程序
 				<div class="box">			
 						<div class="textwidget">
 							<div id="tagsLink">
-							<a  href="http://www.yanyulin.info/tag/tao-bao-ji-zhu.html" title="查看淘宝技术下的所有文章" style="background-color: #169EDD" target="_blank">淘宝技术</a>
+							<a  href="http://www.yanyulin.info/tag/tao-bao-ji-zhu.html" title="查看淘宝技术下的所有文章" style="background-color: #D17C93" target="_blank">淘宝技术</a>
 						  </div>
 							<div id="tagsLink">
-							<a  href="http://www.yanyulin.info/tag/javafen-xi.html" title="查看Java分析下的所有文章" style="background-color: #96C2AA" target="_blank">Java分析</a>
+							<a  href="http://www.yanyulin.info/tag/javafen-xi.html" title="查看Java分析下的所有文章" style="background-color: #D17C93" target="_blank">Java分析</a>
 						  </div>
 							<div id="tagsLink">
 							<a  href="http://www.yanyulin.info/tag/linuxhui-zong.html" title="查看Linux汇总下的所有文章" style="background-color: #D17C93" target="_blank">Linux汇总</a>
 						  </div>
 							<div id="tagsLink">
-							<a  href="http://www.yanyulin.info/tag/gong-ju-shi-yong.html" title="查看工具使用下的所有文章" style="background-color: #D17C93" target="_blank">工具使用</a>
+							<a  href="http://www.yanyulin.info/tag/gong-ju-shi-yong.html" title="查看工具使用下的所有文章" style="background-color: #169EDD" target="_blank">工具使用</a>
 						  </div>
 							<div id="tagsLink">
-							<a  href="http://www.yanyulin.info/tag/cxue-xi.html" title="查看C++学习下的所有文章" style="background-color: #84A4B3" target="_blank">C++学习</a>
+							<a  href="http://www.yanyulin.info/tag/cxue-xi.html" title="查看C++学习下的所有文章" style="background-color: #D17C93" target="_blank">C++学习</a>
 						  </div>
 						</div>
 						<div class="clear"></div>
@@ -365,25 +347,25 @@ Velocity入门教程HelloWord程序
 				<ul>
 				<ul class="random-post-link">
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2014/03/concurrent.html" target="_blank" title="Linux系统中并发与竞争机制分析">Linux系统中并发与竞争机制分析</a>
+				<a href="http://www.yanyulin.info/pages/2014/03/comment.html" target="_blank" title="博客添加第三方评论系统多说评论框">博客添加第三方评论系统多说评论框</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2010/11/ali_2.html" target="_blank" title="阿里巴巴校招2010年软研面经">阿里巴巴校招2010年软研面经</a>
+				<a href="http://www.yanyulin.info/pages/2014/03/cxgc_2014_2.html" target="_blank" title="创新工场校园招聘面经面试经验2014年武汉研发类">创新工场校园招聘面经面试经验2014年武汉研发类</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2014/03/tencent_2012_A.html" target="_blank" title="腾讯校园招聘笔试题目2012年软件研发类">腾讯校园招聘笔试题目2012年软件研发类</a>
+				<a href="http://www.yanyulin.info/pages/2014/03/tencent_2014_A.html" target="_blank" title="腾讯校园招聘笔试题目2014年软件研发类武汉">腾讯校园招聘笔试题目2014年软件研发类武汉</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2013/12/prgbeautiful.html" target="_blank" title="编程之美—微软技术面试心得">编程之美—微软技术面试心得</a>
+				<a href="http://www.yanyulin.info/pages/2013/12/perl.html" target="_blank" title="编程珠玑(作者:John Bently)">编程珠玑(作者:John Bently)</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2013/11/vlinux2.html" target="_blank" title="Linux基础教程视频版(很详细)">Linux基础教程视频版(很详细)</a>
+				<a href="http://www.yanyulin.info/pages/2013/12/psbase_1.html" target="_blank" title="PhotoShop CS入门版视频教程(基础上)">PhotoShop CS入门版视频教程(基础上)</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2014/01/freexrp.html" target="_blank" title="免费获取ripple币的方法汇总">免费获取ripple币的方法汇总</a>
+				<a href="http://www.yanyulin.info/pages/2014/03/getxrp.html" target="_blank" title="【赠送】ripple币免费获取&免费领取">【赠送】ripple币免费获取&免费领取</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2013/12/qqLogin_1.html" target="_blank" title="界面编程模仿篇(QQ登录界面逼真篇)">界面编程模仿篇(QQ登录界面逼真篇)</a>
+				<a href="http://www.yanyulin.info/pages/2014/03/zhihu_1.html" target="_blank" title="一款自动发链接的软件设计思路">一款自动发链接的软件设计思路</a>
 				</li>
 				<li class="random-post-link">
 				<a href="http://www.yanyulin.info/pages/2014/03/duoshuo.html" target="_blank" title="多说评论框如何|怎么样|实际测试">多说评论框如何|怎么样|实际测试</a>
@@ -414,25 +396,25 @@ Velocity入门教程HelloWord程序
 				<div class="box_r">
 				<ul>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2013/12/htaccess.html" target="_blank" title=".htaccess简明教程(SEO优化)">.htaccess简明教程(SEO优化)</a>
+				<a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_1.html" target="_blank" title="Velocity入门教程HelloWord程序">Velocity入门教程HelloWord程序</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2014/03/meituan_2014_2.html" target="_blank" title="美团网校园招聘面经2014年软件研发">美团网校园招聘面经2014年软件研发</a>
+				<a href="http://www.yanyulin.info/pages/2014/01/baidu_1.html" target="_blank" title="百度校招2014年软研面经">百度校招2014年软研面经</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2013/11/baofeng_2014_A.html" target="_blank" title="2014年暴风笔试试卷A">2014年暴风笔试试卷A</a>
+				<a href="http://www.yanyulin.info/pages/2013/12/zte_2014_A.html" target="_blank" title="中兴2014年校招笔试题">中兴2014年校招笔试题</a>
 				</li>
 				<li>
 				<a href="http://www.yanyulin.info/pages/2013/11/deepc.html" target="_blank" title="C语言深度解剖(含金量高)">C语言深度解剖(含金量高)</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2013/11/vlinux2.html" target="_blank" title="Linux基础教程视频版(很详细)">Linux基础教程视频版(很详细)</a>
+				<a href="http://www.yanyulin.info/pages/2013/12/psbase2.html" target="_blank" title="Photoshop CS视频教程(下)">Photoshop CS视频教程(下)</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2014/02/xrptalk.html" target="_blank" title="XRP Talk论坛注册教程">XRP Talk论坛注册教程</a>
+				<a href="http://www.yanyulin.info/pages/2014/03/deletetrust.html" target="_blank" title="怎么删除Ripple里的信任网关">怎么删除Ripple里的信任网关</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2013/12/qqLogin_1.html" target="_blank" title="界面编程模仿篇(QQ登录界面逼真篇)">界面编程模仿篇(QQ登录界面逼真篇)</a>
+				<a href="http://www.yanyulin.info/pages/2013/11/qqLogin.html" target="_blank" title="界面编程模仿篇(模仿腾讯QQ登录界面)">界面编程模仿篇(模仿腾讯QQ登录界面)</a>
 				</li>
 				<li>
 				<a href="http://www.yanyulin.info/pages/2014/03/duoshuo.html" target="_blank" title="多说评论框如何|怎么样|实际测试">多说评论框如何|怎么样|实际测试</a>
