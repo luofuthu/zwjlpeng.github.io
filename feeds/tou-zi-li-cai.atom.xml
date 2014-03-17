@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>烟雨林</title><link href="http://www.yanyulin.info/" rel="alternate"></link><link href="http://www.yanyulin.info/feeds/tou-zi-li-cai.atom.xml" rel="self"></link><id>http://www.yanyulin.info/</id><updated>2014-03-16T00:00:00+08:00</updated><entry><title>怎么删除Ripple里的信任网关</title><link href="http://www.yanyulin.info/pages/2014/03/deletetrust.html" rel="alternate"></link><updated>2014-03-16T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-16:pages/2014/03/deletetrust.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;博文纠错&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;正确方法如下，感谢七月十二这位哥们&lt;/p&gt;
+&lt;p&gt;将货币的信任额度设置为0，然后选上如下选项,如下图所示&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2014/03/deletetrust.html"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://www.yanyulin.info/pics/invest/trust.jpg" alt="烟雨林博客"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/a&gt;
+即选上allow同种货币互相置换，即可，网关就会消失&lt;/p&gt;
+&lt;p&gt;后面可以不用看了....&lt;/p&gt;
 &lt;p&gt;经常看到有人在问，怎么或者如何删除Ripple里的信任网关，&lt;code&gt;how to delete trust line&lt;/code&gt;,其实很简单，只是有条件的删除，看完篇文章后，相信大家也就不再纠结怎么删除ripple里的肉关啦？&lt;/p&gt;
 &lt;p&gt;如某网友:&lt;/p&gt;
 &lt;p&gt;当添加一个网关后，然后通过网关交易后，发现不想要这个网关，居然无法彻底删除，在钱包中总是占用一个位置，即使将信任数改为0也不行。因为钱包总是有这个网关的余额：，如下图中，我想删除掉XIB，我怎么也删除不了，我甚至将那些币原数退回给网关，最后还是总有个小数点。网关根本不能清0&lt;/p&gt;

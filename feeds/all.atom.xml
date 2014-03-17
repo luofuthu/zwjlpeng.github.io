@@ -116,6 +116,14 @@ Annotation的“name=value”结构对中。&lt;/p&gt;
 
 &lt;p&gt;从这里我们可以看到无论例子中还是WebX中注解的确是个好东西，可以节省代码的编写，将代码中共同的部分抽取出来，使得程序可以更加关注业务处理方面的内容，这也符合Spring中面向切面编程的要求。&lt;/p&gt;
 &lt;p&gt;如果你是一个&lt;code&gt;C/C++&lt;/code&gt;爱好者，像我一样，很抱谦，C++里真的没有注解Anotaton这一说，也没有反射这一说，如果说C++实现了反射(用typeid)我想作用也是很局限的，仅能判写出运行时类的类型，而且还是建立在虚基类或者虚函数的基础上，只要在这两个情况下，C++里的内存对象布局里虚函数表中才会有一项指明类的类别，这样运行时才能判断出来，如果没有虚函数虚基类这个词，那么你使用typeid获取的类的类型信息，均是在编译时期都已经确定好的，而不是运行期!&lt;/p&gt;</summary><category term="Java分析"></category></entry><entry><title>怎么删除Ripple里的信任网关</title><link href="http://www.yanyulin.info/pages/2014/03/deletetrust.html" rel="alternate"></link><updated>2014-03-16T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-16:pages/2014/03/deletetrust.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;博文纠错&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;正确方法如下，感谢七月十二这位哥们&lt;/p&gt;
+&lt;p&gt;将货币的信任额度设置为0，然后选上如下选项,如下图所示&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2014/03/deletetrust.html"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://www.yanyulin.info/pics/invest/trust.jpg" alt="烟雨林博客"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/a&gt;
+即选上allow同种货币互相置换，即可，网关就会消失&lt;/p&gt;
+&lt;p&gt;后面可以不用看了....&lt;/p&gt;
 &lt;p&gt;经常看到有人在问，怎么或者如何删除Ripple里的信任网关，&lt;code&gt;how to delete trust line&lt;/code&gt;,其实很简单，只是有条件的删除，看完篇文章后，相信大家也就不再纠结怎么删除ripple里的肉关啦？&lt;/p&gt;
 &lt;p&gt;如某网友:&lt;/p&gt;
 &lt;p&gt;当添加一个网关后，然后通过网关交易后，发现不想要这个网关，居然无法彻底删除，在钱包中总是占用一个位置，即使将信任数改为0也不行。因为钱包总是有这个网关的余额：，如下图中，我想删除掉XIB，我怎么也删除不了，我甚至将那些币原数退回给网关，最后还是总有个小数点。网关根本不能清0&lt;/p&gt;
