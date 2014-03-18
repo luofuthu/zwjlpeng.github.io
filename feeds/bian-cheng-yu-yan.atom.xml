@@ -87,7 +87,7 @@ Velocity入门例子事件监听机制
 &lt;p&gt;官网地址是&lt;a href="http://velocity.apache.org/download.cgi" target="_blank" &gt;http://velocity.apache.org/download.cgi&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;首先看看效果吧，然后再是关键代码，等到后面再分析其中涉及的原理部分&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_4.html"&gt;
-&lt;img src="http://www.yanyulin.info/pics/taobao/velocity4_1.jpg" alt="烟雨林博客"/&gt;
+&lt;img src="http://www.yanyulin.info/pics/taobao/velocity4_1.jpg"  width="100%" alt="烟雨林博客"/&gt;
 &lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;呈现的结果很显然，模拟了后台数据库的行为，用于存储数据，同时实现了分页机制，正如标题所说的，此工程非WebX工程，因此在使用Velocity建立Web工程时需要导入相应的Jar包，需要导入的详细Jar包列表如下:&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_4.html"&gt;
