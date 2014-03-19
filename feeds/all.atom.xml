@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>烟雨林</title><link href="http://www.yanyulin.info/" rel="alternate"></link><link href="http://www.yanyulin.info/feeds/all.atom.xml" rel="self"></link><id>http://www.yanyulin.info/</id><updated>2014-03-19T00:00:00+08:00</updated><entry><title>自已动手写操作系统PDF版下载</title><link href="http://www.yanyulin.info/pages/2014/03/write_os.html" rel="alternate"></link><updated>2014-03-19T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-19:pages/2014/03/write_os.html</id><summary type="html">&lt;hr /&gt;
-&lt;p&gt;自已动手写操作系统是一本很不错的书，个人强烈推荐大家看一下，如果要想真正了解一下什么是操作系统，操作系统内部是怎么实现的，想实际运用一下汇编指令，以及了解操作系统中的多线程实现机制，操作系统里的中断机制，此书都是一本&lt;code&gt;很不错&lt;/code&gt;的书，如果你正在看Linux方面的书，如内核方面的，Linux内核本身就是非常枯燥的，那我也推荐你看一下这本书，只要你认认真真看完这本书后，再去看内核方面的书，我相信有很多不懂的地方也自然就懂了&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://pan.baidu.com/s/1pJGxVw3" target="_blank"&gt;
+自已动手写操作系统PDF版下载
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;下载密码: &lt;code&gt;lqdo&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;自已动手写操作系统是一本很不错的书，个人强烈推荐大家看一下，如果要想真正了解一下什么是操作系统，操作系统内部是怎么实现的，想实际运用一下汇编指令，以及了解操作系统中的多线程实现机制，操作系统里的中断机制，此书都是一本&lt;code&gt;很不错&lt;/code&gt;的书，如果你正在看Linux方面的书，如内核方面的，Linux内核本身就是非常枯燥的，那我也推荐你看一下这本书，只要你认认真真看完这本书后，再去看内核方面的书，我相信有很多不懂的地方也自然就懂了，如果按照书上写的，可以自已写一个无界面的小型操作系统，当你完成时，自已将书中的代码输入计算机中，并且成功执行，你也会有一种成就感...&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;目录&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;第1章 马上动手写一个最小的“操作系统”1&lt;/p&gt;
 &lt;blockquote&gt;
