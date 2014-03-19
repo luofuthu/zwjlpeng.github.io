@@ -1,5 +1,148 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>烟雨林</title><link>http://www.yanyulin.info/</link><description></description><atom:link href="http://www.yanyulin.info/feeds/all.rss.xml" rel="self"></atom:link><lastBuildDate>Wed, 19 Mar 2014 00:00:00 +0800</lastBuildDate><item><title>自已动手写操作系统PDF版下载</title><link>http://www.yanyulin.info/pages/2014/03/write_os.html</link><description>&lt;hr /&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>烟雨林</title><link>http://www.yanyulin.info/</link><description></description><atom:link href="http://www.yanyulin.info/feeds/all.rss.xml" rel="self"></atom:link><lastBuildDate>Wed, 19 Mar 2014 00:00:00 +0800</lastBuildDate><item><title>Velocity中的单例模式以及多实例模式</title><link>http://www.yanyulin.info/pages/2014/03/velocity_disabuse_5.html</link><description>&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;本系列教程，为个人在淘宝实习所写，博文中所提及的WebX为淘宝的架构，大家可以忽略，当然有兴趣的，也可以自已去搜搜，淘宝的WebX目前处于开源状态&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Velocity作为MVC框架的V存在，与普通的JSP页面不同，它是一种模板引擎，利用先编辑完的格式作为大纲，把一些需要变化的地方作为参数传入，显示时将模板与参数合并，达到最终的输出样子，从上面的解说中，可以看出Velocity最根本的就是由context,engine,template三个部分组成，其中engine就是负责将context与template连接起来。
+　　&lt;/p&gt;
+&lt;p&gt;一般的&lt;strong&gt;Velocity&lt;/strong&gt;程序编写的步骤如下：
+　　
+1:首先创建一个模板,如*.vm,将需要参数化或者实例化的地方用context中有关的符号标记出来，标记时采用的是VTL语言，至于VTL语言可以参考本文后面的附录。
+　　
+2:给context设定一些初值，这些值用来替换template中被标记的地方
+　　
+3:利用engine将template中需要替换的地方用context中的值替换掉，也就是所谓的合并，从而得到该模板的实例。
+　　
+我们在例子中的一直使用的是如下代码：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c1"&gt;//初始化Velocity模板  &lt;/span&gt;
+&lt;span class="n"&gt;Velocity&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;init&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;  
+&lt;span class="c1"&gt;//创建一个VeloctiyContext对象  &lt;/span&gt;
+&lt;span class="n"&gt;VelocityContext&lt;/span&gt; &lt;span class="k"&gt;context&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;VelocityContext&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;  
+&lt;span class="c1"&gt;//向VelocityContext对象中放入一个键值对  &lt;/span&gt;
+&lt;span class="k"&gt;context&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;put&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;list&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;getNames&lt;/span&gt;&lt;span class="p"&gt;());&lt;/span&gt;  
+&lt;span class="n"&gt;Template&lt;/span&gt; &lt;span class="n"&gt;template&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;null&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;  
+&lt;span class="c1"&gt;//通过静态方法获取一个模板  &lt;/span&gt;
+&lt;span class="n"&gt;template&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;Velocity&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;getTemplate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;test.vm&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
+&lt;span class="c1"&gt;//创建一个输出流  &lt;/span&gt;
+&lt;span class="n"&gt;BufferedWriter&lt;/span&gt; &lt;span class="n"&gt;writer&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;BufferedWriter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;OutputStreamWriter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;out&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;将上述的代码换成如下形式，代码同样能运行，为什么？&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c1"&gt;//初始化Velocity模板  &lt;/span&gt;
+&lt;span class="n"&gt;VelocityEngine&lt;/span&gt; &lt;span class="n"&gt;engine&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;VelocityEngine&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;  
+&lt;span class="c1"&gt;//创建一个VeloctiyContext对象  &lt;/span&gt;
+&lt;span class="n"&gt;VelocityContext&lt;/span&gt; &lt;span class="k"&gt;context&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;VelocityContext&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;  
+&lt;span class="c1"&gt;//向VelocityContext对象中放入一个键值对  &lt;/span&gt;
+&lt;span class="k"&gt;context&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;put&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;list&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;getNames&lt;/span&gt;&lt;span class="p"&gt;());&lt;/span&gt;  
+&lt;span class="n"&gt;Template&lt;/span&gt; &lt;span class="n"&gt;template&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;null&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;  
+&lt;span class="c1"&gt;//通过静态方法获取一个模板  &lt;/span&gt;
+&lt;span class="n"&gt;template&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;engine&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;getTemplate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;test.vm&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
+&lt;span class="c1"&gt;//创建一个输出流  &lt;/span&gt;
+&lt;span class="n"&gt;BufferedWriter&lt;/span&gt; &lt;span class="n"&gt;writer&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;BufferedWriter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;OutputStreamWriter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;out&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;这大概就是Velocity里的设计模式吧，Velocity里的单实例模式与多实例模式&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Velocity引擎的单实例模式&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;上述代码中1与3其实是相同的情况，都是运行与单实例模式，作为一个开发工程师，我始终相信的是没有什么比源码更具有说服力&lt;/p&gt;
+&lt;p&gt;Velocity.init()方法的源码如下(init方法为什么能调用是因为其是Velocity类里的静态方法，这个不用多说吧&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="k"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;init&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;  
+&lt;span class="p"&gt;{&lt;/span&gt;  
+    &lt;span class="n"&gt;RuntimeSingleton&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;init&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;  
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;看到这行代码，你也就会明白其实例子三与上述代码1与3中的引擎是相同回事&lt;/p&gt;
+&lt;p&gt;继续跟踪上术代码：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="n"&gt;synchronized&lt;/span&gt; &lt;span class="k"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;init&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;  
+&lt;span class="p"&gt;{&lt;/span&gt;  
+    &lt;span class="n"&gt;ri&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;init&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;  
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;从上面这行代码中，至少可以看到这是一个线程安全级的方法，这个方法里又调用了ri.init()方法，ri是什么呢，看看其定义就知道了&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;private&lt;/span&gt; &lt;span class="k"&gt;static&lt;/span&gt; &lt;span class="n"&gt;RuntimeInstance&lt;/span&gt; &lt;span class="n"&gt;ri&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;new&lt;/span&gt; &lt;span class="n"&gt;RuntimeInstance&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;看到了吗ri是一个静态类，静态类不属于任何对象，在类第一次加载时就会分配内存，永久驻留于内存中,哦，C++中肯定是这样的，Java中估计也是吧,因此试想一下吧，一个程序中无论有多少个线程，使用这种方式来获取引擎的话，使用的都是同一个引擎。&lt;/p&gt;
+&lt;p&gt;再看看上述代码中的&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;Velocity&lt;/span&gt; &lt;span class="n"&gt;engine&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;new&lt;/span&gt; &lt;span class="n"&gt;Velocity&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;看到这行，也许有人会说这应该不是一个单实例模式吧，可事实上如果你跟踪上述代码运行的过程中，你会发现上面代码生成engine的过程中调用的是默认构造函数，而Velocity中默认的构造函数是什么都不做的，那个ri.init()初始化会发生在什么时候呢，如果你跟踪可以发现会被延迟到getTemplate函数调用的时候，如下代码所示：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="n"&gt;synchronized&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;init&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;  
+ &lt;span class="p"&gt;{&lt;/span&gt;  
+     &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="n"&gt;initialized&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="n"&gt;initializing&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  
+     &lt;span class="p"&gt;{&lt;/span&gt;  
+         &lt;span class="n"&gt;log&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;debug&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Initializing Velocity, Calling init()...&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
+         &lt;span class="n"&gt;initializing&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;true&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;  
+  
+         &lt;span class="n"&gt;log&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;trace&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;*******************************************************************&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
+         &lt;span class="n"&gt;log&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;debug&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Starting Apache Velocity v@build.version@ (compiled: @build.time@)&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
+         &lt;span class="n"&gt;log&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;trace&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;RuntimeInstance initializing.&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
+  
+         &lt;span class="n"&gt;initializeProperties&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;  
+         &lt;span class="n"&gt;initializeLog&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;  
+         &lt;span class="n"&gt;initializeResourceManager&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;  
+         &lt;span class="n"&gt;initializeDirectives&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;  
+         &lt;span class="n"&gt;initializeEventHandlers&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;  
+         &lt;span class="n"&gt;initializeParserPool&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;  
+  
+         &lt;span class="n"&gt;initializeIntrospection&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;  
+         &lt;span class="n"&gt;initializeEvaluateScopeSettings&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;  
+         &lt;span class="cm"&gt;/* &lt;/span&gt;
+&lt;span class="cm"&gt;          *  initialize the VM Factory.  It will use the properties &lt;/span&gt;
+&lt;span class="cm"&gt;          * accessable from Runtime, so keep this here at the end. &lt;/span&gt;
+&lt;span class="cm"&gt;          */&lt;/span&gt;  
+         &lt;span class="n"&gt;vmFactory&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;initVelocimacro&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;  
+  
+         &lt;span class="n"&gt;log&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;trace&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;RuntimeInstance successfully initialized.&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
+  
+         &lt;span class="n"&gt;initialized&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;true&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;  
+         &lt;span class="n"&gt;initializing&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;false&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;  
+     &lt;span class="p"&gt;}&lt;/span&gt;  
+ &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;看看上面的代码，可以发现的是如果未初始化，则在调用getTempate时由于未初始化，而会调用该函数，进行初始化。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Velocity的多实例模式&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;有了单实例模式，多实例模式也是显而易见的，代码如下：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c1"&gt;//初始化Velocity模板  &lt;/span&gt;
+&lt;span class="n"&gt;VelocityEngine&lt;/span&gt; &lt;span class="n"&gt;engine&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;VelocityEngine&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;跟踪代码的执行过程，可以发现如下代码：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="nf"&gt;VelocityEngine&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;  
+&lt;span class="p"&gt;{&lt;/span&gt;  
+    &lt;span class="c1"&gt;// do nothing  &lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;构造函数中没有做任何事情，但是别忘了的是，Java中构造函数没有任何代码并不一定表示不会做任何东西，这和C++类似，由于Java中属性被初始化了，因此编译器在编译字节码文件中，会将属性的初始化放在构造函数中进行，如不信，可以定个简单的程序，如下就是一个：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="n"&gt;class&lt;/span&gt; &lt;span class="n"&gt;test&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;  
+&lt;span class="n"&gt;private&lt;/span&gt; &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;str&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;pp&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;  
+&lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="nf"&gt;test&lt;/span&gt;&lt;span class="p"&gt;(){&lt;/span&gt;    
+&lt;span class="p"&gt;}&lt;/span&gt;  
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;将生成的字节码文件，反编译生成JVM汇编指令如下：&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_5.html"&gt;
+&lt;img src="http://www.yanyulin.info/pics/taobao/velocity5_1.jpg"   alt="烟雨林博客"/&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;看到了吧str=”pp”被放在了构造函数中吧,说这个的目的，就是想让我们再看看VelocityEngine这个类里面的属性，看看吧，你会发现这个东西&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;private&lt;/span&gt; &lt;span class="n"&gt;RuntimeInstance&lt;/span&gt; &lt;span class="n"&gt;ri&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;new&lt;/span&gt; &lt;span class="n"&gt;RuntimeInstance&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;是吧，对于每次运行new VelocityEngine()，都会生成RuntimeInstance这样的一个实例，而不再是所对的对象都共享一个Velocity引擎，而是每个一个。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Wed, 19 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-03-19:pages/2014/03/velocity_disabuse_5.html</guid><category>淘宝技术</category></item><item><title>自已动手写操作系统PDF版下载</title><link>http://www.yanyulin.info/pages/2014/03/write_os.html</link><description>&lt;hr /&gt;
 &lt;p&gt;&lt;a href="http://pan.baidu.com/s/1pJGxVw3" target="_blank"&gt;
 自已动手写操作系统PDF版下载
 &lt;/a&gt;&lt;/p&gt;
