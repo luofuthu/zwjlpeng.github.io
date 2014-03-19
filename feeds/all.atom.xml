@@ -1,5 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>烟雨林</title><link href="http://www.yanyulin.info/" rel="alternate"></link><link href="http://www.yanyulin.info/feeds/all.atom.xml" rel="self"></link><id>http://www.yanyulin.info/</id><updated>2014-03-19T00:00:00+08:00</updated><entry><title>Velocity中的单例模式以及多实例模式</title><link href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_5.html" rel="alternate"></link><updated>2014-03-19T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-19:pages/2014/03/velocity_disabuse_5.html</id><summary type="html">&lt;hr /&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>烟雨林</title><link href="http://www.yanyulin.info/" rel="alternate"></link><link href="http://www.yanyulin.info/feeds/all.atom.xml" rel="self"></link><id>http://www.yanyulin.info/</id><updated>2014-03-19T00:00:00+08:00</updated><entry><title>京东校园招聘笔试题2014年技术类</title><link href="http://www.yanyulin.info/pages/2014/03/jd_2014_a.html" rel="alternate"></link><updated>2014-03-19T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-19:pages/2014/03/jd_2014_a.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;今天去川大参加了京东的宣讲，外加笔试，那叫一个人山人海啊，貌似有1000人，通道和走廊甚至演讲台上都站满了人，然后把今年京东软开的笔试题给大家写出来，主要是试卷上有我的答案，自认为答得很不好，题目都是来自试卷，笔试我是翻窗户进去的，可想而知人数是有多逆天，场面是有多混乱...&lt;/p&gt;
+&lt;p&gt;第一部分 数据结构与算法
+一、选择题&lt;/p&gt;
+&lt;p&gt;1：链表不具备的特点是&lt;/p&gt;
+&lt;p&gt;A 可随机访问任何一个元素      &lt;/p&gt;
+&lt;p&gt;B 插入，删除操作不需要移动元素&lt;/p&gt;
+&lt;p&gt;C 无需事先估计存储空间大小    &lt;/p&gt;
+&lt;p&gt;D 所欲存储空间与线性表长度成正比&lt;/p&gt;
+&lt;p&gt;2：在一个单链表中，若删除P所指结点的后续结点，则执行&lt;/p&gt;
+&lt;p&gt;A p = p-&amp;gt;next；p-&amp;gt;next = p-&amp;gt;next-&amp;gt;next;&lt;/p&gt;
+&lt;p&gt;B p-&amp;gt;next = p-&amp;gt;next;&lt;/p&gt;
+&lt;p&gt;C p-&amp;gt;next = p-&amp;gt;next-&amp;gt;next;&lt;/p&gt;
+&lt;p&gt;D p = p-&amp;gt;next-&amp;gt;next&lt;/p&gt;
+&lt;p&gt;3:将一棵二叉树的根节点放入队列，然后递归的执行如下操作，将出对结点所有子节点加入队。以上操作可以实现哪种遍历&lt;/p&gt;
+&lt;p&gt;A 前序遍历 &lt;/p&gt;
+&lt;p&gt;B 中序遍历 &lt;/p&gt;
+&lt;p&gt;C 后序遍历 &lt;/p&gt;
+&lt;p&gt;D 层序遍历&lt;/p&gt;
+&lt;p&gt;4：设一课完全二叉树共有999个结点，则在该二叉树中的叶节点个数是&lt;/p&gt;
+&lt;p&gt;A 499 &lt;/p&gt;
+&lt;p&gt;B 500 &lt;/p&gt;
+&lt;p&gt;C 501 &lt;/p&gt;
+&lt;p&gt;D 不唯一&lt;/p&gt;
+&lt;p&gt;5：以下哪种排序算法对&lt;code&gt;【1,3,2,4,5,6,7，8,9】&lt;/code&gt;进行的排序最快&lt;/p&gt;
+&lt;p&gt;A 冒泡 &lt;/p&gt;
+&lt;p&gt;B 快排 &lt;/p&gt;
+&lt;p&gt;C 归并 &lt;/p&gt;
+&lt;p&gt;D 堆排&lt;/p&gt;
+&lt;p&gt;第二部分 软件工程与数据库&lt;/p&gt;
+&lt;p&gt;1：一条sql语句中，group by应位于什么位置&lt;/p&gt;
+&lt;p&gt;A 在where子句关键字之前    &lt;/p&gt;
+&lt;p&gt;B 在where子句之后&lt;/p&gt;
+&lt;p&gt;C 在from之前                    &lt;/p&gt;
+&lt;p&gt;D 在order by 之后&lt;/p&gt;
+&lt;p&gt;2:假设京东商品表jd_sku中，price字段表示价格，promote_price字段表示促销时期的价格，请用一条SQL语句实现：当前月份为6月时，使用promote_price字段代替pricep字段&lt;/p&gt;
+&lt;p&gt;3：假设京东商品表jd_sku,请用一条SQL语句查询出所有字段shop_id取值重复的记录&lt;/p&gt;
+&lt;p&gt;4：假设京东有一个web API:http://p.jd.com?p1=90&amp;amp;p0=100,输入打折价p1和原价p0,返回折扣信息0.9，请设计测试用例进行测试。&lt;/p&gt;
+&lt;p&gt;5：什么是NoSQL,简要描述NoSQL的特点，列举出你所知道的NoSQL数据库。&lt;/p&gt;
+&lt;p&gt;第三部分:逻辑&lt;/p&gt;
+&lt;p&gt;1：选择合适字母：&lt;code&gt;CFI DHL EJ_&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;A: E   &lt;/p&gt;
+&lt;p&gt;B:  G   &lt;/p&gt;
+&lt;p&gt;C:  H   &lt;/p&gt;
+&lt;p&gt;D:  C&lt;/p&gt;
+&lt;p&gt;2：选择合适的图形&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2014/03/jd_2014_a.html"&gt;
+&lt;img src="http://www.yanyulin.info/pics/job/jd_2014_1_1.jpg" alt="烟雨林博客"/&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;3：选择左侧的纸板折叠成的纸盒是：&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2014/03/jd_2014_a.html"&gt;
+&lt;img src="http://www.yanyulin.info/pics/job/jd_2014_1_2.jpg" alt="烟雨林博客"/&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;4：右侧第一行问号处应该填写的数字是：&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2014/03/jd_2014_a.html"&gt;
+&lt;img src="http://www.yanyulin.info/pics/job/jd_2014_1_3.jpg" alt="烟雨林博客"/&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;5：有两根粗细均匀的香，每根燃尽需要1个小时，用什么方法确定15分钟。&lt;/p&gt;
+&lt;p&gt;第四部分：java基础&lt;/p&gt;
+&lt;p&gt;1：一个以“.java”为后缀的源文件&lt;/p&gt;
+&lt;p&gt;A 只能包含一个类，类名必须与文件名相同  &lt;/p&gt;
+&lt;p&gt;B 只能包含与文件名相同的类以及其中的内部类&lt;/p&gt;
+&lt;p&gt;C 只能有一个与文件名相同的类，可以包含其他类&lt;/p&gt;
+&lt;p&gt;D 可以包含任意类&lt;/p&gt;
+&lt;p&gt;2: 代码&lt;code&gt;system.out.println(10%3*2)&lt;/code&gt;;将打印&lt;/p&gt;
+&lt;p&gt;A 1    &lt;/p&gt;
+&lt;p&gt;B 2    &lt;/p&gt;
+&lt;p&gt;C 4    &lt;/p&gt;
+&lt;p&gt;D 6&lt;/p&gt;
+&lt;p&gt;3：以下代码将打印出&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="k"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
+    &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;classFile&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;com.jd&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;replaceAll&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;.&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;/&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;MyClass.class&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;out&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;println&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;classFile&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;A.com.jd&lt;/p&gt;
+&lt;p&gt;B com/jd/ MyClass.class&lt;/p&gt;
+&lt;p&gt;C //////MyClass.class &lt;/p&gt;
+&lt;p&gt;D com.jd.MyClass&lt;/p&gt;
+&lt;p&gt;4、下面函数将返回&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="k"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;func&lt;/span&gt;&lt;span class="p"&gt;(){&lt;/span&gt;
+    &lt;span class="n"&gt;try&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="n"&gt;catch&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Exception&lt;/span&gt; &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="n"&gt;finally&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;A 1&lt;/p&gt;
+&lt;p&gt;B 2&lt;/p&gt;
+&lt;p&gt;C 3&lt;/p&gt;
+&lt;p&gt;D 编译错误&lt;/p&gt;
+&lt;p&gt;5、以下代码将打印出？&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="nf"&gt;static&lt;/span&gt; &lt;span class="bp"&gt;void&lt;/span&gt; &lt;span class="nx"&gt;main&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;String&lt;/span&gt;&lt;span class="err"&gt;[&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; args)
+{
+    List&lt;span class="nt"&gt;&amp;lt;Integer&amp;gt;&lt;/span&gt; list1=new ArrayList&lt;span class="nt"&gt;&amp;lt;Integer&amp;gt;&lt;/span&gt;();
+    list1.add(0);
+    List&lt;span class="nt"&gt;&amp;lt;Object&amp;gt;&lt;/span&gt; list2=list1;
+    System.out.println(list1.get(0) instanceof Integer);
+    System.out.println(list2.get(0) instanceof Integer);
+}
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;A 编译错误&lt;/p&gt;
+&lt;p&gt;B true true&lt;/p&gt;
+&lt;p&gt;C true false&lt;/p&gt;
+&lt;p&gt;D false false&lt;/p&gt;
+&lt;p&gt;6、简答题&lt;/p&gt;
+&lt;p&gt;1：谈谈你对多态的理解&lt;/p&gt;
+&lt;p&gt;2：如果铁道部分邀请你来重新设计火车票订票网站的架构，解决高峰时期服务不可用的问题，你有什么好主意。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;各位如果有更好的答案，请留言评价，方便更多的人&lt;/strong&gt;&lt;/p&gt;</summary><category term="京东笔试题"></category></entry><entry><title>Velocity中的单例模式以及多实例模式</title><link href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_5.html" rel="alternate"></link><updated>2014-03-19T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-19:pages/2014/03/velocity_disabuse_5.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;本系列教程，为个人在淘宝实习所写，博文中所提及的WebX为淘宝的架构，大家可以忽略，当然有兴趣的，也可以自已去搜搜，淘宝的WebX目前处于开源状态&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Velocity作为MVC框架的V存在，与普通的JSP页面不同，它是一种模板引擎，利用先编辑完的格式作为大纲，把一些需要变化的地方作为参数传入，显示时将模板与参数合并，达到最终的输出样子，从上面的解说中，可以看出Velocity最根本的就是由context,engine,template三个部分组成，其中engine就是负责将context与template连接起来。
 　　&lt;/p&gt;
