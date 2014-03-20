@@ -1,5 +1,150 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>烟雨林</title><link>http://www.yanyulin.info/</link><description></description><atom:link href="http://www.yanyulin.info/feeds/all.rss.xml" rel="self"></atom:link><lastBuildDate>Wed, 19 Mar 2014 00:00:00 +0800</lastBuildDate><item><title>京东校园招聘笔试题2014年技术类</title><link>http://www.yanyulin.info/pages/2014/03/jd_2014_a.html</link><description>&lt;hr /&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>烟雨林</title><link>http://www.yanyulin.info/</link><description></description><atom:link href="http://www.yanyulin.info/feeds/all.rss.xml" rel="self"></atom:link><lastBuildDate>Thu, 20 Mar 2014 00:00:00 +0800</lastBuildDate><item><title>velocity初始化过程分析读取配置文件</title><link>http://www.yanyulin.info/pages/2014/03/velocity_disabuse_6.html</link><description>&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;本系列教程，为个人在淘宝实习所写，博文中所提及的WebX为淘宝的架构，大家可以忽略，当然有兴趣的，也可以自已去搜搜，淘宝的WebX目前处于开源状态&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Velocity引擎解惑&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;1、&lt;a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_1.html" target="_blank"&gt;Velocity入门教程HelloWord程序&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;2、&lt;a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_2.html" target="_blank"&gt;Velocity入门例子自定义呈现容器&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;3、&lt;a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_3.html" target="_blank"&gt;Velocity入门例子事件监听机制&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;4、&lt;a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_4.html" target="_blank"&gt;Velocity入门例子创建普通的web工程&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;5、&lt;a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_5.html" target="_blank"&gt;Velocity中的单例模式以及多实例模式&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;有了上面的单实例模式与多实例模式，下要要分析的就是Velocity引擎的初始化过程，上面代码中我们一直没有细讲的就是ri.init(),这个init()方法里的内容：
+　　&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="n"&gt;synchronized&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;init&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;  &lt;span class="c1"&gt;//这是一个同步方法，增加了线程安全性&lt;/span&gt;
+ &lt;span class="p"&gt;{&lt;/span&gt;    &lt;span class="c1"&gt;//如果未进行初始化，就会执行以下的初始化过程&lt;/span&gt;
+     &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="n"&gt;initialized&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="n"&gt;initializing&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  
+     &lt;span class="p"&gt;{&lt;/span&gt;   &lt;span class="c1"&gt;//打印出调试信息&lt;/span&gt;
+         &lt;span class="n"&gt;log&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;debug&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Initializing Velocity, Calling init()...&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+            &lt;span class="c1"&gt;//将初始化标志置为真  &lt;/span&gt;
+         &lt;span class="n"&gt;initializing&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;true&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;  
+        &lt;span class="c1"&gt;//无用的打钱信息&lt;/span&gt;
+         &lt;span class="n"&gt;log&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;trace&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;*******************************************************************&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
+            &lt;span class="c1"&gt;//又是无用的打印信息&lt;/span&gt;
+         &lt;span class="n"&gt;log&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;debug&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Starting Apache Velocity v@build.version@ (compiled: @build.time@)&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
+         &lt;span class="n"&gt;log&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;trace&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;RuntimeInstance initializing.&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
+        &lt;span class="c1"&gt;//读取属性配置文件&lt;/span&gt;
+         &lt;span class="n"&gt;initializeProperties&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+            &lt;span class="c1"&gt;//读取初始化日志文件  &lt;/span&gt;
+         &lt;span class="n"&gt;initializeLog&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;  
+          &lt;span class="c1"&gt;//初始化资源加载器&lt;/span&gt;
+         &lt;span class="n"&gt;initializeResourceManager&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+            &lt;span class="c1"&gt;//初始化VTL预指令 &lt;/span&gt;
+         &lt;span class="n"&gt;initializeDirectives&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+          &lt;span class="c1"&gt;//初始化事件处理句柄&lt;/span&gt;
+         &lt;span class="n"&gt;initializeEventHandlers&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt; 
+            &lt;span class="c1"&gt;//初始化解析池 &lt;/span&gt;
+         &lt;span class="n"&gt;initializeParserPool&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;  
+          &lt;span class="c1"&gt;//应该是static content include system&lt;/span&gt;
+         &lt;span class="n"&gt;initializeIntrospection&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;  
+         &lt;span class="n"&gt;initializeEvaluateScopeSettings&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;  
+         &lt;span class="cm"&gt;/* &lt;/span&gt;
+&lt;span class="cm"&gt;          *  initialize the VM Factory.  It will use the properties &lt;/span&gt;
+&lt;span class="cm"&gt;          * accessable from Runtime, so keep this here at the end. &lt;/span&gt;
+&lt;span class="cm"&gt;          */&lt;/span&gt;  
+          &lt;span class="c1"&gt;//初始化宏&lt;/span&gt;
+         &lt;span class="n"&gt;vmFactory&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;initVelocimacro&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;  
+         &lt;span class="n"&gt;log&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;trace&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;RuntimeInstance successfully initialized.&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
+         &lt;span class="n"&gt;initialized&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;true&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;  
+         &lt;span class="n"&gt;initializing&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;false&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;  
+     &lt;span class="p"&gt;}&lt;/span&gt;  
+ &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;上面我已经写了注释，下面就深入代码内部进行分析一下：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;initializeProperties(读取配置文件)&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c1"&gt;//读取属性配置文件&lt;/span&gt;
+&lt;span class="n"&gt;initializeProperties&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;这行代码是读取配置文件，由于我们执行的是Velocity.init()-&amp;gt;ri.init(),这个init方法里面没有指定配置文件&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;private&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;initializeProperties&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;  
+ &lt;span class="p"&gt;{&lt;/span&gt;  
+     &lt;span class="cm"&gt;/* &lt;/span&gt;
+&lt;span class="cm"&gt;      * Always lay down the default properties first as &lt;/span&gt;
+&lt;span class="cm"&gt;      * to provide a solid base. &lt;/span&gt;
+&lt;span class="cm"&gt;      */&lt;/span&gt;  
+     &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;configuration&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;isInitialized&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="nb"&gt;false&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  
+     &lt;span class="p"&gt;{&lt;/span&gt;  
+         &lt;span class="n"&gt;setDefaultProperties&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;  
+     &lt;span class="p"&gt;}&lt;/span&gt;  
+  
+     &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="n"&gt;overridingProperties&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="n"&gt;null&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  
+     &lt;span class="p"&gt;{&lt;/span&gt;  
+         &lt;span class="n"&gt;configuration&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;combine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;overridingProperties&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
+     &lt;span class="p"&gt;}&lt;/span&gt;  
+ &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;因此上面的代码中的overridingProperties会是默认值null,对比ri.init(p)代码，可以发现有参数p时会首先对overridingProperties进行初始化，如下所示&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;init&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Properties&lt;/span&gt; &lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  
+&lt;span class="p"&gt;{&lt;/span&gt;  
+    &lt;span class="n"&gt;setProperties&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ExtendedProperties&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;convertProperties&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;  
+    &lt;span class="n"&gt;init&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;  
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;因此initializeProperties()代码的执行实际过程中只会持执行setDefaultProperties(),这个函数，看看这个函数的实现吧&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;private&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;setDefaultProperties&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;  
+   &lt;span class="p"&gt;{&lt;/span&gt;  
+       &lt;span class="n"&gt;InputStream&lt;/span&gt; &lt;span class="n"&gt;inputStream&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;null&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;  
+       &lt;span class="n"&gt;try&lt;/span&gt;  
+       &lt;span class="p"&gt;{&lt;/span&gt;  
+           &lt;span class="c1"&gt;//重要这里获取到了属性的配置文件DEFAULT_RUNTIME_PROPERTIES是默认的配&lt;/span&gt;
+            &lt;span class="c1"&gt;//置文件org/apache/velocity/runtime/defaults/velocity.properties&lt;/span&gt;
+           &lt;span class="n"&gt;inputStream&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;getClass&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;  
+               &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;getResourceAsStream&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sc"&gt;&amp;#39;/&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;DEFAULT_RUNTIME_PROPERTIES&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
+        &lt;span class="c1"&gt;//将配置文件加载进来&lt;/span&gt;
+           &lt;span class="n"&gt;configuration&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;load&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="n"&gt;inputStream&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;  
+           &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;log&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;isDebugEnabled&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;  
+           &lt;span class="p"&gt;{&lt;/span&gt;  
+               &lt;span class="n"&gt;log&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;debug&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Default Properties File: &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;  
+                   &lt;span class="n"&gt;new&lt;/span&gt; &lt;span class="n"&gt;File&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;DEFAULT_RUNTIME_PROPERTIES&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="n"&gt;getPath&lt;/span&gt;&lt;span class="p"&gt;());&lt;/span&gt;  
+           &lt;span class="p"&gt;}&lt;/span&gt;  
+       &lt;span class="p"&gt;}&lt;/span&gt;  
+       &lt;span class="n"&gt;catch&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;IOException&lt;/span&gt; &lt;span class="n"&gt;ioe&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  
+       &lt;span class="p"&gt;{&lt;/span&gt;  
+           &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;msg&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Cannot get Velocity Runtime default properties!&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;  
+           &lt;span class="n"&gt;log&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;error&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;msg&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;ioe&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
+           &lt;span class="n"&gt;throw&lt;/span&gt; &lt;span class="n"&gt;new&lt;/span&gt; &lt;span class="n"&gt;RuntimeException&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;msg&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;ioe&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
+       &lt;span class="p"&gt;}&lt;/span&gt;  
+       &lt;span class="n"&gt;finally&lt;/span&gt;  
+       &lt;span class="p"&gt;{&lt;/span&gt;  
+           &lt;span class="n"&gt;try&lt;/span&gt;  
+           &lt;span class="p"&gt;{&lt;/span&gt;  &lt;span class="c1"&gt;//各种关闭呀，一看就知道&lt;/span&gt;
+               &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;inputStream&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="n"&gt;null&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  
+               &lt;span class="p"&gt;{&lt;/span&gt;  
+                   &lt;span class="n"&gt;inputStream&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;close&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;  
+               &lt;span class="p"&gt;}&lt;/span&gt;  
+           &lt;span class="p"&gt;}&lt;/span&gt;  
+           &lt;span class="n"&gt;catch&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;IOException&lt;/span&gt; &lt;span class="n"&gt;ioe&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  
+           &lt;span class="p"&gt;{&lt;/span&gt;  
+               &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;msg&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Cannot close Velocity Runtime default properties!&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;  
+               &lt;span class="n"&gt;log&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;error&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;msg&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;ioe&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
+               &lt;span class="n"&gt;throw&lt;/span&gt; &lt;span class="n"&gt;new&lt;/span&gt; &lt;span class="n"&gt;RuntimeException&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;msg&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;ioe&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
+           &lt;span class="p"&gt;}&lt;/span&gt;  
+       &lt;span class="p"&gt;}&lt;/span&gt;  
+   &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;上面的代码就是读取默认的配置文件，并将其加载进来，默认的配置文件是真的有呢，截图看看：&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_6.html"&gt;
+&lt;img src="http://www.yanyulin.info/pics/taobao/velocity6_1.jpg" alt="烟雨林博客"/&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;在默认配置文件中主要涉及的是各种配置，如下是一部份，这一部份主要涉及的是宏指令&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;velocimacro&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;permissions&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;allow&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="kr"&gt;inline&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;true&lt;/span&gt;  
+&lt;span class="n"&gt;velocimacro&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;permissions&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;allow&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="kr"&gt;inline&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;to&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;replace&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;global&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;false&lt;/span&gt;  
+&lt;span class="n"&gt;velocimacro&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;permissions&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;allow&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="kr"&gt;inline&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;local&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;scope&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;false&lt;/span&gt;  
+  
+&lt;span class="n"&gt;velocimacro&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;context&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;localscope&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;false&lt;/span&gt;  
+&lt;span class="n"&gt;velocimacro&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;max&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;depth&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;20&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;这里面设置允许宏的内联，即递归，不允许全局替换，最大嵌套深度为20等等&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Thu, 20 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-03-20:pages/2014/03/velocity_disabuse_6.html</guid><category>淘宝技术</category></item><item><title>京东校园招聘笔试题2014年技术类</title><link>http://www.yanyulin.info/pages/2014/03/jd_2014_a.html</link><description>&lt;hr /&gt;
 &lt;p&gt;今天去川大参加了京东的宣讲，外加笔试，那叫一个人山人海啊，貌似有1000人，通道和走廊甚至演讲台上都站满了人，然后把今年京东软开的笔试题给大家写出来，主要是试卷上有我的答案，自认为答得很不好，题目都是来自试卷，笔试我是翻窗户进去的，可想而知人数是有多逆天，场面是有多混乱...&lt;/p&gt;
 &lt;p&gt;第一部分 数据结构与算法
 一、选择题&lt;/p&gt;

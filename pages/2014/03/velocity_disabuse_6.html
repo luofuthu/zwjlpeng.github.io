@@ -2,7 +2,7 @@
 <html lang="zh">
 <head>
 <title>
-Velocity中的单例模式以及多实例模式 - 烟雨林</title>
+velocity初始化过程分析读取配置文件 - 烟雨林</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
 <meta name="author" content="烟雨林">
@@ -51,9 +51,9 @@ Velocity中的单例模式以及多实例模式 - 烟雨林</title>
 					</div>
 					<div class="entry_box_s">
 						<div class="entry_title_box">
-							<div class="entry_title">Velocity中的单例模式以及多实例模式</div>
+							<div class="entry_title">velocity初始化过程分析读取配置文件</div>
 							<div class="archive_info">
-								<span class="date">2014-03-19</span>
+								<span class="date">2014-03-20</span>
 								<span class="category"> ⁄ 							
 						  <a href="http://www.yanyulin.info/tag/tao-bao-ji-zhu.html" target="_blank" title="查看同类文章" rel="category tag">淘宝技术</a>&nbsp;
 						  </span>
@@ -84,106 +84,48 @@ Velocity中的单例模式以及多实例模式 - 烟雨林</title>
 </div>
 							<hr />
 <p><strong>本系列教程，为个人在淘宝实习所写，博文中所提及的WebX为淘宝的架构，大家可以忽略，当然有兴趣的，也可以自已去搜搜，淘宝的WebX目前处于开源状态</strong></p>
-<p>Velocity作为MVC框架的V存在，与普通的JSP页面不同，它是一种模板引擎，利用先编辑完的格式作为大纲，把一些需要变化的地方作为参数传入，显示时将模板与参数合并，达到最终的输出样子，从上面的解说中，可以看出Velocity最根本的就是由context,engine,template三个部分组成，其中engine就是负责将context与template连接起来。
+<p><strong>Velocity引擎解惑</strong></p>
+<p>1、<a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_1.html" target="_blank">Velocity入门教程HelloWord程序</a></p>
+<p>2、<a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_2.html" target="_blank">Velocity入门例子自定义呈现容器</a></p>
+<p>3、<a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_3.html" target="_blank">Velocity入门例子事件监听机制</a></p>
+<p>4、<a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_4.html" target="_blank">Velocity入门例子创建普通的web工程</a></p>
+<p>5、<a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_5.html" target="_blank">Velocity中的单例模式以及多实例模式</a></p>
+<p>有了上面的单实例模式与多实例模式，下要要分析的就是Velocity引擎的初始化过程，上面代码中我们一直没有细讲的就是ri.init(),这个init()方法里的内容：
 　　</p>
-<p>一般的<strong>Velocity</strong>程序编写的步骤如下：
-　　
-1:首先创建一个模板,如*.vm,将需要参数化或者实例化的地方用context中有关的符号标记出来，标记时采用的是VTL语言，至于VTL语言可以参考本文后面的附录。
-　　
-2:给context设定一些初值，这些值用来替换template中被标记的地方
-　　
-3:利用engine将template中需要替换的地方用context中的值替换掉，也就是所谓的合并，从而得到该模板的实例。
-　　
-我们在例子中的一直使用的是如下代码：</p>
-<div class="highlight"><pre><span class="c1">//初始化Velocity模板  </span>
-<span class="n">Velocity</span><span class="p">.</span><span class="n">init</span><span class="p">();</span>  
-<span class="c1">//创建一个VeloctiyContext对象  </span>
-<span class="n">VelocityContext</span> <span class="k">context</span><span class="o">=</span><span class="k">new</span> <span class="n">VelocityContext</span><span class="p">();</span>  
-<span class="c1">//向VelocityContext对象中放入一个键值对  </span>
-<span class="k">context</span><span class="p">.</span><span class="n">put</span><span class="p">(</span><span class="s">&quot;list&quot;</span><span class="p">,</span> <span class="n">getNames</span><span class="p">());</span>  
-<span class="n">Template</span> <span class="n">template</span><span class="o">=</span><span class="k">null</span><span class="p">;</span>  
-<span class="c1">//通过静态方法获取一个模板  </span>
-<span class="n">template</span><span class="o">=</span><span class="n">Velocity</span><span class="p">.</span><span class="n">getTemplate</span><span class="p">(</span><span class="s">&quot;test.vm&quot;</span><span class="p">);</span>  
-<span class="c1">//创建一个输出流  </span>
-<span class="n">BufferedWriter</span> <span class="n">writer</span><span class="o">=</span><span class="k">new</span> <span class="n">BufferedWriter</span><span class="p">(</span><span class="k">new</span> <span class="n">OutputStreamWriter</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="n">out</span><span class="p">));</span>
-</pre></div>
-
-
-<p>将上述的代码换成如下形式，代码同样能运行，为什么？</p>
-<div class="highlight"><pre><span class="c1">//初始化Velocity模板  </span>
-<span class="n">VelocityEngine</span> <span class="n">engine</span><span class="o">=</span><span class="k">new</span> <span class="n">VelocityEngine</span><span class="p">();</span>  
-<span class="c1">//创建一个VeloctiyContext对象  </span>
-<span class="n">VelocityContext</span> <span class="k">context</span><span class="o">=</span><span class="k">new</span> <span class="n">VelocityContext</span><span class="p">();</span>  
-<span class="c1">//向VelocityContext对象中放入一个键值对  </span>
-<span class="k">context</span><span class="p">.</span><span class="n">put</span><span class="p">(</span><span class="s">&quot;list&quot;</span><span class="p">,</span> <span class="n">getNames</span><span class="p">());</span>  
-<span class="n">Template</span> <span class="n">template</span><span class="o">=</span><span class="k">null</span><span class="p">;</span>  
-<span class="c1">//通过静态方法获取一个模板  </span>
-<span class="n">template</span><span class="o">=</span><span class="n">engine</span><span class="p">.</span><span class="n">getTemplate</span><span class="p">(</span><span class="s">&quot;test.vm&quot;</span><span class="p">);</span>  
-<span class="c1">//创建一个输出流  </span>
-<span class="n">BufferedWriter</span> <span class="n">writer</span><span class="o">=</span><span class="k">new</span> <span class="n">BufferedWriter</span><span class="p">(</span><span class="k">new</span> <span class="n">OutputStreamWriter</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="n">out</span><span class="p">));</span>
-</pre></div>
-
-
-<p>这大概就是Velocity里的设计模式吧，Velocity里的单实例模式与多实例模式</p>
-<p><strong>Velocity引擎的单实例模式</strong></p>
-<p>上述代码中1与3其实是相同的情况，都是运行与单实例模式，作为一个开发工程师，我始终相信的是没有什么比源码更具有说服力</p>
-<p>Velocity.init()方法的源码如下(init方法为什么能调用是因为其是Velocity类里的静态方法，这个不用多说吧</p>
-<div class="highlight"><pre><span class="n">public</span> <span class="k">static</span> <span class="kt">void</span> <span class="nf">init</span><span class="p">()</span>  
-<span class="p">{</span>  
-    <span class="n">RuntimeSingleton</span><span class="p">.</span><span class="n">init</span><span class="p">();</span>  
-<span class="p">}</span>
-</pre></div>
-
-
-<p>看到这行代码，你也就会明白其实例子三与上述代码1与3中的引擎是相同回事</p>
-<p>继续跟踪上术代码：</p>
-<div class="highlight"><pre><span class="n">public</span> <span class="n">synchronized</span> <span class="k">static</span> <span class="kt">void</span> <span class="nf">init</span><span class="p">()</span>  
-<span class="p">{</span>  
-    <span class="n">ri</span><span class="p">.</span><span class="n">init</span><span class="p">();</span>  
-<span class="p">}</span>
-</pre></div>
-
-
-<p>从上面这行代码中，至少可以看到这是一个线程安全级的方法，这个方法里又调用了ri.init()方法，ri是什么呢，看看其定义就知道了</p>
-<div class="highlight"><pre><span class="n">private</span> <span class="k">static</span> <span class="n">RuntimeInstance</span> <span class="n">ri</span> <span class="o">=</span> <span class="n">new</span> <span class="n">RuntimeInstance</span><span class="p">();</span>
-</pre></div>
-
-
-<p>看到了吗ri是一个静态类，静态类不属于任何对象，在类第一次加载时就会分配内存，永久驻留于内存中,哦，C++中肯定是这样的，Java中估计也是吧,因此试想一下吧，一个程序中无论有多少个线程，使用这种方式来获取引擎的话，使用的都是同一个引擎。</p>
-<p>再看看上述代码中的</p>
-<div class="highlight"><pre><span class="n">Velocity</span> <span class="n">engine</span><span class="o">=</span><span class="n">new</span> <span class="n">Velocity</span><span class="p">();</span>
-</pre></div>
-
-
-<p>看到这行，也许有人会说这应该不是一个单实例模式吧，可事实上如果你跟踪上述代码运行的过程中，你会发现上面代码生成engine的过程中调用的是默认构造函数，而Velocity中默认的构造函数是什么都不做的，那个ri.init()初始化会发生在什么时候呢，如果你跟踪可以发现会被延迟到getTemplate函数调用的时候，如下代码所示：</p>
-<div class="highlight"><pre><span class="n">public</span> <span class="n">synchronized</span> <span class="kt">void</span> <span class="nf">init</span><span class="p">()</span>  
- <span class="p">{</span>  
+<div class="highlight"><pre><span class="n">public</span> <span class="n">synchronized</span> <span class="kt">void</span> <span class="nf">init</span><span class="p">()</span>  <span class="c1">//这是一个同步方法，增加了线程安全性</span>
+ <span class="p">{</span>    <span class="c1">//如果未进行初始化，就会执行以下的初始化过程</span>
      <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">initialized</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">initializing</span><span class="p">)</span>  
-     <span class="p">{</span>  
-         <span class="n">log</span><span class="p">.</span><span class="n">debug</span><span class="p">(</span><span class="s">&quot;Initializing Velocity, Calling init()...&quot;</span><span class="p">);</span>  
+     <span class="p">{</span>   <span class="c1">//打印出调试信息</span>
+         <span class="n">log</span><span class="p">.</span><span class="n">debug</span><span class="p">(</span><span class="s">&quot;Initializing Velocity, Calling init()...&quot;</span><span class="p">);</span>
+            <span class="c1">//将初始化标志置为真  </span>
          <span class="n">initializing</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>  
-  
+        <span class="c1">//无用的打钱信息</span>
          <span class="n">log</span><span class="p">.</span><span class="n">trace</span><span class="p">(</span><span class="s">&quot;*******************************************************************&quot;</span><span class="p">);</span>  
+            <span class="c1">//又是无用的打印信息</span>
          <span class="n">log</span><span class="p">.</span><span class="n">debug</span><span class="p">(</span><span class="s">&quot;Starting Apache Velocity v@build.version@ (compiled: @build.time@)&quot;</span><span class="p">);</span>  
          <span class="n">log</span><span class="p">.</span><span class="n">trace</span><span class="p">(</span><span class="s">&quot;RuntimeInstance initializing.&quot;</span><span class="p">);</span>  
-  
-         <span class="n">initializeProperties</span><span class="p">();</span>  
+        <span class="c1">//读取属性配置文件</span>
+         <span class="n">initializeProperties</span><span class="p">();</span>
+            <span class="c1">//读取初始化日志文件  </span>
          <span class="n">initializeLog</span><span class="p">();</span>  
-         <span class="n">initializeResourceManager</span><span class="p">();</span>  
-         <span class="n">initializeDirectives</span><span class="p">();</span>  
-         <span class="n">initializeEventHandlers</span><span class="p">();</span>  
+          <span class="c1">//初始化资源加载器</span>
+         <span class="n">initializeResourceManager</span><span class="p">();</span>
+            <span class="c1">//初始化VTL预指令 </span>
+         <span class="n">initializeDirectives</span><span class="p">();</span>
+          <span class="c1">//初始化事件处理句柄</span>
+         <span class="n">initializeEventHandlers</span><span class="p">();</span> 
+            <span class="c1">//初始化解析池 </span>
          <span class="n">initializeParserPool</span><span class="p">();</span>  
-  
+          <span class="c1">//应该是static content include system</span>
          <span class="n">initializeIntrospection</span><span class="p">();</span>  
          <span class="n">initializeEvaluateScopeSettings</span><span class="p">();</span>  
          <span class="cm">/* </span>
 <span class="cm">          *  initialize the VM Factory.  It will use the properties </span>
 <span class="cm">          * accessable from Runtime, so keep this here at the end. </span>
 <span class="cm">          */</span>  
+          <span class="c1">//初始化宏</span>
          <span class="n">vmFactory</span><span class="p">.</span><span class="n">initVelocimacro</span><span class="p">();</span>  
-  
          <span class="n">log</span><span class="p">.</span><span class="n">trace</span><span class="p">(</span><span class="s">&quot;RuntimeInstance successfully initialized.&quot;</span><span class="p">);</span>  
-  
          <span class="n">initialized</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>  
          <span class="n">initializing</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>  
      <span class="p">}</span>  
@@ -191,44 +133,104 @@ Velocity中的单例模式以及多实例模式 - 烟雨林</title>
 </pre></div>
 
 
-<p>看看上面的代码，可以发现的是如果未初始化，则在调用getTempate时由于未初始化，而会调用该函数，进行初始化。</p>
-<p><strong>Velocity的多实例模式</strong></p>
-<p>有了单实例模式，多实例模式也是显而易见的，代码如下：</p>
-<div class="highlight"><pre><span class="c1">//初始化Velocity模板  </span>
-<span class="n">VelocityEngine</span> <span class="n">engine</span><span class="o">=</span><span class="k">new</span> <span class="n">VelocityEngine</span><span class="p">();</span>
+<p>上面我已经写了注释，下面就深入代码内部进行分析一下：</p>
+<p><strong>initializeProperties(读取配置文件)</strong></p>
+<div class="highlight"><pre><span class="c1">//读取属性配置文件</span>
+<span class="n">initializeProperties</span><span class="p">();</span>
 </pre></div>
 
 
-<p>跟踪代码的执行过程，可以发现如下代码：</p>
-<div class="highlight"><pre><span class="n">public</span> <span class="nf">VelocityEngine</span><span class="p">()</span>  
+<p>这行代码是读取配置文件，由于我们执行的是Velocity.init()-&gt;ri.init(),这个init方法里面没有指定配置文件</p>
+<div class="highlight"><pre><span class="n">private</span> <span class="kt">void</span> <span class="nf">initializeProperties</span><span class="p">()</span>  
+ <span class="p">{</span>  
+     <span class="cm">/* </span>
+<span class="cm">      * Always lay down the default properties first as </span>
+<span class="cm">      * to provide a solid base. </span>
+<span class="cm">      */</span>  
+     <span class="k">if</span> <span class="p">(</span><span class="n">configuration</span><span class="p">.</span><span class="n">isInitialized</span><span class="p">()</span> <span class="o">==</span> <span class="nb">false</span><span class="p">)</span>  
+     <span class="p">{</span>  
+         <span class="n">setDefaultProperties</span><span class="p">();</span>  
+     <span class="p">}</span>  
+  
+     <span class="k">if</span><span class="p">(</span> <span class="n">overridingProperties</span> <span class="o">!=</span> <span class="n">null</span><span class="p">)</span>  
+     <span class="p">{</span>  
+         <span class="n">configuration</span><span class="p">.</span><span class="n">combine</span><span class="p">(</span><span class="n">overridingProperties</span><span class="p">);</span>  
+     <span class="p">}</span>  
+ <span class="p">}</span>
+</pre></div>
+
+
+<p>因此上面的代码中的overridingProperties会是默认值null,对比ri.init(p)代码，可以发现有参数p时会首先对overridingProperties进行初始化，如下所示</p>
+<div class="highlight"><pre><span class="n">public</span> <span class="kt">void</span> <span class="nf">init</span><span class="p">(</span><span class="n">Properties</span> <span class="n">p</span><span class="p">)</span>  
 <span class="p">{</span>  
-    <span class="c1">// do nothing  </span>
+    <span class="n">setProperties</span><span class="p">(</span><span class="n">ExtendedProperties</span><span class="p">.</span><span class="n">convertProperties</span><span class="p">(</span><span class="n">p</span><span class="p">));</span>  
+    <span class="n">init</span><span class="p">();</span>  
 <span class="p">}</span>
 </pre></div>
 
 
-<p>构造函数中没有做任何事情，但是别忘了的是，Java中构造函数没有任何代码并不一定表示不会做任何东西，这和C++类似，由于Java中属性被初始化了，因此编译器在编译字节码文件中，会将属性的初始化放在构造函数中进行，如不信，可以定个简单的程序，如下就是一个：</p>
-<div class="highlight"><pre><span class="n">public</span> <span class="n">class</span> <span class="n">test</span> <span class="p">{</span>  
-<span class="n">private</span> <span class="n">String</span> <span class="n">str</span><span class="o">=</span><span class="s">&quot;pp&quot;</span><span class="p">;</span>  
-<span class="n">public</span> <span class="nf">test</span><span class="p">(){</span>    
-<span class="p">}</span>  
-<span class="p">}</span>
+<p>因此initializeProperties()代码的执行实际过程中只会持执行setDefaultProperties(),这个函数，看看这个函数的实现吧</p>
+<div class="highlight"><pre><span class="n">private</span> <span class="kt">void</span> <span class="nf">setDefaultProperties</span><span class="p">()</span>  
+   <span class="p">{</span>  
+       <span class="n">InputStream</span> <span class="n">inputStream</span> <span class="o">=</span> <span class="n">null</span><span class="p">;</span>  
+       <span class="n">try</span>  
+       <span class="p">{</span>  
+           <span class="c1">//重要这里获取到了属性的配置文件DEFAULT_RUNTIME_PROPERTIES是默认的配</span>
+            <span class="c1">//置文件org/apache/velocity/runtime/defaults/velocity.properties</span>
+           <span class="n">inputStream</span> <span class="o">=</span> <span class="n">getClass</span><span class="p">()</span>  
+               <span class="p">.</span><span class="n">getResourceAsStream</span><span class="p">(</span><span class="sc">&#39;/&#39;</span> <span class="o">+</span> <span class="n">DEFAULT_RUNTIME_PROPERTIES</span><span class="p">);</span>  
+        <span class="c1">//将配置文件加载进来</span>
+           <span class="n">configuration</span><span class="p">.</span><span class="n">load</span><span class="p">(</span> <span class="n">inputStream</span> <span class="p">);</span>  
+           <span class="k">if</span> <span class="p">(</span><span class="n">log</span><span class="p">.</span><span class="n">isDebugEnabled</span><span class="p">())</span>  
+           <span class="p">{</span>  
+               <span class="n">log</span><span class="p">.</span><span class="n">debug</span><span class="p">(</span><span class="s">&quot;Default Properties File: &quot;</span> <span class="o">+</span>  
+                   <span class="n">new</span> <span class="n">File</span><span class="p">(</span><span class="n">DEFAULT_RUNTIME_PROPERTIES</span><span class="p">).</span><span class="n">getPath</span><span class="p">());</span>  
+           <span class="p">}</span>  
+       <span class="p">}</span>  
+       <span class="n">catch</span> <span class="p">(</span><span class="n">IOException</span> <span class="n">ioe</span><span class="p">)</span>  
+       <span class="p">{</span>  
+           <span class="n">String</span> <span class="n">msg</span> <span class="o">=</span> <span class="s">&quot;Cannot get Velocity Runtime default properties!&quot;</span><span class="p">;</span>  
+           <span class="n">log</span><span class="p">.</span><span class="n">error</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">ioe</span><span class="p">);</span>  
+           <span class="n">throw</span> <span class="n">new</span> <span class="n">RuntimeException</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">ioe</span><span class="p">);</span>  
+       <span class="p">}</span>  
+       <span class="n">finally</span>  
+       <span class="p">{</span>  
+           <span class="n">try</span>  
+           <span class="p">{</span>  <span class="c1">//各种关闭呀，一看就知道</span>
+               <span class="k">if</span> <span class="p">(</span><span class="n">inputStream</span> <span class="o">!=</span> <span class="n">null</span><span class="p">)</span>  
+               <span class="p">{</span>  
+                   <span class="n">inputStream</span><span class="p">.</span><span class="n">close</span><span class="p">();</span>  
+               <span class="p">}</span>  
+           <span class="p">}</span>  
+           <span class="n">catch</span> <span class="p">(</span><span class="n">IOException</span> <span class="n">ioe</span><span class="p">)</span>  
+           <span class="p">{</span>  
+               <span class="n">String</span> <span class="n">msg</span> <span class="o">=</span> <span class="s">&quot;Cannot close Velocity Runtime default properties!&quot;</span><span class="p">;</span>  
+               <span class="n">log</span><span class="p">.</span><span class="n">error</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">ioe</span><span class="p">);</span>  
+               <span class="n">throw</span> <span class="n">new</span> <span class="n">RuntimeException</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">ioe</span><span class="p">);</span>  
+           <span class="p">}</span>  
+       <span class="p">}</span>  
+   <span class="p">}</span>
 </pre></div>
 
 
-<p>将生成的字节码文件，反编译生成JVM汇编指令如下：</p>
-<p><a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_5.html">
-<img src="http://www.yanyulin.info/pics/taobao/velocity5_1.jpg"   alt="烟雨林博客"/>
+<p>上面的代码就是读取默认的配置文件，并将其加载进来，默认的配置文件是真的有呢，截图看看：</p>
+<p><a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_6.html">
+<img src="http://www.yanyulin.info/pics/taobao/velocity6_1.jpg" alt="烟雨林博客"/>
 </a></p>
-<p>看到了吧str=”pp”被放在了构造函数中吧,说这个的目的，就是想让我们再看看VelocityEngine这个类里面的属性，看看吧，你会发现这个东西</p>
-<div class="highlight"><pre><span class="n">private</span> <span class="n">RuntimeInstance</span> <span class="n">ri</span> <span class="o">=</span> <span class="n">new</span> <span class="n">RuntimeInstance</span><span class="p">();</span>
+<p>在默认配置文件中主要涉及的是各种配置，如下是一部份，这一部份主要涉及的是宏指令</p>
+<div class="highlight"><pre><span class="n">velocimacro</span><span class="p">.</span><span class="n">permissions</span><span class="p">.</span><span class="n">allow</span><span class="p">.</span><span class="kr">inline</span> <span class="o">=</span> <span class="nb">true</span>  
+<span class="n">velocimacro</span><span class="p">.</span><span class="n">permissions</span><span class="p">.</span><span class="n">allow</span><span class="p">.</span><span class="kr">inline</span><span class="p">.</span><span class="n">to</span><span class="p">.</span><span class="n">replace</span><span class="p">.</span><span class="n">global</span> <span class="o">=</span> <span class="nb">false</span>  
+<span class="n">velocimacro</span><span class="p">.</span><span class="n">permissions</span><span class="p">.</span><span class="n">allow</span><span class="p">.</span><span class="kr">inline</span><span class="p">.</span><span class="n">local</span><span class="p">.</span><span class="n">scope</span> <span class="o">=</span> <span class="nb">false</span>  
+  
+<span class="n">velocimacro</span><span class="p">.</span><span class="n">context</span><span class="p">.</span><span class="n">localscope</span> <span class="o">=</span> <span class="nb">false</span>  
+<span class="n">velocimacro</span><span class="p">.</span><span class="n">max</span><span class="p">.</span><span class="n">depth</span> <span class="o">=</span> <span class="mi">20</span>
 </pre></div>
 
 
-<p>是吧，对于每次运行new VelocityEngine()，都会生成RuntimeInstance这样的一个实例，而不再是所对的对象都共享一个Velocity引擎，而是每个一个。</p>
+<p>这里面设置允许宏的内联，即递归，不允许全局替换，最大嵌套深度为20等等</p>
 						  <div class="clear"></div>
 							</div>
-							<b>本文地址:</b> <a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_5.html" target="_self">http://www.yanyulin.info/pages/2014/03/velocity_disabuse_5.html</a>
+							<b>本文地址:</b> <a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_6.html" target="_self">http://www.yanyulin.info/pages/2014/03/velocity_disabuse_6.html</a>
 							<div><font color="blue"><b>转载时请保留本文出处,谢谢您的合作</b></font></div>
 							<hr/>
 							<div class="clear" align="left">
@@ -260,10 +262,10 @@ Velocity中的单例模式以及多实例模式 - 烟雨林</title>
 					<!-- end: entrymeta -->
 				<div class="context_b" align="left">
 					 上一篇: 
-  				 <a href="http://www.yanyulin.info/pages/2014/03/write_os.html" title="自已动手写操作系统PDF版下载" target="_blank">自已动手写操作系统PDF版下载</a>
+  				 <a href="http://www.yanyulin.info/pages/2014/03/jd_2014_a.html" title="京东校园招聘笔试题2014年技术类" target="_blank">京东校园招聘笔试题2014年技术类</a>
   				 &nbsp;&nbsp
   				 下一篇:
-  				 <a href="http://www.yanyulin.info/pages/2014/03/jd_2014_a.html" title="京东校园招聘笔试题2014年技术类" target="_blank">京东校园招聘笔试题2014年技术类</a>
+  				 <a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_6.html" title="velocity初始化过程分析读取配置文件" target="_blank">velocity初始化过程分析读取配置文件</a>
 					 
 				</div>
 				<div class="context_b">
@@ -318,7 +320,7 @@ Velocity中的单例模式以及多实例模式 - 烟雨林</title>
 			</table>
 				</div>
 				<div class="context_b">
-			 <div class="ds-thread" data-title="Velocity中的单例模式以及多实例模式"></div>
+			 <div class="ds-thread" data-title="velocity初始化过程分析读取配置文件"></div>
 			 <script type="text/javascript">
 			 	var duoshuoQuery={short_name:"yanyulin"};
 			 	var ds=document.createElement("script");
@@ -361,13 +363,13 @@ Velocity中的单例模式以及多实例模式 - 烟雨林</title>
 				<div class="box">			
 						<div class="textwidget">
 							<div id="tagsLink">
-							<a  href="http://www.yanyulin.info/tag/tao-bao-ji-zhu.html" title="查看淘宝技术下的所有文章" style="background-color: #8C8BC6" target="_blank">淘宝技术</a>
+							<a  href="http://www.yanyulin.info/tag/tao-bao-ji-zhu.html" title="查看淘宝技术下的所有文章" style="background-color: #169EDD" target="_blank">淘宝技术</a>
 						  </div>
 							<div id="tagsLink">
-							<a  href="http://www.yanyulin.info/tag/javafen-xi.html" title="查看Java分析下的所有文章" style="background-color: #169EDD" target="_blank">Java分析</a>
+							<a  href="http://www.yanyulin.info/tag/javafen-xi.html" title="查看Java分析下的所有文章" style="background-color: #8C8BC6" target="_blank">Java分析</a>
 						  </div>
 							<div id="tagsLink">
-							<a  href="http://www.yanyulin.info/tag/linuxhui-zong.html" title="查看Linux汇总下的所有文章" style="background-color: #96C2AA" target="_blank">Linux汇总</a>
+							<a  href="http://www.yanyulin.info/tag/linuxhui-zong.html" title="查看Linux汇总下的所有文章" style="background-color: #84A4B3" target="_blank">Linux汇总</a>
 						  </div>
 							<div id="tagsLink">
 							<a  href="http://www.yanyulin.info/tag/gong-ju-shi-yong.html" title="查看工具使用下的所有文章" style="background-color: #169EDD" target="_blank">工具使用</a>
@@ -442,25 +444,25 @@ Velocity中的单例模式以及多实例模式 - 烟雨林</title>
 				<ul>
 				<ul class="random-post-link">
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2013/11/linux0.html" target="_blank" title="Linux中0号进程的创建分析">Linux中0号进程的创建分析</a>
+				<a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_1.html" target="_blank" title="Velocity入门教程HelloWord程序">Velocity入门教程HelloWord程序</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2014/03/cxgc_2014_2.html" target="_blank" title="创新工场校园招聘面经面试经验2014年武汉研发类">创新工场校园招聘面经面试经验2014年武汉研发类</a>
+				<a href="http://www.yanyulin.info/pages/2014/03/dianping_2014_1.html" target="_blank" title="大众点评校园招聘面经2014年软件面经">大众点评校园招聘面经2014年软件面经</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2014/03/baidu_2014_B.html" target="_blank" title="2014年百度校招笔试题(移动研发类)">2014年百度校招笔试题(移动研发类)</a>
+				<a href="http://www.yanyulin.info/pages/2013/06/huawei_2013_1.html" target="_blank" title="2013年华为校招机试(一)">2013年华为校招机试(一)</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2014/02/pbaodian.html" target="_blank" title="程序员面试宝典--欧立奇">程序员面试宝典--欧立奇</a>
+				<a href="http://www.yanyulin.info/pages/2013/11/objectModel.html" target="_blank" title="深度探索C++对象模型">深度探索C++对象模型</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2013/12/psbase2.html" target="_blank" title="Photoshop CS视频教程(下)">Photoshop CS视频教程(下)</a>
+				<a href="http://www.yanyulin.info/pages/2013/12/psbase_1.html" target="_blank" title="PhotoShop CS入门版视频教程(基础上)">PhotoShop CS入门版视频教程(基础上)</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2014/02/wtc.html" target="_blank" title="[赠送]WTC(万特币)获取30ripple和100WTC">[赠送]WTC(万特币)获取30ripple和100WTC</a>
+				<a href="http://www.yanyulin.info/pages/2014/02/xrptalk.html" target="_blank" title="XRP Talk论坛注册教程">XRP Talk论坛注册教程</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2014/03/zhihu_2.html" target="_blank" title="一款自动发链接软件的实现细节分析">一款自动发链接软件的实现细节分析</a>
+				<a href="http://www.yanyulin.info/pages/2013/12/qqLogin_1.html" target="_blank" title="界面编程模仿篇(QQ登录界面逼真篇)">界面编程模仿篇(QQ登录界面逼真篇)</a>
 				</li>
 				<li class="random-post-link">
 				<a href="http://www.yanyulin.info/pages/2014/03/duoshuo.html" target="_blank" title="多说评论框如何|怎么样|实际测试">多说评论框如何|怎么样|实际测试</a>
@@ -491,25 +493,25 @@ Velocity中的单例模式以及多实例模式 - 烟雨林</title>
 				<div class="box_r">
 				<ul>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2014/03/comment.html" target="_blank" title="博客添加第三方评论系统多说评论框">博客添加第三方评论系统多说评论框</a>
+				<a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_4.html" target="_blank" title="Velocity入门例子创建普通的web工程">Velocity入门例子创建普通的web工程</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2010/11/ali_2.html" target="_blank" title="阿里巴巴校招2010年软研面经">阿里巴巴校招2010年软研面经</a>
+				<a href="http://www.yanyulin.info/pages/2014/03/cvte_2014_1.html" target="_blank" title="CVTE校园招聘面经2014年软件研发面经">CVTE校园招聘面经2014年软件研发面经</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2014/03/tencent_2012_A.html" target="_blank" title="腾讯校园招聘笔试题目2012年软件研发类">腾讯校园招聘笔试题目2012年软件研发类</a>
+				<a href="http://www.yanyulin.info/pages/2014/03/meituan_2014_C.html" target="_blank" title="美团网校园招聘笔试题2014年研发类长沙">美团网校园招聘笔试题2014年研发类长沙</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2014/03/write_os.html" target="_blank" title="自已动手写操作系统PDF版下载">自已动手写操作系统PDF版下载</a>
+				<a href="http://www.yanyulin.info/pages/2013/12/prgbeautiful.html" target="_blank" title="编程之美—微软技术面试心得">编程之美—微软技术面试心得</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2013/12/psbase2.html" target="_blank" title="Photoshop CS视频教程(下)">Photoshop CS视频教程(下)</a>
+				<a href="http://www.yanyulin.info/pages/2013/12/vc_1.html" target="_blank" title="VC视频教程(主要讲述`MFC`)">VC视频教程(主要讲述`MFC`)</a>
 				</li>
 				<li>
 				<a href="http://www.yanyulin.info/pages/2014/03/getxrp.html" target="_blank" title="【赠送】ripple币免费获取&免费领取">【赠送】ripple币免费获取&免费领取</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2014/03/xiaomiqianggou.html" target="_blank" title="一款小米抢购软件实现源码分析(HttpClient)">一款小米抢购软件实现源码分析(HttpClient)</a>
+				<a href="http://www.yanyulin.info/pages/2013/11/fetchPage.html" target="_blank" title="爬虫的自我解剖(抓取网页HtmlUnit)">爬虫的自我解剖(抓取网页HtmlUnit)</a>
 				</li>
 				<li>
 				<a href="http://www.yanyulin.info/pages/2014/03/duoshuo.html" target="_blank" title="多说评论框如何|怎么样|实际测试">多说评论框如何|怎么样|实际测试</a>
