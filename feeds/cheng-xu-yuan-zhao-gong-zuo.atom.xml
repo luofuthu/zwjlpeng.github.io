@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>烟雨林</title><link href="http://www.yanyulin.info/" rel="alternate"></link><link href="http://www.yanyulin.info/feeds/cheng-xu-yuan-zhao-gong-zuo.atom.xml" rel="self"></link><id>http://www.yanyulin.info/</id><updated>2014-03-19T00:00:00+08:00</updated><entry><title>京东校园招聘笔试题2014年技术类</title><link href="http://www.yanyulin.info/pages/2014/03/jd_2014_a.html" rel="alternate"></link><updated>2014-03-19T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-19:pages/2014/03/jd_2014_a.html</id><summary type="html">&lt;hr /&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>烟雨林</title><link href="http://www.yanyulin.info/" rel="alternate"></link><link href="http://www.yanyulin.info/feeds/cheng-xu-yuan-zhao-gong-zuo.atom.xml" rel="self"></link><id>http://www.yanyulin.info/</id><updated>2014-03-20T00:00:00+08:00</updated><entry><title>京东产品经理笔试题2014年校园招聘</title><link href="http://www.yanyulin.info/pages/2014/03/jd_2014_b.html" rel="alternate"></link><updated>2014-03-20T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-20:pages/2014/03/jd_2014_b.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;产品经理笔试题&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;问答题&lt;/p&gt;
+&lt;p&gt;1、什么是产品?(10分)&lt;/p&gt;
+&lt;p&gt;2、举例一个你认为的失败产品的案例，请说出其用户体验的弊端？&lt;/p&gt;
+&lt;p&gt;3、请描述一个产品的生命周期都包括哪些阶段?&lt;/p&gt;
+&lt;p&gt;4、请在您熟练使用的工具后面打勾，其他您熟悉的工具写在空白处?&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="err"&gt;、&lt;/span&gt;&lt;span class="n"&gt;word&lt;/span&gt;   &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="err"&gt;、&lt;/span&gt;&lt;span class="n"&gt;powerpoint&lt;/span&gt;    &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="err"&gt;、&lt;/span&gt;&lt;span class="n"&gt;axure&lt;/span&gt;   &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="err"&gt;、&lt;/span&gt;&lt;span class="n"&gt;MindManger&lt;/span&gt;
+&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="err"&gt;、&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;5、请说出你最近关注的新的网站和应用(国外、国内的均可),好在哪里，以及你对它布场定位和用户群的分析&lt;/p&gt;
+&lt;p&gt;6、你是否是一个不愿意墨守成规的人，请举出你在过去的学习或社会实践过程中创新的例子？&lt;/p&gt;
+&lt;p&gt;7、你喜欢网购吗？请说说你对电子商务的理解，请说出京东和淘宝在用户体验上有什么异同？&lt;/p&gt;
+&lt;p&gt;8、回想你在上学期间做的最有成就感的一件事儿(除学业外)?为什么很有成就感?(15分)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;各位如果有更好的答案，请留言评价，方便更多的人&lt;/strong&gt;&lt;/p&gt;</summary><category term="京东笔试题"></category></entry><entry><title>京东校园招聘笔试题2014年技术类</title><link href="http://www.yanyulin.info/pages/2014/03/jd_2014_a.html" rel="alternate"></link><updated>2014-03-19T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-19:pages/2014/03/jd_2014_a.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;今天去川大参加了京东的宣讲，外加笔试，那叫一个人山人海啊，貌似有1000人，通道和走廊甚至演讲台上都站满了人，然后把今年京东软开的笔试题给大家写出来，主要是试卷上有我的答案，自认为答得很不好，题目都是来自试卷，笔试我是翻窗户进去的，可想而知人数是有多逆天，场面是有多混乱...&lt;/p&gt;
 &lt;p&gt;第一部分 数据结构与算法
 一、选择题&lt;/p&gt;
