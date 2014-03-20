@@ -15,7 +15,138 @@
 &lt;p&gt;6、你是否是一个不愿意墨守成规的人，请举出你在过去的学习或社会实践过程中创新的例子？&lt;/p&gt;
 &lt;p&gt;7、你喜欢网购吗？请说说你对电子商务的理解，请说出京东和淘宝在用户体验上有什么异同？&lt;/p&gt;
 &lt;p&gt;8、回想你在上学期间做的最有成就感的一件事儿(除学业外)?为什么很有成就感?(15分)&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;各位如果有更好的答案，请留言评价，方便更多的人&lt;/strong&gt;&lt;/p&gt;</summary><category term="京东笔试题"></category></entry><entry><title>京东校园招聘笔试题2014年技术类</title><link href="http://www.yanyulin.info/pages/2014/03/jd_2014_a.html" rel="alternate"></link><updated>2014-03-19T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-19:pages/2014/03/jd_2014_a.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;各位如果有更好的答案，请留言评价，方便更多的人&lt;/strong&gt;&lt;/p&gt;</summary><category term="京东笔试题"></category></entry><entry><title>完美世界校招笔试题2014年技术类</title><link href="http://www.yanyulin.info/pages/2014/03/wanmei_2014_a.html" rel="alternate"></link><updated>2014-03-20T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-20:pages/2014/03/wanmei_2014_a.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;一 选择题&lt;/p&gt;
+&lt;p&gt;4、C++中，以下四个类型转换，失败时有可能引发std::bad_cast异常的是?&lt;/p&gt;
+&lt;p&gt;A static_cast&lt;/p&gt;
+&lt;p&gt;B dynamic_cast&lt;/p&gt;
+&lt;p&gt;C reinterpret_cast&lt;/p&gt;
+&lt;p&gt;D const_cast&lt;/p&gt;
+&lt;p&gt;5、正则表达式中，用于匹配字符串的开始位置的字符是?&lt;/p&gt;
+&lt;p&gt;A ^&lt;/p&gt;
+&lt;p&gt;B &amp;lt;&lt;/p&gt;
+&lt;p&gt;C &amp;amp;&lt;/p&gt;
+&lt;p&gt;D +&lt;/p&gt;
+&lt;p&gt;6、假设有std::vector&lt;int&gt; v,数值依次为{12,17,17,22,22,23,30}，Lower_bound(vbegin(),v.end(),17)和upper_bound(v.begin.v.end(),22},所返回的iterator分别指向数组中的第几个值(假设从0开始)()&lt;/p&gt;
+&lt;p&gt;A、0,5&lt;/p&gt;
+&lt;p&gt;B、1,4&lt;/p&gt;
+&lt;p&gt;C、1,5&lt;/p&gt;
+&lt;p&gt;D、2,3&lt;/p&gt;
+&lt;p&gt;7、当对一个对象的改变需要同时改变其它对象，但它不知道其它对象是谁，并且也不知道具体有少个对象有待改变时，我们应该使用?&lt;/p&gt;
+&lt;p&gt;A 模板方法 TemplateMethod&lt;/p&gt;
+&lt;p&gt;B 责任链 Chain of Responsibity&lt;/p&gt;
+&lt;p&gt;C Proxy&lt;/p&gt;
+&lt;p&gt;D 观察都 Observer&lt;/p&gt;
+&lt;p&gt;8、在X86体系中，以下哪个是栈指针寄存器?&lt;/p&gt;
+&lt;p&gt;A EAX&lt;/p&gt;
+&lt;p&gt;B ECX&lt;/p&gt;
+&lt;p&gt;C EST&lt;/p&gt;
+&lt;p&gt;D ESP&lt;/p&gt;
+&lt;p&gt;9、下列哪个C++关键字用来表示变量函数的定义在别的文件中&lt;/p&gt;
+&lt;p&gt;A、static &lt;/p&gt;
+&lt;p&gt;B、extern&lt;/p&gt;
+&lt;p&gt;C、inline&lt;/p&gt;
+&lt;p&gt;D、default&lt;/p&gt;
+&lt;p&gt;10、print函数是一个类的常成员函数，它无返回值，下列表示中正确的是?&lt;/p&gt;
+&lt;p&gt;A void print() const&lt;/p&gt;
+&lt;p&gt;B const void print()&lt;/p&gt;
+&lt;p&gt;C void const print()&lt;/p&gt;
+&lt;p&gt;D void print(const)&lt;/p&gt;
+&lt;p&gt;11、对于int *pa[5];的描述，以下哪个选项是正确的?&lt;/p&gt;
+&lt;p&gt;A、pa是一个具有5个元素的指针数组，每个元素是一个int类型的元素&lt;/p&gt;
+&lt;p&gt;B、pa[5]表示某个数组的第5个元素的值&lt;/p&gt;
+&lt;p&gt;C、pa是一个指向数组的指针，所指向的数组是5个int类型的元素&lt;/p&gt;
+&lt;p&gt;D、pa是一个指向某个数组中第5个元素的指针，该元素是int类型的变量&lt;/p&gt;
+&lt;p&gt;12、
+    int i=(int)((unsigned int)0xffffffff+(unsigned int)0xffffffff);&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;printf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;%d&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;结果是?&lt;/p&gt;
+&lt;p&gt;A、0&lt;/p&gt;
+&lt;p&gt;B、1&lt;/p&gt;
+&lt;p&gt;C、-2&lt;/p&gt;
+&lt;p&gt;D、2&lt;/p&gt;
+&lt;p&gt;13、由a,b,c组成的5位字符串，aa至少出现过1次共有多少个?&lt;/p&gt;
+&lt;p&gt;A、77&lt;/p&gt;
+&lt;p&gt;B、78&lt;/p&gt;
+&lt;p&gt;C、79&lt;/p&gt;
+&lt;p&gt;D、80&lt;/p&gt;
+&lt;p&gt;14、已知有n个进程共享一个互斥段，如果最多允许m个进程(m＜n)同时进入互斥段，则信号量的变化范围是&lt;/p&gt;
+&lt;p&gt;A．-m～1&lt;/p&gt;
+&lt;p&gt;B．-m～0&lt;/p&gt;
+&lt;p&gt;C．-(n-m)～m&lt;/p&gt;
+&lt;p&gt;D．-(m-1)～n&lt;/p&gt;
+&lt;p&gt;15、师徒四人西天取经，途中必须经过一座桥，四个人从桥的同一端出发，你得帮助他们到达另一端，天色很暗，而他们只有一只手电桶，一次同时最多可以有两个人一起打桥，而过桥的时候必须持有手电筒，所以就得有人把手电桐带来带去，来回桥两端，手电桐不能用丢的方式来传递，四个人的步行速度各不同，着两个同行则以较慢者的速度为准，大师兄需花1分钟过桥，二师兄需花2分钟过桥，三师兄需花5分钟过桥，师父需花10分钟过桥，请问他们最短在多少分钟内能过桥()&lt;/p&gt;
+&lt;p&gt;A 16&lt;/p&gt;
+&lt;p&gt;B 17&lt;/p&gt;
+&lt;p&gt;C 18&lt;/p&gt;
+&lt;p&gt;D 19 &lt;/p&gt;
+&lt;p&gt;16、下面各项中属于不可重载的一组运算符是?&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="err"&gt;．&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="err"&gt;、—、&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="err"&gt;、&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;
+
+&lt;span class="n"&gt;B&lt;/span&gt;&lt;span class="err"&gt;．&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="err"&gt;、（）&lt;/span&gt;
+
+&lt;span class="n"&gt;C&lt;/span&gt;&lt;span class="err"&gt;．&lt;/span&gt; &lt;span class="err"&gt;：：、．、&lt;/span&gt;&lt;span class="o"&gt;?&lt;/span&gt;&lt;span class="err"&gt;：、&lt;/span&gt;&lt;span class="k"&gt;sizeof&lt;/span&gt;&lt;span class="err"&gt;、．&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;
+
+&lt;span class="n"&gt;D&lt;/span&gt;&lt;span class="err"&gt;．&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="err"&gt;、——&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;二 填空题&lt;/p&gt;
+&lt;p&gt;1、求下面函数的返回值&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;func&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
+    &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;count&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="k"&gt;while&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
+        &lt;span class="n"&gt;count&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+        &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;count&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;假定a=911,则函数的返回值是()&lt;/p&gt;
+&lt;p&gt;2、请简单解释一下三种页面调度算法的含义及原理？&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;FIFO:&lt;/p&gt;
+&lt;p&gt;LRU:&lt;/p&gt;
+&lt;p&gt;LFU&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;3、请给出至少两种用于优化C++项目编译时间的方法&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;1、&lt;/p&gt;
+&lt;p&gt;2、&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;三 简答题&lt;/p&gt;
+&lt;p&gt;1、引用和指针有什么区别？&lt;/p&gt;
+&lt;p&gt;2、怎样理解TCP连接中的数据传输是无连接的，在实际编程中需要怎么处理？&lt;/p&gt;
+&lt;p&gt;3、请你对快速排序、归并排序、堆排序这3种算法进行描述，并说明它们各自的优缺点？&lt;/p&gt;
+&lt;p&gt;四、编程题&lt;/p&gt;
+&lt;p&gt;1、请自己用双向链表实现一个队列，队列里节点内存的值为int，要求实现入队，出队和查找指定节点的三个功能。&lt;/p&gt;
+&lt;p&gt;链表结点定义如下：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;struct&lt;/span&gt; &lt;span class="kt"&gt;node_t&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;value&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="kt"&gt;node_t&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;prev&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="kt"&gt;node_t&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;next&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;请实现如下三个函数，并补齐需要的成员&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;class&lt;/span&gt; &lt;span class="n"&gt;Queue&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="p"&gt;...&lt;/span&gt;
+    &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="n"&gt;push_back&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;value&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;pop_front&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+    &lt;span class="kt"&gt;node_t&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="nf"&gt;find&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;value&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;2、写一个C/C++函数，来判断一个单链表是否具有环，如果存在环，给出环的入口点&lt;/p&gt;
+&lt;p&gt;3、游戏和图形渲染中，物体间的碰撞检测是常见的需求，假设有一个可以抽像为凸多边形的物体和一个可抽象为质点的物体，凸多边形各个项点的坐标和质点的坐标已知，设计一个算法来检测这两个物体是碰撞（即质点是否在凸多边形内部或者边上），可以采用文字描述，伪代码或者真实代码描述。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;各位如果有更好的答案，请留言评价，方便更多的人&lt;/strong&gt;&lt;/p&gt;</summary><category term="完美笔试题"></category></entry><entry><title>京东校园招聘笔试题2014年技术类</title><link href="http://www.yanyulin.info/pages/2014/03/jd_2014_a.html" rel="alternate"></link><updated>2014-03-19T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-19:pages/2014/03/jd_2014_a.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;今天去川大参加了京东的宣讲，外加笔试，那叫一个人山人海啊，貌似有1000人，通道和走廊甚至演讲台上都站满了人，然后把今年京东软开的笔试题给大家写出来，主要是试卷上有我的答案，自认为答得很不好，题目都是来自试卷，笔试我是翻窗户进去的，可想而知人数是有多逆天，场面是有多混乱...&lt;/p&gt;
 &lt;p&gt;第一部分 数据结构与算法
 一、选择题&lt;/p&gt;
