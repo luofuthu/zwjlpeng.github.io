@@ -161,42 +161,78 @@
 
 &lt;p&gt;这里面设置允许宏的内联，即递归，不允许全局替换，最大嵌套深度为20等等&lt;/p&gt;</summary><category term="淘宝技术"></category></entry><entry><title>完美世界校招笔试题2014年技术类</title><link href="http://www.yanyulin.info/pages/2014/03/wanmei_2014_a.html" rel="alternate"></link><updated>2014-03-20T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-20:pages/2014/03/wanmei_2014_a.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;一 选择题&lt;/p&gt;
-&lt;p&gt;4、C++中，以下四个类型转换，失败时有可能引发std::bad_cast异常的是?&lt;/p&gt;
-&lt;p&gt;A static_cast&lt;/p&gt;
-&lt;p&gt;B dynamic_cast&lt;/p&gt;
-&lt;p&gt;C reinterpret_cast&lt;/p&gt;
-&lt;p&gt;D const_cast&lt;/p&gt;
+&lt;p&gt;4、C++中，以下四个类型转换，失败时有可能引发&lt;code&gt;std::bad_cast&lt;/code&gt;异常的是?&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;A&lt;/span&gt; &lt;span class="n"&gt;static_cast&lt;/span&gt;
+
+&lt;span class="n"&gt;B&lt;/span&gt; &lt;span class="n"&gt;dynamic_cast&lt;/span&gt;
+
+&lt;span class="n"&gt;C&lt;/span&gt; &lt;span class="n"&gt;reinterpret_cast&lt;/span&gt;
+
+&lt;span class="n"&gt;D&lt;/span&gt; &lt;span class="n"&gt;const_cast&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
 &lt;p&gt;5、正则表达式中，用于匹配字符串的开始位置的字符是?&lt;/p&gt;
-&lt;p&gt;A ^&lt;/p&gt;
-&lt;p&gt;B &amp;lt;&lt;/p&gt;
-&lt;p&gt;C &amp;amp;&lt;/p&gt;
-&lt;p&gt;D +&lt;/p&gt;
-&lt;p&gt;6、假设有std::vector&lt;int&gt; v,数值依次为{12,17,17,22,22,23,30}，Lower_bound(vbegin(),v.end(),17)和upper_bound(v.begin.v.end(),22},所返回的iterator分别指向数组中的第几个值(假设从0开始)()&lt;/p&gt;
-&lt;p&gt;A、0,5&lt;/p&gt;
-&lt;p&gt;B、1,4&lt;/p&gt;
-&lt;p&gt;C、1,5&lt;/p&gt;
-&lt;p&gt;D、2,3&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;A&lt;/span&gt; &lt;span class="o"&gt;^&lt;/span&gt;
+
+&lt;span class="n"&gt;B&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;
+
+&lt;span class="n"&gt;C&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;
+
+&lt;span class="n"&gt;D&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;6、假设有&lt;code&gt;std::vector&amp;lt;int&amp;gt; v&lt;/code&gt;,数值依次为&lt;code&gt;{12,17,17,22,22,23,30}&lt;/code&gt;，&lt;code&gt;Lower_bound(vbegin(),v.end(),17)&lt;/code&gt;和&lt;code&gt;upper_bound(v.begin.v.end(),22}&lt;/code&gt;,所返回的&lt;code&gt;iterator&lt;/code&gt;分别指向数组中的第几个值(假设从0开始)()&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="err"&gt;、&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;
+
+&lt;span class="n"&gt;B&lt;/span&gt;&lt;span class="err"&gt;、&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;
+
+&lt;span class="n"&gt;C&lt;/span&gt;&lt;span class="err"&gt;、&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;
+
+&lt;span class="n"&gt;D&lt;/span&gt;&lt;span class="err"&gt;、&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
 &lt;p&gt;7、当对一个对象的改变需要同时改变其它对象，但它不知道其它对象是谁，并且也不知道具体有少个对象有待改变时，我们应该使用?&lt;/p&gt;
-&lt;p&gt;A 模板方法 TemplateMethod&lt;/p&gt;
-&lt;p&gt;B 责任链 Chain of Responsibity&lt;/p&gt;
-&lt;p&gt;C Proxy&lt;/p&gt;
-&lt;p&gt;D 观察都 Observer&lt;/p&gt;
+&lt;p&gt;A 模板方法 &lt;code&gt;TemplateMethod&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;B 责任链 &lt;code&gt;Chain of Responsibity&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;C &lt;code&gt;Proxy&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;D 观察都 &lt;code&gt;Observer&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;8、在X86体系中，以下哪个是栈指针寄存器?&lt;/p&gt;
-&lt;p&gt;A EAX&lt;/p&gt;
-&lt;p&gt;B ECX&lt;/p&gt;
-&lt;p&gt;C EST&lt;/p&gt;
-&lt;p&gt;D ESP&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;A&lt;/span&gt; &lt;span class="n"&gt;EAX&lt;/span&gt;
+
+&lt;span class="n"&gt;B&lt;/span&gt; &lt;span class="n"&gt;ECX&lt;/span&gt;
+
+&lt;span class="n"&gt;C&lt;/span&gt; &lt;span class="n"&gt;EST&lt;/span&gt;
+
+&lt;span class="n"&gt;D&lt;/span&gt; &lt;span class="n"&gt;ESP&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
 &lt;p&gt;9、下列哪个C++关键字用来表示变量函数的定义在别的文件中&lt;/p&gt;
-&lt;p&gt;A、static &lt;/p&gt;
-&lt;p&gt;B、extern&lt;/p&gt;
-&lt;p&gt;C、inline&lt;/p&gt;
-&lt;p&gt;D、default&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="err"&gt;、&lt;/span&gt;&lt;span class="k"&gt;static&lt;/span&gt;
+
+&lt;span class="n"&gt;B&lt;/span&gt;&lt;span class="err"&gt;、&lt;/span&gt;&lt;span class="k"&gt;extern&lt;/span&gt;
+
+&lt;span class="n"&gt;C&lt;/span&gt;&lt;span class="err"&gt;、&lt;/span&gt;&lt;span class="kr"&gt;inline&lt;/span&gt;
+
+&lt;span class="n"&gt;D&lt;/span&gt;&lt;span class="err"&gt;、&lt;/span&gt;&lt;span class="k"&gt;default&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
 &lt;p&gt;10、print函数是一个类的常成员函数，它无返回值，下列表示中正确的是?&lt;/p&gt;
-&lt;p&gt;A void print() const&lt;/p&gt;
-&lt;p&gt;B const void print()&lt;/p&gt;
-&lt;p&gt;C void const print()&lt;/p&gt;
-&lt;p&gt;D void print(const)&lt;/p&gt;
-&lt;p&gt;11、对于int *pa[5];的描述，以下哪个选项是正确的?&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;A&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="n"&gt;print&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="k"&gt;const&lt;/span&gt;
+
+&lt;span class="n"&gt;B&lt;/span&gt; &lt;span class="k"&gt;const&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="n"&gt;print&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="n"&gt;C&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="k"&gt;const&lt;/span&gt; &lt;span class="n"&gt;print&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="n"&gt;D&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="n"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;const&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;11、对于&lt;code&gt;int *pa[5]&lt;/code&gt;;的描述，以下哪个选项是正确的?&lt;/p&gt;
 &lt;p&gt;A、pa是一个具有5个元素的指针数组，每个元素是一个int类型的元素&lt;/p&gt;
 &lt;p&gt;B、pa[5]表示某个数组的第5个元素的值&lt;/p&gt;
 &lt;p&gt;C、pa是一个指向数组的指针，所指向的数组是5个int类型的元素&lt;/p&gt;
@@ -208,25 +244,49 @@
 
 
 &lt;p&gt;结果是?&lt;/p&gt;
-&lt;p&gt;A、0&lt;/p&gt;
-&lt;p&gt;B、1&lt;/p&gt;
-&lt;p&gt;C、-2&lt;/p&gt;
-&lt;p&gt;D、2&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="err"&gt;、&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;
+
+&lt;span class="n"&gt;B&lt;/span&gt;&lt;span class="err"&gt;、&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;
+
+&lt;span class="n"&gt;C&lt;/span&gt;&lt;span class="err"&gt;、&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;
+
+&lt;span class="n"&gt;D&lt;/span&gt;&lt;span class="err"&gt;、&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
 &lt;p&gt;13、由a,b,c组成的5位字符串，aa至少出现过1次共有多少个?&lt;/p&gt;
-&lt;p&gt;A、77&lt;/p&gt;
-&lt;p&gt;B、78&lt;/p&gt;
-&lt;p&gt;C、79&lt;/p&gt;
-&lt;p&gt;D、80&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="err"&gt;、&lt;/span&gt;&lt;span class="mi"&gt;77&lt;/span&gt;
+
+&lt;span class="n"&gt;B&lt;/span&gt;&lt;span class="err"&gt;、&lt;/span&gt;&lt;span class="mi"&gt;78&lt;/span&gt;
+
+&lt;span class="n"&gt;C&lt;/span&gt;&lt;span class="err"&gt;、&lt;/span&gt;&lt;span class="mi"&gt;79&lt;/span&gt;
+
+&lt;span class="n"&gt;D&lt;/span&gt;&lt;span class="err"&gt;、&lt;/span&gt;&lt;span class="mi"&gt;80&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
 &lt;p&gt;14、已知有n个进程共享一个互斥段，如果最多允许m个进程(m＜n)同时进入互斥段，则信号量的变化范围是&lt;/p&gt;
-&lt;p&gt;A．-m～1&lt;/p&gt;
-&lt;p&gt;B．-m～0&lt;/p&gt;
-&lt;p&gt;C．-(n-m)～m&lt;/p&gt;
-&lt;p&gt;D．-(m-1)～n&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="err"&gt;．&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;m&lt;/span&gt;&lt;span class="err"&gt;～&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;
+
+&lt;span class="n"&gt;B&lt;/span&gt;&lt;span class="err"&gt;．&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;m&lt;/span&gt;&lt;span class="err"&gt;～&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;
+
+&lt;span class="n"&gt;C&lt;/span&gt;&lt;span class="err"&gt;．&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;m&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="err"&gt;～&lt;/span&gt;&lt;span class="n"&gt;m&lt;/span&gt;
+
+&lt;span class="n"&gt;D&lt;/span&gt;&lt;span class="err"&gt;．&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;m&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="err"&gt;～&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
 &lt;p&gt;15、师徒四人西天取经，途中必须经过一座桥，四个人从桥的同一端出发，你得帮助他们到达另一端，天色很暗，而他们只有一只手电桶，一次同时最多可以有两个人一起打桥，而过桥的时候必须持有手电筒，所以就得有人把手电桐带来带去，来回桥两端，手电桐不能用丢的方式来传递，四个人的步行速度各不同，着两个同行则以较慢者的速度为准，大师兄需花1分钟过桥，二师兄需花2分钟过桥，三师兄需花5分钟过桥，师父需花10分钟过桥，请问他们最短在多少分钟内能过桥()&lt;/p&gt;
-&lt;p&gt;A 16&lt;/p&gt;
-&lt;p&gt;B 17&lt;/p&gt;
-&lt;p&gt;C 18&lt;/p&gt;
-&lt;p&gt;D 19 &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;A&lt;/span&gt; &lt;span class="mi"&gt;16&lt;/span&gt;
+
+&lt;span class="n"&gt;B&lt;/span&gt; &lt;span class="mi"&gt;17&lt;/span&gt;
+
+&lt;span class="n"&gt;C&lt;/span&gt; &lt;span class="mi"&gt;18&lt;/span&gt;
+
+&lt;span class="n"&gt;D&lt;/span&gt; &lt;span class="mi"&gt;19&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
 &lt;p&gt;16、下面各项中属于不可重载的一组运算符是?&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="err"&gt;．&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="err"&gt;、—、&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="err"&gt;、&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;
 
