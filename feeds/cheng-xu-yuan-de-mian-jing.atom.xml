@@ -1,5 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>烟雨林</title><link href="http://www.yanyulin.info/" rel="alternate"></link><link href="http://www.yanyulin.info/feeds/cheng-xu-yuan-de-mian-jing.atom.xml" rel="self"></link><id>http://www.yanyulin.info/</id><updated>2014-03-18T00:00:00+08:00</updated><entry><title>中国银行校园招聘面经2014年软件开发</title><link href="http://www.yanyulin.info/pages/2014/03/boc_2014_1.html" rel="alternate"></link><updated>2014-03-18T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-18:pages/2014/03/boc_2014_1.html</id><summary type="html">&lt;hr /&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>烟雨林</title><link href="http://www.yanyulin.info/" rel="alternate"></link><link href="http://www.yanyulin.info/feeds/cheng-xu-yuan-de-mian-jing.atom.xml" rel="self"></link><id>http://www.yanyulin.info/</id><updated>2014-03-21T00:00:00+08:00</updated><entry><title>京东校招面经2014年技术类</title><link href="http://www.yanyulin.info/pages/2014/03/jd_2014_1.html" rel="alternate"></link><updated>2014-03-21T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-21:pages/2014/03/jd_2014_1.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;京东&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;今天的去面试的都有一个小时的笔试，试题和去年的一样，大家可以在右侧的输入框里输入2014京东试题进行搜索，但有一个附加题是求平方根的（牛顿迭代法可以求解）。&lt;/p&gt;
+&lt;p&gt;然后所有的人都会接着有两面，具体结果不会当场告诉，说是随后会有HR联系。&lt;/p&gt;
+&lt;p&gt;下面简要回忆下针对我面试中的问题：&lt;/p&gt;
+&lt;p&gt;一面的人&lt;/p&gt;
+&lt;p&gt;详细的问了下简历上的各个项目，由于之前做过数据库的实习，而且这个面试官貌似也是做数据库的，问了比较多的数据库知识。知识点主要有&lt;/p&gt;
+&lt;p&gt;MySQL的部署&lt;/p&gt;
+&lt;p&gt;性能指标&lt;/p&gt;
+&lt;p&gt;说过之前做了一个Python的mysql主机性能指标模块，怎么实现的，数据量有多少&lt;/p&gt;
+&lt;p&gt;一淘是做搜索的，会用MySQL存储吗? 为什么不会用&lt;/p&gt;
+&lt;p&gt;实现一个server模型，单线程阻塞-&amp;gt;多线程-&amp;gt;select-&amp;gt;epoll&lt;/p&gt;
+&lt;p&gt;其他主要针对项目的介绍和询问&lt;/p&gt;
+&lt;p&gt;二面的人说一面聊了那么久，就问点简单的，结果问的都好细，有些不注意的小细节的问题。&lt;/p&gt;
+&lt;p&gt;不同进程可以在同一个端口上进行监听吗&lt;/p&gt;
+&lt;p&gt;C++中的new运算符可以被重载吗&lt;/p&gt;
+&lt;p&gt;也问到Mysql监控的指标，顺着问了下怎么理解机器的负载，top命令的load的含义&lt;/p&gt;
+&lt;p&gt;2的32次方个整数在64位机器上占用多少空间&lt;/p&gt;
+&lt;p&gt;sizeof是运算符还是函数&lt;/p&gt;
+&lt;p&gt;sizeof是怎么计算大小的&lt;/p&gt;
+&lt;p&gt;这个sizeof大家可以参考这篇文章&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2013/11/sizeof.html" target="_blank"&gt;
+被人误解的SIZEOF
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Http中的get和post有什么区别？&lt;/p&gt;
+&lt;p&gt;常见的返回码的含义？&lt;/p&gt;
+&lt;p&gt;服务器可以返回600吗？&lt;/p&gt;
+&lt;p&gt;采用https能够被截获吗，&lt;/p&gt;
+&lt;p&gt;要取得其中的内容怎么办？&lt;/p&gt;
+&lt;p&gt;内存分配函数malloc和free，在申请数据空间的时候malloc需要指定申请的大小，而free的时候为什么不需
+要呢？&lt;/p&gt;
+&lt;p&gt;如果free一个野指针会怎么样&lt;/p&gt;
+&lt;p&gt;常用的http服务器有哪些?&lt;/p&gt;
+&lt;p&gt;apache和nginx的模型比较?&lt;/p&gt;
+&lt;p&gt;epoll和select的比较，为什么apache一开始不采&lt;/p&gt;
+&lt;p&gt;用epoll模型，epoll的各种实现，epoll的两种方式&lt;/p&gt;
+&lt;p&gt;微信的附近好友怎么实现，抽象来说就是在一个二维平面图上有很多点，如何求离已知点最近的100个点&lt;/p&gt;
+&lt;p&gt;数据库中的索引为什么要采用B+树来实现&lt;/p&gt;</summary><category term="银行面经"></category></entry><entry><title>中国银行校园招聘面经2014年软件开发</title><link href="http://www.yanyulin.info/pages/2014/03/boc_2014_1.html" rel="alternate"></link><updated>2014-03-18T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-18:pages/2014/03/boc_2014_1.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;中国银行&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;在报中国银行之前，我已经拿到了网易、百度、人人等的offer,为什么又要去报中国银行呢，其实压根我也没想过要去，只所以报，是因为女友被四大行一一鄙视，连个笔试的机会都没有给她，我很意外，为什么呢，于是就网申，中国银行的网早还好，不用像其他国企或者事业单位需要拍个照片上传什么成绩单，各种证件照类的，这点很好，省了大量的时间~~~&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;笔试+面试&lt;/strong&gt;&lt;/p&gt;
