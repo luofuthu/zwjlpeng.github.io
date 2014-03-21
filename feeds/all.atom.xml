@@ -36,7 +36,7 @@
 &lt;p&gt;epoll和select的比较，为什么apache一开始不采&lt;/p&gt;
 &lt;p&gt;用epoll模型，epoll的各种实现，epoll的两种方式&lt;/p&gt;
 &lt;p&gt;微信的附近好友怎么实现，抽象来说就是在一个二维平面图上有很多点，如何求离已知点最近的100个点&lt;/p&gt;
-&lt;p&gt;数据库中的索引为什么要采用B+树来实现&lt;/p&gt;</summary><category term="银行面经"></category></entry><entry><title>velocity初始化日志系统的过程分析</title><link href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_7.html" rel="alternate"></link><updated>2014-03-21T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-21:pages/2014/03/velocity_disabuse_7.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;数据库中的索引为什么要采用B+树来实现&lt;/p&gt;</summary><category term="京东面经"></category></entry><entry><title>velocity初始化日志系统的过程分析</title><link href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_7.html" rel="alternate"></link><updated>2014-03-21T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-21:pages/2014/03/velocity_disabuse_7.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;本系列教程，为个人在淘宝实习所写，博文中所提及的WebX为淘宝的架构，大家可以忽略，当然有兴趣的，也可以自已去搜搜，淘宝的WebX目前处于开源状态&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Velocity引擎解惑&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;1、&lt;a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_1.html" target="_blank"&gt;Velocity入门教程HelloWord程序&lt;/a&gt;&lt;/p&gt;
