@@ -1,5 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>烟雨林</title><link href="http://www.yanyulin.info/" rel="alternate"></link><link href="http://www.yanyulin.info/feeds/bian-cheng-yu-yan.atom.xml" rel="self"></link><id>http://www.yanyulin.info/</id><updated>2014-03-21T00:00:00+08:00</updated><entry><title>velocity初始化日志系统的过程分析</title><link href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_7.html" rel="alternate"></link><updated>2014-03-21T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-21:pages/2014/03/velocity_disabuse_7.html</id><summary type="html">&lt;hr /&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>烟雨林</title><link href="http://www.yanyulin.info/" rel="alternate"></link><link href="http://www.yanyulin.info/feeds/bian-cheng-yu-yan.atom.xml" rel="self"></link><id>http://www.yanyulin.info/</id><updated>2014-03-22T00:00:00+08:00</updated><entry><title>velocity初始化资源加载器以及预指令</title><link href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_8.html" rel="alternate"></link><updated>2014-03-22T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-22:pages/2014/03/velocity_disabuse_8.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;本系列教程，为个人在淘宝实习所写，博文中所提及的WebX为淘宝的架构，大家可以忽略，当然有兴趣的，也可以自已去搜搜，淘宝的WebX目前处于开源状态&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Velocity引擎解惑&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;1、&lt;a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_1.html" target="_blank"&gt;Velocity入门教程HelloWord程序&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;2、&lt;a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_2.html" target="_blank"&gt;Velocity入门例子自定义呈现容器&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;3、&lt;a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_3.html" target="_blank"&gt;Velocity入门例子事件监听机制&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;4、&lt;a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_4.html" target="_blank"&gt;Velocity入门例子创建普通的web工程&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;5、&lt;a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_5.html" target="_blank"&gt;Velocity中的单例模式以及多实例模式&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;6、&lt;a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_6.html" target="_blank"&gt;velocity初始化过程分析读取配置文件&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;7、&lt;a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_7.html" target="_blank"&gt;velocity初始化日志系统的过程分析&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;跟踪看看其源码码，源代码虽然看上去经较多，可是真正值得我们分析的却不是很多，&lt;/p&gt;
+&lt;p&gt;下面是关键的代码&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;rm&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;getString&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;RuntimeConstants&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;RESOURCE_MANAGER_CLASS&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;这行代码的目的就是获取资源管理器的类名，其实也是从配置文件读取的，运行后的结果是&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;rm&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;org&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;apache&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;velocity&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;runtime&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;resource&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ResourceManagerImpl&lt;/span&gt;
+
+&lt;span class="n"&gt;Object&lt;/span&gt; &lt;span class="n"&gt;o&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;null&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;  
+&lt;span class="n"&gt;try&lt;/span&gt;  
+&lt;span class="p"&gt;{&lt;/span&gt;  
+   &lt;span class="n"&gt;o&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;ClassUtils&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;getNewInstance&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="n"&gt;rm&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;  
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;上面的代码是实例化资源管理器&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;resourceManager&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ResourceManager&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;o&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;    
+&lt;span class="n"&gt;resourceManager&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;initialize&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;this&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;再上面的代码就是资源管理器的初始化了。其中最重要的一个函数就是resourceManger.initialize(this)了，这个函数会针对每种特定的资源加载器进行初始化，为了缩减篇幅，在此就不列了，在这个初始化的过程中，还会读取配置文件中的resouce.manger.logwhenfound以及resource.manger.cache.class这两个属性，对缓存进行初始配置。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;initializeDirectives(初始化预指令)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;直接上源文件吧&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;private&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;initializeDirectives&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;  
+ &lt;span class="p"&gt;{&lt;/span&gt;  
+        &lt;span class="c1"&gt;//创建一个属性文件，用于记录&lt;/span&gt;
+     &lt;span class="n"&gt;Properties&lt;/span&gt; &lt;span class="n"&gt;directiveProperties&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;new&lt;/span&gt; &lt;span class="n"&gt;Properties&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;  
+     &lt;span class="n"&gt;InputStream&lt;/span&gt; &lt;span class="n"&gt;inputStream&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;null&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;   
+     &lt;span class="n"&gt;try&lt;/span&gt;  
+     &lt;span class="p"&gt;{&lt;/span&gt;  
+            &lt;span class="c1"&gt;//读取/org/apache/velocity/runtime/defaults/directive.properties这&lt;/span&gt;
+          &lt;span class="c1"&gt;//文件&lt;/span&gt;
+         &lt;span class="n"&gt;inputStream&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;getClass&lt;/span&gt;&lt;span class="p"&gt;().&lt;/span&gt;&lt;span class="n"&gt;getResourceAsStream&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sc"&gt;&amp;#39;/&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;DEFAULT_RUNTIME_DIRECTIVES&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
+            &lt;span class="c1"&gt;//为空时的处理&lt;/span&gt;
+         &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;inputStream&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="n"&gt;null&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  
+         &lt;span class="p"&gt;{&lt;/span&gt;  
+             &lt;span class="n"&gt;throw&lt;/span&gt; &lt;span class="n"&gt;new&lt;/span&gt; &lt;span class="n"&gt;VelocityException&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Error loading directive.properties! &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;  
+                                 &lt;span class="s"&gt;&amp;quot;Something is very wrong if these properties &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;  
+                                 &lt;span class="s"&gt;&amp;quot;aren&amp;#39;t being located. Either your Velocity &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;  
+                                 &lt;span class="s"&gt;&amp;quot;distribution is incomplete or your Velocity &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;  
+                                 &lt;span class="s"&gt;&amp;quot;jar file is corrupted!&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
+         &lt;span class="p"&gt;}&lt;/span&gt;  
+       &lt;span class="c1"&gt;//加载这个配置文件，即读取到Properties对象中&lt;/span&gt;
+         &lt;span class="n"&gt;directiveProperties&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;load&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;inputStream&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
+  
+     &lt;span class="p"&gt;}&lt;/span&gt;  
+     &lt;span class="n"&gt;catch&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;IOException&lt;/span&gt; &lt;span class="n"&gt;ioe&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  
+     &lt;span class="p"&gt;{&lt;/span&gt;  
+         &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;msg&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Error while loading directive properties!&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;  
+         &lt;span class="n"&gt;log&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;error&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;msg&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;ioe&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
+         &lt;span class="n"&gt;throw&lt;/span&gt; &lt;span class="n"&gt;new&lt;/span&gt; &lt;span class="n"&gt;RuntimeException&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;msg&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;ioe&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
+     &lt;span class="p"&gt;}&lt;/span&gt;  
+     &lt;span class="n"&gt;finally&lt;/span&gt;  
+     &lt;span class="p"&gt;{&lt;/span&gt;  
+         &lt;span class="n"&gt;try&lt;/span&gt;  
+         &lt;span class="p"&gt;{&lt;/span&gt;  &lt;span class="c1"&gt;//各种关闭操作，咱不关心&lt;/span&gt;
+             &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;inputStream&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="n"&gt;null&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  
+             &lt;span class="p"&gt;{&lt;/span&gt;  
+                 &lt;span class="n"&gt;inputStream&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;close&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;  
+             &lt;span class="p"&gt;}&lt;/span&gt;  
+         &lt;span class="p"&gt;}&lt;/span&gt;  
+         &lt;span class="n"&gt;catch&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;IOException&lt;/span&gt; &lt;span class="n"&gt;ioe&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  
+         &lt;span class="p"&gt;{&lt;/span&gt;  
+             &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;msg&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Cannot close directive properties!&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;  
+             &lt;span class="n"&gt;log&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;error&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;msg&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;ioe&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
+             &lt;span class="n"&gt;throw&lt;/span&gt; &lt;span class="n"&gt;new&lt;/span&gt; &lt;span class="n"&gt;RuntimeException&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;msg&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;ioe&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
+         &lt;span class="p"&gt;}&lt;/span&gt;  
+     &lt;span class="p"&gt;}&lt;/span&gt;  
+     &lt;span class="cm"&gt;/* &lt;/span&gt;
+&lt;span class="cm"&gt;      * Grab all the values of the properties. These &lt;/span&gt;
+&lt;span class="cm"&gt;      * are all class names for example: &lt;/span&gt;
+&lt;span class="cm"&gt;      * &lt;/span&gt;
+&lt;span class="cm"&gt;      * org.apache.velocity.runtime.directive.Foreach &lt;/span&gt;
+&lt;span class="cm"&gt;      */&lt;/span&gt;  
+        &lt;span class="c1"&gt;//对directiveProperties里面的元素生成其枚举集合&lt;/span&gt;
+     &lt;span class="n"&gt;Enumeration&lt;/span&gt; &lt;span class="n"&gt;directiveClasses&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;directiveProperties&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;elements&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;  
+        &lt;span class="c1"&gt;//循环遍历&lt;/span&gt;
+     &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;directiveClasses&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;hasMoreElements&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;  
+     &lt;span class="p"&gt;{&lt;/span&gt;  
+         &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;directiveClass&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;directiveClasses&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;nextElement&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;  
+         &lt;span class="c1"&gt;//对每一条指令均实例化一个可以处理该指令的类，并填加到指令集合中&lt;/span&gt;
+            &lt;span class="n"&gt;loadDirective&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;directiveClass&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
+         &lt;span class="n"&gt;log&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;debug&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Loaded System Directive: &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;directiveClass&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
+     &lt;span class="p"&gt;}&lt;/span&gt;  
+  
+     &lt;span class="cm"&gt;/* &lt;/span&gt;
+&lt;span class="cm"&gt;      *  now the user&amp;#39;s directives &lt;/span&gt;
+&lt;span class="cm"&gt;      */&lt;/span&gt;  
+    &lt;span class="c1"&gt;//从配置文件velocity.properties里查看有没有用户自定义的属性文件 &lt;/span&gt;
+     &lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="p"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;userdirective&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;configuration&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;getStringArray&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;userdirective&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+
+    &lt;span class="c1"&gt;//如果有的话将将填加到用户自定义的属性集合中去&lt;/span&gt;
+     &lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;userdirective&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;length&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  
+     &lt;span class="p"&gt;{&lt;/span&gt;  
+         &lt;span class="n"&gt;loadDirective&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;userdirective&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;]);&lt;/span&gt;  
+         &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;log&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;isDebugEnabled&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;  
+         &lt;span class="p"&gt;{&lt;/span&gt;  
+             &lt;span class="n"&gt;log&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;debug&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Loaded User Directive: &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;userdirective&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;]);&lt;/span&gt;  
+         &lt;span class="p"&gt;}&lt;/span&gt;  
+     &lt;span class="p"&gt;}&lt;/span&gt;  
+  
+ &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;上面的代码还是很容易理解的，就是根据配置文件中定义的指令，将相应的指令实现类加载进系统指令集合或者用户指令集合中去。&lt;/p&gt;</summary><category term="淘宝技术"></category></entry><entry><title>velocity初始化日志系统的过程分析</title><link href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_7.html" rel="alternate"></link><updated>2014-03-21T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-21:pages/2014/03/velocity_disabuse_7.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;本系列教程，为个人在淘宝实习所写，博文中所提及的WebX为淘宝的架构，大家可以忽略，当然有兴趣的，也可以自已去搜搜，淘宝的WebX目前处于开源状态&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Velocity引擎解惑&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;1、&lt;a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_1.html" target="_blank"&gt;Velocity入门教程HelloWord程序&lt;/a&gt;&lt;/p&gt;

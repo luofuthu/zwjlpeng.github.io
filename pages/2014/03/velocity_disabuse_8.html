@@ -2,7 +2,7 @@
 <html lang="zh">
 <head>
 <title>
-Velocity入门教程HelloWord程序 - 烟雨林</title>
+velocity初始化资源加载器以及预指令 - 烟雨林</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
 <meta name="author" content="烟雨林">
@@ -51,9 +51,9 @@ Velocity入门教程HelloWord程序 - 烟雨林</title>
 					</div>
 					<div class="entry_box_s">
 						<div class="entry_title_box">
-							<div class="entry_title">Velocity入门教程HelloWord程序</div>
+							<div class="entry_title">velocity初始化资源加载器以及预指令</div>
 							<div class="archive_info">
-								<span class="date">2014-03-15</span>
+								<span class="date">2014-03-22</span>
 								<span class="category"> ⁄ 							
 						  <a href="http://www.yanyulin.info/tag/tao-bao-ji-zhu.html" target="_blank" title="查看同类文章" rel="category tag">淘宝技术</a>&nbsp;
 						  </span>
@@ -83,122 +83,127 @@ Velocity入门教程HelloWord程序 - 烟雨林</title>
 </script>
 </div>
 							<hr />
-<p><strong>简介</strong></p>
-<p><code>Velocity</code>是<code>Apache</code>公司的开源产品，是一套基于<code>Java</code>语言的模板引擎，可以很灵活的将后台数据对象与模板文件结合在一起，说的直白一点，就是允许任何人使用模板语言引用后台java代码定义的对象</p>
-<p><code>Velocity</code>应用于Web开发时，界面设计人员可以和java程序开发人员同步开发一个遵循MVC架构的web站点，也就是说，页面设计人员可以只关注页面的显示效果，而由Java程序开发人员关注业务逻辑编码</p>
-<p><code>Velocity</code>将 java代码从web页面中分离出来，这样为web站点的长期维护提供了便利,之所以写这篇文章，是因为在淘宝实习，淘宝的WebX框架也使用了<code>Velocity</code></p>
-<p><strong>入门例子</strong></p>
-<p><code>Velocity</code>应用于<code>java</code>工程时，创建完一个普通的java工程后，需要引入相应的jar包，才能让工程支持<code>Velocity</code>模板引擎(velocity-1.7.jar/ commons-*.jar)</p>
-<p>如下是例子一</p>
-<div class="highlight"><pre><span class="nx">VelJava工程的后台java代码</span><span class="sb">`VelJava.java`</span>
+<p><strong>本系列教程，为个人在淘宝实习所写，博文中所提及的WebX为淘宝的架构，大家可以忽略，当然有兴趣的，也可以自已去搜搜，淘宝的WebX目前处于开源状态</strong></p>
+<p><strong>Velocity引擎解惑</strong></p>
+<p>1、<a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_1.html" target="_blank">Velocity入门教程HelloWord程序</a></p>
+<p>2、<a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_2.html" target="_blank">Velocity入门例子自定义呈现容器</a></p>
+<p>3、<a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_3.html" target="_blank">Velocity入门例子事件监听机制</a></p>
+<p>4、<a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_4.html" target="_blank">Velocity入门例子创建普通的web工程</a></p>
+<p>5、<a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_5.html" target="_blank">Velocity中的单例模式以及多实例模式</a></p>
+<p>6、<a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_6.html" target="_blank">velocity初始化过程分析读取配置文件</a></p>
+<p>7、<a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_7.html" target="_blank">velocity初始化日志系统的过程分析</a></p>
+<p>跟踪看看其源码码，源代码虽然看上去经较多，可是真正值得我们分析的却不是很多，</p>
+<p>下面是关键的代码</p>
+<div class="highlight"><pre><span class="n">String</span> <span class="n">rm</span> <span class="o">=</span> <span class="n">getString</span><span class="p">(</span><span class="n">RuntimeConstants</span><span class="p">.</span><span class="n">RESOURCE_MANAGER_CLASS</span><span class="p">);</span>
+</pre></div>
 
-<span class="c1">//构造函数  </span>
-<span class="k">public</span> <span class="nf">VelJava</span><span class="p">()</span> <span class="nx">throws</span> <span class="nx">IOException</span><span class="p">{</span>  
-    <span class="c1">//初始化Velocity模板  </span>
-    <span class="nx">Velocity.init</span><span class="p">();</span>  
-    <span class="c1">//创建一个VeloctiyContext对象  </span>
-    <span class="nx">VelocityContext</span> <span class="n">context</span><span class="o">=</span><span class="nb">new</span> <span class="nx">VelocityContext</span><span class="p">();</span>  
-    <span class="c1">//向VelocityContext对象中放入一个键值对  </span>
-    <span class="nx">context.put</span><span class="p">(</span><span class="s2">&quot;list&quot;</span><span class="p">,</span> <span class="na">getNames</span><span class="p">());</span>  
-    <span class="nx">Template</span> <span class="n">template</span><span class="o">=</span><span class="kt">null</span><span class="p">;</span>  
-    <span class="c1">//通过静态方法获取一个模板  </span>
-    <span class="n">template</span><span class="o">=</span><span class="nx">Velocity.getTemplate</span><span class="p">(</span><span class="s2">&quot;test.vm&quot;</span><span class="p">);</span>  
-    <span class="c1">//创建一个输出流  </span>
-    <span class="nx">BufferedWriter</span> <span class="n">writer</span><span class="o">=</span><span class="nb">new</span> <span class="nx">BufferedWriter</span><span class="p">(</span><span class="nb">new</span> <span class="nx">OutputStreamWriter</span><span class="p">(</span><span class="nx">System.out</span><span class="p">));</span>  
-    <span class="c1">//将模板与context中的对象结合，然后输出  </span>
-    <span class="k">if</span><span class="p">(</span><span class="nx">template</span><span class="o">!=</span><span class="kt">null</span><span class="p">)</span>  
-        <span class="nx">template.merge</span><span class="p">(</span><span class="nx">context</span><span class="p">,</span> <span class="nx">writer</span><span class="p">);</span>  
-    <span class="c1">//刷新缓存  </span>
-    <span class="nx">writer.flush</span><span class="p">();</span>  
-    <span class="c1">//关闭writer  </span>
-    <span class="nx">writer.close</span><span class="p">();</span>  
-<span class="p">}</span>  
-<span class="c1">//VelocityContext键值对中的值  </span>
-<span class="k">public</span> <span class="nf">ArrayList</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span> <span class="nx">getNames</span><span class="p">(){</span>  
-    <span class="nx">ArrayList</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span> <span class="n">list</span><span class="o">=</span><span class="nb">new</span> <span class="nx">ArrayList</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span><span class="p">();</span>  
-    <span class="nx">list.add</span><span class="p">(</span><span class="s2">&quot;element 1&quot;</span><span class="p">);</span>  
-    <span class="nx">list.add</span><span class="p">(</span><span class="s2">&quot;element 2&quot;</span><span class="p">);</span>  
-    <span class="nx">list.add</span><span class="p">(</span><span class="s2">&quot;element 3&quot;</span><span class="p">);</span>  
-    <span class="nx">list.add</span><span class="p">(</span><span class="s2">&quot;element 4&quot;</span><span class="p">);</span>  
-    <span class="k">return</span> <span class="nb">list</span><span class="p">;</span>  
+
+<p>这行代码的目的就是获取资源管理器的类名，其实也是从配置文件读取的，运行后的结果是</p>
+<div class="highlight"><pre><span class="n">rm</span><span class="o">=</span><span class="n">org</span><span class="p">.</span><span class="n">apache</span><span class="p">.</span><span class="n">velocity</span><span class="p">.</span><span class="n">runtime</span><span class="p">.</span><span class="n">resource</span><span class="p">.</span><span class="n">ResourceManagerImpl</span>
+
+<span class="n">Object</span> <span class="n">o</span> <span class="o">=</span> <span class="n">null</span><span class="p">;</span>  
+<span class="n">try</span>  
+<span class="p">{</span>  
+   <span class="n">o</span> <span class="o">=</span> <span class="n">ClassUtils</span><span class="p">.</span><span class="n">getNewInstance</span><span class="p">(</span> <span class="n">rm</span> <span class="p">);</span>  
 <span class="p">}</span>
 </pre></div>
 
 
-<p><strong>备注</strong></p>
-<p>在这个例子中，以健值对的形式将getNames()函数的返回值存放在Velocity容器中，并给其一个键值为<code>list</code></p>
-<p>模板文件的代码如下<code>test.vm</code>：</p>
-<div class="highlight"><pre><span class="cp">##声明了一个变量  </span>
-<span class="cp">#set( $this = &quot;ppTest&quot;)  </span>
-<span class="cp">##将变量打印出来  </span>
-<span class="err">$</span><span class="n">this</span> <span class="n">is</span> <span class="n">great</span><span class="o">!</span>  
-<span class="cp">##对后台的list进行扫描，将集合中的元素一个一个的打印出来  </span>
-<span class="cp">#foreach( $name in $list )  </span>
-<span class="err">$</span><span class="n">name</span> <span class="n">is</span> <span class="n">showed</span><span class="o">!</span>  
-<span class="cp">#end  </span>
-<span class="cp">##设置一个判断条件，将将判断条件赋值为真  </span>
-<span class="cp">#set( $condition = true)  </span>
-<span class="cp">##判断条件为真，执行  </span>
-<span class="cp">#if ($condition)  </span>
-<span class="n">The</span> <span class="n">condition</span> <span class="n">is</span> <span class="nb">true</span><span class="o">!</span>  
-<span class="cp">##判断条件为假时，执行  </span>
-<span class="cp">#else  </span>
-<span class="n">The</span> <span class="n">condition</span> <span class="n">is</span> <span class="nb">false</span><span class="o">!</span>  
-<span class="cp">#end</span>
+<p>上面的代码是实例化资源管理器</p>
+<div class="highlight"><pre><span class="n">resourceManager</span> <span class="o">=</span> <span class="p">(</span><span class="n">ResourceManager</span><span class="p">)</span> <span class="n">o</span><span class="p">;</span>    
+<span class="n">resourceManager</span><span class="p">.</span><span class="n">initialize</span><span class="p">(</span><span class="n">this</span><span class="p">);</span>
 </pre></div>
 
 
-<p><strong>备注</strong></p>
-<p>其中的##表示的是注释</p>
-<p><code>#</code>set类表示的是预处理指令</p>
-<p>$变量名表示声明的是一个变量</p>
-<p>上面的代码注释的已经很清楚了，如果只是应用，不需要了解更多细节的话，上面的代码已经够了，从上面的代码中可以看出<code>Velocity</code>的一个好处就是模板文件与后台文件可以同步开发，只要约定好一些共有的变量定义即可，在模板输出时，由模板引擎进行变量的替换,替换之后再进行相应的输出</p>
-<p>第二个例子：<code>Velocity</code>动态创建模板并渲染(Java工程)</p>
-<p>例子二，演示了在Java工程将模板渲染后以指定的编码方式<code>GBK</code>输出，同时也演示了动态创建模板，然后进行渲染</p>
-<div class="highlight"><pre><span class="n">public</span> <span class="k">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>  
-    <span class="c1">//初始化Velocity引擎  </span>
-    <span class="n">Velocity</span><span class="p">.</span><span class="n">init</span><span class="p">();</span>  
-    <span class="c1">//获取一个VelocityContext对象  </span>
-    <span class="n">VelocityContext</span> <span class="n">context</span><span class="o">=</span><span class="n">new</span> <span class="n">VelocityContext</span><span class="p">();</span>  
-    <span class="c1">//向此对象容器中加入相应的键值对  </span>
-    <span class="n">context</span><span class="p">.</span><span class="n">put</span><span class="p">(</span><span class="s">&quot;name&quot;</span><span class="p">,</span> <span class="s">&quot;Velocity&quot;</span><span class="p">);</span>  
-    <span class="n">context</span><span class="p">.</span><span class="n">put</span><span class="p">(</span><span class="s">&quot;project&quot;</span><span class="p">,</span> <span class="s">&quot;Jakarta&quot;</span><span class="p">);</span>  
-    <span class="c1">//StringWriter底层其实就是一个StringBuffer  </span>
-    <span class="n">StringWriter</span> <span class="n">w</span><span class="o">=</span><span class="n">new</span> <span class="n">StringWriter</span><span class="p">();</span>  
-    <span class="c1">//将test2.vm与context进行合并，生成的最终代码写入StringWriter的buf中  </span>
-    <span class="n">Velocity</span><span class="p">.</span><span class="n">mergeTemplate</span><span class="p">(</span><span class="s">&quot;test2.vm&quot;</span><span class="p">,</span> <span class="s">&quot;GBK&quot;</span><span class="p">,</span><span class="n">context</span><span class="p">,</span><span class="n">w</span><span class="p">);</span>  
-    <span class="c1">//将其在控制台上打印出来  </span>
-    <span class="n">System</span><span class="p">.</span><span class="n">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;模板:&quot;</span><span class="o">+</span><span class="n">w</span><span class="p">);</span>  
-    <span class="c1">//动态创建模板  </span>
-    <span class="n">String</span> <span class="n">s</span><span class="o">=</span><span class="s">&quot;正在使用 $project $name 渲染模板&quot;</span><span class="p">;</span>  
-    <span class="n">w</span><span class="o">=</span><span class="n">new</span> <span class="n">StringWriter</span><span class="p">();</span>  
-    <span class="cm">/* </span>
-<span class="cm">     *context：对输入的字符串进行渲染 </span>
-<span class="cm">     *w:渲染后的结果输出的地方 </span>
-<span class="cm">     *mystring:发生错误时，被用来作为错误文件的名字 </span>
-<span class="cm">     *s:包括VTL语言的输入字符串 </span>
-<span class="cm">    */</span>   
-    <span class="n">Velocity</span><span class="p">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">context</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="s">&quot;mystring&quot;</span><span class="p">,</span> <span class="n">s</span><span class="p">);</span>  
-    <span class="c1">//将结果进行输出来  </span>
-    <span class="n">System</span><span class="p">.</span><span class="n">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">w</span><span class="p">);</span>  
-<span class="p">}</span>
+<p>再上面的代码就是资源管理器的初始化了。其中最重要的一个函数就是resourceManger.initialize(this)了，这个函数会针对每种特定的资源加载器进行初始化，为了缩减篇幅，在此就不列了，在这个初始化的过程中，还会读取配置文件中的resouce.manger.logwhenfound以及resource.manger.cache.class这两个属性，对缓存进行初始配置。</p>
+<p><strong>initializeDirectives(初始化预指令)</strong></p>
+<p>直接上源文件吧</p>
+<div class="highlight"><pre><span class="n">private</span> <span class="kt">void</span> <span class="nf">initializeDirectives</span><span class="p">()</span>  
+ <span class="p">{</span>  
+        <span class="c1">//创建一个属性文件，用于记录</span>
+     <span class="n">Properties</span> <span class="n">directiveProperties</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Properties</span><span class="p">();</span>  
+     <span class="n">InputStream</span> <span class="n">inputStream</span> <span class="o">=</span> <span class="n">null</span><span class="p">;</span>   
+     <span class="n">try</span>  
+     <span class="p">{</span>  
+            <span class="c1">//读取/org/apache/velocity/runtime/defaults/directive.properties这</span>
+          <span class="c1">//文件</span>
+         <span class="n">inputStream</span> <span class="o">=</span> <span class="n">getClass</span><span class="p">().</span><span class="n">getResourceAsStream</span><span class="p">(</span><span class="sc">&#39;/&#39;</span> <span class="o">+</span> <span class="n">DEFAULT_RUNTIME_DIRECTIVES</span><span class="p">);</span>  
+            <span class="c1">//为空时的处理</span>
+         <span class="k">if</span> <span class="p">(</span><span class="n">inputStream</span> <span class="o">==</span> <span class="n">null</span><span class="p">)</span>  
+         <span class="p">{</span>  
+             <span class="n">throw</span> <span class="n">new</span> <span class="n">VelocityException</span><span class="p">(</span><span class="s">&quot;Error loading directive.properties! &quot;</span> <span class="o">+</span>  
+                                 <span class="s">&quot;Something is very wrong if these properties &quot;</span> <span class="o">+</span>  
+                                 <span class="s">&quot;aren&#39;t being located. Either your Velocity &quot;</span> <span class="o">+</span>  
+                                 <span class="s">&quot;distribution is incomplete or your Velocity &quot;</span> <span class="o">+</span>  
+                                 <span class="s">&quot;jar file is corrupted!&quot;</span><span class="p">);</span>  
+         <span class="p">}</span>  
+       <span class="c1">//加载这个配置文件，即读取到Properties对象中</span>
+         <span class="n">directiveProperties</span><span class="p">.</span><span class="n">load</span><span class="p">(</span><span class="n">inputStream</span><span class="p">);</span>  
+  
+     <span class="p">}</span>  
+     <span class="n">catch</span> <span class="p">(</span><span class="n">IOException</span> <span class="n">ioe</span><span class="p">)</span>  
+     <span class="p">{</span>  
+         <span class="n">String</span> <span class="n">msg</span> <span class="o">=</span> <span class="s">&quot;Error while loading directive properties!&quot;</span><span class="p">;</span>  
+         <span class="n">log</span><span class="p">.</span><span class="n">error</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">ioe</span><span class="p">);</span>  
+         <span class="n">throw</span> <span class="n">new</span> <span class="n">RuntimeException</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">ioe</span><span class="p">);</span>  
+     <span class="p">}</span>  
+     <span class="n">finally</span>  
+     <span class="p">{</span>  
+         <span class="n">try</span>  
+         <span class="p">{</span>  <span class="c1">//各种关闭操作，咱不关心</span>
+             <span class="k">if</span> <span class="p">(</span><span class="n">inputStream</span> <span class="o">!=</span> <span class="n">null</span><span class="p">)</span>  
+             <span class="p">{</span>  
+                 <span class="n">inputStream</span><span class="p">.</span><span class="n">close</span><span class="p">();</span>  
+             <span class="p">}</span>  
+         <span class="p">}</span>  
+         <span class="n">catch</span> <span class="p">(</span><span class="n">IOException</span> <span class="n">ioe</span><span class="p">)</span>  
+         <span class="p">{</span>  
+             <span class="n">String</span> <span class="n">msg</span> <span class="o">=</span> <span class="s">&quot;Cannot close directive properties!&quot;</span><span class="p">;</span>  
+             <span class="n">log</span><span class="p">.</span><span class="n">error</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">ioe</span><span class="p">);</span>  
+             <span class="n">throw</span> <span class="n">new</span> <span class="n">RuntimeException</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">ioe</span><span class="p">);</span>  
+         <span class="p">}</span>  
+     <span class="p">}</span>  
+     <span class="cm">/* </span>
+<span class="cm">      * Grab all the values of the properties. These </span>
+<span class="cm">      * are all class names for example: </span>
+<span class="cm">      * </span>
+<span class="cm">      * org.apache.velocity.runtime.directive.Foreach </span>
+<span class="cm">      */</span>  
+        <span class="c1">//对directiveProperties里面的元素生成其枚举集合</span>
+     <span class="n">Enumeration</span> <span class="n">directiveClasses</span> <span class="o">=</span> <span class="n">directiveProperties</span><span class="p">.</span><span class="n">elements</span><span class="p">();</span>  
+        <span class="c1">//循环遍历</span>
+     <span class="k">while</span> <span class="p">(</span><span class="n">directiveClasses</span><span class="p">.</span><span class="n">hasMoreElements</span><span class="p">())</span>  
+     <span class="p">{</span>  
+         <span class="n">String</span> <span class="n">directiveClass</span> <span class="o">=</span> <span class="p">(</span><span class="n">String</span><span class="p">)</span> <span class="n">directiveClasses</span><span class="p">.</span><span class="n">nextElement</span><span class="p">();</span>  
+         <span class="c1">//对每一条指令均实例化一个可以处理该指令的类，并填加到指令集合中</span>
+            <span class="n">loadDirective</span><span class="p">(</span><span class="n">directiveClass</span><span class="p">);</span>  
+         <span class="n">log</span><span class="p">.</span><span class="n">debug</span><span class="p">(</span><span class="s">&quot;Loaded System Directive: &quot;</span> <span class="o">+</span> <span class="n">directiveClass</span><span class="p">);</span>  
+     <span class="p">}</span>  
+  
+     <span class="cm">/* </span>
+<span class="cm">      *  now the user&#39;s directives </span>
+<span class="cm">      */</span>  
+    <span class="c1">//从配置文件velocity.properties里查看有没有用户自定义的属性文件 </span>
+     <span class="n">String</span><span class="p">[]</span> <span class="n">userdirective</span> <span class="o">=</span> <span class="n">configuration</span><span class="p">.</span><span class="n">getStringArray</span><span class="p">(</span><span class="s">&quot;userdirective&quot;</span><span class="p">);</span>
+
+    <span class="c1">//如果有的话将将填加到用户自定义的属性集合中去</span>
+     <span class="k">for</span><span class="p">(</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">userdirective</span><span class="p">.</span><span class="n">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>  
+     <span class="p">{</span>  
+         <span class="n">loadDirective</span><span class="p">(</span><span class="n">userdirective</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>  
+         <span class="k">if</span> <span class="p">(</span><span class="n">log</span><span class="p">.</span><span class="n">isDebugEnabled</span><span class="p">())</span>  
+         <span class="p">{</span>  
+             <span class="n">log</span><span class="p">.</span><span class="n">debug</span><span class="p">(</span><span class="s">&quot;Loaded User Directive: &quot;</span> <span class="o">+</span> <span class="n">userdirective</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>  
+         <span class="p">}</span>  
+     <span class="p">}</span>  
+  
+ <span class="p">}</span>
 </pre></div>
 
 
-<p>例子二的模板文件<code>test2.vm</code>如下：</p>
-<div class="highlight"><pre><span class="n">Hello</span> <span class="err">来自于</span> <span class="err">$</span><span class="n">name</span> <span class="err">在</span> <span class="err">$</span><span class="n">project</span> <span class="err">工程里</span><span class="p">.</span>
-</pre></div>
-
-
-<p>例子二与例子一极为相似，例子二的模板只不过是在代码中创建的，例子一中的模板是直接引用外部的test.vm文件，从上面的代码中可以揣测一下Velocity是如何工作的，大概是这样的</p>
-<p>1、将外部的vm文件读入内存</p>
-<p>2、Velocity模板引擎对vm文件进行解析</p>
-<p>3、解析之后对模板文件中的变量进行替换，并执行vm中的相应判断逻辑</p>
-<p>4、执行完后，整个页面的渲染结果就知道了，再直接输出即可</p>
-<p>从这里可以看出只要前后台代码的开发人员能够约定相同的变量，则前后台的开发完全可以并行执行</p>
+<p>上面的代码还是很容易理解的，就是根据配置文件中定义的指令，将相应的指令实现类加载进系统指令集合或者用户指令集合中去。</p>
 						  <div class="clear"></div>
 							</div>
-							<b>本文地址:</b> <a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_1.html" target="_self">http://www.yanyulin.info/pages/2014/03/velocity_disabuse_1.html</a>
+							<b>本文地址:</b> <a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_8.html" target="_self">http://www.yanyulin.info/pages/2014/03/velocity_disabuse_8.html</a>
 							<div><font color="blue"><b>转载时请保留本文出处,谢谢您的合作</b></font></div>
 							<hr/>
 							<div class="clear" align="left">
@@ -230,10 +235,10 @@ Velocity入门教程HelloWord程序 - 烟雨林</title>
 					<!-- end: entrymeta -->
 				<div class="context_b" align="left">
 					 上一篇: 
-  				 <a href="http://www.yanyulin.info/pages/2014/03/xiaomiqianggou.html" title="一款小米抢购软件实现源码分析(HttpClient)" target="_blank">一款小米抢购软件实现源码分析(HttpClient)</a>
+  				 <a href="http://www.yanyulin.info/pages/2014/03/jd_2014_1.html" title="京东校招面经2014年技术类" target="_blank">京东校招面经2014年技术类</a>
   				 &nbsp;&nbsp
   				 下一篇:
-  				 <a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_2.html" title="Velocity入门例子自定义呈现容器" target="_blank">Velocity入门例子自定义呈现容器</a>
+  				 <a href="http://www.yanyulin.info/pages/2014/03/kernel_analyze.html" title="Linux内核完全剖析PDF版下载" target="_blank">Linux内核完全剖析PDF版下载</a>
 					 
 				</div>
 				<div class="context_b">
@@ -302,7 +307,7 @@ Velocity入门教程HelloWord程序 - 烟雨林</title>
 			</table>
 				</div>
 				<div class="context_b">
-			 <div class="ds-thread" data-title="Velocity入门教程HelloWord程序"></div>
+			 <div class="ds-thread" data-title="velocity初始化资源加载器以及预指令"></div>
 			 <script type="text/javascript">
 			 	var duoshuoQuery={short_name:"yanyulin"};
 			 	var ds=document.createElement("script");
@@ -345,19 +350,19 @@ Velocity入门教程HelloWord程序 - 烟雨林</title>
 				<div class="box">			
 						<div class="textwidget">
 							<div id="tagsLink">
-							<a  href="http://www.yanyulin.info/tag/tao-bao-ji-zhu.html" title="查看淘宝技术下的所有文章" style="background-color: #96C2AA" target="_blank">淘宝技术</a>
+							<a  href="http://www.yanyulin.info/tag/tao-bao-ji-zhu.html" title="查看淘宝技术下的所有文章" style="background-color: #84A4B3" target="_blank">淘宝技术</a>
 						  </div>
 							<div id="tagsLink">
-							<a  href="http://www.yanyulin.info/tag/javafen-xi.html" title="查看Java分析下的所有文章" style="background-color: #8C8BC6" target="_blank">Java分析</a>
+							<a  href="http://www.yanyulin.info/tag/javafen-xi.html" title="查看Java分析下的所有文章" style="background-color: #169EDD" target="_blank">Java分析</a>
 						  </div>
 							<div id="tagsLink">
-							<a  href="http://www.yanyulin.info/tag/linuxhui-zong.html" title="查看Linux汇总下的所有文章" style="background-color: #84A4B3" target="_blank">Linux汇总</a>
+							<a  href="http://www.yanyulin.info/tag/linuxhui-zong.html" title="查看Linux汇总下的所有文章" style="background-color: #D17C93" target="_blank">Linux汇总</a>
 						  </div>
 							<div id="tagsLink">
-							<a  href="http://www.yanyulin.info/tag/gong-ju-shi-yong.html" title="查看工具使用下的所有文章" style="background-color: #96C2AA" target="_blank">工具使用</a>
+							<a  href="http://www.yanyulin.info/tag/gong-ju-shi-yong.html" title="查看工具使用下的所有文章" style="background-color: #8C8BC6" target="_blank">工具使用</a>
 						  </div>
 							<div id="tagsLink">
-							<a  href="http://www.yanyulin.info/tag/cxue-xi.html" title="查看C++学习下的所有文章" style="background-color: #169EDD" target="_blank">C++学习</a>
+							<a  href="http://www.yanyulin.info/tag/cxue-xi.html" title="查看C++学习下的所有文章" style="background-color: #D17C93" target="_blank">C++学习</a>
 						  </div>
 						</div>
 						<div class="clear"></div>
@@ -426,16 +431,16 @@ Velocity入门教程HelloWord程序 - 烟雨林</title>
 				<ul>
 				<ul class="random-post-link">
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2014/03/pelican_page.html" target="_blank" title="pelican博客搭建设置分页和分页保存位置">pelican博客搭建设置分页和分页保存位置</a>
+				<a href="http://www.yanyulin.info/pages/2014/03/git.html" target="_blank" title="git保存用户名与密码(避免用户名密码输入)">git保存用户名与密码(避免用户名密码输入)</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2014/01/baidu_1.html" target="_blank" title="百度校招2014年软研面经">百度校招2014年软研面经</a>
+				<a href="http://www.yanyulin.info/pages/2013/01/renmingyinhang_1.html" target="_blank" title="中国人民银行2013校招技术类面经">中国人民银行2013校招技术类面经</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2014/03/youku_2014_a.html" target="_blank" title="优酷校园招聘笔试题2014年研发类">优酷校园招聘笔试题2014年研发类</a>
+				<a href="http://www.yanyulin.info/pages/2013/12/yahoo_2014_A.html" target="_blank" title="雅虎2014年校招笔试题">雅虎2014年校招笔试题</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2014/03/kernel_analyze.html" target="_blank" title="Linux内核完全剖析PDF版下载">Linux内核完全剖析PDF版下载</a>
+				<a href="http://www.yanyulin.info/pages/2014/03/write_os.html" target="_blank" title="自已动手写操作系统PDF版下载">自已动手写操作系统PDF版下载</a>
 				</li>
 				<li class="random-post-link">
 				<a href="http://www.yanyulin.info/pages/2013/11/vlinux2.html" target="_blank" title="Linux基础教程视频版(很详细)">Linux基础教程视频版(很详细)</a>
@@ -444,7 +449,7 @@ Velocity入门教程HelloWord程序 - 烟雨林</title>
 				<a href="http://www.yanyulin.info/pages/2014/01/whyRipple.html" target="_blank" title="为什么大家都转向了Ripple">为什么大家都转向了Ripple</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2013/11/fetchPage.html" target="_blank" title="爬虫的自我解剖(抓取网页HtmlUnit)">爬虫的自我解剖(抓取网页HtmlUnit)</a>
+				<a href="http://www.yanyulin.info/pages/2013/12/qqLogin_1.html" target="_blank" title="界面编程模仿篇(QQ登录界面逼真篇)">界面编程模仿篇(QQ登录界面逼真篇)</a>
 				</li>
 				<li class="random-post-link">
 				<a href="http://www.yanyulin.info/pages/2014/03/duoshuo.html" target="_blank" title="多说评论框如何|怎么样|实际测试">多说评论框如何|怎么样|实际测试</a>
@@ -475,22 +480,22 @@ Velocity入门教程HelloWord程序 - 烟雨林</title>
 				<div class="box_r">
 				<ul>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_7.html" target="_blank" title="velocity初始化日志系统的过程分析">velocity初始化日志系统的过程分析</a>
+				<a href="http://www.yanyulin.info/pages/2014/03/reflection.html" target="_blank" title="Java语言的反射机制分析">Java语言的反射机制分析</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2013/12/renren_1.html" target="_blank" title="人人网校招2014年研发面经">人人网校招2014年研发面经</a>
+				<a href="http://www.yanyulin.info/pages/2014/03/meituan_2014_2.html" target="_blank" title="美团网校园招聘面经2014年软件研发">美团网校园招聘面经2014年软件研发</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2014/03/baofeng_2014_B.html" target="_blank" title="暴风影音笔试题校招笔试题2014年技术类">暴风影音笔试题校招笔试题2014年技术类</a>
+				<a href="http://www.yanyulin.info/pages/2013/12/yahoo_2014_A.html" target="_blank" title="雅虎2014年校招笔试题">雅虎2014年校招笔试题</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2013/12/perl.html" target="_blank" title="编程珠玑(作者:John Bently)">编程珠玑(作者:John Bently)</a>
+				<a href="http://www.yanyulin.info/pages/2013/11/objectModel.html" target="_blank" title="深度探索C++对象模型">深度探索C++对象模型</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2013/12/vc_1.html" target="_blank" title="VC视频教程(主要讲述`MFC`)">VC视频教程(主要讲述`MFC`)</a>
+				<a href="http://www.yanyulin.info/pages/2013/12/psbase2.html" target="_blank" title="Photoshop CS视频教程(下)">Photoshop CS视频教程(下)</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2014/03/xrpfree.html" target="_blank" title="[赠送]免费领取赠送获取ripple币啦">[赠送]免费领取赠送获取ripple币啦</a>
+				<a href="http://www.yanyulin.info/pages/2014/03/getxrp.html" target="_blank" title="【赠送】ripple币免费获取&免费领取">【赠送】ripple币免费获取&免费领取</a>
 				</li>
 				<li>
 				<a href="http://www.yanyulin.info/pages/2013/12/qqLogin_1.html" target="_blank" title="界面编程模仿篇(QQ登录界面逼真篇)">界面编程模仿篇(QQ登录界面逼真篇)</a>
