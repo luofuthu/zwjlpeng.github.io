@@ -38,11 +38,10 @@ http://pan.baidu.com/s/1D0IhK
 &lt;p&gt;3.1 as86汇编器&lt;/p&gt;
 &lt;p&gt;3.1.1 as86汇编语言语法&lt;/p&gt;
 &lt;p&gt;3.1.2 as86汇编语言程序&lt;/p&gt;
-&lt;p&gt;3.1.3 as86汇编语言程序的编译和&lt;/p&gt;
-&lt;p&gt;链接&lt;/p&gt;
+&lt;p&gt;3.1.3 as86汇编语言程序的编译和链接&lt;/p&gt;
 &lt;p&gt;3.1.4 as86和ld86使用方法和选项&lt;/p&gt;
 &lt;p&gt;3.2 GNU as汇编&lt;/p&gt;
-&lt;p&gt;3.2.1 编译aS汇编语言程序&lt;/p&gt;
+&lt;p&gt;3.2.1 编译AS汇编语言程序&lt;/p&gt;
 &lt;p&gt;3.2.2 aS汇编语法&lt;/p&gt;
 &lt;p&gt;3.2.3 指令语句、操作数和寻址&lt;/p&gt;
 &lt;p&gt;3.2.4 区与重定位&lt;/p&gt;
@@ -171,7 +170,7 @@ http://pan.baidu.com/s/1D0IhK
 &lt;p&gt;14.2.1 功能描述&lt;/p&gt;
 &lt;p&gt;14.2.2 代码注释&lt;/p&gt;
 &lt;p&gt;14.2.3 a.out执行文件格式&lt;/p&gt;
-&lt;p&gt;14.3 const.h文件&lt;/p&gt;</summary><category term="操作系统"></category></entry><entry><title>京东校招面经2014年技术类</title><link href="http://www.yanyulin.info/pages/2014/03/jd_2014_1.html" rel="alternate"></link><updated>2014-03-21T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-21:pages/2014/03/jd_2014_1.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;14.3 const.h文件&lt;/p&gt;</summary><category term="Linux书籍"></category></entry><entry><title>京东校招面经2014年技术类</title><link href="http://www.yanyulin.info/pages/2014/03/jd_2014_1.html" rel="alternate"></link><updated>2014-03-21T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-21:pages/2014/03/jd_2014_1.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;京东&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;今天的去面试的都有一个小时的笔试，试题和去年的一样，大家可以在右侧的输入框里输入2014京东试题进行搜索，但有一个附加题是求平方根的（牛顿迭代法可以求解）。&lt;/p&gt;
 &lt;p&gt;然后所有的人都会接着有两面，具体结果不会当场告诉，说是随后会有HR联系。&lt;/p&gt;

@@ -38,11 +38,10 @@ http://pan.baidu.com/s/1D0IhK
 &lt;p&gt;3.1 as86汇编器&lt;/p&gt;
 &lt;p&gt;3.1.1 as86汇编语言语法&lt;/p&gt;
 &lt;p&gt;3.1.2 as86汇编语言程序&lt;/p&gt;
-&lt;p&gt;3.1.3 as86汇编语言程序的编译和&lt;/p&gt;
-&lt;p&gt;链接&lt;/p&gt;
+&lt;p&gt;3.1.3 as86汇编语言程序的编译和链接&lt;/p&gt;
 &lt;p&gt;3.1.4 as86和ld86使用方法和选项&lt;/p&gt;
 &lt;p&gt;3.2 GNU as汇编&lt;/p&gt;
-&lt;p&gt;3.2.1 编译aS汇编语言程序&lt;/p&gt;
+&lt;p&gt;3.2.1 编译AS汇编语言程序&lt;/p&gt;
 &lt;p&gt;3.2.2 aS汇编语法&lt;/p&gt;
 &lt;p&gt;3.2.3 指令语句、操作数和寻址&lt;/p&gt;
 &lt;p&gt;3.2.4 区与重定位&lt;/p&gt;
@@ -171,7 +170,7 @@ http://pan.baidu.com/s/1D0IhK
 &lt;p&gt;14.2.1 功能描述&lt;/p&gt;
 &lt;p&gt;14.2.2 代码注释&lt;/p&gt;
 &lt;p&gt;14.2.3 a.out执行文件格式&lt;/p&gt;
-&lt;p&gt;14.3 const.h文件&lt;/p&gt;</summary><category term="操作系统"></category></entry><entry><title>自已动手写操作系统PDF版下载</title><link href="http://www.yanyulin.info/pages/2014/03/write_os.html" rel="alternate"></link><updated>2014-03-19T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-19:pages/2014/03/write_os.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;14.3 const.h文件&lt;/p&gt;</summary><category term="Linux书籍"></category></entry><entry><title>自已动手写操作系统PDF版下载</title><link href="http://www.yanyulin.info/pages/2014/03/write_os.html" rel="alternate"></link><updated>2014-03-19T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-19:pages/2014/03/write_os.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;&lt;a href="http://pan.baidu.com/s/1pJGxVw3" target="_blank"&gt;
 自已动手写操作系统PDF版下载
 &lt;/a&gt;&lt;/p&gt;
