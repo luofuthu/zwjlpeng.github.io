@@ -1,5 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>烟雨林</title><link>http://www.yanyulin.info/</link><description></description><atom:link href="http://www.yanyulin.info/feeds/all.rss.xml" rel="self"></atom:link><lastBuildDate>Sat, 22 Mar 2014 00:00:00 +0800</lastBuildDate><item><title>汇编语言王爽PDF版下载</title><link>http://www.yanyulin.info/pages/2014/03/assemble.html</link><description>&lt;hr /&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>烟雨林</title><link>http://www.yanyulin.info/</link><description></description><atom:link href="http://www.yanyulin.info/feeds/all.rss.xml" rel="self"></atom:link><lastBuildDate>Sun, 23 Mar 2014 00:00:00 +0800</lastBuildDate><item><title>Velocity语法简明教程</title><link>http://www.yanyulin.info/pages/2014/03/velocity_disabuse_9.html</link><description>&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;本系列教程，为个人在淘宝实习所写，博文中所提及的WebX为淘宝的架构，大家可以忽略，当然有兴趣的，也可以自已去搜搜，淘宝的WebX目前处于开源状态&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Velocity引擎解惑&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;1、&lt;a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_1.html" target="_blank"&gt;Velocity入门教程HelloWord程序&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;2、&lt;a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_2.html" target="_blank"&gt;Velocity入门例子自定义呈现容器&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;3、&lt;a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_3.html" target="_blank"&gt;Velocity入门例子事件监听机制&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;4、&lt;a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_4.html" target="_blank"&gt;Velocity入门例子创建普通的web工程&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;5、&lt;a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_5.html" target="_blank"&gt;Velocity中的单例模式以及多实例模式&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;6、&lt;a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_6.html" target="_blank"&gt;velocity初始化过程分析读取配置文件&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;7、&lt;a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_7.html" target="_blank"&gt;velocity初始化日志系统的过程分析&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;8、&lt;a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_8.html" target="_blank"&gt;Velocity初始化资源加载器以及预指令&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;接触过Linux Shell脚本的，看起来也不陌生，很容易理解，详细如下：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;#&lt;/code&gt;开头的脚本语句&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;#&lt;/code&gt;开头的脚本语句如#set、#if 、#else、#end、#foreach、#end、#iinclude、#parse、#macro等。&lt;/p&gt;
+&lt;p&gt;例子：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#foreach($tmp in $objs)  &lt;/span&gt;
+&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="n"&gt;tmp&lt;/span&gt;  
+&lt;span class="cp"&gt;#endif&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;code&gt;$&lt;/code&gt;标识的变量&lt;/p&gt;
+&lt;p&gt;和JS差不多吧，是一种弱类型，变量不需要类型，也不需要事先声明，想到了就可以用，不过要注意一下的就是编程规范。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="err"&gt;、$&lt;/span&gt;&lt;span class="n"&gt;msg&lt;/span&gt;&lt;span class="err"&gt;、$&lt;/span&gt;&lt;span class="n"&gt;TagUtil&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;options&lt;/span&gt;&lt;span class="p"&gt;(...)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;strong&gt;{}/!/\/””/’’特殊用法&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;写过Linux Shell的对这些应该很熟悉，{}用来在一个很长的字符串中区分变量，!用来在变量值为空时，避免在页面上输出，\这个代表后面的是一个转义字符，照常输出，””括起来的东西，如果里面含有可以被veloctiy解释的照常解释，’’括起来的东东不再被velocity进行解释，而是直接输出。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$some&lt;/span&gt;=”test”  
+&lt;span class="nv"&gt;$someone&lt;/span&gt; ##在页面上直接输出&lt;span class="nv"&gt;$someone&lt;/span&gt;  
+&lt;span class="cp"&gt;${&lt;/span&gt;&lt;span class="n"&gt;some&lt;/span&gt;&lt;span class="cp"&gt;}&lt;/span&gt;one ##在页面上输出testone  
+&lt;span class="nv"&gt;$test&lt;/span&gt; ##在页面上输出&lt;span class="nv"&gt;$test&lt;/span&gt;  
+$!test ##在页面上什么都不输出，因为test=null  
+  
+\&lt;span class="nv"&gt;$some&lt;/span&gt; ##在页面上输出&lt;span class="nv"&gt;$some&lt;/span&gt;,$被转义了  
+“&lt;span class="nv"&gt;$some&lt;/span&gt;” ##在页面上输出test  
+‘&lt;span class="nv"&gt;$some&lt;/span&gt;’ ##在页面上输出&lt;span class="nv"&gt;$some&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;strong&gt;逻辑运算符:== &amp;amp;&amp;amp; || !&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;这个没什么好讲的，学过任何一种语言或者脚本都有，看看就明白了。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;循环计数器&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Velocity循环计数数有一个比较特别的地方就是其循环计数变量不是从0开始，而是从1开始的，这一点从其配置文件中也可以很容易的看出来，配置文件如下：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;# Default name of the loop counter  &lt;/span&gt;
+&lt;span class="cp"&gt;# variable reference.  &lt;/span&gt;
+&lt;span class="n"&gt;directive&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;foreach&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;counter&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;velocityCount&lt;/span&gt;  
+&lt;span class="cp"&gt;# Default starting value of the loop  &lt;/span&gt;
+&lt;span class="cp"&gt;# counter variable reference.  &lt;/span&gt;
+&lt;span class="n"&gt;directive&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;foreach&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;counter&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;initial&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;value&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;从这个配置文件中可以看到的是循环变量的名字是velocityCount,这个名字如果你细看了例子六中的代码，应该也出现了。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Velocity中的宏&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Velocity中的宏可以分为有参数与无参数两种情况，说白了，其实无参数也是有参数的一种特殊情况，学过C/C++都应该知道#define,把它理解成#define,就行了，如下是例子，一个是有参数的宏，一个是无参数的宏。
+无参数的宏&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="vi"&gt;#macro&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="nb"&gt;d&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;  
+&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;tr&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;td&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nx"&gt;td&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nx"&gt;tr&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;  
+&lt;span class="vi"&gt;#end&lt;/span&gt;  
+&lt;span class="nx"&gt;调用&lt;/span&gt;   
+&lt;span class="vi"&gt;#d&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;strong&gt;有参数的宏&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="vi"&gt;#macro&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="nx"&gt;tablerows&lt;/span&gt; &lt;span class="nv"&gt;$color&lt;/span&gt; &lt;span class="nv"&gt;$somelist&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;  
+&lt;span class="vi"&gt;#foreach&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="nv"&gt;$something&lt;/span&gt; &lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="nv"&gt;$somelist&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;  
+&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;tr&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;td&lt;/span&gt; &lt;span class="n"&gt;bgcolor&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nv"&gt;$color&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="nv"&gt;$something&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nx"&gt;td&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nx"&gt;tr&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;  
+&lt;span class="vi"&gt;#end&lt;/span&gt;  
+&lt;span class="vi"&gt;#end&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;上面是带两个参数的宏。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;范围操作符&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;也是一看就懂的，如果你学过Python,这个操作符代表的是一个集合，这里也是一个意思，代码如下：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;#foreach( $foo in [1..5] )  &lt;/span&gt;
+&lt;span class="c"&gt;#foo  &lt;/span&gt;
+&lt;span class="c"&gt;#end&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;strong&gt;总结&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;有太多的东西想分析得更加详细，但是总感觉时间有限，精力有限，无法渗透出更深层的东西，斗转星移，日月更迭，不经意间21天(1814400秒)的光阴已悄然无声的划过，没学过Spring,无法从最深层次去了解WebX,实在是一种悲哀，但我一直在努力，努力的看Spring,不是嘛,培根说，态度决定一切，生活本来就应该如此，那个谁说源码面前，了无秘密，我拿这句话与大家共勉&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Sun, 23 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-03-23:pages/2014/03/velocity_disabuse_9.html</guid><category>淘宝技术</category></item><item><title>汇编语言王爽PDF版下载</title><link>http://www.yanyulin.info/pages/2014/03/assemble.html</link><description>&lt;hr /&gt;
 &lt;p&gt;&lt;a href="http://pan.baidu.com/s/1eQ9UKvg" target="_blank"&gt;
 汇编语言PDF下载
 &lt;/a&gt;&lt;/p&gt;
