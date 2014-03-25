@@ -1,5 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>烟雨林</title><link>http://www.yanyulin.info/</link><description></description><atom:link href="http://www.yanyulin.info/feeds/all.rss.xml" rel="self"></atom:link><lastBuildDate>Sun, 23 Mar 2014 00:00:00 +0800</lastBuildDate><item><title>Java编程思想PDF版下载</title><link>http://www.yanyulin.info/pages/2014/03/think_in_java.html</link><description>&lt;hr /&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>烟雨林</title><link>http://www.yanyulin.info/</link><description></description><atom:link href="http://www.yanyulin.info/feeds/all.rss.xml" rel="self"></atom:link><lastBuildDate>Tue, 25 Mar 2014 00:00:00 +0800</lastBuildDate><item><title>Communications link failure due to underlying exception</title><link>http://www.yanyulin.info/pages/2014/03/jdbc.html</link><description>&lt;hr /&gt;
+&lt;p&gt;如下是通过捕捉异常打印出调用的堆栈信息显示的错误信息如下：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nx"&gt;com.mysql.jdbc.CommunicationsException&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;Communications&lt;/span&gt; &lt;span class="k"&gt;link&lt;/span&gt; &lt;span class="nx"&gt;failure&lt;/span&gt; &lt;span class="nx"&gt;due&lt;/span&gt; &lt;span class="k"&gt;to&lt;/span&gt; &lt;span class="nx"&gt;underlying&lt;/span&gt; &lt;span class="nx"&gt;exception&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+
+&lt;span class="o"&gt;**&lt;/span&gt; &lt;span class="nx"&gt;BEGIN&lt;/span&gt; &lt;span class="nx"&gt;NESTED&lt;/span&gt; &lt;span class="nx"&gt;EXCEPTION&lt;/span&gt; &lt;span class="o"&gt;**&lt;/span&gt;
+
+&lt;span class="nx"&gt;java.net.ConnectException&lt;/span&gt;
+&lt;span class="nx"&gt;MESSAGE&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;Connection&lt;/span&gt; &lt;span class="nx"&gt;refused&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;connect&lt;/span&gt;
+
+&lt;span class="nx"&gt;STACKTRACE&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+
+&lt;span class="nx"&gt;java.net.ConnectException&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;Connection&lt;/span&gt; &lt;span class="nx"&gt;refused&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;connect&lt;/span&gt;
+    &lt;span class="nx"&gt;at&lt;/span&gt; &lt;span class="nx"&gt;java.net.TwoStacksPlainSocketImpl.socketConnect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;Native&lt;/span&gt; &lt;span class="nb"&gt;Method&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="nx"&gt;at&lt;/span&gt; &lt;span class="nx"&gt;java.net.AbstractPlainSocketImpl.doConnect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;AbstractPlainSocketImpl.java&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;337&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="nx"&gt;at&lt;/span&gt; &lt;span class="nx"&gt;java.net.AbstractPlainSocketImpl.connectToAddress&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;AbstractPlainSocketImpl.java&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;198&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="nx"&gt;at&lt;/span&gt; &lt;span class="nx"&gt;java.net.AbstractPlainSocketImpl.connect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;AbstractPlainSocketImpl.java&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;180&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="nx"&gt;at&lt;/span&gt; &lt;span class="nx"&gt;java.net.PlainSocketImpl.connect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;PlainSocketImpl.java&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;157&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="nx"&gt;at&lt;/span&gt; &lt;span class="nx"&gt;java.net.SocksSocketImpl.connect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;SocksSocketImpl.java&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;391&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="nx"&gt;at&lt;/span&gt; &lt;span class="nx"&gt;java.net.Socket.connect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;Socket.java&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;579&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="nx"&gt;at&lt;/span&gt; &lt;span class="nx"&gt;java.net.Socket.connect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;Socket.java&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;528&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="nx"&gt;at&lt;/span&gt; &lt;span class="nx"&gt;java.net.Socket.&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nb"&gt;init&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;Socket.java&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;425&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="nx"&gt;at&lt;/span&gt; &lt;span class="nx"&gt;java.net.Socket.&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nb"&gt;init&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;Socket.java&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;241&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="nx"&gt;at&lt;/span&gt; &lt;span class="nx"&gt;com.mysql.jdbc.StandardSocketFactory.connect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;StandardSocketFactory.java&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;256&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="nx"&gt;at&lt;/span&gt; &lt;span class="nx"&gt;com.mysql.jdbc.MysqlIO.&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nb"&gt;init&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;MysqlIO.java&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;271&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="nx"&gt;at&lt;/span&gt; &lt;span class="nx"&gt;com.mysql.jdbc.Connection.createNewIO&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;Connection.java&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;2744&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="nx"&gt;at&lt;/span&gt; &lt;span class="nx"&gt;com.mysql.jdbc.Connection.&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nb"&gt;init&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;Connection.java&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;1553&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="nx"&gt;at&lt;/span&gt; &lt;span class="nx"&gt;com.mysql.jdbc.NonRegisteringDriver.connect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;NonRegisteringDriver.java&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;285&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="nx"&gt;at&lt;/span&gt; &lt;span class="nx"&gt;java.sql.DriverManager.getConnection&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;DriverManager.java&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;579&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="nx"&gt;at&lt;/span&gt; &lt;span class="nx"&gt;java.sql.DriverManager.getConnection&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;DriverManager.java&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;221&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="nx"&gt;at&lt;/span&gt; &lt;span class="nx"&gt;DB.main&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;DB.java&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;13&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+
+&lt;span class="sb"&gt;`** END NESTED EXCEPTION **`&lt;/span&gt;
+
+
+
+&lt;span class="nb"&gt;Last&lt;/span&gt; &lt;span class="nx"&gt;packet&lt;/span&gt; &lt;span class="nx"&gt;sent&lt;/span&gt; &lt;span class="k"&gt;to&lt;/span&gt; &lt;span class="nx"&gt;the&lt;/span&gt; &lt;span class="nx"&gt;server&lt;/span&gt; &lt;span class="nx"&gt;was&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="nx"&gt;ms&lt;/span&gt; &lt;span class="nx"&gt;ago.&lt;/span&gt;
+    &lt;span class="nx"&gt;at&lt;/span&gt; &lt;span class="nx"&gt;com.mysql.jdbc.Connection.createNewIO&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;Connection.java&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;2820&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="nx"&gt;at&lt;/span&gt; &lt;span class="nx"&gt;com.mysql.jdbc.Connection.&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nb"&gt;init&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;Connection.java&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;1553&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="nx"&gt;at&lt;/span&gt; &lt;span class="nx"&gt;com.mysql.jdbc.NonRegisteringDriver.connect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;NonRegisteringDriver.java&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;285&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="nx"&gt;at&lt;/span&gt; &lt;span class="nx"&gt;java.sql.DriverManager.getConnection&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;DriverManager.java&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;579&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="nx"&gt;at&lt;/span&gt; &lt;span class="nx"&gt;java.sql.DriverManager.getConnection&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;DriverManager.java&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;221&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="nx"&gt;at&lt;/span&gt; &lt;span class="nx"&gt;DB.main&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;DB.java&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;13&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;从上面的代码中可以看出的是jdbc成功的向远程服务器发送了请求的报文，但是远程服务器拒绝了对该报文进行回复&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;解决方法&lt;/strong&gt; &lt;/p&gt;
+&lt;p&gt;配置mysql数据库，默认情况下msyql默认的bind-address是127.0.0.1，mysql只能接受localhost的访问，因此如果如用户想开放远程访问的话，就必须禁用掉bind-address项&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;禁用的方法&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;bind&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;address&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;0.0.0.0&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;strong&gt;或者采用将bind-address设置为本机ip地址&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;假设我本机的&lt;code&gt;ip&lt;/code&gt;地址为&lt;code&gt;192.168.161.197&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;则bind-address应该设置成如下形式&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;bind&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;address&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;192.168.161.197&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Tue, 25 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-03-25:pages/2014/03/jdbc.html</guid><category>Java分析</category></item><item><title>Java编程思想PDF版下载</title><link>http://www.yanyulin.info/pages/2014/03/think_in_java.html</link><description>&lt;hr /&gt;
 &lt;p&gt;&lt;a href="http://pan.baidu.com/s/1jG2vdt0" target="_blank"&gt;
 Java编程思想PDF版下载
 &lt;/a&gt;&lt;/p&gt;
