@@ -57,7 +57,11 @@
 &lt;p&gt;假设我本机的&lt;code&gt;ip&lt;/code&gt;地址为&lt;code&gt;192.168.161.197&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;则bind-address应该设置成如下形式&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;bind&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;address&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;192.168.161.197&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Tue, 25 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-03-25:pages/2014/03/jdbc.html</guid><category>Java分析</category></item><item><title>Java编程思想PDF版下载</title><link>http://www.yanyulin.info/pages/2014/03/think_in_java.html</link><description>&lt;hr /&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;strong&gt;备注&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;mysql中配置文件的位置为安装目录下的&lt;code&gt;my.ini&lt;/code&gt;或者&lt;code&gt;my.conf&lt;/code&gt;文件，修改时直接将配置项添加在文件末尾即可&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Tue, 25 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-03-25:pages/2014/03/jdbc.html</guid><category>Java分析</category></item><item><title>Java编程思想PDF版下载</title><link>http://www.yanyulin.info/pages/2014/03/think_in_java.html</link><description>&lt;hr /&gt;
 &lt;p&gt;&lt;a href="http://pan.baidu.com/s/1jG2vdt0" target="_blank"&gt;
 Java编程思想PDF版下载
 &lt;/a&gt;&lt;/p&gt;
