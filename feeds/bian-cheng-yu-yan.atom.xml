@@ -61,7 +61,33 @@
 
 
 &lt;p&gt;&lt;strong&gt;备注&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;mysql中配置文件的位置为安装目录下的&lt;code&gt;my.ini&lt;/code&gt;或者&lt;code&gt;my.conf&lt;/code&gt;文件，修改时直接将配置项添加在文件末尾即可&lt;/p&gt;</summary><category term="Java分析"></category></entry><entry><title>Velocity语法简明教程</title><link href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_9.html" rel="alternate"></link><updated>2014-03-23T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-23:pages/2014/03/velocity_disabuse_9.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;mysql中配置文件的位置为安装目录下的&lt;code&gt;my.ini&lt;/code&gt;或者&lt;code&gt;my.conf&lt;/code&gt;文件，修改时直接将配置项添加在文件末尾即可&lt;/p&gt;</summary><category term="Java分析"></category></entry><entry><title>程序代码优化需要考虑的问题</title><link href="http://www.yanyulin.info/pages/2014/03/optimization.html" rel="alternate"></link><updated>2014-03-25T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-25:pages/2014/03/optimization.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;内联函数的使用&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;C语言中过多的函数调用，虽然可以提高程序的结构化与规范化，但是会降低程序的运行效率，函数调用本身就是一个复杂的过程，调用的过程中涉及到函数调用上下文环境的交换，函数参数的传递，堆栈的操作等一系列复杂的过程，如果一个算法中涉及到太多的函数调用，以及函数的嵌套调用，势必会影响到算法的运行时间以及算法的空间开销，内联函数类似于宏定义，都是在调用处对代码进行展开，替换掉调用处的代码，只不过一个处于预编译阶段，而另一个处于编译阶段，内联函数的调用方式与函数一样，使用内联函数时要注意以下几点：&lt;/p&gt;
+&lt;p&gt;1：递归函数不能定义为内联函数&lt;/p&gt;
+&lt;p&gt;2：内联函数的函数体不能太复杂，例如含有较大的循环语句等&lt;/p&gt;
+&lt;p&gt;3：内联函数要先定义后使用，而用不能有异常声明。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;关键字的使用&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;C语言中有许多的关键字对于提高程序的运行效率也是有一定的作用，例如：define宏定义作用上类似于内联函数，可以将代码量较小的函数，定义成一个宏，采用预编译阶段的宏替换，减少函数的调用或者代码的冗余；volatile定义了一个变量是异变的，每次对该变量的操作必须从内存中重新读取，这在一定程序上降低了程序的运行效率，因此volatile关键字的使用需要谨慎;const修饰的一个变量时表示该变量是一个常量，restrict修改指针变量时表示该指针变量所指向的内存空间不与其他对象重叠，这两个关键字的使用有利于代码的并行执行。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;运算符的使用&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;由于CPU对乘除运算是通过一系列的加减运算实现的，因此在算法设计中过多的使用乘除运算在一定程度上也对算法的效率产生了影响，在DSP中，一条乘法指令需要4个周期才能完成，定点DSP中根本没有与除法相关的指令，必须通过软件方式模拟除法的实现，效率比较低下，但是CPU能够快速的执行移位运算，一条移位运算指令只需要一个周期即可完成，因此将乘除运算通过左移与右移进行实现，另一个运算符&amp;amp;对于提高程序的效率也是有作用的，此处的&amp;amp;并不是取地址，而是表示引用(C++中引入)，从而避免了数据的复制，因此运算符的合理使用对提高算法的运行效率也是有作用的。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;数据类型的使用&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;数据类型的选用对提高算法的运行效率，编译器的优化也具有一定的作用，例如，C64X DSP具有双16bit扩充功能，芯片能在一个周期内完成16bit的乘法，加减法，比较，移位等操作，在设计时，当对连续的short型数据流操作时，应该转化成对int型数据流的操作，这样可以一次性将2个16位的short型数据读入一个32位的寄存器，然后用内部函数来对它们处理(如_sub2等),充分运用16bit扩充功能，一次可以进行2个16bit数据的运算，速度将提升一倍。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;软件流水线&lt;/strong&gt;
+软件流水线说白了就是对循环进行展开，使其更好的并行&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;算法结构调整&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;算法中可能存在较多的冗余的数据结构或者程序语句，以及一些无用的条件判断语句，占用了CPU的执行时间，找出并去掉程序中冗余的结构，有利于算法性能的提升，另一方面，可以提高算法性能的方法是将算法中程序语句进行调整，将指令级不相关的语句适当的穿插在指令级相关的语句中，有利于提高指令的并行性，从而达到提高算法或者程序的执行效率。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;功能单元替换&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;算法中对耗时较大的功能单元，可以采用其他实现方式，如数学模型的替换、结合硬件特性对代码进行的更改，在一定程序上都能使程序的性能得以提升，例如针对TI公司生产的C6000系列的定点DSP中，由于没有对浮点运算的支持，因此对浮点处理较慢，可以采用TI公司提供的IQMath库实现高精度、高速度的实时计算，而这对于以浮点运算为主的数控系统来说是不可缺少的。结合处理器的特点可以对交换变量的值，采用移位运算来实现，两个数求平均数可以采用按位与，按位或，移位实现等等。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;项目级优化&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;程序或者算法编译完毕后，由于采用的是高级语言编写程序，接近的是人的思维，因此要想在处理器上高速运行，必须对整个项目进行编译发布时的优化，此过程主要采用的是由编译器提供的编译选项，由编译器根据用户选择的优化级别做出对算法的优化，例如针对DSP处理器，TI公司开发的CCS(CODE COMPOSER STUDIO)集成开发环境，可以对C语言进行项目级的优化，其优化选项主要有如下(针对的是TMS320C6000 DSP)：&lt;/p&gt;
+&lt;p&gt;1:--opt_level或者-O :表示编译器对代码的优化级别，其中--opt_level=3或者-O3的优化级别最高，具体方面可以查看参考文献[3] 。&lt;/p&gt;
+&lt;p&gt;2:-ms:确俣不产生冗余循环，从而减少代码尺寸。&lt;/p&gt;
+&lt;p&gt;3：--opt_for_space:用来降低代码的生成尺寸，配合-O3可以将最终的可执行代码尺寸降至最低。&lt;/p&gt;
+&lt;p&gt;4:--gen_opt_info:用来产生可读的优化信息文件。&lt;/p&gt;
+&lt;p&gt;5：-mt :编译器假设程序中没有数据存储混淆，可进一步的优化代码。&lt;/p&gt;
+&lt;p&gt;6：-pm :使能程序级的优化。&lt;/p&gt;
+&lt;p&gt;等等...&lt;/p&gt;</summary><category term="算法集贴"></category></entry><entry><title>Velocity语法简明教程</title><link href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_9.html" rel="alternate"></link><updated>2014-03-23T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-23:pages/2014/03/velocity_disabuse_9.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;本系列教程，为个人在淘宝实习所写，博文中所提及的WebX为淘宝的架构，大家可以忽略，当然有兴趣的，也可以自已去搜搜，淘宝的WebX目前处于开源状态&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Velocity引擎解惑&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;1、&lt;a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_1.html" target="_blank"&gt;Velocity入门教程HelloWord程序&lt;/a&gt;&lt;/p&gt;
