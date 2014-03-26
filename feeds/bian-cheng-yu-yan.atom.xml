@@ -166,7 +166,103 @@
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;上面的代码，我觉的最重要的还有一个函数，createNewParser(),这个函数就不分析了。&lt;/p&gt;</summary><category term="淘宝技术"></category></entry><entry><title>Communications link failure due to underlying exception</title><link href="http://www.yanyulin.info/pages/2014/03/jdbc.html" rel="alternate"></link><updated>2014-03-25T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-25:pages/2014/03/jdbc.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;上面的代码，我觉的最重要的还有一个函数，createNewParser(),这个函数就不分析了。&lt;/p&gt;</summary><category term="淘宝技术"></category></entry><entry><title>WebX与Velocity是如何结合在一起的</title><link href="http://www.yanyulin.info/pages/2014/03/webx_1.html" rel="alternate"></link><updated>2014-03-26T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-26:pages/2014/03/webx_1.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;阅读本博文时可以参考以下系列博文，WebX在前台界面上采用的是Velocity来进行渲染&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Velocity引擎解惑&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;1、&lt;a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_1.html" target="_blank"&gt;Velocity入门教程HelloWord程序&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;2、&lt;a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_2.html" target="_blank"&gt;Velocity入门例子自定义呈现容器&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;3、&lt;a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_3.html" target="_blank"&gt;Velocity入门例子事件监听机制&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;4、&lt;a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_4.html" target="_blank"&gt;Velocity入门例子创建普通的web工程&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;5、&lt;a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_5.html" target="_blank"&gt;Velocity中的单例模式以及多实例模式&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;6、&lt;a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_6.html" target="_blank"&gt;velocity初始化过程分析读取配置文件&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;7、&lt;a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_7.html" target="_blank"&gt;velocity初始化日志系统的过程分析&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;8、&lt;a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_8.html" target="_blank"&gt;Velocity初始化资源加载器以及预指令&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;9、&lt;a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_9.html" target="_blank"&gt;Velocity语法简明教程&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;10、&lt;a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_10.html" target="_blank"&gt;Velocity中的事件初始化以及解析池初始化&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;WebX框架的结构，如下图所示：&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2014/03/webx_1.html"&gt;
+&lt;img src="http://www.yanyulin.info/pics/taobao/webx1_1.jpg" alt="烟雨林博客"/&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;其中Velocity就位于第三层Turbine,提供具体的页面驱动以及页面渲染。。Webx Turbine建立在Webx Framework的基础上，实现了页面渲染、布局、数据验证、数据提交等一系列工作。如果你单步跟踪的话，会发现pipeline中有一个步骤就是在执行页面的渲染。我懒得调试了，直接上代码，这是其中的一部份代码&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;protected&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;performScreenModule&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;TurbineRunData&lt;/span&gt; &lt;span class="n"&gt;rundata&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;  
+     &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;target&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;assertNotNull&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;rundata&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;getTarget&lt;/span&gt;&lt;span class="p"&gt;(),&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Target was not specified&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
+  
+     &lt;span class="c1"&gt;// 从target中取得screen module名称  &lt;/span&gt;
+     &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;moduleName&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;getModuleName&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;target&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
+  
+     &lt;span class="c1"&gt;// 如果设置了template，则默认打开layout  &lt;/span&gt;
+     &lt;span class="n"&gt;rundata&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;setLayoutEnabled&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;true&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
+  
+     &lt;span class="n"&gt;try&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;  
+            &lt;span class="c1"&gt;//获取screen下面的类&lt;/span&gt;
+         &lt;span class="n"&gt;Module&lt;/span&gt; &lt;span class="n"&gt;module&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;moduleLoaderService&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;getModuleQuiet&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;SCREEN_MODULE&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;moduleName&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
+  
+         &lt;span class="c1"&gt;// 当指定了templateName时，可以没有的screen module，而单单渲染模板。  &lt;/span&gt;
+         &lt;span class="c1"&gt;// 这样就实现了page-driven，即先写模板，必要时再写一个module class与之对应。  &lt;/span&gt;
+         &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;module&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="n"&gt;null&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;  
+             &lt;span class="n"&gt;module&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;execute&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;  
+         &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;  
+             &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;isScreenModuleRequired&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;  
+                 &lt;span class="n"&gt;throw&lt;/span&gt; &lt;span class="n"&gt;new&lt;/span&gt; &lt;span class="n"&gt;ModuleNotFoundException&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Could not find screen module: &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;moduleName&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
+             &lt;span class="p"&gt;}&lt;/span&gt;  
+         &lt;span class="p"&gt;}&lt;/span&gt;  
+     &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="n"&gt;catch&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ModuleLoaderException&lt;/span&gt; &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;  
+         &lt;span class="n"&gt;throw&lt;/span&gt; &lt;span class="n"&gt;new&lt;/span&gt; &lt;span class="n"&gt;WebxException&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Failed to load screen module: &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;moduleName&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
+     &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="n"&gt;catch&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Exception&lt;/span&gt; &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;  
+         &lt;span class="n"&gt;throw&lt;/span&gt; &lt;span class="n"&gt;new&lt;/span&gt; &lt;span class="n"&gt;WebxException&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Failed to execute screen: &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;moduleName&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
+     &lt;span class="p"&gt;}&lt;/span&gt;  
+ &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;上面这个方法中其中最主要的就是就是看看module.execute()这个方法，跟踪这个方法的执行流程，可以看到如下方法，源代码如下:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nt"&gt;public&lt;/span&gt; &lt;span class="nt"&gt;void&lt;/span&gt; &lt;span class="nt"&gt;invoke&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nt"&gt;Object&lt;/span&gt; &lt;span class="nt"&gt;moduleObject&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nt"&gt;Logger&lt;/span&gt; &lt;span class="nt"&gt;log&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="nt"&gt;throws&lt;/span&gt; &lt;span class="nt"&gt;Exception&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;  
+     &lt;span class="n"&gt;Object&lt;/span&gt;&lt;span class="cp"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;new&lt;/span&gt; &lt;span class="n"&gt;Object&lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;resolvers.length&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;  
+  
+     &lt;span class="n"&gt;for&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;int&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;length&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="err"&gt;{&lt;/span&gt;  
+         &lt;span class="n"&gt;Object&lt;/span&gt; &lt;span class="n"&gt;value&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;  
+  
+         &lt;span class="n"&gt;try&lt;/span&gt; &lt;span class="err"&gt;{&lt;/span&gt;  
+             &lt;span class="n"&gt;value&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;resolvers&lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;resolve&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;  
+         &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="nt"&gt;catch&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nt"&gt;SkipModuleExecutionException&lt;/span&gt; &lt;span class="nt"&gt;e&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;  
+             &lt;span class="n"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;skippable&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="err"&gt;{&lt;/span&gt;  
+                 &lt;span class="n"&gt;log&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;debug&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Module execution has been skipped. Method: {}, {}&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;fastMethod&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;getMessage&lt;/span&gt;&lt;span class="p"&gt;());&lt;/span&gt;  
+                 &lt;span class="n"&gt;return&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;  
+             &lt;span class="p"&gt;}&lt;/span&gt;  
+  
+             &lt;span class="nt"&gt;value&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nt"&gt;e&lt;/span&gt;&lt;span class="nc"&gt;.getValueForNonSkippable&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;  
+         &lt;span class="err"&gt;}&lt;/span&gt;  
+  
+         &lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="err"&gt;特别处理：防止对&lt;/span&gt;&lt;span class="nt"&gt;primitive&lt;/span&gt;&lt;span class="err"&gt;类型设置&lt;/span&gt;&lt;span class="nt"&gt;null&lt;/span&gt;  
+         &lt;span class="nt"&gt;Class&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;?&amp;gt;&lt;/span&gt; &lt;span class="nt"&gt;paramType&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nt"&gt;fastMethod&lt;/span&gt;&lt;span class="nc"&gt;.getJavaMethod&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt;&lt;span class="nc"&gt;.getParameterTypes&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;  
+  
+         &lt;span class="nt"&gt;if&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nt"&gt;value&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="nt"&gt;null&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="nt"&gt;paramType&lt;/span&gt;&lt;span class="nc"&gt;.isPrimitive&lt;/span&gt;&lt;span class="o"&gt;())&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;  
+             &lt;span class="n"&gt;value&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;getPrimitiveDefaultValue&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;paramType&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
+         &lt;span class="p"&gt;}&lt;/span&gt;  
+  
+         &lt;span class="nt"&gt;args&lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nt"&gt;value&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;  
+     &lt;span class="err"&gt;}&lt;/span&gt;  
+  
+     &lt;span class="nt"&gt;try&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;  
+         &lt;span class="n"&gt;fastMethod&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;invoke&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;moduleObject&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
+     &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="nt"&gt;catch&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nt"&gt;InvocationTargetException&lt;/span&gt; &lt;span class="nt"&gt;e&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;  
+         &lt;span class="n"&gt;throwExceptionOrError&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;getCause&lt;/span&gt;&lt;span class="p"&gt;());&lt;/span&gt;  
+         &lt;span class="n"&gt;return&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;  
+     &lt;span class="p"&gt;}&lt;/span&gt;  
+ &lt;span class="err"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;上面的代码大概意思就是先进行参数注解的解释，然后调用对象里的方法，具体的调用方法如下，下面这个应该是很熟悉了&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="n"&gt;class&lt;/span&gt; &lt;span class="n"&gt;Hello&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;  
+    &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="n"&gt;execute&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="err"&gt;@&lt;/span&gt;&lt;span class="n"&gt;Param&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;name&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Context&lt;/span&gt; &lt;span class="n"&gt;context&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;  
+        &lt;span class="n"&gt;context&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;put&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;name&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
+    &lt;span class="p"&gt;}&lt;/span&gt;  
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;看到context以及context.put()是不是很熟悉了，哎，我就分析到这吧，太多了，也太杂了，期待有人补充！！！&lt;/p&gt;</summary><category term="淘宝技术"></category></entry><entry><title>Communications link failure due to underlying exception</title><link href="http://www.yanyulin.info/pages/2014/03/jdbc.html" rel="alternate"></link><updated>2014-03-25T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-25:pages/2014/03/jdbc.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;如下是通过捕捉异常打印出调用的堆栈信息显示的错误信息如下：&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nx"&gt;com.mysql.jdbc.CommunicationsException&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;Communications&lt;/span&gt; &lt;span class="k"&gt;link&lt;/span&gt; &lt;span class="nx"&gt;failure&lt;/span&gt; &lt;span class="nx"&gt;due&lt;/span&gt; &lt;span class="k"&gt;to&lt;/span&gt; &lt;span class="nx"&gt;underlying&lt;/span&gt; &lt;span class="nx"&gt;exception&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
 
