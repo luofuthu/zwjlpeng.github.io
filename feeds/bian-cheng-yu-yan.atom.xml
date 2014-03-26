@@ -181,7 +181,7 @@
 &lt;p&gt;10、&lt;a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_10.html" target="_blank"&gt;Velocity中的事件初始化以及解析池初始化&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;WebX框架的结构，如下图所示：&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2014/03/webx_1.html"&gt;
-&lt;img src="http://www.yanyulin.info/pics/taobao/webx1_1.jpg" alt="烟雨林博客"/&gt;
+&lt;img src="http://www.yanyulin.info/pics/taobao/webx1_1.jpg" alt="烟雨林博客" width="100%"/&gt;
 &lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;其中Velocity就位于第三层Turbine,提供具体的页面驱动以及页面渲染。。Webx Turbine建立在Webx Framework的基础上，实现了页面渲染、布局、数据验证、数据提交等一系列工作。如果你单步跟踪的话，会发现pipeline中有一个步骤就是在执行页面的渲染。我懒得调试了，直接上代码，这是其中的一部份代码&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;protected&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;performScreenModule&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;TurbineRunData&lt;/span&gt; &lt;span class="n"&gt;rundata&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;  
