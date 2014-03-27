@@ -240,7 +240,7 @@
          &lt;span class="n"&gt;log&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;trace&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Velocimacro : initialization complete.&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
      &lt;span class="p"&gt;}&lt;/span&gt;  
  &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</summary><category term="淘宝技术"></category></entry><entry><title>Velocity中对宏的初始化过程分析</title><link href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_12.html" rel="alternate"></link><updated>2014-03-27T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-27:pages/2014/03/velocity_disabuse_12.html</id><summary type="html">&lt;hr /&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="淘宝技术"></category></entry><entry><title>Velocity创建Web工程的流程分析</title><link href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_12.html" rel="alternate"></link><updated>2014-03-27T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-27:pages/2014/03/velocity_disabuse_12.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;本系列教程，为个人在淘宝实习所写，博文中所提及的WebX为淘宝的架构，大家可以忽略，当然有兴趣的，也可以自已去搜搜，淘宝的WebX目前处于开源状态&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Velocity引擎解惑&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;1、&lt;a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_1.html" target="_blank"&gt;Velocity入门教程HelloWord程序&lt;/a&gt;&lt;/p&gt;

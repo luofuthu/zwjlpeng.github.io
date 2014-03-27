@@ -1,5 +1,5 @@
 Date: 2014-03-27
-Title: Velocity中对宏的初始化过程分析
+Title: Velocity创建Web工程的流程分析
 Category: 编程语言
 Tags: 淘宝技术
 Slug: velocity_disabuse_12
