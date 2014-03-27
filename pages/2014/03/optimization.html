@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<title>
+程序代码优化需要考虑的问题 - 烟雨林</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
+<meta name="author" content="烟雨林">
+<meta name="description" content="烟雨林，是一个专注于互联网、搜索引擎、社会化网络、编程语言、程序员找工作、程序员面试等领域的原创IT科技博客">
+<meta name="keywords" content="烟雨|烟雨林|编程语言|互联网|程序员找工作|视频教程|程序员面经|Linux|数据挖掘|自然语言处理|移动互联">
+<link rel="stylesheet" type="text/css" href="http://www.yanyulin.info/theme/index.css" />
+<link rel="shortcut icon" href="http://www.yanyulin.info/theme/images/favicon.ico">
+</head>
+<body >
+   <div id="hed">
+			<div class="top_part">
+				<a href="http://www.yanyulin.info"><img src="http://www.yanyulin.info/theme/images/logo.png"/ alt="烟雨林" title="烟雨林" width="127px" height="29px"></a>
+			</div>
+	 </div>
+	 <div id="wrapper">
+			<div id="top">
+				<div id='topnav'>
+					<div >
+					   	<div >
+						  		<ul>	
+						   						<li><a href="http://www.yanyulin.info">烟雨首页</a></li>
+						  																<li class="current-menu-item current_page_item "><a href="http://www.yanyulin.info/category/bian-cheng-yu-yan.html">编程语言</a></li>
+						  				  											<li><a href="http://www.yanyulin.info/category/cheng-xu-yuan-de-mian-jing.html">程序员的面经</a></li>
+						  				  											<li><a href="http://www.yanyulin.info/category/cheng-xu-yuan-zhao-gong-zuo.html">程序员找工作</a></li>
+						  				  											<li><a href="http://www.yanyulin.info/category/jing-pin-shu-ji.html">精品书籍</a></li>
+						  				  											<li><a href="http://www.yanyulin.info/category/shi-pin-jiao-cheng.html">视频教程</a></li>
+						  				  											<li><a href="http://www.yanyulin.info/category/wan-zhuan-ji-zhu.html">玩转技术</a></li>
+						  				  											<li><a href="http://www.yanyulin.info/category/yan-yu-za-tan.html">烟雨杂谈</a></li>
+						  		</ul>
+					   	</div> 
+				  </div>
+			  </div>
+			</div>
+<script type="text/javascript">
+    function doZoom(size) {
+        var zoom = document.all ? document.all['entry'] : document.getElementById('entry');
+        zoom.style.fontSize = size + 'px';
+    }
+</script>
+<div class="test_right">
+		<div id="content">							 
+					<div id="map">
+						<div class="browse">现在的位置: <a title="返回首页" href="http://www.yanyulin.info" target="_blank">烟雨首页</a> ＞
+						<a href="http://www.yanyulin.info/category/bian-cheng-yu-yan.html"  target="_blank" title="查看编程语言中的全部文章" rel="category tag">编程语言</a>＞正文</div>
+						<div class="font"><a href="javascript:doZoom(12)">小</a> <a href="javascript:doZoom(13)">中</a> <a href="javascript:doZoom(18)">大</a></div>
+					</div>
+					<div class="entry_box_s">
+						<div class="entry_title_box">
+							<div class="entry_title">程序代码优化需要考虑的问题</div>
+							<div class="archive_info">
+								<span class="date">2014-03-25</span>
+								<span class="category"> ⁄ 							
+						  <a href="http://www.yanyulin.info/tag/suan-fa-ji-tie.html" target="_blank" title="查看同类文章" rel="category tag">算法集贴</a>&nbsp;
+						  </span>
+							</div>
+						</div>
+						<div class="entry">
+							<div id="entry" style="font-size: 14px; ">
+							<hr/>
+<div align="left" style="padding:0px">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 320*50 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:320px;height:50px"
+     data-ad-client="ca-pub-6620728980314958"
+     data-ad-slot="6117203227"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- BOTTOM_ONE -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:320px;height:50px"
+     data-ad-client="ca-pub-6620728980314958"
+     data-ad-slot="1687003628"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+							<hr />
+<p><strong>内联函数的使用</strong></p>
+<p>C语言中过多的函数调用，虽然可以提高程序的结构化与规范化，但是会降低程序的运行效率，函数调用本身就是一个复杂的过程，调用的过程中涉及到函数调用上下文环境的交换，函数参数的传递，堆栈的操作等一系列复杂的过程，如果一个算法中涉及到太多的函数调用，以及函数的嵌套调用，势必会影响到算法的运行时间以及算法的空间开销，内联函数类似于宏定义，都是在调用处对代码进行展开，替换掉调用处的代码，只不过一个处于预编译阶段，而另一个处于编译阶段，内联函数的调用方式与函数一样，使用内联函数时要注意以下几点：</p>
+<p>1：递归函数不能定义为内联函数</p>
+<p>2：内联函数的函数体不能太复杂，例如含有较大的循环语句等</p>
+<p>3：内联函数要先定义后使用，而用不能有异常声明。</p>
+<p><strong>关键字的使用</strong></p>
+<p>C语言中有许多的关键字对于提高程序的运行效率也是有一定的作用，例如：define宏定义作用上类似于内联函数，可以将代码量较小的函数，定义成一个宏，采用预编译阶段的宏替换，减少函数的调用或者代码的冗余；volatile定义了一个变量是异变的，每次对该变量的操作必须从内存中重新读取，这在一定程序上降低了程序的运行效率，因此volatile关键字的使用需要谨慎;const修饰的一个变量时表示该变量是一个常量，restrict修改指针变量时表示该指针变量所指向的内存空间不与其他对象重叠，这两个关键字的使用有利于代码的并行执行。</p>
+<p><strong>运算符的使用</strong></p>
+<p>由于CPU对乘除运算是通过一系列的加减运算实现的，因此在算法设计中过多的使用乘除运算在一定程度上也对算法的效率产生了影响，在DSP中，一条乘法指令需要4个周期才能完成，定点DSP中根本没有与除法相关的指令，必须通过软件方式模拟除法的实现，效率比较低下，但是CPU能够快速的执行移位运算，一条移位运算指令只需要一个周期即可完成，因此将乘除运算通过左移与右移进行实现，另一个运算符&amp;对于提高程序的效率也是有作用的，此处的&amp;并不是取地址，而是表示引用(C++中引入)，从而避免了数据的复制，因此运算符的合理使用对提高算法的运行效率也是有作用的。</p>
+<p><strong>数据类型的使用</strong></p>
+<p>数据类型的选用对提高算法的运行效率，编译器的优化也具有一定的作用，例如，C64X DSP具有双16bit扩充功能，芯片能在一个周期内完成16bit的乘法，加减法，比较，移位等操作，在设计时，当对连续的short型数据流操作时，应该转化成对int型数据流的操作，这样可以一次性将2个16位的short型数据读入一个32位的寄存器，然后用内部函数来对它们处理(如_sub2等),充分运用16bit扩充功能，一次可以进行2个16bit数据的运算，速度将提升一倍。</p>
+<p><strong>软件流水线</strong>
+软件流水线说白了就是对循环进行展开，使其更好的并行</p>
+<p><strong>算法结构调整</strong></p>
+<p>算法中可能存在较多的冗余的数据结构或者程序语句，以及一些无用的条件判断语句，占用了CPU的执行时间，找出并去掉程序中冗余的结构，有利于算法性能的提升，另一方面，可以提高算法性能的方法是将算法中程序语句进行调整，将指令级不相关的语句适当的穿插在指令级相关的语句中，有利于提高指令的并行性，从而达到提高算法或者程序的执行效率。</p>
+<p><strong>功能单元替换</strong></p>
+<p>算法中对耗时较大的功能单元，可以采用其他实现方式，如数学模型的替换、结合硬件特性对代码进行的更改，在一定程序上都能使程序的性能得以提升，例如针对TI公司生产的C6000系列的定点DSP中，由于没有对浮点运算的支持，因此对浮点处理较慢，可以采用TI公司提供的IQMath库实现高精度、高速度的实时计算，而这对于以浮点运算为主的数控系统来说是不可缺少的。结合处理器的特点可以对交换变量的值，采用移位运算来实现，两个数求平均数可以采用按位与，按位或，移位实现等等。</p>
+<p><strong>项目级优化</strong></p>
+<p>程序或者算法编译完毕后，由于采用的是高级语言编写程序，接近的是人的思维，因此要想在处理器上高速运行，必须对整个项目进行编译发布时的优化，此过程主要采用的是由编译器提供的编译选项，由编译器根据用户选择的优化级别做出对算法的优化，例如针对DSP处理器，TI公司开发的CCS(CODE COMPOSER STUDIO)集成开发环境，可以对C语言进行项目级的优化，其优化选项主要有如下(针对的是TMS320C6000 DSP)：</p>
+<p>1:--opt_level或者-O :表示编译器对代码的优化级别，其中--opt_level=3或者-O3的优化级别最高，具体方面可以查看参考文献[3] 。</p>
+<p>2:-ms:确俣不产生冗余循环，从而减少代码尺寸。</p>
+<p>3：--opt_for_space:用来降低代码的生成尺寸，配合-O3可以将最终的可执行代码尺寸降至最低。</p>
+<p>4:--gen_opt_info:用来产生可读的优化信息文件。</p>
+<p>5：-mt :编译器假设程序中没有数据存储混淆，可进一步的优化代码。</p>
+<p>6：-pm :使能程序级的优化。</p>
+<p>等等...</p>
+						  <div class="clear"></div>
+							</div>
+							<b>本文地址:</b> <a href="http://www.yanyulin.info/pages/2014/03/optimization.html" target="_self">http://www.yanyulin.info/pages/2014/03/optimization.html</a>
+							<div><font color="blue"><b>转载时请保留本文出处,谢谢您的合作</b></font></div>
+							<hr/>
+							<div class="clear" align="left">
+<!--广告-->
+							</div>
+						</div>			
+						<!-- Baidu Button BEGIN -->
+						<div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+						<a class="bds_qzone"></a>
+						<a class="bds_tsina"></a>
+						<a class="bds_tqq"></a>
+						<a class="bds_renren"></a>
+						<a class="bds_t163"></a>
+						<span class="bds_more"></span>
+						</div>
+						<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=6864225" ></script>
+						<script type="text/javascript" id="bdshell_js"></script>
+						<script type="text/javascript">			
+   		      document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+            </script>
+            <!-- Baidu Button END -->
+						<div class="clear"></div>
+						<!-- end: entry -->
+					</div>
+					<!-- entrymeta -->	
+				<center>
+					<div class="entry_sb">
+					</div>
+					<!-- end: entrymeta -->
+				<div class="context_b" align="left">
+					 上一篇: 
+  				 <a href="http://www.yanyulin.info/pages/2014/03/think_in_java.html" title="Java编程思想PDF版下载" target="_blank">Java编程思想PDF版下载</a>
+  				 &nbsp;&nbsp
+  				 下一篇:
+  				 <a href="http://www.yanyulin.info/pages/2014/03/jdbc.html" title="Communications link failure due to underlying exception" target="_blank">Communications link failure due to underlying exception</a>
+					 
+				</div>
+				<div class="context_b">
+ 
+			<table border="0px" width="100%">
+			
+	 
+  				 <tr>
+ 
+  				 <td width="50%" align="left">
+  				 <a href="http://www.yanyulin.info/pages/2014/03/optimization.html" title="程序代码优化需要考虑的问题" target="_blank">程序代码优化需要考虑的问题</a>
+  				 </td>
+	
+ 
+  				 <td><a href="#" align="left"></a></td>
+			</table>
+				</div>
+				<div class="context_b">
+			 <div class="ds-thread" data-title="程序代码优化需要考虑的问题"></div>
+			 <script type="text/javascript">
+			 	var duoshuoQuery={short_name:"yanyulin"};
+			 	var ds=document.createElement("script");
+			 	ds.type="text/javascript";
+			 	ds.async=true;
+			 	ds.src="http://static.duoshuo.com/embed.js";
+			 	ds.charset="UTF-8";document.getElementsByTagName("head")[0].appendChild(ds);
+			 </script>
+				</div>
+				</center>
+		</div>
+</div>
+<div id="sidebar">					
+	<div class="widget">
+				<h3 style="padding-left:5px">
+<form method="get" action="http://www.google.com.hk/search" target="_blank">
+<input type="text" name="q" style="width:227px">
+<input type="submit" value="站内搜索" name="btnG" id="btnG" style="cursor:pointer;background-color: #49AFCD;" title="站内搜索">
+<input type="hidden" name="ie" value="UTF-8">
+<input type="hidden" name="oe" value="UTF-8">
+<input type="hidden" name="hl" value="zh-CN">
+<input type="hidden" name="domains" value="www.yanyulin.info">
+<input type="hidden" name="sitesearch" value="www.yanyulin.info">
+</form>
+				</h3>	
+				<div class="box" style="padding:5px 0px 0px 0px" align="center">			
+					<div class="textwidget" style="padding:0px 0px 0px 0px" align="center">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- LEFT_SIDE -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-6620728980314958"
+     data-ad-slot="9349871228"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+					 </div>
+				</div>
+				<h3>相关标签</h3>
+				<div class="box">			
+						<div class="textwidget">
+							<div id="tagsLink">
+							<a  href="http://www.yanyulin.info/tag/tao-bao-ji-zhu.html" title="查看淘宝技术下的所有文章" style="background-color: #96C2AA" target="_blank">淘宝技术</a>
+						  </div>
+							<div id="tagsLink">
+							<a  href="http://www.yanyulin.info/tag/javafen-xi.html" title="查看Java分析下的所有文章" style="background-color: #96C2AA" target="_blank">Java分析</a>
+						  </div>
+							<div id="tagsLink">
+							<a  href="http://www.yanyulin.info/tag/suan-fa-ji-tie.html" title="查看算法集贴下的所有文章" style="background-color: #96C2AA" target="_blank">算法集贴</a>
+						  </div>
+							<div id="tagsLink">
+							<a  href="http://www.yanyulin.info/tag/linuxhui-zong.html" title="查看Linux汇总下的所有文章" style="background-color: #D17C93" target="_blank">Linux汇总</a>
+						  </div>
+							<div id="tagsLink">
+							<a  href="http://www.yanyulin.info/tag/gong-ju-shi-yong.html" title="查看工具使用下的所有文章" style="background-color: #96C2AA" target="_blank">工具使用</a>
+						  </div>
+							<div id="tagsLink">
+							<a  href="http://www.yanyulin.info/tag/cxue-xi.html" title="查看C++学习下的所有文章" style="background-color: #169EDD" target="_blank">C++学习</a>
+						  </div>
+						</div>
+						<div class="clear"></div>
+				</div>
+				<h3>本站直达</h3>
+				<div class="box">
+				<div class="textwidget">
+					<table id="tbl">
+  					<tbody>
+  						<tr>
+ 
+    							<td align="center"><a class="btn btn-info xsmall" href="http://www.yanyulin.info/category/bian-cheng-yu-yan.html" target="_blank"  title="查看编程语言下的所有文章">编程语言</a></td>
+			
+ 
+    							<td align="center"><a class="btn btn-info xsmall" href="http://www.yanyulin.info/category/cheng-xu-yuan-zhao-gong-zuo.html" target="_blank"  title="查看程序员找工作下的所有文章">程序员找工作</a></td>
+			
+ 
+    							<td align="center"><a class="btn btn-info xsmall" href="http://www.yanyulin.info/category/jing-pin-shu-ji.html" target="_blank"  title="查看精品书籍下的所有文章">精品书籍</a></td>
+			
+ 
+    							<td align="center"><a class="btn btn-info xsmall" href="http://www.yanyulin.info/category/shi-pin-jiao-cheng.html" target="_blank"  title="查看视频教程下的所有文章">视频教程</a></td>
+			
+ 
+    							<td align="center"><a class="btn btn-info xsmall" href="http://www.yanyulin.info/category/wan-zhuan-ji-zhu.html" target="_blank"  title="查看玩转技术下的所有文章">玩转技术</a></td>
+			
+  						</tr>	
+  						<tr>
+ 
+    							<td align="center"><a class="btn btn-info xsmall" href="http://www.yanyulin.info/category/tou-zi-li-cai.html" target="_blank"  title="查看投资理财下的所有文章">投资理财</a></td>
+			
+ 
+    							<td align="center"><a class="btn btn-info xsmall" href="http://www.yanyulin.info/category/cheng-xu-yuan-de-mian-jing.html" target="_blank"  title="查看程序员的面经下的所有文章">程序员的面经</a></td>
+			
+ 
+    							<td align="center"><a class="btn btn-info xsmall" href="http://www.yanyulin.info/category/yan-yu-za-tan.html" target="_blank"  title="查看烟雨杂谈下的所有文章">烟雨杂谈</a></td>
+			
+  						<td align="center"><a href="#"></a></td>
+  						<td align="center"><a href="#"></a></td>
+						</tbody>
+					</table>
+				</div>
+				</div>
+				<h3>邮箱订阅</h3>
+				<div class="box">			
+				<div class="textwidget">
+				<!--QQ邮件列表订阅嵌入代码-->
+				<table  border="0">
+  			<tbody>
+  			<tr>
+  			<td>
+				<!--以下是QQ邮件列表订阅嵌入代码-->
+        <div style="width: 110px;overflow: hidden; " class="WB_widget WB_follow_ex">
+        <div class="follow_btn_line" node-type="inner">
+        <a class="follow_btn status_followed" node-type="followBtn" target="_blank" title="烟雨林博客" href="http://list.qq.com/cgi-bin/qf_invite?id=8949c93bdc7fcbda12adc078acb2809d6f6eba09998d35e6">
+				<img border="0" width="107px" height="22px" alt="邮箱订阅" src="http://www.yanyulin.info/pics/picMode_light_s.png" />
+        </a></div></div>
+			  </td>
+				</tr>
+			  </tbody>
+			  </table>
+				</div>
+				</div>
+				<div class="random_r">
+				<h3>随便看看</h3>
+				<div class="box_r">
+				<ul>
+				<ul class="random-post-link">
+				<li class="random-post-link">
+				<a href="http://www.yanyulin.info/pages/2013/12/htaccess.html" target="_blank" title=".htaccess简明教程(SEO优化)">.htaccess简明教程(SEO优化)</a>
+				</li>
+				<li class="random-post-link">
+				<a href="http://www.yanyulin.info/pages/2014/03/coolpad_2014_1.html" target="_blank" title="宇龙酷派校园招聘面经2014年软件面经">宇龙酷派校园招聘面经2014年软件面经</a>
+				</li>
+				<li class="random-post-link">
+				<a href="http://www.yanyulin.info/pages/2014/03/jd_2014_b.html" target="_blank" title="京东产品经理笔试题2014年校园招聘">京东产品经理笔试题2014年校园招聘</a>
+				</li>
+				<li class="random-post-link">
+				<a href="http://www.yanyulin.info/pages/2014/03/think_in_java.html" target="_blank" title="Java编程思想PDF版下载">Java编程思想PDF版下载</a>
+				</li>
+				<li class="random-post-link">
+				<a href="http://www.yanyulin.info/pages/2013/11/vlinux2.html" target="_blank" title="Linux基础教程视频版(很详细)">Linux基础教程视频版(很详细)</a>
+				</li>
+				<li class="random-post-link">
+				<a href="http://www.yanyulin.info/pages/2014/01/whyRipple.html" target="_blank" title="为什么大家都转向了Ripple">为什么大家都转向了Ripple</a>
+				</li>
+				<li class="random-post-link">
+				<a href="http://www.yanyulin.info/pages/2014/03/zhihu_2.html" target="_blank" title="一款自动发链接软件的实现细节分析">一款自动发链接软件的实现细节分析</a>
+				</li>
+				<li class="random-post-link">
+				<a href="http://www.yanyulin.info/pages/2014/03/duoshuo.html" target="_blank" title="多说评论框如何|怎么样|实际测试">多说评论框如何|怎么样|实际测试</a>
+				</li>
+				</ul>
+				</ul>
+				<div class="clear"></div>
+				</div>
+				</div>
+				
+			<div class="hotarticles" align="center">
+						<hr/>
+				<div class="box_r" align="center">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- LEFT_SIDE -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-6620728980314958"
+     data-ad-slot="9349871228"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+				</div>
+				</div>
+				
+				<div class="hotarticles">
+				<h3>年度排行</h3>
+				<div class="box_r">
+				<ul>
+				<li>
+				<a href="http://www.yanyulin.info/pages/2014/03/navigator.html" target="_blank" title="pelican创建博客如何设置导航条">pelican创建博客如何设置导航条</a>
+				</li>
+				<li>
+				<a href="http://www.yanyulin.info/pages/2014/03/weconnect_2014_1.html" target="_blank" title="威盛电子校园招聘面经2014年软件面经">威盛电子校园招聘面经2014年软件面经</a>
+				</li>
+				<li>
+				<a href="http://www.yanyulin.info/pages/2014/03/dianping_2014_a.html" target="_blank" title="大众点评笔试题校招笔试题2014年技术类">大众点评笔试题校招笔试题2014年技术类</a>
+				</li>
+				<li>
+				<a href="http://www.yanyulin.info/pages/2013/11/deepc.html" target="_blank" title="C语言深度解剖(含金量高)">C语言深度解剖(含金量高)</a>
+				</li>
+				<li>
+				<a href="http://www.yanyulin.info/pages/2013/12/psbase_1.html" target="_blank" title="PhotoShop CS入门版视频教程(基础上)">PhotoShop CS入门版视频教程(基础上)</a>
+				</li>
+				<li>
+				<a href="http://www.yanyulin.info/pages/2014/02/xrptalk.html" target="_blank" title="XRP Talk论坛注册教程">XRP Talk论坛注册教程</a>
+				</li>
+				<li>
+				<a href="http://www.yanyulin.info/pages/2014/03/zhihu_2.html" target="_blank" title="一款自动发链接软件的实现细节分析">一款自动发链接软件的实现细节分析</a>
+				</li>
+				<li>
+				<a href="http://www.yanyulin.info/pages/2014/03/duoshuo.html" target="_blank" title="多说评论框如何|怎么样|实际测试">多说评论框如何|怎么样|实际测试</a>
+				</li>
+				<div class="clear"></div>
+				</div>
+				</div>
+				</div>
+				<div class="hotarticles" align="center">
+						<hr/>
+				<div class="box_r" align="center">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 160*600 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:160px;height:600px"
+     data-ad-client="ca-pub-6620728980314958"
+     data-ad-slot="3421088826"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+				<div class="clear"></div>
+				</div>
+				</div>
+				</div>
+	</div>
+</div>	 </div>		
+	 <div id="my_footer_wrapper">
+	 <div class="link">
+	 <a href="http://www.zhangxiaolong.org" target="_blank">Atlas</a>
+	 <a href="http://weibo.com/lamazi" target="_blank">我的微博</a>
+	 <a href="http://blog.csdn.net/column/details/job-school.html" target="_blank">IT公司笔试题</a>
+	 <a target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=2aC4t4agrIa1sLeZv7ahtLiwtfe6trQ" style="text-decoration:none;color:#A40000;">申请友链</a>
+	 <div class="clear"></div>
+   </div>
+   </div>
+	 <div id="my_footer_wrapper">
+	 <div id="my_footer">		
+	 <span>【</span><a href="http://www.yanyulin.info/sitemap.xml" target="_blank">本站地图</a><span>】
+	 </span> 		
+	 <span>【</span><a href="http://www.yanyulin.info/feeds/all.rss.xml" target="_blank">RSS订阅</a><span>】
+	 </span>  		
+	 <span>【</span><a href="http://www.yanyulin.info/sitemap.xml" target="_blank">谷歌地图</a><span>】
+	 </span> 		
+	 <span>【</span><a href="http://www.yanyulin.info" target="_blank">电脑版</a><span>】</span>    
+	 </div>
+  </div>  
+  <div id="my_copyright_wrapper">
+		<div id="my_copyright">
+		博主邮箱: zwjlpeng@gmail.com Copyright@2010-2020 <a href="http://www.yanyulin.info">烟雨林个人博客</a>
+		</div>
+  </div>
+<!--
+    <script>
+     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+     ga('create', 'UA-45829467-1', '');
+     ga('send', 'pageview');
+   </script>
+-->
+
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Ffc8ddb27d7faba664a1416d848575847' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+
+</body>
+</html>

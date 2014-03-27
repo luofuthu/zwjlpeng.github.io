@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<title>
+一款小米抢购软件实现源码分析(HttpClient) - 烟雨林</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
+<meta name="author" content="烟雨林">
+<meta name="description" content="烟雨林，是一个专注于互联网、搜索引擎、社会化网络、编程语言、程序员找工作、程序员面试等领域的原创IT科技博客">
+<meta name="keywords" content="烟雨|烟雨林|编程语言|互联网|程序员找工作|视频教程|程序员面经|Linux|数据挖掘|自然语言处理|移动互联">
+<link rel="stylesheet" type="text/css" href="http://www.yanyulin.info/theme/index.css" />
+<link rel="shortcut icon" href="http://www.yanyulin.info/theme/images/favicon.ico">
+</head>
+<body >
+   <div id="hed">
+			<div class="top_part">
+				<a href="http://www.yanyulin.info"><img src="http://www.yanyulin.info/theme/images/logo.png"/ alt="烟雨林" title="烟雨林" width="127px" height="29px"></a>
+			</div>
+	 </div>
+	 <div id="wrapper">
+			<div id="top">
+				<div id='topnav'>
+					<div >
+					   	<div >
+						  		<ul>	
+						   						<li><a href="http://www.yanyulin.info">烟雨首页</a></li>
+						  				  											<li><a href="http://www.yanyulin.info/category/bian-cheng-yu-yan.html">编程语言</a></li>
+						  				  											<li><a href="http://www.yanyulin.info/category/cheng-xu-yuan-de-mian-jing.html">程序员的面经</a></li>
+						  				  											<li><a href="http://www.yanyulin.info/category/cheng-xu-yuan-zhao-gong-zuo.html">程序员找工作</a></li>
+						  				  											<li><a href="http://www.yanyulin.info/category/jing-pin-shu-ji.html">精品书籍</a></li>
+						  				  											<li><a href="http://www.yanyulin.info/category/shi-pin-jiao-cheng.html">视频教程</a></li>
+						  																<li class="current-menu-item current_page_item "><a href="http://www.yanyulin.info/category/wan-zhuan-ji-zhu.html">玩转技术</a></li>
+						  				  											<li><a href="http://www.yanyulin.info/category/yan-yu-za-tan.html">烟雨杂谈</a></li>
+						  		</ul>
+					   	</div> 
+				  </div>
+			  </div>
+			</div>
+<script type="text/javascript">
+    function doZoom(size) {
+        var zoom = document.all ? document.all['entry'] : document.getElementById('entry');
+        zoom.style.fontSize = size + 'px';
+    }
+</script>
+<div class="test_right">
+		<div id="content">							 
+					<div id="map">
+						<div class="browse">现在的位置: <a title="返回首页" href="http://www.yanyulin.info" target="_blank">烟雨首页</a> ＞
+						<a href="http://www.yanyulin.info/category/wan-zhuan-ji-zhu.html"  target="_blank" title="查看玩转技术中的全部文章" rel="category tag">玩转技术</a>＞正文</div>
+						<div class="font"><a href="javascript:doZoom(12)">小</a> <a href="javascript:doZoom(13)">中</a> <a href="javascript:doZoom(18)">大</a></div>
+					</div>
+					<div class="entry_box_s">
+						<div class="entry_title_box">
+							<div class="entry_title">一款小米抢购软件实现源码分析(HttpClient)</div>
+							<div class="archive_info">
+								<span class="date">2014-03-15</span>
+								<span class="category"> ⁄ 							
+						  <a href="http://www.yanyulin.info/tag/shi-yong-gong-ju.html" target="_blank" title="查看同类文章" rel="category tag">实用工具</a>&nbsp;
+						  </span>
+							</div>
+						</div>
+						<div class="entry">
+							<div id="entry" style="font-size: 14px; ">
+							<hr/>
+<div align="left" style="padding:0px">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 320*50 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:320px;height:50px"
+     data-ad-client="ca-pub-6620728980314958"
+     data-ad-slot="6117203227"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- BOTTOM_ONE -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:320px;height:50px"
+     data-ad-client="ca-pub-6620728980314958"
+     data-ad-slot="1687003628"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+							<hr />
+<p><strong>源码下载</strong></p>
+<p><a href="http://pan.baidu.com/s/1jGr56tC" target="_blank">
+小米抢购软件以及源码下载
+</a></p>
+<p><strong>软件可以实现的功能</strong></p>
+<p>1、小米抢购团队密码批量修改软件适用于小米抢购团队，在抢购完成之后防止成员修改密码</p>
+<p>2、小米抢购团队密码批量修改软件修改密码速度取决于网速，<code>200</code>个号码一般1分钟左右修改完成</p>
+<p>3、小米抢购团队密码批量修改软件采用的是多线程实现技术，<code>速度杠杠的</code></p>
+<p>4、小米抢购团队密码批量修改软件不是抢购软件</p>
+<p><strong>源码分析</strong></p>
+<p>软件采用的是HttpClient进行实现，通过HttpClient模拟浏览器发送Post请求，实现用户自动登录，并进行密码的修改操作</p>
+<p>在这里顺便提一下HtmlUnit开源jar包，HtmlUnit是构建于HttpClient之上的一个开源Jar包，简单的说就是Java版的无窗口浏览器，速度挺快的，支持JS,但支持力度有限</p>
+<p>HtmlUnit的使用可以参考如下博文</p>
+<p><a href="http://www.yanyulin.info/pages/2014/03/zhihu_2.html" target="_blank">
+一款自动发链接软件的实现细节分析
+</a></p>
+<p><a href="http://www.yanyulin.info/pages/2013/11/fetchPage.html" target="_blank">
+爬虫的自我解剖(抓取网页HtmlUnit)
+</a></p>
+<p>HttpClient下载链接：</p>
+<p><a href="http://pan.baidu.com/s/1o6O7wnC" target="_blank">
+HttpClient相关jar包下载
+</a></p>
+<p>软件运行的效果图如下：</p>
+<p><a href="http://www.yanyulin.info/pages/2014/03/xiaomiqiaogou.html">
+<img src="http://www.yanyulin.info/pics/tools/xiaomiqianggou_1.jpg" alt="烟雨林博客"/>
+</a></p>
+<p><strong>输件界面代码采用的是substance.jar包中的疏皮肤库实现的，substance相关的jar包下载</strong></p>
+<p><a href="http://pan.baidu.com/s/1eQ7SHhC" target="_blank">
+HttpClient相关jar包下载
+</a></p>
+<p><strong>界面相关的代码</strong></p>
+<div class="highlight"><pre><span class="n">JFrame</span><span class="p">.</span><span class="n">setDefaultLookAndFeelDecorated</span><span class="p">(</span><span class="nb">true</span><span class="p">);</span>
+<span class="n">JDialog</span><span class="p">.</span><span class="n">setDefaultLookAndFeelDecorated</span><span class="p">(</span><span class="nb">true</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="n">setProperty</span><span class="p">(</span><span class="s">&quot;java.awt.im.style&quot;</span><span class="p">,</span> <span class="s">&quot;on-the-spot&quot;</span><span class="p">);</span>
+<span class="n">UIManager</span><span class="p">.</span><span class="n">setLookAndFeel</span><span class="p">(</span><span class="n">new</span> <span class="n">org</span><span class="p">.</span><span class="n">pushingpixels</span><span class="p">.</span><span class="n">substance</span><span class="p">.</span><span class="n">api</span><span class="p">.</span><span class="n">skin</span><span class="p">.</span><span class="n">SubstanceOfficeSilver2007LookAndFeel</span><span class="p">());</span>
+</pre></div>
+
+
+<p><strong>备注</strong></p>
+<p>System.setProperty("java.awt.im.style", "on-the-spot");此行是为了解决Java输入法中的窗口跟随毛病，但是这种方法效果非常有限，要想彻底解决，估计还得更改源码</p>
+<p><strong>界面采用的是java里面的table进行布局,给table设置数据模型</strong></p>
+<div class="highlight"><pre><span class="n">tm</span><span class="o">=</span><span class="n">new</span> <span class="n">DefaultTableModel</span><span class="p">()</span> <span class="p">{</span>        
+    <span class="n">private</span> <span class="k">static</span> <span class="n">final</span> <span class="kt">long</span> <span class="n">serialVersionUID</span> <span class="o">=</span> <span class="mi">1L</span><span class="p">;</span>
+    <span class="err">@</span><span class="n">Override</span>
+    <span class="n">public</span> <span class="n">Object</span> <span class="n">getValueAt</span><span class="p">(</span><span class="kt">int</span> <span class="n">rowIndex</span><span class="p">,</span> <span class="kt">int</span> <span class="n">columnIndex</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">vec</span><span class="p">.</span><span class="n">isEmpty</span><span class="p">())</span>
+            <span class="k">return</span> <span class="p">((</span><span class="n">Vector</span><span class="p">)</span><span class="n">vec</span><span class="p">.</span><span class="n">elementAt</span><span class="p">(</span><span class="n">rowIndex</span><span class="p">)).</span><span class="n">elementAt</span><span class="p">(</span><span class="n">columnIndex</span><span class="p">);</span>  
+        <span class="k">return</span> <span class="n">null</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="err">@</span><span class="n">Override</span>
+    <span class="n">public</span> <span class="kt">int</span> <span class="n">getRowCount</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">vec</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+    <span class="p">}</span>   
+    <span class="err">@</span><span class="n">Override</span>
+    <span class="n">public</span> <span class="kt">int</span> <span class="n">getColumnCount</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">title</span><span class="p">.</span><span class="n">length</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="n">public</span> <span class="n">String</span> <span class="n">getColumnName</span><span class="p">(</span><span class="kt">int</span> <span class="n">column</span><span class="p">){</span>  
+    <span class="k">return</span> <span class="n">title</span><span class="p">[</span><span class="n">column</span><span class="p">];</span>   
+    <span class="p">}</span>
+    <span class="n">public</span> <span class="kt">void</span> <span class="n">setValueAt</span><span class="p">(</span><span class="n">Object</span> <span class="n">value</span><span class="p">,</span><span class="kt">int</span> <span class="n">row</span><span class="p">,</span><span class="kt">int</span> <span class="n">column</span><span class="p">){}</span><span class="c1">//数据模型不可编辑，譔方法设置为空</span>
+    <span class="n">public</span> <span class="n">boolean</span> <span class="n">isCellEditable</span><span class="p">(</span><span class="kt">int</span> <span class="n">row</span><span class="p">,</span><span class="kt">int</span> <span class="n">column</span><span class="p">){</span>  
+    <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+    <span class="p">}</span>   
+<span class="p">};</span>
+</pre></div>
+
+
+<p><strong>批量读取用户的帐号以及密码</strong></p>
+<p>在导入用户的帐户与密码时会将上次导入的帐号与密码清空，代码如下</p>
+<div class="highlight"><pre><span class="n">vecInput</span><span class="p">.</span><span class="n">removeAllElements</span><span class="p">();</span>
+<span class="n">vecInput</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span>
+<span class="n">vec</span><span class="p">.</span><span class="n">removeAllElements</span><span class="p">();</span>
+<span class="n">vec</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span>
+<span class="n">String</span> <span class="n">strURL</span><span class="o">=</span><span class="n">file</span><span class="p">.</span><span class="n">getSelectedFile</span><span class="p">().</span><span class="n">getAbsolutePath</span><span class="p">();</span>
+<span class="n">String</span> <span class="n">data</span> <span class="o">=</span> <span class="n">null</span><span class="p">;</span>
+<span class="n">br</span> <span class="o">=</span> <span class="n">new</span> <span class="n">BufferedReader</span><span class="p">(</span><span class="n">new</span> <span class="n">InputStreamReader</span><span class="p">(</span><span class="n">new</span> <span class="n">FileInputStream</span><span class="p">(</span><span class="n">strURL</span><span class="p">)));</span>
+<span class="k">while</span><span class="p">((</span><span class="n">data</span> <span class="o">=</span> <span class="n">br</span><span class="p">.</span><span class="n">readLine</span><span class="p">())</span><span class="o">!=</span><span class="n">null</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">data</span><span class="p">.</span><span class="n">trim</span><span class="p">().</span><span class="n">length</span><span class="p">()</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span>
+        <span class="k">continue</span><span class="p">;</span>
+    <span class="n">String</span> <span class="p">[]</span><span class="n">str</span><span class="o">=</span><span class="n">data</span><span class="p">.</span><span class="n">split</span><span class="p">(</span><span class="s">&quot; &quot;</span><span class="p">);</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">str</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">trim</span><span class="p">().</span><span class="n">length</span><span class="p">()</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">vecInput</span><span class="p">.</span><span class="n">removeAllElements</span><span class="p">();</span>
+        <span class="n">vecInput</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span>
+        <span class="n">vec</span><span class="p">.</span><span class="n">removeAllElements</span><span class="p">();</span>
+        <span class="n">vec</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span>
+        <span class="n">JOptionPane</span><span class="p">.</span><span class="n">showMessageDialog</span><span class="p">(</span><span class="n">null</span><span class="p">,</span><span class="s">&quot;导入了错误数据，请检查&quot;</span><span class="p">,</span><span class="s">&quot;导入结果&quot;</span><span class="p">,</span><span class="n">JOptionPane</span><span class="p">.</span><span class="n">INFORMATION_MESSAGE</span><span class="p">);</span>
+        <span class="k">return</span> <span class="p">;</span>
+    <span class="p">}</span>
+    <span class="n">vecInput</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">str</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">trim</span><span class="p">());</span>
+<span class="p">}</span>
+<span class="n">objThis</span><span class="p">.</span><span class="n">setTitle</span><span class="p">(</span><span class="s">&quot;批量修改密码&quot;</span><span class="o">+</span><span class="s">&quot;--已导入帐号(&quot;</span><span class="o">+</span><span class="n">vecInput</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="o">+</span><span class="s">&quot;个)&quot;</span><span class="p">);</span>
+</pre></div>
+
+
+<p><strong>备注</strong></p>
+<p>代码中的vecInput用来存放用户的帐号，vec用来存放用户的密码，此处假设的是用户的密码都是同一个数，因此可以不用存储，在后绪的程序中直接使用这个密码即可</p>
+<p><strong>模拟post请求登录界面</strong></p>
+<p>Httpclient可以模拟post/get请求，操作都是非常方便的，代码如下所示，在模拟post或者get请求时需要先打开浏览器查看一下post请求的参数设置情况：</p>
+<p>模拟登录之前需要设置一些超时参数如下：</p>
+<div class="highlight"><pre><span class="n">httpClient</span> <span class="o">=</span> <span class="n">new</span> <span class="n">HttpClient</span><span class="p">();</span>
+<span class="n">httpClient</span><span class="p">.</span><span class="n">getHttpConnectionManager</span><span class="p">().</span><span class="n">getParams</span><span class="p">().</span><span class="n">setSoTimeout</span><span class="p">(</span><span class="mi">10000</span><span class="p">);</span>
+<span class="n">httpClient</span><span class="p">.</span><span class="n">getHttpConnectionManager</span><span class="p">().</span><span class="n">getParams</span><span class="p">().</span><span class="n">setConnectionTimeout</span><span class="p">(</span><span class="mi">10000</span><span class="p">);</span>
+</pre></div>
+
+
+<p>如下是post请求的相关参数</p>
+<div class="highlight"><pre><span class="n">PostMethod</span> <span class="n">postMethod</span><span class="o">=</span><span class="n">new</span> <span class="n">PostMethod</span><span class="p">(</span><span class="s">&quot;https://account.xiaomi.com/pass/serviceLoginAuth&quot;</span><span class="p">);</span>
+        <span class="n">NameValuePair</span><span class="p">[]</span> <span class="n">data</span> <span class="o">=</span> <span class="p">{</span> <span class="n">new</span> <span class="n">NameValuePair</span><span class="p">(</span><span class="s">&quot;passToken&quot;</span><span class="p">,</span> <span class="s">&quot;&quot;</span><span class="p">),</span>  
+                                 <span class="n">new</span> <span class="n">NameValuePair</span><span class="p">(</span><span class="s">&quot;user&quot;</span><span class="p">,</span><span class="n">email</span><span class="p">.</span><span class="n">trim</span><span class="p">()),</span>
+                                 <span class="n">new</span> <span class="n">NameValuePair</span><span class="p">(</span><span class="s">&quot;pwd&quot;</span><span class="p">,</span> <span class="n">pwd</span><span class="p">.</span><span class="n">trim</span><span class="p">()),</span>
+                                 <span class="n">new</span> <span class="n">NameValuePair</span><span class="p">(</span><span class="s">&quot;callback&quot;</span><span class="p">,</span> <span class="s">&quot;https://account.xiaomi.com&quot;</span><span class="p">),</span>
+                                 <span class="n">new</span> <span class="n">NameValuePair</span><span class="p">(</span><span class="s">&quot;sid&quot;</span><span class="p">,</span> <span class="s">&quot;passport&quot;</span><span class="p">),</span>
+                                 <span class="n">new</span> <span class="n">NameValuePair</span><span class="p">(</span><span class="s">&quot;hidden&quot;</span><span class="p">,</span> <span class="s">&quot;&quot;</span><span class="p">),</span>
+                                <span class="p">};</span>
+</pre></div>
+
+
+<p>设置post请求：</p>
+<div class="highlight"><pre><span class="n">postMethod</span><span class="p">.</span><span class="n">setRequestBody</span><span class="p">(</span><span class="n">data</span><span class="p">);</span>
+<span class="n">postMethod</span><span class="p">.</span><span class="n">getParams</span><span class="p">().</span><span class="n">setParameter</span><span class="p">(</span><span class="n">HttpMethodParams</span><span class="p">.</span><span class="n">RETRY_HANDLER</span><span class="p">,</span><span class="n">null</span><span class="p">);</span>
+</pre></div>
+
+
+<p>开始执行post请求：</p>
+<div class="highlight"><pre><span class="n">status</span> <span class="o">=</span> <span class="n">httpClient</span><span class="p">.</span><span class="n">executeMethod</span><span class="p">(</span><span class="n">postMethod</span><span class="p">);</span>
+</pre></div>
+
+
+<p>判断post请求执行是否成功，成功后进行计数操作：</p>
+<div class="highlight"><pre><span class="k">if</span><span class="p">(</span><span class="nb">status</span><span class="o">==</span><span class="mi">200</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="nx">Vector</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span> <span class="n">tmp</span><span class="o">=</span><span class="nb">new</span> <span class="nx">Vector</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span><span class="p">();</span>
+        <span class="nx">tmp.add</span><span class="p">(</span><span class="nx">email</span><span class="p">);</span>
+        <span class="nx">tmp.add</span><span class="p">(</span><span class="s2">&quot;失败(被更改了)&quot;</span><span class="p">);</span>
+        <span class="nx">try</span> <span class="p">{</span>
+            <span class="nx">sem.acquire</span><span class="p">();</span>
+            <span class="nx">vec.add</span><span class="p">(</span><span class="nx">tmp</span><span class="p">);</span>
+            <span class="nx">tm.fireTableDataChanged</span><span class="p">();</span>
+            <span class="nx">sem.release</span><span class="p">();</span>
+        <span class="p">}</span> <span class="nx">catch</span> <span class="p">(</span><span class="nx">InterruptedException</span> <span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">sem.release</span><span class="p">();</span>
+            <span class="nx">e.printStackTrace</span><span class="p">();</span>
+        <span class="p">}</span>
+            <span class="nx">postMethod.releaseConnection</span><span class="p">();</span>
+            <span class="nx">postMethod.abort</span><span class="p">();</span>
+            <span class="n">httpClient</span><span class="o">=</span><span class="kt">null</span><span class="p">;</span>
+            <span class="n">postMethod</span><span class="o">=</span><span class="kt">null</span><span class="p">;</span>
+            <span class="nb">continue</span><span class="p">;</span>
+    <span class="p">}</span>
+</pre></div>
+
+
+<p>程序中还使用了多线程操作，具体可以参考程序源码</p>
+						  <div class="clear"></div>
+							</div>
+							<b>本文地址:</b> <a href="http://www.yanyulin.info/pages/2014/03/xiaomiqianggou.html" target="_self">http://www.yanyulin.info/pages/2014/03/xiaomiqianggou.html</a>
+							<div><font color="blue"><b>转载时请保留本文出处,谢谢您的合作</b></font></div>
+							<hr/>
+							<div class="clear" align="left">
+<!--广告-->
+							</div>
+						</div>			
+						<!-- Baidu Button BEGIN -->
+						<div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+						<a class="bds_qzone"></a>
+						<a class="bds_tsina"></a>
+						<a class="bds_tqq"></a>
+						<a class="bds_renren"></a>
+						<a class="bds_t163"></a>
+						<span class="bds_more"></span>
+						</div>
+						<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=6864225" ></script>
+						<script type="text/javascript" id="bdshell_js"></script>
+						<script type="text/javascript">			
+   		      document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+            </script>
+            <!-- Baidu Button END -->
+						<div class="clear"></div>
+						<!-- end: entry -->
+					</div>
+					<!-- entrymeta -->	
+				<center>
+					<div class="entry_sb">
+					</div>
+					<!-- end: entrymeta -->
+				<div class="context_b" align="left">
+					 上一篇: 
+  				 <a href="http://www.yanyulin.info/pages/2014/03/alibaba_2014_B.html" title="阿里巴巴笔试题校招笔试题2014年笔试题" target="_blank">阿里巴巴笔试题校招笔试题2014年笔试题</a>
+  				 &nbsp;&nbsp
+  				 下一篇:
+  				 <a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_1.html" title="Velocity入门教程HelloWord程序" target="_blank">Velocity入门教程HelloWord程序</a>
+					 
+				</div>
+				<div class="context_b">
+ 
+			<table border="0px" width="100%">
+			
+	 
+  				 <tr>
+ 
+  				 <td width="50%" align="left">
+  				 <a href="http://www.yanyulin.info/pages/2014/03/xiaomiqianggou.html" title="一款小米抢购软件实现源码分析(HttpClient)" target="_blank">一款小米抢购软件实现源码分析(HttpClient)</a>
+  				 </td>
+	
+	 
+ 
+  				 <td width="50%" align="left">
+  				 <a href="http://www.yanyulin.info/pages/2014/03/zhihu_1.html" title="一款自动发链接的软件设计思路" target="_blank">一款自动发链接的软件设计思路</a>
+  				 </td>
+	
+  				 </tr>
+	 
+  				 <tr>
+ 
+  				 <td width="50%" align="left">
+  				 <a href="http://www.yanyulin.info/pages/2014/03/zhihu_2.html" title="一款自动发链接软件的实现细节分析" target="_blank">一款自动发链接软件的实现细节分析</a>
+  				 </td>
+	
+ 
+  				 <td><a href="#" align="left"></a></td>
+			</table>
+				</div>
+				<div class="context_b">
+			 <div class="ds-thread" data-title="一款小米抢购软件实现源码分析(HttpClient)"></div>
+			 <script type="text/javascript">
+			 	var duoshuoQuery={short_name:"yanyulin"};
+			 	var ds=document.createElement("script");
+			 	ds.type="text/javascript";
+			 	ds.async=true;
+			 	ds.src="http://static.duoshuo.com/embed.js";
+			 	ds.charset="UTF-8";document.getElementsByTagName("head")[0].appendChild(ds);
+			 </script>
+				</div>
+				</center>
+		</div>
+</div>
+<div id="sidebar">					
+	<div class="widget">
+				<h3 style="padding-left:5px">
+<form method="get" action="http://www.google.com.hk/search" target="_blank">
+<input type="text" name="q" style="width:227px">
+<input type="submit" value="站内搜索" name="btnG" id="btnG" style="cursor:pointer;background-color: #49AFCD;" title="站内搜索">
+<input type="hidden" name="ie" value="UTF-8">
+<input type="hidden" name="oe" value="UTF-8">
+<input type="hidden" name="hl" value="zh-CN">
+<input type="hidden" name="domains" value="www.yanyulin.info">
+<input type="hidden" name="sitesearch" value="www.yanyulin.info">
+</form>
+				</h3>	
+				<div class="box" style="padding:5px 0px 0px 0px" align="center">			
+					<div class="textwidget" style="padding:0px 0px 0px 0px" align="center">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- LEFT_SIDE -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-6620728980314958"
+     data-ad-slot="9349871228"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+					 </div>
+				</div>
+				<h3>相关标签</h3>
+				<div class="box">			
+						<div class="textwidget">
+							<div id="tagsLink">
+							<a  href="http://www.yanyulin.info/tag/shi-yong-gong-ju.html" title="查看实用工具下的所有文章" style="background-color: #96C2AA" target="_blank">实用工具</a>
+						  </div>
+							<div id="tagsLink">
+							<a  href="http://www.yanyulin.info/tag/jie-mian-bian-cheng.html" title="查看界面编程下的所有文章" style="background-color: #96C2AA" target="_blank">界面编程</a>
+						  </div>
+							<div id="tagsLink">
+							<a  href="http://www.yanyulin.info/tag/sou-suo-yin-qing.html" title="查看搜索引擎下的所有文章" style="background-color: #169EDD" target="_blank">搜索引擎</a>
+						  </div>
+						</div>
+						<div class="clear"></div>
+				</div>
+				<h3>本站直达</h3>
+				<div class="box">
+				<div class="textwidget">
+					<table id="tbl">
+  					<tbody>
+  						<tr>
+ 
+    							<td align="center"><a class="btn btn-info xsmall" href="http://www.yanyulin.info/category/bian-cheng-yu-yan.html" target="_blank"  title="查看编程语言下的所有文章">编程语言</a></td>
+			
+ 
+    							<td align="center"><a class="btn btn-info xsmall" href="http://www.yanyulin.info/category/cheng-xu-yuan-zhao-gong-zuo.html" target="_blank"  title="查看程序员找工作下的所有文章">程序员找工作</a></td>
+			
+ 
+    							<td align="center"><a class="btn btn-info xsmall" href="http://www.yanyulin.info/category/jing-pin-shu-ji.html" target="_blank"  title="查看精品书籍下的所有文章">精品书籍</a></td>
+			
+ 
+    							<td align="center"><a class="btn btn-info xsmall" href="http://www.yanyulin.info/category/shi-pin-jiao-cheng.html" target="_blank"  title="查看视频教程下的所有文章">视频教程</a></td>
+			
+ 
+    							<td align="center"><a class="btn btn-info xsmall" href="http://www.yanyulin.info/category/wan-zhuan-ji-zhu.html" target="_blank"  title="查看玩转技术下的所有文章">玩转技术</a></td>
+			
+  						</tr>	
+  						<tr>
+ 
+    							<td align="center"><a class="btn btn-info xsmall" href="http://www.yanyulin.info/category/tou-zi-li-cai.html" target="_blank"  title="查看投资理财下的所有文章">投资理财</a></td>
+			
+ 
+    							<td align="center"><a class="btn btn-info xsmall" href="http://www.yanyulin.info/category/cheng-xu-yuan-de-mian-jing.html" target="_blank"  title="查看程序员的面经下的所有文章">程序员的面经</a></td>
+			
+ 
+    							<td align="center"><a class="btn btn-info xsmall" href="http://www.yanyulin.info/category/yan-yu-za-tan.html" target="_blank"  title="查看烟雨杂谈下的所有文章">烟雨杂谈</a></td>
+			
+  						<td align="center"><a href="#"></a></td>
+  						<td align="center"><a href="#"></a></td>
+						</tbody>
+					</table>
+				</div>
+				</div>
+				<h3>邮箱订阅</h3>
+				<div class="box">			
+				<div class="textwidget">
+				<!--QQ邮件列表订阅嵌入代码-->
+				<table  border="0">
+  			<tbody>
+  			<tr>
+  			<td>
+				<!--以下是QQ邮件列表订阅嵌入代码-->
+        <div style="width: 110px;overflow: hidden; " class="WB_widget WB_follow_ex">
+        <div class="follow_btn_line" node-type="inner">
+        <a class="follow_btn status_followed" node-type="followBtn" target="_blank" title="烟雨林博客" href="http://list.qq.com/cgi-bin/qf_invite?id=8949c93bdc7fcbda12adc078acb2809d6f6eba09998d35e6">
+				<img border="0" width="107px" height="22px" alt="邮箱订阅" src="http://www.yanyulin.info/pics/picMode_light_s.png" />
+        </a></div></div>
+			  </td>
+				</tr>
+			  </tbody>
+			  </table>
+				</div>
+				</div>
+				<div class="random_r">
+				<h3>随便看看</h3>
+				<div class="box_r">
+				<ul>
+				<ul class="random-post-link">
+				<li class="random-post-link">
+				<a href="http://www.yanyulin.info/pages/2014/03/navigator.html" target="_blank" title="pelican创建博客如何设置导航条">pelican创建博客如何设置导航条</a>
+				</li>
+				<li class="random-post-link">
+				<a href="http://www.yanyulin.info/pages/2014/03/english_interview.html" target="_blank" title="英语面试自我介绍及常见问题解答">英语面试自我介绍及常见问题解答</a>
+				</li>
+				<li class="random-post-link">
+				<a href="http://www.yanyulin.info/pages/2014/03/coolpad_2014_A.html" target="_blank" title="宇龙酷派校园招聘笔试题2014年技术类笔试题南昌">宇龙酷派校园招聘笔试题2014年技术类笔试题南昌</a>
+				</li>
+				<li class="random-post-link">
+				<a href="http://www.yanyulin.info/pages/2013/11/effective.html" target="_blank" title="Effective C++(编程的50个细节)">Effective C++(编程的50个细节)</a>
+				</li>
+				<li class="random-post-link">
+				<a href="http://www.yanyulin.info/pages/2013/12/psbase2.html" target="_blank" title="Photoshop CS视频教程(下)">Photoshop CS视频教程(下)</a>
+				</li>
+				<li class="random-post-link">
+				<a href="http://www.yanyulin.info/pages/2014/03/xrpfree.html" target="_blank" title="[赠送]免费领取赠送获取ripple币啦">[赠送]免费领取赠送获取ripple币啦</a>
+				</li>
+				<li class="random-post-link">
+				<a href="http://www.yanyulin.info/pages/2014/03/xiaomiqianggou.html" target="_blank" title="一款小米抢购软件实现源码分析(HttpClient)">一款小米抢购软件实现源码分析(HttpClient)</a>
+				</li>
+				<li class="random-post-link">
+				<a href="http://www.yanyulin.info/pages/2014/03/duoshuo.html" target="_blank" title="多说评论框如何|怎么样|实际测试">多说评论框如何|怎么样|实际测试</a>
+				</li>
+				</ul>
+				</ul>
+				<div class="clear"></div>
+				</div>
+				</div>
+				
+			<div class="hotarticles" align="center">
+						<hr/>
+				<div class="box_r" align="center">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- LEFT_SIDE -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-6620728980314958"
+     data-ad-slot="9349871228"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+				</div>
+				</div>
+				
+				<div class="hotarticles">
+				<h3>年度排行</h3>
+				<div class="box_r">
+				<ul>
+				<li>
+				<a href="http://www.yanyulin.info/pages/2014/03/git.html" target="_blank" title="git保存用户名与密码(避免用户名密码输入)">git保存用户名与密码(避免用户名密码输入)</a>
+				</li>
+				<li>
+				<a href="http://www.yanyulin.info/pages/2014/01/baidu_1.html" target="_blank" title="百度校招2014年软研面经">百度校招2014年软研面经</a>
+				</li>
+				<li>
+				<a href="http://www.yanyulin.info/pages/2014/03/wanmei_2014_a.html" target="_blank" title="完美世界校招笔试题2014年技术类">完美世界校招笔试题2014年技术类</a>
+				</li>
+				<li>
+				<a href="http://www.yanyulin.info/pages/2013/11/deepc.html" target="_blank" title="C语言深度解剖(含金量高)">C语言深度解剖(含金量高)</a>
+				</li>
+				<li>
+				<a href="http://www.yanyulin.info/pages/2013/12/vc_1.html" target="_blank" title="VC视频教程(主要讲述`MFC`)">VC视频教程(主要讲述`MFC`)</a>
+				</li>
+				<li>
+				<a href="http://www.yanyulin.info/pages/2014/03/deletetrust.html" target="_blank" title="怎么删除Ripple里的信任网关">怎么删除Ripple里的信任网关</a>
+				</li>
+				<li>
+				<a href="http://www.yanyulin.info/pages/2013/11/fetchPage.html" target="_blank" title="爬虫的自我解剖(抓取网页HtmlUnit)">爬虫的自我解剖(抓取网页HtmlUnit)</a>
+				</li>
+				<li>
+				<a href="http://www.yanyulin.info/pages/2014/03/duoshuo.html" target="_blank" title="多说评论框如何|怎么样|实际测试">多说评论框如何|怎么样|实际测试</a>
+				</li>
+				<div class="clear"></div>
+				</div>
+				</div>
+				</div>
+				<div class="hotarticles" align="center">
+						<hr/>
+				<div class="box_r" align="center">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 160*600 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:160px;height:600px"
+     data-ad-client="ca-pub-6620728980314958"
+     data-ad-slot="3421088826"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+				<div class="clear"></div>
+				</div>
+				</div>
+				</div>
+	</div>
+</div>	 </div>		
+	 <div id="my_footer_wrapper">
+	 <div class="link">
+	 <a href="http://www.zhangxiaolong.org" target="_blank">Atlas</a>
+	 <a href="http://weibo.com/lamazi" target="_blank">我的微博</a>
+	 <a href="http://blog.csdn.net/column/details/job-school.html" target="_blank">IT公司笔试题</a>
+	 <a target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=2aC4t4agrIa1sLeZv7ahtLiwtfe6trQ" style="text-decoration:none;color:#A40000;">申请友链</a>
+	 <div class="clear"></div>
+   </div>
+   </div>
+	 <div id="my_footer_wrapper">
+	 <div id="my_footer">		
+	 <span>【</span><a href="http://www.yanyulin.info/sitemap.xml" target="_blank">本站地图</a><span>】
+	 </span> 		
+	 <span>【</span><a href="http://www.yanyulin.info/feeds/all.rss.xml" target="_blank">RSS订阅</a><span>】
+	 </span>  		
+	 <span>【</span><a href="http://www.yanyulin.info/sitemap.xml" target="_blank">谷歌地图</a><span>】
+	 </span> 		
+	 <span>【</span><a href="http://www.yanyulin.info" target="_blank">电脑版</a><span>】</span>    
+	 </div>
+  </div>  
+  <div id="my_copyright_wrapper">
+		<div id="my_copyright">
+		博主邮箱: zwjlpeng@gmail.com Copyright@2010-2020 <a href="http://www.yanyulin.info">烟雨林个人博客</a>
+		</div>
+  </div>
+<!--
+    <script>
+     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+     ga('create', 'UA-45829467-1', '');
+     ga('send', 'pageview');
+   </script>
+-->
+
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Ffc8ddb27d7faba664a1416d848575847' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+
+</body>
+</html>
