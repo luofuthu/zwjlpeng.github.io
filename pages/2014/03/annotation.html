@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<title>
+Java中Annotation注解机制实现分析 - 烟雨林</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
+<meta name="author" content="烟雨林">
+<meta name="description" content="烟雨林，是一个专注于互联网、搜索引擎、社会化网络、编程语言、程序员找工作、程序员面试等领域的原创IT科技博客">
+<meta name="keywords" content="烟雨|烟雨林|编程语言|互联网|程序员找工作|视频教程|程序员面经|Linux|数据挖掘|自然语言处理|移动互联">
+<link rel="stylesheet" type="text/css" href="http://www.yanyulin.info/theme/index.css" />
+<link rel="shortcut icon" href="http://www.yanyulin.info/theme/images/favicon.ico">
+</head>
+<body >
+   <div id="hed">
+			<div class="top_part">
+				<a href="http://www.yanyulin.info"><img src="http://www.yanyulin.info/theme/images/logo.png"/ alt="烟雨林" title="烟雨林" width="127px" height="29px"></a>
+			</div>
+	 </div>
+	 <div id="wrapper">
+			<div id="top">
+				<div id='topnav'>
+					<div >
+					   	<div >
+						  		<ul>	
+						   						<li><a href="http://www.yanyulin.info">烟雨首页</a></li>
+						  																<li class="current-menu-item current_page_item "><a href="http://www.yanyulin.info/category/bian-cheng-yu-yan.html">编程语言</a></li>
+						  				  											<li><a href="http://www.yanyulin.info/category/cheng-xu-yuan-de-mian-jing.html">程序员的面经</a></li>
+						  				  											<li><a href="http://www.yanyulin.info/category/cheng-xu-yuan-zhao-gong-zuo.html">程序员找工作</a></li>
+						  				  											<li><a href="http://www.yanyulin.info/category/jing-pin-shu-ji.html">精品书籍</a></li>
+						  				  											<li><a href="http://www.yanyulin.info/category/shi-pin-jiao-cheng.html">视频教程</a></li>
+						  				  											<li><a href="http://www.yanyulin.info/category/wan-zhuan-ji-zhu.html">玩转技术</a></li>
+						  				  											<li><a href="http://www.yanyulin.info/category/yan-yu-za-tan.html">烟雨杂谈</a></li>
+						  		</ul>
+					   	</div> 
+				  </div>
+			  </div>
+			</div>
+<script type="text/javascript">
+    function doZoom(size) {
+        var zoom = document.all ? document.all['entry'] : document.getElementById('entry');
+        zoom.style.fontSize = size + 'px';
+    }
+</script>
+<div class="test_right">
+		<div id="content">							 
+					<div id="map">
+						<div class="browse">现在的位置: <a title="返回首页" href="http://www.yanyulin.info" target="_blank">烟雨首页</a> ＞
+						<a href="http://www.yanyulin.info/category/bian-cheng-yu-yan.html"  target="_blank" title="查看编程语言中的全部文章" rel="category tag">编程语言</a>＞正文</div>
+						<div class="font"><a href="javascript:doZoom(12)">小</a> <a href="javascript:doZoom(13)">中</a> <a href="javascript:doZoom(18)">大</a></div>
+					</div>
+					<div class="entry_box_s">
+						<div class="entry_title_box">
+							<div class="entry_title">Java中Annotation注解机制实现分析</div>
+							<div class="archive_info">
+								<span class="date">2014-03-16</span>
+								<span class="category"> ⁄ 							
+						  <a href="http://www.yanyulin.info/tag/javafen-xi.html" target="_blank" title="查看同类文章" rel="category tag">Java分析</a>&nbsp;
+						  </span>
+							</div>
+						</div>
+						<div class="entry">
+							<div id="entry" style="font-size: 14px; ">
+							<hr/>
+<div align="left" style="padding:0px">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 320*50 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:320px;height:50px"
+     data-ad-client="ca-pub-6620728980314958"
+     data-ad-slot="6117203227"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- BOTTOM_ONE -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:320px;height:50px"
+     data-ad-client="ca-pub-6620728980314958"
+     data-ad-slot="1687003628"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+							<hr />
+<p>Java中的Annotation很常见，只是时常被人忽略而已，因为如果不和Java反射机制混合使用时，<code>Annotation</code>注解估计也只能被用来起着注解说明的用途了，以下就是Java中一个典型的<code>Annotation</code>注解</p>
+<p><a href="http://www.yanyulin.info/pages/2014/03/annotation.html">
+<img src="http://www.yanyulin.info/pics/java/annotation_1.jpg" alt="烟雨林博客"/>
+</a></p>
+<p>红色方框中的@Override，是不是见过:),只是经常被忽略而已，去掉也没大影响，是的，真的没什么影响，如果你跟踪@Override注解，你会发现如下代码：</p>
+<p><a href="http://www.yanyulin.info/pages/2014/03/annotation.html">
+<img src="http://www.yanyulin.info/pics/java/annotation_2.jpg" alt="烟雨林博客"/>
+</a></p>
+<p>代码的第一行说明了该注解是用来修饰方法的，代码的第二行是用来说明注解只出现在源代码中，即注解在代码编译后的字节码文件以及运行时是不会出现的，所以呢，你去掉该注解是不会影响程序的运行，但不是所有的注解都可以去掉，有些注解去掉了，就要影响程序的运行了，因为注解已经被编译进字节码文件中，代码在运行的过程中会通过反射机制从注解中获取一 些相关的信息，最典型的莫过于淘宝的WebX框架，随处可见这样的使用，如下代码：</p>
+<p><a href="http://www.yanyulin.info/pages/2014/03/annotation.html">
+<img src="http://www.yanyulin.info/pics/java/annotation_3.jpg" alt="烟雨林博客"/>
+</a></p>
+<p>这里的<code>@FormGroup</code>就不能去掉，如果跟踪可以发现注解的是这样说明的</p>
+<p><a href="http://www.yanyulin.info/pages/2014/03/annotation.html">
+<img src="http://www.yanyulin.info/pics/java/annotation_4.jpg" alt="烟雨林博客"/>
+</a></p>
+<p>代码的第一行说明了注解会出现在运行时，第二行则说明了该注解是用来修饰方法参数的,所以注解去掉后，程序将无法运行，因为WebX框架将会通过Java反射机制获取注解参数初始化simple。</p>
+<p><code>Annotation详解</code>：</p>
+<p><code>Annotation</code>提供了一条与程序元素关联任何信息或者任何元数据的途径，从某些方面看，<code>Annotation</code>就像修饰符一样被使用，并应用于包/类型/构造方法/方法/成员变量/参数/本地变量的声明中,这些信息被存储在
+Annotation的“name=value”结构对中。</p>
+<p>样例解释(此代码来源于<code>WebX框架</code>中的<code>FormGroup.java</code>)：</p>
+<p><a href="http://www.yanyulin.info/pages/2014/03/annotation.html">
+<img src="http://www.yanyulin.info/pics/java/annotation_5.jpg" alt="烟雨林博客"/>
+</a></p>
+<p>上面的代码就是图一中的@FromGroup的实现，代码中的第一行表示注解将会出现在运行时，这里可以说明一下，注解出现的三个时期，CLASS/SOURCE/RUNTIME,其中CLASS说明注解将会出现在字节码文件中，SOURCE表示注解将会出现在源代码文件中，RUNTIME表示注解将会出现在运行期，备注：出现在字节码文件中的注解，在加载进JVM时不一定会出现，取决于注解的设置，在没有设定RetentionPolicy时，系统默认的是CLASS。</p>
+<p>其次ElementType是用来指定<code>Annotation</code>类型可以用在哪一些元素上的，包括TYPE（类型），METHOD（方法），<code>FIELD（字段）</code>，<code>PARAMETER（参数）</code>等。其中TYPE是指可以用在Class,Interface等类型上。
+最后就是注解里的属性说明了，看起来有点像函数,个人觉的看着不爽，这里有四个属性，每个属性均有一个默认的值，其中应该注意的就是第一个参数value,例如注解写成这种形式时@FormGroup(“simple”)就表示对注解中的 value赋值为simple,其他的取默认值。</p>
+<p>仿照WebX里的<code>@FormGromp</code>自已设计一个参数注解，可以节省代码。</p>
+<p>本例子是基于Java工程，而不是淘宝的WebX工程,实现参数注解</p>
+<p>注解FormGroup.java文件</p>
+<div class="highlight"><pre><span class="n">package</span> <span class="n">com</span><span class="p">.</span><span class="n">pp</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">java</span><span class="p">.</span><span class="n">lang</span><span class="p">.</span><span class="n">annotation</span><span class="p">.</span><span class="n">ElementType</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">java</span><span class="p">.</span><span class="n">lang</span><span class="p">.</span><span class="n">annotation</span><span class="p">.</span><span class="n">Retention</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">java</span><span class="p">.</span><span class="n">lang</span><span class="p">.</span><span class="n">annotation</span><span class="p">.</span><span class="n">RetentionPolicy</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">java</span><span class="p">.</span><span class="n">lang</span><span class="p">.</span><span class="n">annotation</span><span class="p">.</span><span class="n">Target</span><span class="p">;</span>
+<span class="err">@</span><span class="n">Retention</span><span class="p">(</span><span class="n">RetentionPolicy</span><span class="p">.</span><span class="n">RUNTIME</span><span class="p">)</span>
+<span class="err">@</span><span class="n">Target</span><span class="p">({</span> <span class="n">ElementType</span><span class="p">.</span><span class="n">PARAMETER</span> <span class="p">})</span>
+<span class="n">public</span> <span class="err">@</span><span class="n">interface</span> <span class="n">FormGroup</span> <span class="p">{</span>
+    <span class="c1">//value是默认值，适用于这种形式@FormGroup(&quot;simple&quot;)</span>
+    <span class="n">String</span> <span class="n">value</span><span class="p">()</span> <span class="k">default</span> <span class="s">&quot;&quot;</span><span class="p">;</span>
+    <span class="n">String</span> <span class="n">name</span><span class="p">()</span> <span class="k">default</span> <span class="s">&quot;&quot;</span><span class="p">;</span>
+    <span class="n">String</span> <span class="n">instanceKey</span><span class="p">()</span> <span class="k">default</span> <span class="s">&quot;&quot;</span><span class="p">;</span>
+    <span class="n">boolean</span> <span class="n">skipIfInvalid</span><span class="p">()</span> <span class="k">default</span> <span class="nb">true</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>一个简单的JavaBean文件SimpleObject.java</p>
+<div class="highlight"><pre><span class="n">package</span> <span class="n">com</span><span class="p">.</span><span class="n">pp</span><span class="p">;</span>
+
+<span class="n">public</span> <span class="n">class</span> <span class="n">SimpleObject</span> <span class="p">{</span>
+<span class="n">private</span> <span class="n">String</span> <span class="n">name</span><span class="p">;</span>
+
+<span class="n">public</span> <span class="n">String</span> <span class="nf">getName</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">name</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">public</span> <span class="kt">void</span> <span class="nf">setName</span><span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">this</span><span class="p">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>使用注解的类Action.java,主要是模拟WebX框架的Action机制</p>
+<div class="highlight"><pre><span class="n">package</span> <span class="n">com</span><span class="p">.</span><span class="n">pp</span><span class="p">;</span>
+<span class="n">public</span> <span class="n">class</span> <span class="n">Action</span> <span class="p">{</span>
+<span class="c1">//使用参数注解的方法</span>
+<span class="n">public</span> <span class="kt">void</span> <span class="n">printfUser</span><span class="p">(</span><span class="err">@</span><span class="n">FormGroup</span><span class="p">(</span><span class="s">&quot;pp&quot;</span><span class="p">)</span> <span class="n">SimpleObject</span> <span class="n">so</span><span class="p">){</span>
+    <span class="n">System</span><span class="p">.</span><span class="n">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">so</span><span class="p">.</span><span class="n">getName</span><span class="p">());</span>
+<span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>最后一个InvokeMain.java通过Java反射机制调用printfUser函数</p>
+<div class="highlight"><pre><span class="n">package</span> <span class="n">com</span><span class="p">.</span><span class="n">pp</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">java</span><span class="p">.</span><span class="n">lang</span><span class="p">.</span><span class="n">annotation</span><span class="p">.</span><span class="n">Annotation</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">java</span><span class="p">.</span><span class="n">lang</span><span class="p">.</span><span class="n">reflect</span><span class="p">.</span><span class="n">Method</span><span class="p">;</span>
+<span class="n">public</span> <span class="n">class</span> <span class="n">InvokeMain</span> <span class="p">{</span>
+<span class="n">public</span> <span class="kt">void</span> <span class="n">refInvoke</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">try</span> <span class="p">{</span>
+        <span class="c1">//利用Java反射机制获取Action里的方法说明</span>
+        <span class="n">Method</span> <span class="n">mtd</span><span class="o">=</span><span class="n">Action</span><span class="p">.</span><span class="n">class</span><span class="p">.</span><span class="n">getDeclaredMethod</span><span class="p">(</span><span class="s">&quot;printfUser&quot;</span><span class="p">,</span> <span class="n">SimpleObject</span><span class="p">.</span><span class="n">class</span><span class="p">);</span>
+        <span class="c1">//利用反射获取相关的参数注解</span>
+        <span class="n">Annotation</span> <span class="p">[][]</span><span class="n">ant</span><span class="o">=</span><span class="n">mtd</span><span class="p">.</span><span class="n">getParameterAnnotations</span><span class="p">();</span>
+        <span class="c1">//将参数注解转换成特定的注解类型</span>
+        <span class="n">FormGroup</span> <span class="n">tmp</span><span class="o">=</span><span class="p">(</span><span class="n">FormGroup</span><span class="p">)</span><span class="n">ant</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">];</span>
+        <span class="c1">//构造一个JavaBean对象</span>
+        <span class="n">SimpleObject</span> <span class="n">so</span><span class="o">=</span><span class="n">new</span> <span class="n">SimpleObject</span><span class="p">();</span>
+        <span class="c1">//对对象设置值 </span>
+        <span class="n">so</span><span class="p">.</span><span class="n">setName</span><span class="p">(</span><span class="n">tmp</span><span class="p">.</span><span class="n">value</span><span class="p">());</span>
+        <span class="c1">//调用对象里的方法</span>
+        <span class="n">mtd</span><span class="p">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">new</span> <span class="n">Action</span><span class="p">(),</span> <span class="n">so</span><span class="p">);</span>
+    <span class="p">}</span> <span class="n">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">e</span><span class="p">.</span><span class="n">printStackTrace</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">public</span> <span class="k">static</span> <span class="kt">void</span> <span class="n">main</span><span class="p">(</span><span class="n">String</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">new</span> <span class="n">InvokeMain</span><span class="p">().</span><span class="n">refInvoke</span><span class="p">();</span>
+<span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>好了，终于完了，不是吗,这里的过程其实与<code>WebX</code>框架的流程是一样的，哦，其实是我认为是一样的，WebX框架在接受到一个请求后，在页面显示之前，如图一所示，@FormGroup中的simple代表的是表单，在提交到相应的Action处理之前，中间会有一个反射机制的调用，反射机制中会从参数注解获取表单的名称，根据表单的名称进而从表单中获得用户提交的参数，即各种request.getParameter的调用，然后创建一个对象<code>SimpleObject simple</code>,并用获取的参数对simple进行赋值，然后通过反射机制调用<code>SimpleAction</code>里的<code>doGreeting</code>,看看我们上面的代码<code>Method.invoke()</code></p>
+<p>看了好久，也没找到WebX实现从注解中获取表单参数的代码，只找到了下面这几行关键代码，有找到的可以告诉我一下</p>
+<div class="highlight"><pre><span class="n">public</span> <span class="n">Object</span> <span class="nf">invoke</span><span class="p">(</span><span class="n">Object</span> <span class="n">obj</span><span class="p">,</span> <span class="n">Object</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span> <span class="n">throws</span> <span class="n">InvocationTargetException</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">fc</span><span class="p">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">obj</span><span class="p">,</span> <span class="n">args</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>从这里我们可以看到无论例子中还是WebX中注解的确是个好东西，可以节省代码的编写，将代码中共同的部分抽取出来，使得程序可以更加关注业务处理方面的内容，这也符合Spring中面向切面编程的要求。</p>
+<p>如果你是一个<code>C/C++</code>爱好者，像我一样，很抱谦，C++里真的没有注解Anotaton这一说，也没有反射这一说，如果说C++实现了反射(用typeid)我想作用也是很局限的，仅能判写出运行时类的类型，而且还是建立在虚基类或者虚函数的基础上，只要在这两个情况下，C++里的内存对象布局里虚函数表中才会有一项指明类的类别，这样运行时才能判断出来，如果没有虚函数虚基类这个词，那么你使用typeid获取的类的类型信息，均是在编译时期都已经确定好的，而不是运行期!</p>
+						  <div class="clear"></div>
+							</div>
+							<b>本文地址:</b> <a href="http://www.yanyulin.info/pages/2014/03/annotation.html" target="_self">http://www.yanyulin.info/pages/2014/03/annotation.html</a>
+							<div><font color="blue"><b>转载时请保留本文出处,谢谢您的合作</b></font></div>
+							<hr/>
+							<div class="clear" align="left">
+<!--广告-->
+							</div>
+						</div>			
+						<!-- Baidu Button BEGIN -->
+						<div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+						<a class="bds_qzone"></a>
+						<a class="bds_tsina"></a>
+						<a class="bds_tqq"></a>
+						<a class="bds_renren"></a>
+						<a class="bds_t163"></a>
+						<span class="bds_more"></span>
+						</div>
+						<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=6864225" ></script>
+						<script type="text/javascript" id="bdshell_js"></script>
+						<script type="text/javascript">			
+   		      document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+            </script>
+            <!-- Baidu Button END -->
+						<div class="clear"></div>
+						<!-- end: entry -->
+					</div>
+					<!-- entrymeta -->	
+				<center>
+					<div class="entry_sb">
+					</div>
+					<!-- end: entrymeta -->
+				<div class="context_b" align="left">
+					 上一篇: 
+  				 <a href="http://www.yanyulin.info/pages/2014/03/deletetrust.html" title="怎么删除Ripple里的信任网关" target="_blank">怎么删除Ripple里的信任网关</a>
+  				 &nbsp;&nbsp
+  				 下一篇:
+  				 <a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_3.html" title="Velocity入门例子事件监听机制" target="_blank">Velocity入门例子事件监听机制</a>
+					 
+				</div>
+				<div class="context_b">
+ 
+			<table border="0px" width="100%">
+			
+	 
+  				 <tr>
+ 
+  				 <td width="50%" align="left">
+  				 <a href="http://www.yanyulin.info/pages/2014/03/annotation.html" title="Java中Annotation注解机制实现分析" target="_blank">Java中Annotation注解机制实现分析</a>
+  				 </td>
+	
+	 
+ 
+  				 <td width="50%" align="left">
+  				 <a href="http://www.yanyulin.info/pages/2014/03/bytecode.html" title="Java字节码文件解读示例" target="_blank">Java字节码文件解读示例</a>
+  				 </td>
+	
+  				 </tr>
+	 
+  				 <tr>
+ 
+  				 <td width="50%" align="left">
+  				 <a href="http://www.yanyulin.info/pages/2014/03/jdbc.html" title="Communications link failure due to underlying exception" target="_blank">Communications link failure due to underlying exception</a>
+  				 </td>
+	
+	 
+ 
+  				 <td width="50%" align="left">
+  				 <a href="http://www.yanyulin.info/pages/2014/03/reflection.html" title="Java语言的反射机制分析" target="_blank">Java语言的反射机制分析</a>
+  				 </td>
+	
+  				 </tr>
+	 
+  				 <tr>
+ 
+  				 <td width="50%" align="left">
+  				 <a href="http://www.yanyulin.info/pages/2013/07/string.html" title="String StringBuffer StringBuilder的区别分析" target="_blank">String StringBuffer StringBuilder的区别分析</a>
+  				 </td>
+	
+ 
+  				 <td><a href="#" align="left"></a></td>
+			</table>
+				</div>
+				<div class="context_b">
+			 <div class="ds-thread" data-title="Java中Annotation注解机制实现分析"></div>
+			 <script type="text/javascript">
+			 	var duoshuoQuery={short_name:"yanyulin"};
+			 	var ds=document.createElement("script");
+			 	ds.type="text/javascript";
+			 	ds.async=true;
+			 	ds.src="http://static.duoshuo.com/embed.js";
+			 	ds.charset="UTF-8";document.getElementsByTagName("head")[0].appendChild(ds);
+			 </script>
+				</div>
+				</center>
+		</div>
+</div>
+<div id="sidebar">					
+	<div class="widget">
+				<h3 style="padding-left:5px">
+<form method="get" action="http://www.google.com.hk/search" target="_blank">
+<input type="text" name="q" style="width:227px">
+<input type="submit" value="站内搜索" name="btnG" id="btnG" style="cursor:pointer;background-color: #49AFCD;" title="站内搜索">
+<input type="hidden" name="ie" value="UTF-8">
+<input type="hidden" name="oe" value="UTF-8">
+<input type="hidden" name="hl" value="zh-CN">
+<input type="hidden" name="domains" value="www.yanyulin.info">
+<input type="hidden" name="sitesearch" value="www.yanyulin.info">
+</form>
+				</h3>	
+				<div class="box" style="padding:5px 0px 0px 0px" align="center">			
+					<div class="textwidget" style="padding:0px 0px 0px 0px" align="center">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- LEFT_SIDE -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-6620728980314958"
+     data-ad-slot="9349871228"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+					 </div>
+				</div>
+				<h3>相关标签</h3>
+				<div class="box">			
+						<div class="textwidget">
+							<div id="tagsLink">
+							<a  href="http://www.yanyulin.info/tag/tao-bao-ji-zhu.html" title="查看淘宝技术下的所有文章" style="background-color: #D17C93" target="_blank">淘宝技术</a>
+						  </div>
+							<div id="tagsLink">
+							<a  href="http://www.yanyulin.info/tag/javafen-xi.html" title="查看Java分析下的所有文章" style="background-color: #84A4B3" target="_blank">Java分析</a>
+						  </div>
+							<div id="tagsLink">
+							<a  href="http://www.yanyulin.info/tag/suan-fa-ji-tie.html" title="查看算法集贴下的所有文章" style="background-color: #169EDD" target="_blank">算法集贴</a>
+						  </div>
+							<div id="tagsLink">
+							<a  href="http://www.yanyulin.info/tag/linuxhui-zong.html" title="查看Linux汇总下的所有文章" style="background-color: #8C8BC6" target="_blank">Linux汇总</a>
+						  </div>
+							<div id="tagsLink">
+							<a  href="http://www.yanyulin.info/tag/gong-ju-shi-yong.html" title="查看工具使用下的所有文章" style="background-color: #96C2AA" target="_blank">工具使用</a>
+						  </div>
+							<div id="tagsLink">
+							<a  href="http://www.yanyulin.info/tag/cxue-xi.html" title="查看C++学习下的所有文章" style="background-color: #84A4B3" target="_blank">C++学习</a>
+						  </div>
+						</div>
+						<div class="clear"></div>
+				</div>
+				<h3>本站直达</h3>
+				<div class="box">
+				<div class="textwidget">
+					<table id="tbl">
+  					<tbody>
+  						<tr>
+ 
+    							<td align="center"><a class="btn btn-info xsmall" href="http://www.yanyulin.info/category/bian-cheng-yu-yan.html" target="_blank"  title="查看编程语言下的所有文章">编程语言</a></td>
+			
+ 
+    							<td align="center"><a class="btn btn-info xsmall" href="http://www.yanyulin.info/category/cheng-xu-yuan-zhao-gong-zuo.html" target="_blank"  title="查看程序员找工作下的所有文章">程序员找工作</a></td>
+			
+ 
+    							<td align="center"><a class="btn btn-info xsmall" href="http://www.yanyulin.info/category/jing-pin-shu-ji.html" target="_blank"  title="查看精品书籍下的所有文章">精品书籍</a></td>
+			
+ 
+    							<td align="center"><a class="btn btn-info xsmall" href="http://www.yanyulin.info/category/shi-pin-jiao-cheng.html" target="_blank"  title="查看视频教程下的所有文章">视频教程</a></td>
+			
+ 
+    							<td align="center"><a class="btn btn-info xsmall" href="http://www.yanyulin.info/category/wan-zhuan-ji-zhu.html" target="_blank"  title="查看玩转技术下的所有文章">玩转技术</a></td>
+			
+  						</tr>	
+  						<tr>
+ 
+    							<td align="center"><a class="btn btn-info xsmall" href="http://www.yanyulin.info/category/tou-zi-li-cai.html" target="_blank"  title="查看投资理财下的所有文章">投资理财</a></td>
+			
+ 
+    							<td align="center"><a class="btn btn-info xsmall" href="http://www.yanyulin.info/category/cheng-xu-yuan-de-mian-jing.html" target="_blank"  title="查看程序员的面经下的所有文章">程序员的面经</a></td>
+			
+ 
+    							<td align="center"><a class="btn btn-info xsmall" href="http://www.yanyulin.info/category/yan-yu-za-tan.html" target="_blank"  title="查看烟雨杂谈下的所有文章">烟雨杂谈</a></td>
+			
+  						<td align="center"><a href="#"></a></td>
+  						<td align="center"><a href="#"></a></td>
+						</tbody>
+					</table>
+				</div>
+				</div>
+				<h3>邮箱订阅</h3>
+				<div class="box">			
+				<div class="textwidget">
+				<!--QQ邮件列表订阅嵌入代码-->
+				<table  border="0">
+  			<tbody>
+  			<tr>
+  			<td>
+				<!--以下是QQ邮件列表订阅嵌入代码-->
+        <div style="width: 110px;overflow: hidden; " class="WB_widget WB_follow_ex">
+        <div class="follow_btn_line" node-type="inner">
+        <a class="follow_btn status_followed" node-type="followBtn" target="_blank" title="烟雨林博客" href="http://list.qq.com/cgi-bin/qf_invite?id=8949c93bdc7fcbda12adc078acb2809d6f6eba09998d35e6">
+				<img border="0" width="107px" height="22px" alt="邮箱订阅" src="http://www.yanyulin.info/pics/picMode_light_s.png" />
+        </a></div></div>
+			  </td>
+				</tr>
+			  </tbody>
+			  </table>
+				</div>
+				</div>
+				<div class="random_r">
+				<h3>随便看看</h3>
+				<div class="box_r">
+				<ul>
+				<ul class="random-post-link">
+				<li class="random-post-link">
+				<a href="http://www.yanyulin.info/pages/2014/03/comment.html" target="_blank" title="博客添加第三方评论系统多说评论框">博客添加第三方评论系统多说评论框</a>
+				</li>
+				<li class="random-post-link">
+				<a href="http://www.yanyulin.info/pages/2014/03/tencent_2014_1.html" target="_blank" title="腾讯校园招聘面经2014年软件研发面经">腾讯校园招聘面经2014年软件研发面经</a>
+				</li>
+				<li class="random-post-link">
+				<a href="http://www.yanyulin.info/pages/2013/12/microsoft_2014_A.html" target="_blank" title="微软2014年校招笔试题">微软2014年校招笔试题</a>
+				</li>
+				<li class="random-post-link">
+				<a href="http://www.yanyulin.info/pages/2013/11/effective.html" target="_blank" title="Effective C++(编程的50个细节)">Effective C++(编程的50个细节)</a>
+				</li>
+				<li class="random-post-link">
+				<a href="http://www.yanyulin.info/pages/2013/12/psbase_1.html" target="_blank" title="PhotoShop CS入门版视频教程(基础上)">PhotoShop CS入门版视频教程(基础上)</a>
+				</li>
+				<li class="random-post-link">
+				<a href="http://www.yanyulin.info/pages/2014/02/xrptalk.html" target="_blank" title="XRP Talk论坛注册教程">XRP Talk论坛注册教程</a>
+				</li>
+				<li class="random-post-link">
+				<a href="http://www.yanyulin.info/pages/2014/03/zhihu_1.html" target="_blank" title="一款自动发链接的软件设计思路">一款自动发链接的软件设计思路</a>
+				</li>
+				<li class="random-post-link">
+				<a href="http://www.yanyulin.info/pages/2014/03/duoshuo.html" target="_blank" title="多说评论框如何|怎么样|实际测试">多说评论框如何|怎么样|实际测试</a>
+				</li>
+				</ul>
+				</ul>
+				<div class="clear"></div>
+				</div>
+				</div>
+				
+			<div class="hotarticles" align="center">
+						<hr/>
+				<div class="box_r" align="center">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- LEFT_SIDE -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-6620728980314958"
+     data-ad-slot="9349871228"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+				</div>
+				</div>
+				
+				<div class="hotarticles">
+				<h3>年度排行</h3>
+				<div class="box_r">
+				<ul>
+				<li>
+				<a href="http://www.yanyulin.info/pages/2013/07/string.html" target="_blank" title="String StringBuffer StringBuilder的区别分析">String StringBuffer StringBuilder的区别分析</a>
+				</li>
+				<li>
+				<a href="http://www.yanyulin.info/pages/2014/01/qunar_1.html" target="_blank" title="去哪儿网校招2014年面经">去哪儿网校招2014年面经</a>
+				</li>
+				<li>
+				<a href="http://www.yanyulin.info/pages/2013/12/amzon_2014_A.html" target="_blank" title="亚马逊2014年校招笔试题(研发)">亚马逊2014年校招笔试题(研发)</a>
+				</li>
+				<li>
+				<a href="http://www.yanyulin.info/pages/2014/03/assemble.html" target="_blank" title="汇编语言王爽PDF版下载">汇编语言王爽PDF版下载</a>
+				</li>
+				<li>
+				<a href="http://www.yanyulin.info/pages/2013/11/vlinux2.html" target="_blank" title="Linux基础教程视频版(很详细)">Linux基础教程视频版(很详细)</a>
+				</li>
+				<li>
+				<a href="http://www.yanyulin.info/pages/2014/02/gko.html" target="_blank" title="[赠送]GKO币每天免费领取10ripple">[赠送]GKO币每天免费领取10ripple</a>
+				</li>
+				<li>
+				<a href="http://www.yanyulin.info/pages/2013/12/qqLogin_1.html" target="_blank" title="界面编程模仿篇(QQ登录界面逼真篇)">界面编程模仿篇(QQ登录界面逼真篇)</a>
+				</li>
+				<li>
+				<a href="http://www.yanyulin.info/pages/2014/03/duoshuo.html" target="_blank" title="多说评论框如何|怎么样|实际测试">多说评论框如何|怎么样|实际测试</a>
+				</li>
+				<div class="clear"></div>
+				</div>
+				</div>
+				</div>
+				<div class="hotarticles" align="center">
+						<hr/>
+				<div class="box_r" align="center">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 160*600 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:160px;height:600px"
+     data-ad-client="ca-pub-6620728980314958"
+     data-ad-slot="3421088826"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+				<div class="clear"></div>
+				</div>
+				</div>
+				</div>
+	</div>
+</div>	 </div>		
+	 <div id="my_footer_wrapper">
+	 <div class="link">
+	 <a href="http://www.zhangxiaolong.org" target="_blank">Atlas</a>
+	 <a href="http://weibo.com/lamazi" target="_blank">我的微博</a>
+	 <a href="http://blog.csdn.net/column/details/job-school.html" target="_blank">IT公司笔试题</a>
+	 <a target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=2aC4t4agrIa1sLeZv7ahtLiwtfe6trQ" style="text-decoration:none;color:#A40000;">申请友链</a>
+	 <div class="clear"></div>
+   </div>
+   </div>
+	 <div id="my_footer_wrapper">
+	 <div id="my_footer">		
+	 <span>【</span><a href="http://www.yanyulin.info/sitemap.xml" target="_blank">本站地图</a><span>】
+	 </span> 		
+	 <span>【</span><a href="http://www.yanyulin.info/feeds/all.rss.xml" target="_blank">RSS订阅</a><span>】
+	 </span>  		
+	 <span>【</span><a href="http://www.yanyulin.info/sitemap.xml" target="_blank">谷歌地图</a><span>】
+	 </span> 		
+	 <span>【</span><a href="http://www.yanyulin.info" target="_blank">电脑版</a><span>】</span>    
+	 </div>
+  </div>  
+  <div id="my_copyright_wrapper">
+		<div id="my_copyright">
+		博主邮箱: zwjlpeng@gmail.com Copyright@2010-2020 <a href="http://www.yanyulin.info">烟雨林个人博客</a>
+		</div>
+  </div>
+<!--
+    <script>
+     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+     ga('create', 'UA-45829467-1', '');
+     ga('send', 'pageview');
+   </script>
+-->
+
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Ffc8ddb27d7faba664a1416d848575847' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+
+</body>
+</html>

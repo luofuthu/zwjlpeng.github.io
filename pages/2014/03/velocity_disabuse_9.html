@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<title>
+Velocity语法简明教程 - 烟雨林</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
+<meta name="author" content="烟雨林">
+<meta name="description" content="烟雨林，是一个专注于互联网、搜索引擎、社会化网络、编程语言、程序员找工作、程序员面试等领域的原创IT科技博客">
+<meta name="keywords" content="烟雨|烟雨林|编程语言|互联网|程序员找工作|视频教程|程序员面经|Linux|数据挖掘|自然语言处理|移动互联">
+<link rel="stylesheet" type="text/css" href="http://www.yanyulin.info/theme/index.css" />
+<link rel="shortcut icon" href="http://www.yanyulin.info/theme/images/favicon.ico">
+</head>
+<body >
+   <div id="hed">
+			<div class="top_part">
+				<a href="http://www.yanyulin.info"><img src="http://www.yanyulin.info/theme/images/logo.png"/ alt="烟雨林" title="烟雨林" width="127px" height="29px"></a>
+			</div>
+	 </div>
+	 <div id="wrapper">
+			<div id="top">
+				<div id='topnav'>
+					<div >
+					   	<div >
+						  		<ul>	
+						   						<li><a href="http://www.yanyulin.info">烟雨首页</a></li>
+						  																<li class="current-menu-item current_page_item "><a href="http://www.yanyulin.info/category/bian-cheng-yu-yan.html">编程语言</a></li>
+						  				  											<li><a href="http://www.yanyulin.info/category/cheng-xu-yuan-de-mian-jing.html">程序员的面经</a></li>
+						  				  											<li><a href="http://www.yanyulin.info/category/cheng-xu-yuan-zhao-gong-zuo.html">程序员找工作</a></li>
+						  				  											<li><a href="http://www.yanyulin.info/category/jing-pin-shu-ji.html">精品书籍</a></li>
+						  				  											<li><a href="http://www.yanyulin.info/category/shi-pin-jiao-cheng.html">视频教程</a></li>
+						  				  											<li><a href="http://www.yanyulin.info/category/wan-zhuan-ji-zhu.html">玩转技术</a></li>
+						  				  											<li><a href="http://www.yanyulin.info/category/yan-yu-za-tan.html">烟雨杂谈</a></li>
+						  		</ul>
+					   	</div> 
+				  </div>
+			  </div>
+			</div>
+<script type="text/javascript">
+    function doZoom(size) {
+        var zoom = document.all ? document.all['entry'] : document.getElementById('entry');
+        zoom.style.fontSize = size + 'px';
+    }
+</script>
+<div class="test_right">
+		<div id="content">							 
+					<div id="map">
+						<div class="browse">现在的位置: <a title="返回首页" href="http://www.yanyulin.info" target="_blank">烟雨首页</a> ＞
+						<a href="http://www.yanyulin.info/category/bian-cheng-yu-yan.html"  target="_blank" title="查看编程语言中的全部文章" rel="category tag">编程语言</a>＞正文</div>
+						<div class="font"><a href="javascript:doZoom(12)">小</a> <a href="javascript:doZoom(13)">中</a> <a href="javascript:doZoom(18)">大</a></div>
+					</div>
+					<div class="entry_box_s">
+						<div class="entry_title_box">
+							<div class="entry_title">Velocity语法简明教程</div>
+							<div class="archive_info">
+								<span class="date">2014-03-23</span>
+								<span class="category"> ⁄ 							
+						  <a href="http://www.yanyulin.info/tag/tao-bao-ji-zhu.html" target="_blank" title="查看同类文章" rel="category tag">淘宝技术</a>&nbsp;
+						  </span>
+							</div>
+						</div>
+						<div class="entry">
+							<div id="entry" style="font-size: 14px; ">
+							<hr/>
+<div align="left" style="padding:0px">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 320*50 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:320px;height:50px"
+     data-ad-client="ca-pub-6620728980314958"
+     data-ad-slot="6117203227"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- BOTTOM_ONE -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:320px;height:50px"
+     data-ad-client="ca-pub-6620728980314958"
+     data-ad-slot="1687003628"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+							<hr />
+<p><strong>本系列教程，为个人在淘宝实习所写，博文中所提及的WebX为淘宝的架构，大家可以忽略，当然有兴趣的，也可以自已去搜搜，淘宝的WebX目前处于开源状态</strong></p>
+<p><strong>Velocity引擎解惑</strong></p>
+<p>1、<a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_1.html" target="_blank">Velocity入门教程HelloWord程序</a></p>
+<p>2、<a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_2.html" target="_blank">Velocity入门例子自定义呈现容器</a></p>
+<p>3、<a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_3.html" target="_blank">Velocity入门例子事件监听机制</a></p>
+<p>4、<a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_4.html" target="_blank">Velocity入门例子创建普通的web工程</a></p>
+<p>5、<a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_5.html" target="_blank">Velocity中的单例模式以及多实例模式</a></p>
+<p>6、<a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_6.html" target="_blank">velocity初始化过程分析读取配置文件</a></p>
+<p>7、<a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_7.html" target="_blank">velocity初始化日志系统的过程分析</a></p>
+<p>8、<a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_8.html" target="_blank">Velocity初始化资源加载器以及预指令</a></p>
+<p>接触过Linux Shell脚本的，看起来也不陌生，很容易理解，详细如下：</p>
+<p><strong><code>#</code>开头的脚本语句</strong></p>
+<p><code>#</code>开头的脚本语句如#set、#if 、#else、#end、#foreach、#end、#iinclude、#parse、#macro等。</p>
+<p>例子：</p>
+<div class="highlight"><pre><span class="cp">#foreach($tmp in $objs)  </span>
+<span class="err">$</span><span class="n">tmp</span>  
+<span class="cp">#endif</span>
+</pre></div>
+
+
+<p><code>$</code>标识的变量</p>
+<p>和JS差不多吧，是一种弱类型，变量不需要类型，也不需要事先声明，想到了就可以用，不过要注意一下的就是编程规范。</p>
+<div class="highlight"><pre><span class="err">$</span><span class="n">i</span><span class="err">、$</span><span class="n">msg</span><span class="err">、$</span><span class="n">TagUtil</span><span class="p">.</span><span class="n">options</span><span class="p">(...)</span>
+</pre></div>
+
+
+<p><strong>{}/!/\/””/’’特殊用法</strong></p>
+<p>写过Linux Shell的对这些应该很熟悉，{}用来在一个很长的字符串中区分变量，!用来在变量值为空时，避免在页面上输出，\这个代表后面的是一个转义字符，照常输出，””括起来的东西，如果里面含有可以被veloctiy解释的照常解释，’’括起来的东东不再被velocity进行解释，而是直接输出。</p>
+<div class="highlight"><pre><span class="nv">$some</span>=”test”  
+<span class="nv">$someone</span> ##在页面上直接输出<span class="nv">$someone</span>  
+<span class="cp">${</span><span class="n">some</span><span class="cp">}</span>one ##在页面上输出testone  
+<span class="nv">$test</span> ##在页面上输出<span class="nv">$test</span>  
+$!test ##在页面上什么都不输出，因为test=null  
+  
+\<span class="nv">$some</span> ##在页面上输出<span class="nv">$some</span>,$被转义了  
+“<span class="nv">$some</span>” ##在页面上输出test  
+‘<span class="nv">$some</span>’ ##在页面上输出<span class="nv">$some</span>
+</pre></div>
+
+
+<p><strong>逻辑运算符:== &amp;&amp; || !</strong></p>
+<p>这个没什么好讲的，学过任何一种语言或者脚本都有，看看就明白了。</p>
+<p><strong>循环计数器</strong></p>
+<p>Velocity循环计数数有一个比较特别的地方就是其循环计数变量不是从0开始，而是从1开始的，这一点从其配置文件中也可以很容易的看出来，配置文件如下：</p>
+<div class="highlight"><pre><span class="cp"># Default name of the loop counter  </span>
+<span class="cp"># variable reference.  </span>
+<span class="n">directive</span><span class="p">.</span><span class="n">foreach</span><span class="p">.</span><span class="n">counter</span><span class="p">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">velocityCount</span>  
+<span class="cp"># Default starting value of the loop  </span>
+<span class="cp"># counter variable reference.  </span>
+<span class="n">directive</span><span class="p">.</span><span class="n">foreach</span><span class="p">.</span><span class="n">counter</span><span class="p">.</span><span class="n">initial</span><span class="p">.</span><span class="n">value</span> <span class="o">=</span> <span class="mi">1</span>
+</pre></div>
+
+
+<p>从这个配置文件中可以看到的是循环变量的名字是velocityCount,这个名字如果你细看了例子六中的代码，应该也出现了。</p>
+<p><strong>Velocity中的宏</strong></p>
+<p>Velocity中的宏可以分为有参数与无参数两种情况，说白了，其实无参数也是有参数的一种特殊情况，学过C/C++都应该知道#define,把它理解成#define,就行了，如下是例子，一个是有参数的宏，一个是无参数的宏。
+无参数的宏</p>
+<div class="highlight"><pre><span class="vi">#macro</span><span class="p">(</span> <span class="nb">d</span> <span class="p">)</span>  
+<span class="o">&lt;</span><span class="nx">tr</span><span class="o">&gt;&lt;</span><span class="nx">td</span><span class="o">&gt;&lt;/</span><span class="nx">td</span><span class="o">&gt;&lt;/</span><span class="nx">tr</span><span class="o">&gt;</span>  
+<span class="vi">#end</span>  
+<span class="nx">调用</span>   
+<span class="vi">#d</span><span class="p">()</span>
+</pre></div>
+
+
+<p><strong>有参数的宏</strong></p>
+<div class="highlight"><pre><span class="vi">#macro</span><span class="p">(</span> <span class="nx">tablerows</span> <span class="nv">$color</span> <span class="nv">$somelist</span> <span class="p">)</span>  
+<span class="vi">#foreach</span><span class="p">(</span> <span class="nv">$something</span> <span class="k">in</span> <span class="nv">$somelist</span> <span class="p">)</span>  
+<span class="o">&lt;</span><span class="nx">tr</span><span class="o">&gt;&lt;</span><span class="nx">td</span> <span class="n">bgcolor</span><span class="o">=</span><span class="nv">$color</span><span class="o">&gt;</span><span class="nv">$something</span><span class="o">&lt;/</span><span class="nx">td</span><span class="o">&gt;&lt;/</span><span class="nx">tr</span><span class="o">&gt;</span>  
+<span class="vi">#end</span>  
+<span class="vi">#end</span>
+</pre></div>
+
+
+<p>上面是带两个参数的宏。</p>
+<p><strong>范围操作符</strong></p>
+<p>也是一看就懂的，如果你学过Python,这个操作符代表的是一个集合，这里也是一个意思，代码如下：</p>
+<div class="highlight"><pre><span class="c">#foreach( $foo in [1..5] )  </span>
+<span class="c">#foo  </span>
+<span class="c">#end</span>
+</pre></div>
+
+
+<p><strong>总结</strong></p>
+<p>有太多的东西想分析得更加详细，但是总感觉时间有限，精力有限，无法渗透出更深层的东西，斗转星移，日月更迭，不经意间21天(1814400秒)的光阴已悄然无声的划过，没学过Spring,无法从最深层次去了解WebX,实在是一种悲哀，但我一直在努力，努力的看Spring,不是嘛,培根说，态度决定一切，生活本来就应该如此，那个谁说源码面前，了无秘密，我拿这句话与大家共勉</p>
+						  <div class="clear"></div>
+							</div>
+							<b>本文地址:</b> <a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_9.html" target="_self">http://www.yanyulin.info/pages/2014/03/velocity_disabuse_9.html</a>
+							<div><font color="blue"><b>转载时请保留本文出处,谢谢您的合作</b></font></div>
+							<hr/>
+							<div class="clear" align="left">
+<!--广告-->
+							</div>
+						</div>			
+						<!-- Baidu Button BEGIN -->
+						<div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+						<a class="bds_qzone"></a>
+						<a class="bds_tsina"></a>
+						<a class="bds_tqq"></a>
+						<a class="bds_renren"></a>
+						<a class="bds_t163"></a>
+						<span class="bds_more"></span>
+						</div>
+						<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=6864225" ></script>
+						<script type="text/javascript" id="bdshell_js"></script>
+						<script type="text/javascript">			
+   		      document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+            </script>
+            <!-- Baidu Button END -->
+						<div class="clear"></div>
+						<!-- end: entry -->
+					</div>
+					<!-- entrymeta -->	
+				<center>
+					<div class="entry_sb">
+					</div>
+					<!-- end: entrymeta -->
+				<div class="context_b" align="left">
+					 上一篇: 
+  				 <a href="http://www.yanyulin.info/pages/2014/03/assemble.html" title="汇编语言王爽PDF版下载" target="_blank">汇编语言王爽PDF版下载</a>
+  				 &nbsp;&nbsp
+  				 下一篇:
+  				 <a href="http://www.yanyulin.info/pages/2014/03/think_in_java.html" title="Java编程思想PDF版下载" target="_blank">Java编程思想PDF版下载</a>
+					 
+				</div>
+				<div class="context_b">
+ 
+			<table border="0px" width="100%">
+			
+	 
+  				 <tr>
+ 
+  				 <td width="50%" align="left">
+  				 <a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_1.html" title="Velocity入门教程HelloWord程序" target="_blank">Velocity入门教程HelloWord程序</a>
+  				 </td>
+	
+	 
+ 
+  				 <td width="50%" align="left">
+  				 <a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_10.html" title="Velocity中的事件初始化以及解析池初始化" target="_blank">Velocity中的事件初始化以及解析池初始化</a>
+  				 </td>
+	
+  				 </tr>
+	 
+  				 <tr>
+ 
+  				 <td width="50%" align="left">
+  				 <a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_11.html" title="Velocity中对宏的初始化过程分析" target="_blank">Velocity中对宏的初始化过程分析</a>
+  				 </td>
+	
+	 
+ 
+  				 <td width="50%" align="left">
+  				 <a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_12.html" title="Velocity创建Web工程的流程分析" target="_blank">Velocity创建Web工程的流程分析</a>
+  				 </td>
+	
+  				 </tr>
+	 
+  				 <tr>
+ 
+  				 <td width="50%" align="left">
+  				 <a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_2.html" title="Velocity入门例子自定义呈现容器" target="_blank">Velocity入门例子自定义呈现容器</a>
+  				 </td>
+	
+	 
+ 
+  				 <td width="50%" align="left">
+  				 <a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_3.html" title="Velocity入门例子事件监听机制" target="_blank">Velocity入门例子事件监听机制</a>
+  				 </td>
+	
+  				 </tr>
+	 
+  				 <tr>
+ 
+  				 <td width="50%" align="left">
+  				 <a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_4.html" title="Velocity入门例子创建普通的web工程" target="_blank">Velocity入门例子创建普通的web工程</a>
+  				 </td>
+	
+	 
+ 
+  				 <td width="50%" align="left">
+  				 <a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_5.html" title="Velocity中的单例模式以及多实例模式" target="_blank">Velocity中的单例模式以及多实例模式</a>
+  				 </td>
+	
+  				 </tr>
+	 
+  				 <tr>
+ 
+  				 <td width="50%" align="left">
+  				 <a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_6.html" title="velocity初始化过程分析读取配置文件" target="_blank">velocity初始化过程分析读取配置文件</a>
+  				 </td>
+	
+	 
+ 
+  				 <td width="50%" align="left">
+  				 <a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_7.html" title="velocity初始化日志系统的过程分析" target="_blank">velocity初始化日志系统的过程分析</a>
+  				 </td>
+	
+  				 </tr>
+ 
+  				 <td><a href="#" align="left"></a></td>
+  				 <td><a href="#" align="left"></a></td>
+			</table>
+				</div>
+				<div class="context_b">
+			 <div class="ds-thread" data-title="Velocity语法简明教程"></div>
+			 <script type="text/javascript">
+			 	var duoshuoQuery={short_name:"yanyulin"};
+			 	var ds=document.createElement("script");
+			 	ds.type="text/javascript";
+			 	ds.async=true;
+			 	ds.src="http://static.duoshuo.com/embed.js";
+			 	ds.charset="UTF-8";document.getElementsByTagName("head")[0].appendChild(ds);
+			 </script>
+				</div>
+				</center>
+		</div>
+</div>
+<div id="sidebar">					
+	<div class="widget">
+				<h3 style="padding-left:5px">
+<form method="get" action="http://www.google.com.hk/search" target="_blank">
+<input type="text" name="q" style="width:227px">
+<input type="submit" value="站内搜索" name="btnG" id="btnG" style="cursor:pointer;background-color: #49AFCD;" title="站内搜索">
+<input type="hidden" name="ie" value="UTF-8">
+<input type="hidden" name="oe" value="UTF-8">
+<input type="hidden" name="hl" value="zh-CN">
+<input type="hidden" name="domains" value="www.yanyulin.info">
+<input type="hidden" name="sitesearch" value="www.yanyulin.info">
+</form>
+				</h3>	
+				<div class="box" style="padding:5px 0px 0px 0px" align="center">			
+					<div class="textwidget" style="padding:0px 0px 0px 0px" align="center">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- LEFT_SIDE -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-6620728980314958"
+     data-ad-slot="9349871228"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+					 </div>
+				</div>
+				<h3>相关标签</h3>
+				<div class="box">			
+						<div class="textwidget">
+							<div id="tagsLink">
+							<a  href="http://www.yanyulin.info/tag/tao-bao-ji-zhu.html" title="查看淘宝技术下的所有文章" style="background-color: #8C8BC6" target="_blank">淘宝技术</a>
+						  </div>
+							<div id="tagsLink">
+							<a  href="http://www.yanyulin.info/tag/javafen-xi.html" title="查看Java分析下的所有文章" style="background-color: #8C8BC6" target="_blank">Java分析</a>
+						  </div>
+							<div id="tagsLink">
+							<a  href="http://www.yanyulin.info/tag/suan-fa-ji-tie.html" title="查看算法集贴下的所有文章" style="background-color: #96C2AA" target="_blank">算法集贴</a>
+						  </div>
+							<div id="tagsLink">
+							<a  href="http://www.yanyulin.info/tag/linuxhui-zong.html" title="查看Linux汇总下的所有文章" style="background-color: #169EDD" target="_blank">Linux汇总</a>
+						  </div>
+							<div id="tagsLink">
+							<a  href="http://www.yanyulin.info/tag/gong-ju-shi-yong.html" title="查看工具使用下的所有文章" style="background-color: #D17C93" target="_blank">工具使用</a>
+						  </div>
+							<div id="tagsLink">
+							<a  href="http://www.yanyulin.info/tag/cxue-xi.html" title="查看C++学习下的所有文章" style="background-color: #84A4B3" target="_blank">C++学习</a>
+						  </div>
+						</div>
+						<div class="clear"></div>
+				</div>
+				<h3>本站直达</h3>
+				<div class="box">
+				<div class="textwidget">
+					<table id="tbl">
+  					<tbody>
+  						<tr>
+ 
+    							<td align="center"><a class="btn btn-info xsmall" href="http://www.yanyulin.info/category/bian-cheng-yu-yan.html" target="_blank"  title="查看编程语言下的所有文章">编程语言</a></td>
+			
+ 
+    							<td align="center"><a class="btn btn-info xsmall" href="http://www.yanyulin.info/category/cheng-xu-yuan-zhao-gong-zuo.html" target="_blank"  title="查看程序员找工作下的所有文章">程序员找工作</a></td>
+			
+ 
+    							<td align="center"><a class="btn btn-info xsmall" href="http://www.yanyulin.info/category/jing-pin-shu-ji.html" target="_blank"  title="查看精品书籍下的所有文章">精品书籍</a></td>
+			
+ 
+    							<td align="center"><a class="btn btn-info xsmall" href="http://www.yanyulin.info/category/shi-pin-jiao-cheng.html" target="_blank"  title="查看视频教程下的所有文章">视频教程</a></td>
+			
+ 
+    							<td align="center"><a class="btn btn-info xsmall" href="http://www.yanyulin.info/category/wan-zhuan-ji-zhu.html" target="_blank"  title="查看玩转技术下的所有文章">玩转技术</a></td>
+			
+  						</tr>	
+  						<tr>
+ 
+    							<td align="center"><a class="btn btn-info xsmall" href="http://www.yanyulin.info/category/tou-zi-li-cai.html" target="_blank"  title="查看投资理财下的所有文章">投资理财</a></td>
+			
+ 
+    							<td align="center"><a class="btn btn-info xsmall" href="http://www.yanyulin.info/category/cheng-xu-yuan-de-mian-jing.html" target="_blank"  title="查看程序员的面经下的所有文章">程序员的面经</a></td>
+			
+ 
+    							<td align="center"><a class="btn btn-info xsmall" href="http://www.yanyulin.info/category/yan-yu-za-tan.html" target="_blank"  title="查看烟雨杂谈下的所有文章">烟雨杂谈</a></td>
+			
+  						<td align="center"><a href="#"></a></td>
+  						<td align="center"><a href="#"></a></td>
+						</tbody>
+					</table>
+				</div>
+				</div>
+				<h3>邮箱订阅</h3>
+				<div class="box">			
+				<div class="textwidget">
+				<!--QQ邮件列表订阅嵌入代码-->
+				<table  border="0">
+  			<tbody>
+  			<tr>
+  			<td>
+				<!--以下是QQ邮件列表订阅嵌入代码-->
+        <div style="width: 110px;overflow: hidden; " class="WB_widget WB_follow_ex">
+        <div class="follow_btn_line" node-type="inner">
+        <a class="follow_btn status_followed" node-type="followBtn" target="_blank" title="烟雨林博客" href="http://list.qq.com/cgi-bin/qf_invite?id=8949c93bdc7fcbda12adc078acb2809d6f6eba09998d35e6">
+				<img border="0" width="107px" height="22px" alt="邮箱订阅" src="http://www.yanyulin.info/pics/picMode_light_s.png" />
+        </a></div></div>
+			  </td>
+				</tr>
+			  </tbody>
+			  </table>
+				</div>
+				</div>
+				<div class="random_r">
+				<h3>随便看看</h3>
+				<div class="box_r">
+				<ul>
+				<ul class="random-post-link">
+				<li class="random-post-link">
+				<a href="http://www.yanyulin.info/pages/2013/11/github.html" target="_blank" title="Github简明教程(入门篇)">Github简明教程(入门篇)</a>
+				</li>
+				<li class="random-post-link">
+				<a href="http://www.yanyulin.info/pages/2014/03/cvte_2014_1.html" target="_blank" title="CVTE校园招聘面经2014年软件研发面经">CVTE校园招聘面经2014年软件研发面经</a>
+				</li>
+				<li class="random-post-link">
+				<a href="http://www.yanyulin.info/pages/2013/12/cxgc_2014_A.html" target="_blank" title="创新工场2014年校招笔试题(研发)">创新工场2014年校招笔试题(研发)</a>
+				</li>
+				<li class="random-post-link">
+				<a href="http://www.yanyulin.info/pages/2014/03/write_os.html" target="_blank" title="自已动手写操作系统PDF版下载">自已动手写操作系统PDF版下载</a>
+				</li>
+				<li class="random-post-link">
+				<a href="http://www.yanyulin.info/pages/2013/12/psbase_1.html" target="_blank" title="PhotoShop CS入门版视频教程(基础上)">PhotoShop CS入门版视频教程(基础上)</a>
+				</li>
+				<li class="random-post-link">
+				<a href="http://www.yanyulin.info/pages/2014/02/wtc.html" target="_blank" title="[赠送]WTC(万特币)获取30ripple和100WTC">[赠送]WTC(万特币)获取30ripple和100WTC</a>
+				</li>
+				<li class="random-post-link">
+				<a href="http://www.yanyulin.info/pages/2014/03/zhihu_1.html" target="_blank" title="一款自动发链接的软件设计思路">一款自动发链接的软件设计思路</a>
+				</li>
+				<li class="random-post-link">
+				<a href="http://www.yanyulin.info/pages/2014/03/duoshuo.html" target="_blank" title="多说评论框如何|怎么样|实际测试">多说评论框如何|怎么样|实际测试</a>
+				</li>
+				</ul>
+				</ul>
+				<div class="clear"></div>
+				</div>
+				</div>
+				
+			<div class="hotarticles" align="center">
+						<hr/>
+				<div class="box_r" align="center">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- LEFT_SIDE -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-6620728980314958"
+     data-ad-slot="9349871228"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+				</div>
+				</div>
+				
+				<div class="hotarticles">
+				<h3>年度排行</h3>
+				<div class="box_r">
+				<ul>
+				<li>
+				<a href="http://www.yanyulin.info/pages/2014/03/optimization.html" target="_blank" title="程序代码优化需要考虑的问题">程序代码优化需要考虑的问题</a>
+				</li>
+				<li>
+				<a href="http://www.yanyulin.info/pages/2013/01/renmingyinhang_1.html" target="_blank" title="中国人民银行2013校招技术类面经">中国人民银行2013校招技术类面经</a>
+				</li>
+				<li>
+				<a href="http://www.yanyulin.info/pages/2013/12/zte_2014_A.html" target="_blank" title="中兴2014年校招笔试题">中兴2014年校招笔试题</a>
+				</li>
+				<li>
+				<a href="http://www.yanyulin.info/pages/2013/12/prgbeautiful.html" target="_blank" title="编程之美—微软技术面试心得">编程之美—微软技术面试心得</a>
+				</li>
+				<li>
+				<a href="http://www.yanyulin.info/pages/2013/11/vlinux1.html" target="_blank" title="Linux入门版视频教程(基础)">Linux入门版视频教程(基础)</a>
+				</li>
+				<li>
+				<a href="http://www.yanyulin.info/pages/2014/02/wtc.html" target="_blank" title="[赠送]WTC(万特币)获取30ripple和100WTC">[赠送]WTC(万特币)获取30ripple和100WTC</a>
+				</li>
+				<li>
+				<a href="http://www.yanyulin.info/pages/2013/11/fetchPage.html" target="_blank" title="爬虫的自我解剖(抓取网页HtmlUnit)">爬虫的自我解剖(抓取网页HtmlUnit)</a>
+				</li>
+				<li>
+				<a href="http://www.yanyulin.info/pages/2014/03/duoshuo.html" target="_blank" title="多说评论框如何|怎么样|实际测试">多说评论框如何|怎么样|实际测试</a>
+				</li>
+				<div class="clear"></div>
+				</div>
+				</div>
+				</div>
+				<div class="hotarticles" align="center">
+						<hr/>
+				<div class="box_r" align="center">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 160*600 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:160px;height:600px"
+     data-ad-client="ca-pub-6620728980314958"
+     data-ad-slot="3421088826"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+				<div class="clear"></div>
+				</div>
+				</div>
+				</div>
+	</div>
+</div>	 </div>		
+	 <div id="my_footer_wrapper">
+	 <div class="link">
+	 <a href="http://www.zhangxiaolong.org" target="_blank">Atlas</a>
+	 <a href="http://weibo.com/lamazi" target="_blank">我的微博</a>
+	 <a href="http://blog.csdn.net/column/details/job-school.html" target="_blank">IT公司笔试题</a>
+	 <a target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=2aC4t4agrIa1sLeZv7ahtLiwtfe6trQ" style="text-decoration:none;color:#A40000;">申请友链</a>
+	 <div class="clear"></div>
+   </div>
+   </div>
+	 <div id="my_footer_wrapper">
+	 <div id="my_footer">		
+	 <span>【</span><a href="http://www.yanyulin.info/sitemap.xml" target="_blank">本站地图</a><span>】
+	 </span> 		
+	 <span>【</span><a href="http://www.yanyulin.info/feeds/all.rss.xml" target="_blank">RSS订阅</a><span>】
+	 </span>  		
+	 <span>【</span><a href="http://www.yanyulin.info/sitemap.xml" target="_blank">谷歌地图</a><span>】
+	 </span> 		
+	 <span>【</span><a href="http://www.yanyulin.info" target="_blank">电脑版</a><span>】</span>    
+	 </div>
+  </div>  
+  <div id="my_copyright_wrapper">
+		<div id="my_copyright">
+		博主邮箱: zwjlpeng@gmail.com Copyright@2010-2020 <a href="http://www.yanyulin.info">烟雨林个人博客</a>
+		</div>
+  </div>
+<!--
+    <script>
+     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+     ga('create', 'UA-45829467-1', '');
+     ga('send', 'pageview');
+   </script>
+-->
+
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Ffc8ddb27d7faba664a1416d848575847' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+
+</body>
+</html>

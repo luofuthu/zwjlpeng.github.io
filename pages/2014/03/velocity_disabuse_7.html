@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<title>
+velocity初始化日志系统的过程分析 - 烟雨林</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
+<meta name="author" content="烟雨林">
+<meta name="description" content="烟雨林，是一个专注于互联网、搜索引擎、社会化网络、编程语言、程序员找工作、程序员面试等领域的原创IT科技博客">
+<meta name="keywords" content="烟雨|烟雨林|编程语言|互联网|程序员找工作|视频教程|程序员面经|Linux|数据挖掘|自然语言处理|移动互联">
+<link rel="stylesheet" type="text/css" href="http://www.yanyulin.info/theme/index.css" />
+<link rel="shortcut icon" href="http://www.yanyulin.info/theme/images/favicon.ico">
+</head>
+<body >
+   <div id="hed">
+			<div class="top_part">
+				<a href="http://www.yanyulin.info"><img src="http://www.yanyulin.info/theme/images/logo.png"/ alt="烟雨林" title="烟雨林" width="127px" height="29px"></a>
+			</div>
+	 </div>
+	 <div id="wrapper">
+			<div id="top">
+				<div id='topnav'>
+					<div >
+					   	<div >
+						  		<ul>	
+						   						<li><a href="http://www.yanyulin.info">烟雨首页</a></li>
+						  																<li class="current-menu-item current_page_item "><a href="http://www.yanyulin.info/category/bian-cheng-yu-yan.html">编程语言</a></li>
+						  				  											<li><a href="http://www.yanyulin.info/category/cheng-xu-yuan-de-mian-jing.html">程序员的面经</a></li>
+						  				  											<li><a href="http://www.yanyulin.info/category/cheng-xu-yuan-zhao-gong-zuo.html">程序员找工作</a></li>
+						  				  											<li><a href="http://www.yanyulin.info/category/jing-pin-shu-ji.html">精品书籍</a></li>
+						  				  											<li><a href="http://www.yanyulin.info/category/shi-pin-jiao-cheng.html">视频教程</a></li>
+						  				  											<li><a href="http://www.yanyulin.info/category/wan-zhuan-ji-zhu.html">玩转技术</a></li>
+						  				  											<li><a href="http://www.yanyulin.info/category/yan-yu-za-tan.html">烟雨杂谈</a></li>
+						  		</ul>
+					   	</div> 
+				  </div>
+			  </div>
+			</div>
+<script type="text/javascript">
+    function doZoom(size) {
+        var zoom = document.all ? document.all['entry'] : document.getElementById('entry');
+        zoom.style.fontSize = size + 'px';
+    }
+</script>
+<div class="test_right">
+		<div id="content">							 
+					<div id="map">
+						<div class="browse">现在的位置: <a title="返回首页" href="http://www.yanyulin.info" target="_blank">烟雨首页</a> ＞
+						<a href="http://www.yanyulin.info/category/bian-cheng-yu-yan.html"  target="_blank" title="查看编程语言中的全部文章" rel="category tag">编程语言</a>＞正文</div>
+						<div class="font"><a href="javascript:doZoom(12)">小</a> <a href="javascript:doZoom(13)">中</a> <a href="javascript:doZoom(18)">大</a></div>
+					</div>
+					<div class="entry_box_s">
+						<div class="entry_title_box">
+							<div class="entry_title">velocity初始化日志系统的过程分析</div>
+							<div class="archive_info">
+								<span class="date">2014-03-21</span>
+								<span class="category"> ⁄ 							
+						  <a href="http://www.yanyulin.info/tag/tao-bao-ji-zhu.html" target="_blank" title="查看同类文章" rel="category tag">淘宝技术</a>&nbsp;
+						  </span>
+							</div>
+						</div>
+						<div class="entry">
+							<div id="entry" style="font-size: 14px; ">
+							<hr/>
+<div align="left" style="padding:0px">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 320*50 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:320px;height:50px"
+     data-ad-client="ca-pub-6620728980314958"
+     data-ad-slot="6117203227"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- BOTTOM_ONE -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:320px;height:50px"
+     data-ad-client="ca-pub-6620728980314958"
+     data-ad-slot="1687003628"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+							<hr />
+<p><strong>本系列教程，为个人在淘宝实习所写，博文中所提及的WebX为淘宝的架构，大家可以忽略，当然有兴趣的，也可以自已去搜搜，淘宝的WebX目前处于开源状态</strong></p>
+<p><strong>Velocity引擎解惑</strong></p>
+<p>1、<a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_1.html" target="_blank">Velocity入门教程HelloWord程序</a></p>
+<p>2、<a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_2.html" target="_blank">Velocity入门例子自定义呈现容器</a></p>
+<p>3、<a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_3.html" target="_blank">Velocity入门例子事件监听机制</a></p>
+<p>4、<a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_4.html" target="_blank">Velocity入门例子创建普通的web工程</a></p>
+<p>5、<a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_5.html" target="_blank">Velocity中的单例模式以及多实例模式</a></p>
+<p>6、<a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_6.html" target="_blank">velocity初始化过程分析读取配置文件</a></p>
+<p>这个函数的作用从其名字就可以看得出来，是用来初始化日志系统的，<code>Velocity</code>会使用<code>LogManger</code>来默认创建一个<code>LogChute</code>的实例，第一个被创建的日志系统是<code>HoldingLogChute</code>,<code>HoldingLogChute</code>其实也就是<code>LogChute</code>的子类，内部的实现是通过一个<code>vector</code>来保存信息，用来作为初始化日志系统的过程中产生的日志信息，在创建完第一个系统内置的日志实例后，才会开始真正的创建日志系统，如下是其源代码：</p>
+<div class="highlight"><pre><span class="n">private</span> <span class="kt">void</span> <span class="nf">initializeLog</span><span class="p">()</span>  
+<span class="p">{</span>  
+    <span class="c1">// since the Log we started with was just placeholding,  </span>
+    <span class="c1">// let&#39;s update it with the real LogChute settings.  </span>
+    <span class="n">try</span>  
+    <span class="p">{</span>  
+        <span class="n">LogManager</span><span class="p">.</span><span class="n">updateLog</span><span class="p">(</span><span class="n">this</span><span class="p">.</span><span class="n">log</span><span class="p">,</span> <span class="n">this</span><span class="p">);</span>  
+    <span class="p">}</span>   
+    <span class="n">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">e</span><span class="p">)</span>  
+    <span class="p">{</span>  
+        <span class="n">throw</span> <span class="n">new</span> <span class="n">VelocityException</span><span class="p">(</span><span class="s">&quot;Error initializing log: &quot;</span> <span class="o">+</span> <span class="n">e</span><span class="p">.</span><span class="n">getMessage</span><span class="p">(),</span> <span class="n">e</span><span class="p">);</span>  
+    <span class="p">}</span>  
+<span class="p">}</span>
+</pre></div>
+
+
+<p>代码的关键就是调用了LogManger类的updateLog这个方法，在跟踪进入这个方法之前，让我们看看log这个属性值：</p>
+<div class="highlight"><pre><span class="n">private</span> <span class="n">Log</span> <span class="n">log</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Log</span><span class="p">();</span>
+</pre></div>
+
+
+<p>看到了这个属性值并不是我的本意，我的本意还是继续跟踪上述代码进入 </p>
+<div class="highlight"><pre><span class="n">public</span> <span class="nf">Log</span><span class="p">()</span>  
+<span class="p">{</span>  
+    <span class="n">setLogChute</span><span class="p">(</span><span class="n">new</span> <span class="n">HoldingLogChute</span><span class="p">());</span>  
+<span class="p">}</span>
+</pre></div>
+
+
+<p>再跟踪setLogChute看看</p>
+<div class="highlight"><pre><span class="n">protected</span> <span class="kt">void</span> <span class="nf">setLogChute</span><span class="p">(</span><span class="n">final</span> <span class="n">LogChute</span> <span class="n">chute</span><span class="p">)</span>  
+<span class="p">{</span>  
+    <span class="k">if</span> <span class="p">(</span><span class="n">chute</span> <span class="o">==</span> <span class="n">null</span><span class="p">)</span>  
+    <span class="p">{</span>  
+        <span class="n">throw</span> <span class="n">new</span> <span class="n">NullPointerException</span><span class="p">(</span><span class="s">&quot;The LogChute cannot be set to null!&quot;</span><span class="p">);</span>  
+    <span class="p">}</span>  
+    <span class="n">this</span><span class="p">.</span><span class="n">chute</span> <span class="o">=</span> <span class="n">chute</span><span class="p">;</span>  
+<span class="p">}</span>
+</pre></div>
+
+
+<p>看到这里的时候，其实我们的第一个日志系统已经创建成功，是一个默认的日志系统，叫LogChute,可以看看里面的参数为什么要加上final,这和C++里面的const是一个道理，再看看这个默认的日志系统内部实现，我们必须要看看的就是上面的setLogChute(new HoldingLogChute())，进入HoldingLogChute类，可以看到如下代码：</p>
+<div class="highlight"><pre><span class="n">private</span> <span class="n">Vector</span> <span class="n">pendingMessages</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Vector</span><span class="p">();</span>  
+    <span class="n">private</span> <span class="k">volatile</span> <span class="n">boolean</span> <span class="n">transferring</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+</pre></div>
+
+
+<p>再回头看看我们刚开始说的，是不是明白了</p>
+<p>好了，叉开了这么久，再看看我们的update函数，不然都忘了,其函数的实现源码如下所示：</p>
+<div class="highlight"><pre><span class="n">public</span> <span class="k">static</span> <span class="kt">void</span> <span class="nf">updateLog</span><span class="p">(</span><span class="n">Log</span> <span class="n">log</span><span class="p">,</span> <span class="n">RuntimeServices</span> <span class="n">rsvc</span><span class="p">)</span> <span class="n">throws</span> <span class="n">Exception</span>
+<span class="p">{</span>  
+    <span class="c1">// create a new LogChute using the RuntimeServices  </span>
+    <span class="n">LogChute</span> <span class="n">newLogChute</span> <span class="o">=</span> <span class="n">createLogChute</span><span class="p">(</span><span class="n">rsvc</span><span class="p">);</span>  
+    <span class="n">LogChute</span> <span class="n">oldLogChute</span> <span class="o">=</span> <span class="n">log</span><span class="p">.</span><span class="n">getLogChute</span><span class="p">();</span>  
+    <span class="c1">// pass the new LogChute to the log first,  </span>
+    <span class="c1">// (if the old was a HoldingLogChute, we don&#39;t want it  </span>
+    <span class="c1">//  to accrue new messages during the transfer below)  </span>
+    <span class="n">log</span><span class="p">.</span><span class="n">setLogChute</span><span class="p">(</span><span class="n">newLogChute</span><span class="p">);</span>   
+    <span class="c1">// If the old LogChute was the pre-Init logger,  </span>
+    <span class="c1">// dump its messages into the new system.  </span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">oldLogChute</span> <span class="n">instanceof</span> <span class="n">HoldingLogChute</span><span class="p">)</span>  
+    <span class="p">{</span>  
+        <span class="n">HoldingLogChute</span> <span class="n">hlc</span> <span class="o">=</span> <span class="p">(</span><span class="n">HoldingLogChute</span><span class="p">)</span><span class="n">oldLogChute</span><span class="p">;</span>  
+        <span class="n">hlc</span><span class="p">.</span><span class="n">transferTo</span><span class="p">(</span><span class="n">newLogChute</span><span class="p">);</span>  
+    <span class="p">}</span>  
+<span class="p">}</span>
+</pre></div>
+
+
+<p>上面代码的英文注释已经详细了，不需要我翻译了吧,我想说的只有一个函数就是createLogChute(rsvc)这个函数，看看其源代码，哦，源代码真是太长了，两页也显示不下，捡重要的贴吧，首先看看下面这一行代码</p>
+<div class="highlight"><pre><span class="n">Object</span> <span class="n">o</span> <span class="o">=</span> <span class="n">rsvc</span><span class="p">.</span><span class="n">getProperty</span><span class="p">(</span><span class="n">RuntimeConstants</span><span class="p">.</span><span class="n">RUNTIME_LOG_LOGSYSTEM</span><span class="p">);</span>
+</pre></div>
+
+
+<p>这一行代码，其实也是读取配置文件,其中RUNTIME_LOG_LOGSYSTEM是一个常量，这个常量就是runtime.log.logsystem，这个就是前面读取的配置文件里面定义的，不一定会有哈，如果没有话，程序还会走其他途径的,不过还真没有哈，不信你打开默认的配置文件看看，真心的没有，所以o=null,程序会跳过好大的一段,执行到以下代码</p>
+<div class="highlight"><pre><span class="n">List</span> <span class="n">classes</span> <span class="o">=</span> <span class="n">new</span> <span class="n">ArrayList</span><span class="p">();</span> 
+    <span class="n">Object</span> <span class="n">obj</span> <span class="o">=</span> <span class="n">rsvc</span><span class="p">.</span><span class="n">getProperty</span><span class="p">(</span> <span class="n">RuntimeConstants</span><span class="p">.</span><span class="n">RUNTIME_LOG_LOGSYSTEM_CLASS</span> <span class="p">);</span>
+</pre></div>
+
+
+<p>上面的代码和上面的上面的类似，RUNTIME_LOG_LOGSYSTEM_CLASS同样是一个常量，这个常量真实值是runtime.log.logsystem.class，看看配置文件里，是有这个值的，这里我列出来了，如下</p>
+<div class="highlight"><pre><span class="n">runtime</span><span class="p">.</span><span class="n">log</span><span class="p">.</span><span class="n">logsystem</span><span class="p">.</span><span class="n">class</span> <span class="o">=</span> <span class="n">org</span><span class="p">.</span><span class="n">apache</span><span class="p">.</span><span class="n">velocity</span><span class="p">.</span><span class="n">runtime</span><span class="p">.</span><span class="n">log</span><span class="p">.</span><span class="n">AvalonLogChute</span><span class="p">,</span>
+<span class="n">org</span><span class="p">.</span><span class="n">apache</span><span class="p">.</span><span class="n">velocity</span><span class="p">.</span><span class="n">runtime</span><span class="p">.</span><span class="n">log</span><span class="p">.</span><span class="n">Log4JLogChute</span><span class="p">,</span><span class="n">org</span><span class="p">.</span><span class="n">apache</span><span class="p">.</span><span class="n">velocity</span><span class="p">.</span><span class="n">runtime</span><span class="p">.</span><span class="n">log</span><span class="p">.</span>
+<span class="n">CommonsLogLogChute</span><span class="p">,</span><span class="n">org</span><span class="p">.</span><span class="n">apache</span><span class="p">.</span><span class="n">velocity</span><span class="p">.</span><span class="n">runtime</span><span class="p">.</span><span class="n">log</span><span class="p">.</span><span class="n">ServletLogChute</span><span class="p">,</span><span class="n">org</span><span class="p">.</span><span class="n">apache</span>
+<span class="p">.</span><span class="n">velocity</span><span class="p">.</span><span class="n">runtime</span><span class="p">.</span><span class="n">log</span><span class="p">.</span><span class="n">JdkLogChute</span>
+</pre></div>
+
+
+<p>这次obj不再为NULL了，最后就是关键的代码了，太长了，不列了，说一下大概的意思，根据上面List类型变量classes存储的类全名，看看能不能生成相应日志类的实例，如果能的话就使用该日志系统，如果不能就接着遍历，直到找到一个行的，如果均不行，就抛出异常，终于到最后了</p>
+<div class="highlight"><pre><span class="n">LogChute</span> <span class="n">slc</span> <span class="o">=</span> <span class="n">new</span> <span class="n">SystemLogChute</span><span class="p">();</span>  
+        <span class="n">slc</span><span class="p">.</span><span class="n">init</span><span class="p">(</span><span class="n">rsvc</span><span class="p">);</span>  
+        <span class="n">log</span><span class="p">.</span><span class="n">debug</span><span class="p">(</span><span class="s">&quot;Using SystemLogChute.&quot;</span><span class="p">);</span>
+</pre></div>
+
+
+<p>如果没有一个日志系统能够利用，就使用默认的SystemLogChute输出日志，这个日志系统实际上就是使用System.err进行日志的打印输出。</p>
+<p>再回头看看updateLog这个函数，估计也很好理解了，就是产生一个新的日志系统，然后将旧日志系统里的数据输出到新日志系统，并将新日志系统设置为默认的。
+　　</p>
+<p>总结一下，就是当velocity没有配置runtime.log.logsystem这个属性时，就会继续寻找runtime.log.logsystem.class这个属性，默认的velocity.properties配置文件中，这个属性的值依次是:</p>
+<div class="highlight"><pre><span class="mi">1</span><span class="o">:</span><span class="n">AvalonLogChute</span>
+<span class="mi">2</span><span class="o">:</span><span class="n">Log4JLogChute</span>
+<span class="mi">3</span><span class="o">:</span><span class="n">CommonsLogLogChute</span>
+<span class="mi">4</span><span class="o">:</span><span class="n">ServletLogChute</span>
+<span class="mi">5</span><span class="n">JdkLogChute</span>
+</pre></div>
+
+
+<p>当然Velocity不会使用这么多的日志系统，只会使用第一个能实例化的日志系统。</p>
+						  <div class="clear"></div>
+							</div>
+							<b>本文地址:</b> <a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_7.html" target="_self">http://www.yanyulin.info/pages/2014/03/velocity_disabuse_7.html</a>
+							<div><font color="blue"><b>转载时请保留本文出处,谢谢您的合作</b></font></div>
+							<hr/>
+							<div class="clear" align="left">
+<!--广告-->
+							</div>
+						</div>			
+						<!-- Baidu Button BEGIN -->
+						<div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+						<a class="bds_qzone"></a>
+						<a class="bds_tsina"></a>
+						<a class="bds_tqq"></a>
+						<a class="bds_renren"></a>
+						<a class="bds_t163"></a>
+						<span class="bds_more"></span>
+						</div>
+						<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=6864225" ></script>
+						<script type="text/javascript" id="bdshell_js"></script>
+						<script type="text/javascript">			
+   		      document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+            </script>
+            <!-- Baidu Button END -->
+						<div class="clear"></div>
+						<!-- end: entry -->
+					</div>
+					<!-- entrymeta -->	
+				<center>
+					<div class="entry_sb">
+					</div>
+					<!-- end: entrymeta -->
+				<div class="context_b" align="left">
+					 上一篇: 
+  				 <a href="http://www.yanyulin.info/pages/2014/03/wanmei_2014_b.html" title="2014年完美世界校招笔试题技术类" target="_blank">2014年完美世界校招笔试题技术类</a>
+  				 &nbsp;&nbsp
+  				 下一篇:
+  				 <a href="http://www.yanyulin.info/pages/2014/03/jd_2014_1.html" title="京东校招面经2014年技术类" target="_blank">京东校招面经2014年技术类</a>
+					 
+				</div>
+				<div class="context_b">
+ 
+			<table border="0px" width="100%">
+			
+	 
+  				 <tr>
+ 
+  				 <td width="50%" align="left">
+  				 <a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_1.html" title="Velocity入门教程HelloWord程序" target="_blank">Velocity入门教程HelloWord程序</a>
+  				 </td>
+	
+	 
+ 
+  				 <td width="50%" align="left">
+  				 <a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_10.html" title="Velocity中的事件初始化以及解析池初始化" target="_blank">Velocity中的事件初始化以及解析池初始化</a>
+  				 </td>
+	
+  				 </tr>
+	 
+  				 <tr>
+ 
+  				 <td width="50%" align="left">
+  				 <a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_11.html" title="Velocity中对宏的初始化过程分析" target="_blank">Velocity中对宏的初始化过程分析</a>
+  				 </td>
+	
+	 
+ 
+  				 <td width="50%" align="left">
+  				 <a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_12.html" title="Velocity创建Web工程的流程分析" target="_blank">Velocity创建Web工程的流程分析</a>
+  				 </td>
+	
+  				 </tr>
+	 
+  				 <tr>
+ 
+  				 <td width="50%" align="left">
+  				 <a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_2.html" title="Velocity入门例子自定义呈现容器" target="_blank">Velocity入门例子自定义呈现容器</a>
+  				 </td>
+	
+	 
+ 
+  				 <td width="50%" align="left">
+  				 <a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_3.html" title="Velocity入门例子事件监听机制" target="_blank">Velocity入门例子事件监听机制</a>
+  				 </td>
+	
+  				 </tr>
+	 
+  				 <tr>
+ 
+  				 <td width="50%" align="left">
+  				 <a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_4.html" title="Velocity入门例子创建普通的web工程" target="_blank">Velocity入门例子创建普通的web工程</a>
+  				 </td>
+	
+	 
+ 
+  				 <td width="50%" align="left">
+  				 <a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_5.html" title="Velocity中的单例模式以及多实例模式" target="_blank">Velocity中的单例模式以及多实例模式</a>
+  				 </td>
+	
+  				 </tr>
+	 
+  				 <tr>
+ 
+  				 <td width="50%" align="left">
+  				 <a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_6.html" title="velocity初始化过程分析读取配置文件" target="_blank">velocity初始化过程分析读取配置文件</a>
+  				 </td>
+	
+	 
+ 
+  				 <td width="50%" align="left">
+  				 <a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_7.html" title="velocity初始化日志系统的过程分析" target="_blank">velocity初始化日志系统的过程分析</a>
+  				 </td>
+	
+  				 </tr>
+ 
+  				 <td><a href="#" align="left"></a></td>
+  				 <td><a href="#" align="left"></a></td>
+			</table>
+				</div>
+				<div class="context_b">
+			 <div class="ds-thread" data-title="velocity初始化日志系统的过程分析"></div>
+			 <script type="text/javascript">
+			 	var duoshuoQuery={short_name:"yanyulin"};
+			 	var ds=document.createElement("script");
+			 	ds.type="text/javascript";
+			 	ds.async=true;
+			 	ds.src="http://static.duoshuo.com/embed.js";
+			 	ds.charset="UTF-8";document.getElementsByTagName("head")[0].appendChild(ds);
+			 </script>
+				</div>
+				</center>
+		</div>
+</div>
+<div id="sidebar">					
+	<div class="widget">
+				<h3 style="padding-left:5px">
+<form method="get" action="http://www.google.com.hk/search" target="_blank">
+<input type="text" name="q" style="width:227px">
+<input type="submit" value="站内搜索" name="btnG" id="btnG" style="cursor:pointer;background-color: #49AFCD;" title="站内搜索">
+<input type="hidden" name="ie" value="UTF-8">
+<input type="hidden" name="oe" value="UTF-8">
+<input type="hidden" name="hl" value="zh-CN">
+<input type="hidden" name="domains" value="www.yanyulin.info">
+<input type="hidden" name="sitesearch" value="www.yanyulin.info">
+</form>
+				</h3>	
+				<div class="box" style="padding:5px 0px 0px 0px" align="center">			
+					<div class="textwidget" style="padding:0px 0px 0px 0px" align="center">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- LEFT_SIDE -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-6620728980314958"
+     data-ad-slot="9349871228"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+					 </div>
+				</div>
+				<h3>相关标签</h3>
+				<div class="box">			
+						<div class="textwidget">
+							<div id="tagsLink">
+							<a  href="http://www.yanyulin.info/tag/tao-bao-ji-zhu.html" title="查看淘宝技术下的所有文章" style="background-color: #84A4B3" target="_blank">淘宝技术</a>
+						  </div>
+							<div id="tagsLink">
+							<a  href="http://www.yanyulin.info/tag/javafen-xi.html" title="查看Java分析下的所有文章" style="background-color: #D17C93" target="_blank">Java分析</a>
+						  </div>
+							<div id="tagsLink">
+							<a  href="http://www.yanyulin.info/tag/suan-fa-ji-tie.html" title="查看算法集贴下的所有文章" style="background-color: #D17C93" target="_blank">算法集贴</a>
+						  </div>
+							<div id="tagsLink">
+							<a  href="http://www.yanyulin.info/tag/linuxhui-zong.html" title="查看Linux汇总下的所有文章" style="background-color: #8C8BC6" target="_blank">Linux汇总</a>
+						  </div>
+							<div id="tagsLink">
+							<a  href="http://www.yanyulin.info/tag/gong-ju-shi-yong.html" title="查看工具使用下的所有文章" style="background-color: #8C8BC6" target="_blank">工具使用</a>
+						  </div>
+							<div id="tagsLink">
+							<a  href="http://www.yanyulin.info/tag/cxue-xi.html" title="查看C++学习下的所有文章" style="background-color: #169EDD" target="_blank">C++学习</a>
+						  </div>
+						</div>
+						<div class="clear"></div>
+				</div>
+				<h3>本站直达</h3>
+				<div class="box">
+				<div class="textwidget">
+					<table id="tbl">
+  					<tbody>
+  						<tr>
+ 
+    							<td align="center"><a class="btn btn-info xsmall" href="http://www.yanyulin.info/category/bian-cheng-yu-yan.html" target="_blank"  title="查看编程语言下的所有文章">编程语言</a></td>
+			
+ 
+    							<td align="center"><a class="btn btn-info xsmall" href="http://www.yanyulin.info/category/cheng-xu-yuan-zhao-gong-zuo.html" target="_blank"  title="查看程序员找工作下的所有文章">程序员找工作</a></td>
+			
+ 
+    							<td align="center"><a class="btn btn-info xsmall" href="http://www.yanyulin.info/category/jing-pin-shu-ji.html" target="_blank"  title="查看精品书籍下的所有文章">精品书籍</a></td>
+			
+ 
+    							<td align="center"><a class="btn btn-info xsmall" href="http://www.yanyulin.info/category/shi-pin-jiao-cheng.html" target="_blank"  title="查看视频教程下的所有文章">视频教程</a></td>
+			
+ 
+    							<td align="center"><a class="btn btn-info xsmall" href="http://www.yanyulin.info/category/wan-zhuan-ji-zhu.html" target="_blank"  title="查看玩转技术下的所有文章">玩转技术</a></td>
+			
+  						</tr>	
+  						<tr>
+ 
+    							<td align="center"><a class="btn btn-info xsmall" href="http://www.yanyulin.info/category/tou-zi-li-cai.html" target="_blank"  title="查看投资理财下的所有文章">投资理财</a></td>
+			
+ 
+    							<td align="center"><a class="btn btn-info xsmall" href="http://www.yanyulin.info/category/cheng-xu-yuan-de-mian-jing.html" target="_blank"  title="查看程序员的面经下的所有文章">程序员的面经</a></td>
+			
+ 
+    							<td align="center"><a class="btn btn-info xsmall" href="http://www.yanyulin.info/category/yan-yu-za-tan.html" target="_blank"  title="查看烟雨杂谈下的所有文章">烟雨杂谈</a></td>
+			
+  						<td align="center"><a href="#"></a></td>
+  						<td align="center"><a href="#"></a></td>
+						</tbody>
+					</table>
+				</div>
+				</div>
+				<h3>邮箱订阅</h3>
+				<div class="box">			
+				<div class="textwidget">
+				<!--QQ邮件列表订阅嵌入代码-->
+				<table  border="0">
+  			<tbody>
+  			<tr>
+  			<td>
+				<!--以下是QQ邮件列表订阅嵌入代码-->
+        <div style="width: 110px;overflow: hidden; " class="WB_widget WB_follow_ex">
+        <div class="follow_btn_line" node-type="inner">
+        <a class="follow_btn status_followed" node-type="followBtn" target="_blank" title="烟雨林博客" href="http://list.qq.com/cgi-bin/qf_invite?id=8949c93bdc7fcbda12adc078acb2809d6f6eba09998d35e6">
+				<img border="0" width="107px" height="22px" alt="邮箱订阅" src="http://www.yanyulin.info/pics/picMode_light_s.png" />
+        </a></div></div>
+			  </td>
+				</tr>
+			  </tbody>
+			  </table>
+				</div>
+				</div>
+				<div class="random_r">
+				<h3>随便看看</h3>
+				<div class="box_r">
+				<ul>
+				<ul class="random-post-link">
+				<li class="random-post-link">
+				<a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_8.html" target="_blank" title="Velocity初始化资源加载器以及预指令">Velocity初始化资源加载器以及预指令</a>
+				</li>
+				<li class="random-post-link">
+				<a href="http://www.yanyulin.info/pages/2014/03/ali_4.html" target="_blank" title="阿里巴巴校招面经2014年软件研发面经">阿里巴巴校招面经2014年软件研发面经</a>
+				</li>
+				<li class="random-post-link">
+				<a href="http://www.yanyulin.info/pages/2013/12/microsoft_2014_A.html" target="_blank" title="微软2014年校招笔试题">微软2014年校招笔试题</a>
+				</li>
+				<li class="random-post-link">
+				<a href="http://www.yanyulin.info/pages/2013/11/stlOrigin.html" target="_blank" title="STL源码剖析(候捷译)">STL源码剖析(候捷译)</a>
+				</li>
+				<li class="random-post-link">
+				<a href="http://www.yanyulin.info/pages/2013/12/vc_1.html" target="_blank" title="VC视频教程(主要讲述`MFC`)">VC视频教程(主要讲述`MFC`)</a>
+				</li>
+				<li class="random-post-link">
+				<a href="http://www.yanyulin.info/pages/2014/03/getxrp.html" target="_blank" title="【赠送】ripple币免费获取&免费领取">【赠送】ripple币免费获取&免费领取</a>
+				</li>
+				<li class="random-post-link">
+				<a href="http://www.yanyulin.info/pages/2013/11/qqLogin.html" target="_blank" title="界面编程模仿篇(模仿腾讯QQ登录界面)">界面编程模仿篇(模仿腾讯QQ登录界面)</a>
+				</li>
+				<li class="random-post-link">
+				<a href="http://www.yanyulin.info/pages/2014/03/duoshuo.html" target="_blank" title="多说评论框如何|怎么样|实际测试">多说评论框如何|怎么样|实际测试</a>
+				</li>
+				</ul>
+				</ul>
+				<div class="clear"></div>
+				</div>
+				</div>
+				
+			<div class="hotarticles" align="center">
+						<hr/>
+				<div class="box_r" align="center">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- LEFT_SIDE -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-6620728980314958"
+     data-ad-slot="9349871228"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+				</div>
+				</div>
+				
+				<div class="hotarticles">
+				<h3>年度排行</h3>
+				<div class="box_r">
+				<ul>
+				<li>
+				<a href="http://www.yanyulin.info/pages/2014/03/navigator.html" target="_blank" title="pelican创建博客如何设置导航条">pelican创建博客如何设置导航条</a>
+				</li>
+				<li>
+				<a href="http://www.yanyulin.info/pages/2014/03/ali_4.html" target="_blank" title="阿里巴巴校招面经2014年软件研发面经">阿里巴巴校招面经2014年软件研发面经</a>
+				</li>
+				<li>
+				<a href="http://www.yanyulin.info/pages/2013/12/meituan_2014_A.html" target="_blank" title="美团网2014年校招笔试题(研发)">美团网2014年校招笔试题(研发)</a>
+				</li>
+				<li>
+				<a href="http://www.yanyulin.info/pages/2013/12/prgbeautiful.html" target="_blank" title="编程之美—微软技术面试心得">编程之美—微软技术面试心得</a>
+				</li>
+				<li>
+				<a href="http://www.yanyulin.info/pages/2013/12/vc_1.html" target="_blank" title="VC视频教程(主要讲述`MFC`)">VC视频教程(主要讲述`MFC`)</a>
+				</li>
+				<li>
+				<a href="http://www.yanyulin.info/pages/2014/03/getxrp.html" target="_blank" title="【赠送】ripple币免费获取&免费领取">【赠送】ripple币免费获取&免费领取</a>
+				</li>
+				<li>
+				<a href="http://www.yanyulin.info/pages/2013/11/fetchPage.html" target="_blank" title="爬虫的自我解剖(抓取网页HtmlUnit)">爬虫的自我解剖(抓取网页HtmlUnit)</a>
+				</li>
+				<li>
+				<a href="http://www.yanyulin.info/pages/2014/03/duoshuo.html" target="_blank" title="多说评论框如何|怎么样|实际测试">多说评论框如何|怎么样|实际测试</a>
+				</li>
+				<div class="clear"></div>
+				</div>
+				</div>
+				</div>
+				<div class="hotarticles" align="center">
+						<hr/>
+				<div class="box_r" align="center">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 160*600 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:160px;height:600px"
+     data-ad-client="ca-pub-6620728980314958"
+     data-ad-slot="3421088826"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+				<div class="clear"></div>
+				</div>
+				</div>
+				</div>
+	</div>
+</div>	 </div>		
+	 <div id="my_footer_wrapper">
+	 <div class="link">
+	 <a href="http://www.zhangxiaolong.org" target="_blank">Atlas</a>
+	 <a href="http://weibo.com/lamazi" target="_blank">我的微博</a>
+	 <a href="http://blog.csdn.net/column/details/job-school.html" target="_blank">IT公司笔试题</a>
+	 <a target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=2aC4t4agrIa1sLeZv7ahtLiwtfe6trQ" style="text-decoration:none;color:#A40000;">申请友链</a>
+	 <div class="clear"></div>
+   </div>
+   </div>
+	 <div id="my_footer_wrapper">
+	 <div id="my_footer">		
+	 <span>【</span><a href="http://www.yanyulin.info/sitemap.xml" target="_blank">本站地图</a><span>】
+	 </span> 		
+	 <span>【</span><a href="http://www.yanyulin.info/feeds/all.rss.xml" target="_blank">RSS订阅</a><span>】
+	 </span>  		
+	 <span>【</span><a href="http://www.yanyulin.info/sitemap.xml" target="_blank">谷歌地图</a><span>】
+	 </span> 		
+	 <span>【</span><a href="http://www.yanyulin.info" target="_blank">电脑版</a><span>】</span>    
+	 </div>
+  </div>  
+  <div id="my_copyright_wrapper">
+		<div id="my_copyright">
+		博主邮箱: zwjlpeng@gmail.com Copyright@2010-2020 <a href="http://www.yanyulin.info">烟雨林个人博客</a>
+		</div>
+  </div>
+<!--
+    <script>
+     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+     ga('create', 'UA-45829467-1', '');
+     ga('send', 'pageview');
+   </script>
+-->
+
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Ffc8ddb27d7faba664a1416d848575847' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<title>
+阿里巴巴校招2010年软研面经 - 烟雨林</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
+<meta name="author" content="烟雨林">
+<meta name="description" content="烟雨林，是一个专注于互联网、搜索引擎、社会化网络、编程语言、程序员找工作、程序员面试等领域的原创IT科技博客">
+<meta name="keywords" content="烟雨|烟雨林|编程语言|互联网|程序员找工作|视频教程|程序员面经|Linux|数据挖掘|自然语言处理|移动互联">
+<link rel="stylesheet" type="text/css" href="http://www.yanyulin.info/theme/index.css" />
+<link rel="shortcut icon" href="http://www.yanyulin.info/theme/images/favicon.ico">
+</head>
+<body >
+   <div id="hed">
+			<div class="top_part">
+				<a href="http://www.yanyulin.info"><img src="http://www.yanyulin.info/theme/images/logo.png"/ alt="烟雨林" title="烟雨林" width="127px" height="29px"></a>
+			</div>
+	 </div>
+	 <div id="wrapper">
+			<div id="top">
+				<div id='topnav'>
+					<div >
+					   	<div >
+						  		<ul>	
+						   						<li><a href="http://www.yanyulin.info">烟雨首页</a></li>
+						  				  											<li><a href="http://www.yanyulin.info/category/bian-cheng-yu-yan.html">编程语言</a></li>
+						  																<li class="current-menu-item current_page_item "><a href="http://www.yanyulin.info/category/cheng-xu-yuan-de-mian-jing.html">程序员的面经</a></li>
+						  				  											<li><a href="http://www.yanyulin.info/category/cheng-xu-yuan-zhao-gong-zuo.html">程序员找工作</a></li>
+						  				  											<li><a href="http://www.yanyulin.info/category/jing-pin-shu-ji.html">精品书籍</a></li>
+						  				  											<li><a href="http://www.yanyulin.info/category/shi-pin-jiao-cheng.html">视频教程</a></li>
+						  				  											<li><a href="http://www.yanyulin.info/category/wan-zhuan-ji-zhu.html">玩转技术</a></li>
+						  				  											<li><a href="http://www.yanyulin.info/category/yan-yu-za-tan.html">烟雨杂谈</a></li>
+						  		</ul>
+					   	</div> 
+				  </div>
+			  </div>
+			</div>
+<script type="text/javascript">
+    function doZoom(size) {
+        var zoom = document.all ? document.all['entry'] : document.getElementById('entry');
+        zoom.style.fontSize = size + 'px';
+    }
+</script>
+<div class="test_right">
+		<div id="content">							 
+					<div id="map">
+						<div class="browse">现在的位置: <a title="返回首页" href="http://www.yanyulin.info" target="_blank">烟雨首页</a> ＞
+						<a href="http://www.yanyulin.info/category/cheng-xu-yuan-de-mian-jing.html"  target="_blank" title="查看程序员的面经中的全部文章" rel="category tag">程序员的面经</a>＞正文</div>
+						<div class="font"><a href="javascript:doZoom(12)">小</a> <a href="javascript:doZoom(13)">中</a> <a href="javascript:doZoom(18)">大</a></div>
+					</div>
+					<div class="entry_box_s">
+						<div class="entry_title_box">
+							<div class="entry_title">阿里巴巴校招2010年软研面经</div>
+							<div class="archive_info">
+								<span class="date">2010-11-19</span>
+								<span class="category"> ⁄ 							
+						  <a href="http://www.yanyulin.info/tag/a-li-mian-jing.html" target="_blank" title="查看同类文章" rel="category tag">阿里面经</a>&nbsp;
+						  </span>
+							</div>
+						</div>
+						<div class="entry">
+							<div id="entry" style="font-size: 14px; ">
+							<hr/>
+<div align="left" style="padding:0px">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 320*50 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:320px;height:50px"
+     data-ad-client="ca-pub-6620728980314958"
+     data-ad-slot="6117203227"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- BOTTOM_ONE -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:320px;height:50px"
+     data-ad-client="ca-pub-6620728980314958"
+     data-ad-slot="1687003628"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+							<p>刚刚参加了阿里巴巴的面试，现将题目公布于此，希望对找工作的人有帮助。</p>
+<p>1、String,StringBuffer, StringBuilder 的区别是什么？String为什么是不可变的？</p>
+<p>这道题源码分析，可以参考这篇博文
+<a href="http://www.yanyulin.info/pages/2013/07/string.html" target="_blank">
+String StringBuffer StringBuilder的区别分析
+</a></p>
+<p>String对象的值是不可变的，而StringBuffer和StringBuilder的值可以变化，适用于动态拼接长字符串，如SQL语句。StringBuffer是同步的，StringBuilder是非同步的。String类中用于保存字符串值的是char数组，该数组被声明为final，因而是不可变的。</p>
+<p>2、<code>VECTOR</code>,<code>ARRAYLIST</code>, <code>LINKEDLIST</code>的区别是什么？</p>
+<p>这道题源码分析，可以参考这篇博文
+<a href="http://blog.csdn.net/zwjlpeng/article/details/9701249" target="_blank">
+String StringBuffer StringBuilder的区别分析
+</a></p>
+<p><code>Vector</code>是java1版本遗留下来的，本身为同步的，Arraylist类似于数组，各个元素的物理存储位置相邻，适用于随机存取，但插入删除会造成元素移动；而LinkedList是通常所说的链表，逻辑位置相邻的元素物理上不一定是相邻存储，适用于插入删除较多的情况，而查找效率较低。</p>
+<p>3、<code>Hashtable</code>, <code>HashMap</code>，<code>TreeMap</code>区别</p>
+<p>这道题源码分析，可以参考这篇博文
+<a href="http://blog.csdn.net/zwjlpeng/article/details/9746425" target="_blank">
+String StringBuffer StringBuilder的区别分析
+</a></p>
+<p><code>Hashtable</code>和<code>HashMap</code>都实现了Map接口，都是通过hash函数将一个值映射到一个存储位置从而实现键值对的高效查询。Hashtable为java1版本遗留下来的，是同步的，键和值都不能为null，判断是否包含键值，通过contains(key,value)来实现；HashMap是非同步的，因此在单线程环境下，其效率比Hashtable要高，可以存入一个<code>null</code>键，多个null值，将判断是否包含键值区分为containsKey(key)和containsValue(value)两种方式。TreeMap主要是实现了键的排序功能，即各个键是按序排列的。</p>
+<p>4、<code>ConcurrentMap</code>和<code>HashMap</code>的区别</p>
+<p>ConcurrentMap是专用于多线程环境的，是同步的。而HashMap针对单线程环境，方法都不是同步的，要在多线程中实现同步必须通过外加同步。</p>
+<p>5、<code>Tomcat</code>，<code>apache</code>，<code>jboss</code>的区别</p>
+<p>Tomcat，JBoss</p>
+<p>6、<code>GET/POST</code>区别</p>
+<p>Get和Post是指Servlet中处理HttpServletRequest时的不同方式，其设定方式是在表单中的action method指定（get或post），则请求提交到对应servlet时，会调用相应的doPost()或doGet()方法。
+二者的主要区别：get是通过url流来传递数据的，因此要传送的数据直接通过url后加参数值对来实现，缺点是安全性不高，密码等不能通过该方式来传递，而且传输的数据量有严格的限制；post是通过新建的流来实现数据的传输的，因此url不会显示需要传输的数据，安全性相对来说要高，而且传输的数据量没有限制。</p>
+<p>7、<code>SESSION</code>, <code>COOKIE</code>区别</p>
+<p>二者都是用来记录用户信息的方式。Session是指一次Http会话，其生命周期也仅此一次会话，因此只能保存一次会话的信息，会话结束后session对象就会销毁。而Cookie是指浏览器为了记忆用户的某些常用信息而保存在客户端的数据，数据不会随会话的结束而丢失。</p>
+<p>8、<code>Servlet</code>的生命周期</p>
+<p>Web容器启动后，当用户请求某个servlet时，先查看容器中是否已经有该servlet的实例，如果存在，则直接将请求发送给改serlvet处理，否则新建一个servlet实例，调用其init方法进行初始化操作，然后调用其service方法处理请求，处理的方式有doGet和doPost等，请求处理完成后形成http响应发送给客户端，当Web容器退出后，会调用servlet的destroy方法将serlvet实例销毁。</p>
+<p>9、<code>HTTP</code>报文包含内容</p>
+<p>Http报文包括HttpRequest报文和HttpResponse报文。
+HttpRequest报文包括：Http版本信息，字符编码，请求的URI，请求方式（get或post），请求标头信息，请求主体。HttpResponse报文头包括：Http版本，响应的状态码，响应状态码对应的摘要文字，响应标头信息，以及响应主体</p>
+<p>10、<code>Statement</code>与<code>PreparedStatement</code>的区别,什么是SQL注入，如何防止SQL注入？</p>
+<p>Statement和PreparedStatement都是用于执行SQL语句的对象。Statement的sql语句无法进行动态的修改，必须在运行时才对sql语句进行解析。PreparedStatement正如其名，在编译期就对sql语句进行了解析放入内存中，适用于很多sql语句模式一样，只是数据不同的情况，不需要对每一个都进行sql解析，提高了效率。PreparedStatement还可以实现批量sql的执行。SQL注入是指在动态拼接sql语句的过程中，插入恶意的数据，导致原本的sql语句含义甚至结构发生了变化。防止sql注入的方式：对用户输入控件的输入文本进行合法性校验，如果发现疑似注入的内容，予以屏蔽。</p>
+<p>11、redirect, foward区别</p>
+<p>redirect是重定位，这是通过浏览器重新请求某个新的URL，然后接收响应数据并展示给用户，因此浏览器知道整个重定位的过程。而forward直接通过servlet向服务器请求某个URL，得到响应后，将数据再发给浏览器，因此浏览器根本不知道这个响应信息是否是经过转发的。</p>
+<p>12、关于JAVA内存模型，一个类（两个属性，四个方法）实例化100次，现在内存中的存储状态，
+几个对象，几个属性，几个方法。</p>
+<p>Java的内存分为栈和堆，栈是程序运行的单位，主要保存基本数据类型的数据和程序运行时的信息，而堆主要保存对象的信息。
+而Java的堆是按分代方式来组织的，分为年轻代（新生代、幸存1区，幸存2区），年老代以及持久代。其中新建的对象一般都在新生代，随着系统的运行，GC会将新生代的对象移至幸存区，年老代。而持久代主要保存类信息和方法信息。因此，一个包含两个属性四个方法的类实例化100次后再内存中的存储状态：四个方法仅在持久代内存区域存储1份，而对象在新生代会产生100个，且每个对象都有自己的属性，故内存中有200个属性值。</p>
+<p>13、谈谈Hibernate的理解，一级和二级缓存的作用，在项目中Hibernate都是怎么使用缓存的。</p>
+<p>Hibernate是ORM框架的一种实现，为了使用户从繁重的SQL语句中解放出来而设计的，将对象与关系数据库中的实体通过配置文件建立映射关系，从而实现数据的存取对象化。</p>
+<p>14、反射讲一讲，主要是概念,都在哪需要反射机制，反射的性能，如何优化</p>
+<p>反射是通过类名来加载类的信息，并创建对象。一般都是通过反射来实现Java的多态性，可扩展性。Java中主张面向接口编程，当用户需要新的特性时，只要实现指定的接口，并通过修改配置文件即可将新性能挂接到原有系统中，而不需要对原有系统进行修改。</p>
+<p>15、谈谈Hibernate与Ibatis的区别，哪个性能会更高一些</p>
+<p>16、对Spring的理解，项目中都用什么？怎么用的？对<code>IOC</code>、和AOP的理解及实现原理</p>
+<p>17、线程同步，并发操作怎么控制</p>
+<p>多线程环境下，不同线程如果不共享数据时，可以异步执行，提高系统的性能与效率，但是当需要共享数据时，需要做同步控制，以保持数据的一致性。线程同步是指多个线程共享数据，其中一个线程需要使用另一个线程的结果，必须等另一个线程执行完成后才能继续执行。在java中线程同步主要通过synchronized关键字，wait()，notify(),notifyAll()机制，Lock等来实现线程同步。同步操作通过锁机制保证同一时间只有一个线程访问该对象，但是也存在一定的问题：导致性能下降，容易出现死锁。</p>
+<p>18、描述struts的工作流程。</p>
+<p>浏览器客户端提出request请求，Web容器接收到request后，交给<code>ActionServlet</code>，根据struts-config.xml配置文件中配置的表单，生成ActionForm，将请求转发给Action，Action调用ActionForm以及JavaBean执行逻辑处理，形成ActionForward返回给ActionServlet，ActionServlet根据配置将请求转发给相应的JSP页面，JSP页面调用JavaBean后形成Http响应回送给客户端。</p>
+<p>19、<code>Tomcat</code>的session处理，如果让你实现一个tomcatserver，如何实现session机制</p>
+<p>20、关于Cache(Ehcache,Memcached)</p>
+<p>21、sql的优化相关问题</p>
+<p>22、oracle中 rownum与rowid的理解，一千条记录我查200到300的记录怎么查？</p>
+<p>假设表为TABLE_NAME，则查询表中第200到第300条记录的SQL语句如下：</p>
+<p><textarea style="width:100%;height:100px">
+SELECT * FROM (
+　　SELECT rownum num, x.* FROM(
+　　　　SELECT * TABLE_NAME ORDER BY PRI_KEY
+　　)x
+)y
+WHERE y.num BETWEEN 200 AND 300；
+</textarea></p>
+<p>23、如何分析ORACLE的执行计划？</p>
+<p>24、 DB中索引原理，种类，使用索引的好处和问题是什么？</p>
+<p>DB中为了能快速检索数据，对记录添加索引，一般采用B+树索引。索引分为聚簇索引和非聚簇索引。当在表的某个字段建立聚簇索引后，记录相当于索引数的叶子节点，故记录的物理顺序会按指定字段的值进行调整，因此一个表只能建立一个聚簇索引，这种索引不适用于大量插入删除数据的情况，因为会导致记录的频繁移动，降低性能。而在表上建立非聚簇索引后，记录位于索引树外，故表的记录不会发生物理上的顺序调整，一个表上可以在多个字段上建立非聚簇索引，这种索引适应于对表进行频繁增删的情况。</p>
+<p>25、<code>JVM</code>垃圾回收实现原理。垃圾回收的线程优先级。</p>
+<p>26、<code>jvm</code>最大内存设置。设置的原理。结合垃圾回收讲讲。</p>
+<p><code>-Xms:1024m</code> 设置初始化堆大小
+<code>–Xmx:1024m</code>设置最大堆大小
+具体大小应根据内存总大小值来确定，一般这两个值应相等，否则当内存不够时，造成GC重新分配内存。
+<code>-XX:PermSize=1024m</code> 设置永久内存区大小
+<code>-XX:MaxParmSize=1024m</code> 设置最大永久内存区大小。</p>
+<p>到此为止</p>
+						  <div class="clear"></div>
+							</div>
+							<b>本文地址:</b> <a href="http://www.yanyulin.info/pages/2010/11/ali_2.html" target="_self">http://www.yanyulin.info/pages/2010/11/ali_2.html</a>
+							<div><font color="blue"><b>转载时请保留本文出处,谢谢您的合作</b></font></div>
+							<hr/>
+							<div class="clear" align="left">
+<!--广告-->
+							</div>
+						</div>			
+						<!-- Baidu Button BEGIN -->
+						<div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+						<a class="bds_qzone"></a>
+						<a class="bds_tsina"></a>
+						<a class="bds_tqq"></a>
+						<a class="bds_renren"></a>
+						<a class="bds_t163"></a>
+						<span class="bds_more"></span>
+						</div>
+						<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=6864225" ></script>
+						<script type="text/javascript" id="bdshell_js"></script>
+						<script type="text/javascript">			
+   		      document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+            </script>
+            <!-- Baidu Button END -->
+						<div class="clear"></div>
+						<!-- end: entry -->
+					</div>
+					<!-- entrymeta -->	
+				<center>
+					<div class="entry_sb">
+					</div>
+					<!-- end: entrymeta -->
+				<div class="context_b" align="left">
+					 上一篇: 
+  				 <a href="http://www.yanyulin.info/pages/2010/11/ali_2.html" title="阿里巴巴校招2010年软研面经" target="_blank">阿里巴巴校招2010年软研面经</a>
+  				 &nbsp;&nbsp
+  				 下一篇:
+  				 <a href="http://www.yanyulin.info/pages/2012/11/huawei_2012_1.html" title="2012年华为成都校招机试" target="_blank">2012年华为成都校招机试</a>
+					 
+				</div>
+				<div class="context_b">
+ 
+			<table border="0px" width="100%">
+			
+	 
+  				 <tr>
+ 
+  				 <td width="50%" align="left">
+  				 <a href="http://www.yanyulin.info/pages/2014/01/ali_1.html" title="阿里巴巴校招2014年软研面经" target="_blank">阿里巴巴校招2014年软研面经</a>
+  				 </td>
+	
+	 
+ 
+  				 <td width="50%" align="left">
+  				 <a href="http://www.yanyulin.info/pages/2010/11/ali_2.html" title="阿里巴巴校招2010年软研面经" target="_blank">阿里巴巴校招2010年软研面经</a>
+  				 </td>
+	
+  				 </tr>
+	 
+  				 <tr>
+ 
+  				 <td width="50%" align="left">
+  				 <a href="http://www.yanyulin.info/pages/2014/03/ali_3.html" title="阿里巴巴校招面经(2014年软件研发)" target="_blank">阿里巴巴校招面经(2014年软件研发)</a>
+  				 </td>
+	
+	 
+ 
+  				 <td width="50%" align="left">
+  				 <a href="http://www.yanyulin.info/pages/2014/03/ali_4.html" title="阿里巴巴校招面经2014年软件研发面经" target="_blank">阿里巴巴校招面经2014年软件研发面经</a>
+  				 </td>
+	
+  				 </tr>
+ 
+  				 <td><a href="#" align="left"></a></td>
+  				 <td><a href="#" align="left"></a></td>
+			</table>
+				</div>
+				<div class="context_b">
+			 <div class="ds-thread" data-title="阿里巴巴校招2010年软研面经"></div>
+			 <script type="text/javascript">
+			 	var duoshuoQuery={short_name:"yanyulin"};
+			 	var ds=document.createElement("script");
+			 	ds.type="text/javascript";
+			 	ds.async=true;
+			 	ds.src="http://static.duoshuo.com/embed.js";
+			 	ds.charset="UTF-8";document.getElementsByTagName("head")[0].appendChild(ds);
+			 </script>
+				</div>
+				</center>
+		</div>
+</div>
+<div id="sidebar">					
+	<div class="widget">
+				<h3 style="padding-left:5px">
+<form method="get" action="http://www.google.com.hk/search" target="_blank">
+<input type="text" name="q" style="width:227px">
+<input type="submit" value="站内搜索" name="btnG" id="btnG" style="cursor:pointer;background-color: #49AFCD;" title="站内搜索">
+<input type="hidden" name="ie" value="UTF-8">
+<input type="hidden" name="oe" value="UTF-8">
+<input type="hidden" name="hl" value="zh-CN">
+<input type="hidden" name="domains" value="www.yanyulin.info">
+<input type="hidden" name="sitesearch" value="www.yanyulin.info">
+</form>
+				</h3>	
+				<div class="box" style="padding:5px 0px 0px 0px" align="center">			
+					<div class="textwidget" style="padding:0px 0px 0px 0px" align="center">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- LEFT_SIDE -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-6620728980314958"
+     data-ad-slot="9349871228"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+					 </div>
+				</div>
+				<h3>相关标签</h3>
+				<div class="box">			
+						<div class="textwidget">
+							<div id="tagsLink">
+							<a  href="http://www.yanyulin.info/tag/mian-jing-ji-qiao.html" title="查看面经技巧下的所有文章" style="background-color: #84A4B3" target="_blank">面经技巧</a>
+						  </div>
+							<div id="tagsLink">
+							<a  href="http://www.yanyulin.info/tag/jing-dong-mian-jing.html" title="查看京东面经下的所有文章" style="background-color: #169EDD" target="_blank">京东面经</a>
+						  </div>
+							<div id="tagsLink">
+							<a  href="http://www.yanyulin.info/tag/yin-xing-mian-jing.html" title="查看银行面经下的所有文章" style="background-color: #96C2AA" target="_blank">银行面经</a>
+						  </div>
+							<div id="tagsLink">
+							<a  href="http://www.yanyulin.info/tag/bai-du-mian-jing.html" title="查看百度面经下的所有文章" style="background-color: #96C2AA" target="_blank">百度面经</a>
+						  </div>
+							<div id="tagsLink">
+							<a  href="http://www.yanyulin.info/tag/rui-jie-mian-jing.html" title="查看锐捷面经下的所有文章" style="background-color: #8C8BC6" target="_blank">锐捷面经</a>
+						  </div>
+							<div id="tagsLink">
+							<a  href="http://www.yanyulin.info/tag/ku-pai-mian-jing.html" title="查看酷派面经下的所有文章" style="background-color: #84A4B3" target="_blank">酷派面经</a>
+						  </div>
+							<div id="tagsLink">
+							<a  href="http://www.yanyulin.info/tag/a-li-mian-jing.html" title="查看阿里面经下的所有文章" style="background-color: #84A4B3" target="_blank">阿里面经</a>
+						  </div>
+							<div id="tagsLink">
+							<a  href="http://www.yanyulin.info/tag/cvtemian-jing.html" title="查看CVTE面经下的所有文章" style="background-color: #169EDD" target="_blank">CVTE面经</a>
+						  </div>
+							<div id="tagsLink">
+							<a  href="http://www.yanyulin.info/tag/chuang-xin-gong-chang-mian-jing.html" title="查看创新工场面经下的所有文章" style="background-color: #96C2AA" target="_blank">创新工场面经</a>
+						  </div>
+							<div id="tagsLink">
+							<a  href="http://www.yanyulin.info/tag/hua-wei-mian-jing.html" title="查看华为面经下的所有文章" style="background-color: #8C8BC6" target="_blank">华为面经</a>
+						  </div>
+							<div id="tagsLink">
+							<a  href="http://www.yanyulin.info/tag/mei-tuan-mian-jing.html" title="查看美团面经下的所有文章" style="background-color: #D17C93" target="_blank">美团面经</a>
+						  </div>
+							<div id="tagsLink">
+							<a  href="http://www.yanyulin.info/tag/qi-ta-mian-jing.html" title="查看其他面经下的所有文章" style="background-color: #96C2AA" target="_blank">其他面经</a>
+						  </div>
+							<div id="tagsLink">
+							<a  href="http://www.yanyulin.info/tag/teng-xun-mian-jing.html" title="查看腾讯面经下的所有文章" style="background-color: #8C8BC6" target="_blank">腾讯面经</a>
+						  </div>
+							<div id="tagsLink">
+							<a  href="http://www.yanyulin.info/tag/da-zhong-dian-ping-mian-jing.html" title="查看大众点评面经下的所有文章" style="background-color: #84A4B3" target="_blank">大众点评面经</a>
+						  </div>
+							<div id="tagsLink">
+							<a  href="http://www.yanyulin.info/tag/qu-na-mian-jing.html" title="查看去哪面经下的所有文章" style="background-color: #D17C93" target="_blank">去哪面经</a>
+						  </div>
+							<div id="tagsLink">
+							<a  href="http://www.yanyulin.info/tag/ren-ren-mian-jing.html" title="查看人人面经下的所有文章" style="background-color: #D17C93" target="_blank">人人面经</a>
+						  </div>
+							<div id="tagsLink">
+							<a  href="http://www.yanyulin.info/tag/wang-yi-mian-jing.html" title="查看网易面经下的所有文章" style="background-color: #169EDD" target="_blank">网易面经</a>
+						  </div>
+						</div>
+						<div class="clear"></div>
+				</div>
+				<h3>本站直达</h3>
+				<div class="box">
+				<div class="textwidget">
+					<table id="tbl">
+  					<tbody>
+  						<tr>
+ 
+    							<td align="center"><a class="btn btn-info xsmall" href="http://www.yanyulin.info/category/bian-cheng-yu-yan.html" target="_blank"  title="查看编程语言下的所有文章">编程语言</a></td>
+			
+ 
+    							<td align="center"><a class="btn btn-info xsmall" href="http://www.yanyulin.info/category/cheng-xu-yuan-zhao-gong-zuo.html" target="_blank"  title="查看程序员找工作下的所有文章">程序员找工作</a></td>
+			
+ 
+    							<td align="center"><a class="btn btn-info xsmall" href="http://www.yanyulin.info/category/jing-pin-shu-ji.html" target="_blank"  title="查看精品书籍下的所有文章">精品书籍</a></td>
+			
+ 
+    							<td align="center"><a class="btn btn-info xsmall" href="http://www.yanyulin.info/category/shi-pin-jiao-cheng.html" target="_blank"  title="查看视频教程下的所有文章">视频教程</a></td>
+			
+ 
+    							<td align="center"><a class="btn btn-info xsmall" href="http://www.yanyulin.info/category/wan-zhuan-ji-zhu.html" target="_blank"  title="查看玩转技术下的所有文章">玩转技术</a></td>
+			
+  						</tr>	
+  						<tr>
+ 
+    							<td align="center"><a class="btn btn-info xsmall" href="http://www.yanyulin.info/category/tou-zi-li-cai.html" target="_blank"  title="查看投资理财下的所有文章">投资理财</a></td>
+			
+ 
+    							<td align="center"><a class="btn btn-info xsmall" href="http://www.yanyulin.info/category/cheng-xu-yuan-de-mian-jing.html" target="_blank"  title="查看程序员的面经下的所有文章">程序员的面经</a></td>
+			
+ 
+    							<td align="center"><a class="btn btn-info xsmall" href="http://www.yanyulin.info/category/yan-yu-za-tan.html" target="_blank"  title="查看烟雨杂谈下的所有文章">烟雨杂谈</a></td>
+			
+  						<td align="center"><a href="#"></a></td>
+  						<td align="center"><a href="#"></a></td>
+						</tbody>
+					</table>
+				</div>
+				</div>
+				<h3>邮箱订阅</h3>
+				<div class="box">			
+				<div class="textwidget">
+				<!--QQ邮件列表订阅嵌入代码-->
+				<table  border="0">
+  			<tbody>
+  			<tr>
+  			<td>
+				<!--以下是QQ邮件列表订阅嵌入代码-->
+        <div style="width: 110px;overflow: hidden; " class="WB_widget WB_follow_ex">
+        <div class="follow_btn_line" node-type="inner">
+        <a class="follow_btn status_followed" node-type="followBtn" target="_blank" title="烟雨林博客" href="http://list.qq.com/cgi-bin/qf_invite?id=8949c93bdc7fcbda12adc078acb2809d6f6eba09998d35e6">
+				<img border="0" width="107px" height="22px" alt="邮箱订阅" src="http://www.yanyulin.info/pics/picMode_light_s.png" />
+        </a></div></div>
+			  </td>
+				</tr>
+			  </tbody>
+			  </table>
+				</div>
+				</div>
+				<div class="random_r">
+				<h3>随便看看</h3>
+				<div class="box_r">
+				<ul>
+				<ul class="random-post-link">
+				<li class="random-post-link">
+				<a href="http://www.yanyulin.info/pages/2014/03/optimization.html" target="_blank" title="程序代码优化需要考虑的问题">程序代码优化需要考虑的问题</a>
+				</li>
+				<li class="random-post-link">
+				<a href="http://www.yanyulin.info/pages/2014/03/ali_3.html" target="_blank" title="阿里巴巴校招面经(2014年软件研发)">阿里巴巴校招面经(2014年软件研发)</a>
+				</li>
+				<li class="random-post-link">
+				<a href="http://www.yanyulin.info/pages/2014/03/meituan_2014_C.html" target="_blank" title="美团网校园招聘笔试题2014年研发类长沙">美团网校园招聘笔试题2014年研发类长沙</a>
+				</li>
+				<li class="random-post-link">
+				<a href="http://www.yanyulin.info/pages/2014/03/kernel_analyze.html" target="_blank" title="Linux内核完全剖析PDF版下载">Linux内核完全剖析PDF版下载</a>
+				</li>
+				<li class="random-post-link">
+				<a href="http://www.yanyulin.info/pages/2013/11/vlinux1.html" target="_blank" title="Linux入门版视频教程(基础)">Linux入门版视频教程(基础)</a>
+				</li>
+				<li class="random-post-link">
+				<a href="http://www.yanyulin.info/pages/2014/03/deletetrust.html" target="_blank" title="怎么删除Ripple里的信任网关">怎么删除Ripple里的信任网关</a>
+				</li>
+				<li class="random-post-link">
+				<a href="http://www.yanyulin.info/pages/2013/11/qqLogin.html" target="_blank" title="界面编程模仿篇(模仿腾讯QQ登录界面)">界面编程模仿篇(模仿腾讯QQ登录界面)</a>
+				</li>
+				<li class="random-post-link">
+				<a href="http://www.yanyulin.info/pages/2014/03/duoshuo.html" target="_blank" title="多说评论框如何|怎么样|实际测试">多说评论框如何|怎么样|实际测试</a>
+				</li>
+				</ul>
+				</ul>
+				<div class="clear"></div>
+				</div>
+				</div>
+				
+			<div class="hotarticles" align="center">
+						<hr/>
+				<div class="box_r" align="center">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- LEFT_SIDE -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-6620728980314958"
+     data-ad-slot="9349871228"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+				</div>
+				</div>
+				
+				<div class="hotarticles">
+				<h3>年度排行</h3>
+				<div class="box_r">
+				<ul>
+				<li>
+				<a href="http://www.yanyulin.info/pages/2013/12/htaccess.html" target="_blank" title=".htaccess简明教程(SEO优化)">.htaccess简明教程(SEO优化)</a>
+				</li>
+				<li>
+				<a href="http://www.yanyulin.info/pages/2014/03/meituan_2014_1.html" target="_blank" title="美团网校园招聘2014年面经(软件研发)">美团网校园招聘2014年面经(软件研发)</a>
+				</li>
+				<li>
+				<a href="http://www.yanyulin.info/pages/2013/12/cxgc_2014_A.html" target="_blank" title="创新工场2014年校招笔试题(研发)">创新工场2014年校招笔试题(研发)</a>
+				</li>
+				<li>
+				<a href="http://www.yanyulin.info/pages/2013/12/prgbeautiful.html" target="_blank" title="编程之美—微软技术面试心得">编程之美—微软技术面试心得</a>
+				</li>
+				<li>
+				<a href="http://www.yanyulin.info/pages/2013/11/vlinux1.html" target="_blank" title="Linux入门版视频教程(基础)">Linux入门版视频教程(基础)</a>
+				</li>
+				<li>
+				<a href="http://www.yanyulin.info/pages/2014/03/deletetrust.html" target="_blank" title="怎么删除Ripple里的信任网关">怎么删除Ripple里的信任网关</a>
+				</li>
+				<li>
+				<a href="http://www.yanyulin.info/pages/2014/03/zhihu_2.html" target="_blank" title="一款自动发链接软件的实现细节分析">一款自动发链接软件的实现细节分析</a>
+				</li>
+				<li>
+				<a href="http://www.yanyulin.info/pages/2014/03/duoshuo.html" target="_blank" title="多说评论框如何|怎么样|实际测试">多说评论框如何|怎么样|实际测试</a>
+				</li>
+				<div class="clear"></div>
+				</div>
+				</div>
+				</div>
+				<div class="hotarticles" align="center">
+						<hr/>
+				<div class="box_r" align="center">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 160*600 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:160px;height:600px"
+     data-ad-client="ca-pub-6620728980314958"
+     data-ad-slot="3421088826"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+				<div class="clear"></div>
+				</div>
+				</div>
+				</div>
+	</div>
+</div>	 </div>		
+	 <div id="my_footer_wrapper">
+	 <div class="link">
+	 <a href="http://www.zhangxiaolong.org" target="_blank">Atlas</a>
+	 <a href="http://weibo.com/lamazi" target="_blank">我的微博</a>
+	 <a href="http://blog.csdn.net/column/details/job-school.html" target="_blank">IT公司笔试题</a>
+	 <a target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=2aC4t4agrIa1sLeZv7ahtLiwtfe6trQ" style="text-decoration:none;color:#A40000;">申请友链</a>
+	 <div class="clear"></div>
+   </div>
+   </div>
+	 <div id="my_footer_wrapper">
+	 <div id="my_footer">		
+	 <span>【</span><a href="http://www.yanyulin.info/sitemap.xml" target="_blank">本站地图</a><span>】
+	 </span> 		
+	 <span>【</span><a href="http://www.yanyulin.info/feeds/all.rss.xml" target="_blank">RSS订阅</a><span>】
+	 </span>  		
+	 <span>【</span><a href="http://www.yanyulin.info/sitemap.xml" target="_blank">谷歌地图</a><span>】
+	 </span> 		
+	 <span>【</span><a href="http://www.yanyulin.info" target="_blank">电脑版</a><span>】</span>    
+	 </div>
+  </div>  
+  <div id="my_copyright_wrapper">
+		<div id="my_copyright">
+		博主邮箱: zwjlpeng@gmail.com Copyright@2010-2020 <a href="http://www.yanyulin.info">烟雨林个人博客</a>
+		</div>
+  </div>
+<!--
+    <script>
+     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+     ga('create', 'UA-45829467-1', '');
+     ga('send', 'pageview');
+   </script>
+-->
+
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Ffc8ddb27d7faba664a1416d848575847' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+
+</body>
+</html>
