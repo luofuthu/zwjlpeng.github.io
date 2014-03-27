@@ -101,7 +101,6 @@ s3_upload: publish
 cf_upload: publish
 	cd $(OUTPUTDIR) && swift -v -A https://auth.api.rackspacecloud.com/v1.0 -U $(CLOUDFILES_USERNAME) -K $(CLOUDFILES_API_KEY) upload -c $(CLOUDFILES_CONTAINER) .
 
-<<<<<<< HEAD
 github:publish
 	cd $(OUTPUTDIR) && git add . && git commit -am 'commit' && git push -u origin master
 	
@@ -111,10 +110,4 @@ upload:
 ping:
 	python ping.py
  
-=======
-github: publish
-	ghp-import $(OUTPUTDIR)
-	git push origin gh-pages
-
->>>>>>> 3f1223263cd6861afd46e126ef48ba2a7cd71536
 .PHONY: html help clean regenerate serve devserver publish ssh_upload rsync_upload dropbox_upload ftp_upload s3_upload cf_upload github
