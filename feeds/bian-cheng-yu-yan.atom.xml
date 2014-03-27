@@ -1,5 +1,246 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>烟雨林</title><link href="http://www.yanyulin.info/" rel="alternate"></link><link href="http://www.yanyulin.info/feeds/bian-cheng-yu-yan.atom.xml" rel="self"></link><id>http://www.yanyulin.info/</id><updated>2014-03-26T00:00:00+08:00</updated><entry><title>Velocity中的事件初始化以及解析池初始化</title><link href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_10.html" rel="alternate"></link><updated>2014-03-26T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-26:pages/2014/03/velocity_disabuse_10.html</id><summary type="html">&lt;hr /&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>烟雨林</title><link href="http://www.yanyulin.info/" rel="alternate"></link><link href="http://www.yanyulin.info/feeds/bian-cheng-yu-yan.atom.xml" rel="self"></link><id>http://www.yanyulin.info/</id><updated>2014-03-27T00:00:00+08:00</updated><entry><title>Velocity中对宏的初始化过程分析</title><link href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_11.html" rel="alternate"></link><updated>2014-03-27T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-27:pages/2014/03/velocity_disabuse_11.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;本系列教程，为个人在淘宝实习所写，博文中所提及的WebX为淘宝的架构，大家可以忽略，当然有兴趣的，也可以自已去搜搜，淘宝的WebX目前处于开源状态&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Velocity引擎解惑&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;1、&lt;a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_1.html" target="_blank"&gt;Velocity入门教程HelloWord程序&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;2、&lt;a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_2.html" target="_blank"&gt;Velocity入门例子自定义呈现容器&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;3、&lt;a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_3.html" target="_blank"&gt;Velocity入门例子事件监听机制&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;4、&lt;a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_4.html" target="_blank"&gt;Velocity入门例子创建普通的web工程&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;5、&lt;a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_5.html" target="_blank"&gt;Velocity中的单例模式以及多实例模式&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;6、&lt;a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_6.html" target="_blank"&gt;velocity初始化过程分析读取配置文件&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;7、&lt;a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_7.html" target="_blank"&gt;velocity初始化日志系统的过程分析&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;8、&lt;a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_8.html" target="_blank"&gt;Velocity初始化资源加载器以及预指令&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;9、&lt;a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_9.html" target="_blank"&gt;Velocity语法简明教程&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;10、&lt;a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_10.html" target="_blank"&gt;Velocity中的事件初始化以及解析池初始化&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;当Velocity engine运行时，会载入一个全局的宏文件。所有模板都可访问该宏文件(Velocimacros). 这个文件位置在相对于资源文件的根目录下。velocity默认的配置项为&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;velocimacro&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;library&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;VM_global_library&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;vm&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;此外，还有一些其他配置来处理宏的不同使用情况，例如：
+　　&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;velocimacro&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;permissions&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;allow&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="kr"&gt;inline&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;true&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;定义在模板中是否可用#macro()指令定义一个新的宏。默认为true，表示所有的vm都可以新建宏，但是要注意可能会把全局的宏配置给替换掉。
+　　&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;velocimacro&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;permissions&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;allow&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="kr"&gt;inline&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;to&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;replace&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;global&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;false&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;控制用户定义的宏是否可以可以替换Velocity的全局宏。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;velocimacro&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;library&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;autoreload&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;false&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;控制宏是否自动载入。当值为true时宏将根据是否修改而决定是否需要重新加载，这个特性可在调试时很方便，不需重启你的服务器。&lt;/p&gt;
+&lt;p&gt;还是让我们来看看源代码吧，文字不如代码来的直接，下面这个看似很长的代码，其实在我们的例子中用到的不是很多，因为我们的例子中默认配置文件中没有配置项&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;velocimacro&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;library&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;VM_global_library&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;vm&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;目录下也没有&lt;code&gt;VM_global_library.vm&lt;/code&gt;这个文件&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;initVelocimacro&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;  
+ &lt;span class="p"&gt;{&lt;/span&gt;  
+     &lt;span class="cm"&gt;/* &lt;/span&gt;
+&lt;span class="cm"&gt;      *  maybe I&amp;#39;m just paranoid... &lt;/span&gt;
+&lt;span class="cm"&gt;      */&lt;/span&gt;  
+     &lt;span class="n"&gt;synchronized&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;this&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  
+     &lt;span class="p"&gt;{&lt;/span&gt;  
+        &lt;span class="c1"&gt;//日志信息打印&lt;/span&gt;
+         &lt;span class="n"&gt;log&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;trace&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;initialization starting.&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
+  
+         &lt;span class="cm"&gt;/* &lt;/span&gt;
+&lt;span class="cm"&gt;          *   allow replacements while we add the libraries, if exist &lt;/span&gt;
+&lt;span class="cm"&gt;          */&lt;/span&gt;  
+            &lt;span class="c1"&gt;//允许宏进行替换，即局部可以替换全局&lt;/span&gt;
+         &lt;span class="n"&gt;setReplacementPermission&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;true&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
+  
+         &lt;span class="cm"&gt;/* &lt;/span&gt;
+&lt;span class="cm"&gt;          *  add all library macros to the global namespace &lt;/span&gt;
+&lt;span class="cm"&gt;          */&lt;/span&gt;  
+  &lt;span class="c1"&gt;//命令空间的设定&lt;/span&gt;
+         &lt;span class="n"&gt;vmManager&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;setNamespaceUsage&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;false&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
+  
+         &lt;span class="cm"&gt;/* &lt;/span&gt;
+&lt;span class="cm"&gt;          *  now, if there is a global or local libraries specified, use them. &lt;/span&gt;
+&lt;span class="cm"&gt;          *  All we have to do is get the template. The template will be parsed; &lt;/span&gt;
+&lt;span class="cm"&gt;          *  VM&amp;#39;s  are added during the parse phase &lt;/span&gt;
+&lt;span class="cm"&gt;          */&lt;/span&gt;  
+        &lt;span class="c1"&gt;//下面这个由于默认配置没有这个配置项，因此libfiles=null&lt;/span&gt;
+          &lt;span class="n"&gt;Object&lt;/span&gt; &lt;span class="n"&gt;libfiles&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;rsvc&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;getProperty&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;RuntimeConstants&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;VM_LIBRARY&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
+  
+          &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;libfiles&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="n"&gt;null&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  
+          &lt;span class="p"&gt;{&lt;/span&gt;    &lt;span class="c1"&gt;//日志打印&lt;/span&gt;
+              &lt;span class="n"&gt;log&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;debug&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&lt;/span&gt;&lt;span class="se"&gt;\&amp;quot;&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;RuntimeConstants&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;VM_LIBRARY&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;  
+                  &lt;span class="s"&gt;&amp;quot;&lt;/span&gt;&lt;span class="se"&gt;\&amp;quot;&lt;/span&gt;&lt;span class="s"&gt; is not set.  Trying default library: &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;  
+                  &lt;span class="n"&gt;RuntimeConstants&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;VM_LIBRARY_DEFAULT&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
+  
+              &lt;span class="c1"&gt;// try the default library.  &lt;/span&gt;
+                &lt;span class="c1"&gt;//去我们目录下寻找全局宏文件VM_global_library.vm，目录下没有这个                 //文件,因些函数调用的结果很显然是null&lt;/span&gt;
+              &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;rsvc&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;getLoaderNameForResource&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;RuntimeConstants&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;VM_LIBRARY_DEFAULT&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="n"&gt;null&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  
+              &lt;span class="p"&gt;{&lt;/span&gt;  
+                  &lt;span class="n"&gt;libfiles&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;RuntimeConstants&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;VM_LIBRARY_DEFAULT&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;  
+              &lt;span class="p"&gt;}&lt;/span&gt;  
+              &lt;span class="k"&gt;else&lt;/span&gt;  
+              &lt;span class="p"&gt;{&lt;/span&gt;   &lt;span class="c1"&gt;//日志打印&lt;/span&gt;
+                  &lt;span class="n"&gt;log&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;debug&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Default library not found.&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
+              &lt;span class="p"&gt;}&lt;/span&gt;  
+          &lt;span class="p"&gt;}&lt;/span&gt;  
+        &lt;span class="c1"&gt;//对于我们的程序来说，由于采用默认配置，配置中少了配置项，因此                    //libfile=null,下面一段均不执行&lt;/span&gt;
+          &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;libfiles&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="n"&gt;null&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  
+          &lt;span class="p"&gt;{&lt;/span&gt;  &lt;span class="c1"&gt;//如果有配置文件的话，将会对其进行分析&lt;/span&gt;
+              &lt;span class="n"&gt;macroLibVec&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;new&lt;/span&gt; &lt;span class="n"&gt;ArrayList&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;  
+              &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;libfiles&lt;/span&gt; &lt;span class="n"&gt;instanceof&lt;/span&gt; &lt;span class="n"&gt;Vector&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  
+              &lt;span class="p"&gt;{&lt;/span&gt;  
+                  &lt;span class="n"&gt;macroLibVec&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;addAll&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="n"&gt;Vector&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="n"&gt;libfiles&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
+              &lt;span class="p"&gt;}&lt;/span&gt;  
+              &lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;libfiles&lt;/span&gt; &lt;span class="n"&gt;instanceof&lt;/span&gt; &lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  
+              &lt;span class="p"&gt;{&lt;/span&gt;  
+                  &lt;span class="n"&gt;macroLibVec&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;libfiles&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
+              &lt;span class="p"&gt;}&lt;/span&gt;  
+  
+              &lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;is&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;macroLibVec&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;size&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;is&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  
+              &lt;span class="p"&gt;{&lt;/span&gt;  
+                  &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;lib&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;macroLibVec&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
+  
+                  &lt;span class="cm"&gt;/* &lt;/span&gt;
+&lt;span class="cm"&gt;                   * only if it&amp;#39;s a non-empty string do we bother &lt;/span&gt;
+&lt;span class="cm"&gt;                   */&lt;/span&gt;  
+  
+                  &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;StringUtils&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;isNotEmpty&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;lib&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;  
+                  &lt;span class="p"&gt;{&lt;/span&gt;  
+                      &lt;span class="cm"&gt;/* &lt;/span&gt;
+&lt;span class="cm"&gt;                       *  let the VMManager know that the following is coming &lt;/span&gt;
+&lt;span class="cm"&gt;                       *  from libraries - need to know for auto-load &lt;/span&gt;
+&lt;span class="cm"&gt;                       */&lt;/span&gt;  
+  
+                      &lt;span class="n"&gt;vmManager&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;setRegisterFromLib&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;true&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
+  
+                      &lt;span class="n"&gt;log&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;debug&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;adding VMs from VM library : &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;lib&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
+  
+                      &lt;span class="n"&gt;try&lt;/span&gt;  
+                      &lt;span class="p"&gt;{&lt;/span&gt;  
+                          &lt;span class="n"&gt;Template&lt;/span&gt; &lt;span class="n"&gt;template&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;rsvc&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;getTemplate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;lib&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
+  
+                          &lt;span class="cm"&gt;/* &lt;/span&gt;
+&lt;span class="cm"&gt;                           *  save the template.  This depends on the assumption &lt;/span&gt;
+&lt;span class="cm"&gt;                           *  that the Template object won&amp;#39;t change - currently &lt;/span&gt;
+&lt;span class="cm"&gt;                           *  this is how the Resource manager works &lt;/span&gt;
+&lt;span class="cm"&gt;                           */&lt;/span&gt;  
+  
+                          &lt;span class="n"&gt;Twonk&lt;/span&gt; &lt;span class="n"&gt;twonk&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;new&lt;/span&gt; &lt;span class="n"&gt;Twonk&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;  
+                          &lt;span class="n"&gt;twonk&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;template&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;template&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;  
+                          &lt;span class="n"&gt;twonk&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;modificationTime&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;template&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;getLastModified&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;  
+                          &lt;span class="n"&gt;libModMap&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;put&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;lib&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;twonk&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
+                      &lt;span class="p"&gt;}&lt;/span&gt;  
+                      &lt;span class="n"&gt;catch&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Exception&lt;/span&gt; &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  
+                      &lt;span class="p"&gt;{&lt;/span&gt;  
+                          &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;msg&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Velocimacro : Error using VM library : &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;lib&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;  
+                          &lt;span class="n"&gt;log&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;error&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;true&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;msg&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
+                          &lt;span class="n"&gt;throw&lt;/span&gt; &lt;span class="n"&gt;new&lt;/span&gt; &lt;span class="n"&gt;VelocityException&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;msg&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
+                      &lt;span class="p"&gt;}&lt;/span&gt;  
+  
+                      &lt;span class="n"&gt;log&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;trace&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;VM library registration complete.&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
+  
+                      &lt;span class="n"&gt;vmManager&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;setRegisterFromLib&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;false&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
+                  &lt;span class="p"&gt;}&lt;/span&gt;  
+              &lt;span class="p"&gt;}&lt;/span&gt;  
+          &lt;span class="p"&gt;}&lt;/span&gt;  
+  
+         &lt;span class="cm"&gt;/* &lt;/span&gt;
+&lt;span class="cm"&gt;          *   now, the permissions &lt;/span&gt;
+&lt;span class="cm"&gt;          */&lt;/span&gt;  
+  
+  
+         &lt;span class="cm"&gt;/* &lt;/span&gt;
+&lt;span class="cm"&gt;          *  allowinline : anything after this will be an inline macro, I think &lt;/span&gt;
+&lt;span class="cm"&gt;          *  there is the question if a #include is an inline, and I think so &lt;/span&gt;
+&lt;span class="cm"&gt;          * &lt;/span&gt;
+&lt;span class="cm"&gt;          *  default = true &lt;/span&gt;
+&lt;span class="cm"&gt;          */&lt;/span&gt;  
+  &lt;span class="c1"&gt;//允许填加宏&lt;/span&gt;
+         &lt;span class="n"&gt;setAddMacroPermission&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;true&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
+        &lt;span class="c1"&gt;//判断是否允许宏的递归&lt;/span&gt;
+         &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="n"&gt;rsvc&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;getBoolean&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="n"&gt;RuntimeConstants&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;VM_PERM_ALLOW_INLINE&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nb"&gt;true&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;  
+         &lt;span class="p"&gt;{&lt;/span&gt;  
+             &lt;span class="n"&gt;setAddMacroPermission&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;false&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
+  
+             &lt;span class="n"&gt;log&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;debug&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;allowInline = false : VMs can NOT be defined inline in templates&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
+         &lt;span class="p"&gt;}&lt;/span&gt;  
+         &lt;span class="k"&gt;else&lt;/span&gt;  
+         &lt;span class="p"&gt;{&lt;/span&gt;  
+             &lt;span class="n"&gt;log&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;debug&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;allowInline = true : VMs can be defined inline in templates&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
+         &lt;span class="p"&gt;}&lt;/span&gt;  
+  
+         &lt;span class="cm"&gt;/* &lt;/span&gt;
+&lt;span class="cm"&gt;          *  allowInlineToReplaceGlobal : allows an inline VM , if allowed at all, &lt;/span&gt;
+&lt;span class="cm"&gt;          *  to replace an existing global VM &lt;/span&gt;
+&lt;span class="cm"&gt;          * &lt;/span&gt;
+&lt;span class="cm"&gt;          *  default = false &lt;/span&gt;
+&lt;span class="cm"&gt;          */&lt;/span&gt;  
+         &lt;span class="n"&gt;setReplacementPermission&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;false&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
+  
+         &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;rsvc&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;getBoolean&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;  
+              &lt;span class="n"&gt;RuntimeConstants&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;VM_PERM_ALLOW_INLINE_REPLACE_GLOBAL&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nb"&gt;false&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;  
+         &lt;span class="p"&gt;{&lt;/span&gt;  
+             &lt;span class="n"&gt;setReplacementPermission&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;true&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
+               
+             &lt;span class="n"&gt;log&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;debug&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;allowInlineToOverride = true : VMs &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;  
+                 &lt;span class="s"&gt;&amp;quot;defined inline may replace previous VM definitions&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
+         &lt;span class="p"&gt;}&lt;/span&gt;  
+         &lt;span class="k"&gt;else&lt;/span&gt;  
+         &lt;span class="p"&gt;{&lt;/span&gt;  
+             &lt;span class="n"&gt;log&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;debug&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;allowInlineToOverride = false : VMs &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;  
+                 &lt;span class="s"&gt;&amp;quot;defined inline may NOT replace previous VM definitions&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
+         &lt;span class="p"&gt;}&lt;/span&gt;  
+  
+         &lt;span class="cm"&gt;/* &lt;/span&gt;
+&lt;span class="cm"&gt;          * now turn on namespace handling as far as permissions allow in the &lt;/span&gt;
+&lt;span class="cm"&gt;          * manager, and also set it here for gating purposes &lt;/span&gt;
+&lt;span class="cm"&gt;          */&lt;/span&gt;  
+         &lt;span class="n"&gt;vmManager&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;setNamespaceUsage&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;true&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
+  
+         &lt;span class="cm"&gt;/* &lt;/span&gt;
+&lt;span class="cm"&gt;          *  template-local inline VM mode : default is off &lt;/span&gt;
+&lt;span class="cm"&gt;          */&lt;/span&gt;  
+         &lt;span class="n"&gt;setTemplateLocalInline&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;rsvc&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;getBoolean&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;  
+             &lt;span class="n"&gt;RuntimeConstants&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;VM_PERM_INLINE_LOCAL&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nb"&gt;false&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;  
+  
+         &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;getTemplateLocalInline&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;  
+         &lt;span class="p"&gt;{&lt;/span&gt;  
+             &lt;span class="n"&gt;log&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;debug&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;allowInlineLocal = true : VMs &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;  
+                 &lt;span class="s"&gt;&amp;quot;defined inline will be local to their defining template only.&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
+         &lt;span class="p"&gt;}&lt;/span&gt;  
+         &lt;span class="k"&gt;else&lt;/span&gt;  
+         &lt;span class="p"&gt;{&lt;/span&gt;  
+             &lt;span class="n"&gt;log&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;debug&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;allowInlineLocal = false : VMs &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;  
+                 &lt;span class="s"&gt;&amp;quot;defined inline will be global in scope if allowed.&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
+         &lt;span class="p"&gt;}&lt;/span&gt;  
+  
+         &lt;span class="n"&gt;vmManager&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;setTemplateLocalInlineVM&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;getTemplateLocalInline&lt;/span&gt;&lt;span class="p"&gt;());&lt;/span&gt;  
+  
+         &lt;span class="cm"&gt;/* &lt;/span&gt;
+&lt;span class="cm"&gt;          *  autoload VM libraries &lt;/span&gt;
+&lt;span class="cm"&gt;          */&lt;/span&gt;  
+         &lt;span class="n"&gt;setAutoload&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;rsvc&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;getBoolean&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;RuntimeConstants&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;VM_LIBRARY_AUTORELOAD&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nb"&gt;false&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;  
+  
+         &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;getAutoload&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;  
+         &lt;span class="p"&gt;{&lt;/span&gt;  
+             &lt;span class="n"&gt;log&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;debug&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;autoload on : VM system &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;  
+                  &lt;span class="s"&gt;&amp;quot;will automatically reload global library macros&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
+         &lt;span class="p"&gt;}&lt;/span&gt;  
+         &lt;span class="k"&gt;else&lt;/span&gt;  
+         &lt;span class="p"&gt;{&lt;/span&gt;  
+             &lt;span class="n"&gt;log&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;debug&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;autoload off : VM system &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;  
+                   &lt;span class="s"&gt;&amp;quot;will not automatically reload global library macros&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
+         &lt;span class="p"&gt;}&lt;/span&gt;  
+  
+         &lt;span class="n"&gt;log&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;trace&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Velocimacro : initialization complete.&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
+     &lt;span class="p"&gt;}&lt;/span&gt;  
+ &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="淘宝技术"></category></entry><entry><title>Velocity中的事件初始化以及解析池初始化</title><link href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_10.html" rel="alternate"></link><updated>2014-03-26T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-26:pages/2014/03/velocity_disabuse_10.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;本系列教程，为个人在淘宝实习所写，博文中所提及的WebX为淘宝的架构，大家可以忽略，当然有兴趣的，也可以自已去搜搜，淘宝的WebX目前处于开源状态&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Velocity引擎解惑&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;1、&lt;a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_1.html" target="_blank"&gt;Velocity入门教程HelloWord程序&lt;/a&gt;&lt;/p&gt;
