@@ -2,7 +2,7 @@
 <html lang="zh">
 <head>
 <title>
-一款自动发链接的软件设计思路 - 烟雨林</title>
+毕业啦,这一刻学生生涯好像真的结束了 - 烟雨林</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
 <meta name="author" content="烟雨林">
@@ -29,8 +29,8 @@
 						  				  											<li><a href="http://www.yanyulin.info/category/cheng-xu-yuan-zhao-gong-zuo.html">程序员找工作</a></li>
 						  				  											<li><a href="http://www.yanyulin.info/category/jing-pin-shu-ji.html">精品书籍</a></li>
 						  				  											<li><a href="http://www.yanyulin.info/category/shi-pin-jiao-cheng.html">视频教程</a></li>
-						  																<li class="current-menu-item current_page_item "><a href="http://www.yanyulin.info/category/wan-zhuan-ji-zhu.html">玩转技术</a></li>
-						  				  											<li><a href="http://www.yanyulin.info/category/yan-yu-za-tan.html">烟雨杂谈</a></li>
+						  				  											<li><a href="http://www.yanyulin.info/category/wan-zhuan-ji-zhu.html">玩转技术</a></li>
+						  																<li class="current-menu-item current_page_item "><a href="http://www.yanyulin.info/category/yan-yu-za-tan.html">烟雨杂谈</a></li>
 						  		</ul>
 					   	</div> 
 				  </div>
@@ -46,16 +46,16 @@
 		<div id="content">							 
 					<div id="map">
 						<div class="browse">现在的位置: <a title="返回首页" href="http://www.yanyulin.info" target="_blank">烟雨首页</a> ＞
-						<a href="http://www.yanyulin.info/category/wan-zhuan-ji-zhu.html"  target="_blank" title="查看玩转技术中的全部文章" rel="category tag">玩转技术</a>＞正文</div>
+						<a href="http://www.yanyulin.info/category/yan-yu-za-tan.html"  target="_blank" title="查看烟雨杂谈中的全部文章" rel="category tag">烟雨杂谈</a>＞正文</div>
 						<div class="font"><a href="javascript:doZoom(12)">小</a> <a href="javascript:doZoom(13)">中</a> <a href="javascript:doZoom(18)">大</a></div>
 					</div>
 					<div class="entry_box_s">
 						<div class="entry_title_box">
-							<div class="entry_title">一款自动发链接的软件设计思路</div>
+							<div class="entry_title">毕业啦,这一刻学生生涯好像真的结束了</div>
 							<div class="archive_info">
-								<span class="date">2014-03-06</span>
+								<span class="date">2014-03-28</span>
 								<span class="category"> ⁄ 							
-						  <a href="http://www.yanyulin.info/tag/shi-yong-gong-ju.html" target="_blank" title="查看同类文章" rel="category tag">实用工具</a>&nbsp;
+						  <a href="http://www.yanyulin.info/tag/sui-xin-er-ji.html" target="_blank" title="查看同类文章" rel="category tag">随心而记</a>&nbsp;
 						  </span>
 							</div>
 						</div>
@@ -83,44 +83,17 @@
 </script>
 </div>
 							<hr />
-<p>快毕业了，看了看那些年为了赚点钱自已干的蠢事，看了看自已电脑上的几款自已写的软件，虽然不是很完美，但删掉也实在可惜，于是起笔，记录在自已的<a href="http://www.yanyulin.info">个人博客</a>上，供<code>有缘人</code>参阅，以及完善，今天分享的是一款在<code>知乎</code>上群发链接的软件，<code>知乎</code>是一个神圣的论坛，其实挺不错的，却被我这样的程序员糟蹋了，<strong>有罪呀</strong>，现在不谈这些，只谈技术~~~</p>
-<p><strong>写此软件原由</strong></p>
-<p>最大的原因是学生时代<strong>缺钱</strong>，需求就是能够实现在高权重的论坛上群发链接，进行网站的推广~~</p>
-<p><strong>设计思路</strong></p>
-<blockquote>
-<p>1、开发语言的选取，我会<code>C/C++/Java/Python</code>,这种网络性的软件非Java/Python莫属，当然C++绝对也能够实现，但是实现起来的困难程序不同，最终选用了Java开发语言</p>
-<p>2、开源Jar包的选取，自动发链接软件实质上就是要模拟浏览器的登录，归结到底就是要模拟<code>POST/GET</code>请求，Java本身提供了<code>URL jar</code>包，但模拟浏览器的登录过程中还要操作Cookie,非常不便，于是弃之，目前开源的Jar包基本上都是由Apache组织提供，比较流行的有HttpClient/HtmlUnit,权衡再三，选择了HtmlUnit</p>
-<blockquote>
-<p><strong>HtmlUnit</strong>是啥?HtmlUnit实质上就是一个Java版的浏览器，只不过这个浏览器没有图形界面，也正是因为其没有图形界面，因此速度还算可以，支持JavaScript,但支持能力比较有限，基本上可以满足要求，HtmlUnit的详细使用以及下载可以参考这篇文章<a href="http://www.yanyulin.info/pages/2013/11/fetchPage.html" target="_blank">爬虫的自我解剖(抓取网页HtmlUnit)</a></p>
-</blockquote>
-<p>3、模拟浏览器登录后，在知乎上回答问题，如果每一个问题都由用户来回答，不如不做，可是如果直接贴上链接，什么也不做，那么被删的可能性就太大了，最好的办法就是要回答问题，而且最好要答的差不多才行，该怎么解决呢？百度知道给我们提供了最好的解决办法，将问题放在百度知道里，搜一遍，再粘贴到知乎上不就行了嘛</p>
-</blockquote>
-<p>最好的方法就是将要推广的网站链接写在此处：</p>
-<p><center>
-<a href="http://www.yanyulin.info/pages/2014/03/zhihu_1.html">
-<img alt="烟雨林博客" src="http://www.yanyulin.info/pics/tech/zhihu1.jpg"/>
-</a>
-</center></p>
-<blockquote>
-<p>4、是的，<strong>百度知道确实是一个好方法</strong>，但是一台机器如果频繁的搜索百度知道，就会被百度知道封锁，需要输入验证码，验证码是个非常可怕的东西，解决方法就是在百度知道里查询，但是不访问具体的内容，即如下图所示：</p>
-</blockquote>
-<p><center>
-<a href="http://www.yanyulin.info/pages/2014/03/zhihu_1.html">
-<img alt="烟雨林博客" src="http://www.yanyulin.info/pics/tech/zhihu2.jpg"/>
-</a>
-</center></p>
-<p>上图中，直接将红色方框里的内容粘贴到知乎上进行回复，不要点进入查看详细内容，否则会由于频繁访问，要被百度封锁，结果等待你的就是无情的验证码了~~~</p>
-<blockquote>
-<p>5、如果一个问题已经回答过了，要避免再次回答这个问题，知乎中限制了一个用户对一个问题只能回答一次，自动发链接肯定得注册多个帐号，如果每个帐号都对同一个问题回答一次，结果就是帐号很容易被封</p>
-<p>6、最后是一个统计功能，软件要能统计出成功发出了多少链接，发送失败了多少</p>
-</blockquote>
-<p>到此为止，这就是整个软件设计过程中需要考虑的问题，</p>
-<p><a href="http://www.yanyulin.info/pages/2014/03/zhihu_2.html" target="_blank">
-下一篇将会介绍软件的实现
-</a></p>
+<p>今天照完毕业照了，盖完了所有的章，一会在整理一下论文以及发的小论文，发给导师，我的研究生三年就算彻底的结束了，至于学生生涯是否结束，也许现在我还不知道，我一直都很渴望读书，渴望在学术上有所见地，可这三年的研究生学习，当理想被现实逐渐消磨殆尽的时候，我才发现自己是多么的幼稚，但是不管怎么说，三年了，还是有很多人要感学的,以下是来源于我的毕业论文，至于对研究生部啥丁老师的感谢忽略不计...</p>
+<p>光阴似箭，不知不觉间二十六载的青春已悄然无声的划过，再回首，曾经的林林总总仿若昨天，那些年的豪言壮语到今天依旧铭记于心，研究生三年寄予了我太多的期望，回首这三年的科研生涯，有许多的人，许多的事对我一生都产生了重要的影响，在论文即将结束之际，谨向那些曾经帮助过我，关心过我，照顾过我的老师、同学、家人表示诚挚的感谢。</p>
+<p><strong>衷心感谢我的导师胡毅研究员，在这三年的学习生涯中对我呕心沥血的培养，特别是在科研方面对我的耐心的指导以及在生活方面对我无微不至的关心，三年来，在实验室的项目、论文的开题、论文的撰写等各个方面，老师都为我倾注了大量的心血。老师在科研上敏锐的洞察力，渊博的学识，严谨的治学态度都是我一生学习的楷模</strong>。</p>
+<p><strong>衷心感谢我的两位师兄冯强与贾小波，在论文开题时，两位师兄对我论文选题的耐心指导，在论文的后续实验工作中，两位师兄在实验环境的搭建、算法的移植、算法优化方面对我的启发与帮助，同时还要感谢冯师兄与贾师兄在我求职时对我的鼓励与帮助，谢谢他们，我的论文能够如期完成与他们的贡献是分不开的</strong>。</p>
+<p>衷心感谢我的同学陈智殷、卢林、耿琛垒、黄芳，他们在各自的科研领域都有自已独到的见解以及很深的领悟，三年的研究生涯中，同他们在项目上一块讨论、学习、攻关，在生活上互相帮助我感到很快乐。</p>
+<p>衷心感谢研究生部的丁健老师、冷淼老师、何淑云老师、王淑玲老师在我攻读研究生期间对我的学习以及生活上的指导和关心。</p>
+<p><strong>最后我要感谢我远方的父母和家人，感谢他们含辛茹苦的将我养大成人，感谢他们在我人生困惑，无助的时候为我排扰解难，是他们的辛勤培育，默默付出，才使得我能够顺利地完成学业，他们的理解以及无私的爱是我前进的最大动力</strong>。</p>
+<p>谨以此文献给所有关心、帮助、支持和鼓励我的亲人、师长和朋友们！</p>
 						  <div class="clear"></div>
 							</div>
-							<b>本文地址:</b> <a href="http://www.yanyulin.info/pages/2014/03/zhihu_1.html" target="_self">http://www.yanyulin.info/pages/2014/03/zhihu_1.html</a>
+							<b>本文地址:</b> <a href="http://www.yanyulin.info/pages/2014/03/biyela.html" target="_self">http://www.yanyulin.info/pages/2014/03/biyela.html</a>
 							<div><font color="blue"><b>转载时请保留本文出处,谢谢您的合作</b></font></div>
 							<hr/>
 							<div class="clear" align="left">
@@ -152,10 +125,10 @@
 					<!-- end: entrymeta -->
 				<div class="context_b" align="left">
 					 上一篇: 
-  				 <a href="http://www.yanyulin.info/pages/2014/03/zhihu_2.html" title="一款自动发链接软件的实现细节分析" target="_blank">一款自动发链接软件的实现细节分析</a>
+  				 <a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_11.html" title="Velocity中对宏的初始化过程分析" target="_blank">Velocity中对宏的初始化过程分析</a>
   				 &nbsp;&nbsp
   				 下一篇:
-  				 <a href="http://www.yanyulin.info/pages/2014/03/offer.html" title="剑指Offer书籍PDF下载及简介" target="_blank">剑指Offer书籍PDF下载及简介</a>
+  				 <a href="http://www.yanyulin.info/pages/2014/03/biyela.html" title="毕业啦,这一刻学生生涯好像真的结束了" target="_blank">毕业啦,这一刻学生生涯好像真的结束了</a>
 					 
 				</div>
 				<div class="context_b">
@@ -166,21 +139,7 @@
   				 <tr>
  
   				 <td width="50%" align="left">
-  				 <a href="http://www.yanyulin.info/pages/2014/03/xiaomiqianggou.html" title="一款小米抢购软件实现源码分析(HttpClient)" target="_blank">一款小米抢购软件实现源码分析(HttpClient)</a>
-  				 </td>
-	
-	 
- 
-  				 <td width="50%" align="left">
-  				 <a href="http://www.yanyulin.info/pages/2014/03/zhihu_1.html" title="一款自动发链接的软件设计思路" target="_blank">一款自动发链接的软件设计思路</a>
-  				 </td>
-	
-  				 </tr>
-	 
-  				 <tr>
- 
-  				 <td width="50%" align="left">
-  				 <a href="http://www.yanyulin.info/pages/2014/03/zhihu_2.html" title="一款自动发链接软件的实现细节分析" target="_blank">一款自动发链接软件的实现细节分析</a>
+  				 <a href="http://www.yanyulin.info/pages/2014/03/biyela.html" title="毕业啦,这一刻学生生涯好像真的结束了" target="_blank">毕业啦,这一刻学生生涯好像真的结束了</a>
   				 </td>
 	
  
@@ -188,7 +147,7 @@
 			</table>
 				</div>
 				<div class="context_b">
-			 <div class="ds-thread" data-title="一款自动发链接的软件设计思路"></div>
+			 <div class="ds-thread" data-title="毕业啦,这一刻学生生涯好像真的结束了"></div>
 			 <script type="text/javascript">
 			 	var duoshuoQuery={short_name:"yanyulin"};
 			 	var ds=document.createElement("script");
@@ -231,13 +190,10 @@
 				<div class="box">			
 						<div class="textwidget">
 							<div id="tagsLink">
-							<a  href="http://www.yanyulin.info/tag/shi-yong-gong-ju.html" title="查看实用工具下的所有文章" style="background-color: #169EDD" target="_blank">实用工具</a>
+							<a  href="http://www.yanyulin.info/tag/sui-xin-er-ji.html" title="查看随心而记下的所有文章" style="background-color: #8C8BC6" target="_blank">随心而记</a>
 						  </div>
 							<div id="tagsLink">
-							<a  href="http://www.yanyulin.info/tag/jie-mian-bian-cheng.html" title="查看界面编程下的所有文章" style="background-color: #96C2AA" target="_blank">界面编程</a>
-						  </div>
-							<div id="tagsLink">
-							<a  href="http://www.yanyulin.info/tag/sou-suo-yin-qing.html" title="查看搜索引擎下的所有文章" style="background-color: #84A4B3" target="_blank">搜索引擎</a>
+							<a  href="http://www.yanyulin.info/tag/yan-yu-fen-xiang.html" title="查看烟雨分享下的所有文章" style="background-color: #169EDD" target="_blank">烟雨分享</a>
 						  </div>
 						</div>
 						<div class="clear"></div>
@@ -306,25 +262,25 @@
 				<ul>
 				<ul class="random-post-link">
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2014/02/linux1.html" target="_blank" title="快速介绍Linux（Linux入门教程）">快速介绍Linux（Linux入门教程）</a>
+				<a href="http://www.yanyulin.info/pages/2014/01/pelican_question.html" target="_blank" title="pelican创建博客常见问题汇总">pelican创建博客常见问题汇总</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2014/03/cxgc_2014_2.html" target="_blank" title="创新工场校园招聘面经面试经验2014年武汉研发类">创新工场校园招聘面经面试经验2014年武汉研发类</a>
+				<a href="http://www.yanyulin.info/pages/2013/12/neteasyM_1.html" target="_blank" title="网易校招2014年电商面经">网易校招2014年电商面经</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2014/03/tencent_2014_A.html" target="_blank" title="腾讯校园招聘笔试题目2014年软件研发类武汉">腾讯校园招聘笔试题目2014年软件研发类武汉</a>
+				<a href="http://www.yanyulin.info/pages/2014/03/baofeng_2014_B.html" target="_blank" title="暴风影音笔试题校招笔试题2014年技术类">暴风影音笔试题校招笔试题2014年技术类</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2014/03/offer.html" target="_blank" title="剑指Offer书籍PDF下载及简介">剑指Offer书籍PDF下载及简介</a>
+				<a href="http://www.yanyulin.info/pages/2013/12/perl.html" target="_blank" title="编程珠玑(作者:John Bently)">编程珠玑(作者:John Bently)</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2013/11/vlinux2.html" target="_blank" title="Linux基础教程视频版(很详细)">Linux基础教程视频版(很详细)</a>
+				<a href="http://www.yanyulin.info/pages/2013/12/psbase2.html" target="_blank" title="Photoshop CS视频教程(下)">Photoshop CS视频教程(下)</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2014/03/deletetrust.html" target="_blank" title="怎么删除Ripple里的信任网关">怎么删除Ripple里的信任网关</a>
+				<a href="http://www.yanyulin.info/pages/2014/02/wtc.html" target="_blank" title="[赠送]WTC(万特币)获取30ripple和100WTC">[赠送]WTC(万特币)获取30ripple和100WTC</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2013/11/fetchPage.html" target="_blank" title="爬虫的自我解剖(抓取网页HtmlUnit)">爬虫的自我解剖(抓取网页HtmlUnit)</a>
+				<a href="http://www.yanyulin.info/pages/2013/11/qqLogin.html" target="_blank" title="界面编程模仿篇(模仿腾讯QQ登录界面)">界面编程模仿篇(模仿腾讯QQ登录界面)</a>
 				</li>
 				<li class="random-post-link">
 				<a href="http://www.yanyulin.info/pages/2014/03/duoshuo.html" target="_blank" title="多说评论框如何|怎么样|实际测试">多说评论框如何|怎么样|实际测试</a>
@@ -355,28 +311,28 @@
 				<div class="box_r">
 				<ul>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_8.html" target="_blank" title="Velocity初始化资源加载器以及预指令">Velocity初始化资源加载器以及预指令</a>
+				<a href="http://www.yanyulin.info/pages/2014/03/pelican_page.html" target="_blank" title="pelican博客搭建设置分页和分页保存位置">pelican博客搭建设置分页和分页保存位置</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2014/03/boc_2014_1.html" target="_blank" title="中国银行校园招聘面经2014年软件开发">中国银行校园招聘面经2014年软件开发</a>
+				<a href="http://www.yanyulin.info/pages/2014/03/meituan_2014_1.html" target="_blank" title="美团网校园招聘2014年面经(软件研发)">美团网校园招聘2014年面经(软件研发)</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2014/03/jd_2014_b.html" target="_blank" title="京东产品经理笔试题2014年校园招聘">京东产品经理笔试题2014年校园招聘</a>
+				<a href="http://www.yanyulin.info/pages/2013/11/baofeng_2014_A.html" target="_blank" title="2014年暴风笔试试卷A">2014年暴风笔试试卷A</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2013/11/effective.html" target="_blank" title="Effective C++(编程的50个细节)">Effective C++(编程的50个细节)</a>
+				<a href="http://www.yanyulin.info/pages/2014/02/pbaodian.html" target="_blank" title="程序员面试宝典--欧立奇">程序员面试宝典--欧立奇</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2013/12/vc_1.html" target="_blank" title="VC视频教程(主要讲述`MFC`)">VC视频教程(主要讲述`MFC`)</a>
+				<a href="http://www.yanyulin.info/pages/2013/11/vlinux2.html" target="_blank" title="Linux基础教程视频版(很详细)">Linux基础教程视频版(很详细)</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2014/02/wtc.html" target="_blank" title="[赠送]WTC(万特币)获取30ripple和100WTC">[赠送]WTC(万特币)获取30ripple和100WTC</a>
+				<a href="http://www.yanyulin.info/pages/2014/02/jed.html" target="_blank" title="JED币免费获取30 ripple币">JED币免费获取30 ripple币</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2013/11/qqLogin.html" target="_blank" title="界面编程模仿篇(模仿腾讯QQ登录界面)">界面编程模仿篇(模仿腾讯QQ登录界面)</a>
+				<a href="http://www.yanyulin.info/pages/2013/11/fetchPage.html" target="_blank" title="爬虫的自我解剖(抓取网页HtmlUnit)">爬虫的自我解剖(抓取网页HtmlUnit)</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2014/03/duoshuo.html" target="_blank" title="多说评论框如何|怎么样|实际测试">多说评论框如何|怎么样|实际测试</a>
+				<a href="http://www.yanyulin.info/pages/2014/03/biyela.html" target="_blank" title="毕业啦,这一刻学生生涯好像真的结束了">毕业啦,这一刻学生生涯好像真的结束了</a>
 				</li>
 				<div class="clear"></div>
 				</div>
