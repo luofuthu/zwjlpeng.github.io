@@ -5,10 +5,10 @@
 &lt;p&gt;在安装maven之前必须要保证的是安装了JDK，因为当运行maven此会对JDK进行检查，JDK的地址就不说了，maven可以从官网上进行下载。&lt;/p&gt;
 &lt;p&gt;将从官网上下载下来的Maven解压，此处我放在D:\apache-maven-3.0.5 ,为了使用maven的bin目录下的可执行文件，必须将bin目录加入Window环境变量中，配置如下：&lt;/p&gt;
 &lt;p&gt;Maven官网：&lt;a href="http://maven.apache.org/download.cgi" target="_blank"&gt;http://maven.apache.org/download.cgi&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2014/03/maven_tutor.htmll"&gt;
+&lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2014/03/maven_tutor.html"&gt;
 &lt;img src="http://www.yanyulin.info/pics/tools/maven_tutor_1.jpg" alt="烟雨林博客"/&gt;
 &lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2014/03/maven_tutor.htmll"&gt;
+&lt;p&gt;&lt;a href="http://www.yanyulin.info/pages/2014/03/maven_tutor.html"&gt;
 &lt;img src="http://www.yanyulin.info/pics/tools/maven_tutor_2.jpg" alt="烟雨林博客"/&gt;
 &lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;3:安装完后，可以在cmd.exe中输入如下命令，检测其是否安装完成mvn –v或mvn –version
