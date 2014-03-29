@@ -1,5 +1,155 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>烟雨林</title><link href="http://www.yanyulin.info/" rel="alternate"></link><link href="http://www.yanyulin.info/feeds/bian-cheng-yu-yan.atom.xml" rel="self"></link><id>http://www.yanyulin.info/</id><updated>2014-03-27T00:00:00+08:00</updated><entry><title>Velocity中对宏的初始化过程分析</title><link href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_11.html" rel="alternate"></link><updated>2014-03-27T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-27:pages/2014/03/velocity_disabuse_11.html</id><summary type="html">&lt;hr /&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>烟雨林</title><link href="http://www.yanyulin.info/" rel="alternate"></link><link href="http://www.yanyulin.info/feeds/bian-cheng-yu-yan.atom.xml" rel="self"></link><id>http://www.yanyulin.info/</id><updated>2014-03-29T00:00:00+08:00</updated><entry><title>Maven安装指南|Maven安装教程</title><link href="http://www.yanyulin.info/pages/2014/03/maven_tutor.html" rel="alternate"></link><updated>2014-03-29T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-29:pages/2014/03/maven_tutor.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;1:&lt;code&gt;maven&lt;/code&gt;是一种项目管理工具，比ant以及make的功能要强大，是项目管理与构建的自动化工具，对程序员而言更多的是偏向于自动化构建功能。&lt;/p&gt;
+&lt;p&gt;2：&lt;code&gt;maven&lt;/code&gt;的安装&lt;/p&gt;
+&lt;p&gt;在安装maven之前必须要保证的是安装了JDK，因为当运行maven此会对JDK进行检查，JDK的地址就不说了，maven可以从官网上进行下载。&lt;/p&gt;
+&lt;p&gt;将从官网上下载下来的Maven解压，此处我放在D:\apache-maven-3.0.5 ,为了使用maven的bin目录下的可执行文件，必须将bin目录加入Window环境变量中，配置如下：&lt;/p&gt;
+&lt;p&gt;Maven官网：&lt;a href="http://maven.apache.org/download.cgi" target="_blank"&gt;http://maven.apache.org/download.cgi&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.yanyulin.info/2014/03/maven_tutor.html"&gt;
+&lt;img src="http://www.yanyulin.info/pics/tools/maven_tutor_1.jpg" alt="烟雨林博客"/&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.yanyulin.info/2014/03/maven_tutor.html"&gt;
+&lt;img src="http://www.yanyulin.info/pics/tools/maven_tutor_2.jpg" alt="烟雨林博客"/&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;3:安装完后，可以在cmd.exe中输入如下命令，检测其是否安装完成mvn –v或mvn –version
+如果出现下图界面，则证明配置成功&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.yanyulin.info/2014/03/maven_tutor.html"&gt;
+&lt;img src="http://www.yanyulin.info/pics/tools/maven_tutor_3.jpg" alt="烟雨林博客"/&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;至于为什么会出现上述图三的结果，可以看看bin/mvn.bat¸这是windows的批处理文件，当然在linux下应该看的是mvn这个文件，其为shell脚本，从mvn.bat中可以发现如下代码&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;@&lt;/span&gt;&lt;span class="n"&gt;REM&lt;/span&gt; &lt;span class="o"&gt;====&lt;/span&gt; &lt;span class="n"&gt;START&lt;/span&gt; &lt;span class="n"&gt;VALIDATION&lt;/span&gt; &lt;span class="o"&gt;====&lt;/span&gt;
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;not&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;%JAVA_HOME%&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;&amp;quot;&lt;/span&gt; &lt;span class="k"&gt;goto&lt;/span&gt; &lt;span class="n"&gt;OkJHome&lt;/span&gt;
+
+&lt;span class="n"&gt;echo&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="n"&gt;echo&lt;/span&gt; &lt;span class="n"&gt;ERROR&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;JAVA_HOME&lt;/span&gt; &lt;span class="n"&gt;not&lt;/span&gt; &lt;span class="n"&gt;found&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;your&lt;/span&gt; &lt;span class="n"&gt;environment&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="n"&gt;echo&lt;/span&gt; &lt;span class="n"&gt;Please&lt;/span&gt; &lt;span class="n"&gt;set&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;JAVA_HOME&lt;/span&gt; &lt;span class="n"&gt;variable&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;your&lt;/span&gt; &lt;span class="n"&gt;environment&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;match&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt;
+&lt;span class="n"&gt;echo&lt;/span&gt; &lt;span class="n"&gt;location&lt;/span&gt; &lt;span class="n"&gt;of&lt;/span&gt; &lt;span class="n"&gt;your&lt;/span&gt; &lt;span class="n"&gt;Java&lt;/span&gt; &lt;span class="n"&gt;installation&lt;/span&gt;
+&lt;span class="n"&gt;echo&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="k"&gt;goto&lt;/span&gt; &lt;span class="n"&gt;error&lt;/span&gt;
+
+&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;OkJHome&lt;/span&gt;
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;exist&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;%JAVA_HOME%&lt;/span&gt;&lt;span class="se"&gt;\b&lt;/span&gt;&lt;span class="s"&gt;in\java.exe&amp;quot;&lt;/span&gt; &lt;span class="k"&gt;goto&lt;/span&gt; &lt;span class="n"&gt;chkMHome&lt;/span&gt;
+
+&lt;span class="n"&gt;echo&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="n"&gt;echo&lt;/span&gt; &lt;span class="n"&gt;ERROR&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;JAVA_HOME&lt;/span&gt; &lt;span class="n"&gt;is&lt;/span&gt; &lt;span class="n"&gt;set&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;an&lt;/span&gt; &lt;span class="n"&gt;invalid&lt;/span&gt; &lt;span class="n"&gt;directory&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="n"&gt;echo&lt;/span&gt; &lt;span class="n"&gt;JAVA_HOME&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;%JAVA_HOME%&amp;quot;&lt;/span&gt;
+&lt;span class="n"&gt;echo&lt;/span&gt; &lt;span class="n"&gt;Please&lt;/span&gt; &lt;span class="n"&gt;set&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;JAVA_HOME&lt;/span&gt; &lt;span class="n"&gt;variable&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;your&lt;/span&gt; &lt;span class="n"&gt;environment&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;match&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt;
+&lt;span class="n"&gt;echo&lt;/span&gt; &lt;span class="n"&gt;location&lt;/span&gt; &lt;span class="n"&gt;of&lt;/span&gt; &lt;span class="n"&gt;your&lt;/span&gt; &lt;span class="n"&gt;Java&lt;/span&gt; &lt;span class="n"&gt;installation&lt;/span&gt;
+&lt;span class="n"&gt;echo&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="k"&gt;goto&lt;/span&gt; &lt;span class="n"&gt;error&lt;/span&gt;
+&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;chkMHome&lt;/span&gt;
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;not&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;%M2_HOME%&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&amp;quot;&lt;/span&gt; &lt;span class="k"&gt;goto&lt;/span&gt; &lt;span class="n"&gt;valMHome&lt;/span&gt;
+
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;%OS%&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Windows_NT&amp;quot;&lt;/span&gt; &lt;span class="n"&gt;SET&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;M2_HOME=%~dp0..&amp;quot;&lt;/span&gt;
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;%OS%&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;WINNT&amp;quot;&lt;/span&gt; &lt;span class="n"&gt;SET&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;M2_HOME=%~dp0..&amp;quot;&lt;/span&gt;
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;not&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;%M2_HOME%&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&amp;quot;&lt;/span&gt; &lt;span class="k"&gt;goto&lt;/span&gt; &lt;span class="n"&gt;valMHome&lt;/span&gt;
+
+&lt;span class="n"&gt;echo&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="n"&gt;echo&lt;/span&gt; &lt;span class="n"&gt;ERROR&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;M2_HOME&lt;/span&gt; &lt;span class="n"&gt;not&lt;/span&gt; &lt;span class="n"&gt;found&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;your&lt;/span&gt; &lt;span class="n"&gt;environment&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="n"&gt;echo&lt;/span&gt; &lt;span class="n"&gt;Please&lt;/span&gt; &lt;span class="n"&gt;set&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;M2_HOME&lt;/span&gt; &lt;span class="n"&gt;variable&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;your&lt;/span&gt; &lt;span class="n"&gt;environment&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;match&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt;
+&lt;span class="n"&gt;echo&lt;/span&gt; &lt;span class="n"&gt;location&lt;/span&gt; &lt;span class="n"&gt;of&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;Maven&lt;/span&gt; &lt;span class="n"&gt;installation&lt;/span&gt;
+&lt;span class="n"&gt;echo&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="k"&gt;goto&lt;/span&gt; &lt;span class="n"&gt;error&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;看到了吧，里面对环境变量JAVA_HOME以及M2_HOME进行了检测,根据JAVA_HOME检测是否安装了JDK,因为其要运行java –v来判断JDK的版本，M2_HOME就不用说了，所在运行Maven前必须要有JDK&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Maven建立HelloWorld程序&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;HelloWorld&lt;/code&gt;程序是程序员入门的第一个程序，同样来使用Maven建立第一个项目&lt;code&gt;HelloWorld&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.yanyulin.info/2014/03/maven_tutor.html"&gt;
+&lt;img src="http://www.yanyulin.info/pics/tools/maven_tutor_4.jpg" alt="烟雨林博客"/&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;在第一次执行这条命令时,必须要保证联网，因为Maven需要从网上下载一些jar包以及一些插件，jar包与插件的保存位置，我们可以从conf/settings.xml文件里得到，如下代码：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nx"&gt;localRepository&lt;/span&gt;
+   &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="nx"&gt;The&lt;/span&gt; &lt;span class="nb"&gt;path&lt;/span&gt; &lt;span class="k"&gt;to&lt;/span&gt; &lt;span class="nx"&gt;the&lt;/span&gt; &lt;span class="kd"&gt;local&lt;/span&gt; &lt;span class="nx"&gt;repository&lt;/span&gt; &lt;span class="nx"&gt;maven&lt;/span&gt; &lt;span class="nx"&gt;will&lt;/span&gt; &lt;span class="nx"&gt;use&lt;/span&gt; &lt;span class="k"&gt;to&lt;/span&gt; &lt;span class="nx"&gt;store&lt;/span&gt; &lt;span class="nx"&gt;artifacts.&lt;/span&gt;
+   &lt;span class="o"&gt;|&lt;/span&gt;
+   &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="nb"&gt;Default&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="err"&gt;~&lt;/span&gt;&lt;span class="p"&gt;/&lt;/span&gt;&lt;span class="nx"&gt;.m2&lt;/span&gt;&lt;span class="p"&gt;/&lt;/span&gt;&lt;span class="nx"&gt;repository&lt;/span&gt;
+  &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;localRepository&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;/&lt;/span&gt;&lt;span class="nb"&gt;path&lt;/span&gt;&lt;span class="p"&gt;/&lt;/span&gt;&lt;span class="k"&gt;to&lt;/span&gt;&lt;span class="p"&gt;/&lt;/span&gt;&lt;span class="nb"&gt;local&lt;/span&gt;&lt;span class="p"&gt;/&lt;/span&gt;&lt;span class="nx"&gt;repo&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nx"&gt;localRepository&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;从这里可以看到默认的保存目录为~/.m2/repository，其中~为用户的根目录，在Windows下即为用户的个人文档。&lt;/p&gt;
+&lt;p&gt;命令运行的结果如下图&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.yanyulin.info/2014/03/maven_tutor.html"&gt;
+&lt;img src="http://www.yanyulin.info/pics/tools/maven_tutor_5.jpg" alt="烟雨林博客"/&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;在执行的过程中会让用户进行选择，均选择默认类型即可&lt;/p&gt;
+&lt;p&gt;Archetype可以理解为此项目的项目类型&lt;/p&gt;
+&lt;p&gt;-Dname对项目的名字以及包名进行定义&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;DgroupId&lt;/span&gt;&lt;span class="err"&gt;一般可以取为公司名或域名&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;test&lt;/span&gt;
+&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;DartifactId&lt;/span&gt;&lt;span class="err"&gt;用来定义项目的名称&lt;/span&gt;
+&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;Dversion&lt;/span&gt; &lt;span class="err"&gt;用来说明项目的当前版本，当发布的时候我们可以看到相应的&lt;/span&gt;&lt;span class="n"&gt;jar&lt;/span&gt;&lt;span class="err"&gt;包后会有&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;执行完上述命令后，可以到D:\Users\pengpeng.pp\workspace\HelloWorld目录下看看，可以发现&lt;/p&gt;
+&lt;p&gt;如下目录结构：&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.yanyulin.info/2014/03/maven_tutor.html"&gt;
+&lt;img src="http://www.yanyulin.info/pics/tools/maven_tutor_6.jpg" alt="烟雨林博客"/&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;目录src/main中是程序的源文件，test目录中放的是测试文件，在根目录下有一个pom.xml文件是整个项目的配置文件，对项目进行描述，插件配置，以及依赖关系的建立.以下是工程使用的pom.xml文件，如下：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nt"&gt;&amp;lt;project&lt;/span&gt; &lt;span class="na"&gt;xmlns=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;http://maven.apache.org/POM/4.0.0&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;xmlns:xsi=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;http://www.w3.org/2001/XMLSchema-instance&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;xsi:schemaLocation=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class="nt"&gt;&amp;lt;modelVersion&amp;gt;&lt;/span&gt;4.0.0&lt;span class="nt"&gt;&amp;lt;/modelVersion&amp;gt;&lt;/span&gt; 
+  &lt;span class="nt"&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;pp&lt;span class="nt"&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt; 
+  &lt;span class="nt"&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;HelloWorld&lt;span class="nt"&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt; 
+  &lt;span class="nt"&gt;&amp;lt;version&amp;gt;&lt;/span&gt;1.0&lt;span class="nt"&gt;&amp;lt;/version&amp;gt;&lt;/span&gt; 
+  &lt;span class="nt"&gt;&amp;lt;packaging&amp;gt;&lt;/span&gt;jar&lt;span class="nt"&gt;&amp;lt;/packaging&amp;gt;&lt;/span&gt; 
+  &lt;span class="nt"&gt;&amp;lt;name&amp;gt;&lt;/span&gt;HelloWorld&lt;span class="nt"&gt;&amp;lt;/name&amp;gt;&lt;/span&gt; 
+  &lt;span class="nt"&gt;&amp;lt;url&amp;gt;&lt;/span&gt;http://maven.apache.org&lt;span class="nt"&gt;&amp;lt;/url&amp;gt;&lt;/span&gt; 
+&lt;span class="nt"&gt;&amp;lt;properties&amp;gt;&lt;/span&gt;
+  &lt;span class="nt"&gt;&amp;lt;project.build.sourceEncoding&amp;gt;&lt;/span&gt;UTF-8&lt;span class="nt"&gt;&amp;lt;/project.build.sourceEncoding&amp;gt;&lt;/span&gt; 
+  &lt;span class="nt"&gt;&amp;lt;/properties&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;dependencies&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt;
+  &lt;span class="nt"&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;junit&lt;span class="nt"&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt; 
+  &lt;span class="nt"&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;junit&lt;span class="nt"&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt; 
+  &lt;span class="nt"&gt;&amp;lt;version&amp;gt;&lt;/span&gt;3.8.1&lt;span class="nt"&gt;&amp;lt;/version&amp;gt;&lt;/span&gt; 
+  &lt;span class="nt"&gt;&amp;lt;scope&amp;gt;&lt;/span&gt;test&lt;span class="nt"&gt;&amp;lt;/scope&amp;gt;&lt;/span&gt; 
+  &lt;span class="nt"&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
+  &lt;span class="nt"&gt;&amp;lt;/dependencies&amp;gt;&lt;/span&gt;
+  &lt;span class="nt"&gt;&amp;lt;/project&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;如上所示：在POM文件中，groupId, artifactId, packaging, version 叫作 maven 坐标，它能唯一的确定一个项目,有了 maven 坐标，我们就可以用它来指定我们的项目所依赖的其他项目，插件，或者父项目,如上所述，该项目又依赖于另一个maven坐标,其项目录名为junit.
+上面列出的POM文件并不是运行时的POM文件，运行时的POM文件要远比这个POM文件复杂的多，这是因为每一个POM文件都是继承自SUPER-POM，不然怎么会有那么多默认目录呢,要想看到运行时的POM可以使用如下命令：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;mvn&lt;/span&gt; &lt;span class="n"&gt;help&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;effective&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;pom&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;最后说明一点POM文件中的scope说明依赖关系的适用范围，即junit 的 scope 是 test，那么它只会在执行 compiler:testCompile and surefire:test 目标的时候才会被加到 classpath 中，在执行 compiler:compile 目标时是拿不到 junit 的。&lt;/p&gt;
+&lt;p&gt;还可以指定 scope 为 provided，意思是 JDK 或者容器会提供所需的jar文件。比如说在做web应用开发的时候，我们在编译的时候需要 servlet API jar 文件，但是在打包的时候不需要把这个 jar 文件打在 WAR 中，因为servlet容器或者应用服务器会提供的，scope 的默认值是 compile，即任何时候都会被包含在 classpath 中，在打包的时候也会被包括进去。&lt;/p&gt;
+&lt;p&gt;对整个项目文件进行编译，编译的命令如下如示:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;mvn&lt;/span&gt; &lt;span class="n"&gt;compile&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;编译之后的项目文件会多了一个目录HelloWorld/target,在这个目录中会有编译生成的字节码文件App.class&lt;/p&gt;
+&lt;p&gt;执行以下命令&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;mvn&lt;/span&gt; &lt;span class="n"&gt;test&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;你看到的是什么，你会看到在target目录下又多了几个文件&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.yanyulin.info/2014/03/maven_tutor.html"&gt;
+&lt;img src="http://www.yanyulin.info/pics/tools/maven_tutor_7.jpg" alt="烟雨林博客"/&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;其中surefire目录中存放的是生成的是临时文件，surefire-reports目录中存放的是测试报告等，test-classes存放的是src/test目录下测试源文件编译生成的类。&lt;/p&gt;
+&lt;p&gt;执行上述命令后会执行class文件，生成测试报告如下：&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.yanyulin.info/2014/03/maven_tutor.html"&gt;
+&lt;img src="http://www.yanyulin.info/pics/tools/maven_tutor_8.jpg" alt="烟雨林博客"/&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;对项目进行打包需要执行以下命令：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;mvn&lt;/span&gt; &lt;span class="n"&gt;package&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;打包后的项目文件会在target目录下生成项目的jar包(HelloWorld-1.0.jar这个1.0就是使用-Dversion进行定义时生成的)&lt;/p&gt;
+&lt;p&gt;打包后可以执行了，执行时的命令如下：&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.yanyulin.info/2014/03/maven_tutor.html"&gt;
+&lt;img src="http://www.yanyulin.info/pics/tools/maven_tutor_9.jpg" alt="烟雨林博客"/&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;结果出来了吧~~~&lt;/p&gt;</summary><category term="工具使用"></category></entry><entry><title>Velocity中对宏的初始化过程分析</title><link href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_11.html" rel="alternate"></link><updated>2014-03-27T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-27:pages/2014/03/velocity_disabuse_11.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;本系列教程，为个人在淘宝实习所写，博文中所提及的WebX为淘宝的架构，大家可以忽略，当然有兴趣的，也可以自已去搜搜，淘宝的WebX目前处于开源状态&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Velocity引擎解惑&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;1、&lt;a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_1.html" target="_blank"&gt;Velocity入门教程HelloWord程序&lt;/a&gt;&lt;/p&gt;

@@ -43,6 +43,35 @@
 			<div class="entry_box">
 				<div class="box_entry">
 					<div class="box_entry_title">
+						<h4><a href="http://www.yanyulin.info/pages/2013/11/linux0.html" target="_blank" rel="bookmark" title="Linux中0号进程的创建分析">Linux中0号进程的创建分析</a></h4>
+						<div class="info">
+							<span class="date">2013-11-19</span>
+							<span class="category"> 
+						  <a href="http://www.yanyulin.info/tag/linuxhui-zong.html" target="_blank" title="查看同类文章" rel="category tag">Linux汇总</a>&nbsp;
+						 </span>&nbsp;
+						</div>
+					</div>				
+					<div class="thumbnail_box">
+          <!-- 截图 -->
+					<a href="http://www.yanyulin.info/pages/2013/11/linux0.html"  target="_blank" title="Linux中0号进程的创建分析">
+					<img  src="http://www.yanyulin.info/pics/linux.jpg" style="width:200px;height:100px" alt="Linux中0号进程的创建分析">
+					</a>
+					</div>
+					<div class="post_entry" >
+					<p>Linux中1号进程是由0号进程来创建的，因此必须要知道的是如何创建0号进程，由于在创建进程时，程序一直运行在内核态，而进程运行在用户态，因此创建0号进程涉及到特权级的变化，即从特权级0变到特权级3，Linux是通过模拟中断返回来实现特权级的变化以及创建0号进程，通过将0号进程的代码段选择子以及程序计数器EIP直接压入内核态堆栈，然后利用iret汇编指令中断返回跳转到0号进程运行。</p>				
+					</div>
+				</div>	
+				<div class="clear"></div>
+				<div align="right">
+					<a class="btn btn-info xsmall" target="_blank" href="http://www.yanyulin.info/pages/2013/11/linux0.html">read more</a>
+				</div>			
+			</div>	
+		</div>
+		<hr style="border:1px dashed #999"/>
+		<div class=" post  sticky ">
+			<div class="entry_box">
+				<div class="box_entry">
+					<div class="box_entry_title">
 						<h4><a href="http://www.yanyulin.info/pages/2013/11/assert.html" target="_blank" rel="bookmark" title="Assert(断言)实现机制剖析">Assert(断言)实现机制剖析</a></h4>
 						<div class="info">
 							<span class="date">2013-11-18</span>
@@ -197,22 +226,22 @@
 				<div class="box">			
 						<div class="textwidget">
 							<div id="tagsLink">
-							<a  href="http://www.yanyulin.info/tag/tao-bao-ji-zhu.html" title="查看淘宝技术下的所有文章" style="background-color: #169EDD" target="_blank">淘宝技术</a>
+							<a  href="http://www.yanyulin.info/tag/gong-ju-shi-yong.html" title="查看工具使用下的所有文章" style="background-color: #84A4B3" target="_blank">工具使用</a>
 						  </div>
 							<div id="tagsLink">
-							<a  href="http://www.yanyulin.info/tag/javafen-xi.html" title="查看Java分析下的所有文章" style="background-color: #D17C93" target="_blank">Java分析</a>
+							<a  href="http://www.yanyulin.info/tag/tao-bao-ji-zhu.html" title="查看淘宝技术下的所有文章" style="background-color: #8C8BC6" target="_blank">淘宝技术</a>
 						  </div>
 							<div id="tagsLink">
-							<a  href="http://www.yanyulin.info/tag/suan-fa-ji-tie.html" title="查看算法集贴下的所有文章" style="background-color: #8C8BC6" target="_blank">算法集贴</a>
+							<a  href="http://www.yanyulin.info/tag/javafen-xi.html" title="查看Java分析下的所有文章" style="background-color: #96C2AA" target="_blank">Java分析</a>
 						  </div>
 							<div id="tagsLink">
-							<a  href="http://www.yanyulin.info/tag/linuxhui-zong.html" title="查看Linux汇总下的所有文章" style="background-color: #D17C93" target="_blank">Linux汇总</a>
+							<a  href="http://www.yanyulin.info/tag/suan-fa-ji-tie.html" title="查看算法集贴下的所有文章" style="background-color: #96C2AA" target="_blank">算法集贴</a>
 						  </div>
 							<div id="tagsLink">
-							<a  href="http://www.yanyulin.info/tag/gong-ju-shi-yong.html" title="查看工具使用下的所有文章" style="background-color: #D17C93" target="_blank">工具使用</a>
+							<a  href="http://www.yanyulin.info/tag/linuxhui-zong.html" title="查看Linux汇总下的所有文章" style="background-color: #169EDD" target="_blank">Linux汇总</a>
 						  </div>
 							<div id="tagsLink">
-							<a  href="http://www.yanyulin.info/tag/cxue-xi.html" title="查看C++学习下的所有文章" style="background-color: #D17C93" target="_blank">C++学习</a>
+							<a  href="http://www.yanyulin.info/tag/cxue-xi.html" title="查看C++学习下的所有文章" style="background-color: #84A4B3" target="_blank">C++学习</a>
 						  </div>
 						</div>
 						<div class="clear"></div>
@@ -281,25 +310,25 @@
 				<ul>
 				<ul class="random-post-link">
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2014/03/optimization.html" target="_blank" title="程序代码优化需要考虑的问题">程序代码优化需要考虑的问题</a>
+				<a href="http://www.yanyulin.info/pages/2014/03/git.html" target="_blank" title="git保存用户名与密码(避免用户名密码输入)">git保存用户名与密码(避免用户名密码输入)</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2014/03/cxgc_2014_1.html" target="_blank" title="创新工场校园招聘面经面试经验2014年研发类">创新工场校园招聘面经面试经验2014年研发类</a>
+				<a href="http://www.yanyulin.info/pages/2014/03/weconnect_2014_1.html" target="_blank" title="威盛电子校园招聘面经2014年软件面经">威盛电子校园招聘面经2014年软件面经</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2014/03/meituan_2014_B.html" target="_blank" title="美团网校招笔试题2014年研发东北">美团网校招笔试题2014年研发东北</a>
+				<a href="http://www.yanyulin.info/pages/2013/12/yahoo_2014_A.html" target="_blank" title="雅虎2014年校招笔试题">雅虎2014年校招笔试题</a>
 				</li>
 				<li class="random-post-link">
 				<a href="http://www.yanyulin.info/pages/2013/11/objectModel.html" target="_blank" title="深度探索C++对象模型">深度探索C++对象模型</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2013/11/vlinux2.html" target="_blank" title="Linux基础教程视频版(很详细)">Linux基础教程视频版(很详细)</a>
+				<a href="http://www.yanyulin.info/pages/2013/12/psbase_1.html" target="_blank" title="PhotoShop CS入门版视频教程(基础上)">PhotoShop CS入门版视频教程(基础上)</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2014/03/getxrp.html" target="_blank" title="【赠送】ripple币免费获取&免费领取">【赠送】ripple币免费获取&免费领取</a>
+				<a href="http://www.yanyulin.info/pages/2014/03/ripple_safe.html" target="_blank" title="保护Ripple币以及万特币的几点安全措施">保护Ripple币以及万特币的几点安全措施</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2014/03/zhihu_1.html" target="_blank" title="一款自动发链接的软件设计思路">一款自动发链接的软件设计思路</a>
+				<a href="http://www.yanyulin.info/pages/2013/11/fetchPage.html" target="_blank" title="爬虫的自我解剖(抓取网页HtmlUnit)">爬虫的自我解剖(抓取网页HtmlUnit)</a>
 				</li>
 				<li class="random-post-link">
 				<a href="http://www.yanyulin.info/pages/2014/03/duoshuo.html" target="_blank" title="多说评论框如何|怎么样|实际测试">多说评论框如何|怎么样|实际测试</a>
@@ -333,22 +362,22 @@
 				<a href="http://www.yanyulin.info/pages/2014/03/navigator.html" target="_blank" title="pelican创建博客如何设置导航条">pelican创建博客如何设置导航条</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2014/03/huawei_2014_B.html" target="_blank" title="华为校园招聘面试经验2014年软件研发武汉区">华为校园招聘面试经验2014年软件研发武汉区</a>
+				<a href="http://www.yanyulin.info/pages/2014/03/cxgc_2014_2.html" target="_blank" title="创新工场校园招聘面经面试经验2014年武汉研发类">创新工场校园招聘面经面试经验2014年武汉研发类</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2013/06/huawei_2013_1.html" target="_blank" title="2013年华为校招机试(一)">2013年华为校招机试(一)</a>
+				<a href="http://www.yanyulin.info/pages/2014/03/xunlei_2014_A.html" target="_blank" title="迅雷校园招聘笔试题2014年技术类笔试题武汉">迅雷校园招聘笔试题2014年技术类笔试题武汉</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2014/03/cplusprimer.html" target="_blank" title="C++ Primer中文版PDF下载">C++ Primer中文版PDF下载</a>
+				<a href="http://www.yanyulin.info/pages/2013/11/stlOrigin.html" target="_blank" title="STL源码剖析(候捷译)">STL源码剖析(候捷译)</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2013/11/vlinux2.html" target="_blank" title="Linux基础教程视频版(很详细)">Linux基础教程视频版(很详细)</a>
+				<a href="http://www.yanyulin.info/pages/2013/12/psbase_1.html" target="_blank" title="PhotoShop CS入门版视频教程(基础上)">PhotoShop CS入门版视频教程(基础上)</a>
 				</li>
 				<li>
 				<a href="http://www.yanyulin.info/pages/2014/02/ripplereginster.html" target="_blank" title="ripple钱包注册/更改/免费激活">ripple钱包注册/更改/免费激活</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2014/03/xiaomiqianggou.html" target="_blank" title="一款小米抢购软件实现源码分析(HttpClient)">一款小米抢购软件实现源码分析(HttpClient)</a>
+				<a href="http://www.yanyulin.info/pages/2013/11/qqLogin.html" target="_blank" title="界面编程模仿篇(模仿腾讯QQ登录界面)">界面编程模仿篇(模仿腾讯QQ登录界面)</a>
 				</li>
 				<li>
 				<a href="http://www.yanyulin.info/pages/2014/03/duoshuo.html" target="_blank" title="多说评论框如何|怎么样|实际测试">多说评论框如何|怎么样|实际测试</a>
