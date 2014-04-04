@@ -75,7 +75,35 @@
 &lt;p&gt;4、将所有以fp-netpay/***的请求重定向到fp-netpay/index.php进行处理&lt;/p&gt;
 &lt;p&gt;5、将所有以fp-stat/***的请求重定向到fp-stat/index.php进行处理&lt;/p&gt;
 &lt;p&gt;6、将所有以fp-credit/***的请求重定向到fp-credit/index.php进行处理&lt;/p&gt;
-&lt;p&gt;7、将所有以fp-agent/***的请求重定向到fp-agent/index.php进行处理&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Fri, 04 Apr 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-04-04:pages/2014/04/apache_rewrite.html</guid><category>PHP技术</category></item><item><title>PHP中如何返回上一级目录</title><link>http://www.yanyulin.info/pages/2014/04/return_dir.html</link><description>&lt;hr /&gt;
+&lt;p&gt;7、将所有以fp-agent/***的请求重定向到fp-agent/index.php进行处理&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Fri, 04 Apr 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-04-04:pages/2014/04/apache_rewrite.html</guid><category>PHP技术</category></item><item><title>PHP中**require/requir_once/include/include_once**的使用以及区别</title><link>http://www.yanyulin.info/pages/2014/04/require.html</link><description>&lt;hr /&gt;
+&lt;p&gt;在PHP中，引入外部文件的常用方法有四种：&lt;/p&gt;
+&lt;p&gt;require()、include()、require_once()、include_once()&lt;/p&gt;
+&lt;p&gt;作为一个PHP程序员，必须要了解这四个函数的区别以及具体使用，虽然这四个函数的区别也不是非常大，但在效率以及出错处理方面还是有一定的区别的&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;require()&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;require()语句将指定的文件包含进来，并执行该文件中以的PHP代码&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;require&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;filename&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="err"&gt;或&lt;/span&gt;
+&lt;span class="n"&gt;require&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;filename&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;filename为要引入的文件名（文件名包含路经，可以为绝对路径和相对路径）&lt;/p&gt;
+&lt;p&gt;注意：&lt;/p&gt;
+&lt;p&gt;引入操作是在服务器执行 PHP 之前进行的&lt;/p&gt;
+&lt;p&gt;目标文件中应被当作 PHP 代码执行的任何代码都必须被包括在有效的 PHP 起始和结束标记之中，否则会被当成HTML和文本忽略掉&lt;/p&gt;
+&lt;p&gt;例如有一个标准的页头文件，存放在当前目录的上级目录，名为 "header.php"。如需在页面中引用这个页头文件，则用require()方法引入：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;require&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;../header.php&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;strong&gt;require_once()&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;require_once()语句同样在脚本执行期间引入并执行指定文件,它和 require() 语句类似，唯一区别是如果该文件中的代码已经被引入了，则不会再次引入,如同此语句名字暗示的那样，只会引入一次。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;include()/include_once()&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;include()和include_once() 方法的作用也是引入并执行指定文件，语法与require()和require_once()相同，除了在错误处理方面的差异：&lt;/p&gt;
+&lt;p&gt;require 会产生致命错误(E_COMPILE_ERROR)，并停止脚本执行。&lt;/p&gt;
+&lt;p&gt;include 只会产生警告(E_WARNING)，脚本将继续执行。&lt;/p&gt;
+&lt;p&gt;因此，如果您希望继续执行，并向用户输出结果，即使包含文件已丢失，那么请使用 include() 方法。&lt;/p&gt;
+&lt;p&gt;否则，在框架、CMS 或者复杂的 PHP 应用程序编程中，请始终使用 require() 方法向执行流引用关键文件，这有助于提高应用程序的安全性和完整性。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Fri, 04 Apr 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-04-04:pages/2014/04/require.html</guid><category>PHP技术</category></item><item><title>PHP中如何返回上一级目录</title><link>http://www.yanyulin.info/pages/2014/04/return_dir.html</link><description>&lt;hr /&gt;
 &lt;p&gt;正式入职的第二天，搞着恶习的PHP,不，不应该加恶心两字，语言本身没有什么好坏，语言的创建只是为了更好服务于人，看了看项目里的代码，有这么一句&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="n"&gt;fpdir&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;realpath&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;dirname&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;__FILE__&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;..&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;..&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="sc"&gt;&amp;#39;/&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
