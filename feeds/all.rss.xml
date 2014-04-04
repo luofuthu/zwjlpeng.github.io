@@ -1,5 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>烟雨林</title><link>http://www.yanyulin.info/</link><description></description><atom:link href="http://www.yanyulin.info/feeds/all.rss.xml" rel="self"></atom:link><lastBuildDate>Sat, 29 Mar 2014 00:00:00 +0800</lastBuildDate><item><title>Maven安装指南|Maven安装教程</title><link>http://www.yanyulin.info/pages/2014/03/maven_tutor.html</link><description>&lt;hr /&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>烟雨林</title><link>http://www.yanyulin.info/</link><description></description><atom:link href="http://www.yanyulin.info/feeds/all.rss.xml" rel="self"></atom:link><lastBuildDate>Fri, 04 Apr 2014 00:00:00 +0800</lastBuildDate><item><title>Apache中apache rewrite配置使用说明</title><link>http://www.yanyulin.info/pages/2014/04/apache_rewrite.html</link><description>&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;Apache Rewrite的主要功能&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;apache rewrite是配置在httpd.conf文件中，主要用来实现url的跳转以及隐藏真实的url地址，其表达形式采用的是基于Perl语言的正则表达式&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Apache Rewrite的配置&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;1、apache下的rewrite配置主要有两种，一种是针对整个apache服务器的配置，此种配置的规则是直接在httpd.conf文件下书写，配置步骤如下：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;去除httpd.conf文件中"#LoadModule rewrite_module modules/mod_rewrite.so"前面的"#"号; &lt;/p&gt;
+&lt;p&gt;然后再在httpd.conf中书写如下规则&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;RewriteEngine&lt;/span&gt; &lt;span class="n"&gt;on&lt;/span&gt; 
+&lt;span class="cp"&gt;#当访问任何以t_开头，以.html结尾的文件时，访问相应的test.php页面 &lt;/span&gt;
+&lt;span class="n"&gt;RewriteRule&lt;/span&gt; &lt;span class="o"&gt;^/&lt;/span&gt;&lt;span class="n"&gt;t_&lt;/span&gt;&lt;span class="p"&gt;(.&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="n"&gt;html&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;test&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;php&lt;/span&gt;&lt;span class="o"&gt;?&lt;/span&gt;&lt;span class="n"&gt;id&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;2、另一种是针对apache服务器下的某一目录的配置，此种配置的rewrite规则需在此目录下建立一个.htaccess文件来书写。配置步骤如下：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;去除httpd.conf文件中"#LoadModule rewrite_module modules/mod_rewrite.so"前面的"#"号; &lt;/p&gt;
+&lt;p&gt;修改httpd.conf文件中的&lt;code&gt;AllowOverride None&lt;/code&gt;为&lt;code&gt;AllowOverride all&lt;/code&gt;,同时最好将&lt;code&gt;Options&lt;/code&gt;也置为&lt;code&gt;all&lt;/code&gt;,否则可能会出问题&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;3、在目录中建立.htaccess文件，并用记事本打开，书写如下规则&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;RewriteEngine&lt;/span&gt; &lt;span class="n"&gt;on&lt;/span&gt; 
+&lt;span class="cp"&gt;#当访问任何以t_开头，以.html结尾的文件时，访问相应的test.php页面&lt;/span&gt;
+&lt;span class="n"&gt;RewriteRule&lt;/span&gt; &lt;span class="o"&gt;^/&lt;/span&gt;&lt;span class="n"&gt;t_&lt;/span&gt;&lt;span class="p"&gt;(.&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="n"&gt;html&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;test&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;php&lt;/span&gt;&lt;span class="o"&gt;?&lt;/span&gt;&lt;span class="n"&gt;id&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;strong&gt;apache rewrite规则的书写&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;RewriteEngine&lt;/span&gt; &lt;span class="n"&gt;on&lt;/span&gt; 
+&lt;span class="n"&gt;RewriteRule&lt;/span&gt; &lt;span class="o"&gt;^/&lt;/span&gt;&lt;span class="n"&gt;test&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;9&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="n"&gt;html&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;test&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;php&lt;/span&gt;&lt;span class="o"&gt;?&lt;/span&gt;&lt;span class="n"&gt;id&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt; 
+&lt;span class="n"&gt;RewriteRule&lt;/span&gt; &lt;span class="o"&gt;^/&lt;/span&gt;&lt;span class="n"&gt;new&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;9&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;new&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;php&lt;/span&gt;&lt;span class="o"&gt;?&lt;/span&gt;&lt;span class="n"&gt;id&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;R&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+
+&lt;span class="n"&gt;RewriteEngine&lt;/span&gt; &lt;span class="n"&gt;on&lt;/span&gt; 
+&lt;span class="cp"&gt;#当我们访问的地址不是以www.163.com开头的，那么执行下一条规则 &lt;/span&gt;
+&lt;span class="n"&gt;RewriteCond&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="n"&gt;HTTP_HOST&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="o"&gt;!^&lt;/span&gt;&lt;span class="n"&gt;www&lt;/span&gt;&lt;span class="mf"&gt;.163&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;NC&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; 
+&lt;span class="n"&gt;RewriteRule&lt;/span&gt; &lt;span class="o"&gt;^/&lt;/span&gt;&lt;span class="p"&gt;(.&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;http&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//www.163.com/ [L]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;strong&gt;Apache Rewrite规则修正符&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;R&lt;/span&gt; &lt;span class="err"&gt;强制外部重定向&lt;/span&gt; 
+&lt;span class="n"&gt;F&lt;/span&gt; &lt;span class="err"&gt;禁用&lt;/span&gt;&lt;span class="n"&gt;URL&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;返回&lt;/span&gt;&lt;span class="mi"&gt;403&lt;/span&gt;&lt;span class="n"&gt;HTTP&lt;/span&gt;&lt;span class="err"&gt;状态码。&lt;/span&gt; 
+&lt;span class="n"&gt;G&lt;/span&gt; &lt;span class="err"&gt;强制&lt;/span&gt;&lt;span class="n"&gt;URL&lt;/span&gt;&lt;span class="err"&gt;为&lt;/span&gt;&lt;span class="n"&gt;GONE&lt;/span&gt;&lt;span class="err"&gt;，返回&lt;/span&gt;&lt;span class="mi"&gt;410&lt;/span&gt;&lt;span class="n"&gt;HTTP&lt;/span&gt;&lt;span class="err"&gt;状态码。&lt;/span&gt; 
+&lt;span class="n"&gt;P&lt;/span&gt; &lt;span class="err"&gt;强制使用代理转发。&lt;/span&gt; 
+&lt;span class="n"&gt;L&lt;/span&gt; &lt;span class="err"&gt;表明当前规则是最后一条规则，停止分析以后规则的重写。&lt;/span&gt; 
+&lt;span class="n"&gt;N&lt;/span&gt; &lt;span class="err"&gt;重新从第一条规则开始运行重写过程。&lt;/span&gt; 
+&lt;span class="n"&gt;C&lt;/span&gt; &lt;span class="err"&gt;与下一条规则关联&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;如果规则匹配则正常处理，以下修正符无效 &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;T&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;MIME&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;type&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;force&lt;/span&gt; &lt;span class="n"&gt;MIME&lt;/span&gt; &lt;span class="n"&gt;type&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="err"&gt;强制&lt;/span&gt;&lt;span class="n"&gt;MIME&lt;/span&gt;&lt;span class="err"&gt;类型&lt;/span&gt; 
+&lt;span class="n"&gt;NS&lt;/span&gt; &lt;span class="err"&gt;只用于不是内部子请求&lt;/span&gt; 
+&lt;span class="n"&gt;NC&lt;/span&gt; &lt;span class="err"&gt;不区分大小写&lt;/span&gt; 
+&lt;span class="n"&gt;QSA&lt;/span&gt; &lt;span class="err"&gt;追加请求字符串&lt;/span&gt; 
+&lt;span class="n"&gt;NE&lt;/span&gt; &lt;span class="err"&gt;不在输出转义特殊字符&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="err"&gt;等价于&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;strong&gt;样例分析&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;RewriteEngine&lt;/span&gt; &lt;span class="n"&gt;on&lt;/span&gt;
+&lt;span class="n"&gt;RewriteRule&lt;/span&gt; &lt;span class="o"&gt;^/&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;fp&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;mgr&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;index&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;php&lt;/span&gt;
+&lt;span class="n"&gt;RewriteRule&lt;/span&gt; &lt;span class="o"&gt;^/&lt;/span&gt;&lt;span class="n"&gt;fp&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;mgr&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;(.&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;fp&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;mgr&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;index&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;php&lt;/span&gt;
+&lt;span class="n"&gt;RewriteRule&lt;/span&gt; &lt;span class="o"&gt;^/&lt;/span&gt;&lt;span class="n"&gt;fp&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;netpay&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;(.&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;fp&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;netpay&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;index&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;php&lt;/span&gt;
+&lt;span class="n"&gt;RewriteRule&lt;/span&gt; &lt;span class="o"&gt;^/&lt;/span&gt;&lt;span class="n"&gt;fp&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;stat&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;(.&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;fp&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;stat&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;index&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;php&lt;/span&gt;
+&lt;span class="n"&gt;RewriteRule&lt;/span&gt; &lt;span class="o"&gt;^/&lt;/span&gt;&lt;span class="n"&gt;fp&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;credit&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;(.&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;fp&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;credit&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;index&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;php&lt;/span&gt;
+&lt;span class="n"&gt;RewriteRule&lt;/span&gt; &lt;span class="o"&gt;^/&lt;/span&gt;&lt;span class="n"&gt;fp&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;agent&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;(.&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;fp&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;agent&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;index&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;php&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;1、开启重写URL以及隐藏URL&lt;/p&gt;
+&lt;p&gt;2、将所有以/开头并且结束的url重定向到/fp-mgr/index.php进行处理&lt;/p&gt;
+&lt;p&gt;3、将所以url以fp-mgr/***的请求重定向到fp-mgr/index.php文件进行处理&lt;/p&gt;
+&lt;p&gt;4、将所有以fp-netpay/***的请求重定向到fp-netpay/index.php进行处理&lt;/p&gt;
+&lt;p&gt;5、将所有以fp-stat/***的请求重定向到fp-stat/index.php进行处理&lt;/p&gt;
+&lt;p&gt;6、将所有以fp-credit/***的请求重定向到fp-credit/index.php进行处理&lt;/p&gt;
+&lt;p&gt;7、将所有以fp-agent/***的请求重定向到fp-agent/index.php进行处理&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Fri, 04 Apr 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-04-04:pages/2014/04/apache_rewrite.html</guid><category>PHP技术</category></item><item><title>Maven安装指南|Maven安装教程</title><link>http://www.yanyulin.info/pages/2014/03/maven_tutor.html</link><description>&lt;hr /&gt;
 &lt;p&gt;1:&lt;code&gt;maven&lt;/code&gt;是一种项目管理工具，比ant以及make的功能要强大，是项目管理与构建的自动化工具，对程序员而言更多的是偏向于自动化构建功能。&lt;/p&gt;
 &lt;p&gt;2：&lt;code&gt;maven&lt;/code&gt;的安装&lt;/p&gt;
 &lt;p&gt;在安装maven之前必须要保证的是安装了JDK，因为当运行maven此会对JDK进行检查，JDK的地址就不说了，maven可以从官网上进行下载。&lt;/p&gt;

@@ -2,7 +2,7 @@
 <html lang="zh">
 <head>
 <title>
-程序代码优化需要考虑的问题 - 烟雨林</title>
+Apache中apache rewrite配置使用说明 - 烟雨林</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
 <meta name="author" content="烟雨林">
@@ -51,11 +51,11 @@
 					</div>
 					<div class="entry_box_s">
 						<div class="entry_title_box">
-							<div class="entry_title">程序代码优化需要考虑的问题</div>
+							<div class="entry_title">Apache中apache rewrite配置使用说明</div>
 							<div class="archive_info">
-								<span class="date">2014-03-25</span>
+								<span class="date">2014-04-04</span>
 								<span class="category"> ⁄ 							
-						  <a href="http://www.yanyulin.info/tag/suan-fa-ji-tie.html" target="_blank" title="查看同类文章" rel="category tag">算法集贴</a>&nbsp;
+						  <a href="http://www.yanyulin.info/tag/phpji-zhu.html" target="_blank" title="查看同类文章" rel="category tag">PHP技术</a>&nbsp;
 						  </span>
 							</div>
 						</div>
@@ -83,35 +83,85 @@
 </script>
 </div>
 							<hr />
-<p><strong>内联函数的使用</strong></p>
-<p>C语言中过多的函数调用，虽然可以提高程序的结构化与规范化，但是会降低程序的运行效率，函数调用本身就是一个复杂的过程，调用的过程中涉及到函数调用上下文环境的交换，函数参数的传递，堆栈的操作等一系列复杂的过程，如果一个算法中涉及到太多的函数调用，以及函数的嵌套调用，势必会影响到算法的运行时间以及算法的空间开销，内联函数类似于宏定义，都是在调用处对代码进行展开，替换掉调用处的代码，只不过一个处于预编译阶段，而另一个处于编译阶段，内联函数的调用方式与函数一样，使用内联函数时要注意以下几点：</p>
-<p>1：递归函数不能定义为内联函数</p>
-<p>2：内联函数的函数体不能太复杂，例如含有较大的循环语句等</p>
-<p>3：内联函数要先定义后使用，而用不能有异常声明。</p>
-<p><strong>关键字的使用</strong></p>
-<p>C语言中有许多的关键字对于提高程序的运行效率也是有一定的作用，例如：define宏定义作用上类似于内联函数，可以将代码量较小的函数，定义成一个宏，采用预编译阶段的宏替换，减少函数的调用或者代码的冗余；volatile定义了一个变量是异变的，每次对该变量的操作必须从内存中重新读取，这在一定程序上降低了程序的运行效率，因此volatile关键字的使用需要谨慎;const修饰的一个变量时表示该变量是一个常量，restrict修改指针变量时表示该指针变量所指向的内存空间不与其他对象重叠，这两个关键字的使用有利于代码的并行执行。</p>
-<p><strong>运算符的使用</strong></p>
-<p>由于CPU对乘除运算是通过一系列的加减运算实现的，因此在算法设计中过多的使用乘除运算在一定程度上也对算法的效率产生了影响，在DSP中，一条乘法指令需要4个周期才能完成，定点DSP中根本没有与除法相关的指令，必须通过软件方式模拟除法的实现，效率比较低下，但是CPU能够快速的执行移位运算，一条移位运算指令只需要一个周期即可完成，因此将乘除运算通过左移与右移进行实现，另一个运算符&amp;对于提高程序的效率也是有作用的，此处的&amp;并不是取地址，而是表示引用(C++中引入)，从而避免了数据的复制，因此运算符的合理使用对提高算法的运行效率也是有作用的。</p>
-<p><strong>数据类型的使用</strong></p>
-<p>数据类型的选用对提高算法的运行效率，编译器的优化也具有一定的作用，例如，C64X DSP具有双16bit扩充功能，芯片能在一个周期内完成16bit的乘法，加减法，比较，移位等操作，在设计时，当对连续的short型数据流操作时，应该转化成对int型数据流的操作，这样可以一次性将2个16位的short型数据读入一个32位的寄存器，然后用内部函数来对它们处理(如_sub2等),充分运用16bit扩充功能，一次可以进行2个16bit数据的运算，速度将提升一倍。</p>
-<p><strong>软件流水线</strong>
-软件流水线说白了就是对循环进行展开，使其更好的并行</p>
-<p><strong>算法结构调整</strong></p>
-<p>算法中可能存在较多的冗余的数据结构或者程序语句，以及一些无用的条件判断语句，占用了CPU的执行时间，找出并去掉程序中冗余的结构，有利于算法性能的提升，另一方面，可以提高算法性能的方法是将算法中程序语句进行调整，将指令级不相关的语句适当的穿插在指令级相关的语句中，有利于提高指令的并行性，从而达到提高算法或者程序的执行效率。</p>
-<p><strong>功能单元替换</strong></p>
-<p>算法中对耗时较大的功能单元，可以采用其他实现方式，如数学模型的替换、结合硬件特性对代码进行的更改，在一定程序上都能使程序的性能得以提升，例如针对TI公司生产的C6000系列的定点DSP中，由于没有对浮点运算的支持，因此对浮点处理较慢，可以采用TI公司提供的IQMath库实现高精度、高速度的实时计算，而这对于以浮点运算为主的数控系统来说是不可缺少的。结合处理器的特点可以对交换变量的值，采用移位运算来实现，两个数求平均数可以采用按位与，按位或，移位实现等等。</p>
-<p><strong>项目级优化</strong></p>
-<p>程序或者算法编译完毕后，由于采用的是高级语言编写程序，接近的是人的思维，因此要想在处理器上高速运行，必须对整个项目进行编译发布时的优化，此过程主要采用的是由编译器提供的编译选项，由编译器根据用户选择的优化级别做出对算法的优化，例如针对DSP处理器，TI公司开发的CCS(CODE COMPOSER STUDIO)集成开发环境，可以对C语言进行项目级的优化，其优化选项主要有如下(针对的是TMS320C6000 DSP)：</p>
-<p>1:--opt_level或者-O :表示编译器对代码的优化级别，其中--opt_level=3或者-O3的优化级别最高，具体方面可以查看参考文献[3] 。</p>
-<p>2:-ms:确俣不产生冗余循环，从而减少代码尺寸。</p>
-<p>3：--opt_for_space:用来降低代码的生成尺寸，配合-O3可以将最终的可执行代码尺寸降至最低。</p>
-<p>4:--gen_opt_info:用来产生可读的优化信息文件。</p>
-<p>5：-mt :编译器假设程序中没有数据存储混淆，可进一步的优化代码。</p>
-<p>6：-pm :使能程序级的优化。</p>
-<p>等等...</p>
+<p><strong>Apache Rewrite的主要功能</strong></p>
+<p>apache rewrite是配置在httpd.conf文件中，主要用来实现url的跳转以及隐藏真实的url地址，其表达形式采用的是基于Perl语言的正则表达式</p>
+<p><strong>Apache Rewrite的配置</strong></p>
+<p>1、apache下的rewrite配置主要有两种，一种是针对整个apache服务器的配置，此种配置的规则是直接在httpd.conf文件下书写，配置步骤如下：</p>
+<blockquote>
+<p>去除httpd.conf文件中"#LoadModule rewrite_module modules/mod_rewrite.so"前面的"#"号; </p>
+<p>然后再在httpd.conf中书写如下规则</p>
+</blockquote>
+<div class="highlight"><pre><span class="n">RewriteEngine</span> <span class="n">on</span> 
+<span class="cp">#当访问任何以t_开头，以.html结尾的文件时，访问相应的test.php页面 </span>
+<span class="n">RewriteRule</span> <span class="o">^/</span><span class="n">t_</span><span class="p">(.</span><span class="o">*</span><span class="p">).</span><span class="n">html</span><span class="err">$</span> <span class="o">/</span><span class="n">test</span><span class="p">.</span><span class="n">php</span><span class="o">?</span><span class="n">id</span><span class="o">=</span><span class="err">$</span><span class="mi">1</span>
+</pre></div>
+
+
+<p>2、另一种是针对apache服务器下的某一目录的配置，此种配置的rewrite规则需在此目录下建立一个.htaccess文件来书写。配置步骤如下：</p>
+<blockquote>
+<p>去除httpd.conf文件中"#LoadModule rewrite_module modules/mod_rewrite.so"前面的"#"号; </p>
+<p>修改httpd.conf文件中的<code>AllowOverride None</code>为<code>AllowOverride all</code>,同时最好将<code>Options</code>也置为<code>all</code>,否则可能会出问题</p>
+</blockquote>
+<p>3、在目录中建立.htaccess文件，并用记事本打开，书写如下规则</p>
+<div class="highlight"><pre><span class="n">RewriteEngine</span> <span class="n">on</span> 
+<span class="cp">#当访问任何以t_开头，以.html结尾的文件时，访问相应的test.php页面</span>
+<span class="n">RewriteRule</span> <span class="o">^/</span><span class="n">t_</span><span class="p">(.</span><span class="o">*</span><span class="p">).</span><span class="n">html</span><span class="err">$</span> <span class="o">/</span><span class="n">test</span><span class="p">.</span><span class="n">php</span><span class="o">?</span><span class="n">id</span><span class="o">=</span><span class="err">$</span><span class="mi">1</span>
+</pre></div>
+
+
+<p><strong>apache rewrite规则的书写</strong></p>
+<div class="highlight"><pre><span class="n">RewriteEngine</span> <span class="n">on</span> 
+<span class="n">RewriteRule</span> <span class="o">^/</span><span class="n">test</span><span class="p">([</span><span class="mi">0</span><span class="o">-</span><span class="mi">9</span><span class="p">]</span><span class="o">*</span><span class="p">).</span><span class="n">html</span><span class="err">$</span> <span class="o">/</span><span class="n">test</span><span class="p">.</span><span class="n">php</span><span class="o">?</span><span class="n">id</span><span class="o">=</span><span class="err">$</span><span class="mi">1</span> 
+<span class="n">RewriteRule</span> <span class="o">^/</span><span class="n">new</span><span class="p">([</span><span class="mi">0</span><span class="o">-</span><span class="mi">9</span><span class="p">]</span><span class="o">*</span><span class="p">)</span><span class="o">/</span><span class="err">$</span> <span class="o">/</span><span class="n">new</span><span class="p">.</span><span class="n">php</span><span class="o">?</span><span class="n">id</span><span class="o">=</span><span class="err">$</span><span class="mi">1</span> <span class="p">[</span><span class="n">R</span><span class="p">]</span>
+
+<span class="n">RewriteEngine</span> <span class="n">on</span> 
+<span class="cp">#当我们访问的地址不是以www.163.com开头的，那么执行下一条规则 </span>
+<span class="n">RewriteCond</span> <span class="o">%</span><span class="p">{</span><span class="n">HTTP_HOST</span><span class="p">}</span> <span class="o">!^</span><span class="n">www</span><span class="mf">.163</span><span class="p">.</span><span class="n">com</span> <span class="p">[</span><span class="n">NC</span><span class="p">]</span> 
+<span class="n">RewriteRule</span> <span class="o">^/</span><span class="p">(.</span><span class="o">*</span><span class="p">)</span> <span class="n">http</span><span class="o">:</span><span class="c1">//www.163.com/ [L]</span>
+</pre></div>
+
+
+<p><strong>Apache Rewrite规则修正符</strong></p>
+<div class="highlight"><pre><span class="n">R</span> <span class="err">强制外部重定向</span> 
+<span class="n">F</span> <span class="err">禁用</span><span class="n">URL</span><span class="p">,</span><span class="err">返回</span><span class="mi">403</span><span class="n">HTTP</span><span class="err">状态码。</span> 
+<span class="n">G</span> <span class="err">强制</span><span class="n">URL</span><span class="err">为</span><span class="n">GONE</span><span class="err">，返回</span><span class="mi">410</span><span class="n">HTTP</span><span class="err">状态码。</span> 
+<span class="n">P</span> <span class="err">强制使用代理转发。</span> 
+<span class="n">L</span> <span class="err">表明当前规则是最后一条规则，停止分析以后规则的重写。</span> 
+<span class="n">N</span> <span class="err">重新从第一条规则开始运行重写过程。</span> 
+<span class="n">C</span> <span class="err">与下一条规则关联</span>
+</pre></div>
+
+
+<p>如果规则匹配则正常处理，以下修正符无效 </p>
+<div class="highlight"><pre><span class="n">T</span><span class="o">=</span><span class="n">MIME</span><span class="o">-</span><span class="n">type</span><span class="p">(</span><span class="n">force</span> <span class="n">MIME</span> <span class="n">type</span><span class="p">)</span> <span class="err">强制</span><span class="n">MIME</span><span class="err">类型</span> 
+<span class="n">NS</span> <span class="err">只用于不是内部子请求</span> 
+<span class="n">NC</span> <span class="err">不区分大小写</span> 
+<span class="n">QSA</span> <span class="err">追加请求字符串</span> 
+<span class="n">NE</span> <span class="err">不在输出转义特殊字符</span> <span class="o">%</span><span class="mi">3</span><span class="n">d</span><span class="err">$</span><span class="mi">1</span> <span class="err">等价于</span> <span class="o">=</span><span class="err">$</span><span class="mi">1</span>
+</pre></div>
+
+
+<p><strong>样例分析</strong></p>
+<div class="highlight"><pre><span class="n">RewriteEngine</span> <span class="n">on</span>
+<span class="n">RewriteRule</span> <span class="o">^/</span><span class="err">$</span> <span class="o">/</span><span class="n">fp</span><span class="o">-</span><span class="n">mgr</span><span class="o">/</span><span class="n">index</span><span class="p">.</span><span class="n">php</span>
+<span class="n">RewriteRule</span> <span class="o">^/</span><span class="n">fp</span><span class="o">-</span><span class="n">mgr</span><span class="o">/</span><span class="p">(.</span><span class="o">*</span><span class="p">)</span><span class="err">$</span> <span class="o">/</span><span class="n">fp</span><span class="o">-</span><span class="n">mgr</span><span class="o">/</span><span class="n">index</span><span class="p">.</span><span class="n">php</span>
+<span class="n">RewriteRule</span> <span class="o">^/</span><span class="n">fp</span><span class="o">-</span><span class="n">netpay</span><span class="o">/</span><span class="p">(.</span><span class="o">*</span><span class="p">)</span><span class="err">$</span> <span class="o">/</span><span class="n">fp</span><span class="o">-</span><span class="n">netpay</span><span class="o">/</span><span class="n">index</span><span class="p">.</span><span class="n">php</span>
+<span class="n">RewriteRule</span> <span class="o">^/</span><span class="n">fp</span><span class="o">-</span><span class="n">stat</span><span class="o">/</span><span class="p">(.</span><span class="o">*</span><span class="p">)</span><span class="err">$</span> <span class="o">/</span><span class="n">fp</span><span class="o">-</span><span class="n">stat</span><span class="o">/</span><span class="n">index</span><span class="p">.</span><span class="n">php</span>
+<span class="n">RewriteRule</span> <span class="o">^/</span><span class="n">fp</span><span class="o">-</span><span class="n">credit</span><span class="o">/</span><span class="p">(.</span><span class="o">*</span><span class="p">)</span><span class="err">$</span> <span class="o">/</span><span class="n">fp</span><span class="o">-</span><span class="n">credit</span><span class="o">/</span><span class="n">index</span><span class="p">.</span><span class="n">php</span>
+<span class="n">RewriteRule</span> <span class="o">^/</span><span class="n">fp</span><span class="o">-</span><span class="n">agent</span><span class="o">/</span><span class="p">(.</span><span class="o">*</span><span class="p">)</span><span class="err">$</span> <span class="o">/</span><span class="n">fp</span><span class="o">-</span><span class="n">agent</span><span class="o">/</span><span class="n">index</span><span class="p">.</span><span class="n">php</span>
+</pre></div>
+
+
+<p>1、开启重写URL以及隐藏URL</p>
+<p>2、将所有以/开头并且结束的url重定向到/fp-mgr/index.php进行处理</p>
+<p>3、将所以url以fp-mgr/***的请求重定向到fp-mgr/index.php文件进行处理</p>
+<p>4、将所有以fp-netpay/***的请求重定向到fp-netpay/index.php进行处理</p>
+<p>5、将所有以fp-stat/***的请求重定向到fp-stat/index.php进行处理</p>
+<p>6、将所有以fp-credit/***的请求重定向到fp-credit/index.php进行处理</p>
+<p>7、将所有以fp-agent/***的请求重定向到fp-agent/index.php进行处理</p>
 						  <div class="clear"></div>
 							</div>
-							<b>本文地址:</b> <a href="http://www.yanyulin.info/pages/2014/03/optimization.html" target="_self">http://www.yanyulin.info/pages/2014/03/optimization.html</a>
+							<b>本文地址:</b> <a href="http://www.yanyulin.info/pages/2014/04/apache_rewrite.html" target="_self">http://www.yanyulin.info/pages/2014/04/apache_rewrite.html</a>
 							<div><font color="blue"><b>转载时请保留本文出处,谢谢您的合作</b></font></div>
 							<hr/>
 							<div class="clear" align="left">
@@ -143,10 +193,10 @@
 					<!-- end: entrymeta -->
 				<div class="context_b" align="left">
 					 上一篇: 
-  				 <a href="http://www.yanyulin.info/pages/2014/03/think_in_java.html" title="Java编程思想PDF版下载" target="_blank">Java编程思想PDF版下载</a>
+  				 <a href="http://www.yanyulin.info/pages/2014/03/maven_tutor.html" title="Maven安装指南|Maven安装教程" target="_blank">Maven安装指南|Maven安装教程</a>
   				 &nbsp;&nbsp
   				 下一篇:
-  				 <a href="http://www.yanyulin.info/pages/2014/03/jdbc.html" title="Communications link failure due to underlying exception" target="_blank">Communications link failure due to underlying exception</a>
+  				 <a href="http://www.yanyulin.info/pages/2014/04/apache_rewrite.html" title="Apache中apache rewrite配置使用说明" target="_blank">Apache中apache rewrite配置使用说明</a>
 					 
 				</div>
 				<div class="context_b">
@@ -157,7 +207,7 @@
   				 <tr>
  
   				 <td width="50%" align="left">
-  				 <a href="http://www.yanyulin.info/pages/2014/03/optimization.html" title="程序代码优化需要考虑的问题" target="_blank">程序代码优化需要考虑的问题</a>
+  				 <a href="http://www.yanyulin.info/pages/2014/04/apache_rewrite.html" title="Apache中apache rewrite配置使用说明" target="_blank">Apache中apache rewrite配置使用说明</a>
   				 </td>
 	
  
@@ -165,7 +215,7 @@
 			</table>
 				</div>
 				<div class="context_b">
-			 <div class="ds-thread" data-title="程序代码优化需要考虑的问题"></div>
+			 <div class="ds-thread" data-title="Apache中apache rewrite配置使用说明"></div>
 			 <script type="text/javascript">
 			 	var duoshuoQuery={short_name:"yanyulin"};
 			 	var ds=document.createElement("script");
@@ -211,22 +261,22 @@
 							<a  href="http://www.yanyulin.info/tag/phpji-zhu.html" title="查看PHP技术下的所有文章" style="background-color: #169EDD" target="_blank">PHP技术</a>
 						  </div>
 							<div id="tagsLink">
-							<a  href="http://www.yanyulin.info/tag/gong-ju-shi-yong.html" title="查看工具使用下的所有文章" style="background-color: #169EDD" target="_blank">工具使用</a>
+							<a  href="http://www.yanyulin.info/tag/gong-ju-shi-yong.html" title="查看工具使用下的所有文章" style="background-color: #96C2AA" target="_blank">工具使用</a>
 						  </div>
 							<div id="tagsLink">
-							<a  href="http://www.yanyulin.info/tag/tao-bao-ji-zhu.html" title="查看淘宝技术下的所有文章" style="background-color: #8C8BC6" target="_blank">淘宝技术</a>
+							<a  href="http://www.yanyulin.info/tag/tao-bao-ji-zhu.html" title="查看淘宝技术下的所有文章" style="background-color: #84A4B3" target="_blank">淘宝技术</a>
 						  </div>
 							<div id="tagsLink">
-							<a  href="http://www.yanyulin.info/tag/javafen-xi.html" title="查看Java分析下的所有文章" style="background-color: #96C2AA" target="_blank">Java分析</a>
+							<a  href="http://www.yanyulin.info/tag/javafen-xi.html" title="查看Java分析下的所有文章" style="background-color: #8C8BC6" target="_blank">Java分析</a>
 						  </div>
 							<div id="tagsLink">
-							<a  href="http://www.yanyulin.info/tag/suan-fa-ji-tie.html" title="查看算法集贴下的所有文章" style="background-color: #8C8BC6" target="_blank">算法集贴</a>
+							<a  href="http://www.yanyulin.info/tag/suan-fa-ji-tie.html" title="查看算法集贴下的所有文章" style="background-color: #D17C93" target="_blank">算法集贴</a>
 						  </div>
 							<div id="tagsLink">
-							<a  href="http://www.yanyulin.info/tag/linuxhui-zong.html" title="查看Linux汇总下的所有文章" style="background-color: #D17C93" target="_blank">Linux汇总</a>
+							<a  href="http://www.yanyulin.info/tag/linuxhui-zong.html" title="查看Linux汇总下的所有文章" style="background-color: #169EDD" target="_blank">Linux汇总</a>
 						  </div>
 							<div id="tagsLink">
-							<a  href="http://www.yanyulin.info/tag/cxue-xi.html" title="查看C++学习下的所有文章" style="background-color: #169EDD" target="_blank">C++学习</a>
+							<a  href="http://www.yanyulin.info/tag/cxue-xi.html" title="查看C++学习下的所有文章" style="background-color: #D17C93" target="_blank">C++学习</a>
 						  </div>
 						</div>
 						<div class="clear"></div>
@@ -295,16 +345,16 @@
 				<ul>
 				<ul class="random-post-link">
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2014/03/concurrent.html" target="_blank" title="Linux系统中并发与竞争机制分析">Linux系统中并发与竞争机制分析</a>
+				<a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_8.html" target="_blank" title="Velocity初始化资源加载器以及预指令">Velocity初始化资源加载器以及预指令</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2014/03/ali_3.html" target="_blank" title="阿里巴巴校招面经(2014年软件研发)">阿里巴巴校招面经(2014年软件研发)</a>
+				<a href="http://www.yanyulin.info/pages/2014/01/baidu_1.html" target="_blank" title="百度校招2014年软研面经">百度校招2014年软研面经</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2014/03/baofeng_2014_c.html" target="_blank" title="暴风影音校招笔试题2014年技术类">暴风影音校招笔试题2014年技术类</a>
+				<a href="http://www.yanyulin.info/pages/2014/03/qunar_2014_B.html" target="_blank" title="去哪儿网校园招聘笔试题2014年成都软研|软测|前端">去哪儿网校园招聘笔试题2014年成都软研|软测|前端</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2013/11/effective.html" target="_blank" title="Effective C++(编程的50个细节)">Effective C++(编程的50个细节)</a>
+				<a href="http://www.yanyulin.info/pages/2014/02/pbaodian.html" target="_blank" title="程序员面试宝典--欧立奇">程序员面试宝典--欧立奇</a>
 				</li>
 				<li class="random-post-link">
 				<a href="http://www.yanyulin.info/pages/2013/12/psbase2.html" target="_blank" title="Photoshop CS视频教程(下)">Photoshop CS视频教程(下)</a>
@@ -313,7 +363,7 @@
 				<a href="http://www.yanyulin.info/pages/2014/02/ripplereginster.html" target="_blank" title="ripple钱包注册/更改/免费激活">ripple钱包注册/更改/免费激活</a>
 				</li>
 				<li class="random-post-link">
-				<a href="http://www.yanyulin.info/pages/2013/11/fetchPage.html" target="_blank" title="爬虫的自我解剖(抓取网页HtmlUnit)">爬虫的自我解剖(抓取网页HtmlUnit)</a>
+				<a href="http://www.yanyulin.info/pages/2013/12/qqLogin_1.html" target="_blank" title="界面编程模仿篇(QQ登录界面逼真篇)">界面编程模仿篇(QQ登录界面逼真篇)</a>
 				</li>
 				<li class="random-post-link">
 				<a href="http://www.yanyulin.info/pages/2014/03/duoshuo.html" target="_blank" title="多说评论框如何|怎么样|实际测试">多说评论框如何|怎么样|实际测试</a>
@@ -344,28 +394,28 @@
 				<div class="box_r">
 				<ul>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2014/03/velocity_disabuse_3.html" target="_blank" title="Velocity入门例子事件监听机制">Velocity入门例子事件监听机制</a>
+				<a href="http://www.yanyulin.info/pages/2014/03/comment.html" target="_blank" title="博客添加第三方评论系统多说评论框">博客添加第三方评论系统多说评论框</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2014/03/weconnect_2014_1.html" target="_blank" title="威盛电子校园招聘面经2014年软件面经">威盛电子校园招聘面经2014年软件面经</a>
+				<a href="http://www.yanyulin.info/pages/2014/01/ali_1.html" target="_blank" title="阿里巴巴校招2014年软研面经">阿里巴巴校招2014年软研面经</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2013/12/amzon_2014_A.html" target="_blank" title="亚马逊2014年校招笔试题(研发)">亚马逊2014年校招笔试题(研发)</a>
+				<a href="http://www.yanyulin.info/pages/2014/03/cxgc_2013_B.html" target="_blank" title="创新工场校园招聘笔试题2013年软件研发">创新工场校园招聘笔试题2013年软件研发</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2014/02/pbaodian.html" target="_blank" title="程序员面试宝典--欧立奇">程序员面试宝典--欧立奇</a>
+				<a href="http://www.yanyulin.info/pages/2014/03/assemble.html" target="_blank" title="汇编语言王爽PDF版下载">汇编语言王爽PDF版下载</a>
 				</li>
 				<li>
 				<a href="http://www.yanyulin.info/pages/2013/11/vlinux2.html" target="_blank" title="Linux基础教程视频版(很详细)">Linux基础教程视频版(很详细)</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2014/03/ripple_safe.html" target="_blank" title="保护Ripple币以及万特币的几点安全措施">保护Ripple币以及万特币的几点安全措施</a>
+				<a href="http://www.yanyulin.info/pages/2014/02/xrptalk.html" target="_blank" title="XRP Talk论坛注册教程">XRP Talk论坛注册教程</a>
 				</li>
 				<li>
 				<a href="http://www.yanyulin.info/pages/2013/11/qqLogin.html" target="_blank" title="界面编程模仿篇(模仿腾讯QQ登录界面)">界面编程模仿篇(模仿腾讯QQ登录界面)</a>
 				</li>
 				<li>
-				<a href="http://www.yanyulin.info/pages/2014/03/duoshuo.html" target="_blank" title="多说评论框如何|怎么样|实际测试">多说评论框如何|怎么样|实际测试</a>
+				<a href="http://www.yanyulin.info/pages/2014/03/biyela.html" target="_blank" title="毕业啦,这一刻学生生涯好像真的结束了">毕业啦,这一刻学生生涯好像真的结束了</a>
 				</li>
 				<div class="clear"></div>
 				</div>
