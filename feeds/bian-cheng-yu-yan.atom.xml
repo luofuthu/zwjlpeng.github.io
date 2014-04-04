@@ -75,7 +75,56 @@
 &lt;p&gt;4、将所有以fp-netpay/***的请求重定向到fp-netpay/index.php进行处理&lt;/p&gt;
 &lt;p&gt;5、将所有以fp-stat/***的请求重定向到fp-stat/index.php进行处理&lt;/p&gt;
 &lt;p&gt;6、将所有以fp-credit/***的请求重定向到fp-credit/index.php进行处理&lt;/p&gt;
-&lt;p&gt;7、将所有以fp-agent/***的请求重定向到fp-agent/index.php进行处理&lt;/p&gt;</summary><category term="PHP技术"></category></entry><entry><title>Maven安装指南|Maven安装教程</title><link href="http://www.yanyulin.info/pages/2014/03/maven_tutor.html" rel="alternate"></link><updated>2014-03-29T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-29:pages/2014/03/maven_tutor.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;7、将所有以fp-agent/***的请求重定向到fp-agent/index.php进行处理&lt;/p&gt;</summary><category term="PHP技术"></category></entry><entry><title>PHP中如何返回上一级目录</title><link href="http://www.yanyulin.info/pages/2014/04/return_dir.html" rel="alternate"></link><updated>2014-04-04T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-04-04:pages/2014/04/return_dir.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;正式入职的第二天，搞着恶习的PHP,不，不应该加恶心两字，语言本身没有什么好坏，语言的创建只是为了更好服务于人，看了看项目里的代码，有这么一句&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="n"&gt;fpdir&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;realpath&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;dirname&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;__FILE__&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;..&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;..&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="sc"&gt;&amp;#39;/&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;初看之下，从函数名中就可以看出该语句的实际作用，可&lt;code&gt;/../..&lt;/code&gt;是啥意思呀？我们在shell中返回上一级目录的命令如下所示：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="p"&gt;..&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;..&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;这个/../..是什么意思呀，PHP里搞的是什么飞机呀?看了看realpath的帮助文档
+&lt;a href="http://www.php.net/manual/zh/function.realpath.php" target="_blank"&gt;
+http://www.php.net/manual/zh/function.realpath.php
+&lt;/a&gt;里面是这么写的&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;realpath() 扩展所有的符号连接并且处理输入的 path 中的 '/./', '/../' 以及多余的 '/' 并返回规范化后的绝对路径名。返回的路径中没有符号连接，'/./' 或 '/../' 成分&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;读起来相当的绕口，是吧，读了半天不知道其想表示什么意思，即然不知道其表示的是什么意思，那么就看看PHP源码里是怎么实现的吧&lt;/p&gt;
+&lt;p&gt;在看PHP源码之前，我猜realpath的实现是将参数string以/进行分割，分割后的结果放到一个栈里面，然后再出栈，在出栈的过程中如果遇到..则将..下面的目录也弹出来,表示返回上一级目录，如果遇到.则只弹出.，表示仍在当前目录下，如果学习过Java的，此处很容易想到java里的一个函数split，这个函数就是通过指定一个特殊的字符，以这个特殊的字符将字符串分割，分割后的字符串保存在一个数组里面&lt;/p&gt;
+&lt;p&gt;哎，找了很久的PHP里面该代码是怎么实现的，也没有发现在哪，只发现了一行帮助不大的PHP内核里面C语言代码：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;TSRM_API&lt;/span&gt; &lt;span class="kt"&gt;char&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="nf"&gt;realpath&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;char&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;orig_path&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kt"&gt;char&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;buffer&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;ret&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;GetFullPathName&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;orig_path&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;_MAX_PATH&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;buffer&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nb"&gt;NULL&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="n"&gt;ret&lt;/span&gt; &lt;span class="o"&gt;||&lt;/span&gt; &lt;span class="n"&gt;ret&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;_MAX_PATH&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nb"&gt;NULL&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;buffer&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;因此以下代码的意思就是&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="n"&gt;fpdir&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;realpath&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;dirname&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;__FILE__&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;..&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;..&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="sc"&gt;&amp;#39;/&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;从当前文件所在目录路径向上返回两级，然后在目录路径后面加上/&lt;/p&gt;
+&lt;p&gt;如__FILE__表示的是&lt;/p&gt;
+&lt;p&gt;D:\workspace\Hello\hello.php&lt;/p&gt;
+&lt;p&gt;则dirname函数作用后D:\workspace\Hello&lt;/p&gt;
+&lt;p&gt;再由realpath(dirname(&lt;strong&gt;FILE&lt;/strong&gt;).'/../..')作用后返回的结果是&lt;/p&gt;
+&lt;p&gt;D:\&lt;/p&gt;
+&lt;p&gt;因此PHP中获取目录上一级的代码可以用realpath或者dirname实现&lt;/p&gt;
+&lt;p&gt;如下两段代码在意义上是等价的&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="n"&gt;fpdir&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;realpath&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;dirname&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;__FILE__&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;..&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;..&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="sc"&gt;&amp;#39;/&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="n"&gt;echo&lt;/span&gt;  &lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="n"&gt;fpdir&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+
+&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="n"&gt;dir&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;dirname&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;dirname&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;dirname&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;__FILE__&lt;/span&gt;&lt;span class="p"&gt;))).&lt;/span&gt;&lt;span class="sc"&gt;&amp;#39;/&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="n"&gt;echo&lt;/span&gt; &lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="n"&gt;dir&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="PHP技术"></category></entry><entry><title>Maven安装指南|Maven安装教程</title><link href="http://www.yanyulin.info/pages/2014/03/maven_tutor.html" rel="alternate"></link><updated>2014-03-29T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-29:pages/2014/03/maven_tutor.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;1:&lt;code&gt;maven&lt;/code&gt;是一种项目管理工具，比ant以及make的功能要强大，是项目管理与构建的自动化工具，对程序员而言更多的是偏向于自动化构建功能。&lt;/p&gt;
 &lt;p&gt;2：&lt;code&gt;maven&lt;/code&gt;的安装&lt;/p&gt;
 &lt;p&gt;在安装maven之前必须要保证的是安装了JDK，因为当运行maven此会对JDK进行检查，JDK的地址就不说了，maven可以从官网上进行下载。&lt;/p&gt;
