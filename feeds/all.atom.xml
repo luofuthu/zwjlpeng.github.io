@@ -168,6 +168,11 @@ http://www.php.net/manual/zh/function.set-include-path.php
 
 &lt;p&gt;那么以后你就直接可以在其他页面中使用 &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;include&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;conn.php&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;该函数是php&amp;gt;4.3提供的，在以前的php版本中可以使用如下函数来达到同样的目的&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;ini_set&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;include_path&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="err"&gt;‘目录名&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;</summary><category term="PHP技术"></category></entry><entry><title>Maven安装指南|Maven安装教程</title><link href="http://www.yanyulin.info/pages/2014/03/maven_tutor.html" rel="alternate"></link><updated>2014-03-29T00:00:00+08:00</updated><author><name>烟雨林</name></author><id>tag:www.yanyulin.info,2014-03-29:pages/2014/03/maven_tutor.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;1:&lt;code&gt;maven&lt;/code&gt;是一种项目管理工具，比ant以及make的功能要强大，是项目管理与构建的自动化工具，对程序员而言更多的是偏向于自动化构建功能。&lt;/p&gt;
 &lt;p&gt;2：&lt;code&gt;maven&lt;/code&gt;的安装&lt;/p&gt;
