@@ -75,7 +75,7 @@
 &lt;p&gt;4、将所有以fp-netpay/***的请求重定向到fp-netpay/index.php进行处理&lt;/p&gt;
 &lt;p&gt;5、将所有以fp-stat/***的请求重定向到fp-stat/index.php进行处理&lt;/p&gt;
 &lt;p&gt;6、将所有以fp-credit/***的请求重定向到fp-credit/index.php进行处理&lt;/p&gt;
-&lt;p&gt;7、将所有以fp-agent/***的请求重定向到fp-agent/index.php进行处理&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Fri, 04 Apr 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-04-04:pages/2014/04/apache_rewrite.html</guid><category>PHP技术</category></item><item><title>PHP中**require/requir_once/include/include_once**的使用以及区别</title><link>http://www.yanyulin.info/pages/2014/04/require.html</link><description>&lt;hr /&gt;
+&lt;p&gt;7、将所有以fp-agent/***的请求重定向到fp-agent/index.php进行处理&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">烟雨林</dc:creator><pubDate>Fri, 04 Apr 2014 00:00:00 +0800</pubDate><guid>tag:www.yanyulin.info,2014-04-04:pages/2014/04/apache_rewrite.html</guid><category>PHP技术</category></item><item><title>PHP中require/requir_once/include/include_once的使用以及区别</title><link>http://www.yanyulin.info/pages/2014/04/require.html</link><description>&lt;hr /&gt;
 &lt;p&gt;在PHP中，引入外部文件的常用方法有四种：&lt;/p&gt;
 &lt;p&gt;require()、include()、require_once()、include_once()&lt;/p&gt;
 &lt;p&gt;作为一个PHP程序员，必须要了解这四个函数的区别以及具体使用，虽然这四个函数的区别也不是非常大，但在效率以及出错处理方面还是有一定的区别的&lt;/p&gt;
